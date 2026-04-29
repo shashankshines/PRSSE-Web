@@ -650,7 +650,7 @@ He is a structural biologist who won the Nobel Prize in Chemistry for his work o
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="blog_small" href="#">
+                                            <a class="blog_small" href="mailto:prsscienceexploratory@gmail.com">
                                                    <span class="item_content">
                                                        <small class="item_post_date">Email: prsscienceexploratory@gmail.com </small>
                                                 </span>
@@ -675,6 +675,27 @@ He is a structural biologist who won the Nobel Prize in Chemistry for his work o
                 const revealTargets = document.querySelectorAll('.scroll-reveal');
                 revealTargets.forEach(target => target.classList.add('revealed'));
             });
+        </script>
+        <script>
+          // Set active navigation item based on current page
+          (function setActiveNav() {
+            var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            
+            var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
+            navLinks.forEach(function(link) {
+              var href = link.getAttribute('href');
+              var linkPage = href.split('?')[0]; // Remove query strings
+              
+              // Match current page with nav link
+              if (linkPage === currentPage || 
+                  (currentPage === '' && linkPage === 'index.html')) {
+                var parentLi = link.closest('li');
+                if (parentLi) {
+                  parentLi.classList.add('active');
+                }
+              }
+            });
+          })();
         </script>
     </body> 
 </html>
