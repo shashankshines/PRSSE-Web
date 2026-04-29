@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Professor Rajendra Singh Science Exploratory</title>
+        <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg" />
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+         <style>
+        /* Sidebar Menu */
+        .sidebarmobile {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100vh; /* Full height */
+            background: #333;
+            color: white;
+            transition: 0.3s;
+            padding-top: 60px;
+            z-index: 1000;
+            overflow-y: auto; /* Enable scrolling */
+            scrollbar-width: thin; /* Firefox */
+            scrollbar-color: #888 #333; /* Firefox */
+        }
+        
+        /* Custom scrollbar for Chrome, Edge, Safari */
+        .sidebarmobile::-webkit-scrollbar {
+            width: 6px;
+        }
+        .sidebarmobile::-webkit-scrollbar-track {
+            background: #333;
+        }
+        .sidebarmobile::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 3px;
+        }
+        .sidebarmobile::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        .sidebarmobile a {
+            padding: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebarmobile a:hover {
+            background: #575757;
+        }
+        .sidebarmobile.active {
+            right: 0;
+        }
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .menu-overlay.active {
+            display: block;
+        }
+        .mobilemenu-btn {
+            font-size: 30px;
+            cursor: pointer;
+            color: black;
+            background: none;
+            border: none;
+            float: right;
+        }
+        
+         /* Dropdown Styling for Mobile */
+        .dropdownmobile-toggle::after {
+            display: none; /* Remove Bootstrap caret */
+        }
+
+        .dropdownmobile-menu {
+            display: none; /* Hide by default */
+            background: #444;
+            padding-left: 15px;
+        }
+
+        .dropdownmobile-menu a {
+            padding: 10px;
+        }
+
+        .dropdownmobile.open > .dropdownmobile-menu {
+            display: block; /* Show when parent has class 'open' */
+        }
+        
+        /* Styles for dropdown arrow */
+        .dropdownmobile-toggle::after {
+            content: " ▼";  /* Unicode down arrow */
+            font-size: 12px;
+            color: white;
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Rotate arrow when dropdown is open */
+        .dropdownmobile.open > .dropdownmobile-toggle::after {
+            transform: rotate(180deg);
+        }
+        
+          /* Style the dropdown arrow */
+        .dropdownmobilearrow-icon {
+            display: inline-block;
+            margin-left: 5px;
+            margin-bottom: 3px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            padding: 4px;
+            transform: rotate(45deg);
+            transition: transform 0.3s ease;
+        }
+        
+        /* Rotate arrow when dropdown is open */
+        .dropdownmobile.open .dropdownmobilearrow-icon {
+            transform: rotate(225deg);
+        }
+        
+        .dropdownmobile-menu {
+            list-style: none; /* Removes default bullets */
+            padding: 0; /* Remove default padding */
+            margin: 0; /* Remove default margin */
+        }
+        
+        /* Ensure dropdown menu items align properly */
+        .dropdownmobile-menu li {
+            padding: 5px 15px; /* Add spacing to dropdown items */
+        }
+
+        /* Hide sidebar for larger screens */
+        @media screen and (min-width: 992px) {
+            .sidebarmobile, .mobilemenu-btn {
+                display: none;
+            }
+            
+            .site_logo img{
+              width: 330px;
+            }
+        }
+        @media screen and (max-width:425px) {
+            .site_logo img{
+                width: 280px;
+            }
+        }
+         @media screen and (max-width: 991px) {
+            .container, .hero_banner.style_1 .container, .site_header .container {
+                 margin-top: 0px !important; 
+            }
+         }
+    </style>
+    </head>
+    <body>
+        <div class="page_wrapper">
+            <div class="backtotop">
+                <a href="#" class="scroll"><i class="far fa-arrow-up"></i></a>
+            </div>
+           <header class="site_header site_header_1">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col col-lg-3 col-10">
+                            <div class="site_logo">
+                                <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt=""></a> 
+                                <!--<span>PRS Science Exploratory</span>-->
+                            </div>
+                        </div>
+                        <div class="col col-lg-9 col-2">
+							<nav class="main_menu navbar navbar-expand-lg">
+                                <div class="main_menu_inner collapse navbar-collapse " id="main_menu_dropdown">
+                                    <ul class="main_menu_list unordered_list_center"> 
+									    <li><a class="nav-link" href="index.html">Home</a></li> 
+                                        <li><a class="nav-link" href="about.html"><u>About us</u></a></li>
+                                        
+                                        <li class="dropdown">
+                                            <a  class="nav-link" href="#" id="blog_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programs</a>
+											 <ul class="dropdown-menu" aria-labelledby="blog_submenu">
+    											<li><a class="nav-link" href="programs.html">For Students</a></li>
+    											<li><a class="nav-link" href="teacher_programs.html">For Teachers</a></li>
+    											<li><a class="nav-link" href="citizens.html">For Citizens</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="nav-link" href="news_and_media.html">News and Media</a></li>
+                                        <li class="dropdown">
+                                            <a class="nav-link" href="#" id="blog_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
+											 <ul class="dropdown-menu" aria-labelledby="blog_submenu">
+											<li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
+											<li><a class="nav-link" href="indian-scientist.html">Indian Scientist</a></li>
+											<li><a class="nav-link" href="top-iit.html">Institutes of Indias</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li> 
+                                        <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+                                        <li><a class="nav-link" href="notices.html"><u>Notices</u></a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                             <!-- Mobile Hamburger Menu (visible only on small screens) -->
+                            <button class="mobilemenu-btn d-lg-none" onclick="toggleMenu()">&#9776;</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Sidebar Menu (for mobile) -->
+            <div id="sidebarMenumobile" class="sidebarmobile">
+                <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">×</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                
+                
+                <!-- Dropdown (Mobile) -->
+                <!--<a href="programs.html">Programs</a>-->
+                <div class="dropdownmobile">
+                    <a href="#" class="dropdownmobile-toggle" onclick="toggleDropdown(event, this)">Programs <i class="dropdownmobilearrow-icon"></i></a>
+                    <ul class="dropdownmobile-menu">
+                        <li><a href="programs.html">For Students</a></li>
+                        <li><a href="teacher_programs.html">For Teachers</a></li>
+                        <li><a href="citizens.html">For Citizens</a></li>
+                    </ul>
+                </div>
+            
+                <!--<a href="admissions.html">Admissions</a>-->
+                <a href="news_and_media.html">News and Media</a>
+                <!-- Dropdown (Mobile) -->
+                <div class="dropdownmobile">
+                    <a href="#" class="dropdownmobile-toggle" onclick="toggleDropdown(event, this)">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
+                    <ul class="dropdownmobile-menu">
+                        <li><a href="great-minds.html">Great Minds</a></li>
+                        <li><a href="indian-scientist.html">Indian Scientist</a></li>
+                        <li><a href="top-iit.html">Institutes of India</a></li>
+                    </ul>
+                </div>
+                <a href="exploratory.html">Exploratory Perks</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="notices.html">Notices</a>
+            </div>
+            
+            <!-- Overlay (for closing sidebar when clicking outside) -->
+            <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div>
+            
+            <script>
+                function toggleMenu() {
+                    document.getElementById("sidebarMenumobile").classList.toggle("active");
+                    document.getElementById("menuOverlay").classList.toggle("active");
+                }
+                
+                function toggleDropdown(event, element) {
+                    event.preventDefault(); 
+                    let parent = element.parentElement;
+                    parent.classList.toggle("open");
+                }
+            </script>
+            <main class="page_content">
+                <section class="page_banner">
+                    <div class="container">
+                        <div class="content_wrapper">
+                            <div class="row align-items-center">
+                                <div class="col col-lg-12">
+                                    <ul class="breadcrumb_nav unordered_list">
+                                        <li><a href="index.html">Home</a></li> 
+                                        <li>Past Events</li>
+                                    </ul>
+                                    <h1 class="page_title">Past Events</h1>
+                                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+				
+				
+                <section class="courses_info_section section_space_lg">
+                    <div class="container">
+                        <div class="row align-items-center" style="margin-bottom:30px;">  
+                            <h5 class="">Vigyan Jigyasa</h5>
+                            <div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/vigyan_jigyasa/vigyan_jigyasa.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/vigyan_jigyasa/vigyan_jigyasa1.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/vigyan_jigyasa/vigyan_jigyasa2.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/vigyan_jigyasa/vigyan_jigyasa3.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/vigyan_jigyasa/vigyan_jigyasa4.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/vigyan_jigyasa/vigyan_jigyasa5.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/vigyan_jigyasa/vigyan_jigyasa6.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/vigyan_jigyasa/vigyan_jigyasa7.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+                        </div>
+                        <hr/>
+                        <div class="row align-items-center" style="margin-bottom:30px;">  
+                            <h5 class="">Laboratory Training Program 2025</h5>
+                            <div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities1.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities2.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities3.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities4.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities5.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities6.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities7.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities8.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities9.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<!--<div class="col col-lg-3 col-md-3 col-sm-3">-->
+       <!--                         <div class="image_widget"><img src="assets/images/student_activities/student_activities10.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>-->
+							
+							<!--</div>-->
+							<!--<div class="col col-lg-3 col-md-3 col-sm-3">-->
+       <!--                         <div class="image_widget"><img src="assets/images/student_activities/student_activities11.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>-->
+							
+							<!--</div>-->
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities12.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities13.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<!--<div class="col col-lg-3 col-md-3 col-sm-3">-->
+       <!--                         <div class="image_widget"><img src="assets/images/student_activities/student_activities14.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>-->
+							
+							<!--</div>-->
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities15.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities16.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities17.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities18.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities19.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities20.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities21.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities22.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities23.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities24.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/student_activities/student_activities25.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+                        </div>
+                        <hr/>
+                        <div class="row align-items-center" style="margin-bottom:30px;">  
+                            <h5 class="">Special Batches of PRSSE</h5>
+                            <div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/special_batches/special_batches.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/special_batches/special_batches1.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<!--<div class="col col-lg-3 col-md-3 col-sm-3">-->
+       <!--                         <div class="image_widget"><img src="assets/images/special_batches/special_batches2.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>-->
+							
+							<!--</div>-->
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/special_batches/special_batches3.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/special_batches/special_batches4.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/special_batches/special_batches6.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/special_batches/special_batches5.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							
+							<!--<div class="col col-lg-3 col-md-3 col-sm-3">-->
+       <!--                         <div class="image_widget"><img src="assets/images/special_batches/special_batches7.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>-->
+							
+							<!--</div>-->
+                        </div>
+                        <hr/>
+                        <div class="row align-items-center" style="margin-bottom:30px;">  
+                            <h5 class="">School Visits</h5>
+                            <div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit1.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<!--<div class="col col-lg-3 col-md-3 col-sm-3">-->
+       <!--                         <div class="image_widget"><img src="assets/images/school_visits/school_visit2.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>-->
+							
+							<!--</div>-->
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit3.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit4.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit5.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<!--<div class="col col-lg-3 col-md-3 col-sm-3">-->
+       <!--                         <div class="image_widget"><img src="assets/images/school_visits/school_visit6.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>-->
+							
+							<!--</div>-->
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit7.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<!--<div class="col col-lg-3 col-md-3 col-sm-3">-->
+       <!--                         <div class="image_widget"><img src="assets/images/school_visits/school_visit8.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>-->
+							
+							<!--</div>-->
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit9.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit9.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<!--<div class="col col-lg-3 col-md-3 col-sm-3">-->
+       <!--                         <div class="image_widget"><img src="assets/images/school_visits/school_visit10.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>-->
+							
+							<!--</div>-->
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit11.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit12.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit13.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit14.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit15.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<!--<div class="col col-lg-3 col-md-3 col-sm-3">-->
+       <!--                         <div class="image_widget"><img src="assets/images/school_visits/school_visit16.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>-->
+							
+							<!--</div>-->
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit23.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit18.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit19.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit24.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit17.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit20.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit21.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/school_visits/school_visit22.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							
+							
+                        </div>
+                        <hr/>
+                        <div class="row align-items-center" style="margin-bottom:30px;">  
+                            <h5 class="">College Visits</h5>
+                            <div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/college_visits/college_visit.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/college_visits/college_visit1.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/college_visits/college_visit2.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/college_visits/college_visit3.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/college_visits/college_visit5.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/college_visits/college_visit7.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/college_visits/college_visit4.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+							<div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/college_visits/college_visit6.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+                        </div>
+                        <hr/>
+                        <div class="row align-items-center" style="margin-top:30px;">  
+                        <h5 class="">Past Events</h5>
+                            <!-- ======================================================== -->
+                            <div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/prs01.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+                            <div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/prs02.jpg" alt="Prof. Rajendra Singh Exploratory" /></div> 
+							</div>
+							
+                            <div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/prs03.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+                            <div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/prs04.jpg" alt="Prof. Rajendra Singh Exploratory" /></div> 
+							</div>
+							
+                            <div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/prs05.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+                            <div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/prs06.jpg" alt="Prof. Rajendra Singh Exploratory" /></div> 
+							</div>
+							
+                            <!-- ======================================================== -->
+										
+                            <div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/prs-1.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+                            <div class="col col-lg-3 col-md-3 col-sm-3">
+                                <div class="image_widget"><img src="assets/images/prs-2.jpg" alt="Prof. Rajendra Singh Exploratory" /></div> 
+							</div>
+							
+                            <div class="col col-lg-3 col-md-3 col-sm-3">
+								<div class="image_widget"><img src="assets/images/prs-3.png" alt="Prof. Rajendra Singh Exploratory" /></div> 
+							</div>   
+                            </div> 
+                    </div>
+                </section> 
+				 
+				
+				 
+                <section class="newslatter_section">
+                    <div class="container">
+                        <div class="newslatter_box" style="background-image: url(assets/images/shape/shape_img_6.svg);">
+                            <div class="row justify-content-center">
+                                <div class="col col-lg-6">
+                                    <div class="section_heading text-center">
+                                        <h2 class="heading_text">Admission Open</h2>
+                                        <p class="heading_description mb-0">Admission to Prof. Rajendra Singh Exploratory is open to all students who have an interest in science. Admissions are fixed in the month of June-July for one year academic session till April.</p>
+                                    </div>
+                                    <form action="#">
+                                        <div class="form_item m-0"> 
+                                            <button type="submit" class="btn btn_dark">
+                                                <span><small>Apply Now</small> <small>Apply Now</small></span>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="site_footer">
+                <div class="footer_widget_area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-lg-4 col-md-6 col-sm-6">
+                                <div class="footer_widget">
+                                            <h3 class="footer_widget_title">Address</h3>
+                                    <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High School, Near Alankar Talkies, North Ambazari road, Nagpur- 440010.</p>
+                                    <!--<ul class="social_links unordered_list">-->
+                                    <!--    <li>-->
+                                    <!--        <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook"><i class="fab fa-facebook-f"></i></a>-->
+                                    <!--    </li>-->
+                                    <!--    <li>-->
+                                    <!--        <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"><i class="fab fa-youtube"></i></a>-->
+                                    <!--    </li>-->
+                                    <!--    <li>-->
+                                    <!--        <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"><i class="fab fa-instagram"></i></a>-->
+                                    <!--    </li>-->
+                                        <!--<li>-->
+                                        <!--    <a href="#!"><i class="fab fa-linkedin-in"></i></a>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                </div>
+                            </div>
+                            <div class="col col-lg-4">
+                                <!--<div class="row">-->
+                                <!--    <div class="col col-md-4 col-sm-4">-->
+                                <div class="footer_widget" >
+                                    <h3 class="footer_widget_title">Social Links</h3>
+                                    <ul class="social_links unordered_list">
+                                        <li>
+                                            <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook" target="_blank"><img src="assets/images/icon/5365678_fb_facebook_facebook logo_icon.png"/></a><!--<i class="fab fa-facebook-f"></i><i class="fab fa-whatsapp"></i><i class="fab fa-instagram"></i><i class="fab fa-youtube"></i>-->
+                                        </li>
+                                        <li>
+                                            <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I" target="_blank"><img src="assets/images/icon/410526_youtube_play_icon.png"/></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4" target="_blank"><img src="assets/images/icon/5296765_camera_instagram_instagram logo_icon.png"/></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://wa.me/917249811866" target="_blank"><img src="assets/images/icon/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png"/></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                    <!--</div>-->
+            <!--                        <div class="col col-md-8 col-sm-8">-->
+            <!--                            <div class="footer_widget">-->
+            <!--                                <h3 class="footer_widget_title">Programs</h3>-->
+            <!--                                <ul class="page_list unordered_list_block"> -->
+												<!--<li>-->
+            <!--                                        <a href="experimental.html">-->
+            <!--                                            <span class="item_icon"><i class="fas fa-caret-right"></i></span> <span class="item_text">Experimental Training</span>-->
+            <!--                                        </a>-->
+            <!--                                    </li>-->
+            <!--                                    <li>-->
+            <!--                                        <a href="exposure-camp.html">-->
+            <!--                                            <span class="item_icon"><i class="fas fa-caret-right"></i></span> <span class="item_text">Dr. Homi Bhabha Balvaidnyanik Exposure Camp</span>-->
+            <!--                                        </a>-->
+            <!--                                    </li>-->
+            <!--                                    <li>-->
+            <!--                                        <a href="mathematics.html">-->
+            <!--                                            <span class="item_icon"><i class="fas fa-caret-right"></i></span> <span class="item_text">Mathematics Olympiad Training</span>-->
+            <!--                                        </a>-->
+            <!--                                    </li>-->
+            <!--                                    <li>-->
+            <!--                                        <a href="international.html">-->
+            <!--                                            <span class="item_icon"><i class="fas fa-caret-right"></i></span> <span class="item_text">International Junior Science Olympiad Training</span>-->
+            <!--                                        </a>-->
+            <!--                                    </li> -->
+            <!--                                </ul>-->
+            <!--                            </div>-->
+            <!--                        </div> -->
+                                <!--</div>-->
+                            </div>
+                            <div class="col col-lg-4 col-md-6 col-sm-6">
+                                <div class="footer_widget">
+                                    <h3 class="footer_widget_title">Contact Details</h3>
+                                    <ul class="blog_small_group unordered_list_block"> 
+                                        <li>
+                                            <a class="blog_small" href="#">
+                                                   <span class="item_content">
+                                                       <small class="item_post_date">Call : 7249811866</small>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="blog_small" href="#">
+                                                   <span class="item_content">
+                                                       <small class="item_post_date">Email: prsscienceexploratory@gmail.com </small>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright_widget">
+                    <div class="container">
+                        <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All rights reserved | Copyrights 2023</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="assets/js/script.js"></script>
+    </body> 
+</html>

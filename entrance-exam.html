@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Professor Rajendra Singh Science Exploratory</title>
+    <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+         .meta_info_list li {
+                    list-item: none;
+                    font-size: 16px;
+                }
+
+         .meta_info_list li::marker {
+                    font-size: 0px;
+                }
+
+        .storyclasstb tr td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        img:hover{
+            /*transform: scale(1.1);*/
+            transition: transform 0.5s;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        /* Sidebar Menu */
+        .sidebarmobile {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100vh; /* Full height */
+            background: #333;
+            color: white;
+            transition: 0.3s;
+            padding-top: 60px;
+            z-index: 1000;
+            overflow-y: auto; /* Enable scrolling */
+            scrollbar-width: thin; /* Firefox */
+            scrollbar-color: #888 #333; /* Firefox */
+        }
+        
+        /* Custom scrollbar for Chrome, Edge, Safari */
+        .sidebarmobile::-webkit-scrollbar {
+            width: 6px;
+        }
+        .sidebarmobile::-webkit-scrollbar-track {
+            background: #333;
+        }
+        .sidebarmobile::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 3px;
+        }
+        .sidebarmobile::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        .sidebarmobile a {
+            padding: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebarmobile a:hover {
+            background: #575757;
+        }
+        .sidebarmobile.active {
+            right: 0;
+        }
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .menu-overlay.active {
+            display: block;
+        }
+        .mobilemenu-btn {
+            font-size: 30px;
+            cursor: pointer;
+            color: black;
+            background: none;
+            border: none;
+            float: right;
+        }
+        
+         /* Dropdown Styling for Mobile */
+        .dropdownmobile-toggle::after {
+            display: none; /* Remove Bootstrap caret */
+        }
+
+        .dropdownmobile-menu {
+            display: none; /* Hide by default */
+            background: #444;
+            padding-left: 15px;
+        }
+
+        .dropdownmobile-menu a {
+            padding: 10px;
+        }
+
+        .dropdownmobile.open > .dropdownmobile-menu {
+            display: block; /* Show when parent has class 'open' */
+        }
+        
+        /* Styles for dropdown arrow */
+        .dropdownmobile-toggle::after {
+            content: " ▼";  /* Unicode down arrow */
+            font-size: 12px;
+            color: white;
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Rotate arrow when dropdown is open */
+        .dropdownmobile.open > .dropdownmobile-toggle::after {
+            transform: rotate(180deg);
+        }
+        
+          /* Style the dropdown arrow */
+        .dropdownmobilearrow-icon {
+            display: inline-block;
+            margin-left: 5px;
+            margin-bottom: 3px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            padding: 4px;
+            transform: rotate(45deg);
+            transition: transform 0.3s ease;
+        }
+        
+        /* Rotate arrow when dropdown is open */
+        .dropdownmobile.open .dropdownmobilearrow-icon {
+            transform: rotate(225deg);
+        }
+        
+        .dropdownmobile-menu {
+            list-style: none; /* Removes default bullets */
+            padding: 0; /* Remove default padding */
+            margin: 0; /* Remove default margin */
+        }
+        
+        /* Ensure dropdown menu items align properly */
+        .dropdownmobile-menu li {
+            padding: 5px 15px; /* Add spacing to dropdown items */
+        }
+
+        /* Hide sidebar for larger screens */
+        @media screen and (min-width: 992px) {
+            .sidebarmobile, .mobilemenu-btn {
+                display: none;
+            }
+            
+            .site_logo img{
+              width: 330px;
+            }
+        }
+        @media screen and (max-width:425px) {
+            .site_logo img{
+                width: 280px;
+            }
+        }
+          @media screen and (max-width: 991px) {
+            .container, .hero_banner.style_1 .container, .site_header .container {
+                 margin-top: 0px !important; 
+            }
+         }
+         .container{
+             max-width: 1430px !Important;
+         }
+         .center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #adadad;
+    max-width: 100%;
+    height: auto;
+}
+.page_content {
+    /* margin-top: 120px; */
+    margin-top: 145px !Important;
+}
+    </style>
+
+</head>
+
+<body>
+    <div class="page_wrapper">
+        <div class="backtotop">
+            <a href="#" class="scroll"><i class="fa fa-arrow-up"></i></a>
+        </div>
+        <header class="site_header site_header_1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col col-lg-3 col-10">
+                        <div class="site_logo">
+                            <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt="" ></a>
+                        </div>
+                    </div>
+                    <div class="col col-lg-9 col-2">
+                      
+                        <nav class="main_menu navbar navbar-expand-lg">
+                            <div class="main_menu_inner collapse navbar-collapse " id="main_menu_dropdown">
+                                <ul class="main_menu_list unordered_list_center">
+                                    <li><a class="nav-link" href="index.html">Home</a></li>
+                                    <li><a class="nav-link" href="about.html"><u>About us</u></a></li>
+                                    
+                                    <li class="dropdown">
+                                            <a  class="nav-link" href="#" id="blog_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programs</a>
+											 <ul class="dropdown-menu" aria-labelledby="blog_submenu">
+    											<li><a class="nav-link" href="programs.html">For Students</a></li>
+    											<li><a class="nav-link" href="teacher_programs.html">For Teachers</a></li>
+    											<li><a class="nav-link" href="citizens.html">For Citizens</a></li>
+                                            </ul>
+                                    </li>
+                                    <li><a class="nav-link" href="#">News and Media</a></li>
+                                    <li class="dropdown">
+                                        <a class="nav-link" href="#" id="blog_submenu" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
+                                        <ul class="dropdown-menu" aria-labelledby="blog_submenu">
+                                            <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
+                                            <li><a class="nav-link" href="indian-scientist.html">Indian Scientist</a>
+                                            </li>
+                                            <li><a class="nav-link" href="top-iit.html">Institutes of Indias</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
+                                    <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+                                    <li><a class="nav-link" href="notices.html"><u>Notices</u></a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Mobile Hamburger Menu (visible only on small screens) -->
+                        <button class="mobilemenu-btn d-lg-none" onclick="toggleMenu()">&#9776;</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Sidebar Menu (for mobile) -->
+            <div id="sidebarMenumobile" class="sidebarmobile">
+                <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">×</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="exploratory.html">Exploratory Perks</a>
+                
+                <!-- Dropdown (Mobile) -->
+                <!--<a href="programs.html">Programs</a>-->
+                <div class="dropdownmobile">
+                    <a href="#" class="dropdownmobile-toggle" onclick="toggleDropdown(event, this)">Programs <i class="dropdownmobilearrow-icon"></i></a>
+                    <ul class="dropdownmobile-menu">
+                        <li><a href="about_programs.html">About Programs</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="outcome.html">Programs Outcome</a></li>
+                    </ul>
+                </div>
+            
+                <a href="admissions.html">Admissions</a>
+            
+                <!-- Dropdown (Mobile) -->
+                <div class="dropdownmobile">
+                    <a href="#" class="dropdownmobile-toggle" onclick="toggleDropdown(event, this)">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
+                    <ul class="dropdownmobile-menu">
+                        <li><a href="great-minds.html">Great Minds</a></li>
+                        <li><a href="indian-scientist.html">Indian Scientist</a></li>
+                        <li><a href="top-iit.html">Institutes of India</a></li>
+                    </ul>
+                </div>
+            
+                <a href="contact.html">Contact Us</a>
+                <a href="notices.html">Notices</a>
+            </div>
+            
+            <!-- Overlay (for closing sidebar when clicking outside) -->
+            <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div>
+            
+            <script>
+                function toggleMenu() {
+                    document.getElementById("sidebarMenumobile").classList.toggle("active");
+                    document.getElementById("menuOverlay").classList.toggle("active");
+                }
+                
+                function toggleDropdown(event, element) {
+                    event.preventDefault(); 
+                    let parent = element.parentElement;
+                    parent.classList.toggle("open");
+                }
+            </script>
+        
+        <main class="page_content">
+            <section class="page_banner">
+                <div class="container">
+                    <div class="content_wrapper">
+                        <ul class="breadcrumb_nav unordered_list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="programs.html">Programs</a></li>
+                            <li>Addtional Entrance Exam for Laboratory Training Programme 2025 </li>
+                        </ul>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col col-lg-12">
+                            <img class="center-img" style="border: 1px solid #adadad;" src="assets/images/additional-exam.jpg"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="courses_info_section section_space_lg">
+                <div class="container">
+                    <div class="ms-4 me-4 mt-4">
+                        <h4>Hands-On Learning: The Educational Approach at PRSSE
+                        </h4>
+                        <p>At the Professor Rajendra Singh Science Exploratory (PRSSE), we believe that science is more than just a subject—it's a way of life. Our mission is to inspire and educate young minds to appreciate science and explore the world in exciting ways. Established in 2015, PRSSE provides hands-on experience across various scientific disciplines, including Chemistry, Physics, Biology, Astronomy, Mathematics, and Design Thinking. 
+                        Unlike traditional experiments, which often focus on predefined outcomes, our exploratory approach encourages students to think critically, ask questions, and engage in open-ended investigations. This fosters a deeper understanding of scientific concepts and cultivates a spirit of inquiry. Our dedicated team of trainers, advisors and experts is committed to creating an engaging learning environment for all students. Whether you're a budding scientist or simply curious, we have something for everyone! Over the years, students enrolled in various programs offered by the exploratory have achieved significant success in embracing science, paving the way for their future aspirations. 
+                        </p>
+                    </div>
+                
+                    <!--    <div style="margin-left: 100px;">-->
+                    <!--    <iframe width="90%" height="450" src="https://www.youtube.com/embed/CJjvPhZBFYQ?si=fGFxfwQMaB9qJldv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
+                    <!--</div>-->
+                </div>
+            </section>
+            <!--<section class="courses_info_section section_space_lg">-->
+            <!--    <div class="container">-->
+            <!--       <div class="ms-4 me-4 mt-4">-->
+            <!--            <h4 style="text-align: center;">Report of Activities Conducted in 2023-24 Session</h4>-->
+            <!--            <br>-->
+            <!--            <div class="container">-->
+            <!--                <div class="row">-->
+            <!--                    <div class="col-md-6">-->
+            <!--                        <img src="assets/images/NF309892.JPG" alt="img1" style="width: 450px;height: 250px; border-radius: 20px;float: inline-end;">-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-6">-->
+            <!--                        <img src="assets/images/NF309883.JPG" alt="img1" style="width: 450px;height: 250px; border-radius: 20px">-->
+            <!--                    </div>-->
+                                <!--<div class="col-md-4">-->
+                                <!--    <img src="assets/images/NF309882.JPG" alt="img1" style="width: 450px;height: 250px; border-radius: 20px">-->
+                                <!--</div>-->
+            <!--                </div>    -->
+            <!--            </div>-->
+            <!--       </div>-->
+            <!--    </div>-->
+            <!--</section>-->
+            <section class="courses_info_section section_space_lg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-12">
+                            <div class="content_wrap ps-lg-3">
+                                <div class="section_heading">
+                                    <h4 class="">About the Laboratory Training Programme</h4>
+                                </div>
+                                <p>
+                                    Our Laboratory Training Programme offers valuable hands-on experience in scientific exploration and experimentation. Each week, students will engage in experiments in our cutting-edge laboratory facilities for 2 hours at PRSSE. Participants will explore various fields, including Biology, Chemistry, Electronics, Mathematics, Physics, and DIY activities.
+                                </p>
+                                <ul>
+                                    <li><h6>Batch Selection:</h6><p>Students can choose their preferred batch slot based on the merit list of our entrance exam on a first come first serve basis.</p></li>
+
+                                    <li><h6>Sessions:</h6><p> Throughout the academic year, students can attend around 35 sessions, completing over 40 activities/tasks/and experiments including some mini projects.
+                                    </p></li>
+
+                                    <li><h6>Outreach Programs:</h6><p>Students will benefit from various outreach initiatives, such as exhibitions, guest talks, interactions with visiting scientists and educators, science shows, quizzes, sky watching, webinars and more.</p></li>
+                                </ul>
+                            </div>
+                            <br>
+                            <section class="img-gallery">
+                                <div class="container" style="display:flex; gap: 100px;">
+                                    <div>
+                                     <img src="assets/images/IMG-20250107-WA0142.jpg" alt="img1" height="200" style="border-radius: 20px">
+                                    </div>
+                                    <div>
+                                     <img src="assets/images/IMG-20250107-WA0020.jpg" alt="img1" height="200"  style="border-radius: 20px">
+                                     </div>
+                                     <div>
+                                     <img src="assets/images/IMG-20241205-WA0055.jpg" alt="img1" height="200"  style="border-radius: 20px">
+                                    </div>
+                                    <div>
+                                        <img src="assets/images/IMG_20240218_090340588_HDR_AE.jpg" alt="img1" style="border-radius: 20px">
+                                       </div>
+                                </div>
+                                <br><br>
+                            </section>
+                            <section>
+                                <div class="ms-4 me-4 mt-4">
+                                    <h4>Highlights of the Laboratory Training Programme:
+                                    </h4>
+                                    <ul style="line-height:2">
+                                        <li>Development of practical skills and knowledge in conducting experiments
+                                        </li>
+                                        <li>Training in data analysis and problem-solving
+                                        </li>
+                                        <li>Exposure to various national/international competitions in science and technology (e.g., Vidyarthi Vigyaan Manthan, Homi Bhabha Balvaidnyanik Competition, Science Olympiads)</li>
+                                        <li>Exposure to telescope handling sessions during astronomical events.</li>
+                                        <li>Exposure to National/International platforms to represent innovation.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="impnote">
+                                <div class="ms-4 me-4 mt-4">
+                                    <h4 style="color:red;">Important Details</h4>
+                                    <ul style="line-height: 2;">
+                                        <li><strong>Who can be admitted for the next session: </strong><span> Students from 5th, 6th and 7th Std. in the current ongoing session.
+                                        </span></li>
+                                        <li><strong>Number of Students to be Admitted: 400 </strong></li>
+                                        <li><strong>Quota System: </strong><span>  For each participating school so that we can cover each section of the society
+                                        </span></li>
+                                        <li><strong>Duration of Academic Session: </strong><span> July 2025 - March 2026
+                                        </span></li>
+                                        <li><strong>Commencement Date:  </strong><span> First week of July 2025
+                                        </span></li>
+                                        <li style="color: red;"><strong>Annual Fees: </strong><span> ₹6000 (50% concession can be made available for students from economically weaker sections)
+                                        </span></li>
+                                        <li><strong>Batch Size:  </strong><span> 18 students per batch
+                                        </span></li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <!-- <h2 class="heading_text mt-30">Programme Details</h2>
+                            <ul class="info_list unordered_list_block">
+                                <li><i class="fas fa-check"></i> <span>Equipping students with practical skills and
+                                        knowledge in conducting experiments</span></li>
+                                <li><i class="fas fa-check"></i> <span>Providing training in data analysis and problem
+                                        solving in specially designed laboratories</span></li>
+                                <li><i class="fas fa-check"></i> <span>Exposure training for various
+                                        National/International competitions in science and technology viz. Vidyarthi
+                                        Vigyaan Manthan, Homi Bhabha Balvaidnyanik Competition, Junior Science Olympiad
+                                        etc.</span></li>
+                                <li><i class="fas fa-check"></i> <span>No. of Seats: 400 students (Selected students can
+                                        select the batch of their convenience as per the available slots)</span> </li>
+
+                                <li><i class="fas fa-check"></i> <span>Entrance Exam Date: 10th, 12th & 13th April,
+                                        2025</span></li>
+                                <li><i class="fas fa-check"></i> <span>Last date of enrollment for entrance exam: 2nd
+                                        April 2025</span></li>
+                                <li><i class="fas fa-check"></i> <span>Annual Fees: Rs. 6000/- </span></li>
+                                <li><i class="fas fa-check"></i> <span>50% concession in annual fees is available for
+                                        students from economically weaker sections </span></li>
+
+
+                            </ul> -->
+                            
+                        </div>
+                     <div class="ms-4 me-4 mt-1">
+                        <h4 class="">About the Entrance Exam</h4>
+                        <ul class="info_list unordered_list_block">
+
+                            <li><i class="fas fa-check"></i> <span>5th-7th Std. students for the admission in 6th-8th
+                                    Std. in the next academic session (July 2025-March 2026) </span></li>
+
+                            <li><i class="fas fa-check"></i> <span>Entrance Exam Date: 10th, 12th & 13th April,
+                                    2025</span></li>
+                            <li><i class="fas fa-check"></i> <span>Last date of enrollment for entrance exam: 2nd April
+                                    2025</span></li>
+                            <li><i class="fas fa-check"></i> <span>Entrance Exam Fee for Laboratory Skill Test: ₹50
+                                    Online </span></li>
+                            <li><i class="fas fa-check"></i> <span>Payment: UPI ID: 7517606401@ybl </span></li>
+                            <li><i class="fas fa-check"></i> <span>Exam Venue: Prof. Rajendra Singh Science Exploratory<br><i class="fa-solid fa-location-dot" style="color: red;"></i> 2nd Floor, Tarkunde Dharampeth High School, Near Alankar Talkies, North Ambazari Road, Nagpur-440010.
+                                </span></li>
+                            <li><i class="fas fa-check"></i> <span>Syllabus of Entrance Exam: Hands-on activities in
+                                    science from middle school syllabus of Maharashtra State Board and CBSE board</span>
+                            </li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary" style="width: 150px;margin: auto;margin-top:20px ;"> <a
+                            href="https://docs.google.com/forms/d/1zeMLreueaav3fOh0Nrr-uqBRcCyfhQjKdaUFD2WIO0s/edit?usp=drivesdk" style="color: white;text-decoration: none;">Register Now</a></button>
+                    </div>
+                </div>
+            </section>
+            <section class="courses_info_section section_space_lg">
+                <div class="container">
+                    <div class="" style="background-image: url('https://plus.unsplash.com/premium_photo-1661315477345-1a1709d2b3d5?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29udGFjdCUyMGZvcm18ZW58MHx8MHx8fDA%3D');background-repeat: no-repeat;background-size: cover; height: 400px;">
+                        <div class="ms-5">
+                    <br><br><br><br><br><br><br><br><br><br>
+                    <h4>Contact Details for Enquiries:
+                    </h4>
+                    <ul style="line-height: 2;">
+                        <li><strong>Email: </strong> <a href="prsscienceexploratory@gmail.com">  prsscienceexploratory@gmail.com</a>
+                        </li>
+                        <li><strong>Phone: 7249811866 (WhatsApp)
+                        </strong></li>
+                        <li><strong>Website: </strong> <a href="https://www.prsscienceexploratory.in/"> www.prsscienceexploratory.in </a></li>
+                    </ul>
+                </div>
+                    </div>
+                </div>
+            </section>
+            <section class="courses_info_section section_space_lg">
+                <div class="container" style="background-color: rgb(252, 236, 196);display: flex; align-items: center;">
+                    <marquee style="color:red;">Note: Interested students and parents are welcome to visit the exploratory for
+                        inquiries during office hours.
+                        Lab Visit Day: Saturday (5 p.m. to 6 p.m.), Sunday (10 a.m. to 1 p.m.).
+                    </marquee>
+                </div>
+            </section>
+    <!--        <section class="courses_info_section section_space_lg">-->
+    <!--    <div class="container-fluid">-->
+    <!--        <h2 style="text-align: center;">Success Stores</h2>-->
+    <!--        <br>-->
+    <!--        <p style="text-align: center;font-size: medium;">Students succeed in National competitions in science and technology like Homi Bhabha Balvaidnyanik-->
+    <!--            Competition, NMTC, Science Olympiad, Vidyarthi Vigyaan Manthan, etc.</p>-->
+    <!--        <br>-->
+    <!--        <h4 style="text-align: center;color: #7650ff;">Success Stories from the Current Ongoing Session -->
+                <!-- #7650ff #ff5072 #ff5050 -->
+    <!--        </h4>-->
+    <!--        <br>-->
+    <!--        <table style="width: 80%;margin: auto;" class="storyclasstb">-->
+    <!--            <tr>-->
+    <!--                <td class="col-3">Aditya Ranjan(8th)</td>-->
+    <!--                <td class="col-8">Won Regional CBSE Science Exhibition 2024 and qualified for Final CBSE National at-->
+    <!--                    Gurugram.</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Afiya Aftab-->
+    <!--                    Kirti Yerunkar(6th)</td>-->
+    <!--                <td>Qualified for the Final level of Dr. Homi Bhabha Young Scientist Competition 2024-25.</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Shrigouri Bedekar-->
+    <!--                    Nirmayee Nadamwar-->
+    <!--                    Kirti Yerunkar (6th)-->
+    <!--                </td>-->
+    <!--                <td>IWSA Indian Women Scientists Association GANIT Pratiyogita 2024</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Vanshika Rathi (7th)</td>-->
+    <!--                <td>Qualified first level NMTC Exam 2024</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Rasika Telang-->
+    <!--                    Afiya Aftab-->
+    <!--                    Kirti Yerunkar-->
+    <!--                    Vedant Joshi-->
+    <!--                    Shripad Topare-->
+    <!--                    Soumya Thakare-->
+    <!--                </td>-->
+    <!--                <td>Qualified for the Second level of-->
+    <!--                    Dr. Homi Bhabha Young Scientist Competition(6th) 2024-25-->
+    <!--                </td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Laksh Vasayani-->
+    <!--                    Narayani Patil-->
+    <!--                    Pranav Sarode-->
+    <!--                </td>-->
+    <!--                <td>Qualified for the Second level of-->
+    <!--                    Dr. Homi Bhabha Young Scientist Competition( 9th) 2024-25-->
+    <!--                </td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Aditya Ranjan(8th)</td>-->
+    <!--                <td>Ist in AXIS 2024 Ex-quizit conducted by VNIT Nagpur</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Shourya Yogesh Kunte (7th)</td>-->
+    <!--                <td>Gold medal of excellence in NSO 2024</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Anveeta Bhute 8th-->
+    <!--                    Aaradhya Bhutada-->
+    <!--                    </td>-->
+    <!--                <td>Qualified state level camp of Vidyarthi Vigyan Manthan 2024</td>-->
+    <!--            </tr>-->
+    <!--        </table>-->
+    <!--    </div>-->
+    <!--</section>-->
+    <!--        <section class="courses_info_section section_space_lg">-->
+    <!--    <div class="container">-->
+    <!--        <h2 style="margin-bottom: 10px;">Frequently Asked Questions:</h2>-->
+    <!--        <div class="accordion" id="accordionExample">-->
+    <!--            <div class="accordion-item" style="padding:10px;">-->
+    <!--                <h2 class="accordion-header" id="headingOne">-->
+    <!--                    <button class="accordion-button pl-2" type="button" data-bs-toggle="collapse"-->
+    <!--                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">-->
+    <!--                        <h4 class="ms-2">What is Professor Rajendra Singh Science Exploratory?</h4>-->
+    <!--                    </button>-->
+    <!--                </h2>-->
+    <!--                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"-->
+    <!--                    data-bs-parent="#accordionExample">-->
+    <!--                    <div class="accordion-body ms-2">-->
+    <!--                        The Professor Rajendra Singh Science Exploratory (PRSSE), established in 2015, is an-->
+    <!--                        educational institution run by an NGO, focused on inspiring and educating young minds-->
+    <!--                        through hands-on scientific exploration. It is located in west Nagpur near Alankar Talkies-->
+    <!--                        near Shankar Nagar Metro Station.-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div class="accordion-item" style="padding:10px;">-->
+    <!--                <h2 class="accordion-header" id="headingTwo">-->
+    <!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"-->
+    <!--                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">-->
+    <!--                        <h4 class="ms-2">What is the Laboratory Training Program?</h4>-->
+    <!--                    </button>-->
+    <!--                </h2>-->
+    <!--                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"-->
+    <!--                    data-bs-parent="#accordionExample">-->
+    <!--                    <div class="accordion-body ms-2">-->
+    <!--                        The Laboratory Training Program offers students practical experience in various scientific-->
+    <!--                        disciplines, including Biology, Chemistry, Physics, and Mathematics, through hands-on-->
+    <!--                        experiments conducted in state-of-the-art laboratories. Students visit once a week for two-->
+    <!--                        hours for this year-long programme.-->
+    <!--                        <br>-->
+    <!--                        <h5 class="mt-2">Key features of the Laboratory Training Program</h5>-->
+    <!--                        <ul>-->
+    <!--                            <li>Hands-on experiments in various scientific fields</li>-->
+    <!--                            <li>Around 35 sessions throughout the academic year.-->
+    <!--                            </li>-->
+    <!--                            <li>Exposure to national/international competitions.</li>-->
+    <!--                            <li>Outreach programs, including exhibitions, sky watching and guest talks.-->
+    <!--                            </li>-->
+    <!--                        </ul>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div class="accordion-item" style="padding:10px;">-->
+    <!--                <h2 class="accordion-header" id="headingThree">-->
+    <!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"-->
+    <!--                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">-->
+    <!--                        <h4 class="ms-2"> How many students will be admitted to the program?-->
+    <!--                        </h4>-->
+    <!--                    </button>-->
+    <!--                </h2>-->
+    <!--                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"-->
+    <!--                    data-bs-parent="#accordionExample">-->
+    <!--                    <div class="accordion-body ms-2">-->
+    <!--                        A total of 400 students will be selected from various schools of the city through entrance-->
+    <!--                        exams scheduled in April for the year-long training program.-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="accordion-item" style="padding:10px;">-->
+    <!--                <h2 class="accordion-header" id="headingFour">-->
+    <!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"-->
+    <!--                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">-->
+    <!--                        <h4 class="ms-2">Who can participate in the Entrance Exam?-->
+    <!--                        </h4>-->
+    <!--                    </button>-->
+    <!--                </h2>-->
+    <!--                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"-->
+    <!--                    data-bs-parent="#accordionExample">-->
+    <!--                    <div class="accordion-body ms-2">-->
+    <!--                        Students currently in 5th, 6th, and 7th grades in Nagpur are eligible to register for the-->
+    <!--                        Entrance Exam.-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="accordion-item" style="padding:10px;">-->
+    <!--                <h2 class="accordion-header" id="headingFive">-->
+    <!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"-->
+    <!--                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">-->
+    <!--                        <h4 class="ms-2">What is the last date for registration?-->
+    <!--                        </h4>-->
+    <!--                    </button>-->
+    <!--                </h2>-->
+    <!--                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"-->
+    <!--                    data-bs-parent="#accordionExample">-->
+    <!--                    <div class="accordion-body ms-2">-->
+    <!--                        The last date for registration is April 2, 2025.-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="accordion-item" style="padding:10px;">-->
+    <!--                <h2 class="accordion-header" id="headingSix">-->
+    <!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"-->
+    <!--                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">-->
+    <!--                        <h4 class="ms-2">When will the Entrance Exam take place?-->
+    <!--                        </h4>-->
+    <!--                    </button>-->
+    <!--                </h2>-->
+    <!--                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"-->
+    <!--                    data-bs-parent="#accordionExample">-->
+    <!--                    <div class="accordion-body ms-2">-->
+    <!--                        The Entrance Exam will be conducted on April 10, 12, 13, 14, and 18, 2025 at various slots.-->
+    <!--                        Students can select the slot of their choice in the registration form. Students need to-->
+    <!--                        appear for exams in the laboratories at PRSSE.-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="accordion-item" style="padding:10px;">-->
+    <!--                <h2 class="accordion-header" id="headingSeven">-->
+    <!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"-->
+    <!--                        data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">-->
+    <!--                        <h4 class="ms-2">What is the fee for the Entrance Exam?</h4>-->
+    <!--                    </button>-->
+    <!--                </h2>-->
+    <!--                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"-->
+    <!--                    data-bs-parent="#accordionExample">-->
+    <!--                    <div class="accordion-body ms-2">-->
+    <!--                        The Entrance Exam fee is ₹50, which can be paid online via UPI.-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div class="accordion-item" style="padding:10px;">-->
+    <!--                <h2 class="accordion-header" id="headingEight">-->
+    <!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"-->
+    <!--                        data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">-->
+    <!--                        <h4 class="ms-2">What subjects will the Entrance Exam cover?</h4>-->
+    <!--                    </button>-->
+    <!--                </h2>-->
+    <!--                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"-->
+    <!--                    dNien-bs-parent="#accordionExample">-->
+    <!--                    <div class="accordion-body ms-2">-->
+    <!--                        The exam will assess theoretical knowledge, observational skills, and motor skills based on-->
+    <!--                        the middle school syllabus of Maharashtra State Board and CBSE.-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="accordion-item" style="padding:10px;">-->
+    <!--                <h2 class="accordion-header" id="headingNine">-->
+    <!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"-->
+    <!--                        data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">-->
+    <!--                        <h4 class="ms-2"> What is the annual fee for the program, if a student gets selected?-->
+    <!--                        </h4>-->
+    <!--                    </button>-->
+    <!--                </h2>-->
+    <!--                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"-->
+    <!--                    data-bs-parent="#accordionExample">-->
+    <!--                    <div class="accordion-body ms-2">-->
+    <!--                        The annual fee is ₹ 6000 <br>-->
+    <!--                        50% concession available for students from economically weaker sections.-->
+
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="accordion-item" style="padding:10px;">-->
+    <!--                <h2 class="accordion-header" id="headingTen">-->
+    <!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"-->
+    <!--                        data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">-->
+    <!--                        <h4 class="ms-2">How can I get more information?</h4>-->
+    <!--                    </button>-->
+    <!--                </h2>-->
+    <!--                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"-->
+    <!--                    data-bs-parent="#accordionExample">-->
+    <!--                    <div class="accordion-body ms-2">-->
+    <!--                        For more inquiries, you can contact:-->
+    <!--                        <ul>-->
+    <!--                            <li>Email: <a href="prsscienceexploratory@gmail.com">prsscienceexploratory@gmail.com</a>-->
+    <!--                            </li>-->
+    <!--                            <li>Phone: 7249811866 (WhatsApp)</li>-->
+    <!--                            <li>Website: <a-->
+    <!--                                    href="https://www.prsscienceexploratory.in/">www.prsscienceexploratory.in</a>-->
+    <!--                            </li>-->
+    <!--                        </ul>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="accordion-item" style="padding:10px;">-->
+    <!--                <h2 class="accordion-header" id="headingEleven">-->
+    <!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"-->
+    <!--                        data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">-->
+    <!--                        <h4 class="ms-2">Is there a lab visit day for interested students/parents?</h4>-->
+    <!--                    </button>-->
+    <!--                </h2>-->
+    <!--                <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven"-->
+    <!--                    data-bs-parent="#accordionExample">-->
+    <!--                    <div class="accordion-body ms-2">-->
+    <!--                        Yes, interested students and parents can visit the exploratory during office hours on-->
+    <!--                        Saturdays (5 p.m. to 6 p.m.) and Sundays (10 a.m. to 1 p.m.).-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="accordion-item" style="padding:10px;">-->
+    <!--                <h2 class="accordion-header" id="headingTwe">-->
+    <!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"-->
+    <!--                        data-bs-target="#collapseTwe" aria-expanded="false" aria-controls="collapseTwe">-->
+    <!--                        <h4 class="ms-2">What are the various competitions where students got benefitted through this training-->
+    <!--                            programme?-->
+    <!--                        </h4>-->
+    <!--                    </button>-->
+    <!--                </h2>-->
+    <!--                <div id="collapseTwe" class="accordion-collapse collapse" aria-labelledby="headingTwe"-->
+    <!--                    data-bs-parent="#accordionExample">-->
+    <!--                    <div class="accordion-body ms-2">-->
+    <!--                        Some of the competitions like Dr. Homi Bhabha Balvaidyanik Competition, Vidyathi Vigyaan-->
+    <!--                        Manthan (VVM), Science Olympiads, Inspire Manak Awards, National Science Exhibitions (CBSE)-->
+    <!--                        etc.-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section>-->
+        </main>
+        <footer class="site_footer">
+        <div class="footer_widget_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer_widget">
+                            <h3 class="footer_widget_title">Address</h3>
+                            <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High School,
+                                Near Alankar Talkies, North Ambazari road, Nagpur- 440010.</p>
+                        
+                        </div>
+                    </div>
+                    <div class="col col-lg-4">
+                        <div class="footer_widget">
+                            <h3 class="footer_widget_title">Social Links</h3>
+                            <ul class="social_links unordered_list">
+                                <li>
+                                    <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook"
+                                        target="_blank"><img
+                                            src="assets/images/icon/5365678_fb_facebook_facebook logo_icon.png" /></a>
+                                </li>
+                                <li>
+                                    <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"
+                                        target="_blank"><img
+                                            src="assets/images/icon/410526_youtube_play_icon.png" /></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
+                                        target="_blank"><img
+                                            src="assets/images/icon/5296765_camera_instagram_instagram logo_icon.png" /></a>
+                                </li>
+                                <li>
+                                    <a href="https://wa.me/917249811866" target="_blank"><img
+                                            src="assets/images/icon/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png" /></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer_widget">
+                            <h3 class="footer_widget_title">Contact Details</h3>
+                            <ul class="blog_small_group unordered_list_block">
+                                <li>
+                                    <a class="blog_small" href="#">
+                                        <span class="item_content">
+                                            <small class="item_post_date">Call : 7249811866</small>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="blog_small" href="#">
+                                        <span class="item_content">
+                                            <small class="item_post_date">Email: prsscienceexploratory@gmail.com
+                                            </small>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright_widget">
+            <div class="container">
+                <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All rights
+                    reserved | Copyrights 2023</p>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
