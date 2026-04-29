@@ -20,7 +20,7 @@ body {
 
 .page_banner .content_wrapper {
 	align-items: center;
-	background-color: #f6f6f6;
+	/* background-color: #f6f6f6; */
 	background-color: #81cdc6;
 	border-radius: 15px;
 	display: flex;
