@@ -707,6 +707,75 @@
               }
             });
           })();
+
+          // Scroll reveal animation observer
+          (function initScrollReveal() {
+            const observerOptions = {
+              threshold: 0.15,
+              rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('revealed');
+                  observer.unobserve(entry.target);
+                }
+              });
+            }, observerOptions);
+
+            // Apply scroll-reveal class to content sections
+            const sections = document.querySelectorAll(
+              '.courses_info_section > .container > .row > .col, ' +
+              '.section_heading, ' +
+              '.content_wrap, ' +
+              '.image_widget, ' +
+              '.info_list li, ' +
+              '.footer_widget'
+            );
+
+            sections.forEach((section, index) => {
+              if (!section.classList.contains('page_banner')) {
+                section.classList.add('scroll-reveal');
+                section.classList.add('delay-' + ((index % 3) + 1));
+              }
+              observer.observe(section);
+            });
+          })();
+        </script>
+          (function initScrollReveal() {
+            const observerOptions = {
+              threshold: 0.15,
+              rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('revealed');
+                  observer.unobserve(entry.target);
+                }
+              });
+            }, observerOptions);
+
+            // Apply scroll-reveal class to content sections
+            const sections = document.querySelectorAll(
+              '.courses_info_section > .container > .row > .col, ' +
+              '.section_heading, ' +
+              '.content_wrap, ' +
+              '.image_widget, ' +
+              '.info_list li, ' +
+              '.footer_widget'
+            );
+
+            sections.forEach((section, index) => {
+              if (!section.classList.contains('page_banner')) {
+                section.classList.add('scroll-reveal');
+                section.classList.add('delay-' + ((index % 3) + 1));
+              }
+              observer.observe(section);
+            });
+          })();
         </script>
     </body> 
 </html>
