@@ -172,7 +172,7 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-            animation: fadeInUp 0.9s ease both, bannerDrift 30s ease-in-out infinite;
+            animation: fadeInUp 0.9s ease both, bannerDrift 20s ease-in-out infinite;
         }
 
         .page_banner .internal-banner {
@@ -262,30 +262,6 @@
             opacity: 0.9;
         }
 
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.16, 0.8, 0.45, 1);
-            will-change: opacity, transform;
-        }
-
-        .scroll-reveal.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .scroll-reveal.delay-1 {
-            transition-delay: 0.12s;
-        }
-
-        .scroll-reveal.delay-2 {
-            transition-delay: 0.20s;
-        }
-
-        .scroll-reveal.delay-3 {
-            transition-delay: 0.28s;
-        }
-
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -296,6 +272,7 @@
                 transform: translateY(0);
             }
         }
+
 
         @keyframes bannerDrift {
             0% {
@@ -324,6 +301,17 @@
             }
         }
 
+        @media screen and (max-width: 767px) {
+            .page_banner .content_wrapper {
+                min-height: 180px;
+                padding: 30px 20px;
+            }
+
+            .page_banner .content_wrapper .page_title {
+                font-size: 2rem;
+            }
+        }
+
         @keyframes bubbleDrift1 {
             0% { transform: translate3d(0, 0, 0); }
             50% { transform: translate3d(18px, -14px, 0); }
@@ -340,6 +328,30 @@
             0% { transform: translate3d(-50%, 0, 0); }
             50% { transform: translate3d(-50%, -20px, 0); }
             100% { transform: translate3d(-50%, 0, 0); }
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.16, 0.8, 0.45, 1);
+            will-change: opacity, transform;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-reveal.delay-1 {
+            transition-delay: 0.12s;
+        }
+
+        .scroll-reveal.delay-2 {
+            transition-delay: 0.20s;
+        }
+
+        .scroll-reveal.delay-3 {
+            transition-delay: 0.28s;
         }
     </style>
     </head>
@@ -477,7 +489,7 @@
                                     <div class="section_heading scroll-reveal delay-1">
                                         <h2 class="heading_text">Great Indian scientists and their field of work</h2>
                                               </div>
-                                    <ul class="info_list unordered_list_block scroll-reveal delay-2">
+                                    <ul class="info_list unordered_list_block">
                                         <li><i class="fas fa-square"></i> <span> <b>Jagadish Chandra Bose (1858) - Physics, Biology</b><br> 
 He was a scientist who worked on the properties of plants and discovered that they have feelings and can respond to external stimuli such as light, sound, and touch.
 </span></li>    
@@ -671,12 +683,6 @@ He is a structural biologist who won the Nobel Prize in Chemistry for his work o
         </div>
         <script src="assets/js/script.js"></script>
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const revealTargets = document.querySelectorAll('.scroll-reveal');
-                revealTargets.forEach(target => target.classList.add('revealed'));
-            });
-        </script>
-        <script>
           // Set active navigation item based on current page
           (function setActiveNav() {
             var currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -696,6 +702,39 @@ He is a structural biologist who won the Nobel Prize in Chemistry for his work o
               }
             });
           })();
+
+        (function initScrollReveal() {
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const sections = document.querySelectorAll(
+              '.courses_info_section > .container > .row > .col, ' +
+              '.section_heading, ' +
+              '.content_wrap, ' +
+              '.image_widget, ' +
+              '.info_list li, ' +
+              '.footer_widget'
+            );
+
+            sections.forEach((section, index) => {
+              if (!section.classList.contains('page_banner')) {
+                section.classList.add('scroll-reveal');
+                section.classList.add('delay-' + ((index % 3) + 1));
+              }
+              observer.observe(section);
+            });
+        })();
         </script>
     </body> 
 </html>

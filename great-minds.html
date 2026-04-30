@@ -506,7 +506,7 @@
                                         <h2 class="heading_text">Great Minds who Changed the World</h2>
                                         <p>List of some great scientists along with their date of births and field of work:</p>
                                     </div>
-                                    <ul class="info_list unordered_list_block scroll-reveal delay-2">
+                                    <ul class="info_list unordered_list_block">
                                         <li><i class="fas fa-square"></i> <span>Isaac Newton (1643) - Physics, Mathematics, Astronomy
 </span></li>
                                         <li><i class="fas fa-square"></i> <span>Albert Einstein (1879) - Physics
@@ -705,6 +705,75 @@
                   parentLi.classList.add('active');
                 }
               }
+            });
+          })();
+
+          // Scroll reveal animation observer
+          (function initScrollReveal() {
+            const observerOptions = {
+              threshold: 0.15,
+              rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('revealed');
+                  observer.unobserve(entry.target);
+                }
+              });
+            }, observerOptions);
+
+            // Apply scroll-reveal class to content sections
+            const sections = document.querySelectorAll(
+              '.courses_info_section > .container > .row > .col, ' +
+              '.section_heading, ' +
+              '.content_wrap, ' +
+              '.image_widget, ' +
+              '.info_list li, ' +
+              '.footer_widget'
+            );
+
+            sections.forEach((section, index) => {
+              if (!section.classList.contains('page_banner')) {
+                section.classList.add('scroll-reveal');
+                section.classList.add('delay-' + ((index % 3) + 1));
+              }
+              observer.observe(section);
+            });
+          })();
+        </script>
+          (function initScrollReveal() {
+            const observerOptions = {
+              threshold: 0.15,
+              rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('revealed');
+                  observer.unobserve(entry.target);
+                }
+              });
+            }, observerOptions);
+
+            // Apply scroll-reveal class to content sections
+            const sections = document.querySelectorAll(
+              '.courses_info_section > .container > .row > .col, ' +
+              '.section_heading, ' +
+              '.content_wrap, ' +
+              '.image_widget, ' +
+              '.info_list li, ' +
+              '.footer_widget'
+            );
+
+            sections.forEach((section, index) => {
+              if (!section.classList.contains('page_banner')) {
+                section.classList.add('scroll-reveal');
+                section.classList.add('delay-' + ((index % 3) + 1));
+              }
+              observer.observe(section);
             });
           })();
         </script>
