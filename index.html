@@ -1096,22 +1096,21 @@
               });
             }, observerOptions);
 
-            // Apply scroll-reveal class to content sections
-            const sections = document.querySelectorAll(
-                            '.hero_banner, ' +
-                            '.hero_banner .content_wrap, ' +
-                            '.hero_banner .testimonial_item_2, ' +
-                            '.hero_banner .announcement-box, ' +
-                            '.courses_info_section > .container > .row > .col, ' +
+                        // Apply scroll-reveal class to content sections
+                        const sections = document.querySelectorAll(
+                            'main.page_content section, ' +
+                            'main.page_content .container > .row > .col, ' +
+                            'main.page_content .content_wrap, ' +
+                            'main.page_content .announcement-box, ' +
+                            'main.page_content .button_group, ' +
+                            'main.page_content .testimonial_item_2, ' +
+                            'main.page_content .meta_info_list li, ' +
+                            'main.page_content .accordion-item, ' +
+                            'main.page_content .accordion-body, ' +
                             '.section_heading, ' +
-                            '.content_wrap, ' +
                             '.image_widget, ' +
-                            '.info_list li, ' +
-                            '.faq_section > .container > .row > .col, ' +
-                            '.newslatter_section > .container > .row > .col, ' +
-                            '.button_group, ' +
                             '.footer_widget'
-            );
+                        );
 
             // Sort elements by their vertical position (top to bottom)
             const sectionsArray = Array.from(sections);
