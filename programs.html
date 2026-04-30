@@ -983,14 +983,18 @@
             }, observerOptions);
 
             // Apply scroll-reveal class to content sections
-            const sections = document.querySelectorAll(
-              '.courses_info_section > .container > .row > .col, ' +
-              '.section_heading, ' +
-              '.content_wrap, ' +
-              '.image_widget, ' +
-              '.info_list li, ' +
-              '.footer_widget'
-            );
+                        const sections = document.querySelectorAll(
+                            '.courses_info_section > .container > .row > .col, ' +
+                            '.section_heading, ' +
+                            '.content_wrap, ' +
+                            '.image_widget, ' +
+                            '.info_list li, ' +
+                            '.footer_widget, ' +
+                            '.getstart_section > .container > .row > .col, ' +
+                            '.details_section > .container > .row > .col, ' +
+                            '.mentor_details_section > .container > .row > .col, ' +
+                            '.course_deals_section > .container > .row > .col'
+                        );
 
             // Sort elements by their vertical position (top to bottom)
             const sectionsArray = Array.from(sections);
