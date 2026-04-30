@@ -334,18 +334,7 @@
             100% {
                 transform: translate3d(-50%, 0, 0);
             }
-        }
-
-        @media screen and (max-width: 767px) {
-            .page_banner .content_wrapper {
-                min-height: 180px;
-                padding: 30px 20px;
-            }
-
-            .page_banner .content_wrapper .page_title {
-                font-size: 2rem;
-            }
-        }
+        } 
 
         .scroll-reveal {
             opacity: 0;
@@ -431,18 +420,6 @@
         .stagger-4 { animation-delay: 0.4s; }
         .stagger-5 { animation-delay: 0.5s; }
 
-        /* Hover effects */
-        .content_wrap,
-        .image_widget,
-        .section_heading {
-            transition: all 0.3s cubic-bezier(0.16, 0.8, 0.45, 1);
-        }
-
-        .content_wrap:hover,
-        .image_widget:hover {
-            transform: translateY(-5px);
-        }
-
         .image_widget img,
         .image_widget iframe {
             transition: transform 0.6s ease, filter 0.6s ease;
@@ -456,6 +433,19 @@
             overflow: hidden;
             min-height: 320px;
         }
+        @media screen and (max-width: 767px) {
+            .page_banner .content_wrapper {
+                min-height: 180px;
+                padding: 30px 20px;
+                background-size: inherit;
+            }
+
+            .page_banner .content_wrapper .page_title {
+                font-size: 2rem;
+            }
+
+            .courses_info_section .image_widget { min-height: auto;}
+        }  
 
         .courses_info_section .image_widget img {
             width: 100%;
@@ -663,7 +653,7 @@
 							
                         </div>
                         <div class="row align-items-center">
-                            <div class="col col-lg-6">
+                            <div class="col col-lg-6 p-0">
                                 <div class="image_widget"><img src="assets/images/abt.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
                             </div>
                             <div class="col col-lg-6">
