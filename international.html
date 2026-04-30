@@ -292,7 +292,32 @@
 			<style>
 			.meta_info_list li{list-item:none;font-size:16px;}
 			.meta_info_list li::marker{font-size:0px;}
-			</style>
+			        /* ===== SCROLL REVEAL ANIMATIONS ===== */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.16, 0.8, 0.45, 1);
+            will-change: opacity, transform;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-reveal.delay-1 {
+            transition-delay: 0.12s;
+        }
+
+        .scroll-reveal.delay-2 {
+            transition-delay: 0.20s;
+        }
+
+        .scroll-reveal.delay-3 {
+            transition-delay: 0.28s;
+        }
+
+</style>
                 <section class="details_section courses_info_section section_space_lg">
                     <div class="container">
                         <div class="row">
@@ -460,5 +485,67 @@ Exam will be conducted in November for which enrollment of students of program 1
             });
           })();
         </script>
-    </body> 
+            <script>
+          // Scroll reveal animation observer
+          (function initScrollReveal() {
+            const isMobile = window.innerWidth <= 767;
+            const observerOptions = {
+              threshold: isMobile ? 0.05 : 0.15,
+              rootMargin: isMobile ? '0px 0px 0px 0px' : '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('revealed');
+                  observer.unobserve(entry.target);
+                }
+              });
+            }, observerOptions);
+
+            // Apply scroll-reveal class to content sections
+            const sections = document.querySelectorAll(
+              '.courses_info_section > .container > .row > .col, ' +
+              '.section_heading, ' +
+              '.content_wrap, ' +
+              '.image_widget, ' +
+              '.info_list li, ' +
+              '.footer_widget, ' +
+              '.getstart_section > .container > .row > .col, ' +
+              '.details_section > .container > .row > .col, ' +
+              '.mentor_details_section > .container > .row > .col, ' +
+              '.course_deals_section > .container > .row > .col'
+            );
+
+            // Sort elements by their vertical position (top to bottom)
+            const sectionsArray = Array.from(sections);
+            sectionsArray.sort((a, b) => {
+              return a.getBoundingClientRect().top - b.getBoundingClientRect().top;
+            });
+
+            sectionsArray.forEach((section, index) => {
+              if (!section.classList.contains('page_banner')) {
+                section.classList.add('scroll-reveal');
+                // Assign delays based on position: every 3rd element gets same delay
+                const delayClass = 'delay-' + ((index % 3) + 1);
+                section.classList.add(delayClass);
+              }
+              observer.observe(section);
+            });
+
+            // Fallback: reveal content on mobile after page loads if still hidden
+            if (isMobile) {
+              setTimeout(function() {
+                const hiddenElements = document.querySelectorAll('.scroll-reveal:not(.revealed)');
+                hiddenElements.forEach(el => {
+                  const rect = el.getBoundingClientRect();
+                  if (rect.top < window.innerHeight) {
+                    el.classList.add('revealed');
+                  }
+                });
+              }, 500);
+            }
+          })();
+        </script>
+</body> 
 </html>
