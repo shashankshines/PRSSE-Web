@@ -2126,19 +2126,6 @@ blockquote p {
 	background-color: #1f1d0d
 }
 
-/*.page_banner .content_wrapper {
-	display: flex;
-	min-height: 520px;
-	align-items: center;
-	padding: 70px 115px;
-	background-repeat: no-repeat;
-*/
-	padding: 0 30px 0 20px;
-	text-transform: uppercase;
-	font-family: Barlow, sans-serif;
-	background-color: #f6f6f6
-}
-
 .offCanvas_overlay {
 	top: 0;
 	left: 0;
