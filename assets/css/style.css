@@ -3134,6 +3134,12 @@ blockquote p {
 }
 
 .main_menu_list>li.active>a,
+.main_menu_list .dropdown.active > a,
+.main_menu_list .dropdown:has(.dropdown-menu li.active) > a {
+	color: #1f1d0d;
+	background-color: #ffd32b
+}
+
 .main_menu_list>li:hover>a {
 	color: #1f1d0d;
 	background-color: #f6f6f6
