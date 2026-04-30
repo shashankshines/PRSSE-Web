@@ -263,29 +263,6 @@
         }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(18px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes bannerDrift {
-            0% {
-                background-position: 45% 45%;
-            }
-            50% {
-                background-position: 55% 55%;
-            }
-            100% {
-                background-position: 45% 45%;
-            }
-        }
-
-        @keyframes curtainSlide {
             0% {
                 background-position: 0% 0%;
                 opacity: 0.35;
@@ -477,7 +454,7 @@
                                     <div class="section_heading">
                                         <h2 class="heading_text scroll-reveal delay-2">Top 10 Indian Research Institutes</h2>
                                               </div>
-                                    <ul class="info_list unordered_list_block scroll-reveal delay-3">
+                                    <ul class="info_list unordered_list_block">
                                         <li><i class="fas fa-square"></i> <span> Indian Institute of Science (IISc), Bengaluru - This is a premier research institute in India, known for its research in areas such as science, engineering, and technology.</span></li> 
                                         <li><i class="fas fa-square"></i> <span> Tata Institute of Fundamental Research (TIFR), Mumbai - This is a research institute that focuses on fundamental research in areas such as physics, mathematics, and biology.
 </span></li> 
@@ -628,12 +605,41 @@
             </footer>
         </div>
         <script src="assets/js/script.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const revealTargets = document.querySelectorAll('.scroll-reveal');
-                revealTargets.forEach(target => target.classList.add('revealed'));
-            });
-        </script>
+                <script>
+                    // Scroll reveal animation observer
+                    (function initScrollReveal() {
+                        const observerOptions = {
+                            threshold: 0.15,
+                            rootMargin: '0px 0px -50px 0px'
+                        };
+
+                        const observer = new IntersectionObserver(function(entries) {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    entry.target.classList.add('revealed');
+                                    observer.unobserve(entry.target);
+                                }
+                            });
+                        }, observerOptions);
+
+                        const sections = document.querySelectorAll(
+                            '.courses_info_section > .container > .row > .col, ' +
+                            '.section_heading, ' +
+                            '.content_wrap, ' +
+                            '.image_widget, ' +
+                            '.info_list li, ' +
+                            '.footer_widget'
+                        );
+
+                        sections.forEach((section, index) => {
+                            if (!section.classList.contains('page_banner')) {
+                                section.classList.add('scroll-reveal');
+                                section.classList.add('delay-' + ((index % 3) + 1));
+                            }
+                            observer.observe(section);
+                        });
+                    })();
+                </script>
         <script>
           // Set active navigation item based on current page
           (function setActiveNav() {
