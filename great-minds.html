@@ -163,7 +163,7 @@
             background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.2)), url("assets/images/banner/great-minds-banner.png");
             background-color: transparent;
             background-repeat: no-repeat;
-            background-size: 120% auto;
+            background-size: cover;
             background-position: 50% 45%;
             border-radius: 15px;
             display: flex;
@@ -710,9 +710,10 @@
 
           // Scroll reveal animation observer
           (function initScrollReveal() {
+            const isMobile = window.innerWidth <= 767;
             const observerOptions = {
-              threshold: 0.15,
-              rootMargin: '0px 0px -50px 0px'
+              threshold: isMobile ? 0.05 : 0.15,
+              rootMargin: isMobile ? '0px 0px 0px 0px' : '0px 0px -50px 0px'
             };
 
             const observer = new IntersectionObserver(function(entries) {
@@ -734,47 +735,34 @@
               '.footer_widget'
             );
 
-            sections.forEach((section, index) => {
+            // Sort elements by their vertical position (top to bottom)
+            const sectionsArray = Array.from(sections);
+            sectionsArray.sort((a, b) => {
+              return a.getBoundingClientRect().top - b.getBoundingClientRect().top;
+            });
+
+            sectionsArray.forEach((section, index) => {
               if (!section.classList.contains('page_banner')) {
                 section.classList.add('scroll-reveal');
-                section.classList.add('delay-' + ((index % 3) + 1));
+                // Assign delays based on position: every 3rd element gets same delay
+                const delayClass = 'delay-' + ((index % 3) + 1);
+                section.classList.add(delayClass);
               }
               observer.observe(section);
             });
-          })();
-        </script>
-          (function initScrollReveal() {
-            const observerOptions = {
-              threshold: 0.15,
-              rootMargin: '0px 0px -50px 0px'
-            };
 
-            const observer = new IntersectionObserver(function(entries) {
-              entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add('revealed');
-                  observer.unobserve(entry.target);
-                }
-              });
-            }, observerOptions);
-
-            // Apply scroll-reveal class to content sections
-            const sections = document.querySelectorAll(
-              '.courses_info_section > .container > .row > .col, ' +
-              '.section_heading, ' +
-              '.content_wrap, ' +
-              '.image_widget, ' +
-              '.info_list li, ' +
-              '.footer_widget'
-            );
-
-            sections.forEach((section, index) => {
-              if (!section.classList.contains('page_banner')) {
-                section.classList.add('scroll-reveal');
-                section.classList.add('delay-' + ((index % 3) + 1));
-              }
-              observer.observe(section);
-            });
+            // Fallback: reveal content on mobile after page loads if still hidden
+            if (isMobile) {
+              setTimeout(function() {
+                const hiddenElements = document.querySelectorAll('.scroll-reveal:not(.revealed)');
+                hiddenElements.forEach(el => {
+                  const rect = el.getBoundingClientRect();
+                  if (rect.top < window.innerHeight) {
+                    el.classList.add('revealed');
+                  }
+                });
+              }, 500);
+            }
           })();
         </script>
     </body> 

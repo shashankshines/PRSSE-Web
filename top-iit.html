@@ -263,6 +263,29 @@
         }
 
         @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bannerDrift {
+            0% {
+                background-position: 45% 45%;
+            }
+            50% {
+                background-position: 55% 55%;
+            }
+            100% {
+                background-position: 45% 45%;
+            }
+        }
+
+        @keyframes curtainSlide {
             0% {
                 background-position: 0% 0%;
                 opacity: 0.35;
@@ -278,21 +301,50 @@
         }
 
         @keyframes bubbleDrift1 {
-            0% { transform: translate3d(0, 0, 0); }
-            50% { transform: translate3d(18px, -14px, 0); }
-            100% { transform: translate3d(0, 0, 0); }
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+            50% {
+                transform: translate3d(18px, -14px, 0);
+            }
+            100% {
+                transform: translate3d(0, 0, 0);
+            }
         }
 
         @keyframes bubbleDrift2 {
-            0% { transform: translate3d(0, 0, 0); }
-            50% { transform: translate3d(-12px, 18px, 0); }
-            100% { transform: translate3d(0, 0, 0); }
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+            50% {
+                transform: translate3d(-12px, 18px, 0);
+            }
+            100% {
+                transform: translate3d(0, 0, 0);
+            }
         }
 
         @keyframes bubbleDrift3 {
-            0% { transform: translate3d(-50%, 0, 0); }
-            50% { transform: translate3d(-50%, -20px, 0); }
-            100% { transform: translate3d(-50%, 0, 0); }
+            0% {
+                transform: translate3d(-50%, 0, 0);
+            }
+            50% {
+                transform: translate3d(-50%, -20px, 0);
+            }
+            100% {
+                transform: translate3d(-50%, 0, 0);
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            .page_banner .content_wrapper {
+                min-height: 180px;
+                padding: 30px 20px;
+            }
+
+            .page_banner .content_wrapper .page_title {
+                font-size: 2rem;
+            }
         }
 
         .scroll-reveal {
@@ -451,8 +503,8 @@
                         <div class="row align-items-center"> 
                             <div class="col col-lg-12">
                                 <div class="content_wrap ps-lg-3">
-                                    <div class="section_heading">
-                                        <h2 class="heading_text scroll-reveal delay-2">Top 10 Indian Research Institutes</h2>
+                                    <div class="section_heading scroll-reveal delay-1">
+                                        <h2 class="heading_text">Top 10 Indian Research Institutes</h2>
                                               </div>
                                     <ul class="info_list unordered_list_block">
                                         <li><i class="fas fa-square"></i> <span> Indian Institute of Science (IISc), Bengaluru - This is a premier research institute in India, known for its research in areas such as science, engineering, and technology.</span></li> 
@@ -608,9 +660,10 @@
                 <script>
                     // Scroll reveal animation observer
                     (function initScrollReveal() {
+                        const isMobile = window.innerWidth <= 767;
                         const observerOptions = {
-                            threshold: 0.15,
-                            rootMargin: '0px 0px -50px 0px'
+                            threshold: isMobile ? 0.05 : 0.15,
+                            rootMargin: isMobile ? '0px 0px 0px 0px' : '0px 0px -50px 0px'
                         };
 
                         const observer = new IntersectionObserver(function(entries) {
@@ -631,13 +684,33 @@
                             '.footer_widget'
                         );
 
-                        sections.forEach((section, index) => {
+                        // Sort elements by their vertical position (top to bottom)
+                        const sectionsArray = Array.from(sections);
+                        sectionsArray.sort((a, b) => {
+                            return a.getBoundingClientRect().top - b.getBoundingClientRect().top;
+                        });
+
+                        sectionsArray.forEach((section, index) => {
                             if (!section.classList.contains('page_banner')) {
                                 section.classList.add('scroll-reveal');
-                                section.classList.add('delay-' + ((index % 3) + 1));
+                                const delayClass = 'delay-' + ((index % 3) + 1);
+                                section.classList.add(delayClass);
                             }
                             observer.observe(section);
                         });
+
+                        // Fallback: reveal content on mobile after page loads if still hidden
+                        if (isMobile) {
+                            setTimeout(function() {
+                                const hiddenElements = document.querySelectorAll('.scroll-reveal:not(.revealed)');
+                                hiddenElements.forEach(el => {
+                                    const rect = el.getBoundingClientRect();
+                                    if (rect.top < window.innerHeight) {
+                                        el.classList.add('revealed');
+                                    }
+                                });
+                            }, 500);
+                        }
                     })();
                 </script>
         <script>

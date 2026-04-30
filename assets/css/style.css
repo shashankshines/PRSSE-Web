@@ -26,6 +26,9 @@ body {
 	display: flex;
 	min-height: 300px;
 	padding: 40px 30px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
 
 }
 
@@ -2123,14 +2126,13 @@ blockquote p {
 	background-color: #1f1d0d
 }
 
-.filter_buttons_list button i {
-	margin-right: 6px
-}
-
-.filter_buttons_list .form_item select {
-	height: 44px;
-	font-size: 14px;
-	font-weight: 600;
+/*.page_banner .content_wrapper {
+	display: flex;
+	min-height: 520px;
+	align-items: center;
+	padding: 70px 115px;
+	background-repeat: no-repeat;
+*/
 	padding: 0 30px 0 20px;
 	text-transform: uppercase;
 	font-family: Barlow, sans-serif;
@@ -2911,14 +2913,13 @@ blockquote p {
 	padding: 40px;
 	position: relative;
 	margin-bottom: -150px;
-	border-radius: 8px;
-	background-color: #fff;
-	box-shadow: 2px 2px 30px rgba(31, 29, 13, .0894963), 10px 10px 0 0 #ffd32b
-}
-
-.calltoaction_form .form_title {
-	font-size: 28px;
-	line-height: 32px;
+/* .page_banner .content_wrapper {
+	display: flex;
+	min-height: 520px;
+	align-items: center;
+	padding: 70px 115px;
+	background-repeat: no-repeat;
+*/
 	margin-bottom: 30px
 }
 
@@ -3338,14 +3339,13 @@ blockquote p {
 }
 
 /*.page_banner .content_wrapper {
-    display: flex;
-    min-height: 520px;
-    align-items: center;
-    padding: 70px 115px;
-    background-size: 571px;
-    background-repeat: no-repeat;
-    background-color: #f6f6f6;
-    background-position: right bottom
+	display: flex;
+	min-height: 520px;
+	align-items: center;
+	padding: 70px 115px;
+	background-repeat: no-repeat;
+	background-color: #f6f6f6;
+	background-position: right bottom
 }*/
 
 .page_banner .info_list,
@@ -4120,10 +4120,6 @@ blockquote p {
 		margin-top: 10px
 	}
 
-	.page_banner .content_wrapper {
-		background-size: 470px
-	}
-
 	.brands_logo_list.style_2 li {
 		width: auto
 	}
@@ -4380,7 +4376,6 @@ blockquote p {
 	.page_banner .content_wrapper {
 		padding: 70px;
 		text-align: center;
-		background-size: 300px
 	}
 
 	.breadcrumb_nav {
@@ -4833,7 +4828,6 @@ blockquote p {
 
 	.page_banner .content_wrapper {
 		padding: 70px 25px;
-		background-size: 230px
 	}
 
 	.iconbox_item .title_wrap {
@@ -32991,14 +32985,13 @@ blockquote p {
 }
 
 /* .page_banner .content_wrapper {
-    display: flex;
-    min-height: 520px;
-    align-items: center;
-    padding: 70px 115px;
-    background-size: 571px;
-    background-repeat: no-repeat;
-    background-color: #f6f6f6;
-    background-position: right bottom
+	display: flex;
+	min-height: 520px;
+	align-items: center;
+	padding: 70px 115px;
+	background-repeat: no-repeat;
+	background-color: #f6f6f6;
+	background-position: right bottom
 } */
 
 .page_banner .container {}
@@ -33775,10 +33768,6 @@ blockquote p {
 		margin-top: 10px
 	}
 
-	.page_banner .content_wrapper {
-		background-size: 470px
-	}
-
 	.brands_logo_list.style_2 li {
 		width: auto
 	}
@@ -34037,7 +34026,6 @@ blockquote p {
 	.page_banner .content_wrapper {
 		padding: 70px;
 		text-align: center;
-		background-size: 300px
 	}
 
 	.breadcrumb_nav {
@@ -34489,7 +34477,6 @@ blockquote p {
 
 	.page_banner .content_wrapper {
 		padding: 70px 25px;
-		background-size: 230px
 	}
 
 	.iconbox_item .title_wrap {
