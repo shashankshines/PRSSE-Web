@@ -443,13 +443,46 @@
             transform: translateY(-5px);
         }
 
-        .image_widget img {
+        .image_widget img,
+        .image_widget iframe {
             transition: transform 0.6s ease, filter 0.6s ease;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
 
-        .image_widget:hover img {
-            transform: scale(1.05);
-            filter: brightness(1.1);
+        .image_widget iframe {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            display: block;
+            border: none;
+        }
+
+        .courses_info_section .row.align-items-center > .col > .content_wrap,
+        .courses_info_section .row.align-items-center > .col > .image_widget {
+            margin-bottom: 1.5rem;
+            box-sizing: border-box;
+        }
+
+        @media screen and (min-width: 992px) {
+            .courses_info_section .row.align-items-center > .col-lg-6 > .content_wrap,
+            .courses_info_section .row.align-items-center > .col-lg-6 > .image_widget {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+        }
+
+        .courses_info_section .row.align-items-center + .row.align-items-center {
+            margin-top: 35px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .courses_info_section .row.align-items-center > .col > .content_wrap,
+            .courses_info_section .row.align-items-center > .col > .image_widget {
+                margin-bottom: 0;
+            }
         }
 
         @media screen and (max-width: 767px) {
@@ -583,16 +616,16 @@
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col col-lg-6">
-                                <div class="content_wrap pr-5"> 
-                                    <ul class="info_list unordered_list_block">
-                                        <p>
+                                <div class="content_wrap">
+                                    <div class="section_heading">
+                                        <p class="heading_description mb-0">
 									At the Professor Rajendra Singh Science Exploratory (PRSSE), we believe that science is more than just a subject—it's a way of life. Our mission is to inspire and educate young minds to appreciate science and explore the world in exciting ways. Established in 2015, PRSSE provides hands-on experience across various scientific disciplines, including Chemistry, Physics, Biology, Astronomy, Mathematics, and Design Thinking. Unlike traditional experiments, which often focus on predefined outcomes, our exploratory approach encourages students to think critically, ask questions, and engage in open-ended investigations. This fosters a deeper understanding of scientific concepts and cultivates a spirit of inquiry. Our dedicated team of trainers, advisors and experts is committed to creating an engaging learning environment for all students. Whether you're a budding scientist or simply curious, we have something for everyone! Over the years, students enrolled in various programs offered by the exploratory have achieved significant success in embracing science, paving the way for their future aspirations.
 </p>
 
-                                    </ul> 
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col col-lg-6 ms-lg-6">
+                            <div class="col col-lg-6">
                                 <div class="image_widget">
 								<iframe width="100%" height="350" src="https://www.youtube.com/embed/CJjvPhZBFYQ?si=tAqLp69CgY_hoBZg"></iframe>
 </div>
@@ -617,12 +650,12 @@
                             </div>
 							
                         </div>
-                        <div class="row align-items-center" style="margin-top:35px;">
+                        <div class="row align-items-center">
                             <div class="col col-lg-6">
                                 <div class="image_widget"><img src="assets/images/abt.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
                             </div>
                             <div class="col col-lg-6">
-                                <div class="content_wrap ps-lg-3">
+                                <div class="content_wrap">
                                     <div class="section_heading">
                                       <h2 class="heading_text">Our Inspiration: Professor Rajendra Singh</h2>
 										<p>
@@ -633,9 +666,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row align-items-center" style="margin-top:35px;">
+                        <div class="row align-items-center">
                             <div class="col col-lg-6">
-                                <div class="content_wrap ">
+                                <div class="content_wrap">
                                     <div class="section_heading"> 
                                     <h2 class="heading_text">Our Infrastructure</h2>
                                         <p class="heading_description mb-0">
@@ -647,21 +680,7 @@
                                 <div class="image_widget"><img src="assets/images/infra.avif" alt="Prof. Rajendra Singh Exploratory" /></div>
                             </div>
                         </div>
-                        <div class="row align-items-center" style="margin-top:35px;"> 
-                            <div class="col col-lg-12">
-                                <div class="content_wrap ps-lg-3">
-                                    <div class="section_heading"> 
-                                        <h2 class="heading_text">Core Members</h2>
-                                              </div>
-                                    <ul class="info_list unordered_list_block">
-                                        <li><i class="fas fa-square"></i> <span><b>President:</b> Hemant Chafale, CEO, Trust Fintech Limited (Formerly Trust Systems & Software (l) Pvt. Ltd.)</span></li>
-                                        <li><i class="fas fa-square"></i> <span><b>Secretary:</b> Shri Rohan Parekh, Secretary, Vidarbha Vaibhav (Alumnus, IIT-Bombay)</span></li>
-                                        <li><i class="fas fa-square"></i> <span><b>Director:</b> Dr. Seema Ubale, Former Professor (Physics), Dharampeth M.P. Deo Memorial Science College, Nagpur.</span></li>
-                                     </ul> 
-                                </div>
-                            </div>
-							 
-							
+                        <!-- Removed duplicate intro paragraph row -->
                             <div class="col col-lg-12">
                                 <div class="content_wrap ps-lg-3">
                                     <div class="section_heading">
