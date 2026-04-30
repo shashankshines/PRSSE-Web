@@ -9,52 +9,224 @@
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
          <style>
+        /* ===== MOBILE HAMBURGER MENU ===== */
+        /* Hamburger Button */
+        .mobilemenu-btn {
+            position: relative;
+            width: 40px;
+            height: 30px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            gap: 5px;
+        }
+
+        .mobilemenu-btn span {
+            display: block;
+            width: 25px;
+            height: 2.5px;
+            background: linear-gradient(90deg, #4a90e2, #357abd);
+            border-radius: 2px;
+            transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+            box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+        }
+
+        .mobilemenu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translateY(12px);
+            background: linear-gradient(90deg, #e74c3c, #c0392b);
+        }
+
+        .mobilemenu-btn.active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+
+        .mobilemenu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translateY(-12px);
+            background: linear-gradient(90deg, #e74c3c, #c0392b);
+        }
+
         /* Sidebar Menu */
         .sidebarmobile {
             position: fixed;
             top: 0;
-            right: -250px;
-            width: 250px;
-            height: 100vh; /* Full height */
-            background: #333;
+            right: 0;
+            width: 280px;
+            height: 100vh;
+            background: linear-gradient(135deg, #1a1f2e 0%, #2d3748 50%, #1a1f2e 100%);
             color: white;
-            transition: 0.3s;
-            padding-top: 60px;
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+            padding-top: 80px;
             z-index: 1000;
-            overflow-y: auto; /* Enable scrolling */
-            scrollbar-width: thin; /* Firefox */
-            scrollbar-color: #888 #333; /* Firefox */
+            overflow-y: auto;
+            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.4);
+            scrollbar-width: thin;
+            scrollbar-color: rgba(74, 144, 226, 0.5) transparent;
         }
-        
-        /* Custom scrollbar for Chrome, Edge, Safari */
+
+        .sidebarmobile.active {
+            transform: translateX(0);
+        }
+
+        /* Scrollbar styling */
         .sidebarmobile::-webkit-scrollbar {
             width: 6px;
         }
+
         .sidebarmobile::-webkit-scrollbar-track {
-            background: #333;
+            background: transparent;
         }
+
         .sidebarmobile::-webkit-scrollbar-thumb {
-            background: #888;
+            background: rgba(74, 144, 226, 0.5);
             border-radius: 3px;
         }
+
         .sidebarmobile::-webkit-scrollbar-thumb:hover {
-            background: #555;
+            background: rgba(74, 144, 226, 0.8);
         }
-        
+
+        /* Close button */
+        .sidebarmobile .closebtn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .sidebarmobile .closebtn:hover {
+            color: #4a90e2;
+            transform: rotate(90deg);
+        }
+
+        /* Menu Links */
         .sidebarmobile a {
-            padding: 15px;
-            text-decoration: none;
-            font-size: 18px;
-            color: white;
             display: block;
-            transition: 0.3s;
+            padding: 16px 24px;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+            position: relative;
         }
+
+        .sidebarmobile a::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(180deg, #4a90e2, #357abd);
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.3s ease;
+        }
+
         .sidebarmobile a:hover {
-            background: #575757;
+            color: #4a90e2;
+            background: rgba(74, 144, 226, 0.1);
+            padding-left: 28px;
         }
-        .sidebarmobile.active {
-            right: 0;
+
+        .sidebarmobile a:hover::before {
+            transform: scaleY(1);
         }
+
+        /* Dropdown Styling */
+        .dropdownmobile {
+            position: relative;
+        }
+
+        .dropdownmobile-toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            text-align: left;
+            padding: 16px 24px !important;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        .dropdownmobilearrow-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdownmobilearrow-icon::after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-right: 2px solid rgba(255, 255, 255, 0.8);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+            transform: rotate(-45deg);
+            transition: all 0.3s ease;
+        }
+
+        .dropdownmobile.open .dropdownmobilearrow-icon::after {
+            transform: rotate(135deg);
+            border-color: #4a90e2;
+        }
+
+        .dropdownmobile-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 0;
+            overflow: hidden;
+            background: rgba(74, 144, 226, 0.05);
+            transition: max-height 0.3s ease;
+        }
+
+        .dropdownmobile.open > .dropdownmobile-menu {
+            max-height: 300px;
+        }
+
+        .dropdownmobile-menu li {
+            padding: 0;
+        }
+
+        .dropdownmobile-menu a {
+            padding: 12px 24px 12px 40px;
+            font-size: 15px;
+            border-left: none;
+        }
+
+        .dropdownmobile-menu a::before {
+            display: none;
+        }
+
+        .dropdownmobile-menu a:hover {
+            background: rgba(74, 144, 226, 0.15);
+            padding-left: 44px;
+        }
+
+        /* Overlay */
         .menu-overlay {
             display: none;
             position: fixed;
@@ -62,80 +234,15 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0);
             z-index: 999;
+            transition: background 0.3s ease;
         }
+
         .menu-overlay.active {
             display: block;
-        }
-        .mobilemenu-btn {
-            font-size: 30px;
-            cursor: pointer;
-            color: black;
-            background: none;
-            border: none;
-            float: right;
-        }
-        
-         /* Dropdown Styling for Mobile */
-        .dropdownmobile-toggle::after {
-            display: none; /* Remove Bootstrap caret */
-        }
-
-        .dropdownmobile-menu {
-            display: none; /* Hide by default */
-            background: #444;
-            padding-left: 15px;
-        }
-
-        .dropdownmobile-menu a {
-            padding: 10px;
-        }
-
-        .dropdownmobile.open > .dropdownmobile-menu {
-            display: block; /* Show when parent has class 'open' */
-        }
-        
-        /* Styles for dropdown arrow */
-        .dropdownmobile-toggle::after {
-            content: " ▼";  /* Unicode down arrow */
-            font-size: 12px;
-            color: white;
-            margin-left: 5px;
-            transition: transform 0.3s ease;
-        }
-        
-        /* Rotate arrow when dropdown is open */
-        .dropdownmobile.open > .dropdownmobile-toggle::after {
-            transform: rotate(180deg);
-        }
-        
-          /* Style the dropdown arrow */
-        .dropdownmobilearrow-icon {
-            display: inline-block;
-            margin-left: 5px;
-            margin-bottom: 3px;
-            border: solid white;
-            border-width: 0 2px 2px 0;
-            padding: 4px;
-            transform: rotate(45deg);
-            transition: transform 0.3s ease;
-        }
-        
-        /* Rotate arrow when dropdown is open */
-        .dropdownmobile.open .dropdownmobilearrow-icon {
-            transform: rotate(225deg);
-        }
-        
-        .dropdownmobile-menu {
-            list-style: none; /* Removes default bullets */
-            padding: 0; /* Remove default padding */
-            margin: 0; /* Remove default margin */
-        }
-        
-        /* Ensure dropdown menu items align properly */
-        .dropdownmobile-menu li {
-            padding: 5px 15px; /* Add spacing to dropdown items */
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
         }
 
         /* Hide sidebar for larger screens */
@@ -144,18 +251,8 @@
                 display: none;
             }
             
-            .site_logo img{
-              width: 330px;
-            }
-        }
-        @media screen and (max-width:425px) {
-            .site_logo img{
-                width: 280px;
-            }
-        }
-        @media screen and (max-width: 991px) {
-            .container, .hero_banner.style_1 .container, .site_header .container {
-                 margin-top: 0px !important; 
+            .site_logo img {
+                width: 330px;
             }
         }
         .page_banner .content_wrapper {
@@ -512,7 +609,11 @@
                                 </div>
                             </nav>
                              <!-- Mobile Hamburger Menu (visible only on small screens) -->
-                            <button class="mobilemenu-btn d-lg-none" onclick="toggleMenu()">&#9776;</button>
+                            <button class="mobilemenu-btn d-lg-none" onclick="toggleMenu()" aria-label="Toggle menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -556,8 +657,13 @@
             
             <script>
                 function toggleMenu() {
-                    document.getElementById("sidebarMenumobile").classList.toggle("active");
-                    document.getElementById("menuOverlay").classList.toggle("active");
+                    const sidebarElement = document.getElementById("sidebarMenumobile");
+                    const menuBtnElement = document.querySelector(".mobilemenu-btn");
+                    const overlayElement = document.getElementById("menuOverlay");
+                    
+                    sidebarElement.classList.toggle("active");
+                    menuBtnElement.classList.toggle("active");
+                    overlayElement.classList.toggle("active");
                 }
                 
                 function toggleDropdown(event, element) {
@@ -618,6 +724,62 @@
                             <div class="card h-100 shadow-sm">
                                 <div class="card-body">
                                     <h3 class="card-title">Programme 1: Laboratory Training Programs</h3>
+                                    <p><strong>Enrolment Eligibility:</strong> Grades 6 to 9.</p>
+                                    <p><strong>No. of Students Enrolment for this program in an academic Year:</strong> 350</p>
+                                    <p><strong>Tentative No. of Sessions in an Academic Year: </strong>35 - 40 (Each of 2 hours per week)</p>
+                                    <p>The Laboratory Training Program is designed to develop strong experimental skills and scientific thinking among students. It focuses on hands-on learning, enabling students to perform experiments, analyze data, and approach problems with a research-oriented mindset. The program also nurtures critical thinking, creativity, and science communication skills, preparing students to confidently tackle real-world challenges.</p>
+                                    <p>Students participate in weekly sessions conducted in state-of-the-art laboratory facilities. These sessions provide exposure to a wide range of disciplines from their school curriculum, including Physics, Chemistry, Biology, Mathematics, Electronics, and DIY experimental activities, ensuring a holistic scientific experience.</p>
+                                    <p>Admission to the program is based on merit through an entrance examination conducted in the month of April whose notification comes out in the month of February. Students studying in Grades 5, 6, and 7 are eligible to appear for the exam and, upon selection, are admitted to Grades 6, 7, and 8 batches respectively for the academic session beginning in July. Students once selected may continue in the program up to Grade 9. In addition to laboratory activities, students gain broader exposure through special workshops, expert talks by visiting scientists, competitions, and outreach programs. </p>
+                                    <!-- <p><strong>Timeline:</strong> Notification for Entrance Exam: First Week of February</p>
+                                    <p><strong>Entrance Exam:</strong> April</p>
+                                    <p><strong>Declaration of Merit List and Admission Process:</strong> May first week</p>
+                                    <p><strong>Session Commencement:</strong> July-April (One session of two hours every week) </p>
+                                    <p><strong>Total Sessions in an academic Session:</strong>  40  </p> -->
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="card-title">Programme 2: Dr. Homi Bhabha Balvaidnyanik Competition Training Program
+                                        </h3>
+                                    <p><strong>Enrolment Eligibility:</strong>6th and 9th Std. Students</p>
+                                    <p>This batch will prepare the students for Dr. Homi Bhabha Balvaidnyanik competition. It includes theory, practical and project components related to this year-long renowned competition organized by MSTA, Mumbai. The topics related to the curriculum from Physics, Chemistry, Biology are covered through this programme.  
+                                    </p>
+                                    <p><strong>No. of Seats: </strong> 25</p>
+                                    <p><strong>Timeline:</strong></p>
+                                    <p><strong>Selection Process:</strong>Through Entrance Exam of Laboratory Training Programme as mentioned above</p>
+                                    <p><strong>Declaration of Merit List and Admission Process:</strong> JMay first week</p>
+                                    <p><strong>Session Commencement:</strong>June-April (One week summer camp in May/June)</p>
+                                    <p><strong>Total Sessions in an academic Session:</strong>30 Practical and 30 Theory</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="card-title">Programme 3: International Junior Science Olympiad Training Programme</h3>
+                                    <p><strong>Enrolment Eligibility:</strong>8th and 9th Std. Students</p>
+                                    <p>Our Junior Science Olympiad Training programme is designed to help students prepare for the International Junior Science Olympiad competition. Through a combination of hands-on science activities and expert coaching, students will develop the skills and knowledge they need to succeed. Sessions on the topics in science and mathematics will be delivered by the experts from the city and some guest sessions of renowned science educators across the country are also invited to make this programme vibrant.
+                                    </p>
+                                    <p><strong>No. of Seats: </strong> 25</p>
+                                    <p><strong>Timeline:</strong></p>
+                                    <p><strong>Selection Process:</strong>Through Entrance Exam of Laboratory Training Programme as mentioned above</p>
+                                    <p><strong>Declaration of Merit List and Admission Process:</strong> May first week</p>
+                                    <p><strong>Session Commencement:</strong>June-May (One week summer camp in May and June)</p>
+                                    <p><strong>Total Sessions in an academic Session:</strong>30 Practical and 80 Theory</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row g-4 mt-3">
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="card-title">Programme 1: Laboratory Training Programs</h3>
                                     <p><strong>Enrolment Eligibility:</strong> 6th, 7th, 8th and 9th Std.                                    </p>
                                     <p>The laboratory training program aims to equip students with practical skills and knowledge in conducting experiments, data analysis, and problem-solving. The program also aims to enhance students' critical thinking, research, and science communication skills. Ultimately, the program outcome is to prepare students for real-world challenges in their respective fields. 
                                     </p>
@@ -667,6 +829,8 @@
                             </div>
                         </div>
                     </div>
+                    
+
                 </div>
             </section>
         

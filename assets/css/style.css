@@ -481,7 +481,6 @@ hr {
 .unordered_list>li,
 .unordered_list_center>li,
 .unordered_list_end>li {
-	float: left;
 	list-style: none;
 	display: inline-block
 }
@@ -9015,7 +9014,7 @@ textarea.form-control-lg {
 	-moz-appearance: none;
 	appearance: none;
 	-webkit-print-color-adjust: exact;
-	color-adjust: exact
+	color-adjust: exact;
 }
 
 .form-check-input[type=checkbox] {
@@ -28916,7 +28915,6 @@ button.mfp-close {
 	cursor: pointer;
 	background: 0 0;
 	border: 0;
-	-webkit-appearance: none;
 	display: block;
 	outline: 0;
 	padding: 0;
@@ -30125,7 +30123,6 @@ hr {
 .unordered_list>li,
 .unordered_list_center>li,
 .unordered_list_end>li {
-	float: left;
 	list-style: none;
 	display: inline-block
 }
@@ -30854,10 +30851,6 @@ blockquote p {
 .social_links a:before {
 	border: 2px solid
 		/*#ffd32b*/
-}
-
-.social_links a:after {
-	/*background-color: #ffd32b*/
 }
 
 .social_links a i {
@@ -32882,11 +32875,6 @@ blockquote p {
 	padding: 6px 0
 }
 
-.site_header_1+main {
-	/*padding-top: 130px*/
-	/*padding-top: 205px;*/
-}
-
 .site_header_1.index+main {
 	padding-top: 130px;
 	/*padding-top: 205px;*/
@@ -32980,8 +32968,6 @@ blockquote p {
 	background-color: #f6f6f6;
 	background-position: right bottom
 } */
-
-.page_banner .container {}
 
 .page_banner .info_list,
 .page_banner .meta_info_list {
@@ -34398,10 +34384,6 @@ blockquote p {
 
 	.site_header.sticky .main_menu {
 		top: 62px
-	}
-
-	.site_header_1+main {
-		/*padding-top: 82px*/
 	}
 
 	.hero_banner.style_1 .content_wrap {
