@@ -760,14 +760,32 @@
             }, observerOptions);
 
             const sections = document.querySelectorAll(
+              'section, ' +
+              'main.page_content section, ' +
               '.page_banner, ' +
+              '.hero_banner, ' +
+              '.courses_info_section > .container > .row > .col, ' +
+              '.details_section > .container > .row > .col, ' +
+              '.getstart_section > .container > .row > .col, ' +
+              '.mentor_details_section > .container > .row > .col, ' +
+              '.course_deals_section > .container > .row > .col, ' +
               '.section_heading, ' +
-              '.content_wrapper, ' +
-              '.que, ' +
+              '.content_wrap, ' +
+              '.image_widget, ' +
+              '.card, ' +
+              '.card-body, ' +
+              '.card-title, ' +
+              '.row > .col, ' +
+              '.info_list li, ' +
               '.meta_info_list li, ' +
-              '.page_title, ' +
-              '.breadcrumb_nav, ' +
-              '.image_widget'
+              '.list-group-item, ' +
+              '.accordion-item, ' +
+              '.accordion-body, ' +
+              '.button_group, ' +
+              '.announcement-box, ' +
+              '.newslatter_section > .container > .row > .col, ' +
+              '.register_section > .container > .row > .col, ' +
+              '.footer_widget'
             );
 
             const sectionsArray = Array.from(sections);
@@ -780,17 +798,17 @@
               observer.observe(section);
             });
 
-            if (isMobile) {
-              setTimeout(function() {
-                const hiddenElements = document.querySelectorAll('.scroll-reveal:not(.revealed)');
-                hiddenElements.forEach(el => {
-                  const rect = el.getBoundingClientRect();
-                  if (rect.top < window.innerHeight) {
-                    el.classList.add('revealed');
-                  }
-                });
-              }, 500);
-            }
+            // Reveal any scroll-reveal elements already visible on page load
+            setTimeout(function() {
+              const hiddenElements = document.querySelectorAll('.scroll-reveal:not(.revealed)');
+              hiddenElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                  el.classList.add('revealed');
+                  observer.unobserve(el);
+                }
+              });
+            }, 100);
           })();
         </script>
     </body>
