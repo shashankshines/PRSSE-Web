@@ -117,3 +117,130 @@ function(e){"use strict";"function"==typeof define&&define.amd?define(["jquery"]
       !*** multi ./source/js/floatButton.js ./source/js/script.js ***!
       \**************************************************************/
 /*! no static exports found */function(module,exports,__webpack_require__){eval('__webpack_require__(/*! /Users/mac/Sites/hello-elementor/wp-content/plugins/hello-merkulove/source/js/floatButton.js */"./source/js/floatButton.js");\nmodule.exports = __webpack_require__(/*! /Users/mac/Sites/hello-elementor/wp-content/plugins/hello-merkulove/source/js/script.js */"./source/js/script.js");\n\n\n//# sourceURL=webpack:///multi_./source/js/floatButton.js_./source/js/script.js?')}});
+/* ===== HAMBURGER MENU - COMMON JAVASCRIPT ===== */
+(function() {
+  'use strict';
+
+  // Toggle sidebar menu and overlay
+  window.toggleMenu = function() {
+    const sidebar = document.getElementById('sidebarMenumobile');
+    const overlay = document.getElementById('menuOverlay');
+    
+    if (sidebar) {
+      sidebar.classList.toggle('active');
+    }
+    if (overlay) {
+      overlay.classList.toggle('active');
+    }
+    
+    // Toggle hamburger button animation
+    const menuBtn = document.querySelector('.mobilemenu-btn');
+    if (menuBtn) {
+      menuBtn.classList.toggle('active');
+    }
+  };
+
+  // Toggle dropdown menu
+  window.toggleDropdown = function(event, element) {
+    event.preventDefault();
+    const parent = element.parentElement;
+    if (parent) {
+      parent.classList.toggle('open');
+    }
+  };
+
+  // Close menu when a link is clicked
+  document.addEventListener('DOMContentLoaded', function() {
+    const sidebarLinks = document.querySelectorAll('.sidebarmobile a:not(.closebtn):not(.dropdownmobile-toggle)');
+    
+    sidebarLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        const sidebar = document.getElementById('sidebarMenumobile');
+        const overlay = document.getElementById('menuOverlay');
+        const menuBtn = document.querySelector('.mobilemenu-btn');
+        
+        if (sidebar && overlay) {
+          sidebar.classList.remove('active');
+          overlay.classList.remove('active');
+          if (menuBtn) {
+            menuBtn.classList.remove('active');
+          }
+        }
+      });
+    });
+  });
+})();
+
+/* ===== OPTIMIZED SCROLL REVEAL UTILITY ===== */
+window.initScrollReveal = function(selector = 'main.page_content section:not(.page_banner):not(.hero_banner), main.page_content .section_heading, main.page_content .content_wrap, main.page_content .image_widget, main.page_content .card, main.page_content .card-body, main.page_content .card-title, main.page_content .row > .col, main.page_content .info_list li, main.page_content .meta_info_list li, main.page_content .list-group-item, main.page_content .accordion-item, main.page_content .accordion-body, main.page_content .button_group, main.page_content .announcement-box, main.page_content .newslatter_section > .container > .row > .col, main.page_content .register_section > .container > .row > .col, main.page_content .footer_widget') {
+  let observer = null;
+  let observedElements = new Set();
+
+  function getOptimizedObserverOptions() {
+    const isMobile = window.innerWidth <= 767;
+    const isSmallPhone = window.innerWidth <= 640;
+    
+    return {
+      threshold: isSmallPhone ? [0, 0.08, 1] : (isMobile ? [0, 0.1, 1] : [0, 0.15, 1]),
+      rootMargin: isSmallPhone ? '10px' : (isMobile ? '20px' : '-30px')
+    };
+  }
+
+  function createScrollObserver() {
+    if (observer) observer.disconnect();
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('revealed')) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+          observedElements.delete(entry.target);
+        }
+      });
+    }, getOptimizedObserverOptions());
+  }
+
+  function processScrollElements() {
+    const elements = document.querySelectorAll(selector);
+    const elementsArray = Array.from(elements).filter(el => !el.classList.contains('scroll-reveal'));
+
+    elementsArray.forEach((element, index) => {
+      element.classList.add('scroll-reveal');
+      
+      // Assign staggered delays for elements visible on load
+      const rect = element.getBoundingClientRect();
+      const isVisibleOnLoad = rect.top < window.innerHeight && rect.bottom > 0;
+      
+      if (isVisibleOnLoad && index < 12) {
+        const delayClass = 'delay-' + ((index % 3) + 1);
+        element.classList.add(delayClass);
+        // Immediately reveal elements that are visible on page load
+        element.classList.add('revealed');
+        observedElements.delete(element);
+      } else {
+        observedElements.add(element);
+      }
+    });
+
+    createScrollObserver();
+    observedElements.forEach(el => observer.observe(el));
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', processScrollElements);
+  } else {
+    processScrollElements();
+  }
+
+  // Re-initialize on window resize to handle responsive breakpoints
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      observedElements.forEach(el => {
+        el.classList.remove('revealed');
+        el.classList.remove('delay-1', 'delay-2', 'delay-3');
+      });
+      processScrollElements();
+    }, 250);
+  });
+};

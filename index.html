@@ -10,184 +10,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
         <style>
-        /* Sidebar Menu */
-        .sidebarmobile {
-            position: fixed;
-            top: 0;
-            right: -250px;
-            width: 250px;
-            height: 100vh; /* Full height */
-            background: #333;
-            color: white;
-            transition: 0.3s;
-            padding-top: 60px;
-            z-index: 1000;
-            overflow-y: auto; /* Enable scrolling */
-            scrollbar-width: thin; /* Firefox */
-            scrollbar-color: #888 #333; /* Firefox */
-        }
-        
-        /* Custom scrollbar for Chrome, Edge, Safari */
-        .sidebarmobile::-webkit-scrollbar {
-            width: 6px;
-        }
-        .sidebarmobile::-webkit-scrollbar-track {
-            background: #333;
-        }
-        .sidebarmobile::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 3px;
-        }
-        .sidebarmobile::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-        
-        .sidebarmobile a {
-            padding: 15px;
-            text-decoration: none;
-            font-size: 18px;
-            color: white;
-            display: block;
-            transition: 0.3s;
-        }
-        .sidebarmobile a:hover {
-            background: #575757;
-        }
-        .sidebarmobile.active {
-            right: 0;
-        }
-        .menu-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-        }
-        .menu-overlay.active {
-            display: block;
-        }
-        .mobilemenu-btn {
-            font-size: 30px;
-            cursor: pointer;
-            color: black;
-            background: none;
-            border: none;
-            float: right;
-        }
-        
-         /* Dropdown Styling for Mobile */
-        .dropdownmobile-toggle::after {
-            display: none; /* Remove Bootstrap caret */
-        }
 
-        .dropdownmobile-menu {
-            display: none; /* Hide by default */
-            background: #444;
-            padding-left: 15px;
-        }
-
-        .dropdownmobile-menu a {
-            padding: 10px;
-        }
-
-        .dropdownmobile.open > .dropdownmobile-menu {
-            display: block; /* Show when parent has class 'open' */
-        }
-        
-        /* Styles for dropdown arrow */
-        .dropdownmobile-toggle::after {
-            content: " ▼";  /* Unicode down arrow */
-            font-size: 12px;
-            color: white;
-            margin-left: 5px;
-            transition: transform 0.3s ease;
-        }
-        
-        /* Rotate arrow when dropdown is open */
-        .dropdownmobile.open > .dropdownmobile-toggle::after {
-            transform: rotate(180deg);
-        }
-        
-          /* Style the dropdown arrow */
-        .dropdownmobilearrow-icon {
-            display: inline-block;
-            margin-left: 5px;
-            margin-bottom: 3px;
-            border: solid white;
-            border-width: 0 2px 2px 0;
-            padding: 4px;
-            transform: rotate(45deg);
-            transition: transform 0.3s ease;
-        }
-        
-        /* Rotate arrow when dropdown is open */
-        .dropdownmobile.open .dropdownmobilearrow-icon {
-            transform: rotate(225deg);
-        }
-        
-        .dropdownmobile-menu {
-            list-style: none; /* Removes default bullets */
-            padding: 0; /* Remove default padding */
-            margin: 0; /* Remove default margin */
-        }
-        
-        /* Ensure dropdown menu items align properly */
-        .dropdownmobile-menu li {
-            padding: 5px 15px; /* Add spacing to dropdown items */
-        }
-
-        /* Hide sidebar for larger screens */
-        @media (min-width: 992px) {
-            .sidebarmobile, .mobilemenu-btn {
-                display: none;
-            }
-            
-        }
-        @media (min-width: 600px) {
-            .site_logo span{
-              display: block;
-            }
-        }
-        
-        /* Marquee Styling */
-        .marquee-container {
-            width: 100%;
-            background: #f8f9fa; /* Light background for visibility */
-            padding: 5px 0;
-            text-align: center;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        
-        /* Ensure it doesn't affect the desktop layout */
-        @media (min-width: 992px) {
-            .marquee-container {
-                position: relative;
-            }
-        }
-        
-        /* Ensure marquee appears above the logo in mobile view */
-        @media (max-width: 991px) {
-            .marquee-container {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                z-index: 1000;
-            }
-            .site_header {
-                padding-top: 30px; /* Adjust spacing */
-            }
-        }
-        
-        .page_content {
-            /* margin-top: 165px; */
-            margin-bottom: 50px;
-        }
-        
         @media screen and (min-width: 992px) {
             .sidebarmobile, .mobilemenu-btn {
                 display: none;
@@ -213,93 +36,6 @@
          margin-top: 0px !important; 
     }
 }
-        
-        /* Scroll Reveal Animations */
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.16, 0.8, 0.45, 1);
-            will-change: opacity, transform;
-        }
-
-        .scroll-reveal.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .scroll-reveal.delay-1 {
-            transition-delay: 0.12s;
-        }
-
-        .scroll-reveal.delay-2 {
-            transition-delay: 0.20s;
-        }
-
-        .scroll-reveal.delay-3 {
-            transition-delay: 0.28s;
-        }
-
-        /* Additional animation classes for page sections */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        .fade-in-left {
-            opacity: 0;
-            transform: translateX(-30px);
-            animation: fadeInLeft 0.8s ease forwards;
-        }
-
-        .fade-in-right {
-            opacity: 0;
-            transform: translateX(30px);
-            animation: fadeInRight 0.8s ease forwards;
-        }
-
-        .scale-in {
-            opacity: 0;
-            transform: scale(0.95);
-            animation: scaleIn 0.8s ease forwards;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInLeft {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeInRight {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes scaleIn {
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        /* Staggered animation delays */
-        .stagger-1 { animation-delay: 0.1s; }
-        .stagger-2 { animation-delay: 0.2s; }
-        .stagger-3 { animation-delay: 0.3s; }
-        .stagger-4 { animation-delay: 0.4s; }
-        .stagger-5 { animation-delay: 0.5s; }
-
-        /* Hover effects moved to shared stylesheet */
 
         @media screen and (max-width: 767px) {
             .fade-in-left,
@@ -364,7 +100,7 @@
                                 </div>
                             </nav>
                              <!-- Mobile Hamburger Menu (visible only on small screens) -->
-                            <button class="mobilemenu-btn d-lg-none" onclick="toggleMenu()">&#9776;</button>
+                            <button class="mobilemenu-btn d-lg-none" onclick="toggleMenu()"><span></span><span></span><span></span></button>
                         </div>
                     </div>
                 </div>
@@ -374,8 +110,7 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">×</a>
                 <a href="index.html">Home</a>
                 <a href="about.html">About Us</a>
-                
-                
+
                 <!-- Dropdown (Mobile) -->
                 <!--<a href="programs.html">Programs</a>-->
                 <div class="dropdownmobile">
@@ -404,21 +139,7 @@
             </div>
             
             <!-- Overlay (for closing sidebar when clicking outside) -->
-            <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div>
-            
-            <script>
-                function toggleMenu() {
-                    document.getElementById("sidebarMenumobile").classList.toggle("active");
-                    document.getElementById("menuOverlay").classList.toggle("active");
-                }
-                
-                function toggleDropdown(event, element) {
-                    event.preventDefault(); 
-                    let parent = element.parentElement;
-                    parent.classList.toggle("open");
-                }
-            </script>
-            <main class="page_content">
+            <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div><main class="page_content">
                 <section class="hero_banner style_1">
                     <div class="container">
                         <div class="content_wrap" style="padding:20px !important">
@@ -527,8 +248,7 @@
                                                 <li style="font-weight: 800;"><a href="https://prsscienceexploratory.in/summer-events.html" target="_blank">Registrations for Preparatory Summer Exposure Camp for Dr. Homi Bhabha Balvaidnyanik Competition are open now.</a></li>
                                                 <!--<li style="font-weight: 500;"><a href="./assets/images/hiring_post.jpeg" target="_blank">Recruitment Notification</a></li>-->
                                                 <!--<li style="font-weight: 500;"><a href="./assets/images/citizens-science-hands-workshop-series-3.jpeg"  target="_blank">Citizens Science Hands- On Workshop Series-3</a></li>-->
-                                                
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
@@ -546,8 +266,7 @@
                                          <a class="btn btn_primary" style="margin-top: 20px;margin-bottom: 20px;text-align:left;" target="_blank" href="summer-events.html">
                                             <span><small>Summer Programs</small><small>Summer Program</small></span>
                                         </a>
-                                        
-                                        
+
                                     </div>
                                 </div>
                                
@@ -632,7 +351,7 @@
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button pl-2" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <h4 class="ms-2">What is Professor Rajendra Singh Science Exploratory?</h4>
+                                        What is Professor Rajendra Singh Science Exploratory?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
@@ -648,9 +367,7 @@
                             <div class="accordion-item" style="padding:10px;">
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <h4 class="ms-2">What is the Laboratory Training Program?</h4>
-                                    </button>
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">What is the Laboratory Training Program?</button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
@@ -675,10 +392,8 @@
                             <div class="accordion-item" style="padding:10px;">
                                 <h2 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        <h4 class="ms-2"> How many students will be admitted to the program?
-                                        </h4>
-                                    </button>
+                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> How many students will be admitted to the program?
+                                        </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                     data-bs-parent="#accordionExample">
@@ -692,10 +407,8 @@
                             <div class="accordion-item" style="padding:10px;">
                                 <h2 class="accordion-header" id="headingFour">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        <h4 class="ms-2">Who can participate in the Entrance Exam?
-                                        </h4>
-                                    </button>
+                                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Who can participate in the Entrance Exam?
+                                        </button>
                                 </h2>
                                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                                     data-bs-parent="#accordionExample">
@@ -709,10 +422,8 @@
                             <div class="accordion-item" style="padding:10px;">
                                 <h2 class="accordion-header" id="headingFive">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                        <h4 class="ms-2">What is the last date for registration?
-                                        </h4>
-                                    </button>
+                                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">What is the last date for registration?
+                                        </button>
                                 </h2>
                                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                                     data-bs-parent="#accordionExample">
@@ -726,10 +437,8 @@
                             <div class="accordion-item" style="padding:10px;">
                                 <h2 class="accordion-header" id="headingSix">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                        <h4 class="ms-2">When will the Entrance Exam take place?
-                                        </h4>
-                                    </button>
+                                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">When will the Entrance Exam take place?
+                                        </button>
                                 </h2>
                                 <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                                     data-bs-parent="#accordionExample">
@@ -744,9 +453,7 @@
                             <div class="accordion-item" style="padding:10px;">
                                 <h2 class="accordion-header" id="headingSeven">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                        <h4 class="ms-2">What is the fee for the Entrance Exam?</h4>
-                                    </button>
+                                        data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">What is the fee for the Entrance Exam?</button>
                                 </h2>
                                 <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                                     data-bs-parent="#accordionExample">
@@ -758,12 +465,10 @@
                             <div class="accordion-item" style="padding:10px;">
                                 <h2 class="accordion-header" id="headingEight">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                        <h4 class="ms-2">What subjects will the Entrance Exam cover?</h4>
-                                    </button>
+                                        data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">What subjects will the Entrance Exam cover?</button>
                                 </h2>
                                 <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
-                                    dNien-bs-parent="#accordionExample">
+                                    data-bs-parent="#accordionExample">
                                     <div class="accordion-body ms-2">
                                         The exam will assess theoretical knowledge, observational skills, and motor skills based on
                                         the middle school syllabus of Maharashtra State Board and CBSE.
@@ -774,10 +479,8 @@
                             <div class="accordion-item" style="padding:10px;">
                                 <h2 class="accordion-header" id="headingNine">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                        <h4 class="ms-2"> What is the annual fee for the program, if a student gets selected?
-                                        </h4>
-                                    </button>
+                                        data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine"> What is the annual fee for the program, if a student gets selected?
+                                        </button>
                                 </h2>
                                 <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
                                     data-bs-parent="#accordionExample">
@@ -790,9 +493,7 @@
                             <div class="accordion-item" style="padding:10px;">
                                 <h2 class="accordion-header" id="headingTen">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                                        <h4 class="ms-2">How can I get more information?</h4>
-                                    </button>
+                                        data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">How can I get more information?</button>
                                 </h2>
                                 <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
                                     data-bs-parent="#accordionExample">
@@ -813,9 +514,7 @@
                             <div class="accordion-item" style="padding:10px;">
                                 <h2 class="accordion-header" id="headingEleven">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-                                        <h4 class="ms-2">Is there a lab visit day for interested students/parents?</h4>
-                                    </button>
+                                        data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">Is there a lab visit day for interested students/parents?</button>
                                 </h2>
                                 <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven"
                                     data-bs-parent="#accordionExample">
@@ -829,11 +528,9 @@
                             <div class="accordion-item" style="padding:10px;">
                                 <h2 class="accordion-header" id="headingTwe">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwe" aria-expanded="false" aria-controls="collapseTwe">
-                                        <h4 class="ms-2">What are the various competitions where students got benefitted through this training
+                                        data-bs-target="#collapseTwe" aria-expanded="false" aria-controls="collapseTwe">What are the various competitions where students got benefitted through this training
                                             programme?
-                                        </h4>
-                                    </button>
+                                        </button>
                                 </h2>
                                 <div id="collapseTwe" class="accordion-collapse collapse" aria-labelledby="headingTwe"
                                     data-bs-parent="#accordionExample">
@@ -1079,39 +776,113 @@
             });
           })();
 
-          // Scroll reveal animation observer
+          // Optimized Scroll Reveal Animation
           (function initScrollReveal() {
-            const observerOptions = {
-              threshold: 0.15,
-              rootMargin: '0px 0px -50px 0px'
-            };
+            let observer = null;
+            let observedElements = new Set();
+            let resizeTimeout;
+            
+            function getObserverOptions() {
+              const isMobile = window.innerWidth <= 767;
+              return {
+                threshold: isMobile ? [0, 0.05, 1] : [0, 0.15, 1],
+                rootMargin: isMobile ? '0px' : '-50px'
+              };
+            }
 
-            const observer = new IntersectionObserver(function(entries) {
-              entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add('revealed');
-                  observer.unobserve(entry.target);
+            function createObserver() {
+              if (observer) observer.disconnect();
+              observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting && !entry.target.classList.contains('revealed')) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                    observedElements.delete(entry.target);
+                  }
+                });
+              }, getObserverOptions());
+            }
+
+            function processElements() {
+              const selector = 'main.page_content section, ' +
+                'main.page_content .section_heading, ' +
+                'main.page_content .content_wrap, ' +
+                'main.page_content .image_widget, ' +
+                'main.page_content .card, ' +
+                'main.page_content .card-body, ' +
+                'main.page_content .card-title, ' +
+                'main.page_content .row > .col, ' +
+                'main.page_content .info_list li, ' +
+                'main.page_content .meta_info_list li, ' +
+                'main.page_content .list-group-item, ' +
+                'main.page_content .accordion-item, ' +
+                'main.page_content .accordion-body, ' +
+                'main.page_content .button_group, ' +
+                'main.page_content .announcement-box, ' +
+                'main.page_content .newslatter_section > .container > .row > .col, ' +
+                'main.page_content .register_section > .container > .row > .col, ' +
+                'main.page_content .footer_widget, ' +
+                '.page_banner, ' +
+                '.hero_banner';
+
+              const sections = document.querySelectorAll(selector);
+              const sectionsArray = Array.from(sections)
+                .filter(el => !el.classList.contains('scroll-reveal'));
+
+              sectionsArray.sort((a, b) => {
+                return a.getBoundingClientRect().top - b.getBoundingClientRect().top;
+              });
+
+              createObserver();
+
+              // First pass: mark all visible elements and assign delays
+              const visibleElements = [];
+              const outOfViewElements = [];
+
+              sectionsArray.forEach((section, index) => {
+                section.classList.add('scroll-reveal');
+                const rect = section.getBoundingClientRect();
+                const isVisibleOnLoad = rect.top < window.innerHeight && rect.bottom > 0;
+
+                if (!section.classList.contains('page_banner')) {
+                  const delayClass = 'delay-' + ((index % 3) + 1);
+                  section.classList.add(delayClass);
+                }
+
+                if (isVisibleOnLoad) {
+                  visibleElements.push(section);
+                } else {
+                  outOfViewElements.push(section);
+                  observer.observe(section);
+                  observedElements.add(section);
                 }
               });
-            }, observerOptions);
 
-            // Apply scroll-reveal class to content sections
-            const sections = document.querySelectorAll(
-              '.courses_info_section > .container > .row > .col, ' +
-              '.section_heading, ' +
-              '.content_wrap, ' +
-              '.image_widget, ' +
-              '.info_list li, ' +
-              '.footer_widget'
-            );
+              // Use requestAnimationFrame to trigger animations for visible elements
+              // This ensures the browser has rendered the elements before adding .revealed
+              requestAnimationFrame(() => {
+                visibleElements.forEach(el => {
+                  el.classList.add('revealed');
+                });
+              });
+            }
 
-            sections.forEach((section, index) => {
-              if (!section.classList.contains('page_banner')) {
-                section.classList.add('scroll-reveal');
-                section.classList.add('delay-' + ((index % 3) + 1));
-              }
-              observer.observe(section);
-            });
+            function handleResize() {
+              clearTimeout(resizeTimeout);
+              resizeTimeout = setTimeout(() => {
+                processElements();
+              }, 250);
+            }
+
+            // Initialize on page load
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', processElements);
+            } else {
+              processElements();
+            }
+
+            // Handle window resize
+            window.addEventListener('resize', handleResize, { passive: true });
           })();
         </script>
     </body> 

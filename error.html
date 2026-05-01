@@ -1,5 +1,139 @@
 <!doctype html><html lang="en">
 <!-- Mirrored from html.merku.love/collab/error.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Jul 2023 19:50:35 GMT -->
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>404 Page not found – Collab – Online Learning Platform Template</title><link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg"><link rel="stylesheet" type="text/css" href="assets/css/style.css"></head><body><div class="page_wrapper"><main class="page_content"><section class="error_section text-center decoration_wrap"><div class="container decoration_wrap"><div class="error_image"><img src="assets/images/error_image.png" alt="Collab – Online Learning Platform"></div><h1 class="error_title">Page Not Found</h1><p class="error_description">Egestas sed tempus urna et pharetra. Leo integer malesuada nunc vel. Libero id faucibus nisl tincidunt eget nullam non nisi. Faucibus turpis in eu mi bibendum neque egestas</p><div class="form_item justify-content-center m-0"><input type="search" name="search" placeholder="What do you want to learn ?"> <button type="submit" class="btn btn_dark"><span><small>Search</small> <small>Search</small></span></button></div><div class="deco_item shape_img_1 wow fadeInUp" data-wow-delay=".2s"><img src="assets/images/shape/shape_img_7.png" alt="Collab – Online Learning Platform"></div><div class="deco_item shape_img_2 wow fadeInUp" data-wow-delay=".4s"><img src="assets/images/shape/shape_img_7.png" alt="Collab – Online Learning Platform"></div></div><div class="deco_item shape_img_3 wow fadeInLeft" data-wow-delay=".2s"><img src="assets/images/shape/shape_img_7.png" alt="Collab – Online Learning Platform"></div><div class="deco_item shape_img_4 wow fadeInRight" data-wow-delay=".4s"><img src="assets/images/shape/shape_img_7.png" alt="Collab – Online Learning Platform"></div></section></main></div><script src="assets/js/script.js"></script></body>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>404 Page not found – Collab – Online Learning Platform Template</title><link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg"><link rel="stylesheet" type="text/css" href="assets/css/style.css"><style>
+        /* ===== SCROLL REVEAL ANIMATIONS ===== */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.16, 0.8, 0.45, 1);
+            will-change: opacity, transform;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-reveal.delay-1 {
+            transition-delay: 0.12s;
+        }
+
+        .scroll-reveal.delay-2 {
+            transition-delay: 0.20s;
+        }
+
+        .scroll-reveal.delay-3 {
+            transition-delay: 0.28s;
+        }
+</style></head><body><div class="page_wrapper"><main class="page_content"><section class="error_section text-center decoration_wrap"><div class="container decoration_wrap"><div class="error_image"><img src="assets/images/error_image.png" alt="Collab – Online Learning Platform"></div><h1 class="error_title">Page Not Found</h1><p class="error_description">Egestas sed tempus urna et pharetra. Leo integer malesuada nunc vel. Libero id faucibus nisl tincidunt eget nullam non nisi. Faucibus turpis in eu mi bibendum neque egestas</p><div class="form_item justify-content-center m-0"><input type="search" name="search" placeholder="What do you want to learn ?"> <button type="submit" class="btn btn_dark"><span><small>Search</small> <small>Search</small></span></button></div><div class="deco_item shape_img_1 wow fadeInUp" data-wow-delay=".2s"><img src="assets/images/shape/shape_img_7.png" alt="Collab – Online Learning Platform"></div><div class="deco_item shape_img_2 wow fadeInUp" data-wow-delay=".4s"><img src="assets/images/shape/shape_img_7.png" alt="Collab – Online Learning Platform"></div></div><div class="deco_item shape_img_3 wow fadeInLeft" data-wow-delay=".2s"><img src="assets/images/shape/shape_img_7.png" alt="Collab – Online Learning Platform"></div><div class="deco_item shape_img_4 wow fadeInRight" data-wow-delay=".4s"><img src="assets/images/shape/shape_img_7.png" alt="Collab – Online Learning Platform"></div></section></main></div><script src="assets/js/script.js"></script><script>
+          // Optimized Scroll Reveal Animation
+          (function initScrollReveal() {
+            let observer = null;
+            let observedElements = new Set();
+            let resizeTimeout;
+            
+            function getObserverOptions() {
+              const isMobile = window.innerWidth <= 767;
+              return {
+                threshold: isMobile ? [0, 0.05, 1] : [0, 0.15, 1],
+                rootMargin: isMobile ? '0px' : '-50px'
+              };
+            }
+
+            function createObserver() {
+              if (observer) observer.disconnect();
+              observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting && !entry.target.classList.contains('revealed')) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                    observedElements.delete(entry.target);
+                  }
+                });
+              }, getObserverOptions());
+            }
+
+            function processElements() {
+              const selector = 'main.page_content section, ' +
+                'main.page_content .section_heading, ' +
+                'main.page_content .content_wrap, ' +
+                'main.page_content .image_widget, ' +
+                'main.page_content .card, ' +
+                'main.page_content .card-body, ' +
+                'main.page_content .card-title, ' +
+                'main.page_content .row > .col, ' +
+                'main.page_content .info_list li, ' +
+                'main.page_content .meta_info_list li, ' +
+                'main.page_content .list-group-item, ' +
+                'main.page_content .accordion-item, ' +
+                'main.page_content .accordion-body, ' +
+                'main.page_content .button_group, ' +
+                'main.page_content .announcement-box, ' +
+                'main.page_content .newslatter_section > .container > .row > .col, ' +
+                'main.page_content .register_section > .container > .row > .col, ' +
+                'main.page_content .footer_widget, ' +
+                '.page_banner, ' +
+                '.hero_banner';
+
+              const sections = document.querySelectorAll(selector);
+              const sectionsArray = Array.from(sections)
+                .filter(el => !el.classList.contains('scroll-reveal'));
+
+              sectionsArray.sort((a, b) => {
+                return a.getBoundingClientRect().top - b.getBoundingClientRect().top;
+              });
+
+              createObserver();
+
+              // First pass: mark all visible elements and assign delays
+              const visibleElements = [];
+              const outOfViewElements = [];
+
+              sectionsArray.forEach((section, index) => {
+                section.classList.add('scroll-reveal');
+                const rect = section.getBoundingClientRect();
+                const isVisibleOnLoad = rect.top < window.innerHeight && rect.bottom > 0;
+
+                if (!section.classList.contains('page_banner')) {
+                  const delayClass = 'delay-' + ((index % 3) + 1);
+                  section.classList.add(delayClass);
+                }
+
+                if (isVisibleOnLoad) {
+                  visibleElements.push(section);
+                } else {
+                  outOfViewElements.push(section);
+                  observer.observe(section);
+                  observedElements.add(section);
+                }
+              });
+
+              // Use requestAnimationFrame to trigger animations for visible elements
+              // This ensures the browser has rendered the elements before adding .revealed
+              requestAnimationFrame(() => {
+                visibleElements.forEach(el => {
+                  el.classList.add('revealed');
+                });
+              });
+            }
+
+            function handleResize() {
+              clearTimeout(resizeTimeout);
+              resizeTimeout = setTimeout(() => {
+                processElements();
+              }, 250);
+            }
+
+            // Initialize on page load
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', processElements);
+            } else {
+              processElements();
+            }
+
+            // Handle window resize
+            window.addEventListener('resize', handleResize, { passive: true });
+          })();
+</script></body>
 <!-- Mirrored from html.merku.love/collab/error.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Jul 2023 19:50:36 GMT -->
 </html>
