@@ -172,7 +172,7 @@ function(e){"use strict";"function"==typeof define&&define.amd?define(["jquery"]
 })();
 
 /* ===== OPTIMIZED SCROLL REVEAL UTILITY ===== */
-window.initScrollReveal = function(selector = 'main.page_content section, main.page_content .section_heading, main.page_content .content_wrap, main.page_content .image_widget, main.page_content .card, main.page_content .card-body, main.page_content .card-title, main.page_content .row > .col, main.page_content .info_list li, main.page_content .meta_info_list li, main.page_content .list-group-item, main.page_content .accordion-item, main.page_content .accordion-body, main.page_content .button_group, main.page_content .announcement-box, main.page_content .newslatter_section > .container > .row > .col, main.page_content .register_section > .container > .row > .col, main.page_content .footer_widget, .page_banner, .hero_banner') {
+window.initScrollReveal = function(selector = 'main.page_content section:not(.page_banner):not(.hero_banner), main.page_content .section_heading, main.page_content .content_wrap, main.page_content .image_widget, main.page_content .card, main.page_content .card-body, main.page_content .card-title, main.page_content .row > .col, main.page_content .info_list li, main.page_content .meta_info_list li, main.page_content .list-group-item, main.page_content .accordion-item, main.page_content .accordion-body, main.page_content .button_group, main.page_content .announcement-box, main.page_content .newslatter_section > .container > .row > .col, main.page_content .register_section > .container > .row > .col, main.page_content .footer_widget') {
   let observer = null;
   let observedElements = new Set();
 
