@@ -213,9 +213,12 @@ window.initScrollReveal = function(selector = 'main.page_content section:not(.pa
       if (isVisibleOnLoad && index < 12) {
         const delayClass = 'delay-' + ((index % 3) + 1);
         element.classList.add(delayClass);
+        // Immediately reveal elements that are visible on page load
+        element.classList.add('revealed');
+        observedElements.delete(element);
+      } else {
+        observedElements.add(element);
       }
-      
-      observedElements.add(element);
     });
 
     createScrollObserver();
