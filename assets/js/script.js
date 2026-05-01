@@ -117,3 +117,56 @@ function(e){"use strict";"function"==typeof define&&define.amd?define(["jquery"]
       !*** multi ./source/js/floatButton.js ./source/js/script.js ***!
       \**************************************************************/
 /*! no static exports found */function(module,exports,__webpack_require__){eval('__webpack_require__(/*! /Users/mac/Sites/hello-elementor/wp-content/plugins/hello-merkulove/source/js/floatButton.js */"./source/js/floatButton.js");\nmodule.exports = __webpack_require__(/*! /Users/mac/Sites/hello-elementor/wp-content/plugins/hello-merkulove/source/js/script.js */"./source/js/script.js");\n\n\n//# sourceURL=webpack:///multi_./source/js/floatButton.js_./source/js/script.js?')}});
+/* ===== HAMBURGER MENU - COMMON JAVASCRIPT ===== */
+(function() {
+  'use strict';
+
+  // Toggle sidebar menu and overlay
+  window.toggleMenu = function() {
+    const sidebar = document.getElementById('sidebarMenumobile');
+    const overlay = document.getElementById('menuOverlay');
+    
+    if (sidebar) {
+      sidebar.classList.toggle('active');
+    }
+    if (overlay) {
+      overlay.classList.toggle('active');
+    }
+    
+    // Toggle hamburger button animation
+    const menuBtn = document.querySelector('.mobilemenu-btn');
+    if (menuBtn) {
+      menuBtn.classList.toggle('active');
+    }
+  };
+
+  // Toggle dropdown menu
+  window.toggleDropdown = function(event, element) {
+    event.preventDefault();
+    const parent = element.parentElement;
+    if (parent) {
+      parent.classList.toggle('open');
+    }
+  };
+
+  // Close menu when a link is clicked
+  document.addEventListener('DOMContentLoaded', function() {
+    const sidebarLinks = document.querySelectorAll('.sidebarmobile a:not(.closebtn):not(.dropdownmobile-toggle)');
+    
+    sidebarLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        const sidebar = document.getElementById('sidebarMenumobile');
+        const overlay = document.getElementById('menuOverlay');
+        const menuBtn = document.querySelector('.mobilemenu-btn');
+        
+        if (sidebar && overlay) {
+          sidebar.classList.remove('active');
+          overlay.classList.remove('active');
+          if (menuBtn) {
+            menuBtn.classList.remove('active');
+          }
+        }
+      });
+    });
+  });
+})();

@@ -31,7 +31,7 @@ body::before {
 	background-attachment: fixed;
 	background-size: auto;
 	background-position: 0 0;
-	opacity: 0.2;
+	opacity: 0.13;
 	pointer-events: none;
 	z-index: 0;
 }
@@ -35620,6 +35620,244 @@ blockquote p {
  		filter: brightness(1.1);
  	}
  }
+
+/* ===== HAMBURGER MENU - COMMON CSS ===== */
+/* Hamburger Button */
+.mobilemenu-btn {
+	position: relative;
+	width: 40px;
+	height: 30px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	gap: 5px;
+}
+
+.mobilemenu-btn span {
+	display: block;
+	width: 25px;
+	height: 2.5px;
+	background: linear-gradient(90deg, #4a90e2, #357abd);
+	border-radius: 2px;
+	transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+	box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+}
+
+.mobilemenu-btn.active span:nth-child(1) {
+	transform: rotate(45deg) translateY(12px);
+	background: linear-gradient(90deg, #e74c3c, #c0392b);
+}
+
+.mobilemenu-btn.active span:nth-child(2) {
+	opacity: 0;
+	transform: translateX(-10px);
+}
+
+.mobilemenu-btn.active span:nth-child(3) {
+	transform: rotate(-45deg) translateY(-12px);
+	background: linear-gradient(90deg, #e74c3c, #c0392b);
+}
+
+/* Sidebar Menu */
+.sidebarmobile {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 280px;
+	height: 100vh;
+	background: linear-gradient(135deg, #1a1f2e 0%, #2d3748 50%, #1a1f2e 100%);
+	color: white;
+	transform: translateX(100%);
+	transition: transform 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+	padding-top: 80px;
+	z-index: 1000;
+	overflow-y: auto;
+	box-shadow: -4px 0 20px rgba(0, 0, 0, 0.4);
+	scrollbar-width: thin;
+	scrollbar-color: rgba(74, 144, 226, 0.5) transparent;
+}
+
+.sidebarmobile.active {
+	transform: translateX(0);
+}
+
+/* Scrollbar styling */
+.sidebarmobile::-webkit-scrollbar {
+	width: 6px;
+}
+
+.sidebarmobile::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.sidebarmobile::-webkit-scrollbar-thumb {
+	background: rgba(74, 144, 226, 0.5);
+	border-radius: 3px;
+}
+
+.sidebarmobile::-webkit-scrollbar-thumb:hover {
+	background: rgba(74, 144, 226, 0.8);
+}
+
+/* Close button */
+.sidebarmobile .closebtn {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	font-size: 32px;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	background: none;
+	border: none;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+}
+
+.sidebarmobile .closebtn:hover {
+	color: #4a90e2;
+	transform: rotate(90deg);
+}
+
+/* Menu Links */
+.sidebarmobile a {
+	display: block;
+	padding: 16px 24px;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 16px;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	border-left: 3px solid transparent;
+	position: relative;
+}
+
+.sidebarmobile a::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 3px;
+	background: linear-gradient(180deg, #4a90e2, #357abd);
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: transform 0.3s ease;
+}
+
+.sidebarmobile a:hover {
+	color: #4a90e2;
+	background: rgba(74, 144, 226, 0.1);
+	padding-left: 28px;
+}
+
+.sidebarmobile a:hover::before {
+	transform: scaleY(1);
+}
+
+/* Dropdown Styling */
+.dropdownmobile {
+	margin: 0;
+	padding: 0;
+}
+
+.dropdownmobile-toggle {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px 24px !important;
+	cursor: pointer;
+	user-select: none;
+}
+
+.dropdownmobile-toggle::after {
+	display: none;
+}
+
+.dropdownmobile-menu {
+	display: none;
+	background: rgba(74, 144, 226, 0.05);
+	max-height: 0;
+	overflow: hidden;
+	background: rgba(74, 144, 226, 0.05);
+	transition: max-height 0.3s ease;
+}
+
+.dropdownmobile.open > .dropdownmobile-menu {
+	display: block;
+	max-height: 300px;
+}
+
+.dropdownmobile-menu li {
+	padding: 0;
+	list-style: none;
+}
+
+.dropdownmobile-menu a {
+	padding: 12px 24px 12px 40px !important;
+	font-size: 15px;
+	border-left: none;
+}
+
+.dropdownmobile-menu a::before {
+	display: none;
+}
+
+.dropdownmobile-menu a:hover {
+	background: rgba(74, 144, 226, 0.15);
+	padding-left: 44px !important;
+}
+
+/* Dropdown arrow */
+.dropdownmobilearrow-icon {
+	display: inline-block;
+	margin-left: 5px;
+	margin-bottom: 3px;
+	border: solid white;
+	border-width: 0 2px 2px 0;
+	padding: 4px;
+	transform: rotate(45deg);
+	transition: transform 0.3s ease;
+}
+
+.dropdownmobile.open .dropdownmobilearrow-icon {
+	transform: rotate(225deg);
+}
+
+/* Overlay */
+.menu-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0);
+	z-index: 999;
+	transition: background 0.3s ease;
+}
+
+.menu-overlay.active {
+	display: block;
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(4px);
+}
+
+/* Hide sidebar for larger screens */
+@media screen and (min-width: 992px) {
+	.sidebarmobile, .mobilemenu-btn {
+		display: none !important;
+	}
+}
 
 @media screen and (max-width: 767px) {
 	body {
