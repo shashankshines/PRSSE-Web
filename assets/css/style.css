@@ -35859,14 +35859,546 @@ blockquote p {
 	}
 }
 
+/* Mobile-specific optimizations for smooth 60fps animations */
 @media screen and (max-width: 767px) {
 	body {
 		background-attachment: scroll;
 	}
 
+	/* Reduce animation duration on mobile for snappier feel */
+	.scroll-reveal {
+		transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 0.8, 0.45, 1);
+	}
+
+	.fade-in-up,
 	.fade-in-left,
 	.fade-in-right {
-		animation: fadeInUp 0.8s ease forwards !important;
-		transform: translateY(30px) !important;
+		animation: fadeInUp 0.5s ease forwards !important;
+		transform: translateY(20px) !important;
+	}
+
+	.scale-in {
+		animation: scaleIn 0.5s ease forwards !important;
+	}
+
+	/* Reduce banner drift animation on mobile */
+	@keyframes bannerDriftMobile {
+		0%, 100% {
+			transform: translateX(-10px);
+		}
+		50% {
+			transform: translateX(10px);
+		}
+	}
+
+	.banner_drift {
+		animation: bannerDriftMobile 15s infinite ease-in-out !important;
+	}
+
+	/* Hamburger menu transitions - optimized for mobile */
+	.mobilemenu-btn span {
+		transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+	}
+
+	.sidebarmobile {
+		transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.3s ease;
+	}
+
+	.menu-overlay {
+		transition: background 0.25s ease, opacity 0.25s ease;
+	}
+
+	/* Reduce stagger delays on mobile */
+	.scroll-reveal.delay-1 {
+		transition-delay: 0.08s;
+	}
+
+	.scroll-reveal.delay-2 {
+		transition-delay: 0.16s;
+	}
+
+	.scroll-reveal.delay-3 {
+		transition-delay: 0.24s;
+	}
+
+	/* Optimize dropdown animations for mobile */
+	.dropdownmobile-toggle {
+		transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+	}
+
+	.dropdownmobilearrow-icon {
+		transition: transform 0.2s ease;
+	}
+
+	/* Smooth scroll on mobile */
+	html {
+		scroll-behavior: smooth;
+		scroll-padding-top: 50px;
+	}
+
+	/* Prevent layout shift on smaller screens */
+	.scroll-reveal {
+		min-height: 1px;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+/* Tablet-specific optimizations (640px - 767px) */
+@media screen and (max-width: 767px) and (min-width: 640px) {
+	.scroll-reveal {
+		transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.16, 0.8, 0.45, 1);
+	}
+
+	.fade-in-up,
+	.fade-in-left,
+	.fade-in-right {
+		animation: fadeInUp 0.55s ease forwards !important;
+	}
+}
+
+/* Small phone optimizations (max-width 639px) */
+@media screen and (max-width: 639px) {
+	.scroll-reveal {
+		opacity: 0;
+		transform: translateY(12px);
+		transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.16, 0.8, 0.45, 1);
+	}
+
+	.fade-in-up,
+	.fade-in-left,
+	.fade-in-right {
+		animation: fadeInUp 0.45s ease forwards !important;
+		transform: translateY(12px) !important;
+	}
+
+	/* Reduce delays further on small phones */
+	.scroll-reveal.delay-1 {
+		transition-delay: 0.05s;
+	}
+
+	.scroll-reveal.delay-2 {
+		transition-delay: 0.1s;
+	}
+
+	.scroll-reveal.delay-3 {
+		transition-delay: 0.15s;
+	}
+
+	/* Ultra-fast transitions for interactive elements on small screens */
+	button, a, input, select, textarea {
+		transition: all 0.15s ease;
+	}
+
+	.mobilemenu-btn span {
+		transition: all 0.2s ease;
+	}
+
+	.sidebarmobile {
+		transition: transform 0.25s ease;
+	}
+}
+
+/* Landscape orientation adjustments */
+@media screen and (max-width: 991px) and (orientation: landscape) {
+	html {
+		scroll-padding-top: 40px;
+	}
+
+	.scroll-reveal {
+		transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 0.8, 0.45, 1);
+	}
+
+	.fade-in-up,
+	.fade-in-left,
+	.fade-in-right {
+		animation: fadeInUp 0.4s ease forwards !important;
+	}
+}
+
+/* ===== OPTIMIZED SCROLL REVEAL ANIMATIONS ===== */
+/* Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+	
+	.scroll-reveal,
+	.scroll-reveal.revealed,
+	.fade-in-up,
+	.fade-in-left,
+	.fade-in-right,
+	.scale-in {
+		animation: none !important;
+		opacity: 1 !important;
+		transform: none !important;
+	}
+}
+
+/* Core scroll reveal animation class */
+.scroll-reveal {
+	opacity: 0;
+	transform: translateY(24px);
+	transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.16, 0.8, 0.45, 1);
+	will-change: opacity, transform;
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+
+.scroll-reveal.revealed {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Staggered animation delays */
+.scroll-reveal.delay-1 {
+	transition-delay: 0.12s;
+}
+
+.scroll-reveal.delay-2 {
+	transition-delay: 0.24s;
+}
+
+.scroll-reveal.delay-3 {
+	transition-delay: 0.36s;
+}
+
+/* Mobile optimizations for scroll reveal */
+@media screen and (max-width: 991px) {
+	.scroll-reveal {
+		transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16, 0.8, 0.45, 1);
+	}
+	
+	.scroll-reveal.delay-1,
+	.scroll-reveal.delay-2,
+	.scroll-reveal.delay-3 {
+		transition-delay: 0 !important;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.scroll-reveal {
+		opacity: 0;
+		transform: translateY(16px);
+		transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 0.8, 0.45, 1);
+	}
+	
+	.scroll-reveal.revealed {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* ===== FADE IN ANIMATIONS ===== */
+.fade-in-up {
+	opacity: 0;
+	transform: translateY(30px);
+	animation: fadeInUp 0.8s ease forwards;
+}
+
+.fade-in-left {
+	opacity: 0;
+	transform: translateX(-30px);
+	animation: fadeInLeft 0.8s ease forwards;
+}
+
+.fade-in-right {
+	opacity: 0;
+	transform: translateX(30px);
+	animation: fadeInRight 0.8s ease forwards;
+}
+
+.scale-in {
+	opacity: 0;
+	transform: scale(0.95);
+	animation: scaleIn 0.8s ease forwards;
+}
+
+/* Mobile fade animations */
+@media screen and (max-width: 767px) {
+	.fade-in-left,
+	.fade-in-right {
+		animation: fadeInUp 0.6s ease forwards !important;
+		transform: translateY(20px) !important;
+	}
+	
+	.scale-in {
+		animation: scaleIn 0.6s ease forwards !important;
+	}
+}
+
+/* Reduced motion for fade animations */
+@media (prefers-reduced-motion: reduce) {
+	.fade-in-up,
+	.fade-in-left,
+	.fade-in-right,
+	.scale-in {
+		animation: none !important;
+		opacity: 1 !important;
+		transform: none !important;
+	}
+}
+
+/* ===== BANNER ANIMATIONS ===== */
+.page_banner .content_wrapper {
+	animation: fadeInUp 0.9s ease both, bannerDrift 20s ease-in-out infinite;
+	will-change: transform;
+	backface-visibility: hidden;
+}
+
+@media screen and (max-width: 991px) {
+	.page_banner .content_wrapper {
+		animation: fadeInUp 0.7s ease both, bannerDrift 25s ease-in-out infinite;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.page_banner .content_wrapper {
+		animation: fadeInUp 0.6s ease both;
+		min-height: 200px !important;
+	}
+}
+
+/* ===== TRANSITION PERFORMANCE OPTIMIZATION ===== */
+/* GPU acceleration for smooth transitions */
+.dropdown-menu,
+.nav-link,
+button,
+a,
+.card {
+	transform: translateZ(0);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimize hamburger menu transitions */
+.mobilemenu-btn span {
+	transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+	            opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+	will-change: transform;
+	backface-visibility: hidden;
+}
+
+.sidebarmobile {
+	transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+	            opacity 0.3s ease;
+	will-change: transform;
+	backface-visibility: hidden;
+}
+
+.menu-overlay {
+	transition: opacity 0.3s ease,
+	            visibility 0.3s ease;
+	will-change: opacity;
+}
+
+/* Mobile menu optimizations */
+@media screen and (max-width: 991px) {
+	.mobilemenu-btn span {
+		transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+	}
+	
+	.sidebarmobile {
+		transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+	}
+	
+	.menu-overlay {
+		transition: opacity 0.25s ease;
+	}
+}
+
+/* ===== SMOOTH SCROLL BEHAVIOR ===== */
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 80px;
+}
+
+@media screen and (max-width: 991px) {
+	html {
+		scroll-padding-top: 60px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	html {
+		scroll-padding-top: 50px;
+	}
+}
+
+/* Disable smooth scroll for users with reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+/* ===== BUTTON & LINK TRANSITIONS ===== */
+button,
+a,
+input[type="submit"],
+input[type="button"] {
+	transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+	will-change: background-color, color, transform;
+}
+
+@media screen and (max-width: 991px) {
+	button,
+	a,
+	input[type="submit"],
+	input[type="button"] {
+		transition: all 0.2s ease;
+	}
+}
+
+/* ===== DROPDOWN ANIMATIONS ===== */
+.dropdown-menu {
+	animation: dropDown 0.2s ease forwards;
+	will-change: transform, opacity;
+	transform-origin: top center;
+}
+
+@media screen and (max-width: 991px) {
+	.dropdown-menu {
+		animation: dropDown 0.15s ease forwards;
+	}
+}
+
+/* ===== CARD & SECTION ANIMATIONS ===== */
+.card,
+.section_heading,
+.content_wrap {
+	backface-visibility: hidden;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* ===== FIX JANK AND STUTTERING ===== */
+body,
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+/* Reduce motion for animations on performance-constrained devices */
+@media (max-width: 480px) {
+	.scroll-reveal,
+	.fade-in-up,
+	.fade-in-left,
+	.fade-in-right,
+	.scale-in {
+		transition-duration: 0.4s !important;
+	}
+}
+
+/* ===== INTERSECTION OBSERVER FALLBACK ===== */
+.no-js .scroll-reveal {
+	opacity: 1 !important;
+	transform: none !important;
+}
+
+/* ===== PREVENT LAYOUT SHIFT ===== */
+img,
+video {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.scroll-reveal,
+.fade-in-up,
+.fade-in-left,
+.fade-in-right,
+.scale-in {
+	min-height: 1px;
+}
+
+/* ===== MISSING BANNER KEYFRAME ANIMATIONS ===== */
+/* These keyframes were referenced in animations but not defined */
+
+@keyframes bannerDrift {
+	0%, 100% {
+		background-position: 45% 45%;
+	}
+	50% {
+		background-position: 55% 55%;
+	}
+}
+
+@keyframes curtainSlide {
+	0% {
+		background-position: 0% 0%;
+		opacity: 0.35;
+	}
+	50% {
+		background-position: 100% 0%;
+		opacity: 0.45;
+	}
+	100% {
+		background-position: 0% 0%;
+		opacity: 0.35;
+	}
+}
+
+@keyframes bubbleDrift1 {
+	0%, 100% {
+		transform: translate3d(0, 0, 0);
+	}
+	50% {
+		transform: translate3d(18px, -14px, 0);
+	}
+}
+
+@keyframes bubbleDrift2 {
+	0%, 100% {
+		transform: translate3d(0, 0, 0);
+	}
+	50% {
+		transform: translate3d(-12px, 18px, 0);
+	}
+}
+
+@keyframes bubbleDrift3 {
+	0%, 100% {
+		transform: translate3d(-50%, 0, 0);
+	}
+	50% {
+		transform: translate3d(-50%, -20px, 0);
+	}
+}
+
+@keyframes fadeInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeInRight {
+	from {
+		opacity: 0;
+		transform: translateX(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes scaleIn {
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
 	}
 }

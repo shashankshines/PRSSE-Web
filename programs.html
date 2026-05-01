@@ -126,62 +126,6 @@
         .page_banner .content_wrapper .breadcrumb_nav li {
             opacity: 0.9;
         }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(18px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes bannerDrift {
-            0% {
-                background-position: 45% 45%;
-            }
-            50% {
-                background-position: 55% 55%;
-            }
-            100% {
-                background-position: 45% 45%;
-            }
-        }
-
-        @keyframes curtainSlide {
-            0% {
-                background-position: 0% 0%;
-                opacity: 0.35;
-            }
-            50% {
-                background-position: 100% 0%;
-                opacity: 0.45;
-            }
-            100% {
-                background-position: 0% 0%;
-                opacity: 0.35;
-            }
-        }
-
-        @keyframes bubbleDrift1 {
-            0% { transform: translate3d(0, 0, 0); }
-            50% { transform: translate3d(18px, -14px, 0); }
-            100% { transform: translate3d(0, 0, 0); }
-        }
-
-        @keyframes bubbleDrift2 {
-            0% { transform: translate3d(0, 0, 0); }
-            50% { transform: translate3d(-12px, 18px, 0); }
-            100% { transform: translate3d(0, 0, 0); }
-        }
-
-        @keyframes bubbleDrift3 {
-            0% { transform: translate3d(-50%, 0, 0); }
-            50% { transform: translate3d(-50%, -20px, 0); }
-            100% { transform: translate3d(-50%, 0, 0); }
-        }
         .section-title {
             font-size: 2.5rem;
             font-weight: bold;
@@ -230,93 +174,6 @@
       color: #0d6efd;
       font-weight: bold;
     }
-
-    /* Scroll Reveal Animations */
-    .scroll-reveal {
-        opacity: 0;
-        transform: translateY(24px);
-        transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.16, 0.8, 0.45, 1);
-        will-change: opacity, transform;
-    }
-
-    .scroll-reveal.revealed {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .scroll-reveal.delay-1 {
-        transition-delay: 0.12s;
-    }
-
-    .scroll-reveal.delay-2 {
-        transition-delay: 0.20s;
-    }
-
-    .scroll-reveal.delay-3 {
-        transition-delay: 0.28s;
-    }
-
-    /* Additional animation classes for page sections */
-    .fade-in-up {
-        opacity: 0;
-        transform: translateY(30px);
-        animation: fadeInUp 0.8s ease forwards;
-    }
-
-    .fade-in-left {
-        opacity: 0;
-        transform: translateX(-30px);
-        animation: fadeInLeft 0.8s ease forwards;
-    }
-
-    .fade-in-right {
-        opacity: 0;
-        transform: translateX(30px);
-        animation: fadeInRight 0.8s ease forwards;
-    }
-
-    .scale-in {
-        opacity: 0;
-        transform: scale(0.95);
-        animation: scaleIn 0.8s ease forwards;
-    }
-
-    @keyframes fadeInUp {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes fadeInLeft {
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes fadeInRight {
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes scaleIn {
-        to {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-
-    /* Staggered animation delays */
-    .stagger-1 { animation-delay: 0.1s; }
-    .stagger-2 { animation-delay: 0.2s; }
-    .stagger-3 { animation-delay: 0.3s; }
-    .stagger-4 { animation-delay: 0.4s; }
-    .stagger-5 { animation-delay: 0.5s; }
-
-    /* Hover effects moved to shared stylesheet */
 
     @media screen and (max-width: 767px) {
         .fade-in-left,
@@ -383,8 +240,7 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">×</a>
                 <a href="index.html">Home</a>
                 <a href="about.html">About Us</a>
-                
-                
+
                 <!-- Dropdown (Mobile) -->
                 <!--<a href="programs.html">Programs</a>-->
                 <div class="dropdownmobile">
@@ -569,7 +425,6 @@
                             </div>
                         </div>
                     </div>
-                    
 
                 </div>
             </section>
