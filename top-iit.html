@@ -28,22 +28,28 @@
             .container, .hero_banner.style_1 .container, .site_header .container {
                  margin-top: 0px !important; 
             }
+            .page_banner .content_wrapper { padding: 0; }
+            .page_banner .content_wrapper h1 { font-size: 40px; }
         }
         .page_banner .content_wrapper {
             align-items: center;
             background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.20)), url("assets/images/banner/indian-reserch-institutes-banner.png");
             background-color: transparent;
             background-repeat: no-repeat;
-            background-size: 120% auto;
+            background-size: cover;
             background-position: 50% 45%;
             border-radius: 15px;
             display: flex;
-            min-height: 300px;
-            padding: 50px 30px;
+            /* min-height: 300px; */
+            padding: 40px 30px;
             position: relative;
             overflow: hidden;
             box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
             animation: fadeInUp 0.9s ease both, bannerDrift 22s ease-in-out infinite;
+        }
+         @media screen and (max-width: 991px) {
+            /* .page_banner .content_wrapper { padding: 0; } */
+            .page_banner .content_wrapper h1 { font-size: 40px; }
         }
 
         .page_banner .internal-banner {
@@ -133,43 +139,20 @@
             opacity: 0.9;
         }
 
-        @media screen and (max-width: 767px) {
-            .page_banner .content_wrapper {
-                min-height: 180px;
-                padding: 30px 20px;
-            }
-
-            .page_banner .content_wrapper .page_title {
-                font-size: 2rem;
-            }
+        .page_banner .content_wrapper .breadcrumb_nav li {
+            opacity: 0.9;
         }
 
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.16, 0.8, 0.45, 1);
-            will-change: opacity, transform;
-        }
 
-        .scroll-reveal.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .scroll-reveal.delay-1 {
-            transition-delay: 0.12s;
-        }
-
-        .scroll-reveal.delay-2 {
-            transition-delay: 0.20s;
-        }
-
-        .scroll-reveal.delay-3 {
-            transition-delay: 0.28s;
-        }
-    </style>
+        </style>
     </head>
-    <body>
+    <body class="no-scroll">
+        <div id="pageLoader" class="page-loader">
+            <div class="page-loader-inner">
+                <div class="spinner"></div>
+                <p>Loading...</p>
+            </div>
+        </div>
         <div class="page_wrapper">
             <div class="backtotop">
                 <a href="#" class="scroll"><i class="far fa-arrow-up"></i></a>
@@ -270,7 +253,7 @@
                                         <li><a href="#!">Knowledge</a></li>
                                         <li> Institutes of India</li>
                                     </ul> -->
-                                    <h1 class="page_title scroll-reveal delay-1">Institutes of India</h1>
+                                    <h1 class="page_title">Institutes of India</h1>
                                     
                                 </div>
                             </div>
@@ -436,115 +419,30 @@
             </footer>
         </div>
         <script src="assets/js/script.js"></script>
+        <script>
+          if (typeof initScrollReveal === 'function') {
+            initScrollReveal();
+          }
+        </script>
                 <script>
-                    // Optimized Scroll Reveal Animation
-          (function initScrollReveal() {
-            let observer = null;
-            let observedElements = new Set();
-            let resizeTimeout;
-            
-            function getObserverOptions() {
-              const isMobile = window.innerWidth <= 767;
-              return {
-                threshold: isMobile ? [0, 0.05, 1] : [0, 0.15, 1],
-                rootMargin: isMobile ? '0px' : '-50px'
-              };
-            }
+                            (function() {
+                                var loader = document.getElementById('pageLoader');
+                                if (!loader) return;
 
-            function createObserver() {
-              if (observer) observer.disconnect();
-              observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                  if (entry.isIntersecting && !entry.target.classList.contains('revealed')) {
-                    entry.target.classList.add('revealed');
-                    observer.unobserve(entry.target);
-                    observedElements.delete(entry.target);
-                  }
-                });
-              }, getObserverOptions());
-            }
+                                var hidePageLoader = function() {
+                                    loader.classList.add('hidden');
+                                    document.body.classList.remove('no-scroll');
+                                    setTimeout(function() {
+                                        if (loader.parentNode) loader.parentNode.removeChild(loader);
+                                    }, 500);
+                                };
 
-            function processElements() {
-              const selector = 'main.page_content section, ' +
-                'main.page_content .section_heading, ' +
-                'main.page_content .content_wrap, ' +
-                'main.page_content .image_widget, ' +
-                'main.page_content .card, ' +
-                'main.page_content .card-body, ' +
-                'main.page_content .card-title, ' +
-                'main.page_content .row > .col, ' +
-                'main.page_content .info_list li, ' +
-                'main.page_content .meta_info_list li, ' +
-                'main.page_content .list-group-item, ' +
-                'main.page_content .accordion-item, ' +
-                'main.page_content .accordion-body, ' +
-                'main.page_content .button_group, ' +
-                'main.page_content .announcement-box, ' +
-                'main.page_content .newslatter_section > .container > .row > .col, ' +
-                'main.page_content .register_section > .container > .row > .col, ' +
-                'main.page_content .footer_widget, ' +
-                '.page_banner, ' +
-                '.hero_banner';
-
-              const sections = document.querySelectorAll(selector);
-              const sectionsArray = Array.from(sections)
-                .filter(el => !el.classList.contains('scroll-reveal'));
-
-              sectionsArray.sort((a, b) => {
-                return a.getBoundingClientRect().top - b.getBoundingClientRect().top;
-              });
-
-              createObserver();
-
-              // First pass: mark all visible elements and assign delays
-              const visibleElements = [];
-              const outOfViewElements = [];
-
-              sectionsArray.forEach((section, index) => {
-                section.classList.add('scroll-reveal');
-                const rect = section.getBoundingClientRect();
-                const isVisibleOnLoad = rect.top < window.innerHeight && rect.bottom > 0;
-
-                if (!section.classList.contains('page_banner')) {
-                  const delayClass = 'delay-' + ((index % 3) + 1);
-                  section.classList.add(delayClass);
-                }
-
-                if (isVisibleOnLoad) {
-                  visibleElements.push(section);
-                } else {
-                  outOfViewElements.push(section);
-                  observer.observe(section);
-                  observedElements.add(section);
-                }
-              });
-
-              // Use requestAnimationFrame to trigger animations for visible elements
-              // This ensures the browser has rendered the elements before adding .revealed
-              requestAnimationFrame(() => {
-                visibleElements.forEach(el => {
-                  el.classList.add('revealed');
-                });
-              });
-            }
-
-            function handleResize() {
-              clearTimeout(resizeTimeout);
-              resizeTimeout = setTimeout(() => {
-                processElements();
-              }, 250);
-            }
-
-            // Initialize on page load
-            if (document.readyState === 'loading') {
-              document.addEventListener('DOMContentLoaded', processElements);
-            } else {
-              processElements();
-            }
-
-            // Handle window resize
-            window.addEventListener('resize', handleResize, { passive: true });
-          })();
+                                if (document.readyState === 'complete') {
+                                    hidePageLoader();
+                                } else {
+                                    window.addEventListener('load', hidePageLoader);
+                                }
+                            })();
                 </script>
         <script>
           // Set active navigation item based on current page
