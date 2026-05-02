@@ -89,8 +89,10 @@
     }
 
     .carousel-hint {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         letter-spacing: 0.5px;
+        margin: 0;
+        text-align: center;
     }
 
     /* Carousel Container */
@@ -101,6 +103,7 @@
         margin: 0 auto;
         padding: 0 15px;
         perspective: 1200px;
+        font-family: Roboto, Arial, sans-serif;
     }
 
     .carousel-inner {
@@ -110,7 +113,7 @@
         overflow: hidden;
         border-radius: 16px;
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        background: #000;
+        background: #333;
         animation: fadeIn 0.8s ease-out;
     }
 
@@ -155,9 +158,9 @@
         bottom: 20px;
         left: 20px;
         right: 20px;
-        background: rgba(0, 0, 0, 0.7);
-        backdrop-filter: blur(10px);
-        color: white;
+        background-color: rgba(129, 205, 198, .5);
+        backdrop-filter: blur(5px);
+        color: #fff;
         padding: 12px 20px;
         border-radius: 8px;
         border: 1px solid rgba(255, 255, 255, 0.2);
@@ -562,7 +565,8 @@
             </div>
             
             <!-- Overlay (for closing sidebar when clicking outside) -->
-            <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div><main class="page_content">
+            <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div>
+            <main class="page_content">
             <section class="page_banner" style="margin-top: 20px;">
                 <div class="container">
                         <div class="content_wrapper">
@@ -581,7 +585,7 @@
         
             <section class="program-overview">
                 <div class="container">
-                    <h2 class="mb-3 text-left section-title">Teacher Program Overview</h2>
+                    <h2 class="mb-3 mt-3 text-left section-title">Teachers Program Overview</h2>
                     <p class="text-left">Welcome to the Teacher's Induction Program webpage! Our initiative focuses on enhancing the skills and methodologies of educators in the science domain, ensuring they are well-equipped to foster engaging and effective learning environments.</p>
                      <p class="text-left" style="font-weight: bold;">
                         Program Highlights </p>
@@ -1070,6 +1074,101 @@
                             </div>
                         </div>
                     </div>
+
+
+<!-- Bootstrap Cards New -->
+<div class="container-fluid" style="z-index: 0 !important;">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card text-white bg-primary mb-3">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Primary card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-white bg-secondary mb-3">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Secondary card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+    </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-white bg-success mb-3">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Success card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+  </div><!--.row -->
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card text-white bg-danger mb-3">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Danger card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-white bg-warning mb-3">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Warning card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-white bg-info mb-3">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Info card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+  </div><!-- /.row -->
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card bg-light mb-3">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Light card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-white bg-dark mb-3">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Dark card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-3">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Standart card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+  </div><!-- /.row -->
+</div>
+
+
+
                 </div>
             </section>
         </main>

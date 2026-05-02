@@ -7,7 +7,7 @@ body {
 	position: relative;
 	color: #29281e;
 	font-style: normal;
-	font-family: Roboto, sans-serif;
+	font-family: Roboto, Arial;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.65;
@@ -41,20 +41,7 @@ body > * {
 	z-index: 1;
 }
 
-.page_banner .content_wrapper {
-	align-items: center;
-	/* background-color: #f6f6f6; */
-	background-color: #81cdc6;
-	border-radius: 15px;
-	display: flex;
-	min-height: 300px;
-	padding: 40px 30px;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-
-}
-
+marquee > h3 { color: #fe7b14 !important; }
 .page_wrapper {
 	overflow: hidden;
 	position: relative
@@ -3082,7 +3069,7 @@ blockquote p {
 	right: 0;
 	z-index: 99;
 	padding: 44px 0;
-	position: absolute;
+	/* position: absolute; */
 	transition: padding .3s
 }
 
@@ -3134,7 +3121,7 @@ blockquote p {
 	font-size: 17px;
 	font-weight: 500;
 	line-height: 23px;
-	color: #1f1d0d;
+	color: #fe7b14;
 	position: relative;
 	align-items: center;
 	display: inline-flex;
@@ -3346,16 +3333,6 @@ blockquote p {
 .copyright_widget .copyright_text a:hover {
 	color: #fff
 }
-
-/*.page_banner .content_wrapper {
-	display: flex;
-	min-height: 520px;
-	align-items: center;
-	padding: 70px 115px;
-	background-repeat: no-repeat;
-	background-color: #f6f6f6;
-	background-position: right bottom
-}*/
 
 .page_banner .info_list,
 .page_banner .meta_info_list {
@@ -4279,8 +4256,8 @@ blockquote p {
 	}
 
 	.section_space_lg {
-		padding-top: 90px;
-		padding-bottom: 90px
+		/* padding-top: 90px; */
+		/* padding-bottom: 90px */
 	}
 
 	.courses_info_section .image_widget,
@@ -6552,18 +6529,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	}
 }
 
-body {
-	margin: 0;
-	font-family: var(--bs-font-sans-serif);
-	font-size: 1rem;
-	font-weight: 400;
-	line-height: 1.5;
-	color: #212529;
-	/* background-color: #fff; */
-	-webkit-text-size-adjust: 100%;
-	-webkit-tap-highlight-color: transparent
-}
-
 hr {
 	margin: 1rem 0;
 	color: inherit;
@@ -6660,6 +6625,7 @@ p {
 	margin-top: 0;
 	margin-bottom: 1rem;
 	text-align: justify;
+	font-family: Roboto, sans-serif;
 	font-size: 18px;
 }
 
@@ -7206,7 +7172,8 @@ progress {
 	flex-wrap: wrap;
 	margin-top: calc(var(--bs-gutter-y) * -1);
 	margin-right: calc(var(--bs-gutter-x) * -.5);
-	margin-left: calc(var(--bs-gutter-x) * -.5)
+	margin-left: calc(var(--bs-gutter-x) * -.5);
+	z-index: 0;
 }
 
 .row>* {
@@ -11406,7 +11373,8 @@ fieldset:disabled .btn {
 
 .card-body {
 	flex: 1 1 auto;
-	padding: 1rem 1rem
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
+	padding: 1rem 1rem;
 }
 
 .card-title {
@@ -14760,9 +14728,9 @@ fieldset:disabled .btn {
 	background-color: #dc3545 !important
 }
 
-.bg-light {
+/* .bg-light {
 	background-color: #f9fbe7 !important
-}
+} */
 
 .bg-dark {
 	background-color: #212529 !important
@@ -29676,20 +29644,6 @@ screen and (max-height:300px) {
 	display: none
 }
 
-body {
-	margin: 0;
-	padding: 0;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 1.65;
-	font-style: normal;
-	color: #29281e;
-	font-family: Roboto, sans-serif;
-	text-rendering: optimizelegibility;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased
-}
-
 .page_wrapper {
 	overflow: hidden;
 	position: relative
@@ -32740,7 +32694,7 @@ blockquote p {
 	right: 0;
 	z-index: 99;
 	padding: 5px 0;
-	position: absolute;
+	/* position: absolute; */
 	transition: padding .3s
 }
 
@@ -32766,20 +32720,6 @@ blockquote p {
 	margin: 0 1px;
 	line-height: 1;
 	font-size: 16px
-}
-
-.main_menu_list>li>a {
-	z-index: 1;
-	font-size: 17px;
-	font-weight: 500;
-	line-height: 23px;
-	color: #1f1d0d;
-	position: relative;
-	align-items: center;
-	display: inline-flex;
-	padding: 9px 15px 8px;
-	font-family: Roboto, sans-serif;
-	border-radius: 8px
 }
 
 /* Top Menu  */
@@ -32812,6 +32752,7 @@ blockquote p {
 }
 
 .main_menu_list .dropdown-menu {
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
 	top: 100%;
 	display: none;
 	margin: 2px 0 0;
@@ -32981,16 +32922,6 @@ blockquote p {
 .copyright_widget .copyright_text a:hover {
 	color: #fff
 }
-
-/* .page_banner .content_wrapper {
-	display: flex;
-	min-height: 520px;
-	align-items: center;
-	padding: 70px 115px;
-	background-repeat: no-repeat;
-	background-color: #f6f6f6;
-	background-position: right bottom
-} */
 
 .page_banner .info_list,
 .page_banner .meta_info_list {
@@ -33915,10 +33846,10 @@ blockquote p {
 		margin-bottom: 20px
 	}
 
-	.section_space_lg {
+	/* .section_space_lg {
 		padding-top: 90px;
 		padding-bottom: 90px
-	}
+	} */
 
 	.courses_info_section .image_widget,
 	.expect_from_course .image_widget {
@@ -35496,17 +35427,8 @@ blockquote p {
 /*code by nikita*/
 .page_content {
 	/*margin-top: 120px;*/
-	margin-top: 127px;
+	/* margin-top: 127px; */
 }
-
-/* If the marquee exists, adjust margin only for desktop */
-@media (min-width: 992px) {
-	.marquee-container+.container .page_content {
-		margin-top: 175px;
-	}
-}
-
-
 
 /**** GREAT MINDS PAGE STYLES ****/
 .internal-banner {
