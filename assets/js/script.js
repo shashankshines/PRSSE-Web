@@ -202,20 +202,17 @@ window.initScrollReveal = function(selector = 'main.page_content section:not(.pa
   function processScrollElements() {
     const elements = document.querySelectorAll(selector);
     const elementsArray = Array.from(elements).filter(el => !el.classList.contains('scroll-reveal'));
+    const visibleOnLoad = [];
 
     elementsArray.forEach((element, index) => {
       element.classList.add('scroll-reveal');
-      
-      // Assign staggered delays for elements visible on load
       const rect = element.getBoundingClientRect();
       const isVisibleOnLoad = rect.top < window.innerHeight && rect.bottom > 0;
-      
-      if (isVisibleOnLoad && index < 12) {
+
+      if (isVisibleOnLoad) {
         const delayClass = 'delay-' + ((index % 3) + 1);
         element.classList.add(delayClass);
-        // Immediately reveal elements that are visible on page load
-        element.classList.add('revealed');
-        observedElements.delete(element);
+        visibleOnLoad.push(element);
       } else {
         observedElements.add(element);
       }
@@ -223,6 +220,18 @@ window.initScrollReveal = function(selector = 'main.page_content section:not(.pa
 
     createScrollObserver();
     observedElements.forEach(el => observer.observe(el));
+
+    if (visibleOnLoad.length) {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          visibleOnLoad.forEach(el => {
+            void el.offsetWidth;
+            el.classList.add('revealed');
+            observedElements.delete(el);
+          });
+        });
+      });
+    }
   }
 
   if (document.readyState === 'loading') {

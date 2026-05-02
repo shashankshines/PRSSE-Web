@@ -673,10 +673,10 @@ ol[type="1"]>li:not(:last-child) {
 }
 
 .section_heading {
-	margin-bottom: 40px
+	margin-bottom: 40px;
 }
 
-.section_heading .heading_text {
+/* .section_heading .heading_text {
 	font-size: 45px;
 	font-weight: 700;
 	line-height: 50px;
@@ -687,7 +687,7 @@ ol[type="1"]>li:not(:last-child) {
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px
-}
+} */
 
 blockquote {
 	display: flex;
@@ -1382,7 +1382,7 @@ blockquote p {
 }
 
 .accordion .accordion-body {
-	padding: 20px 0 0
+	padding: 0
 }
 
 .accordion p {
@@ -31029,7 +31029,7 @@ blockquote p {
 }
 
 .accordion .accordion-body {
-	padding: 20px 0 0
+	padding: 0;
 }
 
 .accordion p {
@@ -34096,10 +34096,10 @@ blockquote p {
 	.footer_widget {
 		margin-bottom: 10px
 	}
-
+/* 
 	.site_footer .footer_widget_area {
 		padding: 100px 0 80px
-	}
+	} */
 
 	.newslatter_box {
 		padding: 90px 40px
@@ -35642,7 +35642,7 @@ blockquote p {
 	display: block;
 	width: 25px;
 	height: 2.5px;
-	background: linear-gradient(90deg, #4a90e2, #357abd);
+	background: linear-gradient(90deg, #fe7b14, #fe7b14);
 	border-radius: 2px;
 	transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
 	box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
