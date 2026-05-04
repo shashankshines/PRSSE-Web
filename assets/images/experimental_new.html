@@ -34,31 +34,6 @@
             transition: transform 0.5s;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
-    
-        /* ===== SCROLL REVEAL ANIMATIONS ===== */
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.16, 0.8, 0.45, 1);
-            will-change: opacity, transform;
-        }
-
-        .scroll-reveal.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .scroll-reveal.delay-1 {
-            transition-delay: 0.12s;
-        }
-
-        .scroll-reveal.delay-2 {
-            transition-delay: 0.20s;
-        }
-
-        .scroll-reveal.delay-3 {
-            transition-delay: 0.28s;
-        }
     </style>
 
 </head>
@@ -743,73 +718,6 @@
 
         <script>
           // Scroll reveal animation observer
-          (function initScrollReveal() {
-            const isMobile = window.innerWidth <= 767;
-            const observerOptions = {
-              threshold: isMobile ? 0.05 : 0.15,
-              rootMargin: isMobile ? '0px 0px 0px 0px' : '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-              entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add('revealed');
-                  observer.unobserve(entry.target);
-                }
-              });
-            }, observerOptions);
-
-            const sections = document.querySelectorAll(
-              'section, ' +
-              'main.page_content section, ' +
-              '.page_banner, ' +
-              '.hero_banner, ' +
-              '.courses_info_section > .container > .row > .col, ' +
-              '.details_section > .container > .row > .col, ' +
-              '.getstart_section > .container > .row > .col, ' +
-              '.mentor_details_section > .container > .row > .col, ' +
-              '.course_deals_section > .container > .row > .col, ' +
-              '.section_heading, ' +
-              '.content_wrap, ' +
-              '.image_widget, ' +
-              '.card, ' +
-              '.card-body, ' +
-              '.card-title, ' +
-              '.row > .col, ' +
-              '.info_list li, ' +
-              '.meta_info_list li, ' +
-              '.list-group-item, ' +
-              '.accordion-item, ' +
-              '.accordion-body, ' +
-              '.button_group, ' +
-              '.announcement-box, ' +
-              '.newslatter_section > .container > .row > .col, ' +
-              '.register_section > .container > .row > .col, ' +
-              '.footer_widget'
-            );
-
-            const sectionsArray = Array.from(sections);
-            sectionsArray.sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top);
-
-            sectionsArray.forEach((section, index) => {
-              section.classList.add('scroll-reveal');
-              const delayClass = 'delay-' + ((index % 3) + 1);
-              section.classList.add(delayClass);
-              observer.observe(section);
-            });
-
-            // Reveal any scroll-reveal elements already visible on page load
-            setTimeout(function() {
-              const hiddenElements = document.querySelectorAll('.scroll-reveal:not(.revealed)');
-              hiddenElements.forEach(el => {
-                const rect = el.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                  el.classList.add('revealed');
-                  observer.unobserve(el);
-                }
-              });
-            }, 100);
-          })();
         </script>
     </body>
 

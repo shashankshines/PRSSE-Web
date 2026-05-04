@@ -85,7 +85,6 @@ textarea:hover {
     outline: 0
 }
 
-
 /* embed,
 img:not([draggable]),
 object,
@@ -157,7 +156,6 @@ hr {
     padding-left: 15px;
     padding-right: 15px
 }
-
 
 /* .row {
     margin: -15px
@@ -310,7 +308,6 @@ hr {
             left: 0;
     }
 }
-
 
 .section_space_md {
     padding-top: 70px;
@@ -695,7 +692,6 @@ ol[type="1"]>li:not(:last-child) {
 .section_heading {
     margin-bottom: 40px;
 }
-
 
 /* .section_heading .heading_text {
 	font-size: 45px;
@@ -1255,21 +1251,15 @@ blockquote p {
     /*transition: .4s cubic-bezier(.25, 1, .5, 1)*/
 }
 
-
 /*.social_links a:hover:before {*/
-
 
 /*    transform: scale(1.1)*/
 
-
 /*}*/
-
 
 /*.social_links a:hover:after {*/
 
-
 /*    transform: scale(.8)*/
-
 
 /*}*/
 
@@ -3143,7 +3133,6 @@ blockquote p {
     line-height: 42px
 }
 
-
 /* .site_logo img {
     width:115px;
     margin-right: 10px
@@ -3375,7 +3364,6 @@ blockquote p {
 .copyright_widget .copyright_text a:hover {
     color: #fff
 }
-
 
 /*.page_banner .content_wrapper {
 	display: flex;
@@ -4780,7 +4768,6 @@ blockquote p {
     }
 }
 
-
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license
@@ -5324,12 +5311,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .fadeInDownBig {
     animation-name: fadeInDownBig
 }
-
-@keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-20px)
-    }
     100% {
         opacity: 1;
         transform: translateX(0)
@@ -5354,12 +5335,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .fadeInLeftBig {
     animation-name: fadeInLeftBig
 }
-
-@keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(20px)
-    }
     100% {
         opacity: 1;
         transform: translateX(0)
@@ -5384,12 +5359,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .fadeInRightBig {
     animation-name: fadeInRightBig
 }
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px)
-    }
     100% {
         opacity: 1;
         transform: translateY(0)
@@ -6201,7 +6170,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .faa-spin.animated-hover:hover {
     animation: spin 1.5s linear infinite
 }
-
 
 /*!
  * Bootstrap v5.0.2 (https://getbootstrap.com/)
@@ -10338,7 +10306,6 @@ fieldset:disabled .btn {
     }
 }
 
-
 /* .nav-link:focus,
 .nav-link:hover {
     color: #0a58ca
@@ -14118,7 +14085,6 @@ fieldset:disabled .btn {
 .bg-danger {
     background-color: #dc3545 !important
 }
-
 
 /* .bg-light {
 	background-color: #f9fbe7 !important
@@ -25560,7 +25526,6 @@ i[class^=flaticon-]:before {
     font-weight: 900
 }
 
-
 /*! jQuery UI - v1.11.4 - 2015-03-11
 * http://jqueryui.com
 * Includes: core.css, accordion.css, autocomplete.css, button.css, datepicker.css, dialog.css, draggable.css, menu.css, progressbar.css, resizable.css, selectable.css, selectmenu.css, slider.css, sortable.css, spinner.css, tabs.css, tooltip.css, theme.css
@@ -28259,7 +28224,6 @@ textarea:hover {
     outline: 0
 }
 
-
 /* embed,
 img:not([draggable]),
 object,
@@ -28566,7 +28530,6 @@ hr {
     color: #fff;
     box-shadow: 0 0px 15px 0 rgb(255 199 74);
 }
-
 
 /* .btn_primary:hover span small {
     color: #1f1d0d
@@ -29424,21 +29387,15 @@ blockquote p {
     /*transition: .4s cubic-bezier(.25, 1, .5, 1)*/
 }
 
-
 /*.social_links a:hover:before {*/
-
 
 /*    transform: scale(1.1)*/
 
-
 /*}*/
-
 
 /*.social_links a:hover:after {*/
 
-
 /*    transform: scale(.8)*/
-
 
 /*}*/
 
@@ -31334,7 +31291,6 @@ blockquote p {
     border-radius: 8px
 }
 
-
 /* Top Menu  */
 
 .main_menu_list>li.active>a,
@@ -31399,7 +31355,6 @@ blockquote p {
     transition: .4s cubic-bezier(.25, 1, .5, 1);
     padding: 14px 30px 12px 32px
 }
-
 
 /* Flyout dots */
 
@@ -31539,7 +31494,6 @@ blockquote p {
     color: #fff
 }
 
-
 /* .page_banner .content_wrapper {
 	display: flex;
 	min-height: 520px;
@@ -31582,7 +31536,6 @@ blockquote p {
     font-weight: 700;
     color: #1f1d0d
 }
-
 
 /* 
 .page_title {
@@ -32946,7 +32899,6 @@ blockquote p {
     }
 }
 
-
 /*! name: @uvarov.frontend/vanilla-calendar | url: https://github.com/uvarov-frontend/vanilla-calendar */
 
 .vanilla-calendar {
@@ -33780,7 +33732,6 @@ blockquote p {
     background-color: #dcdcdc
 }
 
-
 /*by nikita*/
 
 .announcement-box {
@@ -33812,7 +33763,6 @@ blockquote p {
     padding: 15px;
 }
 
-
 /* Remove default list styles */
 
 .announcement-content ul {
@@ -33821,13 +33771,11 @@ blockquote p {
     margin: 0;
 }
 
-
 /* List Items */
 
 .announcement-content ul li {
     margin-bottom: 10px;
 }
-
 
 /* Links */
 
@@ -33841,7 +33789,6 @@ blockquote p {
 .announcement-content ul li a:hover {
     text-decoration: underline;
 }
-
 
 /* Scrollbar Styling */
 
@@ -33863,14 +33810,12 @@ blockquote p {
     background: #555;
 }
 
-
 /*code by nikita*/
 
 .page_content {
     /*margin-top: 120px;*/
     margin-top: 127px;
 }
-
 
 /* If the marquee exists, adjust margin only for desktop */
 
@@ -33883,7 +33828,6 @@ blockquote p {
     }
 }
 
-
 /**** GREAT MINDS PAGE STYLES ****/
 
 .internal-banner {
@@ -33891,104 +33835,7 @@ blockquote p {
     float: left;
 }
 
-
-/* Global scroll reveal animations */
-
-.scroll-reveal {
-    /* opacity: 0; */
-    transform: translateY(24px);
-    transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.16, 0.8, 0.45, 1);
-    will-change: opacity, transform;
-}
-
-.scroll-reveal.revealed {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.scroll-reveal.delay-1 {
-    transition-delay: 0.12s;
-}
-
-.scroll-reveal.delay-2 {
-    transition-delay: 0.20s;
-}
-
-.scroll-reveal.delay-3 {
-    transition-delay: 0.28s;
-}
-
-.fade-in-up {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s ease forwards;
-}
-
-.fade-in-left {
-    opacity: 0;
-    transform: translateX(-30px);
-    animation: fadeInLeft 0.8s ease forwards;
-}
-
-.fade-in-right {
-    opacity: 0;
-    transform: translateX(30px);
-    animation: fadeInRight 0.8s ease forwards;
-}
-
-.scale-in {
-    opacity: 0;
-    transform: scale(0.95);
-    animation: scaleIn 0.8s ease forwards;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInLeft {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInRight {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes scaleIn {
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.stagger-1 {
-    animation-delay: 0.1s;
-}
-
-.stagger-2 {
-    animation-delay: 0.2s;
-}
-
-.stagger-3 {
-    animation-delay: 0.3s;
-}
-
-.stagger-4 {
-    animation-delay: 0.4s;
-}
-
-.stagger-5 {
-    animation-delay: 0.5s;
-}
+/* Global scroll reveal animations - REMOVED */
 
 .section_heading {
     transition: all 0.3s cubic-bezier(0.16, 0.8, 0.45, 1);
@@ -34012,9 +33859,7 @@ blockquote p {
     }
 }
 
-
 /* ===== HAMBURGER MENU - COMMON CSS ===== */
-
 
 /* Hamburger Button */
 
@@ -34058,7 +33903,6 @@ blockquote p {
     background: linear-gradient(90deg, #e74c3c, #c0392b);
 }
 
-
 /* Sidebar Menu */
 
 .sidebarmobile {
@@ -34083,7 +33927,6 @@ blockquote p {
     transform: translateX(0);
 }
 
-
 /* Scrollbar styling */
 
 .sidebarmobile::-webkit-scrollbar {
@@ -34102,7 +33945,6 @@ blockquote p {
 .sidebarmobile::-webkit-scrollbar-thumb:hover {
     background: rgba(74, 144, 226, 0.8);
 }
-
 
 /* Close button */
 
@@ -34128,7 +33970,6 @@ blockquote p {
     color: #4a90e2;
     transform: rotate(90deg);
 }
-
 
 /* Menu Links */
 
@@ -34166,7 +34007,6 @@ blockquote p {
 .sidebarmobile a:hover::before {
     transform: scaleY(1);
 }
-
 
 /* Dropdown Styling */
 
@@ -34222,7 +34062,6 @@ blockquote p {
     padding-left: 44px !important;
 }
 
-
 /* Dropdown arrow */
 
 .dropdownmobilearrow-icon {
@@ -34239,7 +34078,6 @@ blockquote p {
 .dropdownmobile.open .dropdownmobilearrow-icon {
     transform: rotate(225deg);
 }
-
 
 /* Overlay */
 
@@ -34261,7 +34099,6 @@ blockquote p {
     backdrop-filter: blur(4px);
 }
 
-
 /* Hide sidebar for larger screens */
 
 @media screen and (min-width: 992px) {
@@ -34271,26 +34108,13 @@ blockquote p {
     }
 }
 
-
 /* Mobile-specific optimizations for smooth 60fps animations */
 
 @media screen and (max-width: 767px) {
     body {
         background-attachment: scroll;
     }
-    /* Reduce animation duration on mobile for snappier feel */
-    .scroll-reveal {
-        transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 0.8, 0.45, 1);
-    }
-    .fade-in-up,
-    .fade-in-left,
-    .fade-in-right {
-        animation: fadeInUp 0.5s ease forwards !important;
-        transform: translateY(20px) !important;
-    }
-    .scale-in {
-        animation: scaleIn 0.5s ease forwards !important;
-    }
+    /* Mobile animations removed */
     /* Reduce banner drift animation on mobile */
     @keyframes bannerDriftMobile {
         0%,
@@ -34314,16 +34138,6 @@ blockquote p {
     .menu-overlay {
         transition: background 0.25s ease, opacity 0.25s ease;
     }
-    /* Reduce stagger delays on mobile */
-    .scroll-reveal.delay-1 {
-        transition-delay: 0.08s;
-    }
-    .scroll-reveal.delay-2 {
-        transition-delay: 0.16s;
-    }
-    .scroll-reveal.delay-3 {
-        transition-delay: 0.24s;
-    }
     /* Optimize dropdown animations for mobile */
     .dropdownmobile-toggle {
         transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
@@ -34336,53 +34150,17 @@ blockquote p {
         scroll-behavior: smooth;
         scroll-padding-top: 50px;
     }
-    /* Prevent layout shift on smaller screens */
-    .scroll-reveal {
-        min-height: 1px;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
 }
-
 
 /* Tablet-specific optimizations (640px - 767px) */
 
 @media screen and (max-width: 767px) and (min-width: 640px) {
-    .scroll-reveal {
-        transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.16, 0.8, 0.45, 1);
-    }
-    .fade-in-up,
-    .fade-in-left,
-    .fade-in-right {
-        animation: fadeInUp 0.55s ease forwards !important;
-    }
+    /* Mobile styles */
 }
-
 
 /* Small phone optimizations (max-width 639px) */
 
 @media screen and (max-width: 639px) {
-    .scroll-reveal {
-        opacity: 0;
-        transform: translateY(12px);
-        transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.16, 0.8, 0.45, 1);
-    }
-    .fade-in-up,
-    .fade-in-left,
-    .fade-in-right {
-        animation: fadeInUp 0.45s ease forwards !important;
-        transform: translateY(12px) !important;
-    }
-    /* Reduce delays further on small phones */
-    .scroll-reveal.delay-1 {
-        transition-delay: 0.05s;
-    }
-    .scroll-reveal.delay-2 {
-        transition-delay: 0.1s;
-    }
-    .scroll-reveal.delay-3 {
-        transition-delay: 0.15s;
-    }
     /* Ultra-fast transitions for interactive elements on small screens */
     button,
     a,
@@ -34399,26 +34177,15 @@ blockquote p {
     }
 }
 
-
 /* Landscape orientation adjustments */
 
 @media screen and (max-width: 991px) and (orientation: landscape) {
     html {
         scroll-padding-top: 40px;
     }
-    .scroll-reveal {
-        transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 0.8, 0.45, 1);
-    }
-    .fade-in-up,
-    .fade-in-left,
-    .fade-in-right {
-        animation: fadeInUp 0.4s ease forwards !important;
-    }
 }
 
-
-/* ===== OPTIMIZED SCROLL REVEAL ANIMATIONS ===== */
-
+/* ===== ANIMATIONS ===== */
 
 /* Disable animations for users who prefer reduced motion */
 
@@ -34430,131 +34197,15 @@ blockquote p {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-    .scroll-reveal,
-    .scroll-reveal.revealed,
-    .fade-in-up,
-    .fade-in-left,
-    .fade-in-right,
-    .scale-in {
-        animation: none !important;
-        opacity: 1 !important;
-        transform: none !important;
-    }
+}
+    /* Mobile styles */
 }
 
-
-/* Core scroll reveal animation class */
-
-.scroll-reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.16, 0.8, 0.45, 1);
-    will-change: opacity, transform;
-    backface-visibility: hidden;
-    perspective: 1000px;
-}
-
-.scroll-reveal.revealed {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* Staggered animation delays */
-
-.scroll-reveal.delay-1 {
-    transition-delay: 0.12s;
-}
-
-.scroll-reveal.delay-2 {
-    transition-delay: 0.24s;
-}
-
-.scroll-reveal.delay-3 {
-    transition-delay: 0.36s;
-}
-
-
-/* Mobile optimizations for scroll reveal */
-
-@media screen and (max-width: 991px) {
-    .scroll-reveal {
-        transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16, 0.8, 0.45, 1);
-    }
-    .scroll-reveal.delay-1,
-    .scroll-reveal.delay-2,
-    .scroll-reveal.delay-3 {
-        transition-delay: 0 !important;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .scroll-reveal {
-        opacity: 0;
-        transform: translateY(16px);
-        transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 0.8, 0.45, 1);
-    }
-    .scroll-reveal.revealed {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* ===== FADE IN ANIMATIONS ===== */
-
-.fade-in-up {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s ease forwards;
-}
-
-.fade-in-left {
-    opacity: 0;
-    transform: translateX(-30px);
-    animation: fadeInLeft 0.8s ease forwards;
-}
-
-.fade-in-right {
-    opacity: 0;
-    transform: translateX(30px);
-    animation: fadeInRight 0.8s ease forwards;
-}
-
-.scale-in {
-    opacity: 0;
-    transform: scale(0.95);
-    animation: scaleIn 0.8s ease forwards;
-}
-
-
-/* Mobile fade animations */
-
-@media screen and (max-width: 767px) {
-    .fade-in-left,
-    .fade-in-right {
-        animation: fadeInUp 0.6s ease forwards !important;
-        transform: translateY(20px) !important;
-    }
-    .scale-in {
-        animation: scaleIn 0.6s ease forwards !important;
-    }
-}
-
-
-/* Reduced motion for fade animations */
+/* Reduced motion for animations */
 
 @media (prefers-reduced-motion: reduce) {
-    .fade-in-up,
-    .fade-in-left,
-    .fade-in-right,
-    .scale-in {
-        animation: none !important;
-        opacity: 1 !important;
-        transform: none !important;
-    }
+    /* Respect user preferences */
 }
-
 
 /* ===== BANNER ANIMATIONS ===== */
 
@@ -34577,9 +34228,7 @@ blockquote p {
     }
 }
 
-
 /* ===== TRANSITION PERFORMANCE OPTIMIZATION ===== */
-
 
 /* GPU acceleration for smooth transitions */
 
@@ -34592,7 +34241,6 @@ a,
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
 
 /* Optimize hamburger menu transitions */
 
@@ -34613,7 +34261,6 @@ a,
     will-change: opacity;
 }
 
-
 /* Mobile menu optimizations */
 
 @media screen and (max-width: 991px) {
@@ -34628,7 +34275,6 @@ a,
         transition: opacity 0.25s ease;
     }
 }
-
 
 /* ===== SMOOTH SCROLL BEHAVIOR ===== */
 
@@ -34649,7 +34295,6 @@ html {
     }
 }
 
-
 /* Disable smooth scroll for users with reduced motion */
 
 @media (prefers-reduced-motion: reduce) {
@@ -34657,7 +34302,6 @@ html {
         scroll-behavior: auto;
     }
 }
-
 
 /* ===== BUTTON & LINK TRANSITIONS ===== */
 
@@ -34678,7 +34322,6 @@ input[type="button"] {
     }
 }
 
-
 /* ===== DROPDOWN ANIMATIONS ===== */
 
 .dropdown-menu {
@@ -34693,7 +34336,6 @@ input[type="button"] {
     }
 }
 
-
 /* ===== CARD & SECTION ANIMATIONS ===== */
 
 .card,
@@ -34702,7 +34344,6 @@ input[type="button"] {
     backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
 }
-
 
 /* ===== FIX JANK AND STUTTERING ===== */
 
@@ -34713,27 +34354,13 @@ html {
     text-rendering: optimizeLegibility;
 }
 
-
 /* Reduce motion for animations on performance-constrained devices */
 
 @media (max-width: 480px) {
-    .scroll-reveal,
-    .fade-in-up,
-    .fade-in-left,
-    .fade-in-right,
-    .scale-in {
-        transition-duration: 0.4s !important;
-    }
+    /* No scroll reveal or fade-in animations on small screens */
 }
-
 
 /* ===== INTERSECTION OBSERVER FALLBACK ===== */
-
-.no-js .scroll-reveal {
-    opacity: 1 !important;
-    transform: none !important;
-}
-
 
 /* ===== PREVENT LAYOUT SHIFT ===== */
 
@@ -34744,17 +34371,7 @@ video {
     height: auto;
 }
 
-.scroll-reveal,
-.fade-in-up,
-.fade-in-left,
-.fade-in-right,
-.scale-in {
-    min-height: 1px;
-}
-
-
 /* ===== MISSING BANNER KEYFRAME ANIMATIONS ===== */
-
 
 /* These keyframes were referenced in animations but not defined */
 
@@ -34810,38 +34427,5 @@ video {
     }
     50% {
         transform: translate3d(-50%, -20px, 0);
-    }
-}
-
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes scaleIn {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
     }
 }
