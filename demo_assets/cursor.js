@@ -16437,8 +16437,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var cursor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! cursor */ "./src/js/cursor.js");
 /* harmony import */ var magnetic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! magnetic */ "magnetic.js");
-/*** IMPORTS FROM imports-loader ***/var define=false;// Init cursor
-var cursor=new cursor__WEBPACK_IMPORTED_MODULE_1__["default"]();// Init magnetic
+/*** IMPORTS FROM imports-loader ***/var define=false;// cursor instantiation intentionally removed
+// Init magnetic
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-magnetic]').each(function(){new magnetic__WEBPACK_IMPORTED_MODULE_2__["default"](this);});
 
 /***/ }),
