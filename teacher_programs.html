@@ -57,6 +57,60 @@
       margin-top: 20px;
       margin-bottom: 20px;
     }
+
+    /* Page Banner Styles */
+    .page_banner .content_wrapper {
+        align-items: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.20)), url("assets/images/banner/teachers-program-banner.jpg");
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 45%;
+        border-radius: 15px;
+        display: flex;
+        min-height: 300px;
+        padding: 40px 30px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+        animation: fadeIn 0.9s ease both, bannerDrift 10s ease-in-out infinite;
+    }
+
+    .page_banner .content_wrapper h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        margin: 0;
+        z-index: 2;
+    }
+
+    @media (max-width: 991px) {
+        .page_banner .content_wrapper h1 {
+            font-size: 2.5rem;
+            line-height: 2.8rem;
+        }
+        .section-title {
+            font-size: 2rem;
+            line-height: 2.2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .page_banner .content_wrapper {
+            min-height: 250px;
+            padding: 30px 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .page_banner .content_wrapper {
+            min-height: 200px;
+            padding: 20px 15px;
+        }
+
+    }
+
     .card .card-body:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
@@ -563,16 +617,8 @@
             <main class="page_content">
             <section class="page_banner" style="margin-top: 20px;">
                 <div class="container">
-                        <div class="content_wrapper">
-                            <!-- <div class="row align-items-center">
-                            <div class="col col-lg-12">
-                                <ul class="breadcrumb_nav unordered_list">
-                                    <li><a href="index.html">Home</a></li> 
-                                    <li><a href="#!">Teacher Programs</a></li>
-                                    <li>Teacher Programs</li>
-                                </ul>
-                            </div>
-                        </div> -->
+                    <div class="content_wrapper">
+                        <h1>Teachers Programs</h1>
                     </div>
                 </div>
             </section>

@@ -3151,13 +3151,13 @@ blockquote p {
 .main_menu_list>li>a {
     z-index: 1;
     font-size: 17px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 23px;
      color: #fe7b14;
     position: relative;
     align-items: center;
     display: inline-flex;
-    padding: 9px 15px 8px;
+    padding: 10px;
     font-family: Roboto, sans-serif;
     border-radius: 8px
 }
@@ -4234,8 +4234,8 @@ blockquote p {
         margin-bottom: 20px
     }
     .section_space_lg {
-        padding-top: 90px;
-        padding-bottom: 90px
+        /* padding-top: 90px; */
+        padding-bottom: 30px
     }
     .courses_info_section .image_widget,
     .expect_from_course .image_widget {
@@ -4709,8 +4709,8 @@ blockquote p {
         min-height: auto
     }
     .section_space_lg {
-        padding-top: 60px;
-        padding-bottom: 60px
+        /* padding-top: 60px; */
+        padding-bottom: 30px
     }
 }
 
@@ -5308,33 +5308,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     }
 }
 
-.fadeInDownBig {
-    animation-name: fadeInDownBig
-}
-    100% {
-        opacity: 1;
-        transform: translateX(0)
-    }
-}
-
-.fadeInLeft {
-    animation-name: fadeInLeft
-}
 
 @keyframes fadeInLeftBig {
     0% {
         opacity: 0;
         transform: translateX(-2000px)
     }
-    100% {
-        opacity: 1;
-        transform: translateX(0)
-    }
-}
-
-.fadeInLeftBig {
-    animation-name: fadeInLeftBig
-}
     100% {
         opacity: 1;
         transform: translateX(0)
@@ -5353,15 +5332,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     100% {
         opacity: 1;
         transform: translateX(0)
-    }
-}
-
-.fadeInRightBig {
-    animation-name: fadeInRightBig
-}
-    100% {
-        opacity: 1;
-        transform: translateY(0)
     }
 }
 
@@ -16860,122 +16830,6 @@ fieldset:disabled .btn {
     }
 }
 
-.cb-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    contain: layout style size;
-    pointer-events: none;
-    will-change: transform;
-    transition: opacity .3s, color .4s
-}
-
-.cb-cursor:before {
-    content: "";
-    position: absolute;
-    top: -24px;
-    left: -24px;
-    display: block;
-    width: 48px;
-    height: 48px;
-    transform: scale(0);
-    background: #1f1d0d;
-    border-radius: 50%;
-    transition: transform .3s ease-in-out, opacity .1s
-}
-
-.cb-cursor-text {
-    position: absolute;
-    top: -18px;
-    left: -18px;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: scale(0) rotate(10deg);
-    opacity: 0;
-    color: #fff;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    letter-spacing: -.01em;
-    transition: opacity .4s, transform .3s
-}
-
-@supports (mix-blend-mode:exclusion) {
-    .cb-cursor.-exclusion,
-    .cb-cursor.-opaque {
-        mix-blend-mode: exclusion
-    }
-}
-
-@supports (mix-blend-mode:exclusion) {
-    .cb-cursor.-exclusion:before,
-    .cb-cursor.-opaque:before {
-        background: #fff
-    }
-}
-
-.cb-cursor.-normal,
-.cb-cursor.-text {
-    mix-blend-mode: normal
-}
-
-.cb-cursor.-normal:before,
-.cb-cursor.-text:before {
-    background: rgba(0, 0, 0, .9)
-}
-
-.cb-cursor.-inverse {
-    color: #fff
-}
-
-.cb-cursor.-visible:before {
-    transform: scale(.2)
-}
-
-.cb-cursor.-visible.-active:before {
-    transform: scale(.23);
-    transition-duration: .2s
-}
-
-.cb-cursor.-pointer:before {
-    transform: scale(.15)
-}
-
-.cb-cursor.-text:before {
-    opacity: .85;
-    transform: scale(1.7)
-}
-
-.cb-cursor.-text .cb-cursor-text {
-    opacity: 1;
-    transform: scale(1)
-}
-
-.cb-cursor.-text.-active:before {
-    transform: scale(1.6);
-    transition-duration: .2s
-}
-
-.cb-cursor.-opaque:before {
-    transform: scale(1.32)
-}
-
-.cb-cursor.-opaque.-active:before {
-    transform: scale(1.2)
-}
-
-.cb-cursor.-lg:before {
-    transform: scale(2)
-}
-
-.cb-cursor.-hidden:before {
-    transform: scale(0)
-}
-
 .-cursor-default {
     color: #3a10e5
 }
@@ -28432,7 +28286,7 @@ hr {
 }
 
 .section_space_lg {
-    padding-top: 40px;
+    padding-top: 30px;
     /*120px*/
     padding-bottom: 50px;
     /*120px*/
@@ -31277,20 +31131,6 @@ blockquote p {
     font-size: 16px
 }
 
-.main_menu_list>li>a {
-    z-index: 1;
-    font-size: 17px;
-    font-weight: 500;
-    line-height: 23px;
-     color: #fe7b14;
-    position: relative;
-    align-items: center;
-    display: inline-flex;
-    padding: 9px 15px 8px;
-    font-family: Roboto, sans-serif;
-    border-radius: 8px
-}
-
 /* Top Menu  */
 
 .main_menu_list>li.active>a,
@@ -32368,8 +32208,8 @@ blockquote p {
         margin-bottom: 20px
     }
     .section_space_lg {
-        padding-top: 90px;
-        padding-bottom: 90px
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
     .courses_info_section .image_widget,
     .expect_from_course .image_widget {
@@ -32840,8 +32680,8 @@ blockquote p {
         min-height: auto
     }
     .section_space_lg {
-        padding-top: 60px;
-        padding-bottom: 60px
+        padding-top: 30px;
+        padding-bottom: 30px
     }
 }
 
@@ -34199,7 +34039,7 @@ blockquote p {
     }
 }
     /* Mobile styles */
-}
+
 
 /* Reduced motion for animations */
 

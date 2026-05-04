@@ -53,11 +53,27 @@ function(e){var t,n,i,r,o,s,a,l,c,u,d,p,f,h,m,g,v,y,b,w="sizzle"+1*new Date,_=e.
 /*!**************************!*\
   !*** ./src/js/cursor.js ***!
   \**************************/
-/*! exports provided: default */function(e,t,n){"use strict";n.r(t),n.d(t,"default",(function(){return a}));var i=n(/*! jquery */"./node_modules/jquery/dist/jquery.js"),r=n.n(i),o=n(/*! gsap */"./node_modules/gsap/index.js");function s(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}var a=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.options=r.a.extend(!0,{container:"body",speed:.7,ease:"expo.out",visibleTimeout:300},t),this.body=r()(this.options.container),this.el=r()('<div class="cb-cursor"></div>'),this.text=r()('<div class="cb-cursor-text"></div>'),this.init()}var t,n,i;return t=e,(n=[{key:"init",value:function(){this.el.append(this.text),this.body.append(this.el),this.bind(),this.move(-window.innerWidth,-window.innerHeight,0)}},{key:"bind",value:function(){var e=this,t=this;this.body.on("mouseleave",(function(){t.hide()})).on("mouseenter",(function(){t.show()})).on("mousemove",(function(t){e.pos={x:e.stick?e.stick.x-.15*(e.stick.x-t.clientX):t.clientX,y:e.stick?e.stick.y-.15*(e.stick.y-t.clientY):t.clientY},e.update()})).on("mousedown",(function(){t.setState("-active")})).on("mouseup",(function(){t.removeState("-active")})).on("mouseenter","a,input,textarea,button",(function(){t.setState("-pointer")})).on("mouseleave","a,input,textarea,button",(function(){t.removeState("-pointer")})).on("mouseenter","iframe",(function(){t.hide()})).on("mouseleave","iframe",(function(){t.show()})).on("mouseenter","[data-cursor]",(function(){t.setState(this.dataset.cursor)})).on("mouseleave","[data-cursor]",(function(){t.removeState(this.dataset.cursor)})).on("mouseenter","[data-cursor-text]",(function(){t.setText(this.dataset.cursorText)})).on("mouseleave","[data-cursor-text]",(function(){t.removeText()})).on("mouseenter","[data-cursor-stick]",(function(){t.setStick(this.dataset.cursorStick)})).on("mouseleave","[data-cursor-stick]",(function(){t.removeStick()}))}},{key:"setState",value:function(e){this.el.addClass(e)}},{key:"removeState",value:function(e){this.el.removeClass(e)}},{key:"toggleState",value:function(e){this.el.toggleClass(e)}},{key:"setText",value:function(e){this.text.html(e),this.el.addClass("-text")}},{key:"removeText",value:function(){this.el.removeClass("-text")}},{key:"setStick",value:function(e){var t=r()(e),n=t.get(0).getBoundingClientRect();this.stick={y:n.top+t.height()/2,x:n.left+t.width()/2},this.move(this.stick.x,this.stick.y,5)}},{key:"removeStick",value:function(){this.stick=!1}},{key:"update",value:function(){this.move(),this.show()}},{key:"move",value:function(e,t,n){o.default.to(this.el,{x:e||this.pos.x,y:t||this.pos.y,force3D:!0,overwrite:!0,ease:this.options.ease,duration:this.visible?n||this.options.speed:0})}},{key:"show",value:function(){var e=this;this.visible||(clearInterval(this.visibleInt),this.el.addClass("-visible"),this.visibleInt=setTimeout((function(){return e.visible=!0})))}},{key:"hide",value:function(){var e=this;clearInterval(this.visibleInt),this.el.removeClass("-visible"),this.visibleInt=setTimeout((function(){return e.visible=!1}),this.options.visibleTimeout)}}])&&s(t.prototype,n),i&&s(t,i),e}()},"./src/js/index.js":
+/*! exports provided: default */function(e,t,n){"use strict";n.r(t),n.d(t,"default",(function(){return CursorNoOp}));
+function CursorNoOp(){}
+CursorNoOp.prototype.init=function(){};
+CursorNoOp.prototype.bind=function(){};
+CursorNoOp.prototype.setState=function(){};
+CursorNoOp.prototype.removeState=function(){};
+CursorNoOp.prototype.toggleState=function(){};
+CursorNoOp.prototype.setText=function(){};
+CursorNoOp.prototype.removeText=function(){};
+CursorNoOp.prototype.setStick=function(){};
+CursorNoOp.prototype.removeStick=function(){};
+CursorNoOp.prototype.update=function(){};
+CursorNoOp.prototype.move=function(){};
+CursorNoOp.prototype.show=function(){};
+CursorNoOp.prototype.hide=function(){};
+}
+},"./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
   \*************************/
-/*! no exports provided */function(e,t,n){"use strict";n.r(t);var i=n(/*! jquery */"./node_modules/jquery/dist/jquery.js"),r=n.n(i),o=n(/*! cursor */"./src/js/cursor.js"),s=n(/*! magnetic */"magnetic.js");new o.default;r()("[data-magnetic]").each((function(){new s.default(this)}))},"magnetic.js":
+/*! no exports provided */function(e,t,n){"use strict";n.r(t);var i=n(/*! jquery */"./node_modules/jquery/dist/jquery.js"),r=n.n(i),s=n(/*! magnetic */"magnetic.js");r()("[data-magnetic]").each((function(){new s.default(this)}))},"magnetic.js":
 /*!****************************!*\
   !*** magnetic.js ***!
   \****************************/
