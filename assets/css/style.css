@@ -54,6 +54,8 @@ body > * {
 
 marquee > h3 {
     color: #fe7b14 !important;
+	font-size: 20px;
+	margin-top: 5px;
 }
 
 .page_wrapper {
@@ -289,11 +291,26 @@ hr {
     position: absolute
 }
 
+.home-desc p { margin: 15px; }
 
-/* .section_space_lg {
-	padding-top: 90px;
-	padding-bottom: 90px
-} */
+/* Section Title Mobile  */
+@media screen and (max-width:991px) {
+    .section-title {
+       font-size: 2.2rem;
+       line-height: 2.2rem;
+       color: #fe7b14;
+    }
+    .section-title::after {
+            content: '';
+            width: 5rem;
+            height: 4px;
+            background-color: #81cdc6 !important;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+    }
+}
+
 
 .section_space_md {
     padding-top: 70px;
@@ -3147,7 +3164,7 @@ blockquote p {
     font-size: 17px;
     font-weight: 500;
     line-height: 23px;
-    color: #1f1d0d;
+     color: #fe7b14;
     position: relative;
     align-items: center;
     display: inline-flex;
@@ -4160,6 +4177,7 @@ blockquote p {
         margin-right: 10px;
         transform: translateY(2px)
     }
+	.courses_info_section { margin-bottom: 20px; }
     .container,
     .hero_banner.style_1 .container,
     .site_header .container {
@@ -31307,7 +31325,7 @@ blockquote p {
     font-size: 17px;
     font-weight: 500;
     line-height: 23px;
-    color: #1f1d0d;
+     color: #fe7b14;
     position: relative;
     align-items: center;
     display: inline-flex;
@@ -32316,6 +32334,9 @@ blockquote p {
 }
 
 @media screen and (max-width:991px) {
+    .page_content { 
+        margin-top: 110px !important; 
+    }
     .header_btns_group>li:first-child {
         display: inline-block
     }
@@ -32328,7 +32349,7 @@ blockquote p {
     .hero_banner.style_1 .container,
     .site_header .container {
         max-width: 730px;
-        margin-top: 20px;
+        /* margin-top: 20px; */
         /*code by nikita*/
     }
     .main_menu {
@@ -34600,6 +34621,7 @@ a,
         transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
     }
     .sidebarmobile {
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
         transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
     }
     .menu-overlay {
