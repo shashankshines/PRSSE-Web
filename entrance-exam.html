@@ -65,13 +65,7 @@
     margin-top: 145px !Important;
 }
 
-    @media screen and (max-width: 767px) {
-        .fade-in-left,
-        .fade-in-right {
-            animation: fadeInUp 0.8s ease forwards !important;
-            transform: translateY(30px) !important;
-        }
-    }
+
     </style>
 
 </head>
@@ -758,113 +752,6 @@
           })();
 
           // Optimized Scroll Reveal Animation
-          (function initScrollReveal() {
-            let observer = null;
-            let observedElements = new Set();
-            let resizeTimeout;
-            
-            function getObserverOptions() {
-              const isMobile = window.innerWidth <= 767;
-              return {
-                threshold: isMobile ? [0, 0.05, 1] : [0, 0.15, 1],
-                rootMargin: isMobile ? '0px' : '-50px'
-              };
-            }
-
-            function createObserver() {
-              if (observer) observer.disconnect();
-              observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                  if (entry.isIntersecting && !entry.target.classList.contains('revealed')) {
-                    entry.target.classList.add('revealed');
-                    observer.unobserve(entry.target);
-                    observedElements.delete(entry.target);
-                  }
-                });
-              }, getObserverOptions());
-            }
-
-            function processElements() {
-              const selector = 'main.page_content section, ' +
-                'main.page_content .section_heading, ' +
-                'main.page_content .content_wrap, ' +
-                'main.page_content .image_widget, ' +
-                'main.page_content .card, ' +
-                'main.page_content .card-body, ' +
-                'main.page_content .card-title, ' +
-                'main.page_content .row > .col, ' +
-                'main.page_content .info_list li, ' +
-                'main.page_content .meta_info_list li, ' +
-                'main.page_content .list-group-item, ' +
-                'main.page_content .accordion-item, ' +
-                'main.page_content .accordion-body, ' +
-                'main.page_content .button_group, ' +
-                'main.page_content .announcement-box, ' +
-                'main.page_content .newslatter_section > .container > .row > .col, ' +
-                'main.page_content .register_section > .container > .row > .col, ' +
-                'main.page_content .footer_widget, ' +
-                '.page_banner, ' +
-                '.hero_banner';
-
-              const sections = document.querySelectorAll(selector);
-              const sectionsArray = Array.from(sections)
-                .filter(el => !el.classList.contains('scroll-reveal'));
-
-              sectionsArray.sort((a, b) => {
-                return a.getBoundingClientRect().top - b.getBoundingClientRect().top;
-              });
-
-              createObserver();
-
-              // First pass: mark all visible elements and assign delays
-              const visibleElements = [];
-              const outOfViewElements = [];
-
-              sectionsArray.forEach((section, index) => {
-                section.classList.add('scroll-reveal');
-                const rect = section.getBoundingClientRect();
-                const isVisibleOnLoad = rect.top < window.innerHeight && rect.bottom > 0;
-
-                if (!section.classList.contains('page_banner')) {
-                  const delayClass = 'delay-' + ((index % 3) + 1);
-                  section.classList.add(delayClass);
-                }
-
-                if (isVisibleOnLoad) {
-                  visibleElements.push(section);
-                } else {
-                  outOfViewElements.push(section);
-                  observer.observe(section);
-                  observedElements.add(section);
-                }
-              });
-
-              // Use requestAnimationFrame to trigger animations for visible elements
-              // This ensures the browser has rendered the elements before adding .revealed
-              requestAnimationFrame(() => {
-                visibleElements.forEach(el => {
-                  el.classList.add('revealed');
-                });
-              });
-            }
-
-            function handleResize() {
-              clearTimeout(resizeTimeout);
-              resizeTimeout = setTimeout(() => {
-                processElements();
-              }, 250);
-            }
-
-            // Initialize on page load
-            if (document.readyState === 'loading') {
-              document.addEventListener('DOMContentLoaded', processElements);
-            } else {
-              processElements();
-            }
-
-            // Handle window resize
-            window.addEventListener('resize', handleResize, { passive: true });
-          })();
         </script>
 </body>
 
