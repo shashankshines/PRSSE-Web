@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
 body {
-    background-color: #f9fbe7;
+    background-color: #f9fbe7 !important;
     position: relative;
     color: #29281e;
     font-style: normal;
@@ -26,6 +26,7 @@ body::before {
     width: 100%;
     height: 100%;
     background-image: url('../images/body-bg.png');
+    
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: auto;
@@ -316,7 +317,8 @@ hr {
     padding-bottom: 70px
 }
 
-.button_group .btn_primary { margin-bottom: 20px; }
+.button_group .btn_primary { margin-bottom: 20px; background-color: #fe7b14; color: #fff; padding: 0 15px; }
+.button_group .btn_primary:hover { background-color: #fe7b14; }
 
 .btn_wrap {
     padding: 44px 0
@@ -1766,6 +1768,12 @@ blockquote p {
     border-radius: 8px
 }
 
+/* Prevent horizontal scrollbar caused by carousel image transitions */
+.hero_banner.style_1 .container,
+.hero_banner.style_1 .content_wrap {
+    overflow: hidden;
+}
+
 .banner_image_1 {
     z-index: 1;
     position: relative;
@@ -3115,7 +3123,7 @@ blockquote p {
     position: fixed;
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
-    box-shadow: 0 2px 6px 0 rgba(16, 18, 19, .08);
+    /* box-shadow: 0 2px 6px 0 rgba(16, 18, 19, .08); */
     transition: background-color .3s ease-in, padding .3s
 }
 
@@ -4182,9 +4190,6 @@ blockquote p {
         z-index: 999;
         position: fixed
     }
-    /* .site_header.sticky {
-        background-color: #fff
-    } */
     .site_header.sticky .main_menu {
         top: 61px
     }
@@ -11364,7 +11369,7 @@ fieldset:disabled .btn {
     padding: .5rem 1rem;
     color: #212529;
     text-decoration: none;
-    background-color: #fff;
+    background-color: transparent;
     border: 1px solid rgba(0, 0, 0, .125)
 }
 
@@ -31119,7 +31124,6 @@ blockquote p {
     /* background-color: rgba(255, 255, 255, .96); */
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
-    box-shadow: 0 2px 6px 0 rgba(16, 18, 19, .08);
     transition: background-color .3s ease-in, padding .3s
 }
 
@@ -32158,9 +32162,7 @@ blockquote p {
         z-index: 999;
         position: fixed
     }
-    /* .site_header.sticky {
-        background-color: #f9fbe7;
-    } */
+    
     .site_header.sticky .main_menu {
         top: 61px
     }
