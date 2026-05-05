@@ -912,7 +912,8 @@ blockquote p {
     display: flex;
     align-items: center
 }
-
+/* Page Banner Animation */
+.content_wrapper { animation: fadeIn 0.95s ease both, bannerDrift 10s ease-in-out infinite; }
 .video_play_btn .icon {
     width: 60px;
     height: 60px;
@@ -2189,8 +2190,8 @@ blockquote p {
     display: none;
     position: fixed;
     background-color: rgba(0, 0, 0, .8);
-    -webkit-backdrop-filter: saturate(180%) blur(8px);
-    backdrop-filter: saturate(180%) blur(8px)
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px)
 }
 
 .offCanvas_overlay.active {
@@ -31118,15 +31119,6 @@ blockquote p {
     transition: padding .3s
 }
 
-.site_header.sticky {
-    padding: 10px 0;
-    position: fixed;
-    /* background-color: rgba(255, 255, 255, .96); */
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
-    transition: background-color .3s ease-in, padding .3s
-}
-
 .main_menu {
     padding: 0
 }
@@ -32162,7 +32154,7 @@ blockquote p {
         z-index: 999;
         position: fixed
     }
-    
+
     .site_header.sticky .main_menu {
         top: 61px
     }

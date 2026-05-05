@@ -54,7 +54,7 @@
             <div class="backtotop">
                 <a href="#" class="scroll"><i class="far fa-arrow-up"></i></a>
             </div>
-            <header class="site_header site_header_1 sticky">
+            <header class="site_header site_header_1 sticky pt-2">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col col-lg-3 col-10">
@@ -134,7 +134,7 @@
             
             <!-- Overlay (for closing sidebar when clicking outside) -->
             <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div><main class="page_content">
-                <section class="hero_banner style_1">
+                <section class="hero_banner style_1 mt-2">
                     <div class="container">
                         <div class="content_wrap" style="padding:20px !important">
                             <div class="row">
@@ -749,6 +749,9 @@
         </div>
         <script src="assets/js/script.js"></script>
         <script>
+          // Scroll to top on page load
+          window.scrollTo(0, 0);
+          
           // Set active navigation item based on current page
           (function setActiveNav() {
             var currentPage = window.location.pathname.split('/').pop() || 'index.html';
