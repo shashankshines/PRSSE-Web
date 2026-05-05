@@ -317,7 +317,8 @@ hr {
     padding-bottom: 70px
 }
 
-.button_group .btn_primary { margin-bottom: 20px; }
+.button_group .btn_primary { margin-bottom: 20px; background-color: #fe7b14; color: #fff; padding: 0 15px; }
+.button_group .btn_primary:hover { background-color: #fe7b14; }
 
 .btn_wrap {
     padding: 44px 0
@@ -3122,7 +3123,7 @@ blockquote p {
     position: fixed;
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
-    box-shadow: 0 2px 6px 0 rgba(16, 18, 19, .08);
+    /* box-shadow: 0 2px 6px 0 rgba(16, 18, 19, .08); */
     transition: background-color .3s ease-in, padding .3s
 }
 
@@ -4189,9 +4190,6 @@ blockquote p {
         z-index: 999;
         position: fixed
     }
-    /* .site_header.sticky {
-        background-color: #fff
-    } */
     .site_header.sticky .main_menu {
         top: 61px
     }
@@ -11371,7 +11369,7 @@ fieldset:disabled .btn {
     padding: .5rem 1rem;
     color: #212529;
     text-decoration: none;
-    background-color: #fff;
+    background-color: transparent;
     border: 1px solid rgba(0, 0, 0, .125)
 }
 
@@ -31126,7 +31124,6 @@ blockquote p {
     /* background-color: rgba(255, 255, 255, .96); */
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
-    box-shadow: 0 2px 6px 0 rgba(16, 18, 19, .08);
     transition: background-color .3s ease-in, padding .3s
 }
 
@@ -32165,9 +32162,7 @@ blockquote p {
         z-index: 999;
         position: fixed
     }
-    /* .site_header.sticky {
-        background-color: #f9fbe7;
-    } */
+    
     .site_header.sticky .main_menu {
         top: 61px
     }
