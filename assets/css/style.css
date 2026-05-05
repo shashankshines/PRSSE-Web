@@ -13,6 +13,7 @@ body {
     margin: 0;
     -moz-osx-font-smoothing: grayscale;
     padding: 0;
+    overflow-x: hidden;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
 }
@@ -53,10 +54,10 @@ body > * {
 }
 
 marquee > h3 {
-    color: #ffd32b !important;
+    color: #000 !important;
 	font-size: 25px;
 	margin-top: 5px;
-    text-shadow: 0 1px 2px #222;
+    /* text-shadow: 0 1px 2px #222; */
 }
 
 .page_wrapper {
@@ -314,6 +315,8 @@ hr {
     padding-top: 70px;
     padding-bottom: 70px
 }
+
+.button_group .btn_primary { margin-bottom: 20px; }
 
 .btn_wrap {
     padding: 44px 0
@@ -27971,7 +27974,8 @@ screen and (max-height:300px) {
     display: block;
     overflow: hidden;
     margin: 0;
-    padding: 0
+    padding: 0;
+    width: 100%;
 }
 
 .slick-list:focus {
@@ -27994,7 +27998,8 @@ screen and (max-height:300px) {
     left: 0;
     display: block;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    width: 100%;
 }
 
 .slick-track:after,
@@ -33656,6 +33661,7 @@ blockquote p {
 .page_content {
     /*margin-top: 120px;*/
     margin-top: 127px;
+    overflow-x: hidden;
 }
 
 /* If the marquee exists, adjust margin only for desktop */
