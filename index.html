@@ -8,6 +8,7 @@
         <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/accordion-fix.css" />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
 
@@ -54,7 +55,7 @@
             <div class="backtotop">
                 <a href="#" class="scroll"><i class="far fa-arrow-up"></i></a>
             </div>
-            <header class="site_header site_header_1 pt-2">
+            <header class="site_header site_header_1">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col col-lg-3 col-10">
@@ -134,7 +135,7 @@
             
             <!-- Overlay (for closing sidebar when clicking outside) -->
             <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div><main class="page_content">
-                <section class="hero_banner style_1 mt-2">
+                <section class="hero_banner style_1">
                     <div class="container">
                         <div class="content_wrap" style="padding:20px !important">
                             <div class="row">
@@ -341,12 +342,11 @@
                         <h3 style="margin-bottom: 10px;">Frequently Asked Questions:</h3>
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item" style="padding:10px;">
-                                <h4 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button pl-2" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        What is Professor Rajendra Singh Science Exploratory?
-                                    </button>
-                                </h4>
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    What is Professor Rajendra Singh Science Exploratory?
+                                    <span class="accordion-icon" aria-hidden="true"></span>
+                                </button>
                                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body ms-2">
@@ -358,10 +358,11 @@
                                 </div>
                             </div>
                             <div class="accordion-item" style="padding:10px;">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">What is the Laboratory Training Program?</button>
-                                </h2>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    What is the Laboratory Training Program?
+                                    <span class="accordion-icon" aria-hidden="true"></span>
+                                </button>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body ms-2">
@@ -383,11 +384,11 @@
                                 </div>
                             </div>
                             <div class="accordion-item" style="padding:10px;">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> How many students will be admitted to the program?
-                                        </button>
-                                </h2>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    How many students will be admitted to the program?
+                                    <span class="accordion-icon" aria-hidden="true"></span>
+                                </button>
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body ms-2">
@@ -398,11 +399,11 @@
                             </div>
             
                             <div class="accordion-item" style="padding:10px;">
-                                <h2 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Who can participate in the Entrance Exam?
-                                        </button>
-                                </h2>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Who can participate in the Entrance Exam?
+                                    <span class="accordion-icon" aria-hidden="true"></span>
+                                </button>
                                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body ms-2">
@@ -413,11 +414,11 @@
                             </div>
             
                             <div class="accordion-item" style="padding:10px;">
-                                <h2 class="accordion-header" id="headingFive">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">What is the last date for registration?
-                                        </button>
-                                </h2>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    What is the last date for registration?
+                                    <span class="accordion-icon" aria-hidden="true"></span>
+                                </button>
                                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body ms-2">
@@ -428,11 +429,11 @@
                             </div>
             
                             <div class="accordion-item" style="padding:10px;">
-                                <h2 class="accordion-header" id="headingSix">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">When will the Entrance Exam take place?
-                                        </button>
-                                </h2>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    When will the Entrance Exam take place?
+                                    <span class="accordion-icon" aria-hidden="true"></span>
+                                </button>
                                 <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body ms-2">
@@ -444,22 +445,24 @@
                             </div>
             
                             <div class="accordion-item" style="padding:10px;">
-                                <h2 class="accordion-header" id="headingSeven">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">What is the fee for the Entrance Exam?</button>
-                                </h2>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    What is the fee for the Entrance Exam?
+                                    <span class="accordion-icon" aria-hidden="true"></span>
+                                </button>
                                 <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body ms-2">
-                                        </p>The Entrance Exam fee is ₹50, which can be paid online via UPI.</p>
+                                        <p>The Entrance Exam fee is ₹50, which can be paid online via UPI.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item" style="padding:10px;">
-                                <h2 class="accordion-header" id="headingEight">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">What subjects will the Entrance Exam cover?</button>
-                                </h2>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    What subjects will the Entrance Exam cover?
+                                    <span class="accordion-icon" aria-hidden="true"></span>
+                                </button>
                                 <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body ms-2">
@@ -470,11 +473,11 @@
                             </div>
             
                             <div class="accordion-item" style="padding:10px;">
-                                <h2 class="accordion-header" id="headingNine">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine"> What is the annual fee for the program, if a student gets selected?
-                                        </button>
-                                </h2>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                    What is the annual fee for the program, if a student gets selected?
+                                    <span class="accordion-icon" aria-hidden="true"></span>
+                                </button>
                                 <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body ms-2">
@@ -484,10 +487,11 @@
                             </div>
             
                             <div class="accordion-item" style="padding:10px;">
-                                <h2 class="accordion-header" id="headingTen">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">How can I get more information?</button>
-                                </h2>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                    How can I get more information?
+                                    <span class="accordion-icon" aria-hidden="true"></span>
+                                </button>
                                 <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body ms-2">
@@ -505,10 +509,11 @@
                             </div>
             
                             <div class="accordion-item" style="padding:10px;">
-                                <h2 class="accordion-header" id="headingEleven">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">Is there a lab visit day for interested students/parents?</button>
-                                </h2>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                    Is there a lab visit day for interested students/parents?
+                                    <span class="accordion-icon" aria-hidden="true"></span>
+                                </button>
                                 <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body ms-2">
@@ -519,12 +524,11 @@
                             </div>
             
                             <div class="accordion-item" style="padding:10px;">
-                                <h2 class="accordion-header" id="headingTwe">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwe" aria-expanded="false" aria-controls="collapseTwe">
-                                        What are the various competitions where students got benefitted through this training programme?
-                                        </button>
-                                </h2>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwe" aria-expanded="false" aria-controls="collapseTwe">
+                                    What are the various competitions where students got benefitted through this training programme?
+                                    <span class="accordion-icon" aria-hidden="true"></span>
+                                </button>
                                 <div id="collapseTwe" class="accordion-collapse collapse" aria-labelledby="headingTwe"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body ms-2">
@@ -536,6 +540,8 @@
                             </div>
             
                         </div>
+
+                        
                     </div>
                 </section>
        <!--         <section class="courses_section section_space_lg ">-->
