@@ -79,14 +79,14 @@
                                 </div>
                             </nav>
                              <!-- Mobile Hamburger Menu (visible only on small screens) -->
-                            <button class="mobilemenu-btn d-lg-none" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+                            <button aria-expanded="false" aria-controls="sidebarMenumobile" aria-label="Toggle menu" type="button" class="mobilemenu-btn d-lg-none" ><span></span><span></span><span></span></button>
                         </div>
                     </div>
                 </div>
             </header>
             <!-- Sidebar Menu (for mobile) -->
             <div id="sidebarMenumobile" class="sidebarmobile">
-                <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">×</a>
+                <button type="button" class="closebtn" aria-label="Close menu">×</button>
                 <a href="index.html">Home</a>
                 <a href="about.html">About Us</a>
                 
@@ -94,7 +94,7 @@
                 <!-- Dropdown (Mobile) -->
                 <!--<a href="programs.html">Programs</a>-->
                 <div class="dropdownmobile">
-                    <a href="#" class="dropdownmobile-toggle" onclick="toggleDropdown(event, this)">Programs <i class="dropdownmobilearrow-icon"></i></a>
+                    <a href="#" class="dropdownmobile-toggle" >Programs <i class="dropdownmobilearrow-icon"></i></a>
                     <ul class="dropdownmobile-menu">
                         <li><a href="programs.html">For Students</a></li>
                         <li><a href="teacher_programs.html">For Teachers</a></li>
@@ -106,7 +106,7 @@
                 <a href="news_and_media.html">News and Media</a>
                 <!-- Dropdown (Mobile) -->
                 <div class="dropdownmobile">
-                    <a href="#" class="dropdownmobile-toggle" onclick="toggleDropdown(event, this)">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
+                    <a href="#" class="dropdownmobile-toggle" >Knowledge <i class="dropdownmobilearrow-icon"></i></a>
                     <ul class="dropdownmobile-menu">
                         <li><a href="great-minds.html">Great Minds</a></li>
                         <li><a href="indian-scientist.html">Indian Scientist</a></li>
@@ -119,7 +119,7 @@
             </div>
             
             <!-- Overlay (for closing sidebar when clicking outside) -->
-            <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div><main class="page_content">
+            <div id="menuOverlay" class="menu-overlay" ></div><main class="page_content">
                 <section class="page_banner">
                     <div class="container">
                         <div class="content_wrapper">
