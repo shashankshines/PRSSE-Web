@@ -56,21 +56,11 @@
          width: 100%;
          height: auto;
          }
-         /* .page_banner .content_wrapper::before {
-         content: "";
-         position: absolute;
-         inset: 0;
-         background: linear-gradient(180deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.20));
-         pointer-events: none;
-         z-index: 1;
-         } */
+         
          .page_banner .content_wrapper::after {
          content: "";
          position: absolute;
          inset: 0;
-         /* background: linear-gradient(90deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.06) 8%, rgba(255,255,255,0.02) 22%, transparent 40%, transparent 60%, rgba(255,255,255,0.02) 78%, rgba(255,255,255,0.06) 92%, rgba(255,255,255,0.08) 100%); */
-         /* background-size: 300% 100%;x₹ */
-         /* opacity: 0.4; */
          pointer-events: none;
          z-index: 1;
          /* animation: curtainSlide 22s ease-in-out infinite; */
@@ -90,7 +80,6 @@
          transform: translate3d(0, 0, 0);
          }
         
-       
          .page_banner .content_wrapper > * {
          position: relative;
          z-index: 2;
@@ -100,7 +89,6 @@
          .page_banner .content_wrapper .breadcrumb_nav a {
          color: #fff;
          }
-        
         
       </style>
    </head>
@@ -149,20 +137,20 @@
                         </div>
                      </nav>
                      <!-- Mobile Hamburger Menu (visible only on small screens) -->
-                     <button class="mobilemenu-btn d-lg-none" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+                     <button aria-expanded="false" aria-controls="sidebarMenumobile" aria-label="Toggle menu" type="button" class="mobilemenu-btn d-lg-none" ><span></span><span></span><span></span></button>
                   </div>
                </div>
             </div>
          </header>
          <!-- Sidebar Menu (for mobile) -->
          <div id="sidebarMenumobile" class="sidebarmobile">
-            <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">×</a>
+            <button type="button" class="closebtn" aria-label="Close menu">×</button>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <!-- Dropdown (Mobile) -->
             <!--<a href="programs.html">Programs</a>-->
             <div class="dropdownmobile">
-               <a href="#" class="dropdownmobile-toggle" onclick="toggleDropdown(event, this)">Programs <i class="dropdownmobilearrow-icon"></i></a>
+               <a href="#" class="dropdownmobile-toggle" >Programs <i class="dropdownmobilearrow-icon"></i></a>
                <ul class="dropdownmobile-menu">
                   <li><a href="programs.html">For Students</a></li>
                   <li><a href="teacher_programs.html">For Teachers</a></li>
@@ -173,7 +161,7 @@
             <a href="news_and_media.html">News and Media</a>
             <!-- Dropdown (Mobile) -->
             <div class="dropdownmobile">
-               <a href="#" class="dropdownmobile-toggle" onclick="toggleDropdown(event, this)">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
+               <a href="#" class="dropdownmobile-toggle" >Knowledge <i class="dropdownmobilearrow-icon"></i></a>
                <ul class="dropdownmobile-menu">
                   <li><a href="great-minds.html">Great Minds</a></li>
                   <li><a href="indian-scientist.html">Indian Scientist</a></li>
@@ -185,7 +173,7 @@
             <a href="notices.html">Notices</a>
          </div>
          <!-- Overlay (for closing sidebar when clicking outside) -->
-         <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div>
+         <div id="menuOverlay" class="menu-overlay" ></div>
          <main class="page_content">
             <section class="page_banner">
                <div class="container">

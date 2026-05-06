@@ -10,7 +10,6 @@
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
         <script src="assets/js/bootstrap.bundle.min.js"></script>
          <style>
-        
         @media screen and (min-width: 992px) {
             .sidebarmobile, .mobilemenu-btn {
                 display: none;
@@ -34,7 +33,7 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-            animation: fadeInUp 0.9s ease both, bannerDrift 20s ease-in-out infinite;
+             animation: fadeIn 0.95s ease both, bannerDrift 10s ease-in-out infinite;
         }
 
         .page_banner .internal-banner {
@@ -240,21 +239,21 @@
                                 </div>
                             </nav>
                              <!-- Mobile Hamburger Menu (visible only on small screens) -->
-                            <button class="mobilemenu-btn d-lg-none" onclick="toggleMenu()" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+                            <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu" aria-controls="sidebarMenumobile" aria-expanded="false"><span></span><span></span><span></span></button>
                         </div>
                     </div>
                 </div>
             </header>
             <!-- Sidebar Menu (for mobile) -->
             <div id="sidebarMenumobile" class="sidebarmobile">
-                <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">×</a>
+                <button type="button" class="closebtn" aria-label="Close menu">×</button>
                 <a href="index.html">Home</a>
                 <a href="about.html">About Us</a>
 
                 <!-- Dropdown (Mobile) -->
                 <!--<a href="programs.html">Programs</a>-->
                 <div class="dropdownmobile">
-                    <a href="#" class="dropdownmobile-toggle" onclick="toggleDropdown(event, this)">Programs <i class="dropdownmobilearrow-icon"></i></a>
+                    <a href="#" class="dropdownmobile-toggle">Programs <i class="dropdownmobilearrow-icon"></i></a>
                     <ul class="dropdownmobile-menu">
                         <li><a href="programs.html">For Students</a></li>
                         <li><a href="teacher_programs.html">For Teachers</a></li>
@@ -266,7 +265,7 @@
                 <a href="news_and_media.html">News and Media</a>
                 <!-- Dropdown (Mobile) -->
                 <div class="dropdownmobile">
-                    <a href="#" class="dropdownmobile-toggle" onclick="toggleDropdown(event, this)">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
+                    <a href="#" class="dropdownmobile-toggle">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
                     <ul class="dropdownmobile-menu">
                         <li><a href="great-minds.html">Great Minds</a></li>
                         <li><a href="indian-scientist.html">Indian Scientist</a></li>
@@ -279,7 +278,7 @@
             </div>
             
             <!-- Overlay (for closing sidebar when clicking outside) -->
-            <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div><main class="page_content">
+            <div id="menuOverlay" class="menu-overlay"></div><main class="page_content">
                 <section class="page_banner">
                     <div class="container">
                         <div class="content_wrapper">
@@ -291,7 +290,7 @@
                             <div class="internal-banner">
                                 <div class="row align-items-center">
                                     <div class="col col-lg-12">
-                                        <h1 class="page_title">About Us</h1>
+                                        <h1 class="page_title text-focus-in">About Us</h1>
                                     </div>
                                 </div>
                             </div>
@@ -304,7 +303,7 @@
                             <div class="col col-lg-6">
                                 <div class="content_wrap">
                                     <div class="section_heading">
-                                        <p class="heading_description mb-0">
+                                        <p class="heading_description text-focus-in mb-0">
 									At the Professor Rajendra Singh Science Exploratory (PRSSE), we believe that science is more than just a subject—it's a way of life. Our mission is to inspire and educate young minds to appreciate science and explore the world in exciting ways. Established in 2015, PRSSE provides hands-on experience across various scientific disciplines, including Chemistry, Physics, Biology, Astronomy, Mathematics, and Design Thinking. Unlike traditional experiments, which often focus on predefined outcomes, our exploratory approach encourages students to think critically, ask questions, and engage in open-ended investigations. This fosters a deeper understanding of scientific concepts and cultivates a spirit of inquiry. Our dedicated team of trainers, advisors and experts is committed to creating an engaging learning environment for all students. Whether you're a budding scientist or simply curious, we have something for everyone! Over the years, students enrolled in various programs offered by the exploratory have achieved significant success in embracing science, paving the way for their future aspirations.
 </p>
 
@@ -321,8 +320,8 @@
                                 <div class="content_wrap ">
                                     <div class="section_heading"><br>
 							 <br> 
-                                        <h2 class="heading_text">Our Objectives</h2>
-										<ul class="info_list unordered_list_block">
+                                        <h2 class="heading_text text-focus-in">Our Objectives</h2>
+										<ul class="info_list unordered_list_block text-focus-in">
                                         <li><i class="fas fa-square"></i> <span>To promote scientific literacy and critical thinking skills in view of National Education Policy 2020.</span></li>
                                         <li><i class="fas fa-square"></i> <span>To provide opportunities for students to develop scientific knowledge and skills.</span></li>
                                         <li><i class="fas fa-square"></i> <span>To encourage students to pursue a career in science and technology.</span></li>
@@ -342,8 +341,8 @@
                             <div class="col col-lg-6">
                                 <div class="content_wrap">
                           <div class="section_heading">
-                              <h2 class="heading_text">Our Inspiration: Professor Rajendra Singh</h2>
-                          <p>
+                              <h2 class="heading_text text-focus-in">Our Inspiration: Professor Rajendra Singh</h2>
+                          <p class="text-focus-in">
 										Rajendra Singhji  was a professor of physics at the University of Allahabad. He was born in 1922 in a small village in Uttar Pradesh. He studied physics at the University of Allahabad and then served the university as Professor from 1945 to 1965. After post graduation with a major in Physics, he joined Allahabad University as a teacher of spectroscopy. He continued to teach at the university for several years and was eventually appointed head of the Physics Department. He was a popular teacher who explained complex concepts with simplicity and clarity. During the MSc final practical exams, Rajendra Singh, also known as Rajju Bhaiyya, received high praise from Nobel laureate C.V. Raman, who remarked that he had never seen such a clear-headed and practical student before. Singh had scored a perfect 100 on the exam, which Raman had personally examined, and had placed second in his MSc class. Despite Raman's invitation to join him in Bengaluru, Singh politely declined and instead chose to pursue research under his guru at Allahabad University while also teaching there.He was also considered an expert in nuclear physics, a rare field in India at the time. He served as RSS Sarsanghchalak (Chief) from 1994 to 2000. He passed away in 2003 in Pune.
 
 										</p>
@@ -355,8 +354,8 @@
                             <div class="col col-lg-6">
                                 <div class="content_wrap">
                                     <div class="section_heading"> 
-                                    <h2 class="heading_text">Our Infrastructure</h2>
-                                        <p class="heading_description mb-0">
+                                    <h2 class="heading_text text-focus-in">Our Infrastructure</h2>
+                                        <p class="heading_description text-focus-in mb-0">
                                            The exploratory has three separate laboratories and a classroom spanning a built-up area of 4500 sq. ft. The laboratories have modern exhibits and equipment to conduct hands-on experiments in Chemistry, Physics, Astronomy, Electronics, Mathematics, and Biology. Additionally, there is an open space for sky-watching and astronomy events. Exploratory also has an ICT-enabled classroom and a wide collection of books on science and mathematics. Equipped with advanced scientific instrumentation including some setups of International Science Olympiads and cutting-edge laboratory equipment,  exploratory provides unmatched opportunities for hands-on scientific exploration beyond the classroom. These equipment help students to work as a researcher, get involved in collaborative projects, and develop creativity and problem-solving skills that go far beyond the lab. With the existing infrastructure, students can discover the depths of science and unlock opportunities for a lifetime of learning.</p>
                                     </div> 
                                 </div>
@@ -369,9 +368,9 @@
                             <div class="col col-lg-12">
                                 <div class="content_wrap ps-lg-3">
                                     <div class="section_heading">
-                                        <h2 class="heading_text">Advisers </h2>
+                                        <h2 class="heading_text text-focus-in">Advisers </h2>
                                               </div>
-                                    <ul class="info_list unordered_list_block"> 
+                                    <ul class="info_list unordered_list_block text-focus-in"> 
                                         <li><i class="fas fa-square"></i> <span>Shri Shrikant Pathak, Former Director, National Council for Science Museum (NCSM), Govt. of India.</span></li>    
                                         <li><i class="fas fa-square"></i> <span>Dr. Vilas Deshpande, Former Professor and Dean (Academics), VNIT, Nagpur.</span></li>    
                                         <li><i class="fas fa-square"></i> <span>Dr Saroj Desai, Former Principal and Professor, Sevadal Mahila Vidyalaya, Nagpur.</span></li>
@@ -384,9 +383,9 @@
                             <div class="col col-lg-12">
                                 <div class="content_wrap ps-lg-3">
                                     <div class="section_heading">
-                                        <h2 class="heading_text">Laboratory Trainers </h2>
+                                        <h2 class="heading_text text-focus-in">Laboratory Trainers </h2>
                                               </div>
-                                    <ul class="info_list unordered_list_block"> 
+                                    <ul class="info_list unordered_list_block text-focus-in"> 
                                         <li><i class="fas fa-square"></i> <span>Mrs. Shikha Vyas (Academic Head)</span></li>        
                                         <li><i class="fas fa-square"></i> <span>Ms. Ekta Bagde</span></li>
                                         <li><i class="fas fa-square"></i> <span>Ms. Rani Dubey</span></li>
@@ -399,9 +398,9 @@
                             <div class="col col-lg-12">
                                 <div class="content_wrap ps-lg-3">
                                     <div class="section_heading">
-                                        <h2 class="heading_text">Office Staffs </h2>
+                                        <h2 class="heading_text text-focus-in">Office Staffs </h2>
                                     </div>
-                                    <ul class="info_list unordered_list_block"> 
+                                    <ul class="info_list unordered_list_block text-focus-in"> 
                                         <li><i class="fas fa-square"></i> <span>Mrs. Chithra Iyer (PRO)</span></li>    
                                         <li><i class="fas fa-square"></i> <span>Mr. Shubham Revatkar (Office Assistant) </span></li>
 										</ul> 
@@ -417,8 +416,8 @@
                             <div class="row justify-content-center">
                                 <div class="col col-lg-6">
                                     <div class="section_heading text-center">
-                                        <h2 class="heading_text">Admission Open</h2>
-                                        <p class="heading_description mb-0">Admission to Prof. Rajendra Singh Exploratory is open to all students who have an interest in science. Admissions are fixed in the month of June-July for one year academic session till April.</p>
+                                        <h2 class="heading_text text-focus-in">Admission Open</h2>
+                                        <p class="heading_description text-focus-in mb-0">Admission to Prof. Rajendra Singh Exploratory is open to all students who have an interest in science. Admissions are fixed in the month of June-July for one year academic session till April.</p>
                                     </div>
                                     <form action="#">
                                         <div class="form_item m-0"> 
@@ -538,27 +537,6 @@
                 </div>
             </footer>
         </div>
-        <script src="assets/js/script.js"></script>
-        <script>
-          // Set active navigation item based on current page
-          (function setActiveNav() {
-            var currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            
-            var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
-            navLinks.forEach(function(link) {
-              var href = link.getAttribute('href');
-              var linkPage = href.split('?')[0]; // Remove query strings
-              
-              // Match current page with nav link
-              if (linkPage === currentPage || 
-                  (currentPage === '' && linkPage === 'index.html')) {
-                var parentLi = link.closest('li');
-                if (parentLi) {
-                  parentLi.classList.add('active');
-                }
-              }
-            });
-          })();
-        </script>
+                <script src="assets/js/script.js"></script>
     </body> 
 </html>
