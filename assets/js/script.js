@@ -148,3 +148,54 @@ function(e){"use strict";"function"==typeof define&&define.amd?define(["jquery"]
       !*** multi ./source/js/floatButton.js ./source/js/script.js ***!
       \**************************************************************/
 /*! no static exports found */function(module,exports,__webpack_require__){eval('__webpack_require__(/*! /Users/mac/Sites/hello-elementor/wp-content/plugins/hello-merkulove/source/js/floatButton.js */"./source/js/floatButton.js");\nmodule.exports = __webpack_require__(/*! /Users/mac/Sites/hello-elementor/wp-content/plugins/hello-merkulove/source/js/script.js */"./source/js/script.js");\n\n\n//# sourceURL=webpack:///multi_./source/js/floatButton.js_./source/js/script.js?')}});
+/* Mobile sidebar helpers */
+window.toggleMenu = function () {
+  var sidebar = document.getElementById('sidebarMenumobile');
+  var overlay = document.getElementById('menuOverlay');
+  var button = document.querySelector('.mobilemenu-btn');
+  if (!sidebar || !overlay || !button) return;
+  var isOpen = sidebar.classList.toggle('active');
+  button.classList.toggle('active', isOpen);
+  overlay.classList.toggle('active', isOpen);
+  document.body.classList.toggle('mobile-menu-open', isOpen);
+};
+
+window.toggleDropdown = function (event, toggle) {
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  var dropdown = toggle.closest('.dropdownmobile');
+  if (!dropdown) return;
+  var isOpen = dropdown.classList.toggle('open');
+  var siblingDropdowns = dropdown.parentNode.querySelectorAll('.dropdownmobile.open');
+  siblingDropdowns.forEach(function (item) {
+    if (item !== dropdown) {
+      item.classList.remove('open');
+    }
+  });
+  toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+};
+
+window.initMobileSidebar = function () {
+  var currentPage = window.location.pathname.replace(/\/$/, '').split('/').pop() || 'index.html';
+  if (!currentPage) currentPage = 'index.html';
+  var links = document.querySelectorAll('.sidebarmobile a[href]');
+  links.forEach(function (link) {
+    var href = link.getAttribute('href');
+    if (!href || href === '#' || href.indexOf('javascript:') === 0) return;
+    var targetPage = href.split('?')[0].split('#')[0].split('/').pop() || 'index.html';
+    if (targetPage === '') targetPage = 'index.html';
+    if (targetPage === currentPage || (currentPage === 'index.html' && targetPage === 'index')) {
+      link.classList.add('active');
+      var parentDropdown = link.closest('.dropdownmobile');
+      if (parentDropdown) {
+        parentDropdown.classList.add('open');
+      }
+    }
+  });
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+  window.initMobileSidebar();
+});

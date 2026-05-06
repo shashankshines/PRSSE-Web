@@ -33849,6 +33849,16 @@ blockquote p {
     transform: scaleY(1);
 }
 
+.sidebarmobile a.active {
+    color: #ffffff;
+    background: rgba(74, 144, 226, 0.18);
+    padding-left: 28px;
+}
+
+.sidebarmobile a.active::before {
+    transform: scaleY(1);
+}
+
 /* Dropdown Styling */
 
 .dropdownmobile {
@@ -33931,7 +33941,7 @@ blockquote p {
     height: 100%;
     background: rgba(0, 0, 0, 0);
     z-index: 999;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease-in;
 }
 
 .menu-overlay.active {
