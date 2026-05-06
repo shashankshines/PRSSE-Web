@@ -317,7 +317,10 @@ hr {
     padding-bottom: 70px
 }
 
-.button_group .btn_primary { margin-bottom: 20px; background-color: #fe7b14; color: #fff; padding: 0 15px; }
+.button_group .btn_primary { width: 100%; margin-bottom: 20px; background-color: #fe7b14; color: #fff; padding: 0 15px; }
+@media screen and (max-width:767px) {
+    .button_group .btn_primary { width: 100%;margin-top: 10px; margin-bottom: 0; }
+}   
 .button_group .btn_primary:hover { background-color: #fe7b14; }
 
 .btn_wrap {
@@ -1407,6 +1410,37 @@ blockquote p {
 .accordion .accordion-button:not(.collapsed)::after {
     content: "";
     transform: rotate(0)
+}
+
+/* Hide default pseudo-element and add explicit icon styling */
+.accordion .accordion-button::after {
+    display: none !important;
+}
+
+.accordion .accordion-icon {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1f1d0d;
+    color: #f7ff62;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    flex-shrink: 0;
+    transition: transform .1s ease-in-out;
+    pointer-events: none;
+}
+
+.accordion .accordion-button.collapsed .accordion-icon::before {
+    content: "+";
+}
+
+.accordion .accordion-button:not(.collapsed) .accordion-icon::before {
+    content: "–";
 }
 
 .accordion .accordion-body {
@@ -3143,13 +3177,9 @@ blockquote p {
     font-weight: 700;
     font-size: 24px;
     color: #1f1d0d;
-    line-height: 42px
+    line-height: 42px;
+    margin-top: 5px;
 }
-
-/* .site_logo img {
-    width:115px;
-    margin-right: 10px
-} */
 
 .main_menu {
     padding: 0
@@ -33918,7 +33948,7 @@ blockquote p {
 .dropdownmobilearrow-icon {
     display: inline-block;
     margin-left: 5px;
-    margin-bottom: 3px;
+    margin-bottom: -1px;
     border: solid white;
     border-width: 0 2px 2px 0;
     padding: 4px;
