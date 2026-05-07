@@ -1,6 +1,26 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+::selection {
+  color: white;
+  background-color: #ff4500; /* Custom highlight color */
+}
+.glass-card{
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+}
+.reveal{
+  opacity:0;
+  transform: translateY(40px);
+  transition: all .8s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform: translateY(0);
+}
 body {
     background-color: #f9fbe7 !important;
     position: relative;
@@ -38,11 +58,6 @@ body::before {
 body > * {
     position: relative;
     z-index: 1;
-}
-/******** Page Load Animation */
-.text-focus-in {
-	opacity: 0;
-	filter: blur(15px);
 }
 
 .text-focus-in.animated {
@@ -628,7 +643,7 @@ ol[type="1"]>li:not(:last-child) {
     float: left;
     font-size: 12px;
     margin: 5px 10px 0 0;
-    color: #f7ff62;
+    color: #ffd32b;
     text-shadow: 2px 2px 0 #1f1d0d
 }
 
@@ -1426,7 +1441,7 @@ blockquote p {
        margin-top: 30px !important;
     }
 }
-.courses_info_section h3 { font-size: 25px; margin: 0; }
+.courses_info_section h3 { font-size: 2.5rem; margin: 0 0 20px 0; }
 .accordion .accordion-item {
     border: none;
     padding: 10px 0;
@@ -3249,12 +3264,13 @@ blockquote p {
     font-size: 24px;
     color: #1f1d0d;
     line-height: 42px;
-    margin-top: 5px;
+    margin-top: 7px;
 }
 
 .main_menu {
     float: right;
-    padding: 0
+    padding: 0;
+    margin-top: 10px;
 }
 
 .main_menu_list>li {
@@ -17734,7 +17750,8 @@ hr {
 }
 
 .row {
-    margin: -15px
+    margin: -15px;
+    z-index: 0;
 }
 
 .col {
@@ -18127,20 +18144,6 @@ ol[type="1"]>li:not(:last-child) {
     opacity: .7
 }
 
-.info_list i {
-    float: left;
-    font-size: 12px;
-    margin: 5px 10px 0 0;
-    color: #f7ff62;
-    text-shadow: 2px 2px 0 #1f1d0d
-}
-
-.info_list i[class*=check] {
-    font-size: 14px;
-    text-shadow: none;
-    color: #ffd32b
-}
-
 .info_list span {
     display: table
 }
@@ -18255,7 +18258,7 @@ ol[type="1"]>li:not(:last-child) {
     margin-bottom: 20px
 }
 
-.section_heading .heading_text {
+.heading_text {
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 50px;
@@ -18265,7 +18268,7 @@ ol[type="1"]>li:not(:last-child) {
 
 .heading_text::after {
     content: '';
-    width: 5rem;
+    width: 6rem;
     height: 4px;
     background-color: #81cdc6;
     position: absolute;
