@@ -90,7 +90,7 @@ body > * {
 .page_banner .content_wrapper {
     align-items: center;
     /* background-color: #f6f6f6; */
-    background-color: #81cdc6;
+    background-color: #9ec79c;
     border-radius: 15px;
     display: flex;
     min-height: 300px;
@@ -347,11 +347,12 @@ hr {
        line-height: 2.2rem;
        color: #fe7b14;
     }
+    .home-desc p { text-align: justify; margin-top: 0; }
     .section-title::after {
             content: '';
             width: 5rem;
             height: 4px;
-            background-color: #81cdc6 !important;
+            /* background-color: #81cdc6 !important;    */
             position: absolute;
             bottom: -10px;
             left: 0;
@@ -363,7 +364,7 @@ hr {
     padding-bottom: 70px
 }
 
-.button_group .btn_primary { width: 100%; margin-bottom: 20px; background-color: #fe7b14; color: #fff; padding: 0 15px; }
+.button_group .btn_primary { width: 100%; margin-bottom: 15px; background-color: #fe7b14; color: #fff; padding: 0 15px; }
 @media screen and (max-width:767px) {
     .button_group .btn_primary { width: 100%;margin-top: 10px; margin-bottom: 0; }
 }   
@@ -418,7 +419,7 @@ hr {
     z-index: 1;
     color: #fff;
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px 0 rgba(16, 18, 19, .4)
+    /* box-shadow: 0 8px 24px 0 rgba(16, 18, 19, .4) */
 }
 
 .btn:hover span small {
@@ -444,7 +445,7 @@ hr {
     padding: 9px 0
 }
 
-.btn_primary {
+/* .btn_primary {
     color: #fff;
     border-color: #f28c44;
     background-color: #f28c44;
@@ -453,7 +454,7 @@ hr {
 .btn_primary:hover {
     color: #1f1d0d;
     box-shadow: 0 8px 24px 0 rgba(247, 255, 98, .4)
-}
+} */
 
 .btn_primary:hover span small {
     color: #1f1d0d
@@ -1416,9 +1417,16 @@ blockquote p {
     line-height: 22px
 }
 
+/********* Accordion *********/
+@media screen and (max-width:767px) {
+    .section_space_lg {
+       margin-top: 30px !important;
+    }
+}
+.courses_info_section h3 { font-size: 25px; margin: 0; }
 .accordion .accordion-item {
     border: none;
-    padding: 30px 0;
+    padding: 10px 0;
     border-radius: 0;
     position: relative;
     background-color: transparent;
@@ -1427,13 +1435,19 @@ blockquote p {
 
 .accordion .accordion-button {
     padding: 0;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     box-shadow: none;
     line-height: 32px;
     color: #1f1d0d;
-    font-family: Barlow, sans-serif;
+    /* font-family: Barlow, sans-serif; */
     background-color: transparent
+}
+@media screen and (max-width:767px) {
+    .accordion .accordion-button {
+        font-size: 20px;
+        line-height: 26px;
+    }
 }
 
 .accordion .accordion-button:after {
@@ -1471,16 +1485,21 @@ blockquote p {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #1f1d0d;
+    background-color: #fe7b14;
     color: #f7ff62;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: 400;
     line-height: 1;
     flex-shrink: 0;
     transition: transform .1s ease-in-out;
     pointer-events: none;
 }
-
+@media screen and (max-width:767px) {
+    .accordion .accordion-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
 .accordion .accordion-button.collapsed .accordion-icon::before {
     content: "+";
 }
@@ -1491,6 +1510,14 @@ blockquote p {
 
 .accordion .accordion-body {
     padding: 0
+}
+@media screen and (max-width:767px) {
+    .accordion .accordion-body {
+        padding:10px 0 0;
+    }
+    .accordion p {
+    margin-bottom: 0;
+}
 }
 
 .accordion p {
@@ -1845,7 +1872,7 @@ blockquote p {
 
 .hero_banner.style_1 .content_wrap {
     padding: 100px;
-    background-color: #1f1d0d;
+    background-color: #9ec79c;
     border-radius: 8px
 }
 
@@ -17890,13 +17917,6 @@ hr {
     box-shadow: none
 }
 
-.btn:hover {
-    z-index: 1;
-    color: #fff;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px 0 rgba(16, 18, 19, .4)
-}
-
 .btn:hover span small {
     color: #fff
 }
@@ -17920,18 +17940,16 @@ hr {
     padding: 9px 0
 }
 
-.btn_primary {
-    /* color: #1f1d0d; */
+/* .btn_primary {
     color: #fff;
     border-color: #eb914a;
     background-color: #eb914a;
-}
+} */
 
-.btn_primary:hover {
-    /* color: #1f1d0d; */
+/* .btn_primary:hover {
     color: #fff;
     box-shadow: 0 0px 15px 0 rgb(255 199 74);
-}
+} */
 
 /* .btn_primary:hover span small {
     color: #1f1d0d
@@ -18898,136 +18916,6 @@ blockquote p {
     line-height: 22px
 }
 
-.accordion .accordion-item {
-    border: none;
-    padding: 30px 0;
-    border-radius: 0;
-    position: relative;
-    background-color: transparent;
-    border-bottom: 1px solid #d2d2d2
-}
-
-.accordion .accordion-button {
-    padding: 0;
-    font-size: 25px;
-    font-weight: 700;
-    box-shadow: none;
-    line-height: 32px;
-    color: #1f1d0d;
-    font-family: Barlow, sans-serif;
-    background-color: transparent
-}
-
-.accordion .accordion-button:after {
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    content: "\f067";
-    font-weight: 300;
-    background: 0 0;
-    margin-left: auto;
-    text-align: center;
-    line-height: 52px;
-    border-radius: 100%;
-    color: #f7ff62;
-    background-color: #1f1d0d;
-    transition: all .1s ease-in-out;
-    font-family: "Font Awesome 5 Pro"
-}
-
-.accordion .accordion-button:not(.collapsed)::after {
-    content: "\f068";
-    transform: rotate(0)
-}
-
-.accordion .accordion-body {
-    padding: 0;
-}
-
-.accordion p {
-    font-size: 16px;
-    line-height: 24px
-}
-
-.accordion .completed_progress {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    margin-bottom: 20px
-}
-
-.accordion .checkbox_item {
-    margin: 0
-}
-
-.accordion .checkbox_item:not(:last-child) {
-    margin-bottom: 20px
-}
-
-.accordion .checkbox_item label {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 24px;
-    color: #1f1d0d
-}
-
-.accordion .accordion-item:has(.accordion_item_checked) {
-    padding-left: 30px
-}
-
-.accordion .accordion-item:has(.accordion_item_checked) .accordion_item_checked {
-    left: 0;
-    top: 47px;
-    margin: 0;
-    padding: 0;
-    z-index: 2;
-    position: absolute
-}
-
-.accordion .accordion-item:has(.accordion_item_checked) .accordion_item_checked input {
-    display: block;
-    position: static
-}
-
-.accordion.style_2 {
-    padding: 0 30px;
-    border-radius: 8px;
-    border: 1px solid #d2d2d2
-}
-
-.accordion.style_2 .accordion-item {
-    border: none;
-    padding: 30px 0
-}
-
-.accordion.style_2 .accordion-item:not(:last-child) {
-    border-bottom: 1px solid #d2d2d2
-}
-
-.accordion.style_2 .accordion-button {
-    font-size: 22px;
-    line-height: 25px
-}
-
-.accordion.style_2 .accordion-button:after {
-    width: auto;
-    height: auto;
-    font-size: 24px;
-    line-height: 1;
-    border-radius: 0;
-    background: 0 0;
-    color: #1f1d0d;
-    margin: -16px 0 0 auto
-}
-
-.accordion.style_2 .accordion-item:has(.accordion_item_checked) {
-    padding-left: 25px
-}
-
-.accordion.style_2 .accordion-item:has(.accordion_item_checked) .accordion_item_checked {
-    top: 35px
-}
-
 .pagination_wrap {
     padding-top: 50px
 }
@@ -19298,7 +19186,7 @@ blockquote p {
 .hero_banner.style_1 .content_wrap {
     padding: 100px;
     /* background-color: #d9d9d9; changes by nikita */
-    background-color: #81cdc6;
+    background-color: #a6caa4;
     border-radius: 8px
 }
 
@@ -19416,21 +19304,6 @@ blockquote p {
     background-repeat: no-repeat;
     background-position: center center;
     background-image: url(../images/banner/icons_group.svg)
-}
-
-.banner_image_2 .image_wrap_2 {
-    top: 75px;
-    right: -34%
-}
-
-.banner_image_2 .image_wrap_3 {
-    top: 26%;
-    right: -42%
-}
-
-.banner_image_2 .image_wrap_4 {
-    top: 38%;
-    left: -32%
 }
 
 .service_item {
@@ -20203,13 +20076,15 @@ blockquote p {
 }
 
 .testimonial_item_2 .testimonial_image {
+    width: 100%;
     overflow: hidden;
     display: inline-flex;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 8px;
-    background-color: #ffd32b;
-    background-position: center center
+    border-radius: 10px;
+    /* background-color: #ffd32b; */
+    background-position: center center;
+    filter: saturate(1.3)contrast(1.15);
 }
 
 .testimonial_item_2 .testimonial_image.image_widget {
@@ -23159,7 +23034,7 @@ blockquote p {
 .announcement-content ul li a {
     text-decoration: none;
     color: #0044cc;
-    font-size: 14px;
+    font-size: 16px;
     display: block;
 }
 
