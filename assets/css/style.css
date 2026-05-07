@@ -3253,11 +3253,12 @@ blockquote p {
 }
 
 .main_menu {
+    float: right;
     padding: 0
 }
 
 .main_menu_list>li {
-    margin: 0 1px;
+    margin: 0 3px;
     line-height: 1;
     font-size: 16px
 }
@@ -20554,11 +20555,6 @@ blockquote p {
     text-decoration: none;
 }
 
-.main_menu_list>li {
-    margin: 0 1px;
-    line-height: 1;
-    font-size: 16px
-}
 
 /* Top Menu  */
 
