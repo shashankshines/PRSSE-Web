@@ -1482,11 +1482,11 @@ blockquote p {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: #fe7b14;
-    color: #f7ff62;
+    color: #ffd32b;
     font-size: 25px;
     font-weight: 400;
     line-height: 1;
@@ -1494,12 +1494,7 @@ blockquote p {
     transition: transform .1s ease-in-out;
     pointer-events: none;
 }
-@media screen and (max-width:767px) {
-    .accordion .accordion-icon {
-        width: 40px;
-        height: 40px;
-    }
-}
+
 .accordion .accordion-button.collapsed .accordion-icon::before {
     content: "+";
 }
@@ -3229,8 +3224,8 @@ blockquote p {
 .site_header.sticky {
     padding: 1px 0 10px 0;
     position: fixed;
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(500%) blur(20px);
+    backdrop-filter: saturate(200%) blur(16px);
     box-shadow: 0 2px 6px 0 rgba(16, 18, 19, .08);
     transition: background-color .3s ease-in, padding .3s
 }
@@ -3408,7 +3403,14 @@ blockquote p {
 
 .site_footer {
     color: #c8c8c8;
-    background-color: #1f1d0d
+    background-color: #1f1d0d;
+    margin-top: 50px;
+}
+
+@media (max-width: 991px) {
+    .site_footer {
+        margin-top: 25px;
+    }
 }
 
 .site_footer .site_logo {
@@ -3423,7 +3425,7 @@ blockquote p {
 .site_footer p {
     font-size: 14px;
     line-height: 22px;
-    margin-bottom: 52px
+    /* margin-bottom: 52px */
 }
 
 .site_footer .footer_widget_title {
@@ -4475,9 +4477,6 @@ blockquote p {
     .service_item {
         padding: 25px 20px 30px
     }
-    .site_footer p {
-        margin-bottom: 25px
-    }
     .footer_widget_title {
         line-height: 1;
         margin-bottom: 20px
@@ -4489,7 +4488,7 @@ blockquote p {
         margin-bottom: 10px
     }
     .site_footer .footer_widget_area {
-        padding: 100px 0 80px
+        padding: 20px 0;
     }
     .newslatter_box {
         padding: 90px 40px
@@ -20084,7 +20083,7 @@ blockquote p {
     border-radius: 10px;
     /* background-color: #ffd32b; */
     background-position: center center;
-    filter: saturate(1.3)contrast(1.15);
+    filter: saturate(1.2)contrast(1.15);
 }
 
 .testimonial_item_2 .testimonial_image.image_widget {
@@ -20672,91 +20671,6 @@ blockquote p {
 .site_header_2 .container {
     max-width: 1200px
 }
-
-.site_footer {
-    color: #c8c8c8;
-    background-color: #1f1d0d
-}
-
-.site_footer .site_logo {
-    margin-bottom: 35px
-}
-
-.site_footer .footer_widget_area {
-    /*padding: 130px 0 108px*/
-    padding: 40px 0 0px
-}
-
-.site_footer p {
-    font-size: 14px;
-    line-height: 22px;
-    margin-bottom: 52px
-}
-
-.site_footer .footer_widget_title {
-    color: #fff
-}
-
-.site_footer .page_list a {
-    color: #fff
-}
-
-.site_footer .page_list a:hover {
-    color: #f7ff62
-}
-
-.site_footer .blog_small:hover {
-    background-color: rgba(255, 255, 255, .04)
-}
-
-.site_footer .blog_small .item_image {
-    flex: 0 0 70px;
-    max-width: 70px;
-    margin-right: 10px
-}
-
-.site_footer .blog_small .item_author {
-    display: none
-}
-
-.site_footer .blog_small .item_title {
-    font-size: 16px;
-    color: #fff
-}
-
-.footer_widget_title {
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 28px;
-    margin-bottom: 35px
-}
-
-.copyright_widget .copyright_text {
-    /*padding: 40px 0;*/
-    padding: 25px 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    border-top: 1px solid #444
-}
-
-.copyright_widget .copyright_text a {
-    color: #c8c8c8
-}
-
-.copyright_widget .copyright_text a:hover {
-    color: #fff
-}
-
-/* .page_banner .content_wrapper {
-	display: flex;
-	min-height: 520px;
-	align-items: center;
-	padding: 70px 115px;
-	background-repeat: no-repeat;
-	background-color: #f6f6f6;
-	background-position: right bottom
-} */
 
 .page_banner .info_list,
 .page_banner .meta_info_list {
@@ -21748,9 +21662,7 @@ blockquote p {
     .service_item {
         padding: 25px 20px 30px
     }
-    .site_footer p {
-        margin-bottom: 25px
-    }
+    
     .footer_widget_title {
         line-height: 1;
         margin-bottom: 20px
@@ -21761,10 +21673,7 @@ blockquote p {
     .footer_widget {
         margin-bottom: 10px
     }
-    /* 
-	.site_footer .footer_widget_area {
-		padding: 100px 0 80px
-	} */
+    
     .newslatter_box {
         padding: 90px 40px
     }
@@ -21828,7 +21737,7 @@ blockquote p {
     .faq_section .section_heading.text-center,
     .newslatter_box .section_heading.text-center,
     .policy_section .section_heading.text-center,
-    .process_section .section_heading.text-center {
+    .process_section .section_heading.text-center { 
         text-align: left !important
     }
 }
@@ -23065,7 +22974,6 @@ blockquote p {
 /*code by nikita*/
 
 .page_content {
-    /*margin-top: 120px;*/
     margin-top: 127px;
     overflow-x: hidden;
 }
@@ -23421,12 +23329,6 @@ blockquote p {
         scroll-behavior: smooth;
         scroll-padding-top: 50px;
     }
-}
-
-/* Tablet-specific optimizations (640px - 767px) */
-
-@media screen and (max-width: 767px) and (min-width: 640px) {
-    /* Mobile styles */
 }
 
 /* Small phone optimizations (max-width 639px) */
