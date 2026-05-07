@@ -1,344 +1,432 @@
 <!DOCTYPE html>
-<html lang="en"> 
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title>Professor Rajendra Singh Science Exploratory</title>
-        <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg" />
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        
-        <style>
-        @media screen and (min-width: 992px) {
-            .sidebarmobile, .mobilemenu-btn {
-                display: none;
-            }
-            
-            .site_logo img{
-              width: 330px;
-            }
-        }
-        @media screen and (max-width:425px) {
-            .site_logo img{
-                width: 280px;
-            }
-        }
-         @media screen and (max-width: 991px) {
-            .container, .hero_banner.style_1 .container, .site_header .container {
-                 margin-top: 0 !important; 
-            }
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+      <meta http-equiv="x-ua-compatible" content="ie=edge" />
+      <title>Professor Rajendra Singh Science Exploratory</title>
+      <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg" />
+      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+      <script src="assets/js/bootstrap.bundle.min.js"></script>
+      <style>
+         @media screen and (min-width: 1199px) {
+         .sidebarmobile, .mobilemenu-btn {
+         display: none;
          }
-
-
-    </style>
-    </head>
-    <body>
-        <div class="page_wrapper">
-            <div class="backtotop">
-                <a href="#" class="scroll"><i class="far fa-arrow-up"></i></a>
+         .site_logo img{
+         width: 330px;
+         }
+         }
+         @media screen and (max-width:425px) {
+         .site_logo img{
+         width: 280px;
+         }
+         }
+         @media screen and (max-width: 991px) {
+         .container, .hero_banner.style_1 .container, .site_header .container {
+         margin-top: 0 !important; 
+         }
+         }
+         .page_banner .content_wrapper {
+         align-items: center;
+         background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.20)), url("assets/images/banner/exploratory-perks-banner.png");
+         background-color: transparent;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: 50% 45%;
+         border-radius: 15px;
+         display: flex;
+         min-height: 300px;
+         padding: 50px 30px;
+         position: relative;
+         overflow: hidden;
+         box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+         animation: fadeIn 0.95s ease both, bannerDrift 10s ease-in-out infinite;
+         }
+         @media screen and (max-width: 425px) {
+         .page_banner .content_wrapper {
+         min-height: auto;
+         }
+         }
+         .page_banner .internal-banner {
+         background: transparent !important;
+         background-image: none !important;
+         width: 100%;
+         height: auto;
+         }
+         /* .page_banner .content_wrapper::before {
+         content: "";
+         position: absolute;
+         inset: 0;
+         background: linear-gradient(180deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.20));
+         pointer-events: none;
+         z-index: 1;
+         } */
+         .page_banner .content_wrapper::after {
+         content: "";
+         position: absolute;
+         inset: 0;
+         background: linear-gradient(90deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.06) 8%, rgba(255,255,255,0.02) 22%, transparent 40%, transparent 60%, rgba(255,255,255,0.02) 78%, rgba(255,255,255,0.06) 92%, rgba(255,255,255,0.08) 100%);
+         background-size: 300% 100%;
+         opacity: 0.4;
+         pointer-events: none;
+         z-index: 1;
+         animation: curtainSlide 22s ease-in-out infinite;
+         }
+         .page_banner .banner_deco {
+         position: absolute;
+         inset: 0;
+         pointer-events: none;
+         z-index: 1;
+         overflow: hidden;
+         }
+         .page_banner .banner_bubble {
+         position: absolute;
+         border-radius: 50%;
+         filter: blur(10px);
+         opacity: 0.55;
+         transform: translate3d(0, 0, 0);
+         }
+         .page_banner .bubble-1 {
+         width: 160px;
+         height: 160px;
+         background: rgba(255, 255, 255, 0.12);
+         top: 15%;
+         left: 10%;
+         animation: bubbleDrift1 18s ease-in-out infinite;
+         }
+         .page_banner .bubble-2 {
+         width: 110px;
+         height: 110px;
+         background: rgba(255, 255, 255, 0.10);
+         top: 55%;
+         right: 12%;
+         animation: bubbleDrift2 20s ease-in-out infinite;
+         }
+         .page_banner .bubble-3 {
+         width: 220px;
+         height: 220px;
+         background: rgba(255, 255, 255, 0.08);
+         bottom: 10%;
+         left: 50%;
+         transform: translateX(-50%);
+         animation: bubbleDrift3 24s ease-in-out infinite;
+         }
+         .page_banner .content_wrapper > * {
+         position: relative;
+         z-index: 2;
+         }
+         .page_banner .content_wrapper .page_title,
+         .page_banner .content_wrapper .breadcrumb_nav,
+         .page_banner .content_wrapper .breadcrumb_nav a {
+         color: #fff;
+         }
+         .page_banner .content_wrapper .breadcrumb_nav li {
+         opacity: 0.9;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="page_wrapper">
+         <div class="backtotop">
+            <a href="#" class="scroll"><i class="far fa-arrow-up"></i></a>
+         </div>
+         <header class="site_header site_header_1">
+            <div class="container">
+               <div class="row align-items-center">
+                  <div class="col col-lg-3 col-10">
+                     <div class="site_logo">
+                        <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt=""></a> 
+                        <!--<span>PRS Science Exploratory</span>-->
+                     </div>
+                  </div>
+                  <div class="col col-lg-9 col-2">
+                     <nav class="main_menu navbar navbar-expand-lg">
+                        <div class="main_menu_inner collapse navbar-collapse " id="main_menu_dropdown">
+                           <ul class="main_menu_list unordered_list_center">
+                              <li><a class="nav-link" href="index.html">Home</a></li>
+                              <li><a class="nav-link" href="about.html"><u>About us</u></a></li>
+                              <li class="dropdown">
+                                 <a  class="nav-link" href="#" id="blog_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programs</a>
+                                 <ul class="dropdown-menu" aria-labelledby="blog_submenu">
+                                    <li><a class="nav-link" href="programs.html">For Students</a></li>
+                                    <li><a class="nav-link" href="teacher_programs.html">For Teachers</a></li>
+                                    <li><a class="nav-link" href="citizens.html">For Citizens</a></li>
+                                 </ul>
+                              </li>
+                              <li><a class="nav-link" href="news_and_media.html">News and Media</a></li>
+                              <li class="dropdown">
+                                 <a class="nav-link" href="#" id="blog_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
+                                 <ul class="dropdown-menu" aria-labelledby="blog_submenu">
+                                    <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
+                                    <li><a class="nav-link" href="indian-scientist.html">Indian Scientist</a></li>
+                                    <li><a class="nav-link" href="top-iit.html">Institutes of Indias</a></li>
+                                 </ul>
+                              </li>
+                              <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
+                              <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+                              <li><a class="nav-link" href="notices.html"><u>Notices</u></a></li>
+                           </ul>
+                        </div>
+                     </nav>
+                     <!-- Mobile Hamburger Menu (visible only on small screens) -->
+                     <button aria-expanded="false" aria-controls="sidebarMenumobile" aria-label="Toggle menu" type="button" class="mobilemenu-btn d-lg-none" ><span></span><span></span><span></span></button>
+                  </div>
+               </div>
             </div>
-            <header class="site_header site_header_1">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col col-lg-3 col-10">
-                            <div class="site_logo">
-                                <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt=""></a> 
-                                <!--<span>PRS Science Exploratory</span>-->
-                            </div>
-                        </div>
-                        <div class="col col-lg-9 col-2">
-							<nav class="main_menu navbar navbar-expand-lg">
-                                <div class="main_menu_inner collapse navbar-collapse " id="main_menu_dropdown">
-                                    <ul class="main_menu_list unordered_list_center"> 
-									    <li><a class="nav-link" href="index.html">Home</a></li> 
-                                        <li><a class="nav-link" href="about.html"><u>About us</u></a></li>
-                                        <li class="dropdown">
-                                            <a  class="nav-link" href="#" id="blog_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programs</a>
-											 <ul class="dropdown-menu" aria-labelledby="blog_submenu">
-    											<li><a class="nav-link" href="programs.html">For Students</a></li>
-    											<li><a class="nav-link" href="teacher_programs.html">For Teachers</a></li>
-    											<li><a class="nav-link" href="citizens.html">For Citizens</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="nav-link" href="news_and_media.html">News and Media</a></li>
-                                        <li class="dropdown">
-                                            <a class="nav-link" href="#" id="blog_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
-											 <ul class="dropdown-menu" aria-labelledby="blog_submenu">
-											<li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
-											<li><a class="nav-link" href="indian-scientist.html">Indian Scientist</a></li>
-											<li><a class="nav-link" href="top-iit.html">Institutes of Indias</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li> 
-                                        <li><a class="nav-link" href="contact.html">Contact Us</a></li>
-                                        <li><a class="nav-link" href="notices.html"><u>Notices</u></a></li>
-                                    </ul>
-                                </div>
-                            </nav>
-                             <!-- Mobile Hamburger Menu (visible only on small screens) -->
-                            <button aria-expanded="false" aria-controls="sidebarMenumobile" aria-label="Toggle menu" type="button" class="mobilemenu-btn d-lg-none" ><span></span><span></span><span></span></button>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <!-- Sidebar Menu (for mobile) -->
-            <div id="sidebarMenumobile" class="sidebarmobile">
-                <button type="button" class="closebtn" aria-label="Close menu">×</button>
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-
-                <!-- Dropdown (Mobile) -->
-                <!--<a href="programs.html">Programs</a>-->
-                <div class="dropdownmobile">
-                    <a href="#" class="dropdownmobile-toggle" >Programs <i class="dropdownmobilearrow-icon"></i></a>
-                    <ul class="dropdownmobile-menu">
-                        <li><a href="programs.html">For Students</a></li>
-                        <li><a href="teacher_programs.html">For Teachers</a></li>
-                        <li><a href="citizens.html">For Citizens</a></li>
-                    </ul>
-                </div>
-            
-                <!--<a href="admissions.html">Admissions</a>-->
-                <a href="news_and_media.html">News and Media</a>
-                <!-- Dropdown (Mobile) -->
-                <div class="dropdownmobile">
-                    <a href="#" class="dropdownmobile-toggle" >Knowledge <i class="dropdownmobilearrow-icon"></i></a>
-                    <ul class="dropdownmobile-menu">
-                        <li><a href="great-minds.html">Great Minds</a></li>
-                        <li><a href="indian-scientist.html">Indian Scientist</a></li>
-                        <li><a href="top-iit.html">Institutes of India</a></li>
-                    </ul>
-                </div>
-                <a href="exploratory.html">Exploratory Perks</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="notices.html">Notices</a>
+         </header>
+         <!-- Sidebar Menu (for mobile) -->
+         <div id="sidebarMenumobile" class="sidebarmobile">
+            <button type="button" class="closebtn" aria-label="Close menu">×</button>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <!-- Dropdown (Mobile) -->
+            <!--<a href="programs.html">Programs</a>-->
+            <div class="dropdownmobile">
+               <a href="#" class="dropdownmobile-toggle" >Programs <i class="dropdownmobilearrow-icon"></i></a>
+               <ul class="dropdownmobile-menu">
+                  <li><a href="programs.html">For Students</a></li>
+                  <li><a href="teacher_programs.html">For Teachers</a></li>
+                  <li><a href="citizens.html">For Citizens</a></li>
+               </ul>
             </div>
-            
-            <!-- Overlay (for closing sidebar when clicking outside) -->
-            <div id="menuOverlay" class="menu-overlay" ></div><main class="page_content">
-                <section class="page_banner">
-                    <div class="container">
-                        <div class="content_wrapper">
-                            <div class="row align-items-center">
-                                <div class="col col-lg-12">
-                                    <ul class="breadcrumb_nav unordered_list">
-                                        <li><a href="index.html">Home</a></li> 
-                                        <li>Exploratory Perks</li>
-                                    </ul>
-                                    <h1 class="page_title">Exploratory Perks
-</h1>
-                                    
-                                </div>
-                            </div>
+            <!--<a href="admissions.html">Admissions</a>-->
+            <a href="news_and_media.html">News and Media</a>
+            <!-- Dropdown (Mobile) -->
+            <div class="dropdownmobile">
+               <a href="#" class="dropdownmobile-toggle" >Knowledge <i class="dropdownmobilearrow-icon"></i></a>
+               <ul class="dropdownmobile-menu">
+                  <li><a href="great-minds.html">Great Minds</a></li>
+                  <li><a href="indian-scientist.html">Indian Scientist</a></li>
+                  <li><a href="top-iit.html">Institutes of India</a></li>
+               </ul>
+            </div>
+            <a href="exploratory.html">Exploratory Perks</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="notices.html">Notices</a>
+         </div>
+         <!-- Overlay (for closing sidebar when clicking outside) -->
+         <div id="menuOverlay" class="menu-overlay" ></div>
+         <main class="page_content">
+            <section class="page_banner">
+               <div class="container">
+                  <div class="content_wrapper">
+                     <div class="row align-items-center">
+                        <div class="col col-lg-12">
+                           <!-- <ul class="breadcrumb_nav unordered_list">
+                              <li><a href="index.html">Home</a></li> 
+                              <li>Exploratory Perks</li>
+                              </ul> -->
+                           <h1 class="page_title">Exploratory Perks</h1>
                         </div>
-                    </div>
-                </section>
-
-                <section class="courses_info_section section_space_lg">
-                    <div class="container">
-                        <div class="row align-items-center"> 
-                            <div class="col col-lg-12">
-                                <div class="content_wrap ps-lg-3">
-                                    <div class="section_heading">
-                                        <h2 class="heading_text">Why is Science Exploratory different from a classroom programme?</h2>
-										<p>Joining a science exploratory can be an exciting and rewarding experience! Here are some reasons to join an exploratory
- </p>
-                                              </div>
-                                    <ul class="info_list unordered_list_block">
-                                        <li><i class="fas fa-square"></i> <span><b>HANDS-ON LEARNING:</b> A science exploratory offers hands-on experience. It allows experimentation and exploration using specialized equipment. Something a classroom programme does not offer. Our mission is to inspire and educate young minds to appreciate science, and to help them explore the world around them in new and exciting ways.
-</span></li><br>
-                                        <li><i class="fas fa-square"></i> <span><b>EXPERT INSTRUCTION:</b> A science exploratory is mentored by professionals with expertise in various scientific fields. This means students will have access to expert instruction and guidance.
-</span></li><br> 
-                                        <li><i class="fas fa-square"></i> <span><b>COLLABORATIVE LEARNING:</b> A science exploratory emphasizes on group work and collaboration, creating a team and developing valuable communication skills of students. </span></li> 
-<br>            
-										<li><i class="fas fa-square"></i> <span><b>PREPARATION FOR COMPETITIVE EXAMS AND PROJECTS:</b> For students interested in pursuing a career in science, joining an exploratory is a great way to gain experience by appearing in competitive exams and participating in science and mathematics projects.</span></li> 
-<br>
-                                        <li><i class="fas fa-square"></i> <span><b>FUN AND ENGAGING:</b> A science exploratory is fun and engaging. It provides a stimulating and challenging environment, creating lifelong love of science.</span></li> 
-                                      
-                                    </ul> 
-                                </div>
-                            </div>
-							 
-                            <div class="col col-lg-12">
-                                <div class="content_wrap ps-lg-3">
-                                    <div class="section_heading">
-                                        <h2 class="heading_text">Special Perks at the New Location of the Exploratory: </h2> 
-                                              </div>
-                                    <ul class="info_list unordered_list_block">
-                                        <li><i class="fas fa-square"></i> <span>Budding students in the city can have the opportunity to access state-of-the-art scientific equipment, including some International Olympiad setups.</span></li> 
-										<li><i class="fas fa-square"></i> <span>New venue is well-connected to metro and bus services in West Nagpur (Near Shankar Nagar Metro Station).</span></li> 
-										<li><i class="fas fa-square"></i> <span>Exploratory can serve as a meeting point for merit students from various schools in the city.</span></li> 
-										<li><i class="fas fa-square"></i> <span>Students can receive mentorship and guidance from experienced professionals, which can help them achieve their academic and career goals.</span></li> 
-										<li><i class="fas fa-square"></i> <span>Students can get the adequate guidance for competitive exams in science and mathematics, including Junior Science and Mathematics Olympiad Programs, Dr Homi Bhabha Balvaidnyanik Competition, National Mathematics talent Competition (NMTC), Vidyarthi Vigyaan Manthan (VVM), Inspire Camps, etc. through different programs and workshops by the exploratory.
-</span></li> 
-										<li><i class="fas fa-square"></i> <span>Students can participate in science demonstration shows and STEM workshops delivered by invited science educators, scientists and experts across the country. 
-
-</span></li> 
-										<li><i class="fas fa-square"></i> <span>
-										Students from economically weaker sections of society are eligible for annual fee waiver for the regular Programs of the exploratory.
-</span></li> 	<li><i class="fas fa-square"></i> <span>
-										Students can be eligible for a certificate of appreciation upon completion of the experimental training programme through a skill test.
-</span></li> 
-									 
-                                    </ul> 
-                                </div>
-                            </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="courses_info_section mt-3">
+               <div class="container">
+                  <div class="row align-items-center">
+                     <div class="col col-lg-12">
+                        <div class="content_wrap ps-lg-3">
+                           <div class="section_heading">
+                              <h2 class="heading_text">Why Choose a Science Exploratory Over a Classroom Programme?</h2>
+                              <p>Joining a science exploratory can be an exciting and rewarding experience! Here are some reasons to join an exploratory
+                              </p>
+                           </div>
+                           <ul class="info_list unordered_list_block">
+                              <li><i class="fas fa-square"></i> <span><b>HANDS-ON LEARNING:</b> A science exploratory offers hands-on experience. It allows experimentation and exploration using specialized equipment. Something a classroom programme does not offer. Our mission is to inspire and educate young minds to appreciate science, and to help them explore the world around them in new and exciting ways.
+                                 </span>
+                              </li>
+                              <li><i class="fas fa-square"></i> <span><b>EXPERT INSTRUCTION:</b> A science exploratory is mentored by professionals with expertise in various scientific fields. This means students will have access to expert instruction and guidance.
+                                 </span>
+                              </li>
+                              <li><i class="fas fa-square"></i> <span><b>COLLABORATIVE LEARNING:</b> A science exploratory emphasizes on group work and collaboration, creating a team and developing valuable communication skills of students. </span></li>
+                              <li><i class="fas fa-square"></i> <span><b>PREPARATION FOR COMPETITIVE EXAMS AND PROJECTS:</b> For students interested in pursuing a career in science, joining an exploratory is a great way to gain experience by appearing in competitive exams and participating in science and mathematics projects.</span></li>
+                              <li><i class="fas fa-square"></i> <span><b>FUN AND ENGAGING:</b> A science exploratory is fun and engaging. It provides a stimulating and challenging environment, creating lifelong love of science.</span></li>
+                           </ul>
                         </div>
-                    </div>
-                </section> 
-
-                <section class="newslatter_section">
-                    <div class="container">
-                        <div class="newslatter_box" style="background-image: url(assets/images/shape/shape_img_6.svg);">
-                            <div class="row justify-content-center">
-                                <div class="col col-lg-6">
-                                    <div class="section_heading text-center">
-                                        <h2 class="heading_text">Admission Open</h2>
-                                        <p class="heading_description mb-0">Admission to Prof. Rajendra Singh Exploratory is open to all students who have an interest in science. Admissions are fixed in the month of June-July for one year academic session till April.</p>
-                                    </div>
-                                    <form action="#">
-                                        <div class="form_item m-0"> 
-                                            <button type="submit" class="btn btn_dark">
-                                                <span><small>Apply Now</small> <small>Apply Now</small></span>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                     </div>
+                     <div class="col col-lg-12">
+                        <div class="content_wrap ps-lg-3">
+                           <div class="section_heading">
+                              <h2 class="heading_text">Special Perks at the New Location of the Exploratory: </h2>
+                           </div>
+                           <ul class="info_list unordered_list_block">
+                              <li><i class="fas fa-square"></i> <span>Budding students in the city can have the opportunity to access state-of-the-art scientific equipment, including some International Olympiad setups.</span></li>
+                              <li><i class="fas fa-square"></i> <span>New venue is well-connected to metro and bus services in West Nagpur (Near Shankar Nagar Metro Station).</span></li>
+                              <li><i class="fas fa-square"></i> <span>Exploratory can serve as a meeting point for merit students from various schools in the city.</span></li>
+                              <li><i class="fas fa-square"></i> <span>Students can receive mentorship and guidance from experienced professionals, which can help them achieve their academic and career goals.</span></li>
+                              <li><i class="fas fa-square"></i> <span>Students can get the adequate guidance for competitive exams in science and mathematics, including Junior Science and Mathematics Olympiad Programs, Dr Homi Bhabha Balvaidnyanik Competition, National Mathematics talent Competition (NMTC), Vidyarthi Vigyaan Manthan (VVM), Inspire Camps, etc. through different programs and workshops by the exploratory.
+                                 </span>
+                              </li>
+                              <li><i class="fas fa-square"></i> <span>Students can participate in science demonstration shows and STEM workshops delivered by invited science educators, scientists and experts across the country. 
+                                 </span>
+                              </li>
+                              <li><i class="fas fa-square"></i> <span>
+                                 Students from economically weaker sections of society are eligible for annual fee waiver for the regular Programs of the exploratory.
+                                 </span>
+                              </li>
+                              <li><i class="fas fa-square"></i> <span>
+                                 Students can be eligible for a certificate of appreciation upon completion of the experimental training programme through a skill test.
+                                 </span>
+                              </li>
+                           </ul>
                         </div>
-                    </div>
-                </section>
-            </main>
-            <footer class="site_footer">
-                <div class="footer_widget_area">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col col-lg-4 col-md-6 col-sm-6">
-                                <div class="footer_widget">
-                                            <h3 class="footer_widget_title">Address</h3>
-                                    <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High School, Near Alankar Talkies, North Ambazari road, Nagpur- 440010.</p>
-                                    <!--<ul class="social_links unordered_list">-->
-                                    <!--    <li>-->
-                                    <!--        <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook"><i class="fab fa-facebook-f"></i></a>-->
-                                    <!--    </li>-->
-                                    <!--    <li>-->
-                                    <!--        <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"><i class="fab fa-youtube"></i></a>-->
-                                    <!--    </li>-->
-                                    <!--    <li>-->
-                                    <!--        <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"><i class="fab fa-instagram"></i></a>-->
-                                    <!--    </li>-->
-                                        <!--<li>-->
-                                        <!--    <a href="#!"><i class="fab fa-linkedin-in"></i></a>-->
-                                        <!--</li>-->
-                                    <!--</ul>-->
-                                </div>
-                            </div>
-                            <div class="col col-lg-4">
-                                <!--<div class="row">-->
-                                <!--    <div class="col col-md-4 col-sm-4">-->
-                                <div class="footer_widget" >
-                                    <h3 class="footer_widget_title">Social Links</h3>
-                                    <ul class="social_links unordered_list">
-                                        <li>
-                                            <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook"><img src="assets/images/icon/5365678_fb_facebook_facebook logo_icon.png"/></a><!--<i class="fab fa-facebook-f"></i><i class="fab fa-whatsapp"></i><i class="fab fa-instagram"></i><i class="fab fa-youtube"></i>-->
-                                        </li>
-                                        <li>
-                                            <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"><img src="assets/images/icon/410526_youtube_play_icon.png"/></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"><img src="assets/images/icon/5296765_camera_instagram_instagram logo_icon.png"/></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://wa.me/917249811866"><img src="assets/images/icon/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png"/></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                    <!--</div>-->
-            <!--                        <div class="col col-md-8 col-sm-8">-->
-            <!--                            <div class="footer_widget">-->
-            <!--                                <h3 class="footer_widget_title">Programs</h3>-->
-            <!--                                <ul class="page_list unordered_list_block"> -->
-												<!--<li>-->
-            <!--                                        <a href="experimental.html">-->
-            <!--                                            <span class="item_icon"><i class="fas fa-caret-right"></i></span> <span class="item_text">Experimental Training</span>-->
-            <!--                                        </a>-->
-            <!--                                    </li>-->
-            <!--                                    <li>-->
-            <!--                                        <a href="exposure-camp.html">-->
-            <!--                                            <span class="item_icon"><i class="fas fa-caret-right"></i></span> <span class="item_text">Dr. Homi Bhabha Balvaidnyanik Exposure Camp</span>-->
-            <!--                                        </a>-->
-            <!--                                    </li>-->
-            <!--                                    <li>-->
-            <!--                                        <a href="mathematics.html">-->
-            <!--                                            <span class="item_icon"><i class="fas fa-caret-right"></i></span> <span class="item_text">Mathematics Olympiad Training</span>-->
-            <!--                                        </a>-->
-            <!--                                    </li>-->
-            <!--                                    <li>-->
-            <!--                                        <a href="international.html">-->
-            <!--                                            <span class="item_icon"><i class="fas fa-caret-right"></i></span> <span class="item_text">International Junior Science Olympiad Training</span>-->
-            <!--                                        </a>-->
-            <!--                                    </li> -->
-            <!--                                </ul>-->
-            <!--                            </div>-->
-            <!--                        </div> -->
-                                <!--</div>-->
-                            </div>
-                            <div class="col col-lg-4 col-md-6 col-sm-6">
-                                <div class="footer_widget">
-                                    <h3 class="footer_widget_title">Contact Details</h3>
-                                    <ul class="blog_small_group unordered_list_block"> 
-                                        <li>
-                                            <a class="blog_small" href="#">
-                                                   <span class="item_content">
-                                                       <small class="item_post_date">Call : 7249811866</small>
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="blog_small" href="#">
-                                                   <span class="item_content">
-                                                       <small class="item_post_date">Email: prsscienceexploratory@gmail.com </small>
-                                                </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="newslatter_section">
+               <div class="container">
+                  <div class="newslatter_box" style="background-image: url(assets/images/shape/shape_img_6.svg);">
+                     <div class="row justify-content-center">
+                        <div class="col col-lg-6">
+                           <div class="section_heading text-center">
+                              <h2 class="heading_text">Admission Open</h2>
+                              <p class="heading_description mb-0">Admission to Prof. Rajendra Singh Exploratory is open to all students who have an interest in science. Admissions are fixed in the month of June-July for one year academic session till April.</p>
+                           </div>
+                           <form action="#">
+                              <div class="form_item m-0"> 
+                                 <button type="submit" class="btn btn_dark">
+                                 <span><small>Apply Now</small> <small>Apply Now</small></span>
+                                 </button>
+                              </div>
+                           </form>
                         </div>
-                    </div>
-                </div>
-                <div class="copyright_widget">
-                    <div class="container">
-                        <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All rights reserved | Copyrights 2023</p>
-                    </div>
-                </div>
-            </footer>
-        </div>
-        <script src="assets/js/script.js"></script>
-        <script>
-          // Set active navigation item based on current page
-          (function setActiveNav() {
-            var currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            
-            var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
-            navLinks.forEach(function(link) {
-              var href = link.getAttribute('href');
-              var linkPage = href.split('?')[0]; // Remove query strings
-              
-              // Match current page with nav link
-              if (linkPage === currentPage || 
-                  (currentPage === '' && linkPage === 'index.html')) {
-                var parentLi = link.closest('li');
-                if (parentLi) {
-                  parentLi.classList.add('active');
-                }
-              }
-            });
-          })();
-
-          // Optimized Scroll Reveal Animation
-        </script>
-    </body> 
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </main>
+         <footer class="site_footer">
+            <div class="footer_widget_area">
+               <div class="container">
+                  <div class="row">
+                     <div class="col col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer_widget">
+                           <h3 class="footer_widget_title">Address</h3>
+                           <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High School, Near Alankar Talkies, North Ambazari road, Nagpur- 440010.</p>
+                           <!--<ul class="social_links unordered_list">-->
+                           <!--    <li>-->
+                           <!--        <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook"><i class="fab fa-facebook-f"></i></a>-->
+                           <!--    </li>-->
+                           <!--    <li>-->
+                           <!--        <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"><i class="fab fa-youtube"></i></a>-->
+                           <!--    </li>-->
+                           <!--    <li>-->
+                           <!--        <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"><i class="fab fa-instagram"></i></a>-->
+                           <!--    </li>-->
+                           <!--<li>-->
+                           <!--    <a href="#!"><i class="fab fa-linkedin-in"></i></a>-->
+                           <!--</li>-->
+                           <!--</ul>-->
+                        </div>
+                     </div>
+                     <div class="col col-lg-4">
+                        <!--<div class="row">-->
+                        <!--    <div class="col col-md-4 col-sm-4">-->
+                        <div class="footer_widget" >
+                           <h3 class="footer_widget_title">Social Links</h3>
+                           <ul class="social_links unordered_list">
+                              <li>
+                                 <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook"><img src="assets/images/icon/5365678_fb_facebook_facebook logo_icon.png"/></a><!--<i class="fab fa-facebook-f"></i><i class="fab fa-whatsapp"></i><i class="fab fa-instagram"></i><i class="fab fa-youtube"></i>-->
+                              </li>
+                              <li>
+                                 <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"><img src="assets/images/icon/410526_youtube_play_icon.png"/></a>
+                              </li>
+                              <li>
+                                 <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"><img src="assets/images/icon/5296765_camera_instagram_instagram logo_icon.png"/></a>
+                              </li>
+                              <li>
+                                 <a href="https://wa.me/917249811866"><img src="assets/images/icon/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png"/></a>
+                              </li>
+                           </ul>
+                        </div>
+                        <!--</div>-->
+                        <!--                        <div class="col col-md-8 col-sm-8">-->
+                        <!--                            <div class="footer_widget">-->
+                        <!--                                <h3 class="footer_widget_title">Programs</h3>-->
+                        <!--                                <ul class="page_list unordered_list_block"> -->
+                        <!--<li>-->
+                        <!--                                        <a href="experimental.html">-->
+                        <!--                                            <span class="item_icon"><i class="fas fa-caret-right"></i></span> <span class="item_text">Experimental Training</span>-->
+                        <!--                                        </a>-->
+                        <!--                                    </li>-->
+                        <!--                                    <li>-->
+                        <!--                                        <a href="exposure-camp.html">-->
+                        <!--                                            <span class="item_icon"><i class="fas fa-caret-right"></i></span> <span class="item_text">Dr. Homi Bhabha Balvaidnyanik Exposure Camp</span>-->
+                        <!--                                        </a>-->
+                        <!--                                    </li>-->
+                        <!--                                    <li>-->
+                        <!--                                        <a href="mathematics.html">-->
+                        <!--                                            <span class="item_icon"><i class="fas fa-caret-right"></i></span> <span class="item_text">Mathematics Olympiad Training</span>-->
+                        <!--                                        </a>-->
+                        <!--                                    </li>-->
+                        <!--                                    <li>-->
+                        <!--                                        <a href="international.html">-->
+                        <!--                                            <span class="item_icon"><i class="fas fa-caret-right"></i></span> <span class="item_text">International Junior Science Olympiad Training</span>-->
+                        <!--                                        </a>-->
+                        <!--                                    </li> -->
+                        <!--                                </ul>-->
+                        <!--                            </div>-->
+                        <!--                        </div> -->
+                        <!--</div>-->
+                     </div>
+                     <div class="col col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer_widget">
+                           <h3 class="footer_widget_title">Contact Details</h3>
+                           <ul class="blog_small_group unordered_list_block">
+                              <li>
+                                 <a class="blog_small" href="#">
+                                 <span class="item_content">
+                                 <small class="item_post_date">Call : 7249811866</small>
+                                 </span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a class="blog_small" href="#">
+                                 <span class="item_content">
+                                 <small class="item_post_date">Email: prsscienceexploratory@gmail.com </small>
+                                 </span>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright_widget">
+               <div class="container">
+                  <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All rights reserved | Copyrights 2023</p>
+               </div>
+            </div>
+         </footer>
+      </div>
+      <script src="assets/js/script.js"></script>
+      <script>
+         // Set active navigation item based on current page
+         (function setActiveNav() {
+           var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+           
+           var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
+           navLinks.forEach(function(link) {
+             var href = link.getAttribute('href');
+             var linkPage = href.split('?')[0]; // Remove query strings
+             
+             // Match current page with nav link
+             if (linkPage === currentPage || 
+                 (currentPage === '' && linkPage === 'index.html')) {
+               var parentLi = link.closest('li');
+               if (parentLi) {
+                 parentLi.classList.add('active');
+               }
+             }
+           });
+         })();
+         
+         // Optimized Scroll Reveal Animation
+      </script>
+   </body>
 </html>
