@@ -144,7 +144,8 @@
     }
 
     .carousel-hint {
-        font-size: 0.9rem;
+        font-family: 'comic sans ms', cursive, sans-serif;
+        font-size: 1rem;
         letter-spacing: 0.5px;
         margin: 0;
         text-align: center;
@@ -213,7 +214,8 @@
         bottom: 20px;
         left: 20px;
         right: 20px;
-        background-color: rgba(129, 205, 198, .5);
+        text-align: center;
+        background-color: #fe7b14;
         backdrop-filter: blur(5px);
         color: #fff;
         padding: 12px 20px;
@@ -223,9 +225,16 @@
         font-weight: 500;
         letter-spacing: 0.5px;
         animation: slideUpFade 0.6s ease-out 0.3s both;
-        max-width: 300px;
+        max-width: 250px;
+        background: linear-gradient(-45deg,rgba(255, 107, 107, .5),rgba(108, 92, 231, .5),rgba(0, 206, 201, .5),rgba(255, 234, 167, .5));
+        background-size: 400% 400%;
+        animation: gradientMove 15s ease infinite;
     }
-
+    @keyframes gradientMove {
+        0%{background-position:0% 50%;}
+        50%{background-position:100% 50%;}
+        100%{background-position:0% 50%;}
+    }
     /* Navigation Buttons */
     .carousel-btn {
         position: absolute;
@@ -668,7 +677,7 @@
                             <div class="carousel-item" data-index="1" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
                                 <img src="assets/images/teachers/teachers_program1.JPG" alt="Teacher Training Session - Prof. Rajendra Singh Science Exploratory" loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
                                 <div class="image-caption">
-                                    <span>Training Session</span>
+                                    <span class="title">Training Session</span>
                                 </div>
                             </div>
 
