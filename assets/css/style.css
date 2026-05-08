@@ -27,7 +27,7 @@ body {
     position: relative;
     color: #29281e;
     font-style: normal;
-    font-family: Roboto, Arial;
+    font-family: "Roboto", Arial;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.65;
@@ -76,9 +76,6 @@ body > * {
   color:transparent;
   /* text-shadow: #000 3px 2px; */
 }
-
-
-
 
 .grad-flow {
     background: linear-gradient(-45deg,rgba(255, 107, 107, .9),rgba(82, 73, 156, 0.9),rgba(207, 74, 190, 0.9),rgba(255, 234, 167, .9));
@@ -396,7 +393,7 @@ img.icon-insta {
     position: absolute;
     left: 40px;
  }
- 
+
 .home-desc p { font-family: "Roboto", sans-serif; font-size: 18px; color: #1f1d0d; margin: 15px; }
 
 /* Section Title Mobile  */
@@ -423,7 +420,7 @@ img.icon-insta {
     padding-bottom: 70px
 }
 
-
+.card-body p, .card-body li  { font-family: "Roboto", sans-serif; font-size: 16px; color: #1f1d0d; }
 
 @media screen and (min-width:768px) and (max-width: 999px) { 
     .site_logo { max-width: 60%; }
@@ -683,7 +680,11 @@ ol[type="1"]>li:not(:last-child) {
 .info_list a:hover {
     opacity: .7
 }
-
+.program-overview p {
+    font-size: 18px;
+    color: #1f1d0d;
+    font-family: "Roboto", sans-serif;
+}
 .info_list i {
     float: left;
     font-size: 12px;
