@@ -127,6 +127,7 @@
 
   function initScrollAnimation() {
     const autoAnimateSelectors = [
+      // Heading and text classes (specific)
       '.page_title',
       '.page_description',
       '.heading_text',
@@ -138,11 +139,128 @@
       '.section_heading h1',
       '.section_heading h2',
       '.section_heading p',
-      '.breadcrumb_nav'
+      '.breadcrumb_nav',
+      '.error_title',
+      '.error_description',
+      '.section-title',
+      '.section-subtitle',
+      '.card-title',
+      '.card-text',
+      '.footer_widget_title',
+      '.hero_banner h1',
+      '.hero_banner h2',
+      '.hero_banner h3',
+      '.hero_banner p',
+      '.hero_banner .testimonial_item_2',
+      '.testimonial_item_2 .testimonial_image',
+      '.testimonial_item_2 img',
+      // Generic content containers and text
+      'main p',
+      'main h1',
+      'main h2',
+      'main h3',
+      'main h4',
+      'main h5',
+      'main h6',
+      'main li',
+      'main span',
+      'main strong',
+      'main em',
+      'section p',
+      'section h1',
+      'section h2',
+      'section h3',
+      'section h4',
+      'section h5',
+      'section h6',
+      'section li',
+      '.container p',
+      '.container h1',
+      '.container h2',
+      '.container h3',
+      '.container h4',
+      '.container h5',
+      '.container h6',
+      // Card, blog, and list items
+      '.card p',
+      '.card h1',
+      '.card h2',
+      '.card h3',
+      '.card h4',
+      '.card h5',
+      '.card h6',
+      '.blog_small',
+      '.blog_item',
+      '.item_title',
+      '.item_content',
+      '.course_item',
+      '.service_item',
+      '.program_item',
+      '.faq_item',
+      '.news_item',
+      '.team_member',
+      '.testimonial_item_2',
+      '.testimonial_image',
+      // Buttons and interactive elements
+      '.btn',
+      'button',
+      // Lists
+      'ul li',
+      'ol li',
+      '.list-item',
+      // Specific layout containers
+      '.hero_banner',
+      '.banner_content',
+      '.banner_big_title',
+      '.banner_text',
+      '.cta_block',
+      '.feature_item',
+      '.advantage_item',
+      '.benefit_item',
+      // Footer and sidebar content
+      '.footer_widget',
+      '.footer_widget_title',
+      '.widget_title',
+      '.widget_content',
+      '.sidebar_widget',
+      // Navigation and menu
+      '.nav-link',
+      '.menu-item',
+      // Miscellaneous text containers
+      'article',
+      'aside p',
+      'aside h1',
+      'aside h2',
+      'aside h3',
+      'aside h4',
+      'aside h5',
+      'aside h6',
+      '.text-content',
+      '[role="main"] p',
+      '[role="main"] h1',
+      '[role="main"] h2',
+      '[role="main"] h3'
     ];
+
+    // Helper: check if element is part of a menu/navigation
+    const isMenuElement = function (el) {
+      return el.closest('.main_menu') || 
+             el.closest('.nav-link') || 
+             el.closest('.main_menu_list') ||
+             el.closest('.sidebarmobile') ||
+             el.closest('.dropdown-menu') ||
+             el.closest('.mobilemenu-btn') ||
+             el.closest('header nav') ||
+             el.classList.contains('nav-link') ||
+             el.classList.contains('navbar');
+    };
 
     autoAnimateSelectors.forEach(function (selector) {
       document.querySelectorAll(selector).forEach(function (element) {
+        // Skip menu items
+        if (isMenuElement(element)) {
+          return;
+        }
         if (!element.classList.contains('text-focus-in')) {
           element.classList.add('text-focus-in');
           // mark we auto-added this so we can debug later
@@ -152,7 +270,43 @@
     });
 
     // Only pick elements that haven't been observed/initialized yet
-    const animatedElementsAll = Array.from(document.querySelectorAll('.text-focus-in'));
+    let animatedElementsAll = Array.from(document.querySelectorAll('.text-focus-in'));
+    if (animatedElementsAll.length === 0) {
+      // Fallback: apply to all main headings, paragraphs, and common text containers
+      const fallbackSelectors = [
+        'main',
+        'section',
+        'article'
+      ];
+      const fallbackElements = new Set();
+      fallbackSelectors.forEach(function (selector) {
+        const containers = document.querySelectorAll(selector);
+        containers.forEach(function (container) {
+          // Get all text nodes and elements within these containers
+          container.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, span, strong, em, .card, .item_title, .item_content, button, .btn').forEach(function (el) {
+            fallbackElements.add(el);
+          });
+        });
+      });
+      // Also add from header and footer if they have content (but skip menu items)
+      document.querySelectorAll('header p, header h1, header h2, header h3, header h4, header h5, header h6').forEach(function (el) {
+        if (!el.classList.contains('nav-link') && 
+            !el.closest('.mobilemenu-btn') &&
+            !el.closest('.main_menu') &&
+            !el.closest('.main_menu_list') &&
+            !el.closest('nav')) {
+          fallbackElements.add(el);
+        }
+      });
+      fallbackElements.forEach(function (element) {
+        if (!element.classList.contains('text-focus-in')) {
+          element.classList.add('text-focus-in');
+          try { element.dataset.srAutoAdded = '1'; } catch (e) {}
+        }
+      });
+      animatedElementsAll = Array.from(document.querySelectorAll('.text-focus-in'));
+    }
+
     const animatedElements = animatedElementsAll.filter(function (el) {
       return !el.dataset.srInitialized;
     });
@@ -194,14 +348,91 @@
     console.debug && console.debug('script.js:initScrollAnimation – observing', animatedElements.length, 'elements (total text-focus-in:', animatedElementsAll.length, ')');
   }
 
+  function initScrollReveal() {
+    const selectors = [
+      'main h1',
+      'main h2',
+      'main h3',
+      'main h4',
+      'main h5',
+      'main h6',
+      'main p',
+      '.hero_banner',
+      '.section_heading',
+      '.section-title',
+      '.section-subtitle',
+      '.heading_text',
+      '.heading_description',
+      '.register_heading',
+      '.register_heading_description',
+      '.meta_info_list',
+      '.info_list',
+      '.breadcrumb_nav',
+      '.card',
+      '.testimonial_item_2',
+      '.testimonial_image',
+      '.item_title',
+      '.footer_widget_title',
+      '.error_title',
+      '.error_description',
+      '.blog_small',
+      '.item_content',
+      '.course_item',
+      '.service_item',
+      '.program_item',
+      '.faq_item',
+      '.news_item'
+    ];
+
+    const elements = [];
+    selectors.forEach(function (selector) {
+      document.querySelectorAll(selector).forEach(function (element) {
+        if (!element.classList.contains('scroll-reveal') && !element.closest('header') && !element.closest('footer')) {
+          elements.push(element);
+          element.classList.add('scroll-reveal');
+          try { element.dataset.srAutoAdded = '1'; } catch (e) {}
+        }
+      });
+    });
+
+    if (elements.length === 0) {
+      return;
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      elements.forEach(function (element) {
+        element.classList.add('scroll-reveal-visible');
+      });
+      return;
+    }
+
+    const revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('scroll-reveal-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -80px 0px'
+    });
+
+    elements.forEach(function (element) {
+      revealObserver.observe(element);
+    });
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initMobileMenu);
     document.addEventListener('DOMContentLoaded', initActiveNav);
     document.addEventListener('DOMContentLoaded', initScrollAnimation);
+    document.addEventListener('DOMContentLoaded', initScrollReveal);
   } else {
     initMobileMenu();
     initActiveNav();
     initScrollAnimation();
+    initScrollReveal();
   }
 
   // Run again on window.load as a fallback for pages that mutate DOM after scripts
@@ -209,6 +440,7 @@
     window.addEventListener('load', function () {
       try {
         initScrollAnimation();
+        initScrollReveal();
       } catch (e) {
         console.error && console.error('script.js:initScrollAnimation (load) error', e);
       }
@@ -231,6 +463,7 @@
         }
         _srObserverTimer = setTimeout(function () {
           try { initScrollAnimation(); } catch (e) { console.error && console.error('script.js:mutation init error', e); }
+            try { initScrollReveal(); } catch (e) { console.error && console.error('script.js:mutation reveal error', e); }
         }, 120);
       }
     });

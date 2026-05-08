@@ -740,35 +740,35 @@
                 </div>
                 <div class="copyright_widget">
                     <div class="container">
-                        <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All rights reserved | Copyrights 2023</p>
+                        <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All rights reserved | Copyrights 2026</p>
                     </div>
                 </div>
             </footer>
         </div>
-        <script src="assets/js/script.js"></script>
-        <script>
-          // Scroll to top on page load
-          window.scrollTo(0, 0);
+                <script>
+                    // Scroll to top on page load
+                    window.scrollTo(0, 0);
           
-          // Set active navigation item based on current page
-          (function setActiveNav() {
-            var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                    // Set active navigation item based on current page
+                    (function setActiveNav() {
+                        var currentPage = window.location.pathname.split('/').pop() || 'index.html';
             
-            var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
-            navLinks.forEach(function(link) {
-              var href = link.getAttribute('href');
-              var linkPage = href.split('?')[0]; // Remove query strings
+                        var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
+                        navLinks.forEach(function(link) {
+                            var href = link.getAttribute('href');
+                            var linkPage = href.split('?')[0]; // Remove query strings
               
-              // Match current page with nav link
-              if (linkPage === currentPage || 
-                  (currentPage === '' && linkPage === 'index.html')) {
-                var parentLi = link.closest('li');
-                if (parentLi) {
-                  parentLi.classList.add('active');
-                }
-              }
-            });
-          })();
-        </script>
+                            // Match current page with nav link
+                            if (linkPage === currentPage || 
+                                    (currentPage === '' && linkPage === 'index.html')) {
+                                var parentLi = link.closest('li');
+                                if (parentLi) {
+                                    parentLi.classList.add('active');
+                                }
+                            }
+                        });
+                    })();
+                </script>
+                <script src="assets/js/script.js"></script>
     </body> 
 </html>

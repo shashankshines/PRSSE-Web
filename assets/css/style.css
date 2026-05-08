@@ -60,6 +60,10 @@ body > * {
     z-index: 1;
 }
 
+.text-focus-in {
+    opacity: 0;
+}
+
 .text-focus-in.animated {
 	-webkit-animation: text-focus-in .5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	        animation: text-focus-in .5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
