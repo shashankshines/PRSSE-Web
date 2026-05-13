@@ -1,784 +1,917 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title>Professor Rajendra Singh Science Exploratory</title>
-        <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg" />
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-
-        <style>
-        @media screen and (min-width: 992px) {
-            .sidebarmobile, .mobilemenu-btn {
-                display: none;
-            }
-            
-            .site_logo img{
-              width: 330px;
-              height: auto;
-            }
-        }
-        @media screen and (max-width:425px) {
-            .site_logo img{
-              width: 280px;
-            }
-        }
-        
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+      <meta http-equiv="x-ua-compatible" content="ie=edge" />
+      <title>Professor Rajendra Singh Science Exploratory</title>
+      <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+      <script src="assets/js/bootstrap.bundle.min.js"></script>
+      <style>
+         @media screen and (min-width: 992px) {
+         .sidebarmobile, .mobilemenu-btn {
+         display: none;
+         }
+         .site_logo img{
+         width: 330px;
+         height: auto;
+         }
+         }
+         @media screen and (max-width:425px) {
+         .site_logo img{
+         width: 280px;
+         }
+         }
          @media screen and (max-width: 991px) {
-            .container, .hero_banner.style_1 .container, .site_header .container {
-            margin-top: 0px !important;
-        }
-}
-    .hero_banner .banner_big_title {
-        font-size: 36px;
-        font-weight: 800; 
-        color: #020043;
-        margin-bottom: 20px;
-    } 
-
-    </style>
-    
-    </head>
-    <body>
-        <div class="page_wrapper">
-            <div class="backtotop">
-                <a href="#" class="scroll"><i class="far fa-arrow-up"></i></a>
+         .container, .hero_banner.style_1 .container, .site_header .container {
+         margin-top: 0px !important;
+         }
+         }
+         
+         
+         /* Indicators */
+         /* .carousel-indicators{
+         top: 20px;
+         gap:5px;
+         }
+         .carousel-indicators [data-bs-target]{
+         width:14px;
+         height:14px;
+         border-radius:50%;
+         border:none;
+         background:#777;
+         opacity:1;
+         transition:.4s;
+         }
+         .carousel-indicators .active{
+         width:45px;
+         border-radius:30px;
+         background:linear-gradient(90deg,#00f7ff,#6f00ff);
+         } */
+         /* Floating Lines */
+         /* .cyber-lines span{
+         position:absolute;
+         display:block;
+         background:linear-gradient(90deg,transparent,#00f7ff,transparent);
+         opacity:.25;
+         animation:moveLine 8s linear infinite;
+         }
+         .cyber-lines span:nth-child(1){
+         top:20%;
+         width:100%;
+         height:1px;
+         }
+         .cyber-lines span:nth-child(2){
+         top:40%;
+         width:100%;
+         height:1px;
+         animation-delay:2s;
+         }
+         .cyber-lines span:nth-child(3){
+         top:60%;
+         width:100%;
+         height:1px;
+         animation-delay:4s;
+         } */
+         /* @keyframes moveLine{
+         0%{
+         transform:translateX(-100%);
+         }
+         100%{
+         transform:translateX(100%);
+         }
+         } */
+        
+      </style>
+   </head>
+   <body>
+      <div class="page_wrapper">
+         <div class="backtotop">
+            <a href="#" class="scroll"><i class="far fa-arrow-up"></i></a>
+         </div>
+         <header class="site_header site_header_1">
+            <div class="container">
+               <div class="row align-items-center">
+                  <div class="col col-lg-3 col-10">
+                     <div class="site_logo">
+                        <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt=""></a> 
+                        <!--<span>PRS Science Exploratory</span>-->
+                     </div>
+                  </div>
+                  <div class="col col-lg-9 col-2">
+                     <nav class="main_menu navbar navbar-expand-lg">
+                        <div class="main_menu_inner collapse navbar-collapse " id="main_menu_dropdown">
+                           <ul class="main_menu_list unordered_list_center">
+                              <li><a class="nav-link" href="index.html">Home</a></li>
+                              <li><a class="nav-link" href="about.html"><u>About us</u></a></li>
+                              <li class="dropdown">
+                                 <a  class="nav-link" href="#" id="blog_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programs</a>
+                                 <ul class="dropdown-menu" aria-labelledby="blog_submenu">
+                                    <li><a class="nav-link" href="programs.html">For Students</a></li>
+                                    <li><a class="nav-link" href="teacher_programs.html">For Teachers</a></li>
+                                    <li><a class="nav-link" href="citizens.html">For Citizens</a></li>
+                                 </ul>
+                              </li>
+                              <li><a class="nav-link" href="news_and_media.html">News and Media</a></li>
+                              <li class="dropdown">
+                                 <a class="nav-link" href="#" id="blog_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
+                                 <ul class="dropdown-menu" aria-labelledby="blog_submenu">
+                                    <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
+                                    <li><a class="nav-link" href="indian-scientist.html">Indian Scientist</a></li>
+                                    <li><a class="nav-link" href="top-iit.html">Top Indian Institues</a></li>
+                                 </ul>
+                              </li>
+                              <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
+                              <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+                              <!-- <li><a class="nav-link" href="notices.html"><u>Notices</u></a></li> -->
+                           </ul>
+                        </div>
+                     </nav>
+                     <!-- Mobile Hamburger Menu (visible only on small screens) -->
+                     <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu" aria-controls="sidebarMenumobile" aria-expanded="false"><span></span><span></span><span></span></button>
+                  </div>
+               </div>
             </div>
-            <header class="site_header site_header_1">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col col-lg-3 col-10">
-                            <div class="site_logo">
-                                <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt=""></a> 
-                                <!--<span>PRS Science Exploratory</span>-->
-                            </div>
-                        </div>
-                        <div class="col col-lg-9 col-2">
-							<nav class="main_menu navbar navbar-expand-lg">
-                                <div class="main_menu_inner collapse navbar-collapse " id="main_menu_dropdown">
-                                    <ul class="main_menu_list unordered_list_center"> 
-									    <li><a class="nav-link" href="index.html">Home</a></li> 
-                                        <li><a class="nav-link" href="about.html"><u>About us</u></a></li>
-                                        
-                                        <li class="dropdown">
-                                            <a  class="nav-link" href="#" id="blog_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programs</a>
-											 <ul class="dropdown-menu" aria-labelledby="blog_submenu">
-    											<li><a class="nav-link" href="programs.html">For Students</a></li>
-    											<li><a class="nav-link" href="teacher_programs.html">For Teachers</a></li>
-    											<li><a class="nav-link" href="citizens.html">For Citizens</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="nav-link" href="news_and_media.html">News and Media</a></li>
-                                        <li class="dropdown">
-                                            <a class="nav-link" href="#" id="blog_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
-											 <ul class="dropdown-menu" aria-labelledby="blog_submenu">
-											<li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
-											<li><a class="nav-link" href="indian-scientist.html">Indian Scientist</a></li>
-											<li><a class="nav-link" href="top-iit.html">Top Indian Institues</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li> 
-                                        <li><a class="nav-link" href="contact.html">Contact Us</a></li>
-                                        <!-- <li><a class="nav-link" href="notices.html"><u>Notices</u></a></li> -->
-                                    </ul>
-                                </div>
-                            </nav>
-                             <!-- Mobile Hamburger Menu (visible only on small screens) -->
-                            <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu" aria-controls="sidebarMenumobile" aria-expanded="false"><span></span><span></span><span></span></button>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <!-- Sidebar Menu (for mobile) -->
-            <div id="sidebarMenumobile" class="sidebarmobile">
-                <button type="button" class="closebtn" aria-label="Close menu">×</button>
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-
-                <!-- Dropdown (Mobile) -->
-                <!--<a href="programs.html">Programs</a>-->
-                <div class="dropdownmobile">
-                    <a href="#" class="dropdownmobile-toggle">Programs <i class="dropdownmobilearrow-icon"></i></a>
-                    <ul class="dropdownmobile-menu">
-                        <li><a href="programs.html">For Students</a></li>
-                        <li><a href="teacher_programs.html">For Teachers</a></li>
-                        <li><a href="citizens.html">For Citizens</a></li>
-                    </ul>
-                </div>
-            
-                <!--<a href="admissions.html">Admissions</a>-->
-                <a href="news_and_media.html">News and Media</a>
-                <!-- Dropdown (Mobile) -->
-                <div class="dropdownmobile">
-                    <a href="#" class="dropdownmobile-toggle">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
-                    <ul class="dropdownmobile-menu">
-                        <li><a href="great-minds.html">Great Minds</a></li>
-                        <li><a href="indian-scientist.html">Indian Scientist</a></li>
-                        <li><a href="top-iit.html">Institutes of India</a></li>
-                    </ul>
-                </div>
-                <a href="exploratory.html">Exploratory Perks</a>
-                <a href="contact.html">Contact Us</a>
-                <!-- <a href="notices.html">Notices</a> -->
+         </header>
+         <!-- Sidebar Menu (for mobile) -->
+         <div id="sidebarMenumobile" class="sidebarmobile">
+            <button type="button" class="closebtn" aria-label="Close menu">X</button>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <!-- Dropdown (Mobile) -->
+            <!--<a href="programs.html">Programs</a>-->
+            <div class="dropdownmobile">
+               <a href="#" class="dropdownmobile-toggle">Programs <i class="dropdownmobilearrow-icon"></i></a>
+               <ul class="dropdownmobile-menu">
+                  <li><a href="programs.html">For Students</a></li>
+                  <li><a href="teacher_programs.html">For Teachers</a></li>
+                  <li><a href="citizens.html">For Citizens</a></li>
+               </ul>
             </div>
-            
-            <!-- Overlay (for closing sidebar when clicking outside) -->
-            <div id="menuOverlay" class="menu-overlay"></div>
-            <main class="page_content">
-                <section class="hero_banner style_1">
-                    
-                    <div class="container">
-                        
-                        <div class="content_wrap" style="padding:20px !important">
-                            <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
-                                      <h3 class="grad">
-                                        Registrations for the Dr. Homi Bhabha Balvaidnyanik Spardha's Second Phase Exposure Camp are open.
-                                      </h3>
-                            </marquee>
-                            <div class="row">
-                                <div class="col col-lg-9 p-0">
-                                   <!-- <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
-                                      <h3>
-                                        Registrations for the Dr. Homi Bhabha Balvaidnyanik Spardha's Second Phase Exposure Camp are open.
-                                      </h3>
-                                    </marquee> -->
-
-                                    <!-- Image Slider First -->
-                                    <div class="testimonial_section pb-0">
-                                        <div class="container">
-                                            <div class="testimonial_carousel">
-                                                <div class="common_carousel_1col" data-slick='{"dots":false}'>
-                                                    <div class="carousel_item">
-                                                        <div class="testimonial_item_2">
-                                                            <div class="testimonial_image order-last me-0" style="background-image: url(assets/images/shape/shape_img_6.svg);">
-                                                                <img src="assets/images/homeslider1.png"  />
-                                                            </div> 
-                                                        </div>
-                                                    </div>
-                                                    <div class="carousel_item">
-                                                        <div class="testimonial_item_2">
-                                                            <div class="testimonial_image order-last me-0" style="background-image: url(assets/images/shape/shape_img_6.svg);">
-                                                                <img src="assets/images/slider2.jpg" />
-                                                            </div> 
-                                                        </div>
-                                                    </div> 
-                                                    <div class="carousel_item">
-                                                        <div class="testimonial_item_2">
-                                                            <div class="testimonial_image order-last me-0" style="background-image: url(assets/images/shape/shape_img_6.svg);">
-                                                                <img src="assets/images/slider4.jpeg" />
-                                                            </div> 
-                                                        </div>
-                                                    </div> 
-                                                    <div class="carousel_item">
-                                                        <div class="testimonial_item_2">
-                                                            <div class="testimonial_image order-last me-0" style="background-image: url(assets/images/shape/shape_img_6.svg);">
-                                                                <img src="assets/images/slider3.jpg" />
-                                                            </div> 
-                                                        </div>
-                                                    </div> 
-                                                    <div class="carousel_item">
-                                                        <div class="testimonial_item_2">
-                                                            <div class="testimonial_image order-last me-0" style="background-image: url(assets/images/shape/shape_img_6.svg);">
-                                                                <img src="assets/images/slider6.jpg" />
-                                                            </div> 
-                                                        </div>
-                                                    </div> 
-                                                    <div class="carousel_item">
-                                                        <div class="testimonial_item_2">
-                                                            <div class="testimonial_image order-last me-0" style="background-image: url(assets/images/shape/shape_img_6.svg);">
-                                                                <img src="assets/images/slider7.jpg" />
-                                                            </div> 
-                                                        </div>
-                                                    </div> 
-                                                    <div class="carousel_item">
-                                                       <div class="testimonial_item_2">
-                                                        <div class="testimonial_image order-last me-0" style="background-image: url(assets/images/shape/shape_img_6.svg);">
-                                                        <img src="assets/images/slider15.jpg" />
-                                                        </div> 
-                                                        </div>
-                                                    </div> 
-                                                    <div class="carousel_item">
-                                                        <div class="testimonial_item_2"> 
-                                                            <div class="testimonial_image order-last me-0" style="background-image: url(assets/images/shape/shape_img_6.svg);">
-                                                                <img src="assets/images/Slider8.jpg" />
-                                                            </div> 
-                                                        </div>
-                                                    </div> 
-                                                    <div class="carousel_item">
-                                                        <div class="testimonial_item_2">
-                                                            <div class="testimonial_image order-last me-0" style="background-image: url(assets/images/shape/shape_img_6.svg);">
-                                                                <img src="assets/images/indexbannerimg1.jpeg" />
-                                                            </div> 
-                                                        </div>
-                                                    </div> 
-                                                    <div class="carousel_item">
-                                                        <div class="testimonial_item_2">
-                                                            <div class="testimonial_image order-last me-0" style="background-image: url(assets/images/shape/shape_img_6.svg);">
-                                                                <img src="assets/images/indexbannerimg2.jpeg" />
-                                                            </div> 
-                                                        </div>
-                                                    </div> 
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
+            <!--<a href="admissions.html">Admissions</a>-->
+            <a href="news_and_media.html">News and Media</a>
+            <!-- Dropdown (Mobile) -->
+            <div class="dropdownmobile">
+               <a href="#" class="dropdownmobile-toggle">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
+               <ul class="dropdownmobile-menu">
+                  <li><a href="great-minds.html">Great Minds</a></li>
+                  <li><a href="indian-scientist.html">Indian Scientist</a></li>
+                  <li><a href="top-iit.html">Institutes of India</a></li>
+               </ul>
+            </div>
+            <a href="exploratory.html">Exploratory Perks</a>
+            <a href="contact.html">Contact Us</a>
+            <!-- <a href="notices.html">Notices</a> -->
+         </div>
+         <!-- Overlay (for closing sidebar when clicking outside) -->
+         <div id="menuOverlay" class="menu-overlay"></div>
+         <main class="page_content">
+            <section class="hero_banner style_1">
+               <div class="container">
+                  <div class="content_wrap">
+                     <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                        <h3 class="grad">
+                           Registrations for the Dr. Homi Bhabha Balvaidnyanik Spardha's Second Phase Exposure Camp are open.
+                        </h3>
+                     </marquee>
+                     <div class="row">
+                        <div class="col col-lg-9 p-0">
+                           <!-- Carousel New -->
+                           <!-- ------------------------------------------------ -->
+                           <div id="futureCarousel" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel" data-bs-interval="5000">
+                              <!-- Indicators -->
+                              <!-- <div class="carousel-indicators">
+                                 <button type="button" data-bs-target="#futureCarousel" data-bs-slide-to="0" class="active"></button>
+                                 <button type="button" data-bs-target="#futureCarousel" data-bs-slide-to="1"></button>
+                                 <button type="button" data-bs-target="#futureCarousel" data-bs-slide-to="2"></button>
+                                 <button type="button" data-bs-target="#futureCarousel" data-bs-slide-to="3"></button>
+                                 <button type="button" data-bs-target="#futureCarousel" data-bs-slide-to="4"></button>
+                                 <button type="button" data-bs-target="#futureCarousel" data-bs-slide-to="5"></button>
+                                 <button type="button" data-bs-target="#futureCarousel" data-bs-slide-to="6"></button>
+                                 <button type="button" data-bs-target="#futureCarousel" data-bs-slide-to="7"></button>
+                              </div> -->
+                              <!-- Cyber Lines -->
+                              <div class="cyber-lines">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </div>
+                              <!-- Slides -->
+                              <div class="carousel-inner">
+                                 <!-- Slide 1 -->
+                                 <div class="carousel-item active">
+                                    <img src="assets/images/k-sivan-isro.jpg" alt="">
+                                    <div class="carousel-caption">
+                                       <!-- <div class="hero-tag">
+                                          NEXT GENERATION EXPERIENCE
+                                          </div> -->
+                                       <h1>Padma Shree Dr. K. Sivan's Inspiring Visit to PRSSE</h1>
+                                       <p>
+                                          Empowering young innovators through visionary guidance, scientific curiosity, and the spirit of exploration.
+                                       </p>
+                                       <!-- <div class="hero-btns">
+                                          <button class="btn-future btn-primary-future">
+                                              Explore
+                                          </button>
+                                          
+                                          <button class="btn-future btn-outline-future">
+                                              Learn More
+                                          </button>
+                                          </div> -->
                                     </div>
-                                    <div class="home-desc">
-                                        <p>At Prof. Rajendra Singh Science Exploratory (PRSSE), we believe science is more than just a subject - it's a way of life. Our mission is to inspire and educate young minds to appreciate science, and to help them explore the world around them in new and exciting ways. Established in 2015, the exploratory is designed to provide students hands-on experience in a wide range of scientific disciplines. From Chemistry to Physics, Biology to Astronomy and Mathematics to Design Thinking, we offer a variety of Programs and activities for the students of 6th Std. to 9th Std. Our experienced and dedicated team of advisors and experts across the country is committed to providing an engaging learning environment to students. Whether you're a budding scientist or just curious about the world around you, we have something for everyone.</p>
+                                 </div>
+                                 <!-- Slide 2 -->
+                                 <div class="carousel-item">
+                                    <img src="assets/images/k-sivan-with-students.jpg" alt="">
+                                    <div class="carousel-caption">
+                                       <!-- <div class="hero-tag">
+                                          AI POWERED VISUALS
+                                          </div> -->
+                                       <h1>Innovation and Inspiration with Dr. K. Sivan</h1>
+                                       <p>
+                                          Showcasing student innovation and experiential learning alongside India's renowned space scientist.
+                                       </p>
+                                       <!-- <div class="hero-btns">
+                                          <button class="btn-future btn-primary-future">
+                                              Discover
+                                          </button>
+                                          
+                                          <button class="btn-future btn-outline-future">
+                                              View Work
+                                          </button>
+                                          </div> -->
                                     </div>
-                                </div>
-                                <div class="col col-lg-3 pt-0">
-                                    <!-- Text Content Next -->
-                                    <div class="announcement-box glass-card">
-                                        <h3 class="announcement-header">
-                                            Announcements
-                                        </h3>
-                                        <div class="announcement-content">
-                                            <ul>
-                                                <li style="font-weight: 800;"><a href="https://prsscienceexploratory.in/summer-events.html" target="_blank">Registrations for Preparatory Summer Exposure Camp for Dr. Homi Bhabha Balvaidnyanik Competition are open now.</a></li>
-                                                <!--<li style="font-weight: 500;"><a href="./assets/images/hiring_post.jpeg" target="_blank">Recruitment Notification</a></li>-->
-                                                <!--<li style="font-weight: 500;"><a href="./assets/images/citizens-science-hands-workshop-series-3.jpeg"  target="_blank">Citizens Science Hands- On Workshop Series-3</a></li>-->
-
-                                            </ul>
-                                        </div>
+                                 </div>
+                                 <!-- Slide 3 -->
+                                 <div class="carousel-item">
+                                    <img src="assets/images/hc-varma.jpg" alt="">
+                                    <div class="carousel-caption">
+                                       <!-- <div class="hero-tag">
+                                          CYBER MODERN DESIGN
+                                       </div> -->
+                                       <h1>A Moment of Honour with Padma Shree Prof. H.C. Verma</h1>
+                                       <p>
+                                          Welcoming one of India's most respected science educators at PRSSE.
+                                       </p>
+                                       <!-- <div class="hero-btns">
+                                          <button class="btn-future btn-primary-future">
+                                              Start Now
+                                          </button>
+                                          
+                                          <button class="btn-future btn-outline-future">
+                                              Contact
+                                          </button>
+                                          </div> -->
                                     </div>
-                                    <div class="button_group" style="justify-self: center; margin-top: 50px;">
-                                        <a class="btn btn_primary" target="_blank" href="upcoming-events.html">
-                                            <span><small>Photo Gallery</small><small>Photo Gallery</small></span>
-                                        </a>
-                                        <a class="btn btn_primary" target="_blank" href="entrance_exam.html">
-                                            <span><small>Student's Achievements</small><small>Student's Achievements</small></span>
-                                        </a>
-                                        <a class="btn btn_primary grad-flow" target="_blank" href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4">
-                                           <img src="../assets/images/insta-icon.png" class="icon-insta" alt="Instagram" />
-                                            <span>
-                                                <small>Our Recent Stories</small><small>Our Recent Stories</small>
-                                            </span>
-                                        </a>
-                                        
-                                         <!-- <a class="btn btn_primary" target="_blank" href="summer-events.html">
-                                            <span><small>Summer Programs</small><small>Summer Program</small></span>
-                                        </a> -->
-
+                                 </div>
+                                 <!-- Slide 4 -->
+                                 <div class="carousel-item">
+                                    <img src="assets/images/anad-kumar-goinda-lakhotiya.jpeg" alt="">
+                                    <div class="carousel-caption">
+                                       <!-- <div class="hero-tag">
+                                          CYBER MODERN DESIGN
+                                       </div> -->
+                                       <h1>A Memorable Visit by Padma Shree Anand Kumar</h1>
+                                       <p>
+                                          Anand Kumar's visit encouraged students to dream bigger and learn deeper.
+                                       </p>
+                                       <!-- <div class="hero-btns">
+                                          <button class="btn-future btn-primary-future">
+                                              Start Now
+                                          </button>
+                                          
+                                          <button class="btn-future btn-outline-future">
+                                              Contact
+                                          </button>
+                                          </div> -->
                                     </div>
-                                </div>
-                               
-                            </div>
+                                 </div>
+                                 <!-- Slide 5 -->
+                                 <div class="carousel-item">
+                                    <img src="assets/images/anand-kumar.jpeg" alt="">
+                                    <div class="carousel-caption">
+                                       <!-- <div class="hero-tag">
+                                          CYBER MODERN DESIGN
+                                       </div> -->
+                                       <h1>Learning Beyond Classrooms with Padma Shree Anand Kumar</h1>
+                                       <p>
+                                          An inspiring educational interaction encouraging innovation and experiential science learning.
+                                       </p>
+                                    </div>
+                                 </div>
+                                 <!-- Slide 6 -->
+                                 <div class="carousel-item">
+                                    <img src="assets/images/students-telescope.jpeg" alt="">
+                                    <div class="carousel-caption">
+                                       <!-- <div class="hero-tag">
+                                          CYBER MODERN DESIGN
+                                       </div> -->
+                                       <h1>Young Explorers Discovering the Universe</h1>
+                                       <p>
+                                          PRSSE students engaging in hands-on astronomy and experiential scientific learning.
+                                       </p>
+                                    </div>
+                                 </div>
+                                 <!-- Slide 7 -->
+                                 <div class="carousel-item">
+                                    <img src="assets/images/future-scientist.jpg" alt="">
+                                    <div class="carousel-caption">
+                                       <!-- <div class="hero-tag">
+                                          CYBER MODERN DESIGN
+                                       </div> -->
+                                       <h1>Curiosity Powered by Practical Science</h1>
+                                       <p>
+                                          Students gaining real-world scientific experience through interactive lab learning sessions.
+                                       </p>
+                                       <!-- <div class="hero-btns">
+                                          <button class="btn-future btn-primary-future">
+                                              Start Now
+                                          </button>
+                                          
+                                          <button class="btn-future btn-outline-future">
+                                              Contact
+                                          </button>
+                                          </div> -->
+                                    </div>
+                                 </div>
+                                 <!-- Slide 8 -->
+                                 <div class="carousel-item">
+                                    <img src="assets/images/students-with-microscope.jpg" alt="">
+                                    <div class="carousel-caption">
+                                       <!-- <div class="hero-tag">
+                                          CYBER MODERN DESIGN
+                                       </div> -->
+                                       <h1>Learning Science Through Observation</h1>
+                                       <p>
+                                          Students engaging in practical experiments to understand the wonders of biology and research.
+                                       </p>
+                                       <!-- <div class="hero-btns">
+                                          <button class="btn-future btn-primary-future">
+                                              Start Now
+                                          </button>
+                                          
+                                          <button class="btn-future btn-outline-future">
+                                              Contact
+                                          </button>
+                                          </div> -->
+                                    </div>
+                                 </div>
+                                 <!-- Slide 9 -->
+                                 <div class="carousel-item">
+                                    <img src="assets/images/student-1.jpg" alt="">
+                                    <div class="carousel-caption">
+                                       <!-- <div class="hero-tag">
+                                          CYBER MODERN DESIGN
+                                       </div> -->
+                                       <h1>Where Curiosity Becomes Discovery</h1>
+                                       <p>
+                                          Interactive science activities helping students explore beyond textbooks and imagination.
+                                       </p>
+                                       <!-- <div class="hero-btns">
+                                          <button class="btn-future btn-primary-future">
+                                              Start Now
+                                          </button>
+                                          
+                                          <button class="btn-future btn-outline-future">
+                                              Contact
+                                          </button>
+                                          </div> -->
+                                    </div>
+                                 </div>
+                                 <!-- Slide 10 -->
+                                 <div class="carousel-item">
+                                    <img src="assets/images/students-collage.jpeg" alt="">
+                                    <div class="carousel-caption">
+                                       <!-- <div class="hero-tag">
+                                          CYBER MODERN DESIGN
+                                       </div> -->
+                                       <h1>Exploring, Observing, Discovering</h1>
+                                       <p>
+                                          Hands-on science sessions inspiring curiosity, creativity, and analytical thinking among students.
+                                       </p>
+                                       <!-- <div class="hero-btns">
+                                          <button class="btn-future btn-primary-future">
+                                              Start Now
+                                          </button>
+                                          
+                                          <button class="btn-future btn-outline-future">
+                                              Contact
+                                          </button>
+                                          </div> -->
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- Controls -->
+                              <button class="carousel-control-prev" type="button" data-bs-target="#futureCarousel" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon"></span>
+                              </button>
+                              <button class="carousel-control-next" type="button" data-bs-target="#futureCarousel" data-bs-slide="next">
+                              <span class="carousel-control-next-icon"></span>
+                              </button>
+                           </div>
+                           <div class="home-desc">
+                              <p>At Prof. Rajendra Singh Science Exploratory (PRSSE), we believe science is more than just a subject - it's a way of life. Our mission is to inspire and educate young minds to appreciate science, and to help them explore the world around them in new and exciting ways. Established in 2015, the exploratory is designed to provide students hands-on experience in a wide range of scientific disciplines. From Chemistry to Physics, Biology to Astronomy and Mathematics to Design Thinking, we offer a variety of Programs and activities for the students of 6th Std. to 9th Std. Our experienced and dedicated team of advisors and experts across the country is committed to providing an engaging learning environment to students. Whether you're a budding scientist or just curious about the world around you, we have something for everyone.</p>
+                           </div>
                         </div>
-                        <!-- Buttons in Vertical Line -->
-                        <!--<div class="row">-->
-                        <!--    <div class="col col-lg-12">-->
-                        <!--        <div class="button_group" style="justify-self: center;">-->
-                        <!--            <a class="btn btn_primary" target="_blank" href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4">-->
-                        <!--                <span><small>Our Recent Stories</small> <small>Our Recent Stories </small></span>-->
-                        <!--            </a>-->
-                        <!--            <a class="btn btn_primary" target="_blank" href="entrance_exam.html">-->
-                        <!--                <span><small>Student's Achievements</small> <small>Student's Achievements</small></span>-->
-                        <!--            </a>-->
-                        <!--             <a class="btn btn_primary" target="_blank" href="summer-events.html">-->
-                        <!--                <span><small>Summer Programs 2025</small> <small>Summer Program 2025</small></span>-->
-                        <!--            </a>-->
-                                    
-                        <!--            <a class="btn btn_primary" target="_blank" href="upcoming-events.html">-->
-                        <!--                <span><small>Past events</small> <small>Past events</small></span>-->
-                        <!--            </a>-->
-                        <!--        </div>-->
-                        <!--    </div>-->
-                        <!--</div>-->
-                    </div>
-                </section>
-                
-                <!--<section class="courses_info_section section_space_lg" id="science">-->
-                <!--    <div class="container">-->
-                <!--        <div class="row align-items-center">-->
-                <!--            <div class="col col-lg-6">-->
-                <!--                <div class="image_widget"><iframe width="100%" height="350" src="https://www.youtube.com/embed/CJjvPhZBFYQ?si=tAqLp69CgY_hoBZg"></iframe></div>-->
-                <!--            </div>-->
-                <!--            <div class="col col-lg-6">-->
-                <!--                <div class="content_wrap ps-lg-3">-->
-                <!--                    <div class="section_heading">-->
-                <!--                        <h2 class="heading_text">About the Exploratory</h2>-->
-                <!--                              </div>-->
-                <!--                     <p>At Prof. Rajendra Singh (PRS) Science Exploratory, we believe science is more than just a subject - it's a way of life. Our mission is to inspire and educate young minds to appreciate science, and to help them explore the world around them in new and exciting ways.<br>Established in 2015, the exploratory is designed to provide students hands-on experience in a wide range of scientific disciplines. From Chemistry to Physics, Biology to Astronomy and Mathematics to Design Thinking, we offer a variety of Programs and activities for the students of 6th Std. to 9th Std. <br>Our experienced and dedicated team of advisors and experts across the country is committed to providing an engaging learning environment to students. Whether you're a budding scientist or just curious about the world around you, we have something for everyone.</p>     -->
-                <!--                </div>-->
-                <!--            </div>-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--</section>-->
-                <!-- <section class="courses_info_section  ">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col col-lg-7">
-                                <div class="content_wrap ps-lg-3">
-                                    <div class="section_heading">
-                                        <h2 class="heading_text">Our Inspiration: <br>Professor Rajendra Singh</h2>
-                                        <p>
-                                        Rajendra Singhji  was a professor of physics at the University of Allahabad. He was born in 1922 in a small village in Uttar Pradesh. 
-                                        He studied physics at the University of Allahabad and then served the university as Professor from 1945 to 1965. 
-                                        After post graduation with a major in Physics, he joined Allahabad University as a teacher of spectroscopy. 
-                                        He continued to teach at the university for several years and was eventually appointed head of the Physics Department. 
-                                        He was a popular teacher who explained complex concepts with simplicity and clarity. During the MSc final practical exams, 
-                                        Rajendra Singh, also known as Rajju Bhaiyya, received high praise from Nobel laureate C.V. Raman, who remarked that he had never 
-                                        seen such a clear-headed and practical student before. Singh had scored a perfect 100 on the exam, which Raman had personally examined, 
-                                        and had placed second in his MSc class. Despite Raman's invitation to join him in Bengaluru, Singh politely declined and instead chose to 
-                                        pursue research under his guru at Allahabad University while also teaching there.
-                                        He was also considered an expert in nuclear physics, 
-                                        a rare field in India at the time. He served as RSS Sarsanghchalak (Chief) from 1994 to 2000. He passed away in 2003 in Pune.
-
-                                        </p>
-                                              </div> 
-                                </div>
-                            </div> 
-                            <div class="col col-lg-4">
-                                <div class="image_widget"><img src="assets/images/abt.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
-                            </div>
+                        <div class="col col-lg-3 pt-0">
+                           <!-- Text Content Next -->
+                           <div class="announcement-box glass-card">
+                              <h3 class="announcement-header">
+                                 <i class="fa-solid fa-bullhorn"></i> 
+                                 Announcements
+                              </h3>
+                              <div class="announcement-content">
+                                 <ul>
+                                    <li style="font-weight: 800;"><a href="https://prsscienceexploratory.in/summer-events.html" target="_blank">Registrations for Preparatory Summer Exposure Camp for Dr. Homi Bhabha Balvaidnyanik Competition are open now.</a></li>
+                                    <!--<li style="font-weight: 500;"><a href="./assets/images/hiring_post.jpeg" target="_blank">Recruitment Notification</a></li>-->
+                                    <!--<li style="font-weight: 500;"><a href="./assets/images/citizens-science-hands-workshop-series-3.jpeg"  target="_blank">Citizens Science Hands- On Workshop Series-3</a></li>-->
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="button_group" style="justify-self: center; margin-top: 50px;">
+                              <a class="btn btn_primary" target="_blank" href="entrance_exam.html">
+                              <i class="fa-solid fa-trophy"></i>
+                              <span><small>&nbsp;Student's Achievements</small><small>&nbsp;Student's Achievements</small></span>
+                              </a>
+                              <a class="btn btn_primary" target="_blank" href="upcoming-events.html">
+                              <i class="fa-solid fa-camera"></i>
+                              <span>
+                              <small>&nbsp;Photo Gallery</small>
+                              <small>&nbsp;Photo Gallery</small>
+                              </span>
+                              </a>
+                              <a class="btn btn_primary grad-flow" target="_blank" href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4">
+                              <i class="fa-brands fa-instagram"></i>
+                              <span>
+                              <small>&nbsp;Our Recent Stories</small><small>&nbsp;Our Recent Stories</small>
+                              </span>
+                              </a>
+                              <!-- <a class="btn btn_primary" target="_blank" href="summer-events.html">
+                                 <span><small>Summer Programs</small><small>Summer Program</small></span>
+                                 </a> -->
+                           </div>
                         </div>
-                    </div>
-                </section> -->
-                 
-                <section class="courses_info_section section_space_lg p-0 mt-5">
-                    <div class="container">
-                        <h3 class="heading_text">Frequently Asked Questions:</h3>
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    What is Professor Rajendra Singh Science Exploratory?
-                                    <span class="accordion-icon" aria-hidden="true"></span>
-                                </button>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>The Professor Rajendra Singh Science Exploratory (PRSSE), established in 2015, is an
-                                        educational institution run by an NGO, focused on inspiring and educating young minds
-                                        through hands-on scientific exploration. It is located in west Nagpur near Alankar Talkies
-                                        near Shankar Nagar Metro Station.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    What is the Laboratory Training Program?
-                                    <span class="accordion-icon" aria-hidden="true"></span>
-                                </button>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>The Laboratory Training Program offers students practical experience in various scientific
-                                        disciplines, including Biology, Chemistry, Physics, and Mathematics, through hands-on
-                                        experiments conducted in state-of-the-art laboratories. Students visit once a week for two
-                                        hours for this year-long programme.</p>
-                                        
-                                        <h5 class="mt-2">Key features of the Laboratory Training Program</h5>
-                                        <ul>
-                                            <li>Hands-on experiments in various scientific fields</li>
-                                            <li>Around 35 sessions throughout the academic year.
-                                            </li>
-                                            <li>Exposure to national/international competitions.</li>
-                                            <li>Outreach programs, including exhibitions, sky watching and guest talks.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    How many students will be admitted to the program?
-                                    <span class="accordion-icon" aria-hidden="true"></span>
-                                </button>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>A total of 400 students will be selected from various schools of the city through entrance
-                                        exams scheduled in April for the year-long training program.</p>
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="accordion-item">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Who can participate in the Entrance Exam?
-                                    <span class="accordion-icon" aria-hidden="true"></span>
-                                </button>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>Students currently in 5th, 6th, and 7th grades in Nagpur are eligible to register for the
-                                        Entrance Exam.</p>
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="accordion-item">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    What is the last date for registration?
-                                    <span class="accordion-icon" aria-hidden="true"></span>
-                                </button>
-                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>Date of Entrance Exam: 3rd April, 4th April, 5th April, 11th April, 12th April, and 14th April 2026. <br>
-                                        Holidays and Weekends in April.</p>
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="accordion-item">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    When will the Entrance Exam take place?
-                                    <span class="accordion-icon" aria-hidden="true"></span>
-                                </button>
-                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>The Entrance Exam will be conducted on April 10, 12, 13, 14, and 18, 2025 at various slots.
-                                        Students can select the slot of their choice in the registration form. Students need to
-                                        appear for exams in the laboratories at PRSSE.</p>
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="accordion-item">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                    What is the fee for the Entrance Exam?
-                                    <span class="accordion-icon" aria-hidden="true"></span>
-                                </button>
-                                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>The Entrance Exam fee is ₹50, which can be paid online via UPI.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                    What subjects will the Entrance Exam cover?
-                                    <span class="accordion-icon" aria-hidden="true"></span>
-                                </button>
-                                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>The exam will assess theoretical knowledge, observational skills, and motor skills based on
-                                        the middle school syllabus of Maharashtra State Board and CBSE.</p>
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="accordion-item">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                    What is the annual fee for the program, if a student gets selected?
-                                    <span class="accordion-icon" aria-hidden="true"></span>
-                                </button>
-                                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>Annual Fees: ₹6500/- <br>50% concession available for the students from economically weaker sections.</p>
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="accordion-item">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                                    How can I get more information?
-                                    <span class="accordion-icon" aria-hidden="true"></span>
-                                </button>
-                                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        For more inquiries, you can contact:
-                                        <ul>
-                                            <li>Email: <a href="prsscienceexploratory@gmail.com">prsscienceexploratory@gmail.com</a>
-                                            </li>
-                                            <li>Phone: 7249811866 (WhatsApp)</li>
-                                            <li>Website: <a
-                                                    href="https://www.prsscienceexploratory.in/">www.prsscienceexploratory.in</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="accordion-item">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-                                    Is there a lab visit day for interested students/parents?
-                                    <span class="accordion-icon" aria-hidden="true"></span>
-                                </button>
-                                <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>Yes, interested students and parents can visit the exploratory during office hours on
-                                        Saturdays (5 p.m. to 6 p.m.) and Sundays (10 a.m. to 1 p.m.).</p>
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="accordion-item">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwe" aria-expanded="false" aria-controls="collapseTwe">
-                                    What are the various competitions where students got benefitted through this training programme?
-                                    <span class="accordion-icon" aria-hidden="true"></span>
-                                </button>
-                                <div id="collapseTwe" class="accordion-collapse collapse" aria-labelledby="headingTwe"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>Some of the competitions like Dr. Homi Bhabha Balvaidyanik Competition, Vidyathi Vigyaan
-                                        Manthan (VVM), Science Olympiads, Inspire Manak Awards, National Science Exhibitions (CBSE)
-                                        etc.</p>
-                                    </div>
-                                </div>
-                            </div>
-            
+                     </div>
+                  </div>
+                  <!-- Buttons in Vertical Line -->
+                  <!--<div class="row">-->
+                  <!--    <div class="col col-lg-12">-->
+                  <!--        <div class="button_group" style="justify-self: center;">-->
+                  <!--            <a class="btn btn_primary" target="_blank" href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4">-->
+                  <!--                <span><small>Our Recent Stories</small> <small>Our Recent Stories </small></span>-->
+                  <!--            </a>-->
+                  <!--            <a class="btn btn_primary" target="_blank" href="entrance_exam.html">-->
+                  <!--                <span><small>Student's Achievements</small> <small>Student's Achievements</small></span>-->
+                  <!--            </a>-->
+                  <!--             <a class="btn btn_primary" target="_blank" href="summer-events.html">-->
+                  <!--                <span><small>Summer Programs 2025</small> <small>Summer Program 2025</small></span>-->
+                  <!--            </a>-->
+                  <!--            <a class="btn btn_primary" target="_blank" href="upcoming-events.html">-->
+                  <!--                <span><small>Past events</small> <small>Past events</small></span>-->
+                  <!--            </a>-->
+                  <!--        </div>-->
+                  <!--    </div>-->
+                  <!--</div>-->
+               </div>
+            </section>
+            <!--<section class="courses_info_section section_space_lg" id="science">-->
+            <!--    <div class="container">-->
+            <!--        <div class="row align-items-center">-->
+            <!--            <div class="col col-lg-6">-->
+            <!--                <div class="image_widget"><iframe width="100%" height="350" src="https://www.youtube.com/embed/CJjvPhZBFYQ?si=tAqLp69CgY_hoBZg"></iframe></div>-->
+            <!--            </div>-->
+            <!--            <div class="col col-lg-6">-->
+            <!--                <div class="content_wrap ps-lg-3">-->
+            <!--                    <div class="section_heading">-->
+            <!--                        <h2 class="heading_text">About the Exploratory</h2>-->
+            <!--                              </div>-->
+            <!--                     <p>At Prof. Rajendra Singh (PRS) Science Exploratory, we believe science is more than just a subject - it's a way of life. Our mission is to inspire and educate young minds to appreciate science, and to help them explore the world around them in new and exciting ways.<br>Established in 2015, the exploratory is designed to provide students hands-on experience in a wide range of scientific disciplines. From Chemistry to Physics, Biology to Astronomy and Mathematics to Design Thinking, we offer a variety of Programs and activities for the students of 6th Std. to 9th Std. <br>Our experienced and dedicated team of advisors and experts across the country is committed to providing an engaging learning environment to students. Whether you're a budding scientist or just curious about the world around you, we have something for everyone.</p>     -->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</section>-->
+            <!-- <section class="courses_info_section  ">
+               <div class="container">
+                   <div class="row align-items-center">
+                       <div class="col col-lg-7">
+                           <div class="content_wrap ps-lg-3">
+                               <div class="section_heading">
+                                   <h2 class="heading_text">Our Inspiration: <br>Professor Rajendra Singh</h2>
+                                   <p>
+                                   Rajendra Singhji  was a professor of physics at the University of Allahabad. He was born in 1922 in a small village in Uttar Pradesh. 
+                                   He studied physics at the University of Allahabad and then served the university as Professor from 1945 to 1965. 
+                                   After post graduation with a major in Physics, he joined Allahabad University as a teacher of spectroscopy. 
+                                   He continued to teach at the university for several years and was eventually appointed head of the Physics Department. 
+                                   He was a popular teacher who explained complex concepts with simplicity and clarity. During the MSc final practical exams, 
+                                   Rajendra Singh, also known as Rajju Bhaiyya, received high praise from Nobel laureate C.V. Raman, who remarked that he had never 
+                                   seen such a clear-headed and practical student before. Singh had scored a perfect 100 on the exam, which Raman had personally examined, 
+                                   and had placed second in his MSc class. Despite Raman's invitation to join him in Bengaluru, Singh politely declined and instead chose to 
+                                   pursue research under his guru at Allahabad University while also teaching there.
+                                   He was also considered an expert in nuclear physics, 
+                                   a rare field in India at the time. He served as RSS Sarsanghchalak (Chief) from 1994 to 2000. He passed away in 2003 in Pune.
+               
+                                   </p>
+                                         </div> 
+                           </div>
+                       </div> 
+                       <div class="col col-lg-4">
+                           <div class="image_widget"><img src="assets/images/abt.jpg" alt="Prof. Rajendra Singh Exploratory" /></div>
+                       </div>
+                   </div>
+               </div>
+               </section> -->
+            <!-- FEATURE CARDS -->
+            <section class="feature-cards">
+               <div class="container">
+                  <div class="row g-4">
+                     <div class="col-lg-3 col-md-6">
+                        <div class="feature-card">
+                           <div class="feature-icon">
+                              <i class="fa-solid fa-flask"></i>
+                           </div>
+                           <h4>
+                              Hands-on Learning
+                           </h4>
+                           <p>
+                              Practical experiments and activities that make
+                              learning engaging and interactive.
+                           </p>
                         </div>
-
-                        
-                    </div>
-                </section>
-       <!--         <section class="courses_section section_space_lg ">-->
-       <!--             <div class="container">-->
-       <!--                 <div class="section_heading">-->
-       <!--                     <div class="row align-items-center justify-content-lg-between">-->
-       <!--                         <div class="col col-lg-6"><h2 class="heading_text mb-0">Programs</h2></div>-->
-       <!--                     </div>-->
-       <!--                 </div>-->
-       <!--                 <div class="tabs_wrapper"> -->
-       <!--                     <div class="tab-content">-->
-       <!--                         <div class="tab-pane fade show active" id="teb_hr" role="tabpanel">-->
-       <!--                             <div class="row">-->
-                            <!--            <div class="col col-lg-6">-->
-       <!--                                     <div class="course_card">-->
-       <!--                                         <div class="item_image">-->
-       <!--                                             <a href="experimental.html" data-cursor-text="View"><img src="assets/images/p1.jpg" alt="Prof. Rajendra Singh Exploratory" /></a>-->
-       <!--                                         </div>-->
-       <!--                                         <div class="item_content">  -->
-       <!--                                             <h3 class="item_title"><a href="experimental.html">Laboratory Training Program</a></h3>-->
-       <!--                                             <ul class="meta_info_list unordered_list">-->
-       <!--                                                 <li><i class="fas fa-chart-bar"></i> <span>Seats: 400 </span></li>  -->
-       <!--                                             </ul>-->
-       <!--                                             <a class="btn_unfill" href="experimental.html">-->
-       <!--                                                 <span class="btn_text">View Program</span> <span class="btn_icon"><i class="fas fa-long-arrow-right"></i> <i class="fas fa-long-arrow-right"></i></span>-->
-       <!--                                             </a>-->
-       <!--                                         </div>-->
-       <!--                                     </div>-->
-       <!--                                 </div>-->
-       <!--                                 <div class="col col-lg-6">-->
-       <!--                                     <div class="course_card">-->
-       <!--                                         <div class="item_image">-->
-       <!--                                             <a href="international.html" data-cursor-text="View"><img src="assets/images/p3.jpg" alt="Prof. Rajendra Singh Exploratory" /></a>-->
-       <!--                                         </div>-->
-       <!--                                         <div class="item_content"> -->
-       <!--                                             <h3 class="item_title"><a href="international.html">International Junior Science Olympiad Training</a></h3>-->
-       <!--                                             <ul class="meta_info_list unordered_list">-->
-       <!--                                                 <li><i class="fas fa-chart-bar"></i> <span>Seats: 30 </span></li> -->
-       <!--                                             </ul>-->
-       <!--                                             <a class="btn_unfill" href="international.html">-->
-       <!--                                                 <span class="btn_text">View Program</span> <span class="btn_icon"><i class="fas fa-long-arrow-right"></i> <i class="fas fa-long-arrow-right"></i></span>-->
-       <!--                                             </a>-->
-       <!--                                         </div>-->
-       <!--                                     </div>-->
-       <!--                                 </div>-->
-       <!--                                 <div class="col col-lg-6">-->
-       <!--                                     <div class="course_card">-->
-       <!--                                         <div class="item_image">-->
-       <!--                                             <a href="exposure-camp.html" data-cursor-text="View"><img src="assets/images/p2.jpg" alt="Prof. Rajendra Singh Exploratory" /></a>-->
-       <!--                                         </div>-->
-       <!--                                         <div class="item_content"> -->
-       <!--                                             <h3 class="item_title"><a href="exposure-camp.html">Dr. Homi Bhabha Balvaidnyanik Exposure Camp</a></h3>-->
-       <!--                                             <ul class="meta_info_list unordered_list">-->
-       <!--                                                 <li><i class="fas fa-chart-bar"></i> <span>Seats: 30 </span></li> -->
-       <!--                                             </ul>-->
-       <!--                                             <a class="btn_unfill" href="exposure-camp.html">-->
-       <!--                                                 <span class="btn_text">View Program</span> <span class="btn_icon"><i class="fas fa-long-arrow-right"></i> <i class="fas fa-long-arrow-right"></i></span>-->
-       <!--                                             </a>-->
-       <!--                                         </div>-->
-       <!--                                     </div>-->
-       <!--                                 </div>-->
-       <!--                                 <div class="col col-lg-6">-->
-       <!--                                     <div class="course_card">-->
-       <!--                                         <div class="item_image">-->
-       <!--                                             <a href="mathematics-competitive.html" data-cursor-text="View"><img src="assets/images/p3.jpg" alt="Prof. Rajendra Singh Exploratory" /></a>-->
-       <!--                                         </div>-->
-       <!--                                         <div class="item_content"> -->
-       <!--                                             <h3 class="item_title"><a href="mathematics-competitive.html">Mathematics Competitive Exam Cell</a></h3>-->
-       <!--                                             <ul class="meta_info_list unordered_list">-->
-       <!--                                                 <li><i class="fas fa-chart-bar"></i> <span>Seats: 30 </span></li> -->
-       <!--                                             </ul>-->
-       <!--                                             <a class="btn_unfill" href="mathematics-competitive.html">-->
-       <!--                                                 <span class="btn_text">View Program</span> <span class="btn_icon"><i class="fas fa-long-arrow-right"></i> <i class="fas fa-long-arrow-right"></i></span>-->
-       <!--                                             </a>-->
-       <!--                                         </div>-->
-       <!--                                     </div>-->
-       <!--                                 </div> -->
-       <!--                             </div>-->
-       <!--                         </div>-->
-                            <!--</div>-->
-       <!--                 </div> -->
-       <!--             </div>-->
-       <!--         </section> -->
-                
-                <section class="newslatter_section">
-                    <div class="container">
-                        <div class="newslatter_box" style="background-image: url(assets/images/shape/shape_img_6.svg);">
-                            <div class="row justify-content-center">
-                                <div class="col col-lg-6">
-                                    <div class="section_heading text-center">
-                                        <h2 class="heading_text">Admission Open</h2>
-                                        <p class="heading_description mb-0">Admission to Prof. Rajendra Singh Exploratory is open to all students who have an interest in science. Admissions are fixed in the month of June-July for one year academic session till April.</p>
-                                    </div>
-                                    <form action="#">
-                                        <div class="form_item m-0"> 
-                                            <button type="submit" class="btn btn_dark">
-                                                <span><small>Apply Now</small> <small>Apply Now</small></span>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                     </div>
+                     <div class="col-lg-3 col-md-6">
+                        <div class="feature-card">
+                           <div class="feature-icon">
+                              <i class="fa-solid fa-atom"></i>
+                           </div>
+                           <h4>
+                              Expert Guidance
+                           </h4>
+                           <p>
+                              Learn from experienced mentors and scientists
+                              across multiple scientific disciplines.
+                           </p>
                         </div>
-                    </div>
-                </section>
-            </main>
-            <footer class="site_footer">
-                <div class="footer_widget_area">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col col-lg-4 col-md-6 col-sm-6">
-                                <div class="footer_widget">
-                                            <h3 class="footer_widget_title">Address</h3>
-                                    <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High School, Near Alankar Talkies, North Ambazari road, Nagpur- 440010.</p>
-                                    <!--<ul class="social_links unordered_list">-->
-                                    <!--    <li>-->
-                                    <!--        <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook"><i class="fab fa-facebook-f"></i></a>-->
-                                    <!--    </li>-->
-                                    <!--    <li>-->
-                                    <!--        <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"><i class="fab fa-youtube"></i></a>-->
-                                    <!--    </li>-->
-                                    <!--    <li>-->
-                                    <!--        <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"><i class="fab fa-instagram"></i></a>-->
-                                    <!--    </li>-->
-                                        <!--<li>-->
-                                        <!--    <a href="#!"><i class="fab fa-linkedin-in"></i></a>-->
-                                        <!--</li>-->
-                                    <!--</ul>-->
-                                </div>
-                            </div>
-                            <div class="col col-lg-4">
-                                <!--<div class="row">-->
-                                <!--    <div class="col col-md-4 col-sm-4">-->
-                                <div class="footer_widget" >
-                                    <h3 class="footer_widget_title">Social Links</h3>
-                                    <ul class="social_links unordered_list">
-                                        <li>
-                                            <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook" target="_blank"><img src="assets/images/icon/5365678_fb_facebook_facebook logo_icon.png"/></a><!--<i class="fab fa-facebook-f"></i><i class="fab fa-whatsapp"></i><i class="fab fa-instagram"></i><i class="fab fa-youtube"></i>-->
-                                        </li>
-                                        <li>
-                                            <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I" target="_blank"><img src="assets/images/icon/410526_youtube_play_icon.png"/></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4" target="_blank"><img src="assets/images/icon/5296765_camera_instagram_instagram logo_icon.png"/></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://wa.me/917249811866" target="_blank"><img src="assets/images/icon/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png"/></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                    <!--</div>-->
-            <!--                        <div class="col col-md-8 col-sm-8">-->
-            <!--                            <div class="footer_widget">-->
-            <!--                                <h3 class="footer_widget_title">Programs</h3>-->
-            <!--                                <ul class="page_list unordered_list_block"> -->
-                                                <!--<li>-->
-            <!--                                        <a href="experimental.html">-->
-            <!--                                            <span class="item_icon"><i class="fas fa-caret-right"></i></span> <span class="item_text">Experimental Training</span>-->
-            <!--                                        </a>-->
-            <!--                                    </li>-->
-            <!--                                    <li>-->
-            <!--                                        <a href="exposure-camp.html">-->
-            <!--                                            <span class="item_icon"><i class="fas fa-caret-right"></i></span> <span class="item_text">Dr. Homi Bhabha Balvaidnyanik Exposure Camp</span>-->
-            <!--                                        </a>-->
-            <!--                                    </li>-->
-            <!--                                    <li>-->
-            <!--                                        <a href="mathematics.html">-->
-            <!--                                            <span class="item_icon"><i class="fas fa-caret-right"></i></span> <span class="item_text">Mathematics Olympiad Training</span>-->
-            <!--                                        </a>-->
-            <!--                                    </li>-->
-            <!--                                    <li>-->
-            <!--                                        <a href="international.html">-->
-            <!--                                            <span class="item_icon"><i class="fas fa-caret-right"></i></span> <span class="item_text">International Junior Science Olympiad Training</span>-->
-            <!--                                        </a>-->
-            <!--                                    </li> -->
-            <!--                                </ul>-->
-            <!--                            </div>-->
-            <!--                        </div> -->
-                                <!--</div>-->
-                            </div>
-                            <div class="col col-lg-4 col-md-6 col-sm-6">
-                                <div class="footer_widget">
-                                    <h3 class="footer_widget_title">Contact Details</h3>
-                                    <ul class="blog_small_group unordered_list_block"> 
-                                        <li>
-                                            <a class="blog_small" href="#">
-                                                   <span class="item_content">
-                                                       <small class="item_post_date">Call : 7249811866</small>
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="blog_small" href="#">
-                                                   <span class="item_content">
-                                                       <small class="item_post_date">Email: prsscienceexploratory@gmail.com </small>
-                                                </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                     </div>
+                     <div class="col-lg-3 col-md-6">
+                        <div class="feature-card">
+                           <div class="feature-icon">
+                              <i class="fa-solid fa-rocket"></i>
+                           </div>
+                           <h4>
+                              Explore & Discover
+                           </h4>
+                           <p>
+                              Encouraging curiosity and innovation through
+                              exciting programs and workshops.
+                           </p>
                         </div>
-                    </div>
-                </div>
-                <div class="copyright_widget">
-                    <div class="container">
-                        <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All rights reserved | Copyrights 2026</p>
-                    </div>
-                </div>
-            </footer>
-        </div>
-                <script>
-                    // Scroll to top on page load
-                    window.scrollTo(0, 0);
-          
-                    // Set active navigation item based on current page
-                    (function setActiveNav() {
-                        var currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            
-                        var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
-                        navLinks.forEach(function(link) {
-                            var href = link.getAttribute('href');
-                            var linkPage = href.split('?')[0]; // Remove query strings
-              
-                            // Match current page with nav link
-                            if (linkPage === currentPage || 
-                                    (currentPage === '' && linkPage === 'index.html')) {
-                                var parentLi = link.closest('li');
-                                if (parentLi) {
-                                    parentLi.classList.add('active');
-                                }
-                            }
-                        });
-                    })();
-                </script>
-                <script src="assets/js/script.js"></script>
-    </body> 
+                     </div>
+                     <div class="col-lg-3 col-md-6">
+                        <div class="feature-card">
+                           <div class="feature-icon">
+                              <i class="fa-solid fa-users"></i>
+                           </div>
+                           <h4>
+                              Student Community
+                           </h4>
+                           <p>
+                              Build a vibrant network of young innovators
+                              and aspiring scientists.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="courses_info_section section_space_lg p-0 mt-5">
+               <div class="container">
+                  <h3 class="heading_text">Frequently Asked Questions:</h3>
+                  <div class="accordion" id="accordionExample">
+                     <div class="accordion-item">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is Professor Rajendra Singh Science Exploratory?
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                           data-bs-parent="#accordionExample">
+                           <div class="accordion-body">
+                              <p>The Professor Rajendra Singh Science Exploratory (PRSSE), established in 2015, is an
+                                 educational institution run by an NGO, focused on inspiring and educating young minds
+                                 through hands-on scientific exploration. It is located in west Nagpur near Alankar Talkies
+                                 near Shankar Nagar Metro Station.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        What is the Laboratory Training Program?
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                           data-bs-parent="#accordionExample">
+                           <div class="accordion-body">
+                              <p>The Laboratory Training Program offers students practical experience in various scientific
+                                 disciplines, including Biology, Chemistry, Physics, and Mathematics, through hands-on
+                                 experiments conducted in state-of-the-art laboratories. Students visit once a week for two
+                                 hours for this year-long programme.
+                              </p>
+                              <h5 class="mt-2">Key features of the Laboratory Training Program</h5>
+                              <ul>
+                                 <li>Hands-on experiments in various scientific fields</li>
+                                 <li>Around 35 sessions throughout the academic year.
+                                 </li>
+                                 <li>Exposure to national/international competitions.</li>
+                                 <li>Outreach programs, including exhibitions, sky watching and guest talks.
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        How many students will be admitted to the program?
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                           data-bs-parent="#accordionExample">
+                           <div class="accordion-body">
+                              <p>A total of 400 students will be selected from various schools of the city through entrance
+                                 exams scheduled in April for the year-long training program.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Who can participate in the Entrance Exam?
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                           data-bs-parent="#accordionExample">
+                           <div class="accordion-body">
+                              <p>Students currently in 5th, 6th, and 7th grades in Nagpur are eligible to register for the
+                                 Entrance Exam.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        What is the last date for registration?
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                           data-bs-parent="#accordionExample">
+                           <div class="accordion-body">
+                              <p>Date of Entrance Exam: 3rd April, 4th April, 5th April, 11th April, 12th April, and 14th April 2026. <br>
+                                 Holidays and Weekends in April.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        When will the Entrance Exam take place?
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                           data-bs-parent="#accordionExample">
+                           <div class="accordion-body">
+                              <p>The Entrance Exam will be conducted on April 10, 12, 13, 14, and 18, 2025 at various slots.
+                                 Students can select the slot of their choice in the registration form. Students need to
+                                 appear for exams in the laboratories at PRSSE.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        What is the fee for the Entrance Exam?
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                           data-bs-parent="#accordionExample">
+                           <div class="accordion-body">
+                              <p>The Entrance Exam fee is ₹50, which can be paid online via UPI.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        What subjects will the Entrance Exam cover?
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                           data-bs-parent="#accordionExample">
+                           <div class="accordion-body">
+                              <p>The exam will assess theoretical knowledge, observational skills, and motor skills based on
+                                 the middle school syllabus of Maharashtra State Board and CBSE.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                        What is the annual fee for the program, if a student gets selected?
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                           data-bs-parent="#accordionExample">
+                           <div class="accordion-body">
+                              <p>Annual Fees: ₹6500/- <br>50% concession available for the students from economically weaker sections.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                        How can I get more information?
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                        <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                           data-bs-parent="#accordionExample">
+                           <div class="accordion-body">
+                              For more inquiries, you can contact:
+                              <ul>
+                                 <li>Email: <a href="mailto:prsscienceexploratory@gmail.com">prsscienceexploratory@gmail.com</a>
+                                 </li>
+                                 <li>Phone: 7249811866 (WhatsApp)</li>
+                                 <li>Website: <a
+                                    href="https://www.prsscienceexploratory.in/">www.prsscienceexploratory.in</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                        Is there a lab visit day for interested students/parents?
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                        <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven"
+                           data-bs-parent="#accordionExample">
+                           <div class="accordion-body">
+                              <p>Yes, interested students and parents can visit the exploratory during office hours on
+                                 Saturdays (5 p.m. to 6 p.m.) and Sundays (10 a.m. to 1 p.m.).
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseTwe" aria-expanded="false" aria-controls="collapseTwe">
+                        What are the various competitions where students got benefitted through this training programme?
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                        </button>
+                        <div id="collapseTwe" class="accordion-collapse collapse" aria-labelledby="headingTwe"
+                           data-bs-parent="#accordionExample">
+                           <div class="accordion-body">
+                              <p>Some of the competitions like Dr. Homi Bhabha Balvaidyanik Competition, Vidyathi Vigyaan
+                                 Manthan (VVM), Science Olympiads, Inspire Manak Awards, National Science Exhibitions (CBSE)
+                                 etc.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- ACCORDION NEW -->
+               </div>
+            </section>
+            <section class="newslatter_section">
+               <div class="container">
+                  <div class="newslatter_box" style="background-image: url(assets/images/shape/shape_img_6.svg);">
+                     <div class="row justify-content-center">
+                        <div class="col col-lg-6">
+                           <div class="section_heading text-center">
+                              <h2 class="heading_text">Admission Open</h2>
+                              <p class="heading_description mb-0">Admission to Prof. Rajendra Singh Exploratory is open to all students who have an interest in science. Admissions are fixed in the month of June-July for one year academic session till April.</p>
+                           </div>
+                           <form action="#">
+                              <div class="form_item m-0"> 
+                                 <button type="submit" class="btn btn_dark">
+                                 <span><small>Apply Now</small> <small>Apply Now</small></span>
+                                 </button>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </main>
+         <footer class="site_footer">
+            <div class="footer_widget_area">
+               <div class="container">
+                  <div class="row">
+                     <div class="col col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer_widget">
+                           <h3 class="footer_widget_title">Address</h3>
+                           <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High School, Near Alankar Talkies, North Ambazari road, Nagpur- 440010.</p>
+                           <!--<ul class="social_links unordered_list">-->
+                           <!--    <li>-->
+                           <!--        <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook"><i class="fab fa-facebook-f"></i></a>-->
+                           <!--    </li>-->
+                           <!--    <li>-->
+                           <!--        <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"><i class="fab fa-youtube"></i></a>-->
+                           <!--    </li>-->
+                           <!--    <li>-->
+                           <!--        <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"><i class="fab fa-instagram"></i></a>-->
+                           <!--    </li>-->
+                           <!--<li>-->
+                           <!--    <a href="#!"><i class="fab fa-linkedin-in"></i></a>-->
+                           <!--</li>-->
+                           <!--</ul>-->
+                        </div>
+                     </div>
+                     <div class="col col-lg-4">
+                        <div class="footer_widget" >
+                           <h3 class="footer_widget_title">Social Links</h3>
+                           <ul class="social_links unordered_list">
+                              <li>
+                                 <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook" target="_blank"><img src="assets/images/icon/5365678_fb_facebook_facebook logo_icon.png"/></a><!--<i class="fab fa-facebook-f"></i><i class="fab fa-whatsapp"></i><i class="fab fa-instagram"></i><i class="fab fa-youtube"></i>-->
+                              </li>
+                              <li>
+                                 <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I" target="_blank"><img src="assets/images/icon/410526_youtube_play_icon.png"/></a>
+                              </li>
+                              <li>
+                                 <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4" target="_blank"><img src="assets/images/icon/5296765_camera_instagram_instagram logo_icon.png"/></a>
+                              </li>
+                              <li>
+                                 <a href="https://wa.me/917249811866" target="_blank"><img src="assets/images/icon/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png"/></a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer_widget">
+                           <h3 class="footer_widget_title">Contact Details</h3>
+                           <ul class="blog_small_group unordered_list_block">
+                              <li>
+                                 <a class="blog_small" href="#">
+                                 <span class="item_content">
+                                 <small class="item_post_date">Call : 7249811866</small>
+                                 </span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a class="blog_small" href="#">
+                                 <span class="item_content">
+                                 <small class="item_post_date">Email: prsscienceexploratory@gmail.com </small>
+                                 </span>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright_widget">
+               <div class="container">
+                  <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All rights reserved | Copyrights 2026</p>
+               </div>
+            </div>
+         </footer>
+      </div>
+      <script>
+         // Scroll to top on page load
+         window.scrollTo(0, 0);
+         
+         // Set active navigation item based on current page
+         (function setActiveNav() {
+             var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+         
+             var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
+             navLinks.forEach(function(link) {
+                 var href = link.getAttribute('href');
+                 var linkPage = href.split('?')[0]; // Remove query strings
+         
+                 // Match current page with nav link
+                 if (linkPage === currentPage || 
+                         (currentPage === '' && linkPage === 'index.html')) {
+                     var parentLi = link.closest('li');
+                     if (parentLi) {
+                         parentLi.classList.add('active');
+                     }
+                 }
+             });
+         })();
+      </script>
+      <script src="assets/js/script.js"></script>
+   </body>
 </html>
