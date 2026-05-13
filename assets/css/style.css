@@ -10,7 +10,6 @@
 .glass-card{
   background: rgba(255,255,255,0.15);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.2);
   border-radius: 20px;
 }
 .reveal{
@@ -245,7 +244,7 @@ body > * {
          background: rgba(0, 0, 0, 0.5);
         text-align: center;
         color: #fff;
-        padding: 20px;
+        padding: 25px;
          }
           @media(max-width:768px){ 
             .hero-carousel .carousel-caption { 
@@ -264,7 +263,7 @@ body > * {
          text-transform: capitalize;
          }
          .hero-carousel  .carousel-caption p {
-         font-size: 14px;
+         font-size: 16px;
          line-height:18px;
          color:#fff;
          margin-bottom:0;
@@ -22913,6 +22912,10 @@ blockquote p {
     font-weight: bold;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+}
+.announcement-box:hover {
+    box-shadow: none;
+    transition: all ease-in-out 0.2s;
 }
 
 .announcement-content {
