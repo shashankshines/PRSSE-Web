@@ -10,12 +10,7 @@ html{
   background-color: #fe7b14; /* Custom highlight color */
 }
 
-.glass-card{
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
-}
-.reveal{
+.reveal {
   opacity:0;
   transform: translateY(40px);
   transition: all .8s ease;
@@ -22885,7 +22880,7 @@ blockquote p {
     max-height: 200px;
     /* Adjust scrollable height */
     overflow-y: auto;
-    padding: 30px;
+    padding: 25px;
     overflow: hidden;
 }
 
