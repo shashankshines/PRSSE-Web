@@ -874,10 +874,10 @@ img.icon-insta {
     .site_logo { max-width: 60%; }
 }
 
-.button_group { width: 100%; float: left; margin-top: 20px;}
+.button_group { width: 100%; float: left; margin-top: 20px; }
 .button_group .btn_primary { width: 100%; margin-bottom: 20px; border: 0; background-color: #fe7b14; color: #fff; padding: 4px 15px; }
 @media screen and (max-width:768px) {
-    .button_group { margin-top: 20px !important; }
+    .button_group { margin-top: 10px !important; }
     .button_group .btn_primary { width: 100%;margin-top: 10px; margin-bottom: 0; }
 }   
 .button_group .btn_primary:hover { background-color: #fe7b14; }
@@ -891,15 +891,36 @@ img.icon-insta {
     background: #000;
 }
 
-.yt-video iframe{
+.yt-video iframe {
     width: 100%;
     height: 100%;
     border: none;
 }
 
 .yt-video { width: 100%; float: left; }
-@media screen and (max-width:768px) { 
+@media screen and (max-width:1024px) { 
     .yt-video { margin-top: 20px; }
+}
+
+/* Video on About us */
+.abt-video {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    /* aspect-ratio: 9 / 5; */
+    border-radius: 20px;
+    /* overflow: hidden; */
+    background: #000;
+}
+.abt-video iframe {
+    width: 100%;
+    height:50vh;
+    border: none;
+}
+@media screen and (max-width:1024px) { 
+    .courses_info_section .abt-video { margin-left: 10px; margin-bottom: 20px; }
+    .courses_info_section .l-10 { margin-left: 20px; }
+    .courses_info_section .b-20 { margin-bottom: 30px; }
 }
 
 .btn_wrap {
@@ -2163,9 +2184,15 @@ blockquote p {
 
 /********** ABOUT US PAGE STYLES *******/
 /* SECTION */
+.yt-height { height: 50vh; }
 /* Image Yellow Shadow - Globally */
 .img-cont { margin-left: 30px; }
+@media screen and (max-width:1024px) { 
+    .img-cont { margin-left: 0; }
+}
+
 .img-cont img , .img-cont iframe { border-radius: 20px; box-shadow: -20px 20px 0 0 #ffd32b;  }
+.courses_info_section { width: 95%; margin: 0 auto; }
 .objective-cards-section .section-title {
     text-align:center;
     font-size:54px;
@@ -2182,18 +2209,22 @@ blockquote p {
     color:#5d716c;
     margin-bottom:70px;
 }
-
+.objective-cards-section h3.heading_text { 
+    margin-bottom: 35px;
+}
 /* GRID */
 
-.objective-cards-section .cards-grid{
+.cards-grid {
     display:grid;
     grid-template-columns:repeat(5,1fr);
-    gap:25px;
+    gap: 25px;
 }
-
+@media screen and (max-width:1024px) { 
+    .cards-grid { gap: 20px; }
+}
 /* CARD */
 
-.objective-cards-section .objective-card{
+.objective-card{
     position:relative;
     overflow:hidden;
     padding:20px;
@@ -2203,12 +2234,12 @@ blockquote p {
     border:1px solid rgba(255,255,255,.5);
     box-shadow:0 15px 35px rgba(0,0,0,.06);
     transition:.45s ease;
-    min-height:380px;
+    min-height:300px;
     display:flex;
     flex-direction:column;
 }
 
-.objective-cards-section .objective-card::before{
+.objective-card::before{
     content:'';
     position:absolute;
     width:160px;
@@ -2218,15 +2249,14 @@ blockquote p {
     right:-60px;
     background:rgba(13,92,77,.06);
 }
-
-.objective-cards-section .objective-card:hover{
+.objective-card:hover{
     transform:translateY(-10px);
     box-shadow:0 22px 45px rgba(0,0,0,.08);
 }
 
 /* ICON */
 
-.objective-cards-section .icon-box{
+.icon-box{
     width:72px;
     height:72px;
     border-radius:50%;
@@ -2241,29 +2271,28 @@ blockquote p {
 
 /* INDIVIDUAL COLORS */
 
-.objective-cards-section .card1 .icon-box{
+.card1 .icon-box{
     background:linear-gradient(135deg,#0d5c4d,#1d8a74);
 }
 
-.objective-cards-section .card2 .icon-box{
+.card2 .icon-box{
     background:linear-gradient(135deg,#f27b1a,#ff9c4a);
 }
 
-.objective-cards-section .card3 .icon-box{
+.card3 .icon-box{
     background:linear-gradient(135deg,#246bfd,#4d8fff);
 }
 
-.objective-cards-section .card4 .icon-box{
+.card4 .icon-box{
     background:linear-gradient(135deg,#6b2cff,#9a62ff);
 }
 
-.objective-cards-section .card5 .icon-box{
+.card5 .icon-box{
     background:linear-gradient(135deg,#009688,#26c6b0);
 }
 
 /* CONTENT */
-
-.objective-cards-section .objective-card h3{
+.objective-card h3{
     font-size:22px;
     color:#0d5c4d;
     margin-bottom:18px;
@@ -2271,7 +2300,7 @@ blockquote p {
     font-weight:600;
 }
 
-.objective-cards-section .objective-card p{
+.objective-card p{
     color:#60746f;
     line-height: 24px;
     font-size: 16px;
@@ -18400,7 +18429,7 @@ hr {
 }
 
 .section_space_lg {
-    padding-top: 30px;
+    /* padding-top: 30px; */
     /*120px*/
     padding-bottom: 50px;
     /*120px*/
