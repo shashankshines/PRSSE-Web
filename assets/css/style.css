@@ -18745,34 +18745,6 @@ blockquote p {
     right: 0
 }
 
-.image_widget {
-    overflow: hidden;
-    border-radius: 8px;
-    position: relative;
-    box-shadow: -20px 20px 0 0 #ffd32b
-}
-
-.mfp-iframe-holder .mfp-content {
-    width: 100%;
-    line-height: 0;
-    max-width: 70%
-}
-
-.mfp-container {
-    padding: 0 15px
-}
-
-.mfp-bg {
-    opacity: .9;
-    background: #000
-}
-
-@media screen and (max-width:1199px) {
-    .mfp-iframe-holder .mfp-content {
-        max-width: 100%
-    }
-}
-
 .video_play_btn {
     display: flex;
     align-items: center
