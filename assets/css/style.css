@@ -2301,15 +2301,11 @@ blockquote p {
 
 @media(max-width:600px){
 
-.cards-grid{
+.cards-grid {
     grid-template-columns:1fr;
 }
 
-body{
-    padding:60px 5%;
-}
-
-.section-title{
+.section-title {
     font-size:34px;
 }
 
@@ -18731,7 +18727,8 @@ ol[type="1"]>li:not(:last-child) {
 .section_heading p {
     font-size: 18px;
     font-weight: 400;
-    line-height: 30px
+    line-height: 30px;
+    text-align: justify;
 }
 
 blockquote {
