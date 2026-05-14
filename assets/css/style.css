@@ -2161,6 +2161,162 @@ blockquote p {
     top: 35px
 }
 
+/********** ABOUT US PAGE STYLES *******/
+/* SECTION */
+/* Image Yellow Shadow - Globally */
+.img-cont { margin-left: 30px; }
+.img-cont img , .img-cont iframe { border-radius: 20px; box-shadow: -20px 20px 0 0 #ffd32b;  }
+.objective-cards-section .section-title {
+    text-align:center;
+    font-size:54px;
+    color:#0d5c4d;
+    margin-bottom:18px;
+    font-weight:700;
+}
+
+.section-sub {
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.9;
+    color:#5d716c;
+    margin-bottom:70px;
+}
+
+/* GRID */
+
+.objective-cards-section .cards-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:25px;
+}
+
+/* CARD */
+
+.objective-cards-section .objective-card{
+    position:relative;
+    overflow:hidden;
+    padding:20px;
+    border-radius:20px;
+    background:rgba(255,255,255,.78);
+    backdrop-filter:blur(16px);
+    border:1px solid rgba(255,255,255,.5);
+    box-shadow:0 15px 35px rgba(0,0,0,.06);
+    transition:.45s ease;
+    min-height:380px;
+    display:flex;
+    flex-direction:column;
+}
+
+.objective-cards-section .objective-card::before{
+    content:'';
+    position:absolute;
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    top:-60px;
+    right:-60px;
+    background:rgba(13,92,77,.06);
+}
+
+.objective-cards-section .objective-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 22px 45px rgba(0,0,0,.08);
+}
+
+/* ICON */
+
+.objective-cards-section .icon-box{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    margin-bottom:26px;
+    color:white;
+    box-shadow:0 12px 24px rgba(0,0,0,.12);
+}
+
+/* INDIVIDUAL COLORS */
+
+.objective-cards-section .card1 .icon-box{
+    background:linear-gradient(135deg,#0d5c4d,#1d8a74);
+}
+
+.objective-cards-section .card2 .icon-box{
+    background:linear-gradient(135deg,#f27b1a,#ff9c4a);
+}
+
+.objective-cards-section .card3 .icon-box{
+    background:linear-gradient(135deg,#246bfd,#4d8fff);
+}
+
+.objective-cards-section .card4 .icon-box{
+    background:linear-gradient(135deg,#6b2cff,#9a62ff);
+}
+
+.objective-cards-section .card5 .icon-box{
+    background:linear-gradient(135deg,#009688,#26c6b0);
+}
+
+/* CONTENT */
+
+.objective-cards-section .objective-card h3{
+    font-size:22px;
+    color:#0d5c4d;
+    margin-bottom:18px;
+    line-height:1.3;
+    font-weight:600;
+}
+
+.objective-cards-section .objective-card p{
+    color:#60746f;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1500px){
+
+.cards-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+@media(max-width:992px){
+
+.cards-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.section-title{
+    font-size:42px;
+}
+
+}
+
+@media(max-width:600px){
+
+.cards-grid{
+    grid-template-columns:1fr;
+}
+
+body{
+    padding:60px 5%;
+}
+
+.section-title{
+    font-size:34px;
+}
+
+}
+
+
+
 .pagination_wrap {
     padding-top: 50px
 }
