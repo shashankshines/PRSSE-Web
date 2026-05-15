@@ -881,24 +881,23 @@ img.icon-insta {
 }   
 .button_group .btn_primary:hover { background-color: #fe7b14; }
 /* Youtube Shorts Video */
+
 .yt-video{
+    width: 100%; 
+    float: left;
     position: relative;
-    width: 100%;
-    aspect-ratio: 9 / 12;
+    aspect-ratio: 9 / 14;
     border-radius: 20px;
     overflow: hidden;
     background: #000;
 }
-
+@media screen and (max-width:1024px) { 
+    .yt-video { margin-top: 20px; }
+}
 .yt-video iframe {
     width: 100%;
     height: 100%;
     border: none;
-}
-
-.yt-video { width: 100%; float: left; }
-@media screen and (max-width:1024px) { 
-    .yt-video { margin-top: 20px; }
 }
 
 /* Video on About us */
