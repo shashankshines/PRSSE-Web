@@ -1,150 +1,165 @@
 <!DOCTYPE html>
-<html lang="en"> 
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title>Professor Rajendra Singh Science Exploratory</title>
-        <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg" />
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <style>
-        
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Professor Rajendra Singh Science Exploratory</title>
+    <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <style>
         @media screen and (min-width: 992px) {
-            .sidebarmobile, .mobilemenu-btn {
+
+            .sidebarmobile,
+            .mobilemenu-btn {
                 display: none;
             }
-            
-            .site_logo img{
-              width: 330px;
+
+            .site_logo img {
+                width: 330px;
             }
         }
+
         @media screen and (max-width:425px) {
-            .site_logo img{
+            .site_logo img {
                 width: 280px;
             }
         }
-         @media screen and (max-width: 991px) {
-            .container, .hero_banner.style_1 .container, .site_header .container {
-                 margin-top: 0px !important; 
-            }
-         }
 
-         .img-cont{ box-shadow: none !important }
-         .page_banner .content_wrapper { padding: 0; }
-         
-         .page_banner .content_wrapper {
-         align-items: center;
-         background-image: url("assets/images/banner/success-stories-banner.png");
-         background-color: transparent;
-         background-repeat: no-repeat;
-         background-size: cover;
-         object-fit: cover;
-         background-position: 50% 45%;
-         border-radius: 15px;
-         display: flex;
-         min-height: 300px;
-         padding: 40px 30px;
-         position: relative;
-         overflow: hidden;
-         box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-         animation: fadeIn 0.95s ease both, bannerDrift 10s ease-in-out infinite;
-         }
-         @media screen and (max-width: 991px) {
-         .page_banner .content_wrapper { min-height: 20%; }
-         .page_banner .content_wrapper h1 { font-size: 40px; line-height: 2.8rem; }
-         }
-         .page_banner .internal-banner {
-         background: transparent !important;
-         background-image: none !important;
-         width: 100%;
-         height: auto;
-         }
-         
-         .page_banner .content_wrapper::after {
-         content: "";
-         position: absolute;
-         inset: 0;
-         pointer-events: none;
-         z-index: 1;
-         /* animation: curtainSlide 22s ease-in-out infinite; */
-         }
-         .page_banner .banner_deco {
-         position: absolute;
-         inset: 0;
-         pointer-events: none;
-         z-index: 1;
-         overflow: hidden;
-         }
-         .page_banner .banner_bubble {
-         position: absolute;
-         border-radius: 50%;
-         filter: blur(10px);
-         opacity: 0.55;
-         transform: translate3d(0, 0, 0);
-         }
-        
-         .page_banner .content_wrapper > * {
-         position: relative;
-         z-index: 2;
-         }
-         .page_banner .content_wrapper .page_title,
-         .page_banner .content_wrapper .breadcrumb_nav,
-         .page_banner .content_wrapper .breadcrumb_nav a {
-         color: #fff;
-         }
+        @media screen and (max-width: 991px) {
+
+            .container,
+            .hero_banner.style_1 .container,
+            .site_header .container {
+                margin-top: 0px !important;
+            }
+        }
+
+        .img-cont {
+            box-shadow: none !important
+        }
+
+        .page_banner .content_wrapper {
+            padding: 0;
+        }
+
+        .page_banner .content_wrapper {
+            align-items: center;
+            background-image: url("assets/images/banner/success-stories-banner.png");
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: cover;
+            background-position: 50% 45%;
+            border-radius: 15px;
+            display: flex;
+            min-height: 300px;
+            padding: 40px 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+            animation: fadeIn 0.95s ease both, bannerDrift 10s ease-in-out infinite;
+        }
+
+        @media screen and (max-width: 991px) {
+            .page_banner .content_wrapper {
+                min-height: 20%;
+            }
+
+            .page_banner .content_wrapper h1 {
+                font-size: 40px;
+                line-height: 2.8rem;
+            }
+        }
+
+        .page_banner .internal-banner {
+            background: transparent !important;
+            background-image: none !important;
+            width: 100%;
+            height: auto;
+        }
+
+        .page_banner .content_wrapper::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            /* animation: curtainSlide 22s ease-in-out infinite; */
+        }
+
+        .page_banner .banner_deco {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .page_banner .banner_bubble {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(10px);
+            opacity: 0.55;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .page_banner .content_wrapper>* {
+            position: relative;
+            z-index: 2;
+        }
+
+        .page_banner .content_wrapper .page_title,
+        .page_banner .content_wrapper .breadcrumb_nav,
+        .page_banner .content_wrapper .breadcrumb_nav a {
+            color: #fff;
+        }
     </style>
     <style>
-             .storyclasstb tr td {
+        .storyclasstb tr td {
             border: 1px solid black;
             padding: 10px;
         }
+
         .storyclasstb tr td:nth-child(1) {
             background-color: #7650ff;
             color: white;
             font-weight: bold;
         }
+
         .storyclasstb tr td:nth-child(2) {
             background-color: #ff5072;
             color: white;
             font-weight: bold;
         }
-        </style>
-    </head>
-    <body>
-        <div class="page_wrapper">
-            <div class="backtotop">
-                <a href="#" class="scroll"><i class="far fa-arrow-up"></i></a>
-            </div>
-           <header class="site_header site_header_1">
+    </style>
+</head>
+
+<body>
+    <div class="page_wrapper">
+        <div class="backtotop">
+            <a href="#" class="scroll"><i class="far fa-arrow-up"></i></a>
+        </div>
+        <header class="site_header site_header_1">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col col-lg-3 col-10">
                         <div class="site_logo">
-                            <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt="" ></a>
+                            <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png"
+                                    alt=""></a>
                         </div>
                     </div>
                     <div class="col col-lg-9 col-2">
-                      
+
                         <nav class="main_menu navbar navbar-expand-lg">
                             <div class="main_menu_inner collapse navbar-collapse " id="main_menu_dropdown">
                                 <ul class="main_menu_list unordered_list_center">
                                     <li><a class="nav-link" href="index.html">Home</a></li>
                                     <li><a class="nav-link" href="about.html"><u>About us</u></a></li>
-                                    
                                     <li><a class="nav-link" href="programs.html">Programs</a></li>
-                                    <!--<li class="dropdown">-->
-                                    <!--    <a class="nav-link" href="programs.html" id="blog_submenu" role="button"-->
-                                    <!--        data-bs-toggle="dropdown" aria-expanded="false">Programs</a>-->
-                                    <!--    <ul class="dropdown-menu" aria-labelledby="blog_submenu">-->
-                                    <!--        <li><a href="about_programs.html">About Programs</a></li>-->
-                                    <!--        <li><a href="programs.html">Programs</a></li>-->
-                                    <!--        <li><a href="outcome.html">Programs Outcome</a></li>-->
-
-                                    <!--    </ul>-->
-                                    <!--</li>-->
-                                    <!--<li><a class="nav-link" href="admissions.html">Admissions</a></li>-->
                                     <li><a class="nav-link" href="#">News and Media</a></li>
                                     <li class="dropdown">
                                         <a class="nav-link" href="#" id="blog_submenu" role="button"
@@ -158,336 +173,346 @@
                                     </li>
                                     <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
                                     <li><a class="nav-link" href="contact.html">Contact Us</a></li>
-                                    <!-- <li><a class="nav-link" href="notices.html"><u>Notices</u></a></li> -->
                                 </ul>
                             </div>
                         </nav>
                         <!-- Mobile Hamburger Menu (visible only on small screens) -->
-                        <button aria-expanded="false" aria-controls="sidebarMenumobile" aria-label="Toggle menu" type="button" class="mobilemenu-btn d-lg-none" ><span></span><span></span><span></span></button>
+                        <button aria-expanded="false" aria-controls="sidebarMenumobile" aria-label="Toggle menu"
+                            type="button"
+                            class="mobilemenu-btn d-lg-none"><span></span><span></span><span></span></button>
                     </div>
                 </div>
             </div>
         </header>
         <!-- Sidebar Menu (for mobile) -->
-            <div id="sidebarMenumobile" class="sidebarmobile">
-                <button type="button" class="closebtn" aria-label="Close menu">×</button>
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="exploratory.html">Exploratory Perks</a>
-                
-                <!-- Dropdown (Mobile) -->
-                <a href="programs.html">Programs</a>
-                <!--<div class="dropdownmobile">-->
-                <!--    <a href="#" class="dropdownmobile-toggle" >Programs <i class="dropdownmobilearrow-icon"></i></a>-->
-                <!--    <ul class="dropdownmobile-menu">-->
-                <!--        <li><a href="about_programs.html">About Programs</a></li>-->
-                <!--        <li><a href="programs.html">Programs</a></li>-->
-                <!--        <li><a href="outcome.html">Programs Outcome</a></li>-->
-                <!--    </ul>-->
-                <!--</div>-->
-            
-                <a href="admissions.html">Admissions</a>
-            
-                <!-- Dropdown (Mobile) -->
-                <div class="dropdownmobile">
-                    <a href="#" class="dropdownmobile-toggle" >Knowledge <i class="dropdownmobilearrow-icon"></i></a>
-                    <ul class="dropdownmobile-menu">
-                        <li><a href="great-minds.html">Great Minds</a></li>
-                        <li><a href="indian-scientist.html">Indian Scientist</a></li>
-                        <li><a href="top-iit.html">Institutes of India</a></li>
-                    </ul>
-                </div>
-            
-                <a href="contact.html">Contact Us</a>
-                <!-- <a href="notices.html">Notices</a> -->
+        <div id="sidebarMenumobile" class="sidebarmobile">
+            <button type="button" class="closebtn" aria-label="Close menu">x</button>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="exploratory.html">Exploratory Perks</a>
+
+            <!-- Dropdown (Mobile) -->
+            <a href="programs.html">Programs</a>
+
+            <a href="admissions.html">Admissions</a>
+
+            <!-- Dropdown (Mobile) -->
+            <div class="dropdownmobile">
+                <a href="#" class="dropdownmobile-toggle">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
+                <ul class="dropdownmobile-menu">
+                    <li><a href="great-minds.html">Great Minds</a></li>
+                    <li><a href="indian-scientist.html">Indian Scientist</a></li>
+                    <li><a href="top-iit.html">Institutes of India</a></li>
+                </ul>
             </div>
-            
-            <!-- Overlay (for closing sidebar when clicking outside) -->
-            <div id="menuOverlay" class="menu-overlay" ></div><main class="page_content">
-                <section class="page_banner">
-                    <div class="container">
-                        <div class="content_wrapper">
-                            <div class="row align-items-center">
-                                <div class="col col-lg-12">
-                                    <!-- <ul class="breadcrumb_nav unordered_list">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li>Success Stories (Academic Session 2024-25)</li>
-                                    </ul> -->
-                                    <h1 class="page_title">Success Stories</h1>
-                                </div>
+
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <!-- Overlay (for closing sidebar when clicking outside) -->
+        <div id="menuOverlay" class="menu-overlay"></div>
+        <main class="page_content">
+            <section class="page_banner">
+                <div class="container">
+                    <div class="content_wrapper">
+                        <div class="row align-items-center">
+                            <div class="col col-lg-12">
+                                <h1 class="page_title">Success Stories</h1>
                             </div>
                         </div>
                     </div>
-                </section>
-                
+                </div>
+            </section>
+
             <style>
-            .meta_info_list li{list-item:none;font-size:16px;}
-            .meta_info_list li::marker{font-size:0;}
-                    /* ===== SCROLL REVEAL ANIMATIONS - REMOVED ===== */
-</style>
+                .meta_info_list li {
+                    list-item: none;
+                    font-size: 16px;
+                }
+
+                .meta_info_list li::marker {
+                    font-size: 0;
+                }
+
+                /* ===== SCROLL REVEAL ANIMATIONS - REMOVED ===== */
+            </style>
             <section class="courses_info_section section_space_lg">
-                    <div class="container">
-                        <!--<h2 style="text-align: center;">Success Stores</h2>-->
-                       <h4 class="heading_text">Success Stories in Science &amp; Technology</h4>
-                        <p>Students succeed in National competitions in science and technology like Homi Bhabha Balvaidnyanik
-                            Competition, NMTC, Science Olympiad, Vidyarthi Vigyaan Manthan, etc.</p>
-                      
-                        
-                        
-                            <center><div class="img-cont" style="margin-bottom: 25px;"><img src="assets/images/success-bnr.jpg" alt="Success Stories from the current academic session"></div></center>
-                            <center><div class="img-cont" style="margin-bottom: 25px;"><img src="assets/images/success-bnr1.jpg" alt="Success Stories from the current academic session"></div></center>
+                <div class="container">
+                    <!--<h2 style="text-align: center;">Success Stores</h2>-->
+                    <h4 class="heading_text mt-3">Success Stories in Science &amp; Technology</h4>
+                    <p>Students succeed in National competitions in science and technology like Homi Bhabha
+                        Balvaidnyanik
+                        Competition, NMTC, Science Olympiad, Vidyarthi Vigyaan Manthan, etc.</p>
 
+                    <div class="img-cont" style="margin-bottom: 25px;"><img src="assets/images/success-bnr.jpg"
+                            alt="Success Stories from the current academic session"></div>
+                    <div class="img-cont" style="margin-bottom: 25px;"><img src="assets/images/success-bnr1.jpg"
+                            alt="Success Stories from the current academic session"></div>
 
-                        <h4 style="text-align: center;color: #7650ff;">Students selected for 3rd phase of Dr. Homi Bhabha Balvaigyanik Spardha (6th class)
-                        </h4>
-                        <p style="text-align: center;font-size: medium;">
-                            Rishika Tawri<br>
-                            Shourya Pujari<br>
-                            Ishaan Todkari<br>
-                            Atharva Joshi<br>
-                        </p>
-                            <h4 style="text-align: center;color: #7650ff;">Qualified for Dr Homi Bhabha Balvaidyanik spardha Level 2 (9th class)</h4>
-                             <p style="text-align: center;font-size: medium;">Bhargav Panurkar</p>
-                        <br>
+                    <h4 style="text-align: center;color: #7650ff;">Students selected for 3rd phase of Dr. Homi Bhabha
+                        Balvaigyanik Spardha (6th class)
+                    </h4>
+                    <p style="text-align: center;font-size: medium;">
+                        Rishika Tawri<br>
+                        Shourya Pujari<br>
+                        Ishaan Todkari<br>
+                        Atharva Joshi<br>
+                    </p>
+                    <h4 style="text-align: center;color: #7650ff;">Qualified for Dr Homi Bhabha Balvaidyanik spardha
+                        Level 2 (9th class)</h4>
+                    <p style="text-align: center;font-size: medium;">Bhargav Panurkar</p>
+                    <br>
 
-                        <h4 style="text-align: center;color: #7650ff;">Success Stories
-                            <!-- #7650ff #ff5072 #ff5050 -->
-                        </h4>
-                        <br>
-                        
-                        <table style="width: 80%;margin: auto;" class="storyclasstb">
-                            <tr>
-                                <td class="col-3">Aditya Ranjan(8th)</td>
-                                <td class="col-8">Won Regional CBSE Science Exhibition 2024 and qualified for Final CBSE National at
-                                    Gurugram.</td>
-                            </tr>
-                            <tr>
-                                <td>Afiya Aftab
-                                    Kirti Yerunkar(6th)</td>
-                                <td>Qualified for the Final level of Dr. Homi Bhabha Young Scientist Competition 2024-25.</td>
-                            </tr>
-                            <tr>
-                                <td>Shrigouri Bedekar
-                                    Nirmayee Nadamwar
-                                    Kirti Yerunkar (6th)
-                                </td>
-                                <td>IWSA Indian Women Scientists Association GANIT Pratiyogita 2024</td>
-                            </tr>
-                            <tr>
-                                <td>Vanshika Rathi (7th)</td>
-                                <td>Qualified first level NMTC Exam 2024</td>
-                            </tr>
-                            <tr>
-                                <td>Rasika Telang
-                                    Afiya Aftab
-                                    Kirti Yerunkar
-                                    Vedant Joshi
-                                    Shripad Topare
-                                    Soumya Thakare
-                                </td>
-                                <td>Qualified for the Second level of
-                                    Dr. Homi Bhabha Young Scientist Competition(6th) 2024-25
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Laksh Vasayani
-                                    Narayani Patil
-                                    Pranav Sarode
-                                </td>
-                                <td>Qualified for the Second level of
-                                    Dr. Homi Bhabha Young Scientist Competition( 9th) 2024-25
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Aditya Ranjan(8th)</td>
-                                <td>Ist in AXIS 2024 Ex-quizit conducted by VNIT Nagpur</td>
-                            </tr>
-                            <tr>
-                                <td>Shourya Yogesh Kunte (7th)</td>
-                                <td>Gold medal of excellence in NSO 2024</td>
-                            </tr>
-                            <tr>
-                                <td>Anveeta Bhute 8th
-                                    Aaradhya Bhutada
-                                    </td>
-                                <td>Qualified state level camp of Vidyarthi Vigyan Manthan 2024</td>
-                            </tr>
-                            <tr>
-                                <td>Ananya Vyavhare (8th IJSO)</td>
-                                <td>Selected for Anweshna 2026 (Education Research Project)</td>
-                            </tr>
-                            <tr>
-                                <td>Omkar Vikrant Vaidya (6th HB1)</td>
-                                <td>Indian Space Science Olympiad – Qualified for 2nd level and all India 8th in Junior Category</td>
-                            </tr>
-                            <tr>
-                                <td>Rishika Kalpesh Tawari  (6th HB1)</td>
-                                <td>National Science Olympiad</td>
-                            </tr>
-                            <tr>
-                                <td>Aaradhya Abhay Kulkarni (6th)</td>
-                                <td>1) International Mathematics Olympiad 2025-26
+                    <h4 style="text-align: center;color: #7650ff;">Success Stories
+                        <!-- #7650ff #ff5072 #ff5050 -->
+                    </h4>
+                    <br>
+
+                    <table style="width: 80%;margin: auto;" class="storyclasstb">
+                        <tr>
+                            <td class="col-3">Aditya Ranjan(8th)</td>
+                            <td class="col-8">Won Regional CBSE Science Exhibition 2024 and qualified for Final CBSE
+                                National at
+                                Gurugram.</td>
+                        </tr>
+                        <tr>
+                            <td>Afiya Aftab
+                                Kirti Yerunkar(6th)</td>
+                            <td>Qualified for the Final level of Dr. Homi Bhabha Young Scientist Competition 2024-25.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Shrigouri Bedekar
+                                Nirmayee Nadamwar
+                                Kirti Yerunkar (6th)
+                            </td>
+                            <td>IWSA Indian Women Scientists Association GANIT Pratiyogita 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Vanshika Rathi (7th)</td>
+                            <td>Qualified first level NMTC Exam 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Rasika Telang
+                                Afiya Aftab
+                                Kirti Yerunkar
+                                Vedant Joshi
+                                Shripad Topare
+                                Soumya Thakare
+                            </td>
+                            <td>Qualified for the Second level of
+                                Dr. Homi Bhabha Young Scientist Competition(6th) 2024-25
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Laksh Vasayani
+                                Narayani Patil
+                                Pranav Sarode
+                            </td>
+                            <td>Qualified for the Second level of
+                                Dr. Homi Bhabha Young Scientist Competition( 9th) 2024-25
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Aditya Ranjan(8th)</td>
+                            <td>Ist in AXIS 2024 Ex-quizit conducted by VNIT Nagpur</td>
+                        </tr>
+                        <tr>
+                            <td>Shourya Yogesh Kunte (7th)</td>
+                            <td>Gold medal of excellence in NSO 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Anveeta Bhute 8th
+                                Aaradhya Bhutada
+                            </td>
+                            <td>Qualified state level camp of Vidyarthi Vigyan Manthan 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Ananya Vyavhare (8th IJSO)</td>
+                            <td>Selected for Anweshna 2026 (Education Research Project)</td>
+                        </tr>
+                        <tr>
+                            <td>Omkar Vikrant Vaidya (6th HB1)</td>
+                            <td>Indian Space Science Olympiad – Qualified for 2nd level and all India 8th in Junior
+                                Category</td>
+                        </tr>
+                        <tr>
+                            <td>Rishika Kalpesh Tawari (6th HB1)</td>
+                            <td>National Science Olympiad</td>
+                        </tr>
+                        <tr>
+                            <td>Aaradhya Abhay Kulkarni (6th)</td>
+                            <td>1) International Mathematics Olympiad 2025-26
                                 (Gold Medal of Excellence).<br>
                                 2) National Science Olympiad 2025-26<br> (Gold Medal of Excellence).<br>
                                 3) AMTI – National Mathematics Talent Contest.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Nirmay Tulshan (7th LTP)</td>
-                                <td>VNIT's ARDUINO EXPO 3RD PRIZE</td>
-                            </tr>
-                            <tr>
-                                <td>Yash H Adhau (9th HB2)</td>
-                                <td>Qualified for the national-level CBSE science competition at NEW Delhi.</td>
-                            </tr>
-                            <tr>
-                                <td>AFIYA AFTAB (7th LTP)</td>
-                                <td>Qualified for 2nd level International Maths Olympiad (IMO) and National Science Olympiad (NSO) of Science Olympiad Foundation (SOF)</td>
-                            </tr>
-                            <tr>
-                                <td>Ojas Sonkusare (8th IJSO)</td>
-                                <td>Qualified for IMO 2nd level and won gold medal in IMO and IEO. Also got 1st rank trophy in U15 category in chess tournament.</td>
-                            </tr>
-                            <tr>
-                                <td>Shaurya Pujari</td>
-                                <td>1) Qualified for renowned Dr Homi Bhabha Balvaidyanik spardha Phase 2. <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Nirmay Tulshan (7th LTP)</td>
+                            <td>VNIT's ARDUINO EXPO 3RD PRIZE</td>
+                        </tr>
+                        <tr>
+                            <td>Yash H Adhau (9th HB2)</td>
+                            <td>Qualified for the national-level CBSE science competition at NEW Delhi.</td>
+                        </tr>
+                        <tr>
+                            <td>AFIYA AFTAB (7th LTP)</td>
+                            <td>Qualified for 2nd level International Maths Olympiad (IMO) and National Science Olympiad
+                                (NSO) of Science Olympiad Foundation (SOF)</td>
+                        </tr>
+                        <tr>
+                            <td>Ojas Sonkusare (8th IJSO)</td>
+                            <td>Qualified for IMO 2nd level and won gold medal in IMO and IEO. Also got 1st rank trophy
+                                in U15 category in chess tournament.</td>
+                        </tr>
+                        <tr>
+                            <td>Shaurya Pujari</td>
+                            <td>1) Qualified for renowned Dr Homi Bhabha Balvaidyanik spardha Phase 2. <br>
                                 2) Reached the State level camp in VVM in 6th std.<br>
                                 3) Got merit certificates for NSO and IMO for school rank in all classes.<br>
                                 4) District rank first in Maharashtra Scholarship exam.<br>
                                 5) 9th rank in state level and 31st rank in national level of spell bee in 6th std.</td>
-                            </tr>
-                            
-                        </table>
-                        <br><br>
+                        </tr>
 
-                            <h4 style="text-align: center;color: #7650ff;">Reach us:</h4>
-                            <p style="text-align: center;font-size: medium;">Prof. Rajendra Singh Science Exploratory, <br>2nd floor Tarkunde Dharampeth High School, <br>Near Shankar Nagar Metro Station, <br>North Ambazari Road, Nagpur - 440010</p>
+                    </table>
+                    <br><br>
 
-                            <br><br>
+                    <h4 style="text-align: center;color: #7650ff;">Reach us:</h4>
+                    <p style="text-align: center;font-size: medium;">Prof. Rajendra Singh Science Exploratory, <br>2nd
+                        floor Tarkunde Dharampeth High School, <br>Near Shankar Nagar Metro Station, <br>North Ambazari
+                        Road, Nagpur - 440010</p>
 
-                            
-                       
-                    </div>
-                </section>
-                <section class="newslatter_section">
-                    <div class="container">
-                        <div class="newslatter_box" style="background-image: url(assets/images/shape/shape_img_6.svg);">
-                            <div class="row justify-content-center">
-                                <div class="col col-lg-6">
-                                    <div class="section_heading text-center">
-                                        <h2 class="heading_text">Admission Open</h2>
-                                        <p class="heading_description mb-0">Admission to Prof. Rajendra Singh Exploratory is open to all students who have an interest in science. Admissions are fixed in the month of June-July for one year academic session till April.</p>
-                                    </div>
-                                    <form action="#">
-                                        <div class="form_item m-0"> 
-                                            <button type="submit" class="btn btn_dark">
-                                                <span><small>Apply Now</small> <small>Apply Now</small></span>
-                                            </button>
-                                        </div>
-                                    </form>
+                    <br><br>
+
+                </div>
+            </section>
+            <section class="newslatter_section">
+                <div class="container">
+                    <div class="newslatter_box" style="background-image: url(assets/images/shape/shape_img_6.svg);">
+                        <div class="row justify-content-center">
+                            <div class="col col-lg-6">
+                                <div class="section_heading text-center">
+                                    <h2 class="heading_text">Admission Open</h2>
+                                    <p class="heading_description mb-0">Admission to Prof. Rajendra Singh Exploratory is
+                                        open to all students who have an interest in science. Admissions are fixed in
+                                        the month of June-July for one year academic session till April.</p>
                                 </div>
+                                <form action="#">
+                                    <div class="form_item m-0">
+                                        <button type="submit" class="btn btn_dark">
+                                            <span><small>Apply Now</small> <small>Apply Now</small></span>
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
-                </section>
-            </main>
-            <footer class="site_footer">
+                </div>
+            </section>
+        </main>
+        <footer class="site_footer">
             <div class="footer_widget_area">
-               <div class="container">
-                  <div class="row">
-                     <div class="col col-lg-4 col-md-6 col-sm-6">
-                        <div class="footer_widget">
-                           <h3 class="footer_widget_title">Address</h3>
-                           <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High School, Near Alankar Talkies, North Ambazari road, Nagpur- 440010.</p>
-                          
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Address</h3>
+                                <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
+                                    School, Near Alankar Talkies, North Ambazari road, Nagpur- 440010.</p>
+
+                            </div>
                         </div>
-                     </div>
-                     <div class="col col-lg-4">
-                        <div class="footer_widget" >
-                           <h3 class="footer_widget_title">Social Links</h3>
-                           <ul class="social_links unordered_list">
-                              <li>
-                                 <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook" target="_blank">
-                                    <!-- <img src="assets/images/icon/5365678_fb_facebook_facebook logo_icon.png"/> -->
-                                      <i class="fab fa-facebook-f"></i>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I" target="_blank">
-                                    <!-- <img src="assets/images/icon/410526_youtube_play_icon.png"/> -->
-                                    <i class="fab fa-youtube"></i>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4" target="_blank">
-                                    <!-- <img src="assets/images/icon/5296765_camera_instagram_instagram logo_icon.png"/> -->
-                                    <i class="fab fa-instagram"></i>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="https://wa.me/917249811866" target="_blank">
-                                    <!-- <img src="assets/images/icon/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png"/> -->
-                                      <i class="fab fa-whatsapp"></i>
-                                 </a>
-                              </li>
-                           </ul>
+                        <div class="col col-lg-4">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Social Links</h3>
+                                <ul class="social_links unordered_list">
+                                    <li>
+                                        <a href="https://www.facebook.com/profile.php?id=100094309040998"
+                                            name="facebook" target="_blank">
+                                            <!-- <img src="assets/images/icon/5365678_fb_facebook_facebook logo_icon.png"/> -->
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"
+                                            target="_blank">
+                                            <!-- <img src="assets/images/icon/410526_youtube_play_icon.png"/> -->
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
+                                            target="_blank">
+                                            <!-- <img src="assets/images/icon/5296765_camera_instagram_instagram logo_icon.png"/> -->
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wa.me/917249811866" target="_blank">
+                                            <!-- <img src="assets/images/icon/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png"/> -->
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                     </div>
-                     <div class="col col-lg-4 col-md-6 col-sm-6">
-                        <div class="footer_widget">
-                           <h3 class="footer_widget_title">Contact Details</h3>
-                           <ul class="blog_small_group unordered_list_block">
-                              <li>
-                                 <a class="blog_small" href="#">
-                                 <span class="item_content">
-                                 <small class="item_post_date">Call : +917249811866</small>
-                                 </span>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a class="blog_small" href="#">
-                                 <span class="item_content">
-                                 <small class="item_post_date">Email: prsscienceexploratory@gmail.com </small>
-                                 </span>
-                                 </a>
-                              </li>
-                           </ul>
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Contact Details</h3>
+                                <ul class="blog_small_group unordered_list_block">
+                                    <li>
+                                        <a class="blog_small" href="#">
+                                            <span class="item_content">
+                                                <small class="item_post_date">Call : +917249811866</small>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="blog_small" href="#">
+                                            <span class="item_content">
+                                                <small class="item_post_date">Email: prsscienceexploratory@gmail.com
+                                                </small>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
             <div class="copyright_widget">
-               <div class="container">
-                  <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All rights reserved | Copyrights 2026</p>
-               </div>
+                <div class="container">
+                    <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All
+                        rights reserved | Copyrights 2026</p>
+                </div>
             </div>
-         </footer>
-        </div>
-        <script src="assets/js/script.js"></script>
-        <script>
-          // Set active navigation item based on current page
-          (function setActiveNav() {
+        </footer>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Set active navigation item based on current page
+        (function setActiveNav() {
             var currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            
             var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
             navLinks.forEach(function(link) {
-              var href = link.getAttribute('href');
-              var linkPage = href.split('?')[0]; // Remove query strings
-              
-              // Match current page with nav link
-              if (linkPage === currentPage || 
-                  (currentPage === '' && linkPage === 'index.html')) {
-                var parentLi = link.closest('li');
-                if (parentLi) {
-                  parentLi.classList.add('active');
+                var href = link.getAttribute('href');
+                var linkPage = href.split('?')[0]; // Remove query strings
+                // Match current page with nav link
+                if (linkPage === currentPage ||
+                    (currentPage === '' && linkPage === 'index.html')) {
+                    var parentLi = link.closest('li');
+                    if (parentLi) {
+                        parentLi.classList.add('active');
+                    }
                 }
-              }
             });
-          })();
-        </script>
-            <script>
-          // Optimized Scroll Reveal Animation
-        </script>
-</body> 
+        })();
+    </script>
+    <script>
+        // Optimized Scroll Reveal Animation
+    </script>
+</body>
+
 </html>

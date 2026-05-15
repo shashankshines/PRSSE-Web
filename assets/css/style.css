@@ -2174,11 +2174,11 @@ blockquote p {
 }
 
 .accordion.style_2 .accordion-item:has(.accordion_item_checked) {
-    padding-left: 25px
+    padding-left: 25px;
 }
 
 .accordion.style_2 .accordion-item:has(.accordion_item_checked) .accordion_item_checked {
-    top: 35px
+    top: 35px;
 }
 
 /********** ABOUT US PAGE STYLES *******/
@@ -2186,11 +2186,11 @@ blockquote p {
 .yt-height { height: 50vh; }
 /* Image Yellow Shadow - Globally */
 .img-cont { margin-left: 30px; }
-@media screen and (max-width:1024px) { 
+@media screen and (max-width:1024px) {
     .img-cont { margin-left: 0; }
 }
 
-.img-cont img , .img-cont iframe { border-radius: 20px; box-shadow: -15px 15px 0 0 rgba(255, 211, 43, .7);  }
+.img-cont img , .img-cont iframe { border-radius: 20px; box-shadow: -15px 15px 0 0 rgba(255, 211, 43, .7); }
 .courses_info_section { width: 95%; margin: 0 auto; }
 .objective-cards-section .section-title {
     text-align:center;
@@ -4761,6 +4761,7 @@ blockquote p {
     .section_heading .heading_text {
         font-size: 26px;
         line-height: 30px;
+        margin-top: 0 !important;
     }
     .advertisement_section .images_group .shape_img_1 {
         left: -78px;
