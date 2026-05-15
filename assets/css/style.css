@@ -1489,13 +1489,12 @@ blockquote p {
     right: 0
 }
 
-.image_widget {
+/* .image_widget {
     overflow: hidden;
     border-radius: 8px;
     position: relative;
-    box-shadow: -20px 20px 0 0 #ffd32b;
-    /* margin-left: 30px; */
-}
+    box-shadow: -15px 15px 0 0 #ffd32b;
+} */
 
 .mfp-iframe-holder .mfp-content {
     width: 100%;
@@ -2191,7 +2190,7 @@ blockquote p {
     .img-cont { margin-left: 0; }
 }
 
-.img-cont img , .img-cont iframe { border-radius: 20px; box-shadow: -20px 20px 0 0 #ffd32b;  }
+.img-cont img , .img-cont iframe { border-radius: 20px; box-shadow: -15px 15px 0 0 rgba(255, 211, 43, .7);  }
 .courses_info_section { width: 95%; margin: 0 auto; }
 .objective-cards-section .section-title {
     text-align:center;
@@ -5048,7 +5047,7 @@ blockquote p {
         margin-bottom: 10px
     }
     .site_footer .footer_widget_area {
-        padding: 20px 0;
+        padding: 20px 10px;
     }
     .newslatter_box {
         padding: 90px 40px
