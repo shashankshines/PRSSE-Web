@@ -4761,6 +4761,7 @@ blockquote p {
     .section_heading .heading_text {
         font-size: 26px;
         line-height: 30px;
+        margin-top: 0 !important;
     }
     .advertisement_section .images_group .shape_img_1 {
         left: -78px;
