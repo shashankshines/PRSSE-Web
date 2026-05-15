@@ -246,7 +246,7 @@ body > * {
          }
           @media(max-width:768px){ 
             .hero-carousel .carousel-caption { 
-                padding: 10px;
+                padding: 15px;
             }
           }
          .hero-carousel .carousel-caption h1 {
@@ -254,7 +254,6 @@ body > * {
          font-weight:700;
          line-height:24px;
          background:linear-gradient(90deg,#ffffff,#00f7ff,#a081ff);
-         
          background-clip: text;
          -webkit-background-clip:text;
          -webkit-text-fill-color:transparent;
@@ -262,7 +261,7 @@ body > * {
          }
          .hero-carousel  .carousel-caption p {
          font-size: 16px;
-         line-height:18px;
+         line-height:22px;
          color:#fff;
          margin-bottom:0;
          }
