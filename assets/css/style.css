@@ -447,10 +447,10 @@ body > * {
         margin: 0;
     }
  } */
-p.heading_description { margin-right: 80px; }
+/* p.heading_description { margin-right: 80px; }
 @media screen and (max-width:1024px) { 
     p.heading_description { margin-right: 0; }
-}
+} */
 
 .banner_image_1 {
     z-index: 1;
