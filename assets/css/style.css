@@ -447,7 +447,7 @@ body > * {
         margin: 0;
     }
  } */
-p.heading_description { margin-right: 30px; }
+p.heading_description { margin-right: 80px; }
 @media screen and (max-width:1024px) { 
     p.heading_description { margin-right: 0; }
 }
