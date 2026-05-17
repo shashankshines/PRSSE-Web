@@ -2187,9 +2187,9 @@ blockquote p {
 /* SECTION */
 .yt-height { height: 50vh; }
 /* Image Yellow Shadow - Globally */
-/* .img-cont { margin-left: 30px; } */
+.img-cont { margin-left: 30px; }
 @media screen and (max-width:1024px) {
-    .img-cont { margin-left: 0; }
+    .img-cont { margin-left: 10px; }
 }
 
 .img-cont img , .img-cont iframe { border-radius: 20px; box-shadow: -15px 15px 0 0 rgba(255, 211, 43, .7); }
@@ -3800,7 +3800,6 @@ blockquote p {
 .site_logo,
 .site_logo a,
 .site_logo a:hover {
-    font-family: Barlow, sans-serif;
     font-weight: 700;
     font-size: 24px;
     color: #1f1d0d;
@@ -3976,7 +3975,11 @@ blockquote p {
 .site_footer .site_logo {
     margin-bottom: 35px
 }
-
+@media screen and (max-width: 1024px) {
+    .site_logo img {
+        width: 280px;
+    }
+}
 .site_footer .footer_widget_area {
     /*padding: 130px 0 108px*/
     padding: 60px 0 10px
