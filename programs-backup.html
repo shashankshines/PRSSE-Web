@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Professor Rajendra Singh Science Exploratory</title>
+    <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <style>
+        @media screen and (min-width: 992px) {
+
+            .sidebarmobile,
+            .mobilemenu-btn {
+                display: none;
+            }
+        }
+
+        .page_banner .content_wrapper {
+            align-items: center;
+            background-image: url("assets/images/banner/program-overview-banner.png");
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 100%;
+            border-radius: 15px;
+            display: flex;
+            min-height: 300px;
+            padding: 50px 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+            animation: fadeIn 1s ease both, bannerDrift 12s ease-in-out infinite;
+        }
+
+        @media screen and (max-width: 425px) {
+            .page_banner .content_wrapper {
+                min-height: auto;
+            }
+        }
+
+        .page_banner .internal-banner {
+            background: transparent !important;
+            background-image: none !important;
+            width: 100%;
+            height: auto;
+        }
+
+        .page_banner .content_wrapper::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-size: 300% 100%;
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 1;
+            animation: curtainSlide 22s ease-in-out infinite;
+        }
+
+        .page_banner .banner_deco {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .page_banner .banner_bubble {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(10px);
+            opacity: 0.55;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .page_banner .bubble-1 {
+            width: 160px;
+            height: 160px;
+            background: rgba(255, 255, 255, 0.12);
+            top: 15%;
+            left: 10%;
+            animation: bubbleDrift1 18s ease-in-out infinite;
+        }
+
+        .page_banner .bubble-2 {
+            width: 110px;
+            height: 110px;
+            background: rgba(255, 255, 255, 0.10);
+            top: 55%;
+            right: 12%;
+            animation: bubbleDrift2 20s ease-in-out infinite;
+        }
+
+        .page_banner .bubble-3 {
+            width: 220px;
+            height: 220px;
+            background: rgba(255, 255, 255, 0.08);
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bubbleDrift3 24s ease-in-out infinite;
+        }
+
+        .page_banner .content_wrapper>* {
+            position: relative;
+            z-index: 2;
+        }
+
+        .page_banner .content_wrapper .page_title {
+            color: #fff;
+        }
+
+        .page_banner .content_wrapper .breadcrumb_nav li {
+            opacity: 0.9;
+        }
+
+        .section-subtitle {
+            font-size: 1.75rem;
+            font-family: "Poppins", Arial, sans-serif;
+            color: #000;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card .card-body:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card .card-body .card-title {
+            font-weight: 600;
+            color: #2c3e50 !important;
+        }
+
+        .outcomes-list li,
+        .events-list li {
+            margin-bottom: 10px;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .outcomes-list li::before,
+        .events-list li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #0d6efd;
+            font-weight: bold;
+        }
+
+        /*  */
+        /* Cards Grid */
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 35px;
+        }
+
+        .card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(10px);
+            border-radius: 28px;
+            padding: 30px 10%;
+            text-align: center;
+            transition: 0.35s ease;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            overflow: hidden;
+            min-height: 320px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #ff9800, #ffcc33, #4caf50);
+        }
+
+        .icon-box {
+            width: 85px;
+            height: 85px;
+            margin: auto;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #6aa65d, #5d8e4c);
+            color: #fff;
+            font-size: 26px;
+            margin-bottom: 28px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 18px;
+            line-height: 1.4;
+            color: #1e1e1e;
+        }
+
+        .card p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.65;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 9px 18px;
+            background: #fff4dd;
+            color: #ff7a00;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+
+        @media(max-width:768px) {
+
+            .heading h1 {
+                font-size: 38px;
+            }
+
+            .heading p {
+                font-size: 15px;
+            }
+
+            .card {
+                padding: 35px 24px;
+            }
+
+            .card h3 {
+                font-size: 21px;
+            }
+
+        }
+
+        /* Responsive tab styling */
+        .tabs-structure-container {
+            margin-top: 38px;
+            margin-bottom: 38px;
+        }
+
+        .custom-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            align-items: stretch;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(34, 34, 34, 0.08);
+            border-radius: 22px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.05);
+        }
+
+        .custom-tabs .nav-item {
+            flex: 1 1 230px;
+            min-width: 160px;
+        }
+
+        .custom-tabs .nav-link {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            white-space: normal;
+            text-align: center;
+            padding: 14px 18px;
+            border-radius: 16px;
+            border: 1px solid transparent;
+            background: linear-gradient(180deg, #fbf8f1 0%, #e7ecc0 100%);
+            color: #242218;
+            font-weight: 700;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+            box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+        }
+
+        .custom-tabs .nav-link:hover,
+        .custom-tabs .nav-link:focus {
+            background: linear-gradient(135deg, #0d5c4d 0%, #1a8570 100%);
+            color: #fff;
+            transform: translateY(-1px);
+            border-color: rgba(13, 110, 253, 0.2);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+            outline: none;
+            transition: background-color 0.3s linear;
+        }
+
+        .custom-tabs .nav-link.active {
+            background: linear-gradient(135deg, #0d5c4d 0%, #1a8570 100%);
+            color: #fff;
+            border-color: transparent;
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
+            transform: translateY(-1px);
+            position: relative;
+            z-index: 2;
+        }
+
+        .custom-tabs .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30%;
+            height: 5px;
+            border-radius: 999px;
+            background: #ff9800;
+            box-shadow: 0 6px 16px rgba(255, 152, 0, 0.35);
+        }
+
+        .custom-tabs .nav-link.active i,
+        .custom-tabs .nav-link i {
+            font-size: 20px;
+        }
+
+        .tab-content-box {
+            background: rgba(255, 255, 255, .5);
+            border-radius: 24px;
+            border: 1px solid rgba(221, 221, 221, 0.9);
+            padding: 20px 20px 45px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            margin-top: 10px;
+        }
+
+        @media(max-width:992px) {
+            .custom-tabs .nav-item {
+                flex: 1 1 45%;
+            }
+
+            .custom-tabs .nav-link {
+                padding: 12px 14px;
+            }
+
+            .tab-content-box {
+                padding: 22px 20px;
+            }
+        }
+
+        @media(max-width:576px) {
+            .custom-tabs {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .custom-tabs .nav-item {
+                flex: 1 1 100%;
+                min-width: auto;
+            }
+
+            .custom-tabs .nav-link {
+                justify-content: flex-start;
+                text-align: left;
+                padding: 14px 18px;
+                font-size: 0.94rem;
+                border-radius: 15px;
+            }
+
+            .tab-content-box {
+                padding: 18px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page_wrapper">
+        <div class="backtotop">
+            <a href="#" class="scroll"><i class="far fa-arrow-up"></i></a>
+        </div>
+        <header class="site_header site_header_1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col col-lg-3 col-10">
+                        <div class="site_logo">
+                            <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col col-lg-9 col-2">
+                        <nav class="main_menu navbar navbar-expand-lg">
+                            <div class="main_menu_inner collapse navbar-collapse " id="main_menu_dropdown">
+                                <ul class="main_menu_list unordered_list_center">
+                                    <li><a class="nav-link" href="index.html">Home</a></li>
+                                    <li><a class="nav-link" href="about.html"><u>About us</u></a></li>
+
+                                    <li class="dropdown">
+                                        <a class="nav-link" href="#" id="blog_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programs</a>
+                                        <ul class="dropdown-menu" aria-labelledby="blog_submenu">
+                                            <li><a class="nav-link" href="programs.html">For Students</a></li>
+                                            <li><a class="nav-link" href="teacher_programs.html">For Teachers</a></li>
+                                            <li><a class="nav-link" href="citizens.html">For Citizens</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="nav-link" href="news_and_media.html">News and Media</a></li>
+                                    <li class="dropdown">
+                                        <a class="nav-link" href="#" id="blog_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
+                                        <ul class="dropdown-menu" aria-labelledby="blog_submenu">
+                                            <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
+                                            <li><a class="nav-link" href="indian-scientist.html">Indian Scientist</a>
+                                            </li>
+                                            <li><a class="nav-link" href="top-iit.html">Top Indian Institues</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
+                                    <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+                                    <!-- <li><a class="nav-link" href="notices.html"><u>Notices</u></a></li> -->
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Mobile Hamburger Menu (visible only on small screens) -->
+                        <button aria-expanded="false" aria-controls="sidebarMenumobile" type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Sidebar Menu (for mobile) -->
+        <div id="sidebarMenumobile" class="sidebarmobile">
+            <button type="button" class="closebtn" aria-label="Close menu">x</button>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+
+            <!-- Dropdown (Mobile) -->
+            <!--<a href="programs.html">Programs</a>-->
+            <div class="dropdownmobile">
+                <a href="#" class="dropdownmobile-toggle">Programs <i class="dropdownmobilearrow-icon"></i></a>
+                <ul class="dropdownmobile-menu">
+                    <li><a href="programs.html">For Students</a></li>
+                    <li><a href="teacher_programs.html">For Teachers</a></li>
+                    <li><a href="citizens.html">For Citizens</a></li>
+                </ul>
+            </div>
+
+            <!--<a href="admissions.html">Admissions</a>-->
+            <a href="news_and_media.html">News and Media</a>
+            <!-- Dropdown (Mobile) -->
+            <div class="dropdownmobile">
+                <a href="#" class="dropdownmobile-toggle">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
+                <ul class="dropdownmobile-menu">
+                    <li><a href="great-minds.html">Great Minds</a></li>
+                    <li><a href="indian-scientist.html">Indian Scientist</a></li>
+                    <li><a href="top-iit.html">Institutes of India</a></li>
+                </ul>
+            </div>
+            <a href="exploratory.html">Exploratory Perks</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <!-- Overlay (for closing sidebar when clicking outside) -->
+        <div id="menuOverlay" class="menu-overlay">
+        </div>
+        <main class="page_content">
+            <section class="page_banner">
+                <div class="container">
+                    <div class="content_wrapper">
+                        <div class="banner_deco">
+                            <span class="banner_bubble bubble-1"></span>
+                            <span class="banner_bubble bubble-2"></span>
+                            <span class="banner_bubble bubble-3"></span>
+                        </div>
+                        <div class="internal-banner">
+                            <div class="row align-items-center">
+                                <div class="col col-lg-12">
+                                    <h1 class="page_title">Program Overview</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ----- TAB STRUCTURE STARTS ------ -->
+            <div class="tabs-structure-container container mt-4">
+                <!-- Tabs -->
+                <div class="tabs-wrapper">
+                    <ul class="nav nav-pills custom-tabs">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#overview">
+                                <i class="fa-solid fa-layer-group me-2"></i> Program Overview
+                            </button>
+                        </li>
+
+                        <li class="nav-item">
+
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#students">
+
+                                <i class="fa-solid fa-graduation-cap me-2"></i> For Students
+
+                            </button>
+
+                        </li>
+
+                        <li class="nav-item">
+
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#teachers">
+
+                                <i class="fa-solid fa-chalkboard-user me-2"></i> For Teachers
+
+                            </button>
+
+                        </li>
+
+                        <li class="nav-item">
+
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#citizens">
+
+                                <i class="fa-solid fa-earth-asia me-2"></i> For Citizens
+
+                            </button>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- TAB CONTENT -->
+
+                <div class="tab-content tab-content-box">
+
+                    <!-- OVERVIEW -->
+
+                    <div class="tab-pane fade show active" id="overview">
+
+                        <div class="row g-4">
+
+                            <div class="col-lg-12 m-0">
+
+                                <section class="program-overview">
+                                    <div class="container">
+                                        <h2 class="mb-3 mt-3 text-left section-title mb-4">Program Overview</h2>
+                                        <p class="text-left">PRSSE is a place where school curriculum meets real laboratories, real mentors, and real-world skills. PRSSE complements school education by giving students and teachers what textbooks alone cannot: hands-on experimentation,
+                                            scientific thinking, exposure to scientific methods, and a culture of curiosity and research. Mentoring support comes from experienced educators and academic leaders associated with reputed institutions in Nagpur
+                                            and other parts of the country, ensuring academic rigor and relevance to current educational reforms including NEP 2020.
+                                        </p>
+                                    </div>
+                                </section>
+
+                                <section class="programs py-3">
+                                    <div class="container">
+
+                                        <!-- CARDS GRID for Annual Students' and Teachers' Programs-->
+                                        <div class="cards-grid-cont">
+                                            <h3 class="heading_text mb-4">Annual Student &amp; Teacher Programs (At a Glance)</h3>
+                                            <p>PRSSE's annual programs are thoughtfully designed to nurture scientific curiosity, critical thinking, and hands-on learning among students and educators. Through year-long laboratory training, immersive workshops, mentorship initiatives, exposure camps, and innovation-driven activities, these programs bridge the gap between classroom education and real-world scientific exploration.</p>
+
+                                            <div class="cards-grid">
+
+                                                <!-- Card 1 -->
+                                                <div class="card">
+                                                    <div class="icon-box">
+                                                        <i class="fa-solid fa-flask"></i>
+                                                    </div>
+
+                                                    <h3>Year-long Laboratory Training</h3>
+
+                                                    <p>
+                                                        Structured laboratory training aligned with the school curriculum for students of Grades 6-9 to strengthen conceptual learning through practical experimentation.
+                                                    </p>
+
+                                                    <div class="tag">Grades 6-9</div>
+                                                </div>
+
+                                                <!-- Card 2 -->
+                                                <div class="card">
+                                                    <div class="icon-box">
+                                                        <i class="fa-solid fa-school"></i>
+                                                    </div>
+
+                                                    <h3>Monthly Intensive Lab Exposure</h3>
+                                                    <p>
+                                                        Specially designed monthly immersive laboratory sessions for outstation schools, enabling students to experience advanced scientific learning environments.
+                                                    </p>
+
+                                                    <div class="tag">Grades 6-8</div>
+                                                </div>
+
+                                                <!-- Card 3 -->
+                                                <div class="card">
+                                                    <div class="icon-box">
+                                                        <i class="fa-solid fa-rocket"></i>
+                                                    </div>
+
+                                                    <h3>Advanced Explorer <br /> Batches</h3>
+
+                                                    <p>
+                                                        Specialized mentorship and advanced scientific exploration for national and international Science and Mathematics competitions.
+                                                    </p>
+
+                                                    <div class="tag">Competitive Excellence</div>
+                                                </div>
+
+                                                <!-- Card 5 -->
+                                                <div class="card">
+                                                    <div class="icon-box">
+                                                        <i class="fa-solid fa-chalkboard-user"></i>
+                                                    </div>
+
+                                                    <h3>Teacher Development Program (RAISE)</h3>
+
+                                                    <p>
+                                                        NEP 2020-aligned professional development initiative empowering teachers with innovative teaching practices and inquiry-based learning methods.
+                                                    </p>
+
+                                                    <div class="tag">NEP 2020</div>
+                                                </div>
+
+                                                <!-- Card 6 -->
+                                                <div class="card">
+                                                    <div class="icon-box">
+                                                        <i class="fa-solid fa-users"></i>
+                                                    </div>
+
+                                                    <h3>Citizen Science <br /> Workshops</h3>
+
+                                                    <p>
+                                                        Interactive workshops designed for parents and families to cultivate scientific thinking, observational skills and curiosity-driven learning.
+                                                    </p>
+
+                                                    <div class="tag">Parents & Community</div>
+                                                </div>
+
+                                                <!-- Card 7 -->
+                                                <div class="card">
+                                                    <div class="icon-box">
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+
+                                                    <h3>Enrichment Events &amp; Exploratory Activities</h3>
+
+                                                    <p>
+                                                        Exciting events including sky-watching sessions, quizzes, summer schools, science shows, Olympiad exposure workshops and many more experiential activities.
+                                                    </p>
+
+                                                    <div class="tag">Experiential Learning</div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+                                        <!-- <div class="row align-items-center" style="margin-bottom:30px;"> 
+                            <div class="col col-lg-6 col-md-6 col-sm-6">
+                                <div class="img-cont"><img src="assets/images/for_students/for_student.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+                            <div class="col col-lg-6 col-md-6 col-sm-6">
+                                <div class="img-cont"><img src="assets/images/for_students/for_student1.jpeg" alt="Prof. Rajendra Singh Exploratory" /></div>
+							
+							</div>
+                        </div> -->
+
+                                        <!-- <h2 class="mb-4 text-center section-subtitle">Year Long After School Program</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="card-title">Programme 1: Laboratory Training Programs</h3>
+                                    <p><strong>Enrolment Eligibility:</strong> Grades 6 to 9.</p>
+                                    <p><strong>No. of Students' Enrolment for this program in an academic Year:</strong> 350</p>
+                                    <p><strong>Tentative No. of Sessions in an Academic Year: </strong>35 - 40 (Each of 2 hours per week)</p>
+                                    <p>The Laboratory Training Program is designed to develop strong experimental skills and scientific thinking among students. It focuses on hands-on learning, enabling students to perform experiments, analyze data, and approach problems with a research-oriented mindset. The program also nurtures critical thinking, creativity, and science communication skills, preparing students to confidently tackle real-world challenges.</p>
+                                    <p>Students' participate in weekly sessions conducted in state-of-the-art laboratory facilities. These sessions provide exposure to a wide range of disciplines from their school curriculum, including Physics, Chemistry, Biology, Mathematics, Electronics, and DIY experimental activities, ensuring a holistic scientific experience.</p>
+                                    <p>Admission to the program is based on merit through an entrance examination conducted in the month of April whose notification comes out in the month of February. Students studying in Grades 5, 6, and 7 are eligible to appear for the exam and, upon selection, are admitted to Grades 6, 7, and 8 batches respectively for the academic session beginning in July. Students once selected may continue in the program up to Grade 9. In addition to laboratory activities, students gain broader exposure through special workshops, expert talks by visiting scientists, competitions, and outreach programs. </p>
+                                   
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="card-title">Programme 2: Dr. Homi Bhabha Balvaidnyanik Competition Training Program
+                                        </h3>
+                                    <p><strong>Enrolment Eligibility:</strong>6th and 9th Std. Students</p>
+                                    <p>This batch will prepare the students for Dr. Homi Bhabha Balvaidnyanik competition. It includes theory, practical and project components related to this year-long renowned competition organized by MSTA, Mumbai. The topics related to the curriculum from Physics, Chemistry, Biology are covered through this programme.</p>
+                                    <p><strong>No. of Seats: </strong> 25</p>
+                                    <p><strong>Timeline:</strong></p>
+                                    <p><strong>Selection Process:</strong>Through Entrance Exam of Laboratory Training Programme as mentioned above</p>
+                                    <p><strong>Declaration of Merit List and Admission Process:</strong> JMay first week</p>
+                                    <p><strong>Session Commencement:</strong>June-April (One week summer camp in May/June)</p>
+                                    <p><strong>Total Sessions in an academic Session:</strong>30 Practical and 30 Theory</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="card-title">Programme 3: International Junior Science Olympiad Training Programme</h3>
+                                    <p><strong>Enrolment Eligibility:</strong>8th and 9th Std. Students</p>
+                                    <p>Our Junior Science Olympiad Training programme is designed to help students prepare for the International Junior Science Olympiad competition. Through a combination of hands-on science activities and expert coaching, students will develop the skills and knowledge they need to succeed. Sessions on the topics in science and mathematics will be delivered by the experts from the city and some guest sessions of renowned science educators across the country are also invited to make this programme vibrant.
+                                    </p>
+                                    <p><strong>No. of Seats: </strong> 25</p>
+                                    <p><strong>Timeline:</strong></p>
+                                    <p><strong>Selection Process:</strong>Through Entrance Exam of Laboratory Training Programme as mentioned above</p>
+                                    <p><strong>Declaration of Merit List and Admission Process:</strong> May first week</p>
+                                    <p><strong>Session Commencement:</strong>June-May (One week summer camp in May and June)</p>
+                                    <p><strong>Total Sessions in an academic Session:</strong>30 Practical and 80 Theory</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                                        <!-- <div class="row g-4 mt-3">
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="card-title">Programme 1: Laboratory Training Programs</h3>
+                                    <p><strong>Enrolment Eligibility:</strong> 6th, 7th, 8th and 9th Std. </p>
+                                    <p>The laboratory training program aims to equip students with practical skills and
+                                        knowledge in conducting experiments, data analysis, and problem-solving. The
+                                        program also aims to enhance students' critical thinking, research, and science
+                                        communication skills. Ultimately, the program outcome is to prepare students for
+                                        real-world challenges in their respective fields.
+                                    </p>
+                                    <p>Once a week, students will be engaged for hands-on experiments in our
+                                        state-of-the-art laboratory facilities where students will try their hands for
+                                        the various experiments in Biology, Chemistry, Electronics, Mathematics, Physics
+                                        and DIY activities.</p>
+                                    <p>Students are selected through an entrance exam conducted in the month of April on
+                                        merit basis. Students of 5th, 6th and 7th Std, can appear in the exam who will
+                                        be admitted in 6th, 7th and 8th Std. batches for the session commencing in July.
+                                        Enrolled students can continue their affiliation till 9th Std. </p>
+                                    <p><strong>Timeline:</strong> Notification for Entrance Exam: First Week of February
+                                    </p>
+                                    <p><strong>Entrance Exam:</strong> April</p>
+                                    <p><strong>Declaration of Merit List and Admission Process:</strong> May first week
+                                    </p>
+                                    <p><strong>Session Commencement:</strong> July-April (One session of two hours every
+                                        week) </p>
+                                    <p><strong>Total Sessions in an academic Session:</strong> 40 </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="card-title">Programme 2: Dr. Homi Bhabha Balvaidnyanik Competition
+                                        Training Program
+                                    </h3>
+                                    <p><strong>Enrolment Eligibility:</strong>6th and 9th Std. Students</p>
+                                    <p>This batch will prepare the students for Dr. Homi Bhabha Balvaidnyanik
+                                        competition. It includes theory, practical and project components related to
+                                        this year-long renowned competition organized by MSTA, Mumbai. The topics
+                                        related to the curriculum from Physics, Chemistry, Biology are covered through
+                                        this programme.
+                                    </p>
+                                    <p><strong>No. of Seats: </strong> 25</p>
+                                    <p><strong>Timeline:</strong></p>
+                                    <p><strong>Selection Process:</strong>Through Entrance Exam of Laboratory Training
+                                        Programme as mentioned above</p>
+                                    <p><strong>Declaration of Merit List and Admission Process:</strong> JMay first week
+                                    </p>
+                                    <p><strong>Session Commencement:</strong>June-April (One week summer camp in
+                                        May/June)</p>
+                                    <p><strong>Total Sessions in an academic Session:</strong>30 Practical and 30 Theory
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="card-title">Programme 3: International Junior Science Olympiad Training
+                                        Programme</h3>
+                                    <p><strong>Enrolment Eligibility:</strong>8th and 9th Std. Students</p>
+                                    <p>Our Junior Science Olympiad Training programme is designed to help students
+                                        prepare for the International Junior Science Olympiad competition. Through a
+                                        combination of hands-on science activities and expert coaching, students will
+                                        develop the skills and knowledge they need to succeed. Sessions on the topics in
+                                        science and mathematics will be delivered by the experts from the city and some
+                                        guest sessions of renowned science educators across the country are also invited
+                                        to make this programme vibrant.
+                                    </p>
+                                    <p><strong>No. of Seats: </strong> 25</p>
+                                    <p><strong>Timeline:</strong></p>
+                                    <p><strong>Selection Process:</strong>Through Entrance Exam of Laboratory Training
+                                        Programme as mentioned above</p>
+                                    <p><strong>Declaration of Merit List and Admission Process:</strong> May first week
+                                    </p>
+                                    <p><strong>Session Commencement:</strong>June-May (One week summer camp in May and
+                                        June)</p>
+                                    <p><strong>Total Sessions in an academic Session:</strong>30 Practical and 80 Theory
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                                    </div>
+                                </section>
+
+                                <!-- Cards GRID for Enrichment & Signature Events -->
+                                <div class="cards-grid-cont mt-md-4 mt-3 px-3">
+                                    <h3 class="heading_text">Enrichment &amp; Signature Events</h3>
+                                    <p>Along with structured programs, PRSSE offers a vibrant calendar of events that make science a living experience for the whole community. These activities ensure that students, teachers, and parents experience science
+                                        not as a subject restricted to marks, but as a joyful, creative, and empowering way of looking at the world.</p>
+
+                                    <div class="cards-grid mt-4">
+                                        <!-- Card 1 -->
+                                        <div class="card">
+                                            <div class="icon-box">🔭</div>
+                                           
+                                            <!-- <i class="fa-solid fa-satellite"></i> -->
+                                            <h3>Overnight Sky-Gazing Camps</h3>
+                                            <p>
+                                                Immersive astronomy camps for PRSSE students featuring telescope observations, celestial navigation, and guided night-sky exploration sessions.
+                                            </p>
+                                        </div>
+
+                                        <!-- Card 2 -->
+                                        <div class="card">
+                                            <div class="icon-box"><i class="fa-brands fa-youtube"></i></div>
+                                            
+
+                                            <h3>Scientist Webinars on Youtube Channel</h3>
+                                            <p>
+                                                Special webinars on the PRSSE YouTube channel by eminent scientists, researchers, and educators on nationally important scientific occasions.
+                                            </p>
+
+                                        </div>
+
+                                        <!-- Card 3 -->
+                                        <div class="card">
+                                            <div class="icon-box"><i class="fa-solid fa-brain"></i></div>
+
+                                            <h3>Vigyaan Jigyasa <br> Quiz</h3>
+
+                                            <p>
+                                                Interschool science quiz competitions encouraging analytical thinking, scientific temperament, and collaborative learning among students.
+                                            </p>
+
+                                        </div>
+
+                                        <!-- Card 5 -->
+                                        <div class="card">
+                                            <div class="icon-box"><i class="fa-solid fa-trophy"></i></div>
+
+                                            <h3>Thematic Competitions</h3>
+
+                                            <p>
+                                                Annual interschool thematic competitions conducted on the birth anniversary of Prof. Rajendra Singh every January.
+                                            </p>
+
+                                        </div>
+
+                                        <!-- Card 6 -->
+                                        <div class="card">
+                                            <div class="icon-box"><i class="fa-solid fa-campground"></i></div>
+
+                                            <h3>Exposure Camps</h3>
+
+                                            <p>
+                                                Practical exposure camps for Dr. Homi Bhabha Balvaidnyanik Competition and Vidyarthi Vigyan Manthan participants.
+                                            </p>
+
+                                        </div>
+
+                                        <!-- Card 7 -->
+                                        <div class="card">
+                                            <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
+
+                                            <h3>STEM &amp; DIY Workshops</h3>
+
+                                            <p>
+                                                Advanced STEM/DIY workshops for curious learners passionate about innovation and experimentation.
+                                            </p>
+
+                                        </div>
+
+                                        <!-- Card 8 -->
+                                        <div class="card">
+                                            <div class="icon-box">
+                                              <i class="fa-solid fa-graduation-cap"></i>
+                                            </div>
+
+                                            <h3>Grade 10 Summer Crash Course</h3>
+
+                                            <p>
+                                                Intensive conceptual learning sessions through experiments and demonstrations conducted during the last week of May.
+                                            </p>
+
+                                        </div>
+
+                                        <!-- Card 9 -->
+                                        <div class="card">
+                                            <div class="icon-box"><i class="fa-solid fa-tv"></i></div>
+
+                                            <h3>Science Shows &amp; <br /> Webinars</h3>
+
+                                            <p>
+                                                Interactive science demonstrations and educational webinars by visiting science educators from across India.
+                                            </p>
+
+                                        </div>
+
+                                        <!-- Card 10 -->
+                                        <div class="card">
+                                            <div class="icon-box"><i class="fa-solid fa-chalkboard-teacher"></i></div>
+                                            <h3>Teacher Training Programs</h3>
+                                            <p>
+                                                One-day intensive teacher upskilling programs for schools seeking practical, impactful, and modern science education methods.
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- STUDENTS -->
+
+                    <div class="tab-pane fade" id="students">
+
+                        <h2>Students Program Overview</h2>
+
+                    </div>
+
+                    <!-- TEACHERS -->
+
+                    <div class="tab-pane fade" id="teachers">
+
+                        <h2>Teachers' Program Overview</h2>
+
+                    </div>
+
+                    <!-- CITIZENS -->
+
+                    <div class="tab-pane fade" id="citizens">
+
+                        <h2>Citizens Program Overview</h2>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- ----- TAB STRUCTURE ENDS ------ -->
+
+            <!-- <section class="events py-5">
+                <div class="container">
+                    <h2 class="mb-4 text-center section-subtitle">Other Programs &amp; Events</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <ul class="list-group list-group-flush outcomes-list">
+                                <li class="list-group-item">Webinars of Eminent Scientists</li>
+                                <li class="list-group-item">Interschool Quiz Competition on National Space Day</li>
+                                <li class="list-group-item">Various Competitions on the occasion of Birth Anniversary
+                                    Celebration of Prof. Rajendra Singh in January</li>
+                                <li class="list-group-item">Exposure Camps for the second phase of Dr. Homi Bhabha
+                                    Balvaidyanik Competition</li>
+                                <li class="list-group-item">Exposure Camps for the second phase of Vidyarthi Vigyaan
+                                    Manthan</li>
+                                <li class="list-group-item">One Day School Visits for Hands-On Exposure</li>
+                                <li class="list-group-item">Summer Camp for Middle School and High School Students</li>
+                                <li class="list-group-item">STEM Workshops during Summer and Winter Vacations</li>
+                                <li class="list-group-item">Crash course for 10th Std. students in the month of June
+                                </li>
+                                <li class="list-group-item">Overnight Sky Watching in April</li>
+                                <li class="list-group-item">Science Shows by Senior Science Educator </li>
+                                <li class="list-group-item">Teachers’ Training Program</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+            <!-- <section class="outcomes py-3">
+                <div class="container">
+                    <h3 class="mb-4 text-center" style="color: #2c3e50;">Notifications for all these programs/events are
+                        released one month before the schedule of these events. </h3>
+                </div>
+            </section> -->
+
+            <!-- <section class="outcomes py-3">
+                <div class="container">
+                    <h2 class="mb-4 text-center section-subtitle">Program Outcomes</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <ul class="list-group list-group-flush events-list">
+                                <li class="list-group-item">INCREASED SCIENTIFIC KNOWLEDGE: Students will develop a
+                                    deeper understanding of scientific concepts, theories and principles through
+                                    experimentation and exploration.</li>
+                                <li class="list-group-item"> IMPROVED CRITICAL THINKING SKILLS: By engaging in
+                                    scientific inquiry and problem-solving activities, students will develop critical
+                                    thinking skills.</li>
+                                <li class="list-group-item"> ENHANCED TEAMWORK AND COLLABORATION: Many scientific
+                                    investigations require teamwork and collaboration. Students will have the
+                                    opportunity to work in groups to conduct experiments and analyze data.</li>
+                                <li class="list-group-item"> INCREASED INTEREST IN SCIENCE: Students will develop a
+                                    greater interest in science and consider pursuing further studies or careers in
+                                    related fields.</li>
+                                <li class="list-group-item"> IMPROVED ACADEMIC PERFORMANCE: Skills and knowledge gained
+                                    through science exploratory programmes will improve academic performance.</li>
+                                <li class="list-group-item">SHINING STARS OF THE CITY: Students will be able to showcase
+                                    their talent in various national and international science and mathematics
+                                    programmes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+        </main>
+        <footer class="site_footer">
+            <div class="footer_widget_area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Address</h3>
+                                <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High School, Near Alankar Talkies, North Ambazari road, Nagpur- 440010.</p>
+
+                            </div>
+                        </div>
+                        <div class="col col-lg-4">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Social Links</h3>
+                                <ul class="social_links unordered_list">
+                                    <li>
+                                        <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook" target="_blank">
+
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I" target="_blank">
+
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4" target="_blank">
+
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wa.me/917249811866" target="_blank">
+
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Contact Details</h3>
+                                <ul class="blog_small_group unordered_list_block">
+                                    <li>
+                                        <a class="blog_small" href="#">
+                                            <span class="item_content">
+                                                <small class="item_post_date">Call : +917249811866</small>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="blog_small" href="#">
+                                            <span class="item_content">
+                                                <small class="item_post_date">Email: prsscienceexploratory@gmail.com
+                                                </small>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright_widget">
+                <div class="container">
+                    <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All rights reserved | Copyrights 2026</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Set active navigation item based on current page
+        (function setActiveNav() {
+            var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
+            navLinks.forEach(function(link) {
+                var href = link.getAttribute('href');
+                var linkPage = href.split('?')[0]; // Remove query strings
+                // Match current page with nav link
+                if (linkPage === currentPage ||
+                    (currentPage === '' && linkPage === 'index.html')) {
+                    var parentLi = link.closest('li');
+                    if (parentLi) {
+                        parentLi.classList.add('active');
+                    }
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>
