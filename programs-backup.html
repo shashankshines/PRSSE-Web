@@ -141,8 +141,9 @@
             justify-content: center;
             align-items: stretch;
             padding: 12px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(242, 243, 238, 0.5) 100%);
-            /* border: 1px solid rgba(255, 255, 255, 0.5); */
+            /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(242, 243, 238, 0.5) 100%); */
+            /* border: 1px solid rgba(255, 255, 255, 0fv.5); */
+            background: rgba(169, 204, 146, .6);
             border-radius: 22px;
             box-shadow: 0 18px 45px rgba(0, 0, 0, 0.05);
         }
@@ -161,7 +162,7 @@
             white-space: normal;
             text-align: center;
             padding: 14px;
-            border-radius: 16px;
+            border-radius: 25px;
             background: linear-gradient(180deg, #fcfaf5 0%, #dfd7a8 100%);
             color: #242218;
             font-weight: 700;
@@ -283,6 +284,15 @@
         }
 
         /* Cards Grid */
+        .cards-grid-cont { 
+            width: 100%; 
+            float: left;
+        }
+        @media screen and (max-width: 1024px) {    
+            .cards-grid-cont > p {
+                text-align: justify;
+            }
+        }
         #overview .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
@@ -351,12 +361,12 @@
         #overview .card p {
             color: #555;
             font-size: 16px;
-            line-height: 1.65;
+            line-height: 1.6;
         }
 
         #overview .tag {
             display: inline-block;
-            margin-top: 22px;
+            margin: 5px 0 10px;
             padding: 9px 18px;
             background: #fff4dd;
             color: #ff7a00;
@@ -376,7 +386,7 @@
             }
 
             #overview .card {
-                padding: 35px 24px;
+                padding:30px 20px 10px;
             }
 
             #overview .card h3 {
@@ -418,6 +428,9 @@
             float: left;
         }
 
+        /* .core-student-annual-programs .accordion .accordion-item .collapsed {
+            background: linear-gradient(135deg, #0d5c4d 0%, #1a8570 100%)
+        } */
         /* Accordion */
         .core-student-annual-programs .accordion p {
             margin-left: 0;
@@ -548,22 +561,22 @@
                     <ul class="nav nav-pills custom-tabs">
                         <li class="nav-item">
                             <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#overview">
-                                <i class="fa-solid fa-layer-group me-2"></i> Program Overview
+                                <i class="fa-solid fa-layer-group me-1"></i> Program Overview
                             </button>
                         </li>
                         <li class="nav-item">
                             <button class="nav-link" data-bs-toggle="pill" data-bs-target="#students">
-                                <i class="fa-solid fa-graduation-cap me-2"></i>Students Program Overview
+                                <i class="fa-solid fa-graduation-cap me-1"></i>Students Program Overview
                             </button>
                         </li>
                         <li class="nav-item">
                             <button class="nav-link" data-bs-toggle="pill" data-bs-target="#teachers">
-                                <i class="fa-solid fa-chalkboard-user me-2"></i>Teachers Program Overview
+                                <i class="fa-solid fa-chalkboard-user me-1"></i>Teachers Program Overview
                             </button>
                         </li>
                         <li class="nav-item">
                             <button class="nav-link" data-bs-toggle="pill" data-bs-target="#citizens">
-                                <i class="fa-solid fa-earth-asia me-2"></i>Citizens Program Overview
+                                <i class="fa-solid fa-earth-asia me-1"></i>Citizens Program Overview
                             </button>
                         </li>
                     </ul>
@@ -582,7 +595,8 @@
                                             education by giving students and teachers what textbooks alone cannot:
                                             hands-on experimentation,
                                             scientific thinking, exposure to scientific methods, and a culture of
-                                            curiosity and research. Mentoring support comes from experienced educators
+                                            curiosity and research.</p> 
+                                            <p>Mentoring support comes from experienced educators
                                             and academic leaders associated with reputed institutions in Nagpur
                                             and other parts of the country, ensuring academic rigor and relevance to
                                             current educational reforms including NEP 2020.
