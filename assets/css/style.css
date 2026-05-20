@@ -133,7 +133,7 @@ body > * {
 }
 .grad {
   background: linear-gradient(90deg,#ff8a00,#ef3f50, #782e94, #2a1772);
-  -webkit-background-clip:text;
+  /* -webkit-background-clip:text; */
   color:transparent;
   /* text-shadow: #000 3px 2px; */
 }
@@ -438,7 +438,7 @@ body > * {
 .hero_banner.style_1 .content_wrap {
     padding: 15px 15px 15px 20px;
     /* background-color: #d9d9d9; changes by nikita */
-    background: rgba(166, 202, 164, .4);
+    background: rgba(169, 204, 146, .4);
     border-radius: 20px;
 }
 /* @media screen and (max-width:767px) {
@@ -845,7 +845,7 @@ img.icon-insta {
     background: linear-gradient(to right,#f59e0b,#84cc16);
     position: absolute;
     border-radius: 10000px;
-    bottom: -10px;
+    bottom: -11px;
     left: 0;
 } 
 /* Section Title Mobile  */
@@ -1183,6 +1183,9 @@ ol[type="1"]>li:not(:last-child) {
     font-size: 18px;
     color: #1f1d0d;
     font-family: "Poppins", sans-serif;
+}
+@media screen and (max-width:1024px) { 
+    .program-overview p { text-align: justify; }
 }
 .info_list i {
     float: left;
@@ -2021,7 +2024,7 @@ blockquote p {
 }
 /* Accordion heading bg  */
 .accordion-button:not(.collapsed) {
-    background-color: rgba(166, 202, 164, .5);
+    background-color: rgba(169, 204, 146, .4);
     border-radius: 10px;
     padding: 10px 15px;
     transition: ease-in .3s;
@@ -23265,6 +23268,7 @@ blockquote p {
     color: #fe7b14;
     transition: all 0.3s ease;
     border-left: 3px solid transparent;
+    border-bottom: #009688 solid 1px;
     position: relative;
 }
 
