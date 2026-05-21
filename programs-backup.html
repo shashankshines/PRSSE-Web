@@ -210,6 +210,8 @@
         }
 
         .tab-content-box {
+            width: 100%;
+            float: left;
             background: rgba(255, 255, 255, .5);
             border-radius: 24px;
             border: 1px solid rgba(221, 221, 221, 0.9);
@@ -284,15 +286,17 @@
         }
 
         /* Cards Grid */
-        .cards-grid-cont { 
-            width: 100%; 
+        .cards-grid-cont {
+            width: 100%;
             float: left;
         }
-        @media screen and (max-width: 1024px) {    
-            .cards-grid-cont > p {
+
+        @media screen and (max-width: 1024px) {
+            .cards-grid-cont>p {
                 text-align: justify;
             }
         }
+
         #overview .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
@@ -386,7 +390,7 @@
             }
 
             #overview .card {
-                padding:30px 20px 10px;
+                padding: 30px 20px 10px;
             }
 
             #overview .card h3 {
@@ -430,14 +434,25 @@
 
         /* .core-student-annual-programs .accordion .accordion-item .collapsed {
             background: linear-gradient(135deg, #0d5c4d 0%, #1a8570 100%)
-        } */
+        } 
          
         /* Accordion */
-        .core-student-annual-programs .accordion-body { padding: 0 15px; }
+        .core-student-annual-programs .accordion-body {
+            padding: 0 15px;
+        }
+
         .core-student-annual-programs .accordion p {
             margin-left: 0;
         }
 
+        /* Accordion icon color */
+        .core-student-annual-programs .accordion-item .fa-solid {
+            color: #187f6b;
+        }
+
+        /* .accordion-button:not(.collapsed) .fa-solid {
+            color: #000;
+        } */
         img.accordion-img {
             width: 60%;
             height: auto;
@@ -449,7 +464,15 @@
                 width: 100%;
                 height: auto;
             }
+            /* heading for mobiles */
+            .heading_text {
+                /* text-align: center; */
+                font-size: 1.5rem;
+                line-height: 1.95rem;
+            }
+            .core-student-annual-programs .accordion .accordion-button { padding-right: 0; }
         }
+
     </style>
 </head>
 
@@ -568,17 +591,17 @@
                         </li>
                         <li class="nav-item">
                             <button class="nav-link" data-bs-toggle="pill" data-bs-target="#students">
-                                <i class="fa-solid fa-graduation-cap me-1"></i>Students Program Overview
+                                <i class="fa-solid fa-graduation-cap me-1"></i>Students' Program
                             </button>
                         </li>
                         <li class="nav-item">
                             <button class="nav-link" data-bs-toggle="pill" data-bs-target="#teachers">
-                                <i class="fa-solid fa-chalkboard-user me-1"></i>Teachers Program Overview
+                                <i class="fa-solid fa-chalkboard-user me-1"></i>Teachers' Program
                             </button>
                         </li>
                         <li class="nav-item">
                             <button class="nav-link" data-bs-toggle="pill" data-bs-target="#citizens">
-                                <i class="fa-solid fa-earth-asia me-1"></i>Citizens Program Overview
+                                <i class="fa-solid fa-earth-asia me-1"></i>Citizens' Program
                             </button>
                         </li>
                     </ul>
@@ -597,8 +620,8 @@
                                             education by giving students and teachers what textbooks alone cannot:
                                             hands-on experimentation,
                                             scientific thinking, exposure to scientific methods, and a culture of
-                                            curiosity and research.</p> 
-                                            <p>Mentoring support comes from experienced educators
+                                            curiosity and research.</p>
+                                        <p>Mentoring support comes from experienced educators
                                             and academic leaders associated with reputed institutions in Nagpur
                                             and other parts of the country, ensuring academic rigor and relevance to
                                             current educational reforms including NEP 2020.
@@ -746,7 +769,7 @@
                                             <h3>Thematic Competitions</h3>
                                             <p>
                                                 Annual interschool thematic competitions held every January on Prof.
-                                                Rajendra Singh’s birth anniversary.
+                                                Rajendra Singh's birth anniversary.
                                             </p>
                                         </div>
                                         <!-- Card 6 -->
@@ -821,18 +844,6 @@
                         </section>
                         <section class="programs py-md-4">
                             <div class="container">
-                                <!-- <div class="row align-items-center" style="margin-bottom:30px;">
-                    <div class="col col-lg-6 col-md-6 col-sm-6">
-                        <div class="img-cont"><img src="assets/images/for_students/for_student.jpeg"
-                                alt="Prof. Rajendra Singh Exploratory" /></div>
-                    
-                    </div>
-                    <div class="col col-lg-6 col-md-6 col-sm-6">
-                        <div class="img-cont"><img src="assets/images/for_students/for_student1.jpeg"
-                                alt="Prof. Rajendra Singh Exploratory" /></div>
-                    
-                    </div>
-                    </div> -->
                                 <!--  LAB EXPERIMENT DETAILS SECTION -->
                                 <div class="lab-exp-details-cont">
                                     <div class="row m-0 p-0">
@@ -950,13 +961,15 @@
                                     <!------------ Students Program Accordion Starts ---------->
                                     <div class="accordion" id="accordionExample">
                                         <div class="accordion-item">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseOne" aria-expanded="true"
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="false"
                                                 aria-controls="collapseOne">
+                                                <!-- icon -->
+                                                <i class="fa-solid fa-microscope me-2"></i>
                                                 Laboratory Training Program
                                                 <span class="accordion-icon" aria-hidden="true"></span>
                                             </button>
-                                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                            <div id="collapseOne" class="accordion-collapse collapse"
                                                 aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
                                                     <p class="mb-2">Building scientific temperament beyond the textbook
@@ -993,6 +1006,8 @@
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                                                 aria-expanded="false" aria-controls="collapseTwo">
+                                                <!-- icon -->
+                                                <i class="fa-solid fa-flask-vial me-2"></i>
                                                 Laboratory Exposure Program
                                                 <span class="accordion-icon" aria-hidden="true"></span>
                                             </button>
@@ -1016,28 +1031,32 @@
                                                         schedule does not become a barrier to quality STEM experiences,
                                                         making it ideal for partner schools in and around Nagpur.</p>
                                                     <div class="img-cont mb-4 mt-2">
-                                                        <img src="assets/images/laboratory-expo-program.png" class="accordion-img"
-                                                            alt="Lab Exposure Program">
+                                                        <img src="assets/images/laboratory-expo-program.png"
+                                                            class="accordion-img" alt="Lab Exposure Program">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <!-- Advanced Programs Accordion Section -->
-                                        <h2 class="heading_text mt-5">Advanced "Explorer" Programs (Gifted / Motivated Learners)</h2>
+                                        <h2 class="heading_text mt-5">Advanced "Explorer" Programs (Gifted / Motivated
+                                            Learners)</h2>
 
                                         <div class="accordion-item">
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapseThree"
                                                 aria-expanded="false" aria-controls="collapseThree">
+                                                <!-- icon -->
+                                                <i class="fa-solid fa-atom me-2"></i>
                                                 Homi Bhabha Explorer Program
                                                 <span class="accordion-icon" aria-hidden="true"></span>
                                             </button>
                                             <div id="collapseThree" class="accordion-collapse collapse"
                                                 aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p class="mt-2"><strong>Track for Dr. Homi Bhabha Balvaidnyanik
-                                                            Spardha</strong></p>
+                                                    <p class="mt-2">
+                                                        <strong>Track for Dr. Homi Bhabha Balvaidnyanik Spardha</strong>
+                                                    </p>
                                                     <ul>
                                                         <li>For: Grade 6</li>
                                                         <li>Intake: 30 students per year</li>
@@ -1067,23 +1086,36 @@
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapseFour"
                                                 aria-expanded="false" aria-controls="collapseFour">
+                                                <i class="fa-solid fa-infinity me-2"></i>
                                                 Ramanujan Explorer Program
                                                 <span class="accordion-icon" aria-hidden="true"></span>
                                             </button>
                                             <div id="collapseFour" class="accordion-collapse collapse"
                                                 aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p><strong>For young mathematicians with a love for problem-solving along with hands-on training in science and technology in laboratory</strong></p>
+                                                    <p><strong>For young mathematicians with a love for problem-solving
+                                                            along with hands-on training in science and technology in
+                                                            laboratory</strong></p>
                                                     <ul>
                                                         <li>For: Grade 7</li>
                                                         <li>Intake: 30 students per year</li>
                                                         <li>Sessions: 70-80 sessions (two 2-hour sessions per week)</li>
-                                                        <li>Structure: Two 2-hour sessions per week, including one Mathematics-focused and one integrated lab-based session</li>
+                                                        <li>Structure: Two 2-hour sessions per week, including one
+                                                            Mathematics-focused and one integrated lab-based session
+                                                        </li>
                                                         <li>Entry: Entrance exam in April</li>
                                                     </ul>
-                                                    <p>The Ramanujan Explorer Program supports mathematically inclined students who want to go beyond textbook exercises and prepare for contests such as NMTC and BMTC. Training includes concept enrichment, non-routine problems, and strategic approaches to problem-solving. </p>
-<p>A distinctive feature is the integration of one laboratory session per week, where students see how mathematics connects with Physics, chemistry, biology through data analysis, and real-world measurements building a balanced “math + science” temperament instead of narrow exam coaching.
-</p>
+                                                    <p>The Ramanujan Explorer Program supports mathematically inclined
+                                                        students who want to go beyond textbook exercises and prepare
+                                                        for contests such as NMTC and BMTC. Training includes concept
+                                                        enrichment, non-routine problems, and strategic approaches to
+                                                        problem-solving. </p>
+                                                    <p>A distinctive feature is the integration of one laboratory
+                                                        session per week, where students see how mathematics connects
+                                                        with Physics, chemistry, biology through data analysis, and
+                                                        real-world measurements building a balanced “math + science”
+                                                        temperament instead of narrow exam coaching.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1092,21 +1124,44 @@
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapseFive"
                                                 aria-expanded="false" aria-controls="collapseFive">
+                                                <i class="fa-solid fa-satellite-dish me-2"></i>
                                                 Bose Explorer Program
                                                 <span class="accordion-icon" aria-hidden="true"></span>
                                             </button>
                                             <div id="collapseFive" class="accordion-collapse collapse"
                                                 aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p>Strong foundation for Junior Science and Mathematics Olympiad and beyond</p>
-                                                     <ul>
+                                                    <p>Strong foundation for Junior Science and Mathematics Olympiad and
+                                                        beyond</p>
+                                                    <ul>
                                                         <li>For: Grade 8</li>
                                                         <li>Intake: 20 students per year</li>
-                                                        <li>Sessions: About 150 (Four 2-hour sessions per week, with a dedicated lab session and a mathematics classroom)</li>
+                                                        <li>Sessions: About 150 (Four 2-hour sessions per week, with a
+                                                            dedicated lab session and a mathematics classroom)</li>
                                                         <li>Entry: Entrance exam in April</li>
                                                     </ul>
-                                                    <p>This is an intensive preparation track inspired by the ethos of the International Junior Science Olympiad. It deepens students’ understanding of Physics, Chemistry, and Biology while systematically building multi‑step reasoning, numerical skills, and the ability to think and argue like a scientist. Students learn through a balanced combination of theory sessions, practical experiments, and mini research projects/case studies that strengthen concepts up to the Grade 10 curriculum within 12 months of this vigorous training. To broaden their perspective on science and society, students also participate in educational tours within Nagpur and to institutions outside the city, where they see science in action beyond the classroom.</p>
-                                                    <p>A team of visiting expert mentors from Nagpur and other cities engages students in interactive discussion‑based classes, ensuring personal attention and deep learning. The program nurtures curiosity and a genuine love for science by linking competition topics with big questions and real‑world applications, helping students see how what they learn matters in everyday life and future careers. There is one dedicated session in the laboratory per week for hands-on experiential learning. This program provides the complete learning package to develop scientific temperament.</p>
+                                                    <p>This is an intensive preparation track inspired by the ethos of
+                                                        the International Junior Science Olympiad. It deepens students'
+                                                        understanding of Physics, Chemistry, and Biology while
+                                                        systematically building multi-step reasoning, numerical skills,
+                                                        and the ability to think and argue like a scientist. Students
+                                                        learn through a balanced combination of theory sessions,
+                                                        practical experiments, and mini research projects/case studies
+                                                        that strengthen concepts up to the Grade 10 curriculum within 12
+                                                        months of this vigorous training. To broaden their perspective
+                                                        on science and society, students also participate in educational
+                                                        tours within Nagpur and to institutions outside the city, where
+                                                        they see science in action beyond the classroom.</p>
+                                                    <p>A team of visiting expert mentors from Nagpur and other cities
+                                                        engages students in interactive discussion-based classes,
+                                                        ensuring personal attention and deep learning. The program
+                                                        nurtures curiosity and a genuine love for science by linking
+                                                        competition topics with big questions and real-world
+                                                        applications, helping students see how what they learn matters
+                                                        in everyday life and future careers. There is one dedicated
+                                                        session in the laboratory per week for hands-on experiential
+                                                        learning. This program provides the complete learning package to
+                                                        develop scientific temperament.</p>
 
                                                 </div>
                                             </div>
@@ -1116,6 +1171,7 @@
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapseSix"
                                                 aria-expanded="false" aria-controls="collapseSix">
+                                                <i class="fa-solid fa-lightbulb me-2"></i>
                                                 Raman Explorer Program
                                                 <span class="accordion-icon" aria-hidden="true"></span>
                                             </button>
@@ -1126,130 +1182,32 @@
                                                     <ul>
                                                         <li>For: Grade 9</li>
                                                         <li>Intake: 20 students per year</li>
-                                                        <li>Sessions: About 150 (Four 2-hour sessions per week, including one lab and one Mathematics session on advanced topics)</li>
+                                                        <li>Sessions: About 150 (Four 2-hour sessions per week,
+                                                            including one lab and one Mathematics session on advanced
+                                                            topics)</li>
                                                         <li>Entry: Entrance exam in April</li>
                                                     </ul>
-                                                    <p>Raman Explorer program is designed for students ready to move from merely “learning chapters” to actually doing science. Along with advanced work in Physics, Chemistry, Biology, Electronics, and Mathematics, students take up guided mini‑research projects: framing questions, planning experiments, collecting and interpreting data, and presenting findings. The batch also provides focused preparation for Dr. Homi Bhabha Balvaidnyanik Spardha, Vidyarthi Vigyaan manthan (later stages), NMTC, BMTC including theory, practicals, project work and interview readiness, supported by mock tests and systematic performance tracking. This creates a bridge between school, Olympiads, and future research pathways.</p>
+                                                    <p>Raman Explorer program is designed for students ready to move
+                                                        from merely “learning chapters” to actually doing science. Along
+                                                        with advanced work in Physics, Chemistry, Biology, Electronics,
+                                                        and Mathematics, students take up guided mini-research projects:
+                                                        framing questions, planning experiments, collecting and
+                                                        interpreting data, and presenting findings. The batch also
+                                                        provides focused preparation for Dr. Homi Bhabha Balvaidnyanik
+                                                        Spardha, Vidyarthi Vigyaan manthan (later stages), NMTC, BMTC
+                                                        including theory, practicals, project work and interview
+                                                        readiness, supported by mock tests and systematic performance
+                                                        tracking. This creates a bridge between school, Olympiads, and
+                                                        future research pathways.</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="accordion-item">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseSeven"
-                                                aria-expanded="false" aria-controls="collapseSeven">
-                                                What is the fee for the Entrance Exam?
-                                                <span class="accordion-icon" aria-hidden="true"></span>
-                                            </button>
-                                            <div id="collapseSeven" class="accordion-collapse collapse"
-                                                aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <p>The Entrance Exam fee is ₹50, which can be paid online via UPI.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseEight"
-                                                aria-expanded="false" aria-controls="collapseEight">
-                                                What subjects will the Entrance Exam cover?
-                                                <span class="accordion-icon" aria-hidden="true"></span>
-                                            </button>
-                                            <div id="collapseEight" class="accordion-collapse collapse"
-                                                aria-labelledby="headingEight" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <p>The exam will assess theoretical knowledge, observational skills,
-                                                        and
-                                                        motor skills based on
-                                                        the middle school syllabus of Maharashtra State Board and CBSE.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseNine"
-                                                aria-expanded="false" aria-controls="collapseNine">
-                                                What is the annual fee for the program, if a student gets selected?
-                                                <span class="accordion-icon" aria-hidden="true"></span>
-                                            </button>
-                                            <div id="collapseNine" class="accordion-collapse collapse"
-                                                aria-labelledby="headingNine" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <p>Annual Fees: ₹6500/- <br>50% concession available for the
-                                                        students
-                                                        from economically weaker sections.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseTen"
-                                                aria-expanded="false" aria-controls="collapseTen">
-                                                How can I get more information?
-                                                <span class="accordion-icon" aria-hidden="true"></span>
-                                            </button>
-                                            <div id="collapseTen" class="accordion-collapse collapse"
-                                                aria-labelledby="headingTen" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <p style="margin-bottom: 0;">For more inquiries, you can contact:
-                                                    </p>
-                                                    <ul>
-                                                        <li>Email: <a
-                                                                href="mailto:prsscienceexploratory@gmail.com">prsscienceexploratory@gmail.com</a>
-                                                        </li>
-                                                        <li>Phone: 7249811866 (WhatsApp)</li>
-                                                        <li>Website: <a
-                                                                href="https://www.prsscienceexploratory.in/">www.prsscienceexploratory.in</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseEleven"
-                                                aria-expanded="false" aria-controls="collapseEleven">
-                                                Is there a lab visit day for interested students/parents?
-                                                <span class="accordion-icon" aria-hidden="true"></span>
-                                            </button>
-                                            <div id="collapseEleven" class="accordion-collapse collapse"
-                                                aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <p>Yes, interested students and parents can visit the exploratory
-                                                        during
-                                                        office hours on
-                                                        Saturdays (5 p.m. to 6 p.m.) and Sundays (10 a.m. to 1 p.m.).
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseTwe"
-                                                aria-expanded="false" aria-controls="collapseTwe">
-                                                What are the various competitions where students got benefitted through
-                                                this
-                                                training programme?
-                                                <span class="accordion-icon" aria-hidden="true"></span>
-                                            </button>
-                                            <div id="collapseTwe" class="accordion-collapse collapse"
-                                                aria-labelledby="headingTwe" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <p>Some of the competitions like Dr. Homi Bhabha Balvaidyanik
-                                                        Competition, Vidyathi Vigyaan
-                                                        Manthan (VVM), Science Olympiads, Inspire Manak Awards, National
-                                                        Science Exhibitions (CBSE)
-                                                        etc.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                     <!-- CoreStudents Program Accordion Ends -->
                                 </div>
 
-                                <div class="row g-4 mt-3">
+                                <!-- <div class="row g-4 mt-3">
                                     <div class="col-md-4">
                                         <div class="card h-100 shadow-sm">
                                             <div class="card-body">
@@ -1351,10 +1309,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </section>
-                        <section class="events py-5">
+                        <!-- <section class="events py-5">
                             <div class="container">
                                 <h2 class="mb-4 text-center section-subtitle">Other Programs &amp; Events</h2>
                                 <div class="row justify-content-center">
@@ -1390,15 +1348,15 @@
                                     </div>
                                 </div>
                             </div>
-                        </section>
-                        <section class="outcomes py-3">
+                        </section> -->
+                        <!-- <section class="outcomes py-3">
                             <div class="container">
                                 <h3 class="mb-4 text-center" style="color: #2c3e50;">Notifications for all these
                                     programs/events are released one month before the schedule of these events.
                                 </h3>
                             </div>
-                        </section>
-                        <section class="outcomes py-3">
+                        </section> -->
+                        <!-- <section class="outcomes py-3">
                             <div class="container">
                                 <h2 class="mb-4 text-center section-subtitle">Program Outcomes</h2>
                                 <div class="row justify-content-center">
@@ -1433,7 +1391,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </section> -->
                     </div>
                     <!-- FOR STUDENTS CONTENT ENDS -->
                     <!-- TEACHERS -->
