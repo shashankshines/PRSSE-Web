@@ -1311,23 +1311,6 @@ ol[type="1"]>li:not(:last-child) {
     margin-bottom: 8px
 }
 
-/* .section_heading {
-    margin-bottom: 40px;
-} */
-
-/* .section_heading .heading_text {
-	font-size: 45px;
-	font-weight: 700;
-	line-height: 50px;
-	margin-bottom: 24px
-}
-
-.section_heading .heading_description {
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 24px
-} */
-
 blockquote {
     display: flex;
     margin-bottom: 20px
@@ -18735,17 +18718,13 @@ ol[type="1"]>li:not(:last-child) {
 }
 
 .meta_info_list.unordered_list_block>li:not(:last-child) {
-    margin-bottom: 8px
+    margin-bottom: 8px;
 }
 
-/* .section_heading {
-    margin-bottom: 20px
-} */
-
 .heading_text {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 700;
-    line-height: 34px;
+    line-height: 32px;
     margin-bottom: 24px;
     color:#fe7b14;
 }
@@ -22106,11 +22085,6 @@ blockquote p {
     .forget_password.text-end {
         text-align: left !important
     }
-    /* .section_heading .heading_text {
-        font-size: 36px;
-        line-height: 40px;
-        margin-bottom: 18px
-    } */
     .page_banner .content_wrapper {
         min-height: auto
     }
