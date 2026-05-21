@@ -60,9 +60,9 @@ html{
       justify-content:center;
       background:
       linear-gradient(
-        135deg,
+        60deg,
         #5f8d58,
-        #7ea56b
+        #c4e6b3
       );
       color:#fff;
       font-size:30px;
@@ -112,9 +112,21 @@ body::before {
     background-attachment: fixed;
     background-size: auto;
     background-position: 0 0;
-    opacity: 0.13;
+    opacity: 0.14;
     pointer-events: none;
     z-index: 0;
+    animation: moveBg 50s linear infinite;
+}
+@keyframes moveBg{
+
+    0%{
+        background-position: 0 0;
+    }
+
+    100%{
+        background-position: 500px 0;
+    }
+
 }
 
 body > * {
@@ -133,7 +145,7 @@ body > * {
 }
 .grad {
   background: linear-gradient(90deg,#ff8a00,#ef3f50, #782e94, #2a1772);
-  /* -webkit-background-clip:text; */
+  -webkit-background-clip:text;
   color:transparent;
   /* text-shadow: #000 3px 2px; */
 }
@@ -2050,7 +2062,7 @@ blockquote p {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #fe7b14;
+    background: linear-gradient(34deg, #ff7a00, #ffb347);
     color: #fff;
     font-size: 25px;
     font-weight: 400;
@@ -3808,25 +3820,25 @@ blockquote p {
     font-size: 17px;
     font-weight: 600;
     line-height: 23px;
-     color: #fe7b14;
+    color: #fe7b14;
     position: relative;
     align-items: center;
     display: inline-flex;
-    padding: 10px;
-    font-family: Poppins, sans-serif;
-    border-radius: 8px
+    padding: 10px 12px;
+    font-family: "Poppins", sans-serif;
+    border-radius: 15px;
 }
 
 .main_menu_list>li.active>a,
 .main_menu_list .dropdown.active > a,
 .main_menu_list .dropdown:has(.dropdown-menu li.active) > a {
-    color: #1f1d0d;
-    background-color: #ffd32b
+    color: #29281e;
+    background: linear-gradient(274deg, #ff7a00, rgba(255, 211, 43, .8));
 }
 
 .main_menu_list>li:hover>a {
-    color: #1f1d0d;
-    background-color: #ffd32b
+    color: #29281e;
+    background: linear-gradient(274deg, #ff7a00, rgba(255, 211, 43, .8));
 }
 
 .main_menu_list>li:hover>a:after {
@@ -3857,9 +3869,9 @@ blockquote p {
     animation: unset;
     min-width: 210px;
     inset: 100% auto auto auto;
-    border-radius: 8px;
+    border-radius: 15px;
     border: 2px solid #1f1d0d;
-    box-shadow: -6px 6px 0 0 rgba(254, 123, 20, 0.7);
+    box-shadow: -5px 6px 0 0 rgba(254, 123, 20, 0.8);
 }
 
 .main_menu_list .dropdown-menu:before {
