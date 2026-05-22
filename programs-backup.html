@@ -188,10 +188,10 @@
         .tab-content-box {
             width: 100%;
             float: left;
-            background: rgba(255, 255, 255, .5);
+            background: rgba(255, 255, 255, .4);
             border-radius: 24px;
             border: 1px solid rgba(221, 221, 221, 0.9);
-            padding: 20px 20px 45px;
+            padding: 20px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
             margin-top: 10px;
         }
@@ -266,6 +266,16 @@
             width: 100%;
             float: left;
         }
+        .cards-grid-cont::before{
+    content:'';
+    position:absolute;
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    top:-60px;
+    right:-60px;
+    background:rgba(13,92,77,.06);
+}
 
         @media screen and (max-width: 1024px) {
             .cards-grid-cont>p {
@@ -323,7 +333,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #6aa65d, #5d8e4c);
+            background: linear-gradient(135deg, #adff9b, #568b45);
             color: #fff;
             font-size: 26px;
             margin-bottom: 28px;
@@ -1077,7 +1087,8 @@
                                             <div id="collapseFour" class="accordion-collapse collapse"
                                                 aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p><strong>For young mathematicians with a love for problem-solving
+                                                    <p>
+                                                        <strong>For young mathematicians with a love for problem-solving
                                                             along with hands-on training in science and technology in
                                                             laboratory</strong></p>
                                                     <ul>
