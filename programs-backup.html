@@ -118,6 +118,7 @@
         .page_banner .content_wrapper .breadcrumb_nav li {
             opacity: 0.9;
         }
+
         /* TABS STYLES */
         /* Responsive tab styling */
         .tabs-structure-container {
@@ -180,6 +181,7 @@
             position: relative;
             z-index: 2;
         }
+
         .custom-tabs .nav-link.active i,
         .custom-tabs .nav-link i {
             font-size: 20px;
@@ -191,7 +193,7 @@
             background: rgba(255, 255, 255, .4);
             border-radius: 24px;
             border: 1px solid rgba(221, 221, 221, 0.9);
-            padding: 20px;
+            padding: 20px 15px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
             margin-top: 10px;
         }
@@ -266,16 +268,17 @@
             width: 100%;
             float: left;
         }
-        .cards-grid-cont::before{
-    content:'';
-    position:absolute;
-    width:160px;
-    height:160px;
-    border-radius:50%;
-    top:-60px;
-    right:-60px;
-    background:rgba(13,92,77,.06);
-}
+
+        .cards-grid-cont::before {
+            content: '';
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            top: -60px;
+            right: -60px;
+            background: rgba(13, 92, 77, .06);
+        }
 
         @media screen and (max-width: 1024px) {
             .cards-grid-cont>p {
@@ -286,13 +289,13 @@
         #overview .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-            gap: 35px;
+            gap: 20px;
         }
 
         @media(max-width:768px) {
             #overview .cards-grid {
                 grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 20px;
+                gap: 15px;
             }
         }
 
@@ -333,7 +336,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #adff9b, #568b45);
+            background: linear-gradient(135deg, #98d38b, #568b45);
             color: #fff;
             font-size: 26px;
             margin-bottom: 28px;
@@ -418,10 +421,6 @@
             float: left;
         }
 
-        /* .core-student-annual-programs .accordion .accordion-item .collapsed {
-            background: linear-gradient(135deg, #0d5c4d 0%, #1a8570 100%)
-        } 
-         
         /* Accordion */
         .core-student-annual-programs .accordion-body {
             padding: 0 15px;
@@ -434,7 +433,7 @@
         /* Accordion icon color */
         .core-student-annual-programs .accordion-item .fa-solid {
             color: #fff;
-            background: linear-gradient( 358deg, #0d5c4d 0%, #1a8570 100%);
+            background: linear-gradient(358deg, #0d5c4d 0%, #1a8570 100%);
             border-radius: 10px;
             min-width: 40px;
             height: 40px;
@@ -443,6 +442,7 @@
             justify-content: center;
             align-items: center;
         }
+
         img.accordion-img {
             width: 60%;
             height: auto;
@@ -454,20 +454,232 @@
                 width: 100%;
                 height: auto;
             }
+
             /* heading for mobiles */
             .heading_text {
                 /* text-align: center; */
                 font-size: 1.5rem;
                 line-height: 1.85rem;
             }
+
             .core-student-annual-programs .accordion-body {
                 padding: 10px;
             }
-            .core-student-annual-programs .accordion .accordion-item { padding: 0; }
-            .core-student-annual-programs .accordion .accordion-button { padding: 10px; }
 
+            .core-student-annual-programs .accordion .accordion-item {
+                padding: 0;
+            }
+
+            .core-student-annual-programs .accordion .accordion-button {
+                padding: 10px;
+            }
         }
 
+        .teacher-impact-section {
+            background: #f5f9fb;
+        }
+
+        .impact-wrapper {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 25px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .05);
+        }
+
+        .impact-badge {
+            display: inline-block;
+            background: #e6f3f3;
+            color: #005b5b;
+            padding: 10px 22px;
+            border-radius: 40px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .5px;
+            margin-bottom: 22px;
+        }
+
+        .impact-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            line-height: 1.5;
+            color: #0f172a;
+        }
+
+        .impact-desc {
+            margin-top: 10px;
+            color: #64748b;
+            line-height: 1.9;
+            max-width: 650px;
+        }
+
+        .stats-grid {
+            display: flex;
+            gap: 25px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #005b5b, #003f3f);
+            color: #fff;
+            border-radius: 30px;
+            min-width: 100px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 18px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            line-height: 1.7;
+            opacity: .92;
+        }
+
+        @media(max-width:991px) {
+
+            .impact-wrapper {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .stats-grid {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .stat-card {
+                width: 100%;
+            }
+        }
+
+.raise-strip{
+background:rgba(255, 255, 255, .5);
+border-radius:28px;
+padding:20px 20px 20px 20px;
+display:flex;
+justify-content:space-between;
+gap:15px;
+align-items:center;
+box-shadow:0 12px 35px rgba(0,0,0,.05);
+}
+
+.raise-left{
+max-width:480px;
+}
+
+.mini-badge{
+display:inline-block;
+background:#e6f3f3;
+color:#005b5b;
+padding:8px 18px;
+border-radius:40px;
+font-size:12px;
+font-weight:700;
+margin-bottom:18px;
+}
+
+.raise-left h2{
+font-size:1.2rem;
+font-weight:800;
+line-height:1.3;
+color:#0f172a;
+margin-bottom: 10px;
+}
+
+.raise-left p{
+color:#64748b;
+line-height:1.8;
+margin:0;
+}
+
+.raise-stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+}
+
+.mini-stat{
+    background:linear-gradient(135deg, #005b5b, #003f3f);
+    border:1px solid #e2e8f0;
+    padding:15px;
+    border-radius:22px;
+    text-align:center;
+    min-width:120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 130px !important;
+}
+
+.mini-stat h3 {
+font-size:2.5rem;
+font-weight:800;
+color:#fff;
+margin-bottom:8px;
+}
+
+.mini-stat span{
+font-size:.92rem;
+color:#fff;
+line-height:1.5;
+}
+
+.bottom-info{
+display:flex;
+justify-content:space-between;
+gap:20px;
+padding:22px 28px;
+background:rgba(255, 255, 255, .5);
+border-radius:22px;
+font-size:.96rem;
+color:#475569;
+box-shadow:0 10px 25px rgba(0,0,0,.03);
+border: #ccc solid 1px;
+}
+
+.bottom-info strong{
+color:#005b5b;
+}
+
+@media(max-width:991px){
+
+.raise-strip{
+flex-direction:column;
+align-items:flex-start;
+text-align: center;
+}
+
+.raise-stats{
+width:100%;
+grid-template-columns:repeat(2,1fr);
+}
+
+.bottom-info{
+flex-direction:column;
+}
+
+}
+
+@media(max-width:576px){
+
+.raise-stats{
+grid-template-columns:1fr 1fr;
+}
+
+.mini-stat{
+min-width:auto;
+}
+
+}
     </style>
 </head>
 
@@ -700,7 +912,7 @@
                                                         cultivate scientific thinking, observational skills and
                                                         curiosity-driven learning.
                                                     </p>
-                                                    <div class="tag">Parents & Community</div>
+                                                    <div class="tag">Parents &amp; Community</div>
                                                 </div>
                                                 <!-- Card 7 -->
                                                 <div class="card">
@@ -720,7 +932,7 @@
                                     </div>
                                 </section>
                                 <!-- Cards GRID for Enrichment & Signature Events -->
-                                <div class="cards-grid-cont mt-md-4 mt-3 px-3">
+                                <div class="cards-grid-cont mt-md-4 mt-3 px-3 py-3">
                                     <h3 class="heading_text">Enrichment &amp; Signature Events</h3>
                                     <p>Along with structured programs, PRSSE offers a vibrant calendar of events that
                                         make science a living experience for the whole community. These activities
@@ -956,9 +1168,9 @@
                                     <!------------ Students Program Accordion Starts ---------->
                                     <div class="accordion" id="accordionExample">
                                         <div class="accordion-item">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseOne" aria-expanded="false"
-                                                aria-controls="collapseOne">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                aria-expanded="false" aria-controls="collapseOne">
                                                 <!-- icon -->
                                                 <i class="fa-solid fa-microscope me-2"></i>
                                                 Laboratory Training Program
@@ -967,7 +1179,8 @@
                                             <div id="collapseOne" class="accordion-collapse collapse"
                                                 aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p class="mb-2 mt-3"><strong>Building scientific temperament beyond the textbook</strong></p>
+                                                    <p class="mb-2 mt-3"><strong>Building scientific temperament beyond
+                                                            the textbook</strong></p>
                                                     <ul>
                                                         <li>For: Students entering Grades 6, 7, 8 (can continue up to
                                                             Grade 9)
@@ -1008,7 +1221,8 @@
                                             <div id="collapseTwo" class="accordion-collapse collapse"
                                                 aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p class="mb-2 mt-3"><strong>Intensive monthly lab days for outstation and busy students</strong></p>
+                                                    <p class="mb-2 mt-3"><strong>Intensive monthly lab days for
+                                                            outstation and busy students</strong></p>
                                                     <ul>
                                                         <li>For: Grades 6 to 8</li>
                                                         <li>Sessions: 10 extended sessions per year (about 6 hours once
@@ -1388,191 +1602,398 @@
                             </div>
                         </section> -->
                     </div>
-                    <!-- FOR STUDENTS CONTENT ENDS -->
+                    <!-- STUDENTS CONTENT ENDS -->
+
                     <!-- TEACHERS PROGRAM OVERVIEW -->
                     <div class="tab-pane fade" id="teachers">
-                        <h2>Teachers' Program Overview</h2>
-                          <section class="program-overview">
-                <div class="container">
-                    <h2 class="mb-4 mt-3 text-left section-title">Teachers' Program Overview</h2>
-                    <p class="text-left">Welcome to the Teacher's Induction Program webpage! Our initiative focuses on enhancing the skills and methodologies of educators in the science domain, ensuring they are well-equipped to foster engaging and effective learning environments.</p>
-                     <p class="text-left" style="font-weight: bold;">
-                        Program Highlights</p>
-                         <h5>Total Programs Arranged: 7</h5>
-                         <h5>Total Teachers Inducted: 151</h5>
-                   
-                     <p class="text-left">
-                        Our induction programs are designed to strengthen classroom practices through hands-on, activity-based learning. Each session is tailored to provide teachers with innovative pedagogical strategies and resources, promoting inquiry-based learning aligned with the National Education Policy (NEP).
-                    </p>
-                </div>
-            </section>
-        
-            <!-- Full-Size Photo Gallery Carousel Section -->
-            <section class="programs py-5" itemscope itemtype="https://schema.org/ImageGallery">
-                <div class="container">
-                    <h2 class="mb-5 text-center section-subtitle" itemprop="name">Teachers Induction Reports - Photo Gallery</h2>
-                    
-                    <!-- Carousel Controls Info -->
-                    <div class="carousel-controls-info mb-4">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <p class="text-muted carousel-hint">Use arrow buttons to navigate • Click dots to jump to image • Press arrow keys on keyboard</p>
+                        <section class="program-overview">
+                            <div class="container">
+                                <h2 class="mb-4 mt-3 text-left section-title">Teachers' Program Overview</h2>
+                                <p class="text-left">Welcome to the Teacher's Induction Program! Our initiative
+                                    focuses on enhancing the skills and methodologies of educators in the science
+                                    domain, ensuring they are well-equipped to foster engaging and effective learning
+                                    environments.</p>
                             </div>
-                        </div>
-                    </div>
+                        </section>
 
-                    <!-- Full-Size Carousel Gallery -->
-                    <div class="carousel-gallery-container" role="region" aria-label="Photo Gallery Carousel" aria-live="polite">
-                        <div class="carousel-inner">
-                            <!-- Carousel Items -->
-                            <div class="carousel-item active" data-index="0" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                                <img src="assets/images/teachers/teachers_program.JPG" alt="Teacher Program Activity - Prof. Rajendra Singh Science Exploratory" loading="eager" decoding="async" itemprop="url" class="carousel-image" />
-                                <div class="image-caption">
-                                    <span>Teacher Program Activity</span>
-                                </div>
-                            </div>
+                        <!-- Program Highlights -->
+                        <div class="container">
+                            <div class="impact-wrapper">
 
-                            <div class="carousel-item" data-index="1" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                                <img src="assets/images/teachers/teachers_program1.JPG" alt="Teacher Training Session - Prof. Rajendra Singh Science Exploratory" loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
-                                <div class="image-caption">
-                                    <span class="title">Training Session</span>
-                                </div>
-                            </div>
+                                <!-- LEFT -->
 
-                            <div class="carousel-item" data-index="2" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                                <img src="assets/images/teachers/teachers_program2.JPG" alt="Teacher Enrichment Program - Prof. Rajendra Singh Science Exploratory" loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
-                                <div class="image-caption">
-                                    <span>Enrichment Program</span>
-                                </div>
-                            </div>
+                                <div class="impact-content">
 
-                            <div class="carousel-item" data-index="3" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                                <img src="assets/images/teachers/teachers_program3.JPG" alt="Interactive Teaching Session - Prof. Rajendra Singh Science Exploratory" loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
-                                <div class="image-caption">
-                                    <span>Interactive Session</span>
-                                </div>
-                            </div>
+                                    <div class="impact-badge">
+                                        PROGRAM HIGHLIGHTS
+                                    </div>
 
-                            <div class="carousel-item" data-index="4" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                                <img src="assets/images/teachers/teachers_program4.JPG" alt="Science Demonstration for Teachers - Prof. Rajendra Singh Science Exploratory" loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
-                                <div class="image-caption">
-                                    <span>Science Demonstration</span>
-                                </div>
-                            </div>
+                                    <h2 class="impact-title">
+                                        Strengthening Science &
+                                        Mathematics Education
+                                    </h2>
 
-                            <div class="carousel-item" data-index="5" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                                <img src="assets/images/teachers/teachers_program5.jpg" alt="Hands-on Workshop for Educators - Prof. Rajendra Singh Science Exploratory" loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
-                                <div class="image-caption">
-                                    <span>Hands-on Workshop</span>
+                                    <p class="impact-desc">
+                                        Our induction programs are designed to strengthen classroom
+                                        practices through hands-on, activity-based learning.
+                                        Each session provides teachers with innovative pedagogical
+                                        strategies and practical resources, promoting inquiry-based
+                                        learning aligned with the National Education Policy (NEP).
+                                    </p>
+
                                 </div>
+
+                                <!-- RIGHT -->
+
+                                <div class="stats-grid">
+
+                                    <div class="stat-card">
+
+                                        <div class="stat-number">
+                                            07
+                                        </div>
+
+                                        <div class="stat-label">
+                                            Total Programs Arranged
+                                        </div>
+
+                                    </div>
+
+                                    <div class="stat-card">
+
+                                        <div class="stat-number">
+                                            151
+                                        </div>
+
+                                        <div class="stat-label">
+                                            Teachers Inducted
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
                             </div>
 
-                            <div class="carousel-item" data-index="6" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                                <img src="assets/images/teachers/teachers_program6.jpg" alt="Physics Teacher Training Program - Prof. Rajendra Singh Science Exploratory" loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
-                                <div class="image-caption">
-                                    <span>Physics Training</span>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item" data-index="7" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                                <img src="assets/images/teachers/teachers_program7.jpg" alt="Chemistry Lab Activity - Prof. Rajendra Singh Science Exploratory" loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
-                                <div class="image-caption">
-                                    <span>Chemistry Lab</span>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item" data-index="8" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                                <img src="assets/images/teachers/teachers_program8.jpg" alt="Teacher Development Session - Prof. Rajendra Singh Science Exploratory" loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
-                                <div class="image-caption">
-                                    <span>Development Session</span>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item" data-index="9" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                                <img src="assets/images/teachers/teachers_program11.jpg" alt="Collaborative Learning for Teachers - Prof. Rajendra Singh Science Exploratory" loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
-                                <div class="image-caption">
-                                    <span>Collaborative Learning</span>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item" data-index="10" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                                <img src="assets/images/teachers/teachers_program12.jpg" alt="3D Design Workshop - Prof. Rajendra Singh Science Exploratory" loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
-                                <div class="image-caption">
-                                    <span>3D Design Workshop</span>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item" data-index="11" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                                <img src="assets/images/teachers/teachers_program13.jpg" alt="ATL Lab Training - Prof. Rajendra Singh Science Exploratory" loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
-                                <div class="image-caption">
-                                    <span>ATL Lab Training</span>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item" data-index="12" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                                <img src="assets/images/teachers/teachers_program14.jpg" alt="Experiential Learning Session - Prof. Rajendra Singh Science Exploratory" loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
-                                <div class="image-caption">
-                                    <span>Experiential Learning</span>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item" data-index="13" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                                <img src="assets/images/teachers/teachers_program16.jpg" alt="NEP Implementation Workshop - Prof. Rajendra Singh Science Exploratory" loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
-                                <div class="image-caption">
-                                    <span>NEP Implementation</span>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item" data-index="14" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                                <img src="assets/images/teachers/teachers_program15.jpg" alt="Middle School Teacher Program - Prof. Rajendra Singh Science Exploratory" loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
-                                <div class="image-caption">
-                                    <span>Middle School Program</span>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item" data-index="15" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                                <img src="assets/images/teachers/teachers_program17.jpg" alt="High School Induction Program - Prof. Rajendra Singh Science Exploratory" loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
-                                <div class="image-caption">
-                                    <span>High School Induction</span>
-                                </div>
-                            </div>
                         </div>
 
-                        <!-- Navigation Arrows -->
-                        <button class="carousel-btn carousel-btn-prev" aria-label="Previous image">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="carousel-btn carousel-btn-next" aria-label="Next image">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
+                        <!-- RAISE - NEP -->
+                         <section class="raise-mini-section py-4">
 
-                        <!-- Navigation Dots -->
-                        <div class="carousel-indicators">
-                            <button class="indicator active" data-slide="0" aria-label="Go to image 1"></button>
-                            <button class="indicator" data-slide="1" aria-label="Go to image 2"></button>
-                            <button class="indicator" data-slide="2" aria-label="Go to image 3"></button>
-                            <button class="indicator" data-slide="3" aria-label="Go to image 4"></button>
-                            <button class="indicator" data-slide="4" aria-label="Go to image 5"></button>
-                            <button class="indicator" data-slide="5" aria-label="Go to image 6"></button>
-                            <button class="indicator" data-slide="6" aria-label="Go to image 7"></button>
-                            <button class="indicator" data-slide="7" aria-label="Go to image 8"></button>
-                            <button class="indicator" data-slide="8" aria-label="Go to image 9"></button>
-                            <button class="indicator" data-slide="9" aria-label="Go to image 10"></button>
-                            <button class="indicator" data-slide="10" aria-label="Go to image 11"></button>
-                            <button class="indicator" data-slide="11" aria-label="Go to image 12"></button>
-                            <button class="indicator" data-slide="12" aria-label="Go to image 13"></button>
-                            <button class="indicator" data-slide="13" aria-label="Go to image 14"></button>
-                            <button class="indicator" data-slide="14" aria-label="Go to image 15"></button>
-                            <button class="indicator" data-slide="15" aria-label="Go to image 16"></button>
-                        </div>
+<div class="container">
 
-                        <!-- Image Counter -->
-                        <div class="carousel-counter">
-                            <span id="currentImage">1</span> / <span id="totalImages">16</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <div class="raise-strip">
+
+        <!-- LEFT -->
+
+        <div class="raise-left">
+
+            <div class="mini-badge">
+                RAISE PROGRAM
+            </div>
+
+            <h2>
+                Reinforcement of Academic Instructions
+                and Science Education
+            </h2>
+
+            <p>
+                NEP-aligned induction and enrichment initiative
+                for Science & Mathematics teachers.
+            </p>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="raise-stats">
+
+            <div class="mini-stat">
+
+                <h3>20</h3>
+
+                <span>
+                    Teachers / Year
+                </span>
+
+            </div>
+
+            <div class="mini-stat">
+
+                <h3>40+</h3>
+
+                <span>
+                    Sessions
+                </span>
+
+            </div>
+
+            <div class="mini-stat">
+
+                <h3>06</h3>
+
+                <span>
+                    Workshops
+                </span>
+
+            </div>
+
+            <div class="mini-stat">
+
+                <h3>8H</h3>
+
+                <span>
+                    Per Day
+                </span>
+
+            </div>
+
+            
+
+        </div>
+         <!-- BOTTOM -->
+
+    <div class="bottom-info">
+
+        <div>
+            <strong>In Association With:</strong>
+            Vidya Bharati (Vidarbha Prant)
+        </div>
+
+        <div>
+            <strong>Entry:</strong>
+            Nominated teachers from schools around Nagpur
+        </div>
+
+    </div>
+
+    </div>
+
+   
+
+</div>
+
+</section>
+
+                        <!-- Full-Size Photo Gallery Carousel Section -->
+                        <section class="programs py-5" itemscope itemtype="https://schema.org/ImageGallery">
+                            <div class="container">
+                                <h2 class="mb-5 text-center section-subtitle" itemprop="name">Teachers Induction Reports
+                                    - Photo Gallery</h2>
+
+                                <!-- Carousel Controls Info -->
+                                <div class="carousel-controls-info mb-4">
+                                    <div class="row">
+                                        <div class="col-12 text-center">
+                                            <p class="text-muted carousel-hint">Use arrow buttons to navigate • Click
+                                                dots to jump to image • Press arrow keys on keyboard</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Full-Size Carousel Gallery -->
+                                <div class="carousel-gallery-container" role="region"
+                                    aria-label="Photo Gallery Carousel" aria-live="polite">
+                                    <div class="carousel-inner">
+                                        <!-- Carousel Items -->
+                                        <div class="carousel-item active" data-index="0" itemprop="image" itemscope
+                                            itemtype="https://schema.org/ImageObject">
+                                            <img src="assets/images/teachers/teachers_program.JPG"
+                                                alt="Teacher Program Activity - Prof. Rajendra Singh Science Exploratory"
+                                                loading="eager" decoding="async" itemprop="url"
+                                                class="carousel-image" />
+                                            <div class="image-caption">
+                                                <span>Teacher Program Activity</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item" data-index="1" itemprop="image" itemscope
+                                            itemtype="https://schema.org/ImageObject">
+                                            <img src="assets/images/teachers/teachers_program1.JPG"
+                                                alt="Teacher Training Session - Prof. Rajendra Singh Science Exploratory"
+                                                loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
+                                            <div class="image-caption">
+                                                <span class="title">Training Session</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item" data-index="2" itemprop="image" itemscope
+                                            itemtype="https://schema.org/ImageObject">
+                                            <img src="assets/images/teachers/teachers_program2.JPG"
+                                                alt="Teacher Enrichment Program - Prof. Rajendra Singh Science Exploratory"
+                                                loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
+                                            <div class="image-caption">
+                                                <span>Enrichment Program</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item" data-index="3" itemprop="image" itemscope
+                                            itemtype="https://schema.org/ImageObject">
+                                            <img src="assets/images/teachers/teachers_program3.JPG"
+                                                alt="Interactive Teaching Session - Prof. Rajendra Singh Science Exploratory"
+                                                loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
+                                            <div class="image-caption">
+                                                <span>Interactive Session</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item" data-index="4" itemprop="image" itemscope
+                                            itemtype="https://schema.org/ImageObject">
+                                            <img src="assets/images/teachers/teachers_program4.JPG"
+                                                alt="Science Demonstration for Teachers - Prof. Rajendra Singh Science Exploratory"
+                                                loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
+                                            <div class="image-caption">
+                                                <span>Science Demonstration</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item" data-index="5" itemprop="image" itemscope
+                                            itemtype="https://schema.org/ImageObject">
+                                            <img src="assets/images/teachers/teachers_program5.jpg"
+                                                alt="Hands-on Workshop for Educators - Prof. Rajendra Singh Science Exploratory"
+                                                loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
+                                            <div class="image-caption">
+                                                <span>Hands-on Workshop</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item" data-index="6" itemprop="image" itemscope
+                                            itemtype="https://schema.org/ImageObject">
+                                            <img src="assets/images/teachers/teachers_program6.jpg"
+                                                alt="Physics Teacher Training Program - Prof. Rajendra Singh Science Exploratory"
+                                                loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
+                                            <div class="image-caption">
+                                                <span>Physics Training</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item" data-index="7" itemprop="image" itemscope
+                                            itemtype="https://schema.org/ImageObject">
+                                            <img src="assets/images/teachers/teachers_program7.jpg"
+                                                alt="Chemistry Lab Activity - Prof. Rajendra Singh Science Exploratory"
+                                                loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
+                                            <div class="image-caption">
+                                                <span>Chemistry Lab</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item" data-index="8" itemprop="image" itemscope
+                                            itemtype="https://schema.org/ImageObject">
+                                            <img src="assets/images/teachers/teachers_program8.jpg"
+                                                alt="Teacher Development Session - Prof. Rajendra Singh Science Exploratory"
+                                                loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
+                                            <div class="image-caption">
+                                                <span>Development Session</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item" data-index="9" itemprop="image" itemscope
+                                            itemtype="https://schema.org/ImageObject">
+                                            <img src="assets/images/teachers/teachers_program11.jpg"
+                                                alt="Collaborative Learning for Teachers - Prof. Rajendra Singh Science Exploratory"
+                                                loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
+                                            <div class="image-caption">
+                                                <span>Collaborative Learning</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item" data-index="10" itemprop="image" itemscope
+                                            itemtype="https://schema.org/ImageObject">
+                                            <img src="assets/images/teachers/teachers_program12.jpg"
+                                                alt="3D Design Workshop - Prof. Rajendra Singh Science Exploratory"
+                                                loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
+                                            <div class="image-caption">
+                                                <span>3D Design Workshop</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item" data-index="11" itemprop="image" itemscope
+                                            itemtype="https://schema.org/ImageObject">
+                                            <img src="assets/images/teachers/teachers_program13.jpg"
+                                                alt="ATL Lab Training - Prof. Rajendra Singh Science Exploratory"
+                                                loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
+                                            <div class="image-caption">
+                                                <span>ATL Lab Training</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item" data-index="12" itemprop="image" itemscope
+                                            itemtype="https://schema.org/ImageObject">
+                                            <img src="assets/images/teachers/teachers_program14.jpg"
+                                                alt="Experiential Learning Session - Prof. Rajendra Singh Science Exploratory"
+                                                loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
+                                            <div class="image-caption">
+                                                <span>Experiential Learning</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item" data-index="13" itemprop="image" itemscope
+                                            itemtype="https://schema.org/ImageObject">
+                                            <img src="assets/images/teachers/teachers_program16.jpg"
+                                                alt="NEP Implementation Workshop - Prof. Rajendra Singh Science Exploratory"
+                                                loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
+                                            <div class="image-caption">
+                                                <span>NEP Implementation</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item" data-index="14" itemprop="image" itemscope
+                                            itemtype="https://schema.org/ImageObject">
+                                            <img src="assets/images/teachers/teachers_program15.jpg"
+                                                alt="Middle School Teacher Program - Prof. Rajendra Singh Science Exploratory"
+                                                loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
+                                            <div class="image-caption">
+                                                <span>Middle School Program</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item" data-index="15" itemprop="image" itemscope
+                                            itemtype="https://schema.org/ImageObject">
+                                            <img src="assets/images/teachers/teachers_program17.jpg"
+                                                alt="High School Induction Program - Prof. Rajendra Singh Science Exploratory"
+                                                loading="lazy" decoding="async" itemprop="url" class="carousel-image" />
+                                            <div class="image-caption">
+                                                <span>High School Induction</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Navigation Arrows -->
+                                    <button class="carousel-btn carousel-btn-prev" aria-label="Previous image">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <button class="carousel-btn carousel-btn-next" aria-label="Next image">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+
+                                    <!-- Navigation Dots -->
+                                    <div class="carousel-indicators">
+                                        <button class="indicator active" data-slide="0"
+                                            aria-label="Go to image 1"></button>
+                                        <button class="indicator" data-slide="1" aria-label="Go to image 2"></button>
+                                        <button class="indicator" data-slide="2" aria-label="Go to image 3"></button>
+                                        <button class="indicator" data-slide="3" aria-label="Go to image 4"></button>
+                                        <button class="indicator" data-slide="4" aria-label="Go to image 5"></button>
+                                        <button class="indicator" data-slide="5" aria-label="Go to image 6"></button>
+                                        <button class="indicator" data-slide="6" aria-label="Go to image 7"></button>
+                                        <button class="indicator" data-slide="7" aria-label="Go to image 8"></button>
+                                        <button class="indicator" data-slide="8" aria-label="Go to image 9"></button>
+                                        <button class="indicator" data-slide="9" aria-label="Go to image 10"></button>
+                                        <button class="indicator" data-slide="10" aria-label="Go to image 11"></button>
+                                        <button class="indicator" data-slide="11" aria-label="Go to image 12"></button>
+                                        <button class="indicator" data-slide="12" aria-label="Go to image 13"></button>
+                                        <button class="indicator" data-slide="13" aria-label="Go to image 14"></button>
+                                        <button class="indicator" data-slide="14" aria-label="Go to image 15"></button>
+                                        <button class="indicator" data-slide="15" aria-label="Go to image 16"></button>
+                                    </div>
+
+                                    <!-- Image Counter -->
+                                    <div class="carousel-counter">
+                                        <span id="currentImage">1</span> / <span id="totalImages">16</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
 
                     </div>
                     <!-- CITIZENS -->
