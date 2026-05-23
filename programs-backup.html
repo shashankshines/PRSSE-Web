@@ -512,8 +512,8 @@
         .impact-desc {
             margin-top: 10px;
             color: #64748b;
-            line-height: 1.9;
-            max-width: 650px;
+            line-height: 1.7;
+            max-width: 45vw;
         }
 
         .stats-grid {
@@ -549,15 +549,23 @@
                 flex-direction: column;
                 text-align: center;
             }
-
+            .impact-desc { min-width: 100%; }
             .stats-grid {
                 width: 100%;
-                flex-direction: column;
+                flex-direction: row;
+                gap: 15px;
             }
 
             .stat-card {
                 width: 100%;
             }
+             .stat-number {
+                font-size: 3rem;
+                margin-bottom: .8rem;
+            }
+            .stat-label {
+                line-height: 22px;
+            }   
         }
 
 .raise-strip{
@@ -572,7 +580,7 @@ box-shadow:0 12px 35px rgba(0,0,0,.05);
 }
 
 .raise-left{
-max-width:480px;
+max-width:35vw;
 }
 
 .mini-badge{
@@ -596,13 +604,13 @@ margin-bottom: 10px;
 
 .raise-left p{
 color:#64748b;
-line-height:1.8;
+line-height:1.7;
 margin:0;
 }
 
 .raise-stats{
 display:grid;
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(2,1fr);
 gap:10px;
 }
 
@@ -617,7 +625,7 @@ gap:10px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-width: 130px !important;
+    min-width: 9vw;
 }
 
 .mini-stat h3 {
@@ -651,7 +659,9 @@ color:#005b5b;
 }
 
 @media(max-width:991px){
-
+.raise-left{
+max-width:100vw;
+}
 .raise-strip{
 flex-direction:column;
 align-items:flex-start;
@@ -1701,6 +1711,7 @@ min-width:auto;
                 NEP-aligned induction and enrichment initiative
                 for Science & Mathematics teachers.
             </p>
+            <p class="py-3">RAISE is a year-long teacher development program promoting hands-on, inquiry-driven science teaching aligned with NEP 2020. Through intensive workshops, teachers explore experiential learning, design classroom activities, address real teaching challenges, and build strategies to foster curiosity, critical thinking, and effective assessment. Participants receive certification in modern science pedagogy.</p>
 
         </div>
 
@@ -1769,11 +1780,57 @@ min-width:auto;
 
     </div>
 
-   
-
 </div>
 
+
+
 </section>
+
+
+<div class="container">
+                            <div class="impact-wrapper">
+
+                                <!-- LEFT -->
+
+                                <div class="impact-content">
+
+                                    <p>RAISE is a year-long professional development journey that supports teachers in shifting from lecture-dominated classrooms to hands-on, inquiry-driven science teaching in line with NEP 2020. Through repeated two-day workshops, teachers experience activities as learners, design their own classroom tasks, and discuss real classroom challenges with peers. The program emphasises experiential learning, integration of local context, assessment for learning, and strategies to nurture curiosity and higher‑order thinking among students. Successful participants receive a certificate acknowledging their enhanced readiness to implement modern science pedagogy.</p>
+
+                                </div>
+
+                                <!-- RIGHT -->
+
+                                <div class="stats-grid">
+
+                                    <div class="stat-card">
+
+                                        <div class="stat-number">
+                                            07
+                                        </div>
+
+                                        <div class="stat-label">
+                                            Total Programs Arranged
+                                        </div>
+
+                                    </div>
+
+                                    <div class="stat-card">
+
+                                        <div class="stat-number">
+                                            151
+                                        </div>
+
+                                        <div class="stat-label">
+                                            Teachers Inducted
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
 
                         <!-- Full-Size Photo Gallery Carousel Section -->
                         <section class="programs py-5" itemscope itemtype="https://schema.org/ImageGallery">
