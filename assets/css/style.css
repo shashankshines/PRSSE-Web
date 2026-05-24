@@ -3943,7 +3943,7 @@ blockquote p {
     display: inline-flex;
     padding: 10px 12px;
     font-family: "Poppins", sans-serif;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .main_menu_list>li.active>a,
