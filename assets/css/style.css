@@ -2012,7 +2012,7 @@ blockquote p {
 @media screen and (max-width:767px) {
     .accordion .accordion-button {
         font-size: 18px;
-        line-height: 26px;
+        line-height: 24px;
     }
 }
 /* Accordion heading bg  */
@@ -2227,7 +2227,7 @@ blockquote p {
     overflow:hidden;
     padding:20px;
     border-radius:20px;
-    background:rgba(255,255,255,.78);
+    background:rgba(255,255,255,.5);
     backdrop-filter:blur(16px);
     border:1px solid rgba(255,255,255,.5);
     box-shadow:0 15px 35px rgba(0,0,0,.06);
