@@ -535,7 +535,7 @@
             font-size: 4rem;
             font-weight: 800;
             line-height: 1;
-            margin-bottom: 18px;
+            margin-bottom: 5px;
         }
 
         .stat-label {
@@ -543,7 +543,11 @@
             line-height: 1.7;
             opacity: .92;
         }
-        #reportsAccordion .participants .fa-solid { font-size: 36px; color: linear-gradient(135deg, #98d38b, #568b45); }
+
+        #reportsAccordion .participants .fa-solid {
+            font-size: 36px;
+            color: linear-gradient(135deg, #98d38b, #568b45);
+        }
 
         @media(max-width:991px) {
             .impact-wrapper {
@@ -703,10 +707,10 @@
         }
 
         .carousel-hint {
-            font-family: 'comic sans ms', cursive, sans-serif;
+            /* font-family: "'comic sans ms', cursive, sans-serif;" */
             font-size: 1rem;
             letter-spacing: 0.5px;
-            margin: 0;
+            margin: 15px 0 10px;
             text-align: center;
         }
 
@@ -784,7 +788,7 @@
             font-weight: 500;
             letter-spacing: 0.5px;
             animation: slideUpFade 0.6s ease-out 0.3s both;
-            max-width: 250px;
+            max-width: 300px;
             background: linear-gradient(-45deg, rgba(255, 107, 107, .5), rgba(108, 92, 231, .5), rgba(0, 206, 201, .5), rgba(255, 234, 167, .5));
             background-size: 400% 400%;
             animation: gradientMove 15s ease infinite;
@@ -1181,21 +1185,25 @@
             font-size: 30px;
             margin-bottom: 20px;
         }
+
         /* Common for all icons on this page */
-        .reports-card-accordion-main .icon-box .fa-solid { 
+        .reports-card-accordion-main .icon-box .fa-solid {
             background: none;
             color: #fff !important;
             font-size: 24px;
         }
+
         /* icon for stats card */
         .stats-card .fa-solid {
             background: none;
             font-size: 28px;
         }
+
         .card-modern h5 {
             font-weight: 600;
             /* margin-bottom: 18px; */
         }
+
         .card-modern .fa-solid {
             font-size: 28px;
         }
@@ -1240,6 +1248,11 @@
             margin-bottom: 0;
             color: var(--text);
             font-weight: 500;
+        }
+        .resource-box-main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
 
         .resource-box {
@@ -2326,21 +2339,9 @@
                             </div>
                         </section>
                         <!-- Full-Size Photo Gallery Carousel Section -->
-                        <section class="programs py-5" itemscope itemtype="https://schema.org/ImageGallery">
+                        <section class="programs py-2" itemscope itemtype="https://schema.org/ImageGallery">
                             <div class="container">
-                                <h2 class="mb-5 text-center section-subtitle" itemprop="name">Teachers Induction Reports
-                                    - Photo Gallery
-                                </h2>
-                                <!-- Carousel Controls Info -->
-                                <div class="carousel-controls-info mb-4">
-                                    <div class="row">
-                                        <div class="col-12 text-center">
-                                            <p class="text-muted carousel-hint">Use arrow buttons to navigate • Click
-                                                dots to jump to image • Press arrow keys on keyboard
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                                <h2 class="mb-4 section-subtitle heading_text" itemprop="name">Teachers' Induction Reports - Photo Gallery </h2>
                                 <!-- Full-Size Carousel Gallery -->
                                 <div class="carousel-gallery-container" role="region"
                                     aria-label="Photo Gallery Carousel" aria-live="polite">
@@ -2524,6 +2525,9 @@
                                         <span id="currentImage">1</span> / <span id="totalImages">16</span>
                                     </div>
                                 </div>
+                                <p class="text-muted carousel-hint">Use arrow buttons to navigate • Click
+                                                dots to jump to image • Press arrow keys on keyboard
+                                            </p>
                             </div>
                         </section>
 
@@ -2609,7 +2613,8 @@
                                                     <div class="row g-4">
                                                         <div class="col-md-6">
                                                             <div class="stats-card participants">
-                                                                <i class="fa-solid fa-users fa-2x mb-3 text-primary"></i>
+                                                                <i
+                                                                    class="fa-solid fa-users fa-2x mb-3 text-primary"></i>
                                                                 <h2>19</h2>
                                                                 <p>
                                                                     Number of Participants
@@ -2635,29 +2640,32 @@
                                                     <h2 class="heading_text">
                                                         Resource Person
                                                     </h2>
-                                                    <div class="resource-box">
-                                                        <div class="icon-box">
-                                                            <i class="fas fa-user-tie"></i>
+                                                    <div class="resource-box-main">
+                                                        <div class="resource-box">
+                                                            <div class="icon-box">
+                                                                <i class="fas fa-user-tie"></i>
+                                                            </div>
+                                                            <h4>
+                                                                Shri Ravindra Godbole
+                                                            </h4>
+                                                            <p>
+                                                                (Alumnus IISC Bangalore): Senior Educationist and
+                                                                Teacher
+                                                                Trainer, Pune
+                                                            </p>
                                                         </div>
-                                                        <h4>
-                                                            Shri Ravindra Godbole
-                                                        </h4>
-                                                        <p>
-                                                            (Alumnus IISC Bangalore): Senior Educationist and Teacher
-                                                            Trainer, Pune
-                                                        </p>
-                                                    </div>
-                                                    <div class="resource-box">
-                                                        <div class="icon-box">
-                                                            <i class="fas fa-user-tie"></i>
+                                                        <div class="resource-box">
+                                                            <div class="icon-box">
+                                                                <i class="fas fa-user-tie"></i>
+                                                            </div>
+                                                            <h4>
+                                                                Dr. Govinda Lakhotiya
+                                                            </h4>
+                                                            <p>
+                                                                Asst. Professor, Physics Department, Dharampeth MP Deo
+                                                                Memorial Science College, Nagpur
+                                                            </p>
                                                         </div>
-                                                        <h4>
-                                                            Dr. Govinda Lakhotiya
-                                                        </h4>
-                                                        <p>
-                                                            Asst. Professor, Physics Department, Dharampeth MP Deo
-                                                            Memorial Science College, Nagpur
-                                                        </p>
                                                     </div>
                                                 </div>
                                             </section>
@@ -2761,7 +2769,7 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#reportTwo" aria-expanded="false" aria-controls="reportTwo">
                                         <!-- icon -->
-                                         <i class="fa-solid fa-cubes me-2"></i>
+                                        <i class="fa-solid fa-cubes me-2"></i>
                                         High School Physics Teachers' Hands-on Enrichment Report (23rd Jan 2025)
                                         <span class="accordion-icon" aria-hidden="true"></span>
                                     </button>
@@ -2840,7 +2848,8 @@
                                                         </div>
                                                         <div class="col-md-6 mt-3 mt-md-4">
                                                             <div class="stats-card participants">
-                                                                <i class="fa-solid fa-school fa-2x mb-3 text-warning"></i>
+                                                                <i
+                                                                    class="fa-solid fa-school fa-2x mb-3 text-warning"></i>
                                                                 <h2>18</h2>
                                                                 <p>
                                                                     Number of Schools Participated
@@ -2856,6 +2865,7 @@
                                                     <h2 class="heading_text">
                                                         Resource Person
                                                     </h2>
+                                                    <div class="resource-box-main">
                                                     <div class="resource-box">
                                                         <div class="icon-box">
                                                             <i class="fas fa-user-tie"></i>
@@ -2867,6 +2877,7 @@
                                                             (Alumnus IISC Bangalore): Senior Educationist and Teacher
                                                             Trainer, Pune
                                                         </p>
+                                                    </div>
                                                     </div>
                                                     <!-- <div class="resource-box">
                                                         <div class="icon-box">
@@ -2969,10 +2980,13 @@
                                                         </div>
                                                         <ul>
                                                             <li>
-                                                                Teachers gained practical skills for conducting physics activities and incorporating technology in the classroom.
+                                                                Teachers gained practical skills for conducting physics
+                                                                activities and incorporating technology in the
+                                                                classroom.
                                                             </li>
                                                             <li>
-                                                                Enhanced confidence in implementing activity-based and inquiry-driven learning approaches.
+                                                                Enhanced confidence in implementing activity-based and
+                                                                inquiry-driven learning approaches.
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -2981,7 +2995,7 @@
                                         </div>
                                     </div>
                                 </div>
-                        
+
                                 <div class="accordion-item">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#reportThree" aria-expanded="false" aria-controls="reportThree">
@@ -2998,7 +3012,12 @@
                                                     <div class="row">
                                                         <div class="col">
                                                             <p>
-                                                                A Hands-on Teachers' Enrichment Program for Middle School Physics was successfully conducted to empower educators with innovative pedagogical strategies. The program aimed to make physics concepts more engaging and accessible for students through interactive sessions, practical applications, and experiential learning.
+                                                                A Hands-on Teachers' Enrichment Program for Middle
+                                                                School Physics was successfully conducted to empower
+                                                                educators with innovative pedagogical strategies. The
+                                                                program aimed to make physics concepts more engaging and
+                                                                accessible for students through interactive sessions,
+                                                                practical applications, and experiential learning.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -3016,19 +3035,27 @@
                                                         </div>
                                                         <ul>
                                                             <li>
-                                                                Equip middle school physics teachers with innovative and practical teaching methodologies.
+                                                                Equip middle school physics teachers with innovative and
+                                                                practical teaching methodologies.
                                                             </li>
                                                             <li>
-                                                                Enhance teachers' ability to demonstrate fundamental physics concepts through hands-on activities and experiments.
+                                                                Enhance teachers' ability to demonstrate fundamental
+                                                                physics concepts through hands-on activities and
+                                                                experiments.
                                                             </li>
                                                             <li>
-                                                                Introduce technology integration in classrooms, including the use of mobile apps and simulations for effective learning.
+                                                                Introduce technology integration in classrooms,
+                                                                including the use of mobile apps and simulations for
+                                                                effective learning.
                                                             </li>
                                                             <li>
-                                                                Develop skills for creating an interactive and engaging learning environment through activity-based and inquiry-driven approaches.
+                                                                Develop skills for creating an interactive and engaging
+                                                                learning environment through activity-based and
+                                                                inquiry-driven approaches.
                                                             </li>
                                                             <li>
-                                                                Encourage the use of low-cost, easily accessible teaching aids for classroom demonstrations.
+                                                                Encourage the use of low-cost, easily accessible
+                                                                teaching aids for classroom demonstrations.
                                                             </li>
 
                                                         </ul>
@@ -3068,6 +3095,7 @@
                                                     <h2 class="heading_text">
                                                         Resource Person
                                                     </h2>
+                                                    <div class="resource-box-main">
                                                     <div class="resource-box">
                                                         <div class="icon-box">
                                                             <i class="fas fa-user-tie"></i>
@@ -3079,6 +3107,7 @@
                                                             (Alumnus IISC Bangalore): Senior Educationist and Teacher
                                                             Trainer, Pune
                                                         </p>
+                                                    </div>
                                                     </div>
                                                     <!-- <div class="resource-box">
                                                         <div class="icon-box">
@@ -3170,12 +3199,12 @@
 
                                             </section>
 
-                                             <section class="pb-5">
+                                            <section class="pb-5">
 
                                                 <div class="container">
 
                                                     <h2 class="heading_text">
-                                                         Key Topics Covered
+                                                        Key Topics Covered
                                                     </h2>
 
                                                     <div class="row g-4">
@@ -3184,7 +3213,8 @@
 
                                                             <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
                                                                 <div class="icon-box">
-                                                                    <i class="fa-solid fa-magnifying-glass-plus text-primary"></i>
+                                                                    <i
+                                                                        class="fa-solid fa-magnifying-glass-plus text-primary"></i>
                                                                 </div>
 
                                                                 <h5>
@@ -3192,7 +3222,8 @@
                                                                 </h5>
 
                                                                 <p>
-                                                                    Simple demonstrations and real-life applications to clarify fundamental concepts.
+                                                                    Simple demonstrations and real-life applications to
+                                                                    clarify fundamental concepts.
                                                                 </p>
 
                                                             </div>
@@ -3206,12 +3237,13 @@
                                                                     <i class="fa-solid fa-magnet text-primary"></i>
                                                                 </div>
 
-                                                                <h5>                                                                     
+                                                                <h5>
                                                                     Electromagnetism Basics
                                                                 </h5>
 
                                                                 <p>
-                                                                    Hands-on experiments and models to explain magnetic and electric interactions.
+                                                                    Hands-on experiments and models to explain magnetic
+                                                                    and electric interactions.
                                                                 </p>
 
                                                             </div>
@@ -3228,7 +3260,8 @@
                                                                     Simulations for Concept Visualization
                                                                 </h5>
                                                                 <p>
-                                                                    Introducing virtual simulations to demonstrate abstract concepts effectively.
+                                                                    Introducing virtual simulations to demonstrate
+                                                                    abstract concepts effectively.
                                                                 </p>
 
                                                             </div>
@@ -3241,11 +3274,12 @@
                                                                 <div class="icon-box">
                                                                     <i class="fa-solid fa-users text-primary"></i>
                                                                 </div>
-                                                                <h5>   
+                                                                <h5>
                                                                     Professional Networking
                                                                 </h5>
                                                                 <p>
-                                                                    Opportunities to exchange ideas and share classroom experiences.
+                                                                    Opportunities to exchange ideas and share classroom
+                                                                    experiences.
                                                                 </p>
 
                                                             </div>
@@ -3257,7 +3291,6 @@
                                                 </div>
 
                                             </section>
-
 
                                             <!-- KEY TAKEAWAYS -->
                                             <section class="section mb-3">
@@ -3271,10 +3304,13 @@
                                                         </div>
                                                         <ul>
                                                             <li>
-                                                                Teachers gained practical skills for conducting physics activities and incorporating technology in the classroom.
+                                                                Teachers gained practical skills for conducting physics
+                                                                activities and incorporating technology in the
+                                                                classroom.
                                                             </li>
                                                             <li>
-                                                                Enhanced confidence in implementing activity-based and inquiry-driven learning approaches.
+                                                                Enhanced confidence in implementing activity-based and
+                                                                inquiry-driven learning approaches.
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -3298,7 +3334,13 @@
                                                     <div class="row">
                                                         <div class="col">
                                                             <p>
-                                                                A Teachers' Capacity Building Program was conducted by Professor Rajendra Singh Science Exploratory educators for the teachers of Sunny Spring School Bhandara , focusing on strengthening experiential science teaching practices. This collaborative initiative aimed to enrich the participants’ pedagogical skills and boost their confidence in delivering engaging science education
+                                                                A Teachers' Capacity Building Program was conducted by
+                                                                Professor Rajendra Singh Science Exploratory educators
+                                                                for the teachers of Sunny Spring School Bhandara ,
+                                                                focusing on strengthening experiential science teaching
+                                                                practices. This collaborative initiative aimed to enrich
+                                                                the participants’ pedagogical skills and boost their
+                                                                confidence in delivering engaging science education
                                                             </p>
                                                         </div>
                                                     </div>
@@ -3316,16 +3358,21 @@
                                                         </div>
                                                         <ul>
                                                             <li>
-                                                                Familiarize teachers with experiential and activity-based approaches to science instruction.
+                                                                Familiarize teachers with experiential and
+                                                                activity-based approaches to science instruction.
                                                             </li>
                                                             <li>
-                                                                Enhance teachers' ability to demonstrate fundamental physics concepts through hands-on activities and experiments.
+                                                                Enhance teachers' ability to demonstrate fundamental
+                                                                physics concepts through hands-on activities and
+                                                                experiments.
                                                             </li>
                                                             <li>
-                                                                Encourage the use of inquiry-driven learning and ICT tools to enhance lesson engagement.
+                                                                Encourage the use of inquiry-driven learning and ICT
+                                                                tools to enhance lesson engagement.
                                                             </li>
                                                             <li>
-                                                                Enable teachers to design lessons that spark student curiosity and imagination.
+                                                                Enable teachers to design lessons that spark student
+                                                                curiosity and imagination.
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -3364,6 +3411,7 @@
                                                     <h2 class="heading_text">
                                                         Resource Person
                                                     </h2>
+                                                    <div class="resource-box-main">
                                                     <div class="resource-box">
                                                         <div class="icon-box">
                                                             <i class="fas fa-user-tie"></i>
@@ -3386,649 +3434,3 @@
                                                             (Asst. Academic Coordinator and Physics Teacher)
                                                         </p>
                                                     </div>
-                                                </div>
-                                            </section>
-
-                                             <!-- Highlights -->
-                                            <section class="section mb-3 mt-4">
-                                                <div class="container">
-                                                    <h2 class="heading_text">
-                                                        Program Highlights
-                                                    </h2>
-                                                    <div class="card-modern">
-                                                        <div class="icon-box">
-                                                            <i class="fa-solid fa-star me-2"></i>
-                                                        </div>
-                                                        <ul>
-                                                            <li>
-                                                                Orientation to Science Exploratory's labs, models, and teaching resources.
-                                                            </li>
-                                                            <li>
-                                                                Demonstrations of simple and advanced experiments in physics &amp; chemistry.
-                                                            </li>
-                                                            <li>
-                                                                Collaborative group activities and brainstorming on integrating new techniques in daily lessons.
-                                                            </li>
-                                                            <li>
-                                                                Guidance on creating low-cost teaching aids and digital content for science topics.
-                                                            </li>
-                                                            <li>
-                                                                Interactive feedback sessions with resource educators to address challenges and share best practices.
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                            <!-- Key Takeaways -->
-                                           <section class="section mb-3 mt-4">
-                                                <div class="container">
-                                                    <h2 class="heading_text">
-                                                        Key Takeaways
-                                                    </h2>
-                                                    <div class="card-modern">
-                                                        <div class="icon-box">
-                                                            <i class="fa-solid fa-chart-line"></i>
-                                                        </div>
-                                                        <ul>
-                                                            <li>
-                                                                Teachers gained confidence in using activity-based and inquiry-oriented teaching strategies.
-                                                            </li>
-                                                            <li>
-                                                                Participants developed practical skills in designing and conducting classroom experiments in alignment with curriculum standards.
-                                                            </li>
-                                                            <li>
-                                                                Feedback from Sunny School teachers reflected a high degree of satisfaction and a strong interest in ongoing professional development.
-                                                            </li>
-                                                            <li>
-                                                                The program established a foundation for future collaborations and ongoing support between PRS Science Exploratory and Sunny Spring Dale School Bhandara.
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#reportFive" aria-expanded="false" aria-controls="reportFive">
-                                        <i class="fa-solid fa-satellite-dish me-2"></i>
-                                        ATL Teachers' 3D Design Training Program Report (25th January 2024)
-                                        <span class="accordion-icon" aria-hidden="true"></span>
-                                    </button>
-                                    <div id="reportFive" class="accordion-collapse collapse"
-                                        aria-labelledby="reportFive" data-bs-parent="#reportsAccordion">
-                                       <div class="accordion-body">
-                                            <section class="hero">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <p>
-                                                                A one-day hands-on workshop on 3D Designing was conducted at Science Exploratory on ATL (Atal Tinkering Lab) teachers from various schools across Nagpur. The primary objective of the workshop was to introduce teachers to advanced design tools and techniques, enabling them to integrate 3D designing into their school innovation programs effectively.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                            <!-- OBJECTIVE -->
-                                            <section class="section">
-                                                <div class="container">
-                                                    <h2 class="heading_text mt-2">
-                                                        Objective
-                                                    </h2>
-                                                    <div class="card-modern">
-                                                        <div class="icon-box">
-                                                            <i class="fa-solid fa-bullseye"></i>
-                                                        </div>
-                                                        <ul>
-                                                            <li>
-                                                                To familiarize teachers with the basics and applications of 3D Designing.
-                                                            </li>
-                                                            <li>
-                                                                To enhance skills in using 3D design software for creating innovative models.
-                                                            </li>
-                                                            <li>
-                                                                To promote creative thinking and problem-solving aligned with ATL objectives.
-                                                            </li>
-                                                            <li>
-                                                                To provide hands-on experience for effective classroom implementation.
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                            <!-- STATS -->
-                                            <section class="section pt-1">
-                                                <div class="container">
-                                                    <div class="row g-4">
-                                                        <div class="col-6">
-                                                            <div class="stats-card participants">
-                                                                <i
-                                                                    class="fa-solid fa-users fa-2x mb-3 text-primary"></i>
-                                                                <h2>19</h2>
-                                                                <p>
-                                                                    Number of Participants
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6 mt-md-4">
-                                                            <div class="stats-card participants">
-                                                                <i
-                                                                    class="fa-solid fa-school fa-2x mb-3 text-warning"></i>
-                                                                <h2>19</h2>
-                                                                <p>
-                                                                    Number of Schools Participated
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                            <!-- RESOURCE PERSON -->
-                                            <section class="section mt-5">
-                                                <div class="container">
-                                                    <h2 class="heading_text">
-                                                        Resource Person
-                                                    </h2>
-                                                    <div class="resource-box">
-                                                        <div class="icon-box">
-                                                            <i class="fas fa-user-tie"></i>
-                                                        </div>
-                                                        <h4>
-                                                            Mr. Akshay Phatak
-                                                        </h4>
-                                                        <p>
-                                                            (Design and Development Engineer)
-                                                        </p>
-                                                    </div>
-                                                    <!-- <div class="resource-box">
-                                                        <div class="icon-box">
-                                                            <i class="fas fa-user-tie"></i>
-                                                        </div>
-                                                        <h4>
-                                                            Miss. Radhika Kayande
-                                                        </h4>
-                                                        <p>
-                                                            (Asst. Academic Coordinator and Physics Teacher)
-                                                        </p>
-                                                    </div> -->
-                                                </div>
-                                            </section>
-
-                                             <!-- Highlights -->
-                                            <section class="section mb-3 mt-4">
-                                                <div class="container">
-                                                    <h2 class="heading_text">
-                                                        Workshop Highlights
-                                                    </h2>
-                                                    <div class="card-modern">
-                                                        <div class="icon-box">
-                                                            <i class="fa-solid fa-star"></i>
-                                                        </div>
-                                                        <ul>
-                                                            <li>
-                                                                Introduction to 3D Designing Tools: Overview of design principles and software used in 3D modeling.
-                                                            </li>
-                                                            <li>
-                                                                Practical Demonstrations: Teachers were guided step-by-step to create 3D models.
-                                                            </li>
-                                                            <li>
-                                                                Hands-on Practice: Participants worked on various design projects under expert guidance.
-                                                            </li>
-                                                            <li>
-                                                                Discussion on Classroom Applications: Strategies to implement 3D design in ATL activities for students.
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                            <!-- Key Takeaways -->
-                                           <section class="section mb-3 mt-4">
-                                                <div class="container">
-                                                    <h2 class="heading_text">
-                                                        Key Takeaways
-                                                    </h2>
-                                                    <div class="card-modern">
-                                                        <div class="icon-box">
-                                                            <i class="fa-solid fa-chart-line"></i>
-                                                        </div>
-                                                        <ul>
-                                                            <li>
-                                                                Teachers gained practical knowledge of 3D design tools and their classroom applications.
-                                                            </li>
-                                                            <li>
-                                                                Improved confidence in guiding students on ATL projects using design thinking and 3D modeling.
-                                                            </li>
-                                                            <li>
-                                                                Strengthened capability to implement innovation-based activities as per the ATL framework.
-                                                            </li>
-                                                            <li>
-                                                                The program established a foundation for future collaborations and ongoing support between PRS Science Exploratory and Sunny Spring Dale School Bhandara.
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#reportSix" aria-expanded="false" aria-controls="reportSix">
-                                        <i class="fa-solid fa-lightbulb me-2"></i>
-                                        Teachers'Induction Programme Report (1st December 2023)
-                                        <span class="accordion-icon" aria-hidden="true"></span>
-                                    </button>
-                                    <div id="reportSix" class="accordion-collapse collapse" aria-labelledby="reportSix"
-                                        data-bs-parent="#reportsAccordion">
-                                        <div class="accordion-body">
-                                            <section class="hero">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <p>
-                                                                A Teachers' Induction Programme was held at the Prof. Rajendra Singh Science Exploratory for high school teachers to improve science classroom practices by promoting hands-on and activity-based learning methods. The initiative aimed to empower teachers with innovative teaching strategies, foster inquiry-driven education, and familiarize them with scientific models and resources offered by the Exploratory, all within the framework of the NEP's focus on experiential and modern science pedagogy.
-                                                            </p>
-                                                            <p><strong>Theme:</strong> Implementing NEP in Classrooms, with an emphasis on blending experiential learning and contemporary educational methods in science.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                            <!-- OBJECTIVE -->
-                                            <section class="section">
-                                                <div class="container">
-                                                    <h2 class="heading_text mt-2">
-                                                        Objective
-                                                    </h2>
-                                                    <div class="card-modern">
-                                                        <div class="icon-box">
-                                                            <i class="fa-solid fa-bullseye"></i>
-                                                        </div>
-                                                        <ul>
-                                                            <li>
-                                                                Introduce teachers to experiential and activity-based methods for teaching science.
-                                                            </li>
-                                                            <li>
-                                                                Strengthen practical teaching skills through experiments and models.
-                                                            </li>
-                                                            <li>
-                                                                Promote the use of ICT tools and exploratory approaches in classrooms.
-                                                            </li>
-                                                            <li>
-                                                                Build confidence in nurturing curiosity and inquiry-based learning among students.
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                            <!-- STATS -->
-                                            <section class="section pt-1">
-                                                <div class="container">
-                                                    <div class="row g-4">
-                                                        <div class="col-6">
-                                                            <div class="stats-card participants">
-                                                                <i
-                                                                    class="fa-solid fa-users fa-2x mb-3 text-primary"></i>
-                                                                <h2>34</h2>
-                                                                <p>
-                                                                    Participants: 34 teachers from High Schools
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6 mt-md-4">
-                                                            <div class="stats-card participants">
-                                                                <i
-                                                                    class="fa-solid fa-school fa-2x mb-3 text-warning"></i>
-                                                                <h2>22</h2>
-                                                                <p>
-                                                                    Number of Schools Participated
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                            <!-- RESOURCE PERSON -->
-                                            <section class="section mt-5">
-                                                <div class="container">
-                                                    <h2 class="heading_text">
-                                                        Resource Person
-                                                    </h2>
-                                                    <div class="resource-box">
-                                                        <div class="icon-box">
-                                                            <i class="fas fa-user-tie"></i>
-                                                        </div>
-                                                        <h4>
-                                                            Smt. Vimla Oak
-                                                        </h4>
-                                                        <p>
-                                                            (Teacher Trainer, Royal Society of Chemistry, Bangalore)
-                                                        </p>
-                                                    </div>
-                                                    <div class="resource-box">
-                                                        <div class="icon-box">
-                                                            <i class="fas fa-user-tie"></i>
-                                                        </div>
-                                                        <h4>
-                                                            Mrs. Shikha Vyas
-                                                        </h4>
-                                                        <p>
-                                                            (Chemistry Teacher & Academic Head, Prof. Rajendra Singh Science Exploratory)
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </section>
-
-                                             <!-- Highlights -->
-                                            <section class="section mb-3 mt-4">
-                                                <div class="container">
-                                                    <h2 class="heading_text">
-                                                        Programme Highlights
-                                                    </h2>
-                                                    <div class="card-modern">
-                                                        <div class="icon-box">
-                                                            <i class="fa-solid fa-star"></i>
-                                                        </div>
-                                                        <ul>
-                                                            <li>
-                                                                Orientation to the facilities at the Exploratory.
-                                                            </li>
-                                                            <li>
-                                                                Demonstrations of scientific models and experiments.
-                                                            </li>
-                                                            <li>
-                                                                Hands-on activities in physics, chemistry, and biology.
-                                                            </li>
-                                                            <li>
-                                                                Training sessions focused on economical teaching materials and digital resources.
-                                                            </li>
-                                                            <li>Interactive discussions with experienced resource persons.</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                            <!-- Key Takeaways -->
-                                           <section class="section mb-3 mt-4">
-                                                <div class="container">
-                                                    <h2 class="heading_text">
-                                                        Key Takeaways
-                                                    </h2>
-                                                    <div class="card-modern">
-                                                        <div class="icon-box">
-                                                            <i class="fa-solid fa-chart-line"></i>
-                                                        </div>
-                                                        <ul>
-                                                            <li>
-                                                                Teachers received practical experience with activity-based teaching and enhanced their scientific knowledge and confidence in applying inquiry-driven methods.
-                                                            </li>
-                                                            <li>
-                                                                Feedback reflected a high level of satisfaction and interest in further training sessions.
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <!-- CITIZENS -->
-                    <div class="tab-pane fade" id="citizens">
-                        <h2>Citizens Program Overview</h2>
-                    </div>
-                </div>
-            </div>
-            <!-- ----- TAB STRUCTURE ENDS ------ -->
-        </main>
-        <footer class="site_footer">
-            <div class="footer_widget_area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-lg-4 col-md-6 col-sm-6">
-                            <div class="footer_widget">
-                                <h3 class="footer_widget_title">Address</h3>
-                                <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
-                                    School, Near Alankar Talkies, North Ambazari road, Nagpur- 440010.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col col-lg-4">
-                            <div class="footer_widget">
-                                <h3 class="footer_widget_title">Social Links</h3>
-                                <ul class="social_links unordered_list">
-                                    <li>
-                                        <a href="https://www.facebook.com/profile.php?id=100094309040998"
-                                            name="facebook" target="_blank">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"
-                                            target="_blank">
-                                            <i class="fab fa-youtube"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
-                                            target="_blank">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://wa.me/917249811866" target="_blank">
-                                            <i class="fab fa-whatsapp"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col col-lg-4 col-md-6 col-sm-6">
-                            <div class="footer_widget">
-                                <h3 class="footer_widget_title">Contact Details</h3>
-                                <ul class="blog_small_group unordered_list_block">
-                                    <li>
-                                        <a class="blog_small" href="#">
-                                            <span class="item_content">
-                                                <small class="item_post_date">Call : +917249811866</small>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="blog_small" href="#">
-                                            <span class="item_content">
-                                                <small class="item_post_date">Email: prsscienceexploratory@gmail.com
-                                                </small>
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright_widget">
-                <div class="container">
-                    <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All
-                        rights reserved | Copyrights 2026
-                    </p>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <script src="assets/js/script.js"></script>
-    <!-- Full-Size Carousel Script -->
-    <script>
-        // Full-Size Carousel Functionality
-        class FullSizeCarousel {
-            constructor() {
-                this.currentIndex = 0;
-                this.carouselItems = document.querySelectorAll('.carousel-item');
-                this.indicators = document.querySelectorAll('.indicator');
-                this.prevBtn = document.querySelector('.carousel-btn-prev');
-                this.nextBtn = document.querySelector('.carousel-btn-next');
-                this.currentImageSpan = document.getElementById('currentImage');
-                this.totalItems = this.carouselItems.length;
-                this.autoPlayInterval = null;
-                this.autoPlayDelay = 6000; // 6 seconds
-                this.init();
-            }
-            init() {
-                // Navigation button handlers
-                this.prevBtn.addEventListener('click', () => this.previousSlide());
-                this.nextBtn.addEventListener('click', () => this.nextSlide());
-                // Indicator click handlers
-                this.indicators.forEach((indicator, index) => {
-                    indicator.addEventListener('click', () => this.goToSlide(index));
-                });
-                // Keyboard navigation
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'ArrowLeft') {
-                        e.preventDefault();
-                        this.previousSlide();
-                        this.resetAutoPlay();
-                    } else if (e.key === 'ArrowRight') {
-                        e.preventDefault();
-                        this.nextSlide();
-                        this.resetAutoPlay();
-                    }
-                });
-                // Touch/swipe support
-                let touchStartX = 0;
-                let touchEndX = 0;
-                document.querySelector('.carousel-gallery-container').addEventListener('touchstart', (e) => {
-                    touchStartX = e.changedTouches[0].screenX;
-                }, false);
-                document.querySelector('.carousel-gallery-container').addEventListener('touchend', (e) => {
-                    touchEndX = e.changedTouches[0].screenX;
-                    this.handleSwipe();
-                }, false);
-                const handleSwipe = () => {
-                    if (touchEndX < touchStartX - 50) {
-                        // Swiped left - go to next
-                        this.nextSlide();
-                        this.resetAutoPlay();
-                    } else if (touchEndX > touchStartX + 50) {
-                        // Swiped right - go to previous
-                        this.previousSlide();
-                        this.resetAutoPlay();
-                    }
-                };
-                this.handleSwipe = handleSwipe;
-                // Start auto play
-                this.startAutoPlay();
-                // Pause on hover
-                document.querySelector('.carousel-gallery-container').addEventListener('mouseenter', () => {
-                    this.pauseAutoPlay();
-                });
-                document.querySelector('.carousel-gallery-container').addEventListener('mouseleave', () => {
-                    this.startAutoPlay();
-                });
-                // Show initial slide
-                this.updateSlide();
-            }
-            updateSlide() {
-                // Remove active class from all items and indicators
-                this.carouselItems.forEach((item, index) => {
-                    item.classList.remove('active', 'prev', 'next');
-                });
-                this.indicators.forEach((indicator, index) => {
-                    indicator.classList.remove('active');
-                });
-                // Add active class to current item
-                this.carouselItems[this.currentIndex].classList.add('active');
-                this.indicators[this.currentIndex].classList.add('active');
-                // Update counter
-                this.currentImageSpan.textContent = this.currentIndex + 1;
-                // Update ARIA label for accessibility
-                document.querySelector('.carousel-gallery-container').setAttribute(
-                    'aria-label',
-                    `Carousel showing image ${this.currentIndex + 1} of ${this.totalItems}`
-                );
-            }
-            nextSlide() {
-                this.currentIndex = (this.currentIndex + 1) % this.totalItems;
-                this.updateSlide();
-            }
-            previousSlide() {
-                this.currentIndex = (this.currentIndex - 1 + this.totalItems) % this.totalItems;
-                this.updateSlide();
-            }
-            goToSlide(index) {
-                this.currentIndex = index;
-                this.updateSlide();
-                this.resetAutoPlay();
-            }
-            startAutoPlay() {
-                if (!this.autoPlayInterval) {
-                    this.autoPlayInterval = setInterval(() => {
-                        this.nextSlide();
-                    }, this.autoPlayDelay);
-                }
-            }
-            pauseAutoPlay() {
-                if (this.autoPlayInterval) {
-                    clearInterval(this.autoPlayInterval);
-                    this.autoPlayInterval = null;
-                }
-            }
-            resetAutoPlay() {
-                this.pauseAutoPlay();
-                this.startAutoPlay();
-            }
-        }
-        // Initialize carousel when DOM is ready
-        document.addEventListener('DOMContentLoaded', () => {
-            new FullSizeCarousel();
-        });
-        // Performance optimization: Lazy load images
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target.querySelector('.carousel-image');
-                        if (img && img.loading === 'lazy') {
-                            // Image will be loaded by browser's native lazy loading
-                            observer.unobserve(entry.target);
-                        }
-                    }
-                });
-            });
-            document.querySelectorAll('.carousel-item').forEach(item => {
-                imageObserver.observe(item);
-            });
-        }
-        // Optimize font loading
-        if ('fonts' in document) {
-            document.fonts.ready.then(() => {
-                document.body.style.fontFamily = 'inherit';
-            });
-        }
-    </script>
-    <script>
-        // Set active navigation item based on current page
-        (function setActiveNav() {
-            var currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
-            navLinks.forEach(function(link) {
-                var href = link.getAttribute('href');
-                var linkPage = href.split('?')[0]; // Remove query strings
-                // Match current page with nav link
-                if (linkPage === currentPage ||
-                    (currentPage === '' && linkPage === 'index.html')) {
-                    var parentLi = link.closest('li');
-                    if (parentLi) {
-                        parentLi.classList.add('active');
-                    }
-                }
-            });
-        })();
-    </script>
-</body>
-
-</html>
