@@ -429,7 +429,7 @@
         }
 
         /* Accordion icon color */
-        .core-student-annual-programs .accordion-item .fa-solid {
+        .accordion-item .fa-solid {
             color: #fff;
             background: linear-gradient(358deg, #0d5c4d 0%, #1a8570 100%);
             border-radius: 10px;
@@ -540,6 +540,7 @@
             line-height: 1.7;
             opacity: .92;
         }
+        #reportsAccordion .participants .fa-solid { font-size: 36px; color: linear-gradient(135deg, #98d38b, #568b45); }
 
         @media(max-width:991px) {
             .impact-wrapper {
@@ -1135,9 +1136,11 @@
             float: left;
             padding: 0;
         }
+
         .reports-card-accordion-main .accordion .accordion-body h5 {
             margin-left: 0;
         }
+
         .reports-card-accordion-main .accordion-item p {
             margin: 10px 0;
         }
@@ -1163,27 +1166,35 @@
             transition: .3s;
         }
 
-        /* .card-modern:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 18px 45px rgba(23, 24, 27, 0.12)
-        } */
-
-        .icon-box {
-            width: 65px;
-            height: 65px;
+        .reports-card-accordion-main .icon-box {
+            width: 60px;
+            height: 60px;
             border-radius: 18px;
             background: linear-gradient(135deg, #98d38b, #568b45);
             color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
+            font-size: 30px;
             margin-bottom: 20px;
         }
-
+        /* Common for all icons on this page */
+        .reports-card-accordion-main .icon-box .fa-solid { 
+            background: none;
+            color: #fff !important;
+            font-size: 24px;
+        }
+        /* icon for stats card */
+        .stats-card .fa-solid {
+            background: none;
+            font-size: 28px;
+        }
         .card-modern h5 {
             font-weight: 600;
             margin-bottom: 18px;
+        }
+        .card-modern .fa-solid {
+            font-size: 28px;
         }
 
         .card-modern ul {
@@ -1200,14 +1211,17 @@
         .stats-card {
             background: rgba(255, 255, 255, .5);
             border-radius: 22px;
-            padding: 35px;
+            padding: 20px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
             height: 100%;
             transition: all 0.3s ease;
         }
+
         /* Cards common hover */
-        .stats-card:hover, .resource-box:hover, .card-modern:hover {
+        .stats-card:hover,
+        .resource-box:hover,
+        .card-modern:hover {
             transform: translateY(-4px);
             box-shadow: 0 18px 45px rgba(23, 24, 27, 0.12);
             transition: all 0.3s ease;
@@ -1246,13 +1260,13 @@
             line-height: 1.8;
         }
 
-        footer {
+        /* footer {
             background: #0f172a;
             color: #fff;
             text-align: center;
             padding: 28px 0;
             margin-top: 50px;
-        }
+        } */
 
         @media(max-width:768px) {
             .card-modern {
@@ -2512,25 +2526,22 @@
                         <!-- Accordion for Reports Card -->
 
                         <div class="reports-card-accordion-main">
-                            <div class="accordion" id="accordionExample">
+                            <div class="accordion" id="reportsAccordion">
                                 <div class="accordion-item">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        data-bs-target="#reportOne" aria-expanded="false" aria-controls="reportOne">
                                         <!-- icon -->
-                                        <i class="fa-solid fa-microscope me-2"></i>
+                                        <i class="fa-solid fa-file-lines me-2"></i>
                                         First RAISE Annual Induction Session Report (Aug 5-6, 2025)
                                         <span class="accordion-icon" aria-hidden="true"></span>
                                     </button>
-                                    <div id="collapseOne" class="accordion-collapse collapse"
-                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div id="reportOne" class="accordion-collapse collapse" aria-labelledby="reportOne"
+                                        data-bs-parent="#reportsAccordion">
                                         <div class="accordion-body">
                                             <section class="hero">
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col">
-                                                            <!-- <h1>
-                    RAISE (Reinforcement of Academic Instruction and Science Education)
-                  </h1> -->
                                                             <p>
                                                                 RAISE (Reinforcement of Academic Instruction and Science
                                                                 Education), conducted on August 5th and 6th, 2025, the
@@ -2593,9 +2604,8 @@
                                                 <div class="container">
                                                     <div class="row g-4">
                                                         <div class="col-md-6">
-                                                            <div class="stats-card">
-                                                                <i
-                                                                    class="fa-solid fa-users fa-2x mb-3 text-primary"></i>
+                                                            <div class="stats-card participants">
+                                                                <i class="fa-solid fa-users fa-2x mb-3 text-primary"></i>
                                                                 <h2>19</h2>
                                                                 <p>
                                                                     Number of Participants
@@ -2603,8 +2613,9 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6 mt-3 mt-md-4">
-                                                            <div class="stats-card">
-                                                                <i class="fa-solid fa-school fa-2x mb-3 text-warning"></i>
+                                                            <div class="stats-card participants">
+                                                                <i
+                                                                    class="fa-solid fa-school fa-solid fa-school fa-2x mb-3 text-warning"></i>
                                                                 <h2>15</h2>
                                                                 <p>
                                                                     Number of Schools Participated
@@ -2744,137 +2755,706 @@
                                 </div>
                                 <div class="accordion-item">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <!-- icon -->
-                                        <i class="fa-solid fa-flask-vial me-2"></i>
-                                        Laboratory Exposure Program
-                                        <span class="accordion-icon" aria-hidden="true"></span>
-                                    </button>
-                                    <div id="collapseTwo" class="accordion-collapse collapse"
-                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <p class="mb-2 mt-3"><strong>Intensive monthly lab days for
-                                                    outstation and busy students</strong>
-                                            </p>
-                                            <ul>
-                                                <li>For: Grades 6 to 8</li>
-                                                <li>Sessions: 10 extended sessions per year (about 6 hours once
-                                                    a month, June-April)
-                                                </li>
-                                                <li>Entry: Through school administration</li>
-                                            </ul>
-                                            <p>This program is designed for students who cannot attend weekly
-                                                sessions of program 1 but still want serious lab exposure. Once
-                                                a month, students spend a full extended session in the
-                                                laboratory working through well-planned experimental modules
-                                                that connect directly with their school topics while adding
-                                                inquiry, data analysis, and real-life application.
-                                            </p>
-                                            <p>These monthly contact sessions ensure that distance or a packed
-                                                schedule does not become a barrier to quality STEM experiences,
-                                                making it ideal for partner schools in and around Nagpur.
-                                            </p>
-                                            <div class="img-cont mb-4 mt-2">
-                                                <img src="assets/images/laboratory-expo-program.png"
-                                                    class="accordion-img" alt="Lab Exposure Program">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Advanced Programs Accordion Section -->
-                                <h2 class="heading_text mt-5">Advanced "Explorer" Programs (Gifted / Motivated
-                                    Learners)
-                                </h2>
-                                <div class="accordion-item">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
+                                        data-bs-target="#reportTwo" aria-expanded="false" aria-controls="reportTwo">
                                         <!-- icon -->
                                         <i class="fa-solid fa-atom me-2"></i>
-                                        Homi Bhabha Explorer Program
+                                        High School Physics Teachers' Hands-on Enrichment Report (23rd Jan 2025)
                                         <span class="accordion-icon" aria-hidden="true"></span>
                                     </button>
-                                    <div id="collapseThree" class="accordion-collapse collapse"
-                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div id="reportTwo" class="accordion-collapse collapse" aria-labelledby="reportTwo"
+                                        data-bs-parent="#reportsAccordion">
                                         <div class="accordion-body">
-                                            <p class="mt-2">
-                                                <strong>Track for Dr. Homi Bhabha Balvaidnyanik Spardha</strong>
-                                            </p>
-                                            <ul>
-                                                <li>For: Grade 6</li>
-                                                <li>Intake: 30 students per year</li>
-                                                <li>Sessions: 70-80 sessions (two 2-hour sessions per week)</li>
-                                                <li>Entry: Entrance exam in April</li>
-                                            </ul>
-                                            <p>This batch is a structured mentoring pathway for students aiming
-                                                at Dr. Homi Bhabha Balvaidnyanik Spardha (MSTA). The program
-                                                covers all stages: theory, practicals, action research project,
-                                                and final interview, with a strong focus on depth of
-                                                understanding and scientific inquiry rather than rote
-                                                preparation.
-                                            </p>
-                                            <p>Students work on experiments, small research-based tasks, and
-                                                presentations under guidance, cultivating habits of observation,
-                                                questioning, planning, and reflection that benefit not only the
-                                                competition but their overall academic growth.
-                                            </p>
-                                            <div class="img-cont mb-4 mt-2">
-                                                <img src="assets/images/lab-exposure.png" class="accordion-img"
-                                                    alt="Lab Exposure Program">
-                                            </div>
+                                            <section class="hero">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <p>
+                                                                A Hands-on Teachers' Enrichment Program for Middle
+                                                                School Physics was successfully conducted to empower
+                                                                educators with innovative pedagogical strategies. The
+                                                                program aimed to make physics concepts more engaging and
+                                                                accessible for students through interactive sessions,
+                                                                practical applications, and experiential learning.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <!-- OBJECTIVE -->
+                                            <section class="section">
+                                                <div class="container">
+                                                    <h2 class="heading_text mt-2">
+                                                        Objective
+                                                    </h2>
+                                                    <div class="card-modern">
+                                                        <div class="icon-box">
+                                                            <i class="fa-solid fa-bullseye"></i>
+                                                        </div>
+                                                        <ul>
+                                                            <li>
+                                                                Equip middle school physics teachers with innovative and
+                                                                practical teaching methodologies.
+                                                            </li>
+                                                            <li>
+                                                                Enhance teachers' ability to demonstrate fundamental
+                                                                physics concepts through hands-on activities and
+                                                                experiments.
+                                                            </li>
+                                                            <li>
+                                                                Introduce technology integration in classrooms,
+                                                                including the use of mobile apps and simulations for
+                                                                effective learning.
+                                                                Develop skills for crea
+                                                            </li>
+                                                            <li>
+                                                                Develop skills for creating an interactive and engaging
+                                                                learning environment through activity-based and
+                                                                inquiry-driven approaches.
+                                                            </li>
+                                                            <li>
+                                                                Encourage the use of low-cost, easily accessible
+                                                                teaching aids for classroom demonstrations.
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <!-- STATS -->
+                                            <section class="section pt-1">
+                                                <div class="container">
+                                                    <div class="row g-4">
+                                                        <div class="col-md-6">
+                                                            <div class="stats-card participants">
+                                                                <i
+                                                                    class="fa-solid fa-users fa-2x mb-3 text-primary"></i>
+                                                                <h2>22</h2>
+                                                                <p>
+                                                                    Number of Participants
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mt-3 mt-md-4">
+                                                            <div class="stats-card participants">
+                                                                <i class="fa-solid fa-school fa-2x mb-3 text-warning"></i>
+                                                                <h2>18</h2>
+                                                                <p>
+                                                                    Number of Schools Participated
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <!-- RESOURCE PERSON -->
+                                            <section class="section mt-5">
+                                                <div class="container">
+                                                    <h2 class="heading_text">
+                                                        Resource Person
+                                                    </h2>
+                                                    <div class="resource-box">
+                                                        <div class="icon-box">
+                                                            <i class="fas fa-user-tie"></i>
+                                                        </div>
+                                                        <h4>
+                                                            Shri Ravindra Godbole
+                                                        </h4>
+                                                        <p>
+                                                            (Alumnus IISC Bangalore): Senior Educationist and Teacher
+                                                            Trainer, Pune
+                                                        </p>
+                                                    </div>
+                                                    <!-- <div class="resource-box">
+                                                        <div class="icon-box">
+                                                            <i class="fas fa-user-tie"></i>
+                                                        </div>
+                                                        <h4>
+                                                            Dr. Govinda Lakhotiya
+                                                        </h4>
+                                                        <p>
+                                                            Asst. Professor, Physics Department, Dharampeth MP Deo
+                                                            Memorial Science College, Nagpur
+                                                        </p>
+                                                    </div> -->
+                                                </div>
+                                            </section>
+                                            <!-- PROGRAM HIGHLIGHTS -->
+                                            <section class="pb-5">
+
+                                                <div class="container">
+
+                                                    <h2 class="heading_text mt-4">
+                                                        Program Highlights
+                                                    </h2>
+
+                                                    <div class="row g-4">
+
+                                                        <div class="col-lg-4">
+
+                                                            <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+                                                                <div class="icon-box">
+                                                                    <i class="fa-solid fa-flask"></i>
+                                                                </div>
+
+                                                                <h5>
+                                                                    Hands-on Activities
+                                                                </h5>
+
+                                                                <p>
+                                                                    Participants engaged in practical experiments and
+                                                                    created teaching aids using low-cost materials.
+                                                                </p>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-lg-4">
+
+                                                            <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+                                                                <div class="icon-box">
+                                                                    <i class="fa-solid fa-mobile-screen-button"></i>
+                                                                </div>
+
+                                                                <h5>
+                                                                    Technology Integration
+                                                                </h5>
+
+                                                                <p>
+                                                                    Sessions emphasized the role of mobile apps and
+                                                                    simulations in making classroom teaching more
+                                                                    effective.
+                                                                </p>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-lg-4">
+
+                                                            <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+                                                                <div class="icon-box">
+                                                                    <i class="fa-solid fa-people-group"></i>
+                                                                </div>
+                                                                <h5>
+                                                                    Collaborative Learning
+                                                                </h5>
+                                                                <p>
+                                                                    Teachers worked in groups to design lesson plans
+                                                                    blending theory, experiments, and digital tools.
+                                                                </p>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </section>
+                                            <!-- KEY OUTCOMES -->
+                                            <section class="section mb-3">
+                                                <div class="container">
+                                                    <h2 class="heading_text">
+                                                        Key Outcomes
+                                                    </h2>
+                                                    <div class="card-modern">
+                                                        <div class="icon-box">
+                                                            <i class="fa-solid fa-chart-line"></i>
+                                                        </div>
+                                                        <ul>
+                                                            <li>
+                                                                Teachers gained practical skills for conducting physics activities and incorporating technology in the classroom.
+                                                            </li>
+                                                            <li>
+                                                                Enhanced confidence in implementing activity-based and inquiry-driven learning approaches.
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="accordion-item">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#reportThree" aria-expanded="false" aria-controls="reportThree">
+                                        <!-- icon -->
+                                        <i class="fa-solid fa-atom me-2"></i>
+                                        Middle School Physics Teachers' Hands-on Enrichment Report (22nd Jan 2025)
+                                        <span class="accordion-icon" aria-hidden="true"></span>
+                                    </button>
+                                    <div id="reportThree" class="accordion-collapse collapse"
+                                        aria-labelledby="reportThree" data-bs-parent="#reportsAccordion">
+                                        <div class="accordion-body">
+                                            <section class="hero">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <p>
+                                                                A Hands-on Teachers' Enrichment Program for Middle School Physics was successfully conducted to empower educators with innovative pedagogical strategies. The program aimed to make physics concepts more engaging and accessible for students through interactive sessions, practical applications, and experiential learning.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <!-- OBJECTIVE -->
+                                            <section class="section">
+                                                <div class="container">
+                                                    <h2 class="heading_text mt-2">
+                                                        Objective
+                                                    </h2>
+                                                    <div class="card-modern">
+                                                        <div class="icon-box">
+                                                            <i class="fa-solid fa-bullseye"></i>
+                                                        </div>
+                                                        <ul>
+                                                            <li>
+                                                                Equip middle school physics teachers with innovative and practical teaching methodologies.
+                                                            </li>
+                                                            <li>
+                                                                Enhance teachers' ability to demonstrate fundamental physics concepts through hands-on activities and experiments.
+                                                            </li>
+                                                            <li>
+                                                                Introduce technology integration in classrooms, including the use of mobile apps and simulations for effective learning.
+                                                            </li>
+                                                            <li>
+                                                                Develop skills for creating an interactive and engaging learning environment through activity-based and inquiry-driven approaches.
+                                                            </li>
+                                                            <li>
+                                                                Encourage the use of low-cost, easily accessible teaching aids for classroom demonstrations.
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <!-- STATS -->
+                                            <section class="section pt-1">
+                                                <div class="container">
+                                                    <div class="row g-4">
+                                                        <div class="col-md-6">
+                                                            <div class="stats-card participants">
+                                                                <i
+                                                                    class="fa-solid fa-users fa-2x mb-3 text-primary"></i>
+                                                                <h2>17</h2>
+                                                                <p>
+                                                                    Number of Participants
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mt-3 mt-md-4">
+                                                            <div class="stats-card participants">
+                                                                <i
+                                                                    class="fa-solid fa-school fa-2x mb-3 text-warning"></i>
+                                                                <h2>15</h2>
+                                                                <p>
+                                                                    Number of Schools Participated
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <!-- RESOURCE PERSON -->
+                                            <section class="section mt-5">
+                                                <div class="container">
+                                                    <h2 class="heading_text">
+                                                        Resource Person
+                                                    </h2>
+                                                    <div class="resource-box">
+                                                        <div class="icon-box">
+                                                            <i class="fas fa-user-tie"></i>
+                                                        </div>
+                                                        <h4>
+                                                            Shri Ravindra Godbole
+                                                        </h4>
+                                                        <p>
+                                                            (Alumnus IISC Bangalore): Senior Educationist and Teacher
+                                                            Trainer, Pune
+                                                        </p>
+                                                    </div>
+                                                    <!-- <div class="resource-box">
+                                                        <div class="icon-box">
+                                                            <i class="fas fa-user-tie"></i>
+                                                        </div>
+                                                        <h4>
+                                                            Dr. Govinda Lakhotiya
+                                                        </h4>
+                                                        <p>
+                                                            Asst. Professor, Physics Department, Dharampeth MP Deo
+                                                            Memorial Science College, Nagpur
+                                                        </p>
+                                                    </div> -->
+                                                </div>
+                                            </section>
+                                            <!-- PROGRAM HIGHLIGHTS -->
+                                            <section class="pb-5">
+
+                                                <div class="container">
+
+                                                    <h2 class="heading_text mt-4">
+                                                        Program Highlights
+                                                    </h2>
+
+                                                    <div class="row g-4">
+
+                                                        <div class="col-lg-4">
+
+                                                            <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+                                                                <div class="icon-box">
+                                                                    <i class="fa-solid fa-flask"></i>
+                                                                </div>
+
+                                                                <h5>
+                                                                    Hands-on Activities
+                                                                </h5>
+
+                                                                <p>
+                                                                    Participants engaged in practical experiments and
+                                                                    created teaching aids using low-cost materials.
+                                                                </p>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-lg-4">
+
+                                                            <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+                                                                <div class="icon-box">
+                                                                    <i class="fa-solid fa-mobile-screen-button"></i>
+                                                                </div>
+
+                                                                <h5>
+                                                                    Technology Integration
+                                                                </h5>
+
+                                                                <p>
+                                                                    Sessions emphasized the role of mobile apps and
+                                                                    simulations in making classroom teaching more
+                                                                    effective.
+                                                                </p>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-lg-4">
+
+                                                            <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+                                                                <div class="icon-box">
+                                                                    <i class="fa-solid fa-people-group"></i>
+                                                                </div>
+                                                                <h5>
+                                                                    Collaborative Learning
+                                                                </h5>
+                                                                <p>
+                                                                    Teachers worked in groups to design lesson plans
+                                                                    blending theory, experiments, and digital tools.
+                                                                </p>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </section>
+
+                                             <section class="pb-5">
+
+                                                <div class="container">
+
+                                                    <h2 class="heading_text">
+                                                         Key Topics Covered
+                                                    </h2>
+
+                                                    <div class="row g-4">
+
+                                                        <div class="col-lg-3">
+
+                                                            <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+                                                                <div class="icon-box">
+                                                                    <i class="fa-solid fa-magnifying-glass-plus text-primary"></i>
+                                                                </div>
+
+                                                                <h5>
+                                                                    Optics with Plane Mirrors
+                                                                </h5>
+
+                                                                <p>
+                                                                    Simple demonstrations and real-life applications to clarify fundamental concepts.
+                                                                </p>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-lg-3">
+
+                                                            <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+                                                                <div class="icon-box">
+                                                                    <i class="fa-solid fa-magnet text-primary"></i>
+                                                                </div>
+
+                                                                <h5>                                                                     
+                                                                    Electromagnetism Basics
+                                                                </h5>
+
+                                                                <p>
+                                                                    Hands-on experiments and models to explain magnetic and electric interactions.
+                                                                </p>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-lg-3">
+
+                                                            <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+                                                                <div class="icon-box">
+                                                                    <i class="fa-solid fa-laptop-code text-primary"></i>
+                                                                </div>
+                                                                <h5>
+                                                                    Simulations for Concept Visualization
+                                                                </h5>
+                                                                <p>
+                                                                    Introducing virtual simulations to demonstrate abstract concepts effectively.
+                                                                </p>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-lg-3">
+
+                                                            <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+                                                                <div class="icon-box">
+                                                                    <i class="fa-solid fa-users text-primary"></i>
+                                                                </div>
+                                                                <h5>   
+                                                                    Professional Networking
+                                                                </h5>
+                                                                <p>
+                                                                    Opportunities to exchange ideas and share classroom experiences.
+                                                                </p>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </section>
+
+
+                                            <!-- KEY OUTCOMES -->
+                                            <section class="section mb-3">
+                                                <div class="container">
+                                                    <h2 class="heading_text">
+                                                        Key Outcomes
+                                                    </h2>
+                                                    <div class="card-modern">
+                                                        <div class="icon-box">
+                                                            <i class="fa-solid fa-chart-line"></i>
+                                                        </div>
+                                                        <ul>
+                                                            <li>
+                                                                Teachers gained practical skills for conducting physics activities and incorporating technology in the classroom.
+                                                            </li>
+                                                            <li>
+                                                                Enhanced confidence in implementing activity-based and inquiry-driven learning approaches.
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </section>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFour" aria-expanded="false"
-                                        aria-controls="collapseFour">
+                                        data-bs-target="#reportFour" aria-expanded="false" aria-controls="reportFour">
                                         <i class="fa-solid fa-infinity me-2"></i>
-                                        Ramanujan Explorer Program
+                                        Teachers' Capacity Building Program Report (30th November 2024)
                                         <span class="accordion-icon" aria-hidden="true"></span>
                                     </button>
-                                    <div id="collapseFour" class="accordion-collapse collapse"
-                                        aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                    <div id="reportFour" class="accordion-collapse collapse"
+                                        aria-labelledby="reportFour" data-bs-parent="#reportsAccordion">
                                         <div class="accordion-body">
-                                            <p>
-                                                <strong>For young mathematicians with a love for problem-solving
-                                                    along with hands-on training in science and technology in
-                                                    laboratory</strong>
-                                            </p>
-                                            <ul>
-                                                <li>For: Grade 7</li>
-                                                <li>Intake: 30 students per year</li>
-                                                <li>Sessions: 70-80 sessions (two 2-hour sessions per week)</li>
-                                                <li>Structure: Two 2-hour sessions per week, including one
-                                                    Mathematics-focused and one integrated lab-based session
-                                                </li>
-                                                <li>Entry: Entrance exam in April</li>
-                                            </ul>
-                                            <p>The Ramanujan Explorer Program supports mathematically inclined
-                                                students who want to go beyond textbook exercises and prepare
-                                                for contests such as NMTC and BMTC. Training includes concept
-                                                enrichment, non-routine problems, and strategic approaches to
-                                                problem-solving.
-                                            </p>
-                                            <p>A distinctive feature is the integration of one laboratory
-                                                session per week, where students see how mathematics connects
-                                                with Physics, chemistry, biology through data analysis, and
-                                                real-world measurements building a balanced “math + science”
-                                                temperament instead of narrow exam coaching.
-                                            </p>
+                                            <section class="hero">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <p>
+                                                                A Teachers' Capacity Building Program was conducted by Professor Rajendra Singh Science Exploratory educators for the teachers of Sunny Spring School Bhandara , focusing on strengthening experiential science teaching practices. This collaborative initiative aimed to enrich the participants’ pedagogical skills and boost their confidence in delivering engaging science education
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <!-- OBJECTIVE -->
+                                            <section class="section">
+                                                <div class="container">
+                                                    <h2 class="heading_text mt-2">
+                                                        Objective
+                                                    </h2>
+                                                    <div class="card-modern">
+                                                        <div class="icon-box">
+                                                            <i class="fa-solid fa-bullseye"></i>
+                                                        </div>
+                                                        <ul>
+                                                            <li>
+                                                                Familiarize teachers with experiential and activity-based approaches to science instruction.
+                                                            </li>
+                                                            <li>
+                                                                Enhance teachers' ability to demonstrate fundamental physics concepts through hands-on activities and experiments.
+                                                            </li>
+                                                            <li>
+                                                                Encourage the use of inquiry-driven learning and ICT tools to enhance lesson engagement.
+                                                            </li>
+                                                            <li>
+                                                                Enable teachers to design lessons that spark student curiosity and imagination.
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <!-- STATS -->
+                                            <section class="section pt-1">
+                                                <div class="container">
+                                                    <div class="row g-4">
+                                                        <div class="col-12">
+                                                            <div class="stats-card participants">
+                                                                <i
+                                                                    class="fa-solid fa-users fa-2x mb-3 text-primary"></i>
+                                                                <h2>14</h2>
+                                                                <p>
+                                                                    Number of Participants
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <!-- <div class="col-md-6 mt-3 mt-md-4">
+                                                            <div class="stats-card participants">
+                                                                <i
+                                                                    class="fa-solid fa-school fa-2x mb-3 text-warning"></i>
+                                                                <h2>15</h2>
+                                                                <p>
+                                                                    Number of Schools Participated
+                                                                </p>
+                                                            </div>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <!-- RESOURCE PERSON -->
+                                            <section class="section mt-5">
+                                                <div class="container">
+                                                    <h2 class="heading_text">
+                                                        Resource Person
+                                                    </h2>
+                                                    <div class="resource-box">
+                                                        <div class="icon-box">
+                                                            <i class="fas fa-user-tie"></i>
+                                                        </div>
+                                                        <h4>
+                                                            Mrs.Shikha Vyas
+                                                        </h4>
+                                                        <p>
+                                                            (Academic Head and Chemistry Teacher)
+                                                        </p>
+                                                    </div>
+                                                    <div class="resource-box">
+                                                        <div class="icon-box">
+                                                            <i class="fas fa-user-tie"></i>
+                                                        </div>
+                                                        <h4>
+                                                            Miss. Radhika Kayande
+                                                        </h4>
+                                                        <p>
+                                                            (Asst. Academic Coordinator and Physics Teacher)
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </section>
+
+                                             <!-- Highlights -->
+                                            <section class="section mb-3">
+                                                <div class="container">
+                                                    <h2 class="heading_text">
+                                                        Program Highlights
+                                                    </h2>
+                                                    <div class="card-modern">
+                                                        <div class="icon-box">
+                                                            <i class="fa-solid fa-star me-2"></i>
+                                                        </div>
+                                                        <ul>
+                                                            <li>
+                                                                Orientation to Science Exploratory's labs, models, and teaching resources.
+                                                            </li>
+                                                            <li>
+                                                                Demonstrations of simple and advanced experiments in physics &amp; chemistry.
+                                                            </li>
+                                                            <li>
+                                                                Collaborative group activities and brainstorming on integrating new techniques in daily lessons.
+                                                            </li>
+                                                            <li>
+                                                                Guidance on creating low-cost teaching aids and digital content for science topics.
+                                                            </li>
+                                                            <li>
+                                                                Interactive feedback sessions with resource educators to address challenges and share best practices.
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <!-- Key Outcomes -->
+                                           <section class="section mb-3">
+                                                <div class="container">
+                                                    <h2 class="heading_text">
+                                                        Key Outcomes
+                                                    </h2>
+                                                    <div class="card-modern">
+                                                        <div class="icon-box">
+                                                            <i class="fa-solid fa-chart-line"></i>
+                                                        </div>
+                                                        <ul>
+                                                            <li>
+                                                                Teachers gained confidence in using activity-based and inquiry-oriented teaching strategies.
+                                                            </li>
+                                                            <li>
+                                                                Participants developed practical skills in designing and conducting classroom experiments in alignment with curriculum standards.
+                                                            </li>
+                                                            <li>
+                                                                Feedback from Sunny School teachers reflected a high degree of satisfaction and a strong interest in ongoing professional development.
+                                                            </li>
+                                                            <li>
+                                                                The program established a foundation for future collaborations and ongoing support between PRS Science Exploratory and Sunny Spring Dale School Bhandara.
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFive" aria-expanded="false"
-                                        aria-controls="collapseFive">
+                                        data-bs-target="#reportFive" aria-expanded="false" aria-controls="reportFive">
                                         <i class="fa-solid fa-satellite-dish me-2"></i>
                                         Bose Explorer Program
                                         <span class="accordion-icon" aria-hidden="true"></span>
                                     </button>
-                                    <div id="collapseFive" class="accordion-collapse collapse"
-                                        aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                    <div id="reportFive" class="accordion-collapse collapse"
+                                        aria-labelledby="reportFive" data-bs-parent="#reportsAccordion">
                                         <div class="accordion-body">
                                             <p>Strong foundation for Junior Science and Mathematics Olympiad and
                                                 beyond
@@ -2916,13 +3496,13 @@
                                 </div>
                                 <div class="accordion-item">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        data-bs-target="#reportSix" aria-expanded="false" aria-controls="reportSix">
                                         <i class="fa-solid fa-lightbulb me-2"></i>
                                         Raman Explorer Program
                                         <span class="accordion-icon" aria-hidden="true"></span>
                                     </button>
-                                    <div id="collapseSix" class="accordion-collapse collapse"
-                                        aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                    <div id="reportSix" class="accordion-collapse collapse" aria-labelledby="reportSix"
+                                        data-bs-parent="#reportsAccordion">
                                         <div class="accordion-body">
                                             <p>Bridging school learning and research-oriented science</p>
                                             <ul>
