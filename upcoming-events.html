@@ -133,7 +133,7 @@
         }
 
         /**** Masonry Grid Styles ******/
-        .masonry {
+        .masonry-grid {
             column-count: 4;
             column-gap: 0;
         }
@@ -142,7 +142,7 @@
             column-count: 3;
         }
 
-        .masonry .item {
+        .masonry-grid .item {
             position: relative;
             margin-bottom: 30px;
             break-inside: avoid;
@@ -151,7 +151,7 @@
             border-radius: 20px;
         }
 
-        .masonry .item:hover {
+        .masonry-grid .item:hover {
             box-shadow:
                 0 18px 40px rgba(56, 189, 248, 0.18),
                 0 10px 25px rgba(0, 0, 0, 0.45);
@@ -159,7 +159,7 @@
             transform: scale(1.02);
         }
 
-        .masonry.item img {
+        .masonry-grid.item img {
             width: 100%;
             display: block;
             object-fit: cover;
@@ -167,7 +167,7 @@
             transition: 0.5s ease;
         }
 
-        .masonry .overlay {
+        .masonry-grid .overlay {
             position: absolute;
             inset: 0;
             display: flex;
@@ -175,13 +175,13 @@
             padding: 20px;
         }
 
-        .masonry .content h3 {
+        .masonry-grid .content h3 {
             font-size: 1rem;
             margin-bottom: 6px;
             font-weight: 500;
         }
 
-        .masonry .content p {
+        .masonry-grid .content p {
             font-size: 0.85rem;
             font-weight: 700;
             margin: 0;
@@ -192,23 +192,23 @@
 
         /* Responsive */
         @media(max-width:1100px) {
-            .masonry {
+            .masonry-grid {
                 column-count: 3;
             }
         }
 
         @media(max-width:768px) {
-            .masonry {
+            .masonry-grid {
                 column-count: 2;
             }
 
-            .masonry .container {
+            .masonry-grid .container {
                 width: 94%;
             }
         }
 
         @media(max-width:500px) {
-            .masonry {
+            .masonry-grid {
                 column-count: 1;
             }
         }
@@ -331,7 +331,7 @@
                         <h5 class="mb-4">Vigyan Jigyasa</h5>
                         <!-- Masonry Grids -->
                         <!-- Masonry Grid 1 -->
-                        <div class="masonry mb-5">
+                        <div class="masonry-grid mb-5">
                             <div class="item img-cont">
                                 <img src="assets/images/vigyan_jigyasa/vigyan_jigyasa.jpeg"
                                     alt="Prof. Rajendra Singh Exploratory" />
@@ -417,7 +417,7 @@
                     <hr />
                     <!-- Masonry Grid 2 -->
                     <h5 class="mb-4">Laboratory Training Program 2025</h5>
-                    <div class="masonry mb-5">
+                    <div class="masonry-grid mb-5">
                         <div class="item img-cont">
                             <img src="assets/images/student_activities/student_activities.jpg"
                                 alt="Prof. Rajendra Singh Exploratory" />
@@ -621,7 +621,7 @@
                     <hr />
                     <!-- Masonry Grid 3 -->
                     <h5 class="mb-4">Special Batches of PRSSE</h5>
-                    <div class="masonry masonry-special mb-5">
+                    <div class="masonry-grid masonry-special mb-5">
 
                         <div class="item img-cont">
                             <img src="assets/images/special_batches/special_batches.jpg"
@@ -682,7 +682,7 @@
                     <hr />
                     <!-- Masonry Grid 4 -->
                     <h5 class="mb-4">School Visits</h5>
-                    <div class="masonry mb-5">
+                    <div class="masonry-grid mb-5">
                         <div class="item img-cont">
                             <img src="assets/images/school_visits/school_visit.jpeg"
                                 alt="Prof. Rajendra Singh Exploratory" />
@@ -868,7 +868,7 @@
                     <hr />
                     <!-- Masonry Grid 4 -->
                     <h5 class="mb-4">College Visits</h5>
-                    <div class="masonry mb-5">
+                    <div class="masonry-grid mb-5">
                         <div class="item img-cont">
                             <img src="assets/images/college_visits/college_visit.jpeg"
                                 alt="Prof. Rajendra Singh Exploratory" />
@@ -945,7 +945,7 @@
 
                     <hr />
                     <h5 class="mb-4">Past Events</h5>
-                    <div class="masonry masonry-special">
+                    <div class="masonry-grid masonry-special">
                         <div class="item img-cont">
                             <img src="assets/images/prs01.jpg" alt="Prof. Rajendra Singh Exploratory" />
                             <div class="overlay">
