@@ -3940,15 +3940,39 @@ blockquote p {
 .main_menu_list>li>a {
     z-index: 1;
     font-size: 17px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 23px;
-    color: #fe7b14;
+    color: #fe8408;
     position: relative;
     align-items: center;
     display: inline-flex;
     padding: 10px 12px;
     font-family: "Poppins", sans-serif;
     border-radius: 10px;
+    overflow: visible;
+}
+
+/* .main_menu_list>li>a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 8px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #ff7a00 0%, #ffd52b 50%, #ffb700 100%);
+    transform: scaleX(0);
+    transform-origin: left center;
+    opacity: 0;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+} */
+
+.main_menu_list>li:hover>a::before,
+.main_menu_list>li.active>a::before,
+.main_menu_list .dropdown.active > a::before,
+.main_menu_list .dropdown:has(.dropdown-menu li.active) > a::before {
+    transform: scaleX(1);
+    opacity: 1;
 }
 
 .main_menu_list>li.active>a,
@@ -4210,8 +4234,8 @@ blockquote p {
 
 .page_title {
     font-family: "Poppins", sans-serif;
-    font-size: 55px;
-    font-weight: 800;
+    font-size: 50px;
+    font-weight: 1000;
     line-height: 68px;
     margin: 0;
 }

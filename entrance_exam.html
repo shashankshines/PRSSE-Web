@@ -143,6 +143,7 @@
         <div class="backtotop">
             <a href="#" class="scroll"><i class="far fa-arrow-up"></i></a>
         </div>
+        <!-- Top Header Navigation -->
         <header class="site_header site_header_1">
             <div class="container">
                 <div class="row align-items-center">
@@ -150,17 +151,18 @@
                         <div class="site_logo">
                             <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png"
                                     alt=""></a>
+
                         </div>
                     </div>
                     <div class="col col-lg-9 col-2">
-
                         <nav class="main_menu navbar navbar-expand-lg">
-                            <div class="main_menu_inner collapse navbar-collapse " id="main_menu_dropdown">
+                            <div class="main_menu_inner collapse navbar-collapse" id="main_menu_dropdown">
                                 <ul class="main_menu_list unordered_list_center">
                                     <li><a class="nav-link" href="index.html">Home</a></li>
                                     <li><a class="nav-link" href="about.html"><u>About us</u></a></li>
-                                    <li><a class="nav-link" href="programs.html">Programs</a></li>
-                                    <li><a class="nav-link" href="#">News and Media</a></li>
+                                    <li>
+                                        <a class="nav-link" href="programs.html" id="blog_submenu">Programmes</a>
+                                    </li>
                                     <li class="dropdown">
                                         <a class="nav-link" href="#" id="blog_submenu" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
@@ -171,15 +173,17 @@
                                             <li><a class="nav-link" href="top-iit.html">Top Indian Institues</a></li>
                                         </ul>
                                     </li>
+                                    <li><a class="nav-link" href="news_and_media.html">News and Media</a></li>
                                     <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
                                     <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+
                                 </ul>
                             </div>
                         </nav>
                         <!-- Mobile Hamburger Menu (visible only on small screens) -->
-                        <button aria-expanded="false" aria-controls="sidebarMenumobile" aria-label="Toggle menu"
-                            type="button"
-                            class="mobilemenu-btn d-lg-none"><span></span><span></span><span></span></button>
+                        <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu"
+                            aria-controls="sidebarMenumobile"
+                            aria-expanded="false"><span></span><span></span><span></span></button>
                     </div>
                 </div>
             </div>
@@ -189,13 +193,11 @@
             <button type="button" class="closebtn" aria-label="Close menu">x</button>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-            <a href="exploratory.html">Exploratory Perks</a>
 
             <!-- Dropdown (Mobile) -->
-            <a href="programs.html">Programs</a>
-
-            <a href="admissions.html">Admissions</a>
-
+            <div class="dropdownmobile">
+                <a href="programs.html">Programs</a>
+            </div>
             <!-- Dropdown (Mobile) -->
             <div class="dropdownmobile">
                 <a href="#" class="dropdownmobile-toggle">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
@@ -205,10 +207,10 @@
                     <li><a href="top-iit.html">Institutes of India</a></li>
                 </ul>
             </div>
-
+            <a href="news_and_media.html">News and Media</a>
+            <a href="exploratory.html">Exploratory Perks</a>
             <a href="contact.html">Contact Us</a>
         </div>
-
         <!-- Overlay (for closing sidebar when clicking outside) -->
         <div id="menuOverlay" class="menu-overlay"></div>
         <main class="page_content">
