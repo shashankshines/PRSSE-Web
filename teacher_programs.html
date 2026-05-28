@@ -1328,6 +1328,7 @@
             class FullSizeCarousel {
                 constructor() {
                     this.currentIndex = 0;
+                    this.carouselContainer = document.querySelector('.carousel-gallery-container');
                     this.carouselItems = document.querySelectorAll('.carousel-item');
                     this.indicators = document.querySelectorAll('.indicator');
                     this.prevBtn = document.querySelector('.carousel-btn-prev');
@@ -1367,11 +1368,13 @@
                     let touchStartX = 0;
                     let touchEndX = 0;
 
-                    document.querySelector('.carousel-gallery-container').addEventListener('touchstart', (e) => {
+                    const supportsHover = window.matchMedia('(hover: hover)').matches;
+
+                    this.carouselContainer.addEventListener('touchstart', (e) => {
                         touchStartX = e.changedTouches[0].screenX;
                     }, false);
 
-                    document.querySelector('.carousel-gallery-container').addEventListener('touchend', (e) => {
+                    this.carouselContainer.addEventListener('touchend', (e) => {
                         touchEndX = e.changedTouches[0].screenX;
                         this.handleSwipe();
                     }, false);
@@ -1393,14 +1396,16 @@
                     // Start auto play
                     this.startAutoPlay();
 
-                    // Pause on hover
-                    document.querySelector('.carousel-gallery-container').addEventListener('mouseenter', () => {
-                        this.pauseAutoPlay();
-                    });
+                    // Pause on hover only for devices that support hover
+                    if (supportsHover) {
+                        this.carouselContainer.addEventListener('mouseenter', () => {
+                            this.pauseAutoPlay();
+                        });
 
-                    document.querySelector('.carousel-gallery-container').addEventListener('mouseleave', () => {
-                        this.startAutoPlay();
-                    });
+                        this.carouselContainer.addEventListener('mouseleave', () => {
+                            this.startAutoPlay();
+                        });
+                    }
 
                     // Show initial slide
                     this.updateSlide();
@@ -1468,9 +1473,13 @@
             }
 
             // Initialize carousel when DOM is ready
-            document.addEventListener('DOMContentLoaded', () => {
-                new FullSizeCarousel();
-            });
+            const initCarousel = () => new FullSizeCarousel();
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initCarousel);
+            } else {
+                initCarousel();
+            }
 
             // Performance optimization: Lazy load images
             if ('IntersectionObserver' in window) {

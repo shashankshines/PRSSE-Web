@@ -4321,6 +4321,7 @@
                 let touchStartX = 0;
                 let touchEndX = 0;
                 const self = this;
+                const supportsHover = window.matchMedia('(hover: hover)').matches;
 
                 if (this.carouselContainer) {
                     this.carouselContainer.addEventListener('touchstart', (e) => {
@@ -4332,14 +4333,16 @@
                         self.handleSwipe(touchStartX, touchEndX);
                     }, false);
 
-                    // Pause on hover
-                    this.carouselContainer.addEventListener('mouseenter', () => {
-                        this.pauseAutoPlay();
-                    });
+                    // Pause on hover only for devices that support hover
+                    if (supportsHover) {
+                        this.carouselContainer.addEventListener('mouseenter', () => {
+                            this.pauseAutoPlay();
+                        });
 
-                    this.carouselContainer.addEventListener('mouseleave', () => {
-                        this.startAutoPlay();
-                    });
+                        this.carouselContainer.addEventListener('mouseleave', () => {
+                            this.startAutoPlay();
+                        });
+                    }
                 }
 
                 // Start auto play
@@ -4424,9 +4427,13 @@
             }
         }
         // Initialize carousel when DOM is ready
-        document.addEventListener('DOMContentLoaded', () => {
-            new FullSizeCarousel();
-        });
+        const initCarousel = () => new FullSizeCarousel();
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initCarousel);
+        } else {
+            initCarousel();
+        }
         // Performance optimization: Lazy load images
         if ('IntersectionObserver' in window) {
             const imageObserver = new IntersectionObserver((entries, observer) => {
