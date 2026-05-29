@@ -17,6 +17,10 @@
       button.classList.toggle('active');
       button.setAttribute('aria-expanded', isActive);
     });
+
+    if (!isActive) {
+      closeAllMobileDropdowns();
+    }
   }
 
   function toggleDropdown(event, element) {
@@ -33,6 +37,17 @@
     if (element) {
       element.setAttribute('aria-expanded', isOpen);
     }
+  }
+
+  function closeAllMobileDropdowns() {
+    const openDropdowns = document.querySelectorAll('.dropdownmobile.open');
+    openDropdowns.forEach(function (dropdown) {
+      dropdown.classList.remove('open');
+      const toggle = dropdown.querySelector('.dropdownmobile-toggle');
+      if (toggle) {
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
   }
 
   function initMobileMenu() {
