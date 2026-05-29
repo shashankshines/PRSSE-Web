@@ -68,14 +68,14 @@ html{
       font-size:30px;
     }
 
-.feature-card h4{
+.feature-card h4 {
       margin-bottom:16px;
       font-size:1.3rem;
       font-weight:600;
     }
 
-.feature-card p{
-      color:#556655;
+.feature-card p {
+      color:#64748b;
       line-height:1.8;
     }
 
@@ -3993,7 +3993,7 @@ blockquote p {
 }
 
 .main_menu_list>li:hover>a:after {
-    transform: rotateX(-180deg)
+    transform: rotateX(-180deg);
 }
 
 .main_menu_list .dropdown>a {
@@ -14906,7 +14906,23 @@ blockquote p {
 }
 
 .dropdownmobile-toggle::after {
-    display: none;
+    content: "▼";
+    font-family: inherit;
+    font-weight: 900;
+    font-size: .7rem;
+    margin-left: 3px;
+    color: inherit;
+    display: inline-block;
+    transition: transform 0.25s ease, color 0.25s ease;
+    transform-origin: center center;
+    transform: rotate(0deg);
+    line-height: .4rem;
+}
+
+.dropdownmobile.open > .dropdownmobile-toggle::after {
+    transform: rotate(180deg);
+    margin-top: -2px;
+    color: inherit;
 }
 
 .dropdownmobile-menu {
@@ -14946,19 +14962,9 @@ blockquote p {
 
 /* Dropdown arrow */
 
+/* The mobile drawer uses a pseudo-element arrow on the toggle, so the inline icon element is hidden. */
 .dropdownmobilearrow-icon {
-    display: inline-block;
-    margin-left: 5px;
-    margin-bottom: 2    px;
-    border: solid #fe7b14;
-    border-width: 0 2px 2px 0;
-    padding: 3px;
-    transform: rotate(45deg);
-    transition: transform 0.3s ease;
-}
-
-.dropdownmobile.open .dropdownmobilearrow-icon {
-    transform: rotate(225deg);
+    display: none !important;
 }
 
 /* Overlay */
