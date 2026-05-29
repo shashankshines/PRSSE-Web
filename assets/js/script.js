@@ -23,6 +23,40 @@
     }
   }
 
+  function createBackToTopButton() {
+    if (document.getElementById('backToTop')) {
+      return;
+    }
+    var button = document.createElement('button');
+    button.id = 'backToTop';
+    button.type = 'button';
+    button.className = 'back-to-top';
+    button.setAttribute('aria-label', 'Back to top');
+    button.innerHTML = '<span>↑</span>';
+    button.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    document.body.appendChild(button);
+  }
+
+  function toggleBackToTopButton() {
+    var button = document.getElementById('backToTop');
+    if (!button) {
+      return;
+    }
+    if (window.pageYOffset > 400) {
+      button.classList.add('visible');
+    } else {
+      button.classList.remove('visible');
+    }
+  }
+
+  function initBackToTop() {
+    createBackToTopButton();
+    toggleBackToTopButton();
+    window.addEventListener('scroll', toggleBackToTopButton);
+  }
+
   function toggleDropdown(event, element) {
     if (event) {
       event.preventDefault();
@@ -540,6 +574,7 @@
     document.addEventListener('DOMContentLoaded', initDesktopDropdowns);
     document.addEventListener('DOMContentLoaded', initScrollAnimation);
     document.addEventListener('DOMContentLoaded', initScrollReveal);
+    document.addEventListener('DOMContentLoaded', initBackToTop);
   } else {
     initMobileMenu();
     initActiveNav();
@@ -547,6 +582,7 @@
     initDesktopDropdowns();
     initScrollAnimation();
     initScrollReveal();
+    initBackToTop();
   }
 
   // Run again on window.load as a fallback for pages that mutate DOM after scripts
