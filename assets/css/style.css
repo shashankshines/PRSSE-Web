@@ -31,15 +31,28 @@ html{
     ====================================== */
 
 .feature-card {
-    background:
-    rgba(255,255,255,0.55);
+    background:rgba(255,255,255,0.55);
     border-radius:22px;
     padding:35px;
     height:100%;
     text-align:center;
     border: 1px solid rgba(0,0,0,0.05);
-    transition:0.3s ease;
+    transition:0.3s ease all;
+    overflow: hidden;
+    border: #eee solid 1px;
 }
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    top: -60px;
+    right: -60px;
+    background: rgba(13, 92, 77, .06);
+}
+
  @media screen and (max-width: 768px) { 
     .feature-card {
         padding: 15px;
@@ -49,6 +62,7 @@ html{
 .feature-card:hover{
       transform:translateY(-8px);
       box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+      transition: all ease-in .3s;
     }
 
 .feature-icon{
@@ -76,8 +90,9 @@ html{
     }
 
 .feature-card p {
-      color:#64748b;
-      line-height:1.8;
+          font-size: 16px;
+        color: #64748b;
+        line-height: 1.5rem
     }
 
 /* Link Colors across */
@@ -230,9 +245,6 @@ body > * {
          position:absolute;
          inset:0;
          background:
-         radial-gradient(circle at top right,
-         rgba(0,255,255,.18),
-         transparent 30%),
          radial-gradient(circle at bottom left,
          rgba(255,0,255,.15),
          transparent 30%),
