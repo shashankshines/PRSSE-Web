@@ -3884,12 +3884,6 @@ blockquote p {
     transition: background-color .3s ease-in, padding .3s;
     background-color: rgba(255, 255, 255, 0.45);
 }
-/* @media (max-width: 991px) {
-
-    .site_header.sticky {
-        padding: 5px 0 10px 0;
-    }
-} */
 
 .site_link {
     display: flex
@@ -4869,10 +4863,10 @@ blockquote p {
     .brands_logo_list.style_2 li {
         width: auto
     }
-    .page_title {
+    /* .page_title {
         font-size: 30px;
         line-height: 37px
-    }
+    } */
     .page_banner .info_list,
     .page_banner .meta_info_list {
         padding: 20px 0 30px
@@ -4912,6 +4906,17 @@ blockquote p {
 }
 
 @media screen and (max-width:991px) {
+    /* Global style for Mobile Banners  */
+    .page_banner .content_wrapper { 
+        min-height: 200px !important;
+        text-align: left;
+        padding: 20px !important;
+    }
+    .page_banner .content_wrapper h1.page_title {
+        font-size: 30px;
+        line-height: 2.4rem;
+        max-width: 70vw;
+    }
     .header_btns_group>li:first-child {
         display: inline-block
     }
@@ -5131,9 +5136,6 @@ blockquote p {
         right: -110px;
         bottom: -120px;
         max-width: 230px
-    }
-    .page_banner .content_wrapper {
-        text-align: left
     }
     .page_banner .unordered_list {
         justify-content: flex-start
@@ -5406,13 +5408,7 @@ blockquote p {
     .calltoaction_form {
         padding: 30px 20px
     }
-    /* .page_title {
-        font-size: 54px;
-        line-height: 60px
-    } */
-    /* .page_banner .content_wrapper {
-        padding: 70px 25px;
-    } */
+
     .iconbox_item .title_wrap {
         display: block
     }
@@ -5438,18 +5434,12 @@ blockquote p {
     .forget_password.text-end {
         text-align: left !important
     }
-   
-    .page_banner .content_wrapper {
-        min-height: auto
-    }
     .section_space_lg {
-        /* padding-top: 60px; */
         padding-bottom: 30px
     }
     
     /* Marquee Mobile Optimization */
     marquee {
-        /* margin-top: -18px; */
         padding: 15px 0 10px 0;
         width: 100%;
     }
@@ -5481,10 +5471,6 @@ blockquote p {
     }
     .site_header.sticky .main_menu {
         top: 56px
-    }
-    .page_banner .content_wrapper {
-        margin: 0 -15px;
-        padding: 60px 20px
     }
     .page_banner .item_price .sale_price {
         font-size: 38px
@@ -13267,10 +13253,6 @@ blockquote p {
     .hero_banner.style_2 .banner_big_title {
         margin: 0 0 20px
     }
-    .page_banner .content_wrapper {
-        padding: 70px;
-        text-align: center;
-    }
     .breadcrumb_nav {
         justify-content: center
     }
@@ -13338,9 +13320,6 @@ blockquote p {
         right: -110px;
         bottom: -120px;
         max-width: 230px
-    }
-    .page_banner .content_wrapper {
-        text-align: left
     }
     .page_banner .unordered_list {
         justify-content: flex-start
@@ -13613,13 +13592,10 @@ blockquote p {
     .calltoaction_form {
         padding: 30px 20px
     }
-    .page_title {
+    /* .page_title {
         font-size: 30px;
         line-height: 37px
-    }
-    .page_banner .content_wrapper {
-        padding: 70px 25px;
-    }
+    } */
     .iconbox_item .title_wrap {
         display: block
     }
@@ -13644,9 +13620,6 @@ blockquote p {
     }
     .forget_password.text-end {
         text-align: left !important
-    }
-    .page_banner .content_wrapper {
-        min-height: auto
     }
    
 }
@@ -13679,10 +13652,6 @@ blockquote p {
     }
     .breadcrumb_nav {
         margin-bottom: 16px
-    }
-    .page_banner .content_wrapper {
-        margin: 0 -15px;
-        padding: 60px 20px
     }
     .page_banner .item_price .sale_price {
         font-size: 38px
@@ -15079,28 +15048,6 @@ blockquote p {
 @media (prefers-reduced-motion: reduce) {
     /* Respect user preferences */
 }
-
-/* ===== BANNER ANIMATIONS ===== */
-
-/* .page_banner .content_wrapper {
-    animation: fadeInUp 0.9s ease both, bannerDrift 20s ease-in-out infinite;
-    will-change: transform;
-    backface-visibility: hidden;
-}
-
-@media screen and (max-width: 991px) {
-    .page_banner .content_wrapper {
-        animation: fadeInUp 0.7s ease both, bannerDrift 25s ease-in-out infinite;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .page_banner .content_wrapper {
-        animation: fadeInUp 0.6s ease both;
-        min-height: 200px !important;
-    }
-} */
-
 /* ===== TRANSITION PERFORMANCE OPTIMIZATION ===== */
 
 /* GPU acceleration for smooth transitions */
@@ -15184,15 +15131,6 @@ input[type="submit"],
 input[type="button"] {
     transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
     will-change: background-color, color, transform;
-}
-
-@media screen and (max-width: 991px) {
-    button,
-    a,
-    input[type="submit"],
-    input[type="button"] {
-        transition: all 0.2s ease;
-    }
 }
 
 /* ===== DROPDOWN ANIMATIONS ===== */
