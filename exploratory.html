@@ -41,7 +41,7 @@
 
       .page_banner .content_wrapper {
          align-items: center;
-         background-image: url("assets/images/banner/exploratory-perks-banner.png");
+         background-image: url("assets/images/banner/exploratory-perks-banner.webp");
          background-color: transparent;
          background-repeat: no-repeat;
          background-size: cover;
@@ -62,6 +62,45 @@
          }
       }
 
+      .heading-4{
+
+    background:
+    linear-gradient(
+        90deg,
+        #0f7a6b,
+        #24d3b4,
+        #f47b20
+    );
+
+    background-size:300% 300%;
+
+    -webkit-background-clip:text;
+    color:transparent;
+
+    animation:scienceGlow 6s ease infinite;
+}
+
+@keyframes scienceGlow{
+
+    0%,100%{
+
+        background-position:0% 50%;
+
+        filter:drop-shadow(
+            0 0 10px rgba(15,122,107,.25)
+        );
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+        filter:drop-shadow(
+            0 0 25px rgba(244,123,32,.35)
+        );
+    }
+}
+
       .page_banner .internal-banner {
          background: transparent !important;
          background-image: none !important;
@@ -69,14 +108,7 @@
          height: auto;
       }
 
-      /* .page_banner .content_wrapper::before {
-         content: "";
-         position: absolute;
-         inset: 0;
-         background: linear-gradient(180deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.20));
-         pointer-events: none;
-         z-index: 1;
-         } */
+
       .page_banner .content_wrapper::after {
          content: "";
          position: absolute;
@@ -89,63 +121,177 @@
          animation: curtainSlide 22s ease-in-out infinite;
       }
 
-      .page_banner .banner_deco {
-         position: absolute;
-         inset: 0;
-         pointer-events: none;
-         z-index: 1;
+      :root {
+         --primary: #0d5c4d;
+         --secondary: #ff6f00;
+         --light: #f8fafc;
+         --dark: #1e293b;
+         --gray: #64748b;
+         --border: #e2e8f0;
+      }
+
+      .feature {
+         display: grid;
+         grid-template-columns: 120px 1fr;
+         gap: 10px;
+         align-items: center;
+         margin-bottom: 30px;
+         background: rgba(255, 255, 255, 0.5);
+         padding: 30px;
+         border-radius: 30px;
+         position: relative;
          overflow: hidden;
       }
-
-      .page_banner .banner_bubble {
+      .feature::before {
+         content: '';
          position: absolute;
-         border-radius: 50%;
-         filter: blur(10px);
-         opacity: 0.55;
-         transform: translate3d(0, 0, 0);
-      }
-
-      .page_banner .bubble-1 {
          width: 160px;
          height: 160px;
-         background: rgba(255, 255, 255, 0.12);
-         top: 15%;
-         left: 10%;
-         animation: bubbleDrift1 18s ease-in-out infinite;
+         border-radius: 50%;
+         top: -30px;
+         right: -10px;
+         background: rgba(13, 92, 77, .06);
       }
 
-      .page_banner .bubble-2 {
-         width: 110px;
-         height: 110px;
-         background: rgba(255, 255, 255, 0.10);
-         top: 55%;
-         right: 12%;
-         animation: bubbleDrift2 20s ease-in-out infinite;
-      }
-
-      .page_banner .bubble-3 {
-         width: 220px;
-         height: 220px;
-         background: rgba(255, 255, 255, 0.08);
-         bottom: 10%;
-         left: 50%;
-         transform: translateX(-50%);
-         animation: bubbleDrift3 24s ease-in-out infinite;
-      }
-
-      .page_banner .content_wrapper>* {
-         position: relative;
-         z-index: 2;
-      }
-
-      .page_banner .content_wrapper .page_title,
-      .page_banner .content_wrapper .breadcrumb_nav,
-      .page_banner .content_wrapper .breadcrumb_nav a {
+      .icon-circle {
+         width: 90px;
+         height: 90px;
+         border-radius: 50%;
+         background: linear-gradient(135deg, var(--secondary), #ff9800);
+         display: flex;
+         align-items: center;
+         justify-content: center;
          color: #fff;
+         font-size: 2rem;
+         box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
       }
 
-      .page_banner .content_wrapper .breadcrumb_nav li {
-         opacity: 0.9;
+      .feature h3 {
+         color: var(--primary);
+         margin-bottom: 15px;
+         font-size: 1.6rem;
+      }
+
+      /* TIMELINE */
+      .timeline {
+         position: relative;
+         margin-top: 40px;
+      }
+
+      .timeline::before {
+         content: '';
+         position: absolute;
+         left: 30px;
+         top: 0;
+         width: 4px;
+         height: 100%;
+         background: var(--primary);
+      }
+
+      .timeline-item {
+         position: relative;
+         padding-left: 90px;
+         margin-bottom: 50px;
+      }
+
+      .timeline-item::before {
+         content: '';
+         position: absolute;
+         left: 18px;
+         top: 8px;
+         width: 28px;
+         height: 28px;
+         border-radius: 50%;
+         background: var(--secondary);
+      }
+
+      .timeline-item h4 {
+         color: var(--primary);
+         margin-bottom: 5px;
+         font-size: 20px;
+      }
+
+      /* PERKS */
+      .perks {
+         background: rgba(255, 255, 255, .5);
+         padding: 40px 30px 10px 30px;
+         border-radius: 30px;
+      }
+
+      .perk-list {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+         gap: 35px;
+      }
+
+      .perk {
+         display: flex;
+         gap: 20px;
+         align-items: flex-start;
+      }
+
+      .number {
+         min-width: 60px;
+         height: 60px;
+         border-radius: 50%;
+         background: var(--primary);
+         color: #fff;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-weight: 700;
+         font-size: 1.2rem;
+      }
+
+      .perk h4 {
+         color: var(--primary);
+         margin-bottom: 8px;
+      }
+
+      /* CTA */
+
+      .cta {
+         background: linear-gradient(135deg, var(--primary), #1976d2);
+         color: #fff;
+         text-align: center;
+         padding: 90px 20px;
+      }
+
+      .cta h2 {
+         font-size: 2.5rem;
+         margin-bottom: 20px;
+      }
+
+      .cta p {
+         max-width: 850px;
+         margin: auto;
+         font-size: 1.1rem;
+      }
+
+      /* RESPONSIVE */
+
+      @media(max-width:768px) {
+
+         .feature {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+         }
+         .feature p {
+            margin-bottom: 0;
+         }
+
+         .timeline::before {
+            left: 15px;
+         }
+
+         .timeline-item {
+            padding-left: 55px;
+         }
+
+         .timeline-item::before {
+            left: 3px;
+         }
       }
    </style>
 </head>
@@ -162,7 +308,6 @@
                <div class="col col-lg-3 col-10">
                   <div class="site_logo">
                      <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt=""></a>
-
                   </div>
                </div>
                <div class="col col-lg-9 col-2">
@@ -229,118 +374,160 @@
                <div class="content_wrapper">
                   <div class="row align-items-center">
                      <div class="col col-lg-12">
-                        <!-- <ul class="breadcrumb_nav unordered_list">
-                              <li><a href="index.html">Home</a></li> 
-                              <li>Exploratory Perks</li>
-                              </ul> -->
                         <h1 class="page_title">Exploratory Perks</h1>
                      </div>
                   </div>
                </div>
             </div>
          </section>
+
          <section class="courses_info_section mt-3">
             <div class="container">
-               <div class="row align-items-center">
-                  <div class="col col-lg-12">
-                     <div class="content_wrap ps-lg-3">
-                        <div class="section_heading">
-                           <h2 class="heading_text">Why Choose a Science Exploratory Over a Classroom Programme?</h2>
-                           <p>Joining a science exploratory can be an exciting and rewarding experience! Here are some
-                              reasons to join an exploratory
+               <h2 class="section-title mt-md-4">Why Choose a Science Exploratory Over a Classroom Programme?</h2>
+               <p>
+                  Joining a science exploratory can be an exciting and rewarding experience.
+                  It offers opportunities to learn through experimentation, collaboration,
+                  mentorship, and scientific exploration beyond traditional classroom learning.
+               </p>
+
+               <section>
+                  <div class="container p-0">
+                     <div>
+                        <!-- <h2>Benefits of Joining a Science Exploratory</h2> -->
+                        <h3 class="heading_text">Experience science beyond textbooks.</h3>
+                     </div>
+
+                     <div class="feature shadow-lg">
+                        <div class="icon-circle">
+                           <i class="fas fa-flask-vial"></i>
+                        </div>
+                        <div class="content">
+                           <h3>Hands-on Learning</h3>
+                           <p>
+                              A science exploratory offers hands-on experience. It allows
+                              experimentation and exploration using specialized equipment.
+                              Something a classroom programme does not offer. Our mission
+                              is to inspire and educate young minds to appreciate science,
+                              and to help them explore the world around them in new and
+                              exciting ways.
                            </p>
                         </div>
-                        <ul class="info_list unordered_list_block">
-                           <li><i class="fas fa-square"></i> <span><b>HANDS-ON LEARNING:</b> A science exploratory
-                                 offers hands-on experience. It allows experimentation and exploration using specialized
-                                 equipment. Something a classroom programme does not offer. Our mission is to inspire
-                                 and educate young minds to appreciate science, and to help them explore the world
-                                 around them in new and exciting ways.
-                              </span>
-                           </li>
-                           <li><i class="fas fa-square"></i> <span><b>EXPERT INSTRUCTION:</b> A science exploratory is
-                                 mentored by professionals with expertise in various scientific fields. This means
-                                 students will have access to expert instruction and guidance.
-                              </span>
-                           </li>
-                           <li><i class="fas fa-square"></i> <span><b>COLLABORATIVE LEARNING:</b> A science exploratory
-                                 emphasizes on group work and collaboration, creating a team and developing valuable
-                                 communication skills of students. </span></li>
-                           <li><i class="fas fa-square"></i> <span><b>PREPARATION FOR COMPETITIVE EXAMS AND
-                                    PROJECTS:</b> For students interested in pursuing a career in science, joining an
-                                 exploratory is a great way to gain experience by appearing in competitive exams and
-                                 participating in science and mathematics projects.</span></li>
-                           <li><i class="fas fa-square"></i> <span><b>FUN AND ENGAGING:</b> A science exploratory is fun
-                                 and engaging. It provides a stimulating and challenging environment, creating lifelong
-                                 love of science.</span></li>
-                        </ul>
                      </div>
-                  </div>
-                  <div class="col col-lg-12">
-                     <div class="content_wrap ps-lg-3">
-                        <div class="section_heading">
-                           <h2 class="heading_text">Special Perks at the New Location of the Exploratory: </h2>
+
+                     <div class="feature shadow-lg">
+                        <div class="icon-circle">
+                           <i class="fas fa-user-graduate"></i>
                         </div>
-                        <ul class="info_list unordered_list_block">
-                           <li><i class="fas fa-square"></i> <span>Budding students in the city can have the opportunity
-                                 to access state-of-the-art scientific equipment, including some International Olympiad
-                                 setups.</span></li>
-                           <li><i class="fas fa-square"></i> <span>New venue is well-connected to metro and bus services
-                                 in West Nagpur (Near Shankar Nagar Metro Station).</span></li>
-                           <li><i class="fas fa-square"></i> <span>Exploratory can serve as a meeting point for merit
-                                 students from various schools in the city.</span></li>
-                           <li><i class="fas fa-square"></i> <span>Students can receive mentorship and guidance from
-                                 experienced professionals, which can help them achieve their academic and career
-                                 goals.</span></li>
-                           <li><i class="fas fa-square"></i> <span>Students can get the adequate guidance for
-                                 competitive exams in science and mathematics, including Junior Science and Mathematics
-                                 Olympiad Programs, Dr Homi Bhabha Balvaidnyanik Competition, National Mathematics
-                                 talent Competition (NMTC), Vidyarthi Vigyaan Manthan (VVM), Inspire Camps, etc. through
-                                 different programs and workshops by the exploratory.
-                              </span>
-                           </li>
-                           <li><i class="fas fa-square"></i> <span>Students can participate in science demonstration
-                                 shows and STEM workshops delivered by invited science educators, scientists and experts
-                                 across the country.
-                              </span>
-                           </li>
-                           <li><i class="fas fa-square"></i> <span>
-                                 Students from economically weaker sections of society are eligible for annual fee
-                                 waiver for the regular Programs of the exploratory.
-                              </span>
-                           </li>
-                           <li><i class="fas fa-square"></i> <span>
-                                 Students can be eligible for a certificate of appreciation upon completion of the
-                                 experimental training programme through a skill test.
-                              </span>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <section class="newslatter_section">
-            <div class="container">
-               <div class="newslatter_box" style="background-image: url(assets/images/shape/shape_img_6.svg);">
-                  <div class="row justify-content-center">
-                     <div class="col col-lg-6">
-                        <div class="section_heading text-center">
-                           <h2 class="heading_text">Admission Open</h2>
-                           <p class="heading_description mb-0">Admission to Prof. Rajendra Singh Exploratory is open to
-                              all students who have an interest in science. Admissions are fixed in the month of
-                              June-July for one year academic session till April.</p>
+                        <div class="content">
+                           <h3>Expert Instruction</h3>
+                           <p>
+                              A science exploratory is mentored by professionals with expertise in various scientific fields. This means students will have access to expert instruction and guidance, enhancing their scientific knowledge and skills.
+                           </p>
                         </div>
-                        <form action="#">
-                           <div class="form_item m-0">
-                              <button type="submit" class="btn btn_dark">
-                                 <span><small>Apply Now</small> <small>Apply Now</small></span>
-                              </button>
-                           </div>
-                        </form>
                      </div>
+
+                     <div class="feature shadow-lg">
+                        <div class="icon-circle">
+                           <i class="fas fa-people-group"></i>
+                        </div>
+                        <div class="content">
+                           <h3>Collaborative Learning</h3>
+                           <p>
+                              A science exploratory emphasizes on group work and collaboration, creating a team and developing valuable communication skills of students, while fostering leadership, teamwork, confidence, creativity and problem-solving abilities.
+                           </p>
+                        </div>
+                     </div>
+
+                     <div class="feature shadow-lg">
+                        <div class="icon-circle">
+                           <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="content">
+                           <h3>Preparation for Competitive Exams and Projects</h3>
+                           <p>
+                              For students interested in pursuing a career in science,
+                              joining an exploratory is a great way to gain experience
+                              by appearing in competitive exams and participating in
+                              science and mathematics projects.
+                           </p>
+                        </div>
+                     </div>
+
+                     <div class="feature shadow-lg">
+                        <div class="icon-circle">
+                           <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="content">
+                           <h3>Fun and Engaging</h3>
+                           <p>
+                              A science exploratory is fun and engaging. It provides a stimulating and challenging environment, creating lifelong love of science, while encouraging curiosity, innovation, exploration, discovery, and meaningful learning experiences.
+                           </p>
+                        </div>
+                     </div>
+
                   </div>
-               </div>
+               </section>
+
+               <!-- Special Perks -->
+               <section class="perks shadow-lg mb-5">
+                  <div class="container">
+
+                        <h4 class="heading_text">Special Perks at the New Location.</h4>
+                     <div class="timeline">
+
+                        <div class="timeline-item">
+                           <h4>State-of-the-Art Scientific Equipment</h4>
+                           <p>Budding students in the city can have the opportunity to access state-of-the-art
+                              scientific equipment, including some International Olympiad setups.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                           <h4>Excellent Connectivity</h4>
+                           <p>New venue is well-connected to metro and bus services in West Nagpur (Near Shankar Nagar
+                              Metro Station).</p>
+                        </div>
+
+                        <div class="timeline-item">
+                           <h4>Meeting Point for Merit Students</h4>
+                           <p>Exploratory can serve as a meeting point for merit students from various schools in the
+                              city.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                           <h4>Professional Mentorship</h4>
+                           <p>Students can receive mentorship and guidance from experienced professionals, which can
+                              help them achieve their academic and career goals.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                           <h4>Competitive Exam Guidance</h4>
+                           <p>Students can get the adequate guidance for competitive exams in science and mathematics,
+                              including Junior Science and Mathematics Olympiad Programs, Dr Homi Bhabha Balvaidnyanik
+                              Competition, NMTC, VVM, Inspire Camps, etc.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                           <h4>National STEM Exposure</h4>
+                           <p>Students can participate in science demonstration shows and STEM workshops delivered by
+                              invited science educators, scientists and experts across the country.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                           <h4>Fee Waiver Support</h4>
+                           <p>Students from economically weaker sections of society are eligible for annual fee waiver
+                              for the regular Programs of the exploratory.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                           <h4>Certification Opportunity</h4>
+                           <p>Students can be eligible for a certificate of appreciation upon completion of the
+                              experimental training programme through a skill test.</p>
+                        </div>
+
+                     </div>
+
+                  </div>
+               </section>
             </div>
          </section>
       </main>
