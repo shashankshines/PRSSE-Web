@@ -58,7 +58,7 @@
         /* ===== PAGE BANNER STYLING ===== */
         .page_banner .content_wrapper {
             align-items: center;
-            background-image: url("assets/images/banner/news-media-banner.png");
+            background-image: url("assets/images/banner/news-media-banner.jpg");
             background-color: transparent;
             background-repeat: no-repeat;
             background-size: cover;
@@ -80,14 +80,7 @@
             width: 100%;
         }
 
-        .page_banner .content_wrapper::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.20));
-            pointer-events: none;
-            z-index: 1;
-        }
+       
 
         .page_banner .content_wrapper::after {
             content: "";
@@ -150,7 +143,7 @@
             z-index: 2;
         }
 
-        .page_banner .content_wrapper .page_title,
+        .page_banner .content_wrapper,
         .page_banner .content_wrapper .breadcrumb_nav,
         .page_banner .content_wrapper .breadcrumb_nav a {
             color: #fff;
