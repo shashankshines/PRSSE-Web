@@ -136,6 +136,15 @@
         const parentLi = link.closest('li');
         if (parentLi) {
           parentLi.classList.add('active');
+          // If this link is inside a dropdown, also mark the dropdown parent active
+          const dropdownParent = parentLi.closest('.dropdown');
+          if (dropdownParent) {
+            dropdownParent.classList.add('active');
+            const dropdownToggle = dropdownParent.querySelector('.nav-link');
+            if (dropdownToggle) {
+              dropdownToggle.classList.add('active');
+            }
+          }
         }
       }
     });
