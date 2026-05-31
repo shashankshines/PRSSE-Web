@@ -273,7 +273,6 @@
         ticking = true;
       }
     }, { passive: true });
-
     // Check initial scroll position in case page is already scrolled
     updateStickyHeader();
   }
@@ -757,7 +756,6 @@
         }
       });
     }
-    
     // Track window.location assignment directly
     try {
       var originalLocationAssign = window.location.assign;
@@ -790,7 +788,6 @@
       _originalLog(_diagnosticLog);
       return _diagnosticLog;
     };
-    
     _originalLog('[DIAG] Diagnostic tracking active. Call window._showDiagnostics() when page reloads to see what triggered it.');
   })();
   // ===== END DIAGNOSTIC =====
