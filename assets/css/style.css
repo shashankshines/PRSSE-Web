@@ -16,7 +16,7 @@ html{
   transform: translateY(90px);
   transition: all 2s ease;
 } */
-
+/* .container { padding-left: 0 !important; padding-right: 0 !important; } */
 .reveal.active{
   opacity:1;
   transform: translateY(0);
@@ -123,7 +123,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/body-bg.webp');
+    background-image: url(../images/body-bg.webp);
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: auto;
@@ -723,32 +723,64 @@ hr {
     position: absolute
 }
 
-.main_menu_list>li.dropdown>a.nav-link::after {
-    content: "▼";
-    font-family: inherit;
-    font-weight: 900;
-    font-size: .7rem;
-    margin-left: 3px;
-    color: #fe8408;
-    display: inline-block;
-    transition: transform 0.25s ease, color 0.25s ease;
-    transform-origin: center center;
-    transform: rotate(0deg);
-    line-height: .4rem;
+/* Master dropdown chevron rule - default down arrow for all cases */
+.main_menu_list > li.dropdown > a.nav-link,
+.main_menu_list .dropdown > a.nav-link,
+.main_menu_list > li.dropdown > a[data-bs-toggle="dropdown"],
+a[data-bs-toggle="dropdown"] {
+    position: relative;
+    padding-right: 1.8rem;
 }
 
-.main_menu_list>li.dropdown.show>a.nav-link::after,
-.main_menu_list>li.dropdown>a.nav-link[aria-expanded="true"]::after {
-    transform: rotate(180deg);
-    margin-top: -2px;
-    color: #000;
+.main_menu_list > li.dropdown > a.nav-link::after,
+.main_menu_list .dropdown > a.nav-link::after,
+.main_menu_list .dropdown > a::after,
+.main_menu_list > li.dropdown.active > a.nav-link::after,
+.main_menu_list > li.dropdown > a[data-bs-toggle="dropdown"]::after,
+a[data-bs-toggle="dropdown"]::after {
+    content: "▼" !important;
+    position: absolute !important;
+    right: 0.8rem !important;
+    top: 50% !important;
+     margin-top: 2px;
+    transform: translateY(-50%) !important;
+    font-family: inherit !important;
+    font-weight: 900 !important;
+    font-size: 0.7rem !important;
+    color: #fe8408 !important;
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: transform 0.25s ease, color 0.25s ease !important;
+    line-height: 1 !important;
 }
-.main_menu_list>li.dropdown:hover>a.nav-link::after {
-    transform: rotate(0deg);
+.main_menu_list > li.dropdown.active > a.nav-link::after{
+    color: #29281e !important;
+   
 }
-.main_menu_list>li.dropdown:hover>a.nav-link[aria-expanded="true"]::after {
-    transform: rotate(180deg);
+/* Open/expanded dropdown - show up arrow */
+.main_menu_list > li.dropdown.show > a.nav-link::after,
+.main_menu_list > li.dropdown > a.nav-link[aria-expanded="true"]::after,
+.main_menu_list > li.dropdown.show > a[data-bs-toggle="dropdown"]::after,
+.main_menu_list > li.dropdown > a[data-bs-toggle="dropdown"][aria-expanded="true"]::after {
+    content: "▲" !important;
+    color: #29281e !important;
 }
+
+/* Hover states - maintain arrow direction based on open/active state */
+.main_menu_list > li.dropdown:hover > a.nav-link::after,
+.main_menu_list > li.dropdown:hover > a[data-bs-toggle="dropdown"]::after {
+    transform: translateY(-50%) !important;
+}
+
+.main_menu_list > li.dropdown.show:hover > a.nav-link::after,
+.main_menu_list > li.dropdown:hover > a.nav-link[aria-expanded="true"]::after,
+.main_menu_list > li.dropdown.show:hover > a[data-bs-toggle="dropdown"]::after,
+.main_menu_list > li.dropdown:hover > a[data-bs-toggle="dropdown"][aria-expanded="true"]::after {
+    content: "▲" !important;
+    transform: translateY(-50%) !important;
+}
+
 
 .layer {
     position: relative !important
@@ -3973,29 +4005,24 @@ blockquote p {
     transition: all ease-in .3s;
 }
 
+.main_menu_list>li.dropdown.active > a.nav-link,
+.main_menu_list .dropdown:has(.dropdown-menu li.active) > a.nav-link {
+    color: #29281e;
+    background: linear-gradient(274deg, #ff7a00, rgba(255, 211, 43, .8));
+    transition: all ease-in .3s;
+}
+
 .main_menu_list>li:hover>a {
     color: #29281e;
     background: linear-gradient(274deg, #ff7a00, rgba(255, 211, 43, .8));
 }
 
 .main_menu_list>li:hover>a:after {
-    transform: rotateX(-180deg);
+    transform: rotate(0deg);
 }
 
 .main_menu_list .dropdown>a {
     position: relative
-}
-
-.main_menu_list .dropdown>a:after {
-    float: right;
-    line-height: 1;
-    font-size: 14px;
-    content: "";
-    font-weight: 400;
-    margin-top: 2px;
-    margin-left: 5px;
-    transition: .4s cubic-bezier(.25, 1, .5, 1);
-    font-family: "Font Awesome 5 Pro"
 }
 
 .main_menu_list .dropdown-menu {
@@ -4920,7 +4947,7 @@ blockquote p {
 @media screen and (max-width:991px) {
     /* Global style for Mobile Banners  */
     .page_banner .content_wrapper { 
-        min-height: 200px !important;
+        min-height: 180px !important;
         text-align: left;
         padding: 20px !important;
     }
