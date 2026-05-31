@@ -279,6 +279,21 @@
   }
 
   function initScrollAnimation() {
+    // Helper function to add staggered delays to container children
+    const addStaggeredDelays = function (container, baseDelay) {
+      if (!container) return;
+      let count = 0;
+      const children = container.querySelectorAll('.text-focus-in');
+      children.forEach(function (child, idx) {
+        if (child.parentElement === container || child.closest(':not(.text-focus-in)') === container) {
+          count = (idx % 5) + 1; // Cycle through delays 1-5
+          if (!child.getAttribute('data-animation-delay')) {
+            child.setAttribute('data-animation-delay', count.toString());
+          }
+        }
+      });
+    };
+
     const autoAnimateSelectors = [
       // Heading and text classes (specific)
       '.page_title',
@@ -395,8 +410,27 @@
       '[role="main"] h3'
     ];
 
-    // Helper: check if element is part of a menu/navigation
+    // Helper: check if element is part of a menu/navigation or accordion
     const isMenuElement = function (el) {
+      // First check: is this element or any parent an accordion-related element?
+      if (el.closest('.accordion') || 
+          el.closest('.accordion-item') || 
+          el.closest('.accordion-button') ||
+          el.closest('.accordion-collapse') ||
+          el.closest('.accordion-body')) {
+        return true;
+      }
+      
+      // Also check by class
+      if (el.classList.contains('accordion') ||
+          el.classList.contains('accordion-item') ||
+          el.classList.contains('accordion-button') ||
+          el.classList.contains('accordion-collapse') ||
+          el.classList.contains('accordion-body')) {
+        return true;
+      }
+      
+      // Check for menu elements
       return el.closest('.main_menu') || 
              el.closest('.nav-link') || 
              el.closest('.main_menu_list') ||
@@ -437,16 +471,15 @@
         containers.forEach(function (container) {
           // Get all text nodes and elements within these containers
           container.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, span, strong, em, .card, .item_title, .item_content, button, .btn').forEach(function (el) {
-            fallbackElements.add(el);
+            if (!isMenuElement(el)) {
+              fallbackElements.add(el);
+            }
           });
         });
       });
-      // Also add from header and footer if they have content (but skip menu items)
+      // Also add from header and footer if they have content (but skip menu items and accordion content)
       document.querySelectorAll('header p, header h1, header h2, header h3, header h4, header h5, header h6').forEach(function (el) {
-        if (!el.classList.contains('nav-link') && 
-            !el.closest('.mobilemenu-btn') &&
-            !el.closest('.main_menu') &&
-            !el.closest('.main_menu_list') &&
+        if (!isMenuElement(el) &&
             !el.closest('nav')) {
           fallbackElements.add(el);
         }
@@ -487,12 +520,36 @@
     const observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
+          // Add staggered delays for child elements within containers
+          if (entry.target.children && entry.target.children.length > 0) {
+            let delayCount = 0;
+            Array.from(entry.target.children).forEach(function (child, idx) {
+              if (child.classList.contains('text-focus-in')) {
+                delayCount = (idx % 5) + 1;
+                if (!child.getAttribute('data-animation-delay')) {
+                  child.setAttribute('data-animation-delay', delayCount.toString());
+                }
+              }
+            });
+          }
+          
           entry.target.classList.add('animated');
           try { entry.target.dataset.srInitialized = '1'; } catch (e) {}
           observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
+
+    // Apply staggered delays to sections before observing
+    document.querySelectorAll('section, .container, main').forEach(function (container) {
+      let delayCount = 0;
+      container.querySelectorAll(':scope > .text-focus-in, :scope > * > .text-focus-in').forEach(function (el, idx) {
+        if (!el.getAttribute('data-animation-delay') && el.classList.contains('text-focus-in')) {
+          delayCount = (idx % 5) + 1;
+          el.setAttribute('data-animation-delay', delayCount.toString());
+        }
+      });
+    });
 
     animatedElements.forEach(function (element) {
       try { element.dataset.srInitialized = 'observing'; } catch (e) {}
