@@ -216,8 +216,8 @@ li.text-focus-in.animated {
 	        animation: text-focus-in 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-/* ====== ACCORDION SMOOTH ANIMATION FIX ====== */
-/* Completely remove blur animation from accordion elements */
+/* ====== ACCORDION SMOOTH NATIVE BOOTSTRAP ====== */
+/* Remove blur from accordion text-focus-in animations only */
 .accordion .text-focus-in,
 .accordion-item .text-focus-in,
 .accordion-button .text-focus-in,
@@ -228,17 +228,11 @@ li.text-focus-in.animated {
 	opacity: 1 !important;
 }
 
-/* Disable all animations on accordion and descendants */
-.accordion-button,
-.accordion-collapse,
-.accordion-body {
-	animation: none !important;
-	filter: none !important;
-}
-
-/* Ensure Bootstrap's collapse animation works without blur interference */
-.accordion * {
-	filter: none !important;
+/* Ensure images inside accordion don't cause layout jumps */
+.accordion-body img {
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 
 .grad {
@@ -543,34 +537,12 @@ section.reveal {
   }
 }
 
-/* ====== ACCORDION PERFORMANCE OVERRIDE ====== */
-.accordion,
-.accordion-item,
-.accordion-button,
-.accordion-body,
-.accordion * {
-  animation: none !important;
-  -webkit-animation: none !important;
-  filter: none !important;
-  -webkit-filter: none !important;
-  opacity: 1 !important;
-}
+/* ====== ACCORDION: LET BOOTSTRAP HANDLE SMOOTHLY ====== */
+/* Bootstrap handles .accordion-collapse with native smooth height transition.
+   We only override to disable text-focus-in blur animations. */
 
 .accordion-collapse {
-  animation: none !important;
-  -webkit-animation: none !important;
-  filter: none !important;
-  -webkit-filter: none !important;
-  opacity: 1 !important;
   overflow: hidden !important;
-}
-
-.accordion-button {
-  transform: none !important;
-}
-
-.accordion-button .accordion-icon {
-  transition: none !important;
 }
 
 .fade-in-reveal {
