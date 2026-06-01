@@ -31,16 +31,34 @@ html{
     ====================================== */
 
 .feature-card {
+    position: relative;
     background:rgba(255,255,255,0.55);
     border-radius:22px;
     padding:35px;
     height:100%;
     text-align:center;
     border: 1px solid rgba(0,0,0,0.05);
-    transition:0.3s ease all;
     overflow: hidden;
     border: #d9e8c5 solid 1px;
     box-shadow: 0 15px 35px rgba(0,0,0,.06);
+    will-change: transform, opacity, box-shadow;
+    transform: translateX(var(--sr-translate, 0));
+    opacity: 0;
+    transition: transform 0.75s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.75s ease, box-shadow 0.3s ease;
+}
+
+.feature-cards .row > .col:nth-child(odd) .feature-card {
+    --sr-translate: -100px;
+}
+
+.feature-cards .row > .col:nth-child(even) .feature-card {
+    --sr-translate: 100px;
+}
+
+.feature-card.scroll-reveal-visible {
+    --sr-translate: 0;
+    opacity: 1;
+    transform: translateX(0) translateY(0);
 }
 
 .feature-card::before {
@@ -61,7 +79,7 @@ html{
     
   }
 .feature-card:hover{
-      transform:translateY(-8px);
+      transform: translateX(0) translateY(-8px);
       box-shadow: 0 15px 30px rgba(0,0,0,0.06);
       transition: all ease-in .3s;
     }
@@ -2273,7 +2291,7 @@ blockquote p {
 
 .accordion .accordion-button:not(.collapsed)::after {
     content: "";
-    transform: rotate(0)
+    transform: rotate(0);
 }
 
 /* Hide default pseudo-element and add explicit icon styling */

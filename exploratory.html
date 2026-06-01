@@ -217,8 +217,19 @@
          background: rgba(255, 255, 255, .5);
          padding: 40px 30px 10px 30px;
          border-radius: 30px;
+         overflow: hidden;
+         position: relative;
       }
-
+      .perks::before{
+         content: '';
+         position: absolute;
+         width: 160px;
+         height: 160px;
+         border-radius: 50%;
+         top: -30px;
+         right: -10px;
+         background: rgba(13, 92, 77, .06);
+      }
       .perk-list {
          display: grid;
          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
