@@ -537,12 +537,31 @@ section.reveal {
   }
 }
 
-/* ====== ACCORDION: LET BOOTSTRAP HANDLE SMOOTHLY ====== */
-/* Bootstrap handles .accordion-collapse with native smooth height transition.
-   We only override to disable text-focus-in blur animations. */
+/* ====== ACCORDION: NATIVE BOOTSTRAP WITH EXPLICIT SMOOTH TRANSITIONS ====== */
+/* Bootstrap 5 uses JavaScript to handle collapse height changes.
+   We ensure the animation is smooth by setting explicit transition properties. */
 
 .accordion-collapse {
   overflow: hidden !important;
+}
+
+/* Ensure smooth collapse/expand animation by explicitly setting transition on height changes */
+.accordion-collapse.collapsing {
+  transition: height 350ms ease, visibility 350ms ease;
+  overflow: hidden !important;
+}
+
+.accordion-collapse.collapse {
+  overflow: hidden !important;
+}
+
+.accordion-collapse.collapse.show {
+  overflow: visible !important;
+}
+
+/* Smooth icon rotation on accordion button */
+.accordion-button::after {
+  transition: transform 350ms ease !important;
 }
 
 .fade-in-reveal {
