@@ -158,8 +158,8 @@ body > * {
 }
 
 .text-focus-in.animated {
-	-webkit-animation: text-focus-in 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: text-focus-in 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-webkit-animation: text-focus-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-focus-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 /* Staggered animation delays for smooth cascading effect */
@@ -188,36 +188,36 @@ body > * {
 	-webkit-animation-delay: 0.25s;
 }
 
-/* Headings: Slightly faster animation */
+/* Headings: Faster animation for prominence */
 h1.text-focus-in.animated, 
 h2.text-focus-in.animated, 
 h3.text-focus-in.animated {
-	-webkit-animation: text-focus-in 0.55s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: text-focus-in 0.55s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-webkit-animation: text-focus-in 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-focus-in 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-/* Paragraphs: Standard speed */
+/* Paragraphs: Faster animation */
 p.text-focus-in.animated {
-	-webkit-animation: text-focus-in 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: text-focus-in 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-/* List items: Smooth sequential reveal */
-li.text-focus-in.animated {
 	-webkit-animation: text-focus-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: text-focus-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-/* Cards and containers: Slower for emphasis */
+/* List items: Faster sequential reveal */
+li.text-focus-in.animated {
+	-webkit-animation: text-focus-in 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-focus-in 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* Cards and containers: Faster for more prominent reveal */
 .card.text-focus-in.animated,
 .feature-card.text-focus-in.animated,
 .item_title.text-focus-in.animated {
-	-webkit-animation: text-focus-in 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: text-focus-in 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-webkit-animation: text-focus-in 0.55s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-focus-in 0.55s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-/* ====== ACCORDION SMOOTH ANIMATION FIX ====== */
-/* Completely remove blur animation from accordion elements */
+/* ====== ACCORDION SMOOTH NATIVE BOOTSTRAP ====== */
+/* Remove blur from accordion text-focus-in animations only */
 .accordion .text-focus-in,
 .accordion-item .text-focus-in,
 .accordion-button .text-focus-in,
@@ -228,17 +228,11 @@ li.text-focus-in.animated {
 	opacity: 1 !important;
 }
 
-/* Disable all animations on accordion and descendants */
-.accordion-button,
-.accordion-collapse,
-.accordion-body {
-	animation: none !important;
-	filter: none !important;
-}
-
-/* Ensure Bootstrap's collapse animation works without blur interference */
-.accordion * {
-	filter: none !important;
+/* Ensure images inside accordion don't cause layout jumps */
+.accordion-body img {
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 
 .grad {
@@ -447,49 +441,49 @@ li.text-focus-in.animated {
  * Creates elegant reveal effect on scroll
  */
 @-webkit-keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  40% {
-    -webkit-filter: blur(8px);
-            filter: blur(8px);
-    opacity: 0.4;
-  }
-  70% {
-    -webkit-filter: blur(3px);
-            filter: blur(3px);
-    opacity: 0.8;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(12px);
+                        transform: translateY(12px);
+    }
+    40% {
+        opacity: 0.4;
+        -webkit-transform: translateY(8px);
+                        transform: translateY(8px);
+    }
+    70% {
+        opacity: 0.85;
+        -webkit-transform: translateY(4px);
+                        transform: translateY(4px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+                        transform: translateY(0);
+    }
 }
 
 @keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  40% {
-    -webkit-filter: blur(8px);
-            filter: blur(8px);
-    opacity: 0.4;
-  }
-  70% {
-    -webkit-filter: blur(3px);
-            filter: blur(3px);
-    opacity: 0.8;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+                        transform: translateY(20px);
+    }
+    40% {
+        opacity: 0.4;
+        -webkit-transform: translateY(12px);
+                        transform: translateY(12px);
+    }
+    70% {
+        opacity: 0.85;
+        -webkit-transform: translateY(6px);
+                        transform: translateY(6px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+                        transform: translateY(0);
+    }
 }
 
 /* Scroll Reveal Animation - Alternative smooth reveal */
@@ -506,6 +500,31 @@ li.text-focus-in.animated {
               transform 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
+/* Generic reveal used by JS: no blur, stronger motion for visibility */
+.reveal {
+    --sr-translate: 40px;
+    --sr-duration: 0.75s;
+    --sr-ease: cubic-bezier(.2,.9,.2,1);
+    opacity: 0;
+    transform: translateY(var(--sr-translate)) translateZ(0);
+    transition: opacity var(--sr-duration) var(--sr-ease), transform var(--sr-duration) var(--sr-ease);
+    will-change: opacity, transform;
+}
+
+.reveal--from-top { --sr-translate: -40px; }
+.reveal--from-bottom { --sr-translate: 40px; }
+
+/* Make section elements more obvious: larger translate + snappier duration for dramatic effect */
+section.reveal {
+    --sr-translate: 65px;
+    --sr-duration: 0.8s;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+}
+
 /* Smooth fade-in animation */
 @keyframes smoothFadeIn {
   0% {
@@ -518,34 +537,44 @@ li.text-focus-in.animated {
   }
 }
 
-/* ====== ACCORDION PERFORMANCE OVERRIDE ====== */
-.accordion,
-.accordion-item,
-.accordion-button,
-.accordion-body,
-.accordion * {
-  animation: none !important;
-  -webkit-animation: none !important;
-  filter: none !important;
-  -webkit-filter: none !important;
-  opacity: 1 !important;
-}
+/* ====== ACCORDION: NATIVE BOOTSTRAP WITH EXPLICIT SMOOTH TRANSITIONS ====== */
+/* Bootstrap 5 uses JavaScript to handle collapse height changes.
+   We ensure the animation is smooth by setting explicit transition properties
+   and enabling GPU acceleration. Uses smooth easing for all content sizes. */
 
 .accordion-collapse {
-  animation: none !important;
-  -webkit-animation: none !important;
-  filter: none !important;
-  -webkit-filter: none !important;
-  opacity: 1 !important;
+  overflow: hidden !important;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Ensure smooth collapse/expand animation by explicitly setting transition on height changes */
+.accordion-collapse.collapsing {
+  transition: height 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 350ms ease;
+  overflow: hidden !important;
+  will-change: height;
+}
+
+.accordion-collapse.collapse {
   overflow: hidden !important;
 }
 
-.accordion-button {
-  transform: none !important;
+.accordion-collapse.collapse.show {
+  overflow: visible !important;
 }
 
-.accordion-button .accordion-icon {
-  transition: none !important;
+/* Smooth icon rotation on accordion button - use GPU-accelerated transform */
+.accordion-button::after {
+  transition: transform 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Optimize accordion body for smooth rendering */
+.accordion-body {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  overflow: hidden;
 }
 
 .fade-in-reveal {
@@ -3998,7 +4027,7 @@ blockquote p {
     padding: 30px;
     text-align: center;
     border-radius: 8px;
-    background-color: #fff;
+    background: #fff;
     border: 1px solid #d2d2d2;
     transition: .4s cubic-bezier(.25, 1, .5, 1)
 }
