@@ -590,7 +590,8 @@
       '.service_item',
       '.program_item',
       '.faq_item',
-      '.news_item'
+      '.news_item',
+      '.scientist-card'
     ];
 
     const elements = [];

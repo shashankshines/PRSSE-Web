@@ -39,7 +39,8 @@ html{
     border: 1px solid rgba(0,0,0,0.05);
     transition:0.3s ease all;
     overflow: hidden;
-    border: #eee solid 1px;
+    border: #d9e8c5 solid 1px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.06);
 }
 
 .feature-card::before {
@@ -2288,7 +2289,7 @@ blockquote p {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: linear-gradient(34deg, #ff7a00, #ffb347);
+    background: linear-gradient(320deg, #ff7a00, #ffb347);
     color: #fff;
     font-size: 25px;
     font-weight: 400;

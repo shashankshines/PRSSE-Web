@@ -418,14 +418,66 @@
         }
 
         .scientist-card {
+            position: relative;
             display: grid;
             grid-template-columns: 164px minmax(0, 1fr);
-            overflow: hidden;
+            overflow: visible;
             background: var(--surface);
             border: 1px solid rgba(22, 32, 28, 0.12);
             border-radius: var(--radius);
             box-shadow: 0 14px 34px rgba(36, 31, 22, 0.1);
             align-self: center;
+            will-change: transform, opacity, box-shadow;
+            transform: translateX(var(--sr-translate, 0));
+            opacity: 0;
+            transition: transform 0.75s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.75s ease, box-shadow 0.3s ease;
+        }
+
+        .scientist-card:hover {
+            transform: translateX(var(--sr-translate, 0)) translateY(-8px);
+            box-shadow: 0 20px 50px rgba(36, 31, 22, 0.15);
+        }
+
+        .scientist-card::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0), var(--connector-color, rgba(22, 32, 28, 0.65)), rgba(0, 0, 0, 0));
+            opacity: 0.9;
+            pointer-events: none;
+        }
+
+        .timeline-item:nth-child(odd) .scientist-card {
+            --sr-translate: -500px;
+        }
+
+        .timeline-item:nth-child(odd) .scientist-card::after {
+            right: -50px;
+            left: auto;
+            background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), var(--connector-color, rgba(22, 32, 28, 0.65)), rgba(0, 0, 0, 0));
+        }
+
+        .timeline-item:nth-child(even) .scientist-card {
+            --sr-translate: 500px;
+        }
+
+        .timeline-item:nth-child(even) .scientist-card::after {
+            left: -50px;
+            right: auto;
+            background-image: linear-gradient(270deg, rgba(0, 0, 0, 0), var(--connector-color, rgba(22, 32, 28, 0.65)), rgba(0, 0, 0, 0));
+        }
+
+        .scientist-card.scroll-reveal-visible {
+            --sr-translate: 0;
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .timeline-item:nth-child(4n + 1) {
+            --connector-color: var(--teal);
         }
 
         .timeline-item:nth-child(4n + 1) .year-marker span,
@@ -433,14 +485,26 @@
             background: var(--teal);
         }
 
+        .timeline-item:nth-child(4n + 2) {
+            --connector-color: var(--saffron);
+        }
+
         .timeline-item:nth-child(4n + 2) .year-marker span,
         .timeline-item:nth-child(4n + 2) .field-chip {
             background: var(--saffron);
         }
 
+        .timeline-item:nth-child(4n + 3) {
+            --connector-color: var(--plum);
+        }
+
         .timeline-item:nth-child(4n + 3) .year-marker span,
         .timeline-item:nth-child(4n + 3) .field-chip {
             background: var(--plum);
+        }
+
+        .timeline-item:nth-child(4n) {
+            --connector-color: var(--green);
         }
 
         .timeline-item:nth-child(4n) .year-marker span,
@@ -452,6 +516,7 @@
             position: relative;
             min-height: 245px;
             background: #e8dfcd;
+            border-radius: 30px;
         }
 
         .photo-panel img {
@@ -461,6 +526,7 @@
             object-fit: cover;
             display: block;
             filter: sepia(0.05) saturate(0.95) contrast(1.03);
+            border-radius: 30px 0 0 30px;
         }
 
         .photo-panel::after {
@@ -682,10 +748,12 @@
 
             .timeline-item:nth-child(odd) .scientist-card {
                 grid-column: 2;
+                --sr-translate: 100px;
             }
 
             .timeline-item:nth-child(even) .scientist-card {
                 grid-column: 2;
+                --sr-translate: 100px;
             }
 
             .year-marker {
@@ -711,9 +779,18 @@
             .year-marker span {
                 width: 52px;
                 height: 52px;
-                border-width: 4px;
-                font-size: 0.76rem;
+                border-width: 3px;
+                font-size: 0.9rem;
                 flex-shrink: 0;
+            }
+
+            .scientist-card::after,
+            .timeline-item:nth-child(odd) .scientist-card::after,
+            .timeline-item:nth-child(even) .scientist-card::after {
+                left: -40px;
+                right: auto;
+                width: 40px;
+                background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), var(--connector-color, rgba(22, 32, 28, 0.75)), rgba(0, 0, 0, 0));
             }
 
             .scientist-card,
@@ -725,10 +802,12 @@
 
             .photo-panel {
                 min-height: 230px;
+                border-radius: 30px 30px 0 0;
             }
 
             .photo-panel img {
                 min-height: 230px;
+                border-radius: 30px 30px 0 0;
             }
 
             .photo-panel::after {
@@ -789,6 +868,15 @@
                 height: 48px;
                 font-size: 0.72rem;
                 border-width: 4px;
+            }
+
+            .scientist-card::after,
+            .timeline-item:nth-child(odd) .scientist-card::after,
+            .timeline-item:nth-child(even) .scientist-card::after {
+                left: -36px;
+                right: auto;
+                width: 36px;
+                background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), var(--connector-color, rgba(22, 32, 28, 0.75)), rgba(0, 0, 0, 0));
             }
 
             .scientist-card,
