@@ -428,7 +428,7 @@
             box-shadow: 0 14px 34px rgba(36, 31, 22, 0.1);
             align-self: center;
             will-change: transform, opacity, box-shadow;
-            transform: translateX(var(--sr-translate, 0));
+            transform: translateX(var(--sr-translate, 0)) translateY(var(--sr-translateY, 0));
             opacity: 0;
             transition: transform 0.75s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.75s ease, box-shadow 0.3s ease;
         }
@@ -451,7 +451,7 @@
         }
 
         .timeline-item:nth-child(odd) .scientist-card {
-            --sr-translate: -500px;
+            --sr-translate: -400px;
         }
 
         .timeline-item:nth-child(odd) .scientist-card::after {
@@ -461,7 +461,7 @@
         }
 
         .timeline-item:nth-child(even) .scientist-card {
-            --sr-translate: 500px;
+            --sr-translate: 400px;
         }
 
         .timeline-item:nth-child(even) .scientist-card::after {
@@ -473,7 +473,7 @@
         .scientist-card.scroll-reveal-visible {
             --sr-translate: 0;
             opacity: 1;
-            transform: translateX(0);
+            transform: translateX(0) translateY(0);
         }
 
         .timeline-item:nth-child(4n + 1) {
@@ -977,7 +977,7 @@
 
             <!-- Dropdown (Mobile) -->
             <div class="dropdownmobile">
-                <a href="programs.html">Programs</a>
+                <a href="programs.html">Programmes</a>
             </div>
             <!-- Dropdown (Mobile) -->
             <div class="dropdownmobile">
@@ -1368,7 +1368,7 @@
                                     <li class="field-chip">Aerospace Engineering</li>
                                     <li class="field-chip">Missile Technology</li>
                                 </ul>
-                                <p class="description">He played a key role in India's space and missile programs and
+                                <p class="description">He played a key role in India's space and missile programmes and
                                     served as President of India from 2002 to 2007.</p>
                                 <p class="highlight">Known for his public service, science leadership, and education
                                     outreach.</p>
