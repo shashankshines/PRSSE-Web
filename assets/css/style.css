@@ -158,8 +158,8 @@ body > * {
 }
 
 .text-focus-in.animated {
-	-webkit-animation: text-focus-in 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: text-focus-in 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-webkit-animation: text-focus-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-focus-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 /* Staggered animation delays for smooth cascading effect */
@@ -188,32 +188,32 @@ body > * {
 	-webkit-animation-delay: 0.25s;
 }
 
-/* Headings: Slightly faster animation */
+/* Headings: Faster animation for prominence */
 h1.text-focus-in.animated, 
 h2.text-focus-in.animated, 
 h3.text-focus-in.animated {
-	-webkit-animation: text-focus-in 0.55s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: text-focus-in 0.55s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-webkit-animation: text-focus-in 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-focus-in 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-/* Paragraphs: Standard speed */
+/* Paragraphs: Faster animation */
 p.text-focus-in.animated {
-	-webkit-animation: text-focus-in 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: text-focus-in 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-/* List items: Smooth sequential reveal */
-li.text-focus-in.animated {
 	-webkit-animation: text-focus-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: text-focus-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-/* Cards and containers: Slower for emphasis */
+/* List items: Faster sequential reveal */
+li.text-focus-in.animated {
+	-webkit-animation: text-focus-in 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-focus-in 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* Cards and containers: Faster for more prominent reveal */
 .card.text-focus-in.animated,
 .feature-card.text-focus-in.animated,
 .item_title.text-focus-in.animated {
-	-webkit-animation: text-focus-in 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: text-focus-in 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-webkit-animation: text-focus-in 0.55s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-focus-in 0.55s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 /* ====== ACCORDION SMOOTH NATIVE BOOTSTRAP ====== */
@@ -466,18 +466,18 @@ li.text-focus-in.animated {
 @keyframes text-focus-in {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(12px);
-                        transform: translateY(12px);
+        -webkit-transform: translateY(20px);
+                        transform: translateY(20px);
     }
     40% {
         opacity: 0.4;
-        -webkit-transform: translateY(8px);
-                        transform: translateY(8px);
+        -webkit-transform: translateY(12px);
+                        transform: translateY(12px);
     }
     70% {
         opacity: 0.85;
-        -webkit-transform: translateY(4px);
-                        transform: translateY(4px);
+        -webkit-transform: translateY(6px);
+                        transform: translateY(6px);
     }
     100% {
         opacity: 1;
@@ -502,8 +502,8 @@ li.text-focus-in.animated {
 
 /* Generic reveal used by JS: no blur, stronger motion for visibility */
 .reveal {
-    --sr-translate: 24px;
-    --sr-duration: 0.85s;
+    --sr-translate: 40px;
+    --sr-duration: 0.75s;
     --sr-ease: cubic-bezier(.2,.9,.2,1);
     opacity: 0;
     transform: translateY(var(--sr-translate)) translateZ(0);
@@ -511,13 +511,13 @@ li.text-focus-in.animated {
     will-change: opacity, transform;
 }
 
-.reveal--from-top { --sr-translate: -24px; }
-.reveal--from-bottom { --sr-translate: 24px; }
+.reveal--from-top { --sr-translate: -40px; }
+.reveal--from-bottom { --sr-translate: 40px; }
 
-/* Make section elements more obvious: larger translate + slightly longer duration */
+/* Make section elements more obvious: larger translate + snappier duration for dramatic effect */
 section.reveal {
-    --sr-translate: 48px;
-    --sr-duration: 1s;
+    --sr-translate: 65px;
+    --sr-duration: 0.8s;
 }
 
 .reveal.active {
@@ -540,7 +540,7 @@ section.reveal {
 /* ====== ACCORDION: NATIVE BOOTSTRAP WITH EXPLICIT SMOOTH TRANSITIONS ====== */
 /* Bootstrap 5 uses JavaScript to handle collapse height changes.
    We ensure the animation is smooth by setting explicit transition properties
-   and enabling GPU acceleration. */
+   and enabling GPU acceleration. Uses smooth easing for all content sizes. */
 
 .accordion-collapse {
   overflow: hidden !important;
@@ -551,7 +551,7 @@ section.reveal {
 
 /* Ensure smooth collapse/expand animation by explicitly setting transition on height changes */
 .accordion-collapse.collapsing {
-  transition: height 300ms ease-out, visibility 300ms ease-out;
+  transition: height 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 350ms ease;
   overflow: hidden !important;
   will-change: height;
 }
@@ -566,7 +566,7 @@ section.reveal {
 
 /* Smooth icon rotation on accordion button - use GPU-accelerated transform */
 .accordion-button::after {
-  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition: transform 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
   transform: translate3d(0, 0, 0);
 }
 
@@ -574,6 +574,7 @@ section.reveal {
 .accordion-body {
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
+  overflow: hidden;
 }
 
 .fade-in-reveal {
