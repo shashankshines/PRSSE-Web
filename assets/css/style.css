@@ -539,16 +539,21 @@ section.reveal {
 
 /* ====== ACCORDION: NATIVE BOOTSTRAP WITH EXPLICIT SMOOTH TRANSITIONS ====== */
 /* Bootstrap 5 uses JavaScript to handle collapse height changes.
-   We ensure the animation is smooth by setting explicit transition properties. */
+   We ensure the animation is smooth by setting explicit transition properties
+   and enabling GPU acceleration. */
 
 .accordion-collapse {
   overflow: hidden !important;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 /* Ensure smooth collapse/expand animation by explicitly setting transition on height changes */
 .accordion-collapse.collapsing {
-  transition: height 350ms ease, visibility 350ms ease;
+  transition: height 300ms ease-out, visibility 300ms ease-out;
   overflow: hidden !important;
+  will-change: height;
 }
 
 .accordion-collapse.collapse {
@@ -559,9 +564,16 @@ section.reveal {
   overflow: visible !important;
 }
 
-/* Smooth icon rotation on accordion button */
+/* Smooth icon rotation on accordion button - use GPU-accelerated transform */
 .accordion-button::after {
-  transition: transform 350ms ease !important;
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Optimize accordion body for smooth rendering */
+.accordion-body {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 
 .fade-in-reveal {
