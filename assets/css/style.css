@@ -1063,7 +1063,7 @@ img.icon-insta {
 /* Section Title Mobile  */
 @media screen and (max-width:1024px) {
     .section-title {
-       font-size: 1.8rem;
+       font-size: 1.6rem;
        line-height: 2rem;
        color: #fe7b14;
     }
@@ -2636,10 +2636,6 @@ blockquote p {
 
 .cards-grid{
     grid-template-columns:repeat(2,1fr);
-}
-
-.section-title{
-    font-size:25px;
 }
 
 }

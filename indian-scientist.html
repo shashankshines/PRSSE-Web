@@ -12,8 +12,23 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <style>
-        @media screen and (min-width: 992px) {
+        :root {
+            color-scheme: light;
+            --ink: #16201c;
+            --muted: #fe7b14;
+            --paper: #fffaf0;
+            --surface: #ffffff;
+            --line: #d8d0bf;
+            --saffron: #d9822b;
+            --teal: #177e89;
+            --plum: #7d3c98;
+            --green: #4f7f52;
+            --rose: #b3435a;
+            --shadow: 0 18px 50px rgba(36, 31, 22, 0.12);
+            --radius: 25px;
+        }
 
+        @media screen and (min-width: 992px) {
             .sidebarmobile,
             .mobilemenu-btn {
                 display: none;
@@ -41,7 +56,7 @@
 
         .page_banner .content_wrapper {
             align-items: center;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.22)), url("assets/images/banner/indian-scientists-banner.webp");
+            background-image:  url("assets/images/banner/indian-scientists-banner.webp");
             background-repeat: no-repeat;
             background-size: 120% auto;
             background-position: 50% 45%;
@@ -72,7 +87,7 @@
             z-index: 1;
         }
 
-        .page_banner .content_wrapper::after {
+        /* .page_banner .content_wrapper::after {
             content: "";
             position: absolute;
             inset: 0;
@@ -82,17 +97,17 @@
             pointer-events: none;
             z-index: 1;
             animation: curtainSlide 22s ease-in-out infinite;
-        }
+        } */
 
-        .page_banner .banner_deco {
+        /* .page_banner .banner_deco {
             position: absolute;
             inset: 0;
             pointer-events: none;
             z-index: 1;
             overflow: hidden;
-        }
+        } */
 
-        .page_banner .banner_bubble {
+        /* .page_banner .banner_bubble {
             position: absolute;
             border-radius: 50%;
             filter: blur(10px);
@@ -126,7 +141,7 @@
             left: 50%;
             transform: translateX(-50%);
             animation: bubbleDrift3 24s ease-in-out infinite;
-        }
+        } */
 
         .page_banner .content_wrapper>* {
             position: relative;
@@ -153,6 +168,666 @@
                 font-size: 2rem;
             }
         }
+
+        /* .page-shell {
+            width: min(1160px, calc(100% - 32px));
+            margin: 0 auto;
+        } */
+
+        .masthead {
+            min-height: 92vh;
+            display: grid;
+            align-items: end;
+            padding: 34px 0 44px;
+        }
+
+        .masthead-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(320px, 440px);
+            gap: 38px;
+            align-items: end;
+        }
+
+        .version-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            width: fit-content;
+            padding: 8px 12px;
+            border: 1px solid rgba(22, 32, 28, 0.16);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.72);
+            color: #4c4133;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .version-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--saffron);
+            box-shadow: 0 0 0 4px rgba(217, 130, 43, 0.18);
+        }
+
+        h1 {
+            max-width: 860px;
+            margin: 26px 0 16px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(3.1rem, 8vw, 7.6rem);
+            line-height: 0.92;
+            font-weight: 800;
+            letter-spacing: 0;
+        }
+
+        .lede {
+            max-width: 760px;
+            margin: 0;
+            color: var(--muted);
+            font-size: clamp(1rem, 2vw, 1.22rem);
+        }
+
+        .summary-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .summary-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border: 1px solid rgba(22, 32, 28, 0.14);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.75);
+            color: #473f35;
+            font-weight: 700;
+            font-size: 0.93rem;
+        }
+
+        .portrait-stack {
+            position: relative;
+            min-height: 530px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #1d2624;
+            box-shadow: var(--shadow);
+            isolation: isolate;
+        }
+
+        .portrait-stack::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 15%, rgba(0, 0, 0, 0.78));
+            z-index: 1;
+        }
+
+        .portrait-stack img {
+            position: absolute;
+            width: 48%;
+            height: 48%;
+            object-fit: cover;
+            filter: saturate(0.92) contrast(1.04);
+        }
+
+        .portrait-stack img:nth-child(1) {
+            left: 0;
+            top: 0;
+            width: 56%;
+            height: 57%;
+        }
+
+        .portrait-stack img:nth-child(2) {
+            right: 0;
+            top: 0;
+            width: 44%;
+            height: 42%;
+        }
+
+        .portrait-stack img:nth-child(3) {
+            right: 0;
+            top: 42%;
+            width: 44%;
+            height: 34%;
+        }
+
+        .portrait-stack img:nth-child(4) {
+            left: 0;
+            bottom: 0;
+            width: 48%;
+            height: 43%;
+        }
+
+        .portrait-stack img:nth-child(5) {
+            right: 0;
+            bottom: 0;
+            width: 52%;
+            height: 24%;
+        }
+
+        .stack-caption {
+            position: absolute;
+            z-index: 2;
+            left: 22px;
+            right: 22px;
+            bottom: 20px;
+            color: #fff8e9;
+        }
+
+        .stack-caption strong {
+            display: block;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.65rem;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stack-caption span {
+            color: rgba(255, 248, 233, 0.78);
+            font-size: 0.98rem;
+        }
+
+        /* .section-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            margin: 18px 0 34px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(22, 32, 28, 0.16);
+        } */
+
+        /* .section-heading h2 {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.1rem, 4vw, 4.2rem);
+            line-height: 1;
+            letter-spacing: 0;
+        }
+
+        .section-heading p {
+            max-width: 420px;
+            margin: 0;
+            color: var(--muted);
+        } */
+
+        .timeline {
+            position: relative;
+            padding: 18px 0 70px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: calc(50% - 1px);
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--teal), var(--saffron), var(--plum), var(--green));
+            opacity: 0.55;
+        }
+
+        .timeline-item {
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 74px minmax(0, 1fr);
+            gap: 18px;
+            margin: 0 0 10px;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(odd) .scientist-card {
+            grid-column: 1;
+        }
+
+        .timeline-item:nth-child(even) .scientist-card {
+            grid-column: 3;
+        }
+
+        .year-marker {
+            position: absolute;
+            top: 50%;
+            left: calc(50% - 37px);
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            width: 74px;
+            height: 74px;
+        }
+
+        .year-marker span {
+            display: grid;
+            place-items: center;
+            width: 74px;
+            height: 74px;
+            border: 6px solid var(--paper);
+            border-radius: 50%;
+            background: var(--ink);
+            color: #fff8e9;
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: 800;
+            font-size: 1.05rem;
+            box-shadow: 0 9px 24px rgba(22, 32, 28, 0.18);
+        }
+
+        .scientist-card {
+            display: grid;
+            grid-template-columns: 164px minmax(0, 1fr);
+            overflow: hidden;
+            background: var(--surface);
+            border: 1px solid rgba(22, 32, 28, 0.12);
+            border-radius: var(--radius);
+            box-shadow: 0 14px 34px rgba(36, 31, 22, 0.1);
+            align-self: center;
+        }
+
+        .timeline-item:nth-child(4n + 1) .year-marker span,
+        .timeline-item:nth-child(4n + 1) .field-chip {
+            background: var(--teal);
+        }
+
+        .timeline-item:nth-child(4n + 2) .year-marker span,
+        .timeline-item:nth-child(4n + 2) .field-chip {
+            background: var(--saffron);
+        }
+
+        .timeline-item:nth-child(4n + 3) .year-marker span,
+        .timeline-item:nth-child(4n + 3) .field-chip {
+            background: var(--plum);
+        }
+
+        .timeline-item:nth-child(4n) .year-marker span,
+        .timeline-item:nth-child(4n) .field-chip {
+            background: var(--green);
+        }
+
+        .photo-panel {
+            position: relative;
+            min-height: 245px;
+            background: #e8dfcd;
+        }
+
+        .photo-panel img {
+            width: 100%;
+            height: 100%;
+            min-height: 245px;
+            object-fit: cover;
+            display: block;
+            filter: sepia(0.05) saturate(0.95) contrast(1.03);
+        }
+
+        .photo-panel::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-right: 1px solid rgba(22, 32, 28, 0.12);
+            pointer-events: none;
+        }
+
+        .card-body {
+            padding: 22px 24px 20px;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .born {
+            color: var(--muted);
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .source-note {
+            width: fit-content;
+            padding: 5px 8px;
+            border: 1px solid rgba(179, 67, 90, 0.28);
+            border-radius: 999px;
+            color: var(--rose);
+            font-size: 0.74rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            white-space: nowrap;
+        }
+
+        .scientist-card h3 {
+            margin: 0 0 10px;
+            font-size: clamp(1.35rem, 2vw, 1.9rem);
+            line-height: 1.05;
+            letter-spacing: 0;
+        }
+
+        .field-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0 0 14px;
+            padding: 0;
+            list-style: none;
+        }
+
+       .card-body .field-chip {
+            padding: 7px 10px;
+            border-radius: 999px;
+            color: #fff;
+            font-size: 0.77rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .description {
+            margin: 0;
+            color: #3f4843;
+            font-size: 0.98rem;
+        }
+
+        .highlight {
+            margin-top: 14px;
+            padding-top: 13px;
+            border-top: 1px solid rgba(22, 32, 28, 0.11);
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .notes-band {
+            margin: 0 0 58px;
+            padding: 24px;
+            border: 1px solid rgba(22, 32, 28, 0.13);
+            border-radius: var(--radius);
+            background: rgba(255, 255, 255, 0.68);
+        }
+
+        .notes-band h2 {
+            margin: 0 0 10px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.8rem;
+            letter-spacing: 0;
+        }
+
+        .notes-band p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        footer {
+            padding: 34px 0 48px;
+            border-top: 1px solid rgba(22, 32, 28, 0.14);
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .source-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px 20px;
+            margin-top: 14px;
+        }
+
+        .source-grid a {
+            display: inline-block;
+            overflow-wrap: anywhere;
+        }
+
+        @media (max-width: 900px) {
+            .masthead {
+                min-height: auto;
+                padding-top: 28px;
+            }
+
+            .masthead-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portrait-stack {
+                min-height: 420px;
+            }
+
+            .section-heading {
+                display: block;
+            }
+
+            .section-heading p {
+                margin-top: 12px;
+            }
+
+            .timeline::before {
+                left: calc(50% - 1px);
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even),
+            .timeline-item:nth-child(odd) {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) 74px minmax(0, 1fr);
+                gap: 14px;
+                align-items: center;
+            }
+
+            .timeline-item:nth-child(odd) .scientist-card {
+                grid-column: 1;
+            }
+
+            .timeline-item:nth-child(even) .scientist-card {
+                grid-column: 3;
+            }
+
+            .year-marker,
+            .timeline-item:nth-child(even) .year-marker,
+            .timeline-item:nth-child(odd) .year-marker {
+                position: absolute;
+                top: 50%;
+                left: calc(50% - 37px);
+                transform: translateY(-50%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 74px;
+                height: 74px;
+                z-index: 2;
+            }
+
+            .scientist-card,
+            .timeline-item:nth-child(even) .scientist-card,
+            .timeline-item:nth-child(odd) .scientist-card {
+                grid-template-columns: 142px minmax(0, 1fr);
+                align-self: center;
+            }
+
+            .source-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .masthead {
+                padding-bottom: 28px;
+            }
+
+            h1 {
+                font-size: clamp(2.75rem, 17vw, 4.4rem);
+            }
+
+            .timeline {
+                padding-top: 10px;
+            }
+
+            .timeline::before {
+                left: 32px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even),
+            .timeline-item:nth-child(odd) {
+                display: grid;
+                grid-template-columns: 64px minmax(0, 1fr);
+                gap: 14px;
+                margin-bottom: 26px;
+                align-items: center;
+            }
+
+            .timeline-item:nth-child(odd) .scientist-card {
+                grid-column: 2;
+            }
+
+            .timeline-item:nth-child(even) .scientist-card {
+                grid-column: 2;
+            }
+
+            .year-marker {
+                position: relative;
+                top: auto;
+                left: 0;
+                transform: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 52px;
+                height: 52px;
+                z-index: 2;
+                justify-self: center;
+            }
+
+            .year-marker,
+            .timeline-item:nth-child(even) .year-marker,
+            .timeline-item:nth-child(odd) .year-marker {
+                left: -8px;  
+            }
+
+            .year-marker span {
+                width: 52px;
+                height: 52px;
+                border-width: 4px;
+                font-size: 0.76rem;
+                flex-shrink: 0;
+            }
+
+            .scientist-card,
+            .timeline-item:nth-child(even) .scientist-card,
+            .timeline-item:nth-child(odd) .scientist-card {
+                grid-template-columns: 1fr;
+                align-self: stretch;
+            }
+
+            .photo-panel {
+                min-height: 230px;
+            }
+
+            .photo-panel img {
+                min-height: 230px;
+            }
+
+            .photo-panel::after {
+                border-right: 0;
+                border-bottom: 1px solid rgba(22, 32, 28, 0.12);
+            }
+
+            .card-body {
+                padding: 18px;
+            }
+
+            .eyebrow {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .source-note {
+                white-space: normal;
+            }
+
+            .source-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .timeline {
+                padding-top: 8px;
+            }
+
+            .timeline::before {
+                left: 28px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even),
+            .timeline-item:nth-child(odd) {
+                display: grid;
+                grid-template-columns: 56px minmax(0, 1fr);
+                gap: 10px;
+                margin-bottom: 15px;
+                align-items: center;
+            }
+
+            .timeline-item:nth-child(odd) .scientist-card,
+            .timeline-item:nth-child(even) .scientist-card {
+                grid-column: 2;
+            }
+
+            .year-marker {
+                width: 48px;
+                height: 48px;
+                justify-self: center;
+            }
+
+            .year-marker span {
+                width: 48px;
+                height: 48px;
+                font-size: 0.72rem;
+                border-width: 4px;
+            }
+
+            .scientist-card,
+            .timeline-item:nth-child(even) .scientist-card,
+            .timeline-item:nth-child(odd) .scientist-card {
+                grid-template-columns: 1fr;
+                align-self: stretch;
+            }
+
+            .photo-panel {
+                min-height: 210px;
+            }
+
+            .photo-panel img {
+                min-height: 210px;
+            }
+
+            .photo-panel::after {
+                border-right: 0;
+                border-bottom: 1px solid rgba(22, 32, 28, 0.12);
+            }
+
+            .card-body {
+                padding: 16px;
+            }
+
+            .eyebrow {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .source-note {
+                white-space: normal;
+            }
+
+            .source-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -167,9 +842,8 @@
                 <div class="row align-items-center">
                     <div class="col col-lg-3 col-10">
                         <div class="site_logo">
-                            <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png"
-                                    alt=""></a>
-
+                            <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="col col-lg-9 col-2">
@@ -201,7 +875,8 @@
                         <!-- Mobile Hamburger Menu (visible only on small screens) -->
                         <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu"
                             aria-controls="sidebarMenumobile"
-                            aria-expanded="false"><span></span><span></span><span></span></button>
+                            aria-expanded="false"><span></span><span></span><span></span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -236,11 +911,11 @@
             <section class="page_banner">
                 <div class="container">
                     <div class="content_wrapper">
-                        <div class="banner_deco">
+                        <!-- <div class="banner_deco">
                             <span class="banner_bubble bubble-1"></span>
                             <span class="banner_bubble bubble-2"></span>
                             <span class="banner_bubble bubble-3"></span>
-                        </div>
+                        </div> -->
                         <div class="internal-banner">
                             <div class="row align-items-center">
                                 <div class="col col-lg-12">
@@ -252,121 +927,412 @@
                 </div>
             </section>
 
-            <section class="courses_info_section section_space_lg text-focus-in">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col col-lg-12">
-                            <div class="content_wrap ps-lg-3">
-                                <div class="section_heading">
-                                    <h2 class="heading_text mt-3">Great Indian scientists and their field of work</h2>
-                                </div>
-                                <ul class="info_list unordered_list_block">
-                                    <li><i class="fas fa-square"></i> <span> <b>Jagadish Chandra Bose (1858) - Physics,
-                                                Biology</b><br>
-                                            He was a scientist who worked on the properties of plants and discovered
-                                            that they have feelings and can respond to external stimuli such as light,
-                                            sound, and touch.
-                                        </span></li>
-                                    <li><i class="fas fa-square"></i> <span> <b>Prafulla Chandra Ray (1861) -
-                                                Chemistry</b><br>
-                                            He was a chemist who made significant contributions to the field of
-                                            chemistry in India. He founded the Bengal Chemical and Pharmaceutical Works,
-                                            which produced affordable medicines for the masses.
-                                        </span></li>
-                                    <li><i class="fas fa-square"></i> <span> <b>Srinivasa Ramanujan (1887) -
-                                                Mathematics</b><br>
-                                            He was a mathematician who made significant contributions to the field of
-                                            mathematics, particularly in the area of number theory. He came up with many
-                                            new mathematical formulas and theories that are still used today.
-                                        </span></li>
-                                    <li><i class="fas fa-square"></i> <span> <b>Meghnad Saha (1893) - Physics,
-                                                Astronomy</b><br>
-                                            He was a physicist who made significant contributions to the field of
-                                            astrophysics. He developed a theory that explains how stars are formed and
-                                            what happens to them over time.
-                                        </span></li>
-                                    <li><i class="fas fa-square"></i> <span> <b>Satyendra Nath Bose (1894) -
-                                                Physics</b><br>
-                                            He was a physicist who worked on quantum mechanics and developed a theory
-                                            that explains how particles behave at very low temperatures. This theory is
-                                            now known as Bose-Einstein statistics.
-                                        </span></li>
-                                    <li><i class="fas fa-square"></i> <span> <b>Shanti Swarup Bhatnagar (1894) -
-                                                Chemistry</b><br>
-                                            He was a chemist who made significant contributions to the field of
-                                            chemistry in India. He founded the Council of Scientific and Industrial
-                                            Research (CSIR), which is responsible for promoting scientific research in
-                                            India.Yellapragada Subbarao (1895) - Biochemistry, Pharmacology
-                                        </span></li>
-                                    <li><i class="fas fa-square"></i> <span> <b>Salim Ali (1896) - Ornithology</b><br>
-                                            He was an ornithologist who studied birds and their behavior in India. He is
-                                            known for his extensive work on bird migration and conservation.
-                                        </span></li>
-                                    <li><i class="fas fa-square"></i> <span> <b>Chandrasekhara Venkata Ramanujan (1897)
-                                                - Mathematics</b><br>
-                                            He was a mathematician who made significant contributions to the field of
-                                            mathematics, particularly in the area of number theory. He came up with many
-                                            new mathematical formulas and theories that are still used today.
-                                        </span></li>
-                                    <li><i class="fas fa-square"></i> <span> <b>Yellapragada Subbarao</b><br>
-                                            He was a biochemist who discovered many important drugs, including the first
-                                            chemotherapy drug for cancer. He also discovered the role of adenosine
-                                            triphosphate (ATP) in cellular energy transfer.</span></li>
-                                    <li><i class="fas fa-square"></i> <span> <b>CV Raman (1888) - Physics</b><br>
-                                            He was a physicist who discovered the Raman effect, which explains how light
-                                            interacts with matter. This discovery helped scientists better understand
-                                            the behavior of light and matter.
-                                        </span></li>
-                                    <li><i class="fas fa-square"></i> <span> <b>Homi J. Bhabha (1909) - Physics</b><br>
-                                            He was a physicist who played a key role in the development of India's
-                                            nuclear program. He also made significant contributions to the field of
-                                            cosmic rays and high-energy physics.
-                                        </span></li>
-                                    <li><i class="fas fa-square"></i> <span> <b>APJ Abdul Kalam (1931) - Aerospace
-                                                Engineering, Missile Technology</b><br>
-                                            He was an aerospace engineer who played a key role in India's space program.
-                                            He also served as the President of India from 2002 to 2007.
-                                        </span></li>
-                                    <li><i class="fas fa-square"></i> <span> <b>G.N. Ramachandran (1922) - Physics,
-                                                Chemistry, Biology</b><br>
-                                            He was a scientist who made significant contributions to the fields of
-                                            physics, chemistry, and biology. He is known for his work on the structure
-                                            of proteins and DNA.
-                                        </span></li>
-                                    <li><i class="fas fa-square"></i> <span> <b>S. Chandrasekhar (1910) -
-                                                Astrophysics</b><br></span></li>
-                                    <li><i class="fas fa-square"></i> <span> <b>Har Gobind Khorana (1922) -
-                                                Biochemistry</b><br>
-                                            DNA codes for proteins, which is essential for understanding how cells
-                                            function. He also helped develop methods for synthesizing DNA
-                                        </span></li>
-                                    <li><i class="fas fa-square"></i> <span> <b>Vikram Sarabhai (1919) - Physics, Space
-                                                Science</b><br>
-                                            He was a physicist who played a key role in developing India's space
-                                            program. He also made significant contributions to the fields of cosmic rays
-                                            and high-energy physics.
-                                        </span></li>
-                                    <li><i class="fas fa-square"></i> <span> <b>Jayant Narlikar (1938) -
-                                                Astrophysics</b><br>
-                                            He is an astrophysicist who has made significant contributions to our
-                                            understanding of the universe, particularly in the areas of cosmology and
-                                            gravitation.
-                                        </span></li>
-                                    <li><i class="fas fa-square"></i> <span> <b>Venkatraman Ramakrishnan (1952) -
-                                                Structural Biology</b><br>
-                                            He is a structural biologist who won the Nobel Prize in Chemistry for his
-                                            work on the structure of ribosomes, which are essential for protein
-                                            synthesis in cells.
-                                        </span></li>
-
+            <section class="container" aria-labelledby="timeline-title">
+                <h2 class="section-title mt-4">Great Indian scientists and their field of work</h2>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="year-marker"><span>1858</span></div>
+                        <div class="scientist-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/scientists/Sir_Jagadish_C._Bose.webp"
+                                    alt="Jagadish Chandra Bose" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow"><span class="born">Born 1858</span></div>
+                                <h3>Jagadish Chandra Bose</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">Physics</li>
+                                    <li class="field-chip">Biology</li>
                                 </ul>
+                                <p class="description">He worked on the properties of plants and showed that plants
+                                    respond to external stimuli such as light, sound, and touch.</p>
+                                <p class="highlight">Also remembered for early work in radio and microwave science.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
+                    </article>
 
-            <section class="newslatter_section">
+                    <article class="timeline-item">
+                        <div class="year-marker"><span>1861</span></div>
+                        <div class="scientist-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/scientists/prafulla-chandra.webp"
+                                    alt="Prafulla Chandra Ray" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow"><span class="born">Born 1861</span></div>
+                                <h3>Prafulla Chandra Ray</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">Chemistry</li>
+                                </ul>
+                                <p class="description">He made significant contributions to chemistry in India and
+                                    founded Bengal Chemical and Pharmaceutical Works, which produced affordable
+                                    medicines for the masses.</p>
+                                <p class="highlight">A central figure in modern Indian chemical education and industry.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker"><span>1887</span></div>
+                        <div class="scientist-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/scientists/srinivasa-ramanujan.webp"
+                                    alt="Srinivasa Ramanujan" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow"><span class="born">Born 1887</span></div>
+                                <h3>Srinivasa Ramanujan</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">Mathematics</li>
+                                </ul>
+                                <p class="description">He made major contributions to mathematics, especially number
+                                    theory, and produced many formulas and theories that remain important today.</p>
+                                <p class="highlight">His notebooks continue to influence modern mathematical research.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker"><span>1888</span></div>
+                        <div class="scientist-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/scientists/c-v-raman.webp"
+                                    alt="C. V. Raman" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow"><span class="born">Born 1888</span></div>
+                                <h3>C. V. Raman</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">Physics</li>
+                                </ul>
+                                <p class="description">He discovered the Raman effect, explaining how light interacts
+                                    with matter and helping scientists better understand the behavior of light and
+                                    materials.</p>
+                                <p class="highlight">His discovery earned the Nobel Prize in Physics in 1930.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker"><span>1893</span></div>
+                        <div class="scientist-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/scientists/Meghnad-Saha.webp"
+                                    alt="Meghnad Saha" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow"><span class="born">Born 1893</span></div>
+                                <h3>Meghnad Saha</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">Physics</li>
+                                    <li class="field-chip">Astronomy</li>
+                                </ul>
+                                <p class="description">He made important contributions to astrophysics and developed
+                                    ideas that helped explain the physical conditions inside stars.</p>
+                                <p class="highlight">Best known for the Saha ionization equation used in stellar
+                                    spectroscopy.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker"><span>1894</span></div>
+                        <div class="scientist-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/scientists/SatyenBose1925.webp"
+                                    alt="Satyendra Nath Bose" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow"><span class="born">Born 1894</span></div>
+                                <h3>Satyendra Nath Bose</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">Physics</li>
+                                </ul>
+                                <p class="description">He worked on quantum mechanics and developed a theory explaining
+                                    how particles behave at very low temperatures, now known as Bose-Einstein
+                                    statistics.</p>
+                                <p class="highlight">Particles called bosons are named in his honor.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker"><span>1894</span></div>
+                        <div class="scientist-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/scientists/SS_Bhatnagar.webp"
+                                    alt="Shanti Swarup Bhatnagar" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow"><span class="born">Born 1894</span></div>
+                                <h3>Shanti Swarup Bhatnagar</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">Chemistry</li>
+                                </ul>
+                                <p class="description">He made significant contributions to chemistry in India and
+                                    founded the Council of Scientific and Industrial Research, which promotes scientific
+                                    research in India.</p>
+                                <p class="highlight">The Shanti Swarup Bhatnagar Prize is named after him.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker"><span>1895</span></div>
+                        <div class="scientist-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/scientists/Yellapragada_Subbarow_1995.webp"
+                                    alt="Yellapragada Subbarao" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow"><span class="born">Born 1895</span></div>
+                                <h3>Yellapragada Subbarao</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">Biochemistry</li>
+                                    <li class="field-chip">Pharmacology</li>
+                                </ul>
+                                <p class="description">He was a biochemist whose work helped lead to important drugs,
+                                    including cancer chemotherapy drugs, and he contributed to understanding ATP in
+                                    cellular energy transfer.</p>
+                                <p class="highlight">Developed methods for the synthesis of folic acid (Vitamin B9).
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker"><span>1896</span></div>
+                        <div class="scientist-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/scientists/Salim_ali_mns.webp"
+                                    alt="Salim Ali" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow"><span class="born">Born 1896</span></div>
+                                <h3>Salim Ali</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">Ornithology</li>
+                                </ul>
+                                <p class="description">He studied birds and their behavior in India, and is known for
+                                    extensive work on bird migration and conservation.</p>
+                                <p class="highlight">Often called the birdman of India.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- <article class="timeline-item">
+                        <div class="year-marker"><span>1897</span></div>
+                        <div class="scientist-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/scientists/chandrasekhara-venkata-ramanujan.webp"
+                                    alt="Srinivasa Ramanujan portrait reused for source-list note" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow">
+                                    <span class="born">Listed as 1897</span>
+                                    <span class="source-note">Source-list note</span>
+                                </div>
+                                <h3>Chandrasekhara Venkata Ramanujan</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">Mathematics</li>
+                                </ul>
+                                <p class="description">The supplied data includes this entry with the same mathematics
+                                    description used for Srinivasa Ramanujan: significant work in number theory,
+                                    formulas, and mathematical theories still used today.</p>
+                                <p class="highlight">Preserved to keep the entire source data. The name appears
+                                    ambiguous, so the timeline keeps C. V. Raman as a separate 1888 physics entry.</p>
+                            </div>
+                        </div>
+                    </article> -->
+
+                    <article class="timeline-item">
+                        <div class="year-marker"><span>1909</span></div>
+                        <div class="scientist-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/scientists/Homi_Jehangir_Bhabha_1960s.webp"
+                                    alt="Homi J. Bhabha" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow"><span class="born">Born 1909</span></div>
+                                <h3>Homi J. Bhabha</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">Physics</li>
+                                </ul>
+                                <p class="description">He played a key role in the development of India's nuclear
+                                    program and contributed to the study of cosmic rays and high-energy physics.</p>
+                                <p class="highlight">Known as a founding architect of India's atomic energy program.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker"><span>1910</span></div>
+                        <div class="scientist-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/scientists/Subrahmanyan_Chandrasekhar.webp"
+                                    alt="Subrahmanyan Chandrasekhar" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow"><span class="born">Born 1910</span></div>
+                                <h3>S. Chandrasekhar</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">Astrophysics</li>
+                                </ul>
+                                <p class="description">He advanced the mathematical understanding of stars, stellar
+                                    structure, and stellar evolution.</p>
+                                <p class="highlight">Best known for the Chandrasekhar limit.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker"><span>1919</span></div>
+                        <div class="scientist-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/scientists/vikram-sarabhai.webp"
+                                    alt="Vikram Sarabhai" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow"><span class="born">Born 1919</span></div>
+                                <h3>Vikram Sarabhai</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">Physics</li>
+                                    <li class="field-chip">Space Science</li>
+                                </ul>
+                                <p class="description">He played a key role in developing India's space program and made
+                                    contributions to cosmic rays and high-energy physics.</p>
+                                <p class="highlight">Widely known as the father of the Indian space program.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker"><span>1922</span></div>
+                        <div class="scientist-card">
+                            <div class="photo-panel">
+                                <img loading="lazy" src="assets/images/scientists/g-n-ramchandran.webp"
+                                    alt="G. N. Ramachandran" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow"><span class="born">Born 1922</span></div>
+                                <h3>G. N. Ramachandran</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">Physics</li>
+                                    <li class="field-chip">Chemistry</li>
+                                    <li class="field-chip">Biology</li>
+                                </ul>
+                                <p class="description">He made significant contributions across physics, chemistry, and
+                                    biology, especially to the study of protein and DNA structure.</p>
+                                <p class="highlight">His Ramachandran plot became fundamental in structural biology.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker"><span>1922</span></div>
+                        <div class="scientist-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/scientists/Har_Gobind_Khorana_nobel.webp"
+                                    alt="Har Gobind Khorana" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow"><span class="born">Born 1922</span></div>
+                                <h3>Har Gobind Khorana</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">Biochemistry</li>
+                                </ul>
+                                <p class="description">He helped explain how DNA codes for proteins, an essential idea
+                                    for understanding how cells function, and also helped develop methods for
+                                    synthesizing DNA.</p>
+                                <p class="highlight">Shared the 1968 Nobel Prize in Physiology or Medicine.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker"><span>1931</span></div>
+                        <div class="scientist-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/scientists/apj-abdul-kalam.webp"
+                                    alt="A. P. J. Abdul Kalam" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow"><span class="born">Born 1931</span></div>
+                                <h3>A. P. J. Abdul Kalam</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">Aerospace Engineering</li>
+                                    <li class="field-chip">Missile Technology</li>
+                                </ul>
+                                <p class="description">He played a key role in India's space and missile programs and
+                                    served as President of India from 2002 to 2007.</p>
+                                <p class="highlight">Known for his public service, science leadership, and education
+                                    outreach.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker"><span>1938</span></div>
+                        <div class="scientist-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/scientists/Jayant_Vishnu_Narlikar.webp"
+                                    alt="Jayant Narlikar" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow"><span class="born">Born 1938</span></div>
+                                <h3>Jayant Narlikar</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">Astrophysics</li>
+                                </ul>
+                                <p class="description">He has made significant contributions to understanding the
+                                    universe, especially in cosmology and gravitation.</p>
+                                <p class="highlight">Also known for communicating science to wide audiences.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker"><span>1952</span></div>
+                        <div class="scientist-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/scientists/Venki_Ramakrishnan.webp"
+                                    alt="Venkatraman Ramakrishnan" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow"><span class="born">Born 1952</span></div>
+                                <h3>Venkatraman Ramakrishnan</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">Structural Biology</li>
+                                </ul>
+                                <p class="description">He won the Nobel Prize in Chemistry for work on the structure of
+                                    ribosomes, which are essential for protein synthesis in cells.</p>
+                                <p class="highlight">His work revealed atomic-level details of one of life's central
+                                    molecular machines.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- <section class="newslatter_section">
                 <div class="container">
                     <div class="newslatter_box" style="background-image: url(assets/images/shape/shape_img_6.svg);">
                         <div class="row justify-content-center">
@@ -388,7 +1354,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
         </main>
         <footer class="site_footer">
             <div class="footer_widget_area">
