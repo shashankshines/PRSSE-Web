@@ -592,6 +592,7 @@
       '.faq_item',
       '.news_item',
       '.scientist-card',
+      '.institute-card',
       '.feature-card'
     ];
 
