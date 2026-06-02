@@ -1,341 +1,1386 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
-      <meta http-equiv="x-ua-compatible" content="ie=edge" />
-      <title>Professor Rajendra Singh Science Exploratory</title>
-      <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg" />
-      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-      <script src="assets/js/bootstrap.bundle.min.js"></script>
-      <style>
-         @media screen and (min-width: 992px) {
-         .sidebarmobile, .mobilemenu-btn {
-         display: none;
-         }
-         .site_logo img{
-         width: 330px;
-         }
-         }
-         @media screen and (max-width:425px) {
-         .site_logo img{
-         width: 280px;
-         }
-         }
-         @media screen and (max-width: 991px) {
-         .container, .hero_banner.style_1 .container, .site_header .container {
-         margin-top: 0px !important; 
-         }
-         /* .page_banner .content_wrapper { min-height: 200px; padding: 0; } */
-         /* .page_banner .content_wrapper h1 { font-size: 40px; }*/
-         }
-         .page_banner .content_wrapper {
-         align-items: center;
-         background-image: url("assets/images/banner/indian-reserch-institutes-banner.webp");
-         background-color: transparent;
-         background-repeat: no-repeat;
-         background-size: cover;
-         background-position: 50% 45%;
-         border-radius: 15px;
-         display: flex;
-         min-height: 300px;
-         padding: 40px 30px;
-         position: relative;
-         overflow: hidden;
-         box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-         animation: fadeIn 0.95s ease both, bannerDrift 10s ease-in-out infinite;
-         }
-         /* @media screen and (max-width: 991px) { */
-         /* .page_banner .content_wrapper { min-height: 25%; } */
-         /* .page_banner .content_wrapper h1 { font-size: 30px; line-height: 1.8rem; }
-         } */
-         .page_banner .internal-banner {
-         background: transparent !important;
-         background-image: none !important;
-         width: 100%;
-         height: auto;
-         }
-         
-         .page_banner .content_wrapper::after {
-         content: "";
-         position: absolute;
-         inset: 0;
-         pointer-events: none;
-         z-index: 1;
-         /* animation: curtainSlide 22s ease-in-out infinite; */
-         }
-         .page_banner .banner_deco {
-         position: absolute;
-         inset: 0;
-         pointer-events: none;
-         z-index: 1;
-         overflow: hidden;
-         }
-         .page_banner .banner_bubble {
-         position: absolute;
-         border-radius: 50%;
-         filter: blur(10px);
-         opacity: 0.55;
-         transform: translate3d(0, 0, 0);
-         }
-        
-         .page_banner .content_wrapper > * {
-         position: relative;
-         z-index: 2;
-         }
-         .page_banner .content_wrapper,
-         .page_banner .content_wrapper .breadcrumb_nav,
-         .page_banner .content_wrapper .breadcrumb_nav a {
-         color: #fff;
-         }
-        
-      </style>
-   </head>
-   <body class="no-scroll">
-      
-      <div class="page_wrapper">
-         <div class="backtotop">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Professor Rajendra Singh Science Exploratory</title>
+    <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #16201c;
+            --muted: #fe7b14;
+            --paper: #fffaf0;
+            --surface: #ffffff;
+            --line: #d8d0bf;
+            --saffron: #d9822b;
+            --teal: #177e89;
+            --plum: #7d3c98;
+            --green: #4f7f52;
+            --rose: #b3435a;
+            --shadow: 0 18px 50px rgba(36, 31, 22, 0.12);
+            --radius: 25px;
+        }
+
+        @media screen and (min-width: 992px) {
+            .sidebarmobile,
+            .mobilemenu-btn {
+                display: none;
+            }
+
+            .site_logo img {
+                width: 330px;
+            }
+        }
+
+        @media screen and (max-width:425px) {
+            .site_logo img {
+                width: 280px;
+            }
+        }
+
+        @media screen and (max-width: 991px) {
+
+            .container,
+            .hero_banner.style_1 .container,
+            .site_header .container {
+                margin-top: 0px !important;
+            }
+        }
+
+        .page_banner .content_wrapper {
+            align-items: center;
+            background-image:  url("assets/images/banner/indian-scientists-banner.webp");
+            background-repeat: no-repeat;
+            background-size: 120% auto;
+            background-position: 50% 45%;
+            background-color: transparent;
+            border-radius: 15px;
+            display: flex;
+            min-height: 300px;
+            padding: 50px 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+            animation: fadeIn 0.95s ease both, bannerDrift 10s ease-in-out infinite;
+        }
+
+        .page_banner .internal-banner {
+            background: transparent !important;
+            background-image: none !important;
+            width: 100%;
+            height: auto;
+        }
+
+        .page_banner .content_wrapper::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.20)); */
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* .page_banner .content_wrapper::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.06) 8%, rgba(255, 255, 255, 0.02) 22%, transparent 40%, transparent 60%, rgba(255, 255, 255, 0.02) 78%, rgba(255, 255, 255, 0.06) 92%, rgba(255, 255, 255, 0.08) 100%);
+            background-size: 300% 100%;
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 1;
+            animation: curtainSlide 22s ease-in-out infinite;
+        } */
+
+        /* .page_banner .banner_deco {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        } */
+
+        /* .page_banner .banner_bubble {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(10px);
+            opacity: 0.55;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .page_banner .bubble-1 {
+            width: 160px;
+            height: 160px;
+            background: rgba(255, 255, 255, 0.12);
+            top: 15%;
+            left: 10%;
+            animation: bubbleDrift1 18s ease-in-out infinite;
+        }
+
+        .page_banner .bubble-2 {
+            width: 110px;
+            height: 110px;
+            background: rgba(255, 255, 255, 0.10);
+            top: 55%;
+            right: 12%;
+            animation: bubbleDrift2 20s ease-in-out infinite;
+        }
+
+        .page_banner .bubble-3 {
+            width: 220px;
+            height: 220px;
+            background: rgba(255, 255, 255, 0.08);
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bubbleDrift3 24s ease-in-out infinite;
+        } */
+
+        .page_banner .content_wrapper>* {
+            position: relative;
+            z-index: 2;
+        }
+
+        .page_banner .content_wrapper,
+        .page_banner .content_wrapper .breadcrumb_nav,
+        .page_banner .content_wrapper .breadcrumb_nav a {
+            color: #fff;
+        }
+
+        .page_banner .content_wrapper .breadcrumb_nav li {
+            opacity: 0.9;
+        }
+
+        @media screen and (max-width: 767px) {
+            .page_banner .content_wrapper {
+                min-height: 180px;
+                padding: 30px 20px;
+            }
+
+            .page_banner .content_wrapper .page_title {
+                font-size: 2rem;
+            }
+        }
+
+        /* .page-shell {
+            width: min(1160px, calc(100% - 32px));
+            margin: 0 auto;
+        } */
+
+        .masthead {
+            min-height: 92vh;
+            display: grid;
+            align-items: end;
+            padding: 34px 0 44px;
+        }
+
+        .masthead-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(320px, 440px);
+            gap: 38px;
+            align-items: end;
+        }
+
+        .version-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            width: fit-content;
+            padding: 8px 12px;
+            border: 1px solid rgba(22, 32, 28, 0.16);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.72);
+            color: #4c4133;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .version-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--saffron);
+            box-shadow: 0 0 0 4px rgba(217, 130, 43, 0.18);
+        }
+
+        h1 {
+            max-width: 860px;
+            margin: 26px 0 16px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(3.1rem, 8vw, 7.6rem);
+            line-height: 0.92;
+            font-weight: 800;
+            letter-spacing: 0;
+        }
+
+        .lede {
+            max-width: 760px;
+            margin: 0;
+            color: var(--muted);
+            font-size: clamp(1rem, 2vw, 1.22rem);
+        }
+
+        .summary-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .summary-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border: 1px solid rgba(22, 32, 28, 0.14);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.75);
+            color: #473f35;
+            font-weight: 700;
+            font-size: 0.93rem;
+        }
+
+        .portrait-stack {
+            position: relative;
+            min-height: 530px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #1d2624;
+            box-shadow: var(--shadow);
+            isolation: isolate;
+        }
+
+        .portrait-stack::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 15%, rgba(0, 0, 0, 0.78));
+            z-index: 1;
+        }
+
+        .portrait-stack img {
+            position: absolute;
+            width: 48%;
+            height: 48%;
+            object-fit: cover;
+            filter: saturate(0.92) contrast(1.04);
+        }
+
+        .portrait-stack img:nth-child(1) {
+            left: 0;
+            top: 0;
+            width: 56%;
+            height: 57%;
+        }
+
+        .portrait-stack img:nth-child(2) {
+            right: 0;
+            top: 0;
+            width: 44%;
+            height: 42%;
+        }
+
+        .portrait-stack img:nth-child(3) {
+            right: 0;
+            top: 42%;
+            width: 44%;
+            height: 34%;
+        }
+
+        .portrait-stack img:nth-child(4) {
+            left: 0;
+            bottom: 0;
+            width: 48%;
+            height: 43%;
+        }
+
+        .portrait-stack img:nth-child(5) {
+            right: 0;
+            bottom: 0;
+            width: 52%;
+            height: 24%;
+        }
+
+        .stack-caption {
+            position: absolute;
+            z-index: 2;
+            left: 22px;
+            right: 22px;
+            bottom: 20px;
+            color: #fff8e9;
+        }
+
+        .stack-caption strong {
+            display: block;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.65rem;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stack-caption span {
+            color: rgba(255, 248, 233, 0.78);
+            font-size: 0.98rem;
+        }
+
+        /* .section-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            margin: 18px 0 34px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(22, 32, 28, 0.16);
+        } */
+
+        /* .section-heading h2 {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.1rem, 4vw, 4.2rem);
+            line-height: 1;
+            letter-spacing: 0;
+        }
+
+        .section-heading p {
+            max-width: 420px;
+            margin: 0;
+            color: var(--muted);
+        } */
+
+        .timeline {
+            position: relative;
+            padding: 18px 0;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: calc(50% - 1px);
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--teal), var(--saffron), var(--plum), var(--green));
+            opacity: 0.55;
+        }
+
+        .timeline-item {
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 74px minmax(0, 1fr);
+            gap: 18px;
+            margin: 0 0 10px;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(odd) .institute-card {
+            grid-column: 1;
+        }
+
+        .timeline-item:nth-child(even) .institute-card {
+            grid-column: 3;
+        }
+
+        .year-marker {
+            position: absolute;
+            top: 50%;
+            left: calc(50% - 37px);
+            transform: translateY(-50%);
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            width: 74px;
+            height: 74px;
+        }
+
+        .year-marker span {
+            display: grid;
+            place-items: center;
+            width: 74px;
+            height: 74px;
+            border: 6px solid var(--paper);
+            border-radius: 50%;
+            background: var(--ink);
+            color: #fff8e9;
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            box-shadow: 0 9px 24px rgba(22, 32, 28, 0.18);
+        }
+
+        .institute-card {
+            position: relative;
+            display: grid;
+            grid-template-columns: 50% minmax(0, 1fr);
+            overflow: visible;
+            background: var(--surface);
+            border: 1px solid rgba(22, 32, 28, 0.12);
+            border-radius: var(--radius);
+            box-shadow: 0 14px 34px rgba(36, 31, 22, 0.1);
+            align-self: center;
+            will-change: transform, opacity, box-shadow;
+            transform: translateX(var(--sr-translate, 0)) translateY(var(--sr-translateY, 0));
+            opacity: 0;
+            transition: transform 0.75s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.75s ease, box-shadow 0.3s ease;
+        }
+
+        .institute-card:hover {
+            transform: translateX(var(--sr-translate, 0)) translateY(-8px);
+            box-shadow: 0 20px 50px rgba(36, 31, 22, 0.15);
+        }
+
+        .institute-card::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0), var(--connector-color, rgba(22, 32, 28, 0.65)), rgba(0, 0, 0, 0));
+            opacity: 0.9;
+            pointer-events: none;
+        }
+
+        .timeline-item:nth-child(odd) .institute-card {
+            --sr-translate: -350px;
+        }
+
+        .timeline-item:nth-child(odd) .institute-card::after {
+            right: -50px;
+            left: auto;
+            background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), var(--connector-color, rgba(22, 32, 28, 0.65)), rgba(0, 0, 0, 0));
+        }
+
+        .timeline-item:nth-child(even) .institute-card {
+            --sr-translate: 350px;
+        }
+
+        .timeline-item:nth-child(even) .institute-card::after {
+            left: -50px;
+            right: auto;
+            background-image: linear-gradient(270deg, rgba(0, 0, 0, 0), var(--connector-color, rgba(22, 32, 28, 0.65)), rgba(0, 0, 0, 0));
+        }
+
+        .institute-card.scroll-reveal-visible {
+            --sr-translate: 0;
+            opacity: 1;
+            transform: translateX(0) translateY(0);
+        }
+
+        .timeline-item:nth-child(4n + 1) {
+            --connector-color: var(--teal);
+        }
+
+        .timeline-item:nth-child(4n + 1) .year-marker span,
+        .timeline-item:nth-child(4n + 1) .field-chip {
+            background: var(--teal);
+        }
+
+        .timeline-item:nth-child(4n + 2) {
+            --connector-color: var(--saffron);
+        }
+
+        .timeline-item:nth-child(4n + 2) .year-marker span,
+        .timeline-item:nth-child(4n + 2) .field-chip {
+            background: var(--saffron);
+        }
+
+        .timeline-item:nth-child(4n + 3) {
+            --connector-color: var(--plum);
+        }
+
+        .timeline-item:nth-child(4n + 3) .year-marker span,
+        .timeline-item:nth-child(4n + 3) .field-chip {
+            background: var(--plum);
+        }
+
+        .timeline-item:nth-child(4n) {
+            --connector-color: var(--green);
+        }
+
+        .timeline-item:nth-child(4n) .year-marker span,
+        .timeline-item:nth-child(4n) .field-chip {
+            background: var(--green);
+        }
+
+        .photo-panel {
+            position: relative;
+            min-height: 245px;
+            background: #e8dfcd;
+            border-radius: 30px;
+        }
+
+        .photo-panel img {
+            width: 100%;
+            height: 100%;
+            min-height: 245px;
+            object-fit: cover;
+            display: block;
+            filter: sepia(0.05) saturate(0.95) contrast(1.03);
+            border-radius: 30px 0 0 30px;
+        }
+
+        .photo-panel::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-right: 1px solid rgba(22, 32, 28, 0.12);
+            pointer-events: none;
+        }
+
+        .card-body {
+            padding: 15px 24px 15px;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .born {
+            color: var(--muted);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .source-note {
+            width: fit-content;
+            padding: 5px 8px;
+            border: 1px solid rgba(179, 67, 90, 0.28);
+            border-radius: 999px;
+            color: var(--rose);
+            font-size: 0.74rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            white-space: nowrap;
+        }
+
+        .institute-card h3 {
+            margin: 0 0 10px;
+            font-size: clamp(1.35rem, 2vw, 1.6rem);
+            line-height: 1.10;
+            letter-spacing: 0;
+        }
+
+        .field-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0 0 14px;
+            padding: 0;
+            list-style: none;
+        }
+
+       .card-body .field-chip {
+            padding: 8px 10px;
+            border-radius: 999px;
+            color: #fff;
+            font-size: 0.77rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .description {
+            margin: 0;
+            color: #3f4843;
+            font-size: 0.98rem;
+        }
+
+        .highlight {
+            margin-top: 14px;
+            padding-top: 13px;
+            border-top: 1px solid rgba(22, 32, 28, 0.11);
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .notes-band {
+            margin: 0 0 58px;
+            padding: 24px;
+            border: 1px solid rgba(22, 32, 28, 0.13);
+            border-radius: var(--radius);
+            background: rgba(255, 255, 255, 0.68);
+        }
+
+        .notes-band h2 {
+            margin: 0 0 10px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.8rem;
+            letter-spacing: 0;
+        }
+
+        .notes-band p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        footer {
+            padding: 34px 0 48px;
+            border-top: 1px solid rgba(22, 32, 28, 0.14);
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .source-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px 20px;
+            margin-top: 14px;
+        }
+
+        .source-grid a {
+            display: inline-block;
+            overflow-wrap: anywhere;
+        }
+
+        @media (max-width: 900px) {
+            .masthead {
+                min-height: auto;
+                padding-top: 28px;
+            }
+
+            .masthead-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portrait-stack {
+                min-height: 420px;
+            }
+
+            .section-heading {
+                display: block;
+            }
+
+            .section-heading p {
+                margin-top: 12px;
+            }
+
+            .timeline::before {
+                left: calc(50% - 1px);
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even),
+            .timeline-item:nth-child(odd) {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) 74px minmax(0, 1fr);
+                gap: 14px;
+                align-items: center;
+            }
+
+            .timeline-item:nth-child(odd) .institute-card {
+                grid-column: 1;
+            }
+
+            .timeline-item:nth-child(even) .institute-card {
+                grid-column: 3;
+            }
+
+            .year-marker,
+            .timeline-item:nth-child(even) .year-marker,
+            .timeline-item:nth-child(odd) .year-marker {
+                position: absolute;
+                top: 50%;
+                left: calc(50% - 37px);
+                transform: translateY(-50%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 74px;
+                height: 74px;
+                z-index: 2;
+            }
+
+            .institute-card,
+            .timeline-item:nth-child(even) .institute-card,
+            .timeline-item:nth-child(odd) .institute-card {
+                grid-template-columns: 142px minmax(0, 1fr);
+                align-self: center;
+            }
+
+            .source-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .masthead {
+                padding-bottom: 28px;
+            }
+
+            h1 {
+                font-size: clamp(2.75rem, 17vw, 4.4rem);
+            }
+
+            /* .timeline {
+                padding-top: 10px;
+            } */
+
+            .timeline::before {
+                left: 32px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even),
+            .timeline-item:nth-child(odd) {
+                display: grid;
+                grid-template-columns: 64px minmax(0, 1fr);
+                gap: 14px;
+                margin-bottom: 26px;
+                align-items: center;
+            }
+
+            .timeline-item:nth-child(odd) .institute-card {
+                grid-column: 2;
+                --sr-translate: 100px;
+            }
+
+            .timeline-item:nth-child(even) .institute-card {
+                grid-column: 2;
+                --sr-translate: 100px;
+            }
+
+            .year-marker {
+                position: relative;
+                top: auto;
+                left: 0;
+                transform: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 52px;
+                height: 52px;
+                z-index: 2;
+                justify-self: center;
+            }
+
+            .year-marker,
+            .timeline-item:nth-child(even) .year-marker,
+            .timeline-item:nth-child(odd) .year-marker {
+                left: -8px;  
+            }
+
+            .year-marker span {
+                width: 52px;
+                height: 52px;
+                border-width: 2px;
+                font-size: 0.9rem;
+                flex-shrink: 0;
+            }
+
+            .institute-card::after,
+            .timeline-item:nth-child(odd) .institute-card::after,
+            .timeline-item:nth-child(even) .institute-card::after {
+                left: -40px;
+                right: auto;
+                width: 40px;
+                background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), var(--connector-color, rgba(22, 32, 28, 0.75)), rgba(0, 0, 0, 0));
+            }
+
+            .institute-card,
+            .timeline-item:nth-child(even) .institute-card,
+            .timeline-item:nth-child(odd) .institute-card {
+                grid-template-columns: 1fr;
+                align-self: stretch;
+            }
+
+            .photo-panel {
+                min-height: 230px;
+                border-radius: 30px 30px 0 0;
+            }
+
+            .photo-panel img {
+                min-height: 230px;
+                border-radius: 30px 30px 0 0;
+            }
+
+            .photo-panel::after {
+                border-right: 0;
+                border-bottom: 1px solid rgba(22, 32, 28, 0.12);
+            }
+
+            .card-body {
+                padding: 18px;
+            }
+
+            .eyebrow {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .source-note {
+                white-space: normal;
+            }
+
+            .source-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* .timeline {
+                padding-top: 8px;
+            } */
+            .section_heading p { text-align: left; }
+            .timeline::before {
+                left: 28px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even),
+            .timeline-item:nth-child(odd) {
+                display: grid;
+                grid-template-columns: 56px minmax(0, 1fr);
+                gap: 10px;
+                margin-bottom: 15px;
+                align-items: center;
+            }
+
+            .timeline-item:nth-child(odd) .institute-card,
+            .timeline-item:nth-child(even) .institute-card {
+                grid-column: 2;
+            }
+
+            .year-marker {
+                width: 48px;
+                height: 48px;
+                justify-self: center;
+            }
+
+            .year-marker span {
+                width: 48px;
+                height: 48px;
+                font-size: 1.25rem;
+                border-width: 2px;
+            }
+
+            .institute-card::after,
+            .timeline-item:nth-child(odd) .institute-card::after,
+            .timeline-item:nth-child(even) .institute-card::after {
+                left: -36px;
+                right: auto;
+                width: 36px;
+                background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), var(--connector-color, rgba(22, 32, 28, 0.75)), rgba(0, 0, 0, 0));
+            }
+
+            .institute-card,
+            .timeline-item:nth-child(even) .institute-card,
+            .timeline-item:nth-child(odd) .institute-card {
+                grid-template-columns: 1fr;
+                align-self: stretch;
+            }
+
+            .photo-panel {
+                min-height: 210px;
+            }
+
+            .photo-panel img {
+                min-height: 210px;
+            }
+
+            .photo-panel::after {
+                border-right: 0;
+                border-bottom: 1px solid rgba(22, 32, 28, 0.12);
+            }
+
+            .card-body {
+                padding: 15px;
+            }
+
+            .eyebrow {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .source-note {
+                white-space: normal;
+            }
+
+            .source-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page_wrapper">
+        <div class="backtotop">
             <a href="#" class="scroll"><i class="far fa-arrow-up"></i></a>
-         </div>
-         <!-- Top Header Navigation -->
+        </div>
+        <!-- Top Header Navigation -->
         <header class="site_header site_header_1">
             <div class="container">
-               <div class="row align-items-center">
-                  <div class="col col-lg-3 col-10">
-                     <div class="site_logo">
-                        <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt=""></a> 
-                       
-                     </div>
-                  </div>
-                  <div class="col col-lg-9 col-2">
-                     <nav class="main_menu navbar navbar-expand-lg">
-                        <div class="main_menu_inner collapse navbar-collapse" id="main_menu_dropdown">
-                           <ul class="main_menu_list unordered_list_center">
-                              <li><a class="nav-link" href="index.html">Home</a></li>
-                              <li><a class="nav-link" href="about.html"><u>About us</u></a></li>
-                              <li>
-                                 <a  class="nav-link" href="programs.html" id="blog_submenu">Programmes</a>
-                              </li>
-                              <li class="dropdown">
-                                 <a class="nav-link" href="#" id="blog_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
-                                 <ul class="dropdown-menu" aria-labelledby="blog_submenu">
-                                    <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
-                                    <li><a class="nav-link" href="indian-scientist.html">Indian Scientist</a></li>
-                                    <li><a class="nav-link" href="top-iit.html">Top Indian Institutes</a></li>
-                                 </ul>
-                              </li>
-                              <li><a class="nav-link" href="news_and_media.html">News and Media</a></li>
-                              <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
-                              <li><a class="nav-link" href="contact.html">Contact Us</a></li>
-                              
-                           </ul>
+                <div class="row align-items-center">
+                    <div class="col col-lg-3 col-10">
+                        <div class="site_logo">
+                            <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt="">
+                            </a>
                         </div>
-                     </nav>
-                     <!-- Mobile Hamburger Menu (visible only on small screens) -->
-                     <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu" aria-controls="sidebarMenumobile" aria-expanded="false"><span></span><span></span><span></span></button>
-                  </div>
-               </div>
+                    </div>
+                    <div class="col col-lg-9 col-2">
+                        <nav class="main_menu navbar navbar-expand-lg">
+                            <div class="main_menu_inner collapse navbar-collapse" id="main_menu_dropdown">
+                                <ul class="main_menu_list unordered_list_center">
+                                    <li><a class="nav-link" href="index.html">Home</a></li>
+                                    <li><a class="nav-link" href="about.html"><u>About us</u></a></li>
+                                    <li>
+                                        <a class="nav-link" href="programs.html" id="blog_submenu">Programmes</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="nav-link" href="#" id="blog_submenu" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
+                                        <ul class="dropdown-menu" aria-labelledby="blog_submenu">
+                                            <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
+                                            <li><a class="nav-link" href="indian-scientist.html">Indian Scientist</a>
+                                            </li>
+                                            <li><a class="nav-link" href="top-iit.html">Top Indian Institutes</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="nav-link" href="news_and_media.html">News and Media</a></li>
+                                    <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
+                                    <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Mobile Hamburger Menu (visible only on small screens) -->
+                        <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu"
+                            aria-controls="sidebarMenumobile"
+                            aria-expanded="false"><span></span><span></span><span></span>
+                        </button>
+                    </div>
+                </div>
             </div>
-         </header>
-         <!-- Sidebar Menu (for mobile) -->
-         <div id="sidebarMenumobile" class="sidebarmobile">
+        </header>
+        <!-- Sidebar Menu (for mobile) -->
+        <div id="sidebarMenumobile" class="sidebarmobile">
             <button type="button" class="closebtn" aria-label="Close menu">x</button>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
 
             <!-- Dropdown (Mobile) -->
             <div class="dropdownmobile">
-               <a href="programs.html">Programmes</a>
+                <a href="programs.html">Programmes</a>
             </div>
             <!-- Dropdown (Mobile) -->
             <div class="dropdownmobile">
-               <a href="#" class="dropdownmobile-toggle">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
-               <ul class="dropdownmobile-menu">
-                  <li><a href="great-minds.html">Great Minds</a></li>
-                  <li><a href="indian-scientist.html">Indian Scientist</a></li>
-                  <li><a href="top-iit.html">Institutes of India</a></li>
-               </ul>
+                <a href="#" class="dropdownmobile-toggle">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
+                <ul class="dropdownmobile-menu">
+                    <li><a href="great-minds.html">Great Minds</a></li>
+                    <li><a href="indian-scientist.html">Indian Scientist</a></li>
+                    <li><a href="top-iit.html">Institutes of India</a></li>
+                </ul>
             </div>
             <a href="news_and_media.html">News and Media</a>
             <a href="exploratory.html">Exploratory Perks</a>
             <a href="contact.html">Contact Us</a>
-         </div>
-         <!-- Overlay (for closing sidebar when clicking outside) -->
-         <div id="menuOverlay" class="menu-overlay" ></div>
-         <main class="page_content">
+        </div>
+
+        <!-- Overlay (for closing sidebar when clicking outside) -->
+        <div id="menuOverlay" class="menu-overlay"></div>
+        <main class="page_content">
             <section class="page_banner">
-               <div class="container">
-                  <div class="content_wrapper">
-                     <div class="banner_deco">
-                        <span class="banner_bubble bubble-1"></span>
-                        <span class="banner_bubble bubble-2"></span>
-                        <span class="banner_bubble bubble-3"></span>
-                     </div>
-                     <div class="internal-banner">
-                        <div class="row align-items-center">
-                           <div class="col col-lg-12">
-                              <!-- <ul class="breadcrumb_nav unordered_list">
-                                 <li><a href="index.html">Home</a></li>
-                                 <li><a href="#!">Knowledge</a></li>
-                                 <li> Institutes of India</li>
-                                 </ul> -->
-                              <h1 class="page_title">Indian Research Institutes</h1>
-                           </div>
+                <div class="container">
+                    <div class="content_wrapper">
+                        <div class="internal-banner">
+                            <div class="row align-items-center">
+                                <div class="col col-lg-12">
+                                    <h1 class="page_title">Indian Scientists</h1>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </section>
-            <section class="courses_info_section section_space_lg">
-               <div class="container">
-                  <div class="row align-items-center">
-                     <div class="col col-lg-12">
-                        <div class="content_wrap ps-lg-3">
-                           <div class="section_heading">
-                              <h2 class="heading_text mt-3">Top 10 Indian Research Institutes</h2>
-                           </div>
-                           <ul class="info_list unordered_list_block">
-                              <li><i class="fas fa-square"></i> <span><strong>Indian Institute of Science (IISc), Bengaluru -</strong> This is a premier research institute in India, known for its research in areas such as science, engineering, and technology.</span></li>
-                              <li><i class="fas fa-square"></i> <span><strong> Tata Institute of Fundamental Research (TIFR), Mumbai -</strong> This is a research institute that focuses on fundamental research in areas such as physics, mathematics, and biology.
-                                 </span>
-                              </li>
-                              <li><i class="fas fa-square"></i> <span><strong> Indian Institute of Technology (IIT), Bombay -</strong> This is a premier engineering institute in India, known for its research in areas such as computer science, electrical engineering, and mechanical engineering.
-                                 </span>
-                              </li>
-                              <li><i class="fas fa-square"></i> <span><strong> Indian Institute of Technology (IIT), Delhi -</strong> This is another premier engineering institute in India, known for its research in areas such as computer science, electrical engineering, and mechanical engineering.</span></li>
-                              <li><i class="fas fa-square"></i> <span><strong> Indian Statistical Institute (ISI), Kolkata -</strong> This is a research institute that focuses on statistics and mathematics, and is known for its contributions to the field of statistics.</span></li>
-                              <li><i class="fas fa-square"></i> <span><strong> Jawaharlal Nehru Centre for Advanced Scientific Research (JNCASR), Bengaluru -</strong> This is a research institute that focuses on interdisciplinary research in areas such as physics, chemistry, and biology.</span></li>
-                              <li><i class="fas fa-square"></i> <span><strong> National Centre for Biological Sciences (NCBS), Bengaluru -</strong> This is a research institute that focuses on biological research, and is known for its contributions to the field of neuroscience.</span></li>
-                              <li><i class="fas fa-square"></i> <span><strong> Harish-Chandra Research Institute (HRI), Allahabad -</strong> This is a research institute that focuses on mathematics and theoretical physics, and is known for its contributions to the field of algebraic geometry.</span></li>
-                              <li><i class="fas fa-square"></i> <span><strong> Indian Institute of Science Education and Research (IISER), Pune -</strong> This is a group of research institutes that focus on interdisciplinary research in areas such as physics, chemistry, and biology.</span></li>
-                              <li><i class="fas fa-square"></i> <span><strong> Council of Scientific and Industrial Research (CSIR) -</strong> This is a network of 38 research institutes across India that focus on various areas of science and technology, including chemistry, biology, physics, and engineering.</span></li>
-                           </ul>
+
+            <section class="container" aria-labelledby="timeline-title">
+                <div class="section_heading">
+                    <h2 class="section-title mt-4">Top 10 Research Institutes in India.</h2>
+                    <p><strong>Timeline showing the Top 10 Indian Research Institutes, ranked by their research reputation, academic influence, scientific output, and innovation ecosystem.</strong></p>
+                </div>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="year-marker">
+                           <span>01</span>
                         </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
-            <section class="newslatter_section">
-               <div class="container">
-                  <div class="newslatter_box" style="background-image: url(assets/images/shape/shape_img_6.svg);">
-                     <div class="row justify-content-center">
-                        <div class="col col-lg-6">
-                           <div class="section_heading text-center">
-                              <h2 class="heading_text">Admission Open</h2>
-                              <p class="heading_description mb-0">Admission to Prof. Rajendra Singh Exploratory is open to all students who have an interest in science. Admissions are fixed in the month of June-July for one year academic session till April.</p>
-                           </div>
-                           <form action="#">
-                              <div class="form_item m-0"> 
-                                 <button type="submit" class="btn btn_dark">
-                                 <span><small>Apply Now</small> <small>Apply Now</small></span>
-                                 </button>
+                        <div class="institute-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/institutes/indian-institute-of-science-iisc-bangalore-campus-admission.webp"
+                                    alt="Indian Institute of Science (IISc), Bengaluru" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow">
+                                 <span class="born">Rank #1</span>
                               </div>
-                           </form>
+                                <h3>Indian Institute of Science</h3>
+                                <ul class="field-list">
+                                 <li class="field-chip">IISC</li>
+                                    <li class="field-chip">Bengaluru</li>
+                                    
+                                </ul>
+                                <p class="description">This is a premier research institute in India, known for its research in areas such as science, engineering, and technology.</p>
+                                <!-- <p class="highlight">Also remembered for early work in radio and microwave science.</p> -->
+                            </div>
                         </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
-         </main>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker">
+                           <span>02</span>
+                        </div>
+                        <div class="institute-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/institutes/Tata Institute of Fundamental Research (TIFR)- Mumbai.webp"
+                                    alt="Tata Institute of Fundamental Research (TIFR), Mumbai" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow">
+                                 <span class="born">Rank #2</span>
+                              </div>
+                                <h3>Tata Institute of Fundamental Research</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">TIFR</li>
+                                    <li class="field-chip">Mumbai</li>
+                                </ul>
+                                <p class="description">This is a research institute that focuses on fundamental research in areas such as physics, mathematics, and biology.</p>
+                                <!-- <p class="highlight">A central figure in modern Indian chemical education and industry.
+                                </p> -->
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker">
+                           <span>03</span>
+                        </div>
+                        <div class="institute-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/institutes/IIT-Bombay.webp"
+                                    alt="Indian Institute of Technology (IIT) Bombay" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow">
+                                 <span class="born">Rank #3</span>
+                              </div>
+                                <h3>Indian Institute of Technology</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">IIT</li>
+                                    <li class="field-chip">Bombay</li>
+                                </ul>
+                                <p class="description">This is a premier engineering institute in India, known for its research in areas such as computer science, electrical engineering, and mechanical engineering.</p>
+                                <!-- <p class="highlight">His notebooks continue to influence modern mathematical research.
+                                </p> -->
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker">
+                           <span>04</span>
+                        </div>
+                        <div class="institute-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/institutes/IIT-Delhi.webp"
+                                    alt="Indian Institute of Technology (IIT) Delhi" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow">
+                                 <span class="born">Rank #4</span>
+                              </div>
+                                <h3>Indian Institute of Technology</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">IIT</li>
+                                     <li class="field-chip">Delhi</li>
+                                </ul>
+                                <p class="description">This is another premier engineering institute in India, known for its research in areas such as computer science, electrical engineering, and mechanical engineering.</p>
+                                <!-- <p class="highlight">His discovery earned the Nobel Prize in Physics in 1930.</p> -->
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker">
+                           <span>05</span>
+                        </div>
+                        <div class="institute-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/institutes/ISI-Kolkata.webp"
+                                    alt="Indian Statistical Institute" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow">
+                                 <span class="born">Rank #5</span>
+                              </div>
+                                <h3>Indian Statistical Institute</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">ISI</li>
+                                    <li class="field-chip">Kolkata</li>
+                                </ul>
+                                <p class="description">This is a research institute that focuses on statistics and mathematics, and is known for its contributions to the field of statistics.</p>
+                                <!-- <p class="highlight">Best known for the Saha ionization equation used in stellar
+                                    spectroscopy.</p> -->
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker">
+                           <span>06</span>
+                        </div>
+                        <div class="institute-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/institutes/JNCASR.webp"
+                                    alt="Jawaharlal Nehru Centre for Advanced Scientific Research" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow">
+                                 <span class="born">Rank #6</span>
+                              </div>
+                                <h3>Jawaharlal Nehru Centre for Advanced Scientific Research</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">JNCASR</li>
+                                     <li class="field-chip">Bangaluru</li>
+                                </ul>
+                                <p class="description">He worked on quantum mechanics and developed a theory explaining
+                                    how particles behave at very low temperatures, now known as Bose-Einstein
+                                    statistics.</p>
+                                <!-- <p class="highlight">Particles called bosons are named in his honor.</p> -->
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker">
+                           <span>07</span>
+                        </div>
+                        <div class="institute-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/institutes/NCBS-Bangaluru.webp"
+                                    alt="National Centre for Biological Sciences" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow">
+                                 <span class="born">Rank #7</span>
+                              </div>
+                                <h3>National Centre for Biological Sciences</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">NCBS</li>
+                                    <li class="field-chip">Bangaluru</li>
+                                </ul>
+                                <p class="description">This is a research institute that focuses on biological research, and is known for its contributions to the field of neuroscience.</p>
+                                <!-- <p class="highlight">The Shanti Swarup Bhatnagar Prize is named after him.</p> -->
+                            </div>
+                        </div>
+                    </article>
+
+                     <article class="timeline-item">
+                        <div class="year-marker">
+                           <span>08</span>
+                        </div>
+                        <div class="institute-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/institutes/IISER-Pune.webp"
+                                    alt="Indian Institute of Science Education and Research" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow">
+                                 <span class="born">Rank #98</span>
+                              </div>
+                                <h3>Indian Institute of Science Education and Research</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">IISER</li>
+                                    <li class="field-chip">PUNE</li>
+                                </ul>
+                                <p class="description">He studied birds and their behavior in India, and is known for
+                                    extensive work on bird migration and conservation.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker">
+                           <span>09</span>
+                        </div>
+                        <div class="institute-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/institutes/HRI-Allahabad.webp"
+                                    alt="Harish-Chandra Research Institute" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow">
+                                 <span class="born">Rank #9</span>
+                              </div>
+                                <h3>Harish-Chandra Research Institute</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">HRI</li>
+                                    <li class="field-chip">Allahabad</li>
+                                </ul>
+                                <p class="description">This is a research institute that focuses on mathematics and theoretical physics, and is known for its contributions to the field of algebraic geometry.</p>
+                                <!-- <p class="highlight">This card combines the two supplied Yellapragada Subbarao entries.
+                                </p> -->
+                            </div>
+                        </div>
+                    </article>
+
+                   
+
+                    <article class="timeline-item">
+                        <div class="year-marker">
+                           <span>10</span>
+                        </div>
+                        <div class="institute-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/institutes/CSIR.webp"
+                                    alt="Council of Scientific and Industrial Research (CSIR)" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow">
+                                    <span class="born">Rank #10</span>
+                                    <!-- <span class="source-note">Source-list note</span> -->
+                                </div>
+                                <h3>Council of Scientific and Industrial Research</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">CSIR</li>
+                                    <li class="field-chip">38 Institiutes across India</li>
+                                    <li class="field-chip">Chemistry</li>
+                                    <li class="field-chip">Biology</li>
+                                    <li class="field-chip">Physics</li>
+                                    <li class="field-chip">Engineering</li>
+                                </ul>
+                                <p class="description">This is a network of 38 research institutes across India that focus on various areas of science and technology, including chemistry, biology, physics, and engineering.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+        </main>
         <footer class="site_footer">
             <div class="footer_widget_area">
-               <div class="container">
-                  <div class="row">
-                     <div class="col col-lg-4 col-md-6 col-sm-6">
-                        <div class="footer_widget">
-                           <h3 class="footer_widget_title">Address</h3>
-                           <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High School, Near Alankar Talkies, North Ambazari road, Nagpur- 440010.</p>
-                          
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Address</h3>
+                                <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
+                                    School, Near Alankar Talkies, North Ambazari road, Nagpur- 440010.</p>
+
+                            </div>
                         </div>
-                     </div>
-                     <div class="col col-lg-4">
-                        <div class="footer_widget" >
-                           <h3 class="footer_widget_title">Social Links</h3>
-                           <ul class="social_links unordered_list">
-                              <li>
-                                 <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook" target="_blank">
-                                    <!-- <img src="assets/images/icon/5365678_fb_facebook_facebook logo_icon.png" alt="Image of 5365678 fb facebook facebook logo icon"/> -->
-                                      <i class="fab fa-facebook-f"></i>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I" target="_blank">
-                                    <!-- <img src="assets/images/icon/410526_youtube_play_icon.png" alt="Image of 410526 youtube play icon"/> -->
-                                    <i class="fab fa-youtube"></i>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4" target="_blank">
-                                    <!-- <img src="assets/images/icon/5296765_camera_instagram_instagram logo_icon.png" alt="Image of 5296765 camera instagram instagram logo icon"/> -->
-                                    <i class="fab fa-instagram"></i>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="https://wa.me/917249811866" target="_blank">
-                                    <!-- <img src="assets/images/icon/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png" alt="Image of 5296520 bubble chat mobile whatsapp whatsapp logo icon"/> -->
-                                      <i class="fab fa-whatsapp"></i>
-                                 </a>
-                              </li>
-                           </ul>
+                        <div class="col col-lg-4">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Social Links</h3>
+                                <ul class="social_links unordered_list">
+                                    <li>
+                                        <a href="https://www.facebook.com/profile.php?id=100094309040998"
+                                            name="facebook" target="_blank">
+                                            <!-- <img src="assets/images/icon/5365678_fb_facebook_facebook logo_icon.png" alt="Image of 5365678 fb facebook facebook logo icon"/> -->
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"
+                                            target="_blank">
+                                            <!-- <img src="assets/images/icon/410526_youtube_play_icon.png" alt="Image of 410526 youtube play icon"/> -->
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
+                                            target="_blank">
+                                            <!-- <img src="assets/images/icon/5296765_camera_instagram_instagram logo_icon.png" alt="Image of 5296765 camera instagram instagram logo icon"/> -->
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wa.me/917249811866" target="_blank">
+                                            <!-- <img src="assets/images/icon/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png" alt="Image of 5296520 bubble chat mobile whatsapp whatsapp logo icon"/> -->
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                     </div>
-                     <div class="col col-lg-4 col-md-6 col-sm-6">
-                        <div class="footer_widget">
-                           <h3 class="footer_widget_title">Contact Details</h3>
-                           <ul class="blog_small_group unordered_list_block">
-                              <li>
-                                 <a class="blog_small" href="#">
-                                 <span class="item_content">
-                                 <small class="item_post_date">Call : +917249811866</small>
-                                 </span>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a class="blog_small" href="#">
-                                 <span class="item_content">
-                                 <small class="item_post_date">Email: prsscienceexploratory@gmail.com </small>
-                                 </span>
-                                 </a>
-                              </li>
-                           </ul>
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Contact Details</h3>
+                                <ul class="blog_small_group unordered_list_block">
+                                    <li>
+                                        <a class="blog_small" href="#">
+                                            <span class="item_content">
+                                                <small class="item_post_date">Call : +917249811866</small>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="blog_small" href="#">
+                                            <span class="item_content">
+                                                <small class="item_post_date">Email: prsscienceexploratory@gmail.com
+                                                </small>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
             <div class="copyright_widget">
-               <div class="container">
-                  <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All rights reserved | Copyrights 2026</p>
-               </div>
+                <div class="container">
+                    <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All
+                        rights reserved | Copyrights 2026</p>
+                </div>
             </div>
-         </footer>
-      </div>
-      <script src="assets/js/script.js"></script>
-      <script>
-      </script>
-    
-      <script>
-         // Set active navigation item based on current page
-         (function setActiveNav() {
-           var currentPage = window.location.pathname.split('/').pop() || 'index.html';
-           
-           var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
-           navLinks.forEach(function(link) {
-             var href = link.getAttribute('href');
-             var linkPage = href.split('?')[0]; // Remove query strings
-             
-             // Match current page with nav link
-             if (linkPage === currentPage || 
-                 (currentPage === '' && linkPage === 'index.html')) {
-               var parentLi = link.closest('li');
-               if (parentLi) {
-                 parentLi.classList.add('active');
-               }
-             }
-           });
-         })();
-      </script>
-   </body>
+        </footer>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Set active navigation item based on current page
+        (function setActiveNav() {
+            var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
+            navLinks.forEach(function(link) {
+                var href = link.getAttribute('href');
+                var linkPage = href.split('?')[0]; // Remove query strings
+                // Match current page with nav link
+                if (linkPage === currentPage ||
+                    (currentPage === '' && linkPage === 'index.html')) {
+                    var parentLi = link.closest('li');
+                    if (parentLi) {
+                        parentLi.classList.add('active');
+                    }
+                }
+            });
+        })();
+    </script>
+</body>
+
 </html>
