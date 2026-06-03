@@ -798,11 +798,9 @@ marquee {
     width: 100%;
 }
 marquee > h3 {
-    /* color: #000 !important; */
+    font-weight: 800;
 	font-size: 20px;
     margin-bottom: 0;
-	/* margin-top: 5px; */
-    /* text-shadow: 0 1px 2px #222; */
     white-space: nowrap;
     display: inline-block;
     min-width: 100%;
@@ -4167,7 +4165,7 @@ blockquote p {
 .main_menu_list>li>a {
     z-index: 1;
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 23px;
     color: #fe8408;
     position: relative;
@@ -4177,23 +4175,7 @@ blockquote p {
     font-family: "Poppins", sans-serif;
     border-radius: 10px;
     overflow: visible;
-    text-decoration: underline;
 }
-
-/* .main_menu_list>li>a::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 8px;
-    height: 3px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, #ff7a00 0%, #ffd52b 50%, #ffb700 100%);
-    transform: scaleX(0);
-    transform-origin: left center;
-    opacity: 0;
-    transition: transform 0.35s ease, opacity 0.35s ease;
-} */
 
 .main_menu_list>li:hover>a::before,
 .main_menu_list>li.active>a::before,
@@ -4257,7 +4239,7 @@ blockquote p {
     display: block;
     line-height: 1;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 800;
     color: #29281e;
     position: relative;
     white-space: nowrap;
