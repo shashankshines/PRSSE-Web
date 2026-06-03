@@ -115,7 +115,7 @@ html{
     }
 
 /* Link Colors across */
-a:link, a:visited, a:hover, a:active { color: #fe7b14;}
+a:link, a:visited, a:hover, a:active { color: #fe7b14; }
 
 body {
     background-color: #f9fbe7 !important;
@@ -909,14 +909,10 @@ hr {
     padding-right: 15px
 }
 
-/* .row {
-    margin: -15px
-} */
-
-.col {
+/* .col {
     flex: unset;
     padding: 15px
-}
+} */
 
 .dropdown-menu {
     animation: .3s ease-in-out 0s normal none 1 running fadeInUp;
@@ -933,7 +929,7 @@ hr {
     content: "";
     height: 20px;
     display: block;
-    position: absolute
+    position: absolute;
 }
 
 /* Master dropdown chevron rule - default down arrow for all cases */
@@ -955,7 +951,7 @@ a[data-bs-toggle="dropdown"]::after {
     position: absolute !important;
     right: 0.8rem !important;
     top: 50% !important;
-     margin-top: 2px;
+    margin-top: 2px;
     transform: translateY(-50%) !important;
     font-family: inherit !important;
     font-weight: 900 !important;
@@ -4181,6 +4177,7 @@ blockquote p {
     font-family: "Poppins", sans-serif;
     border-radius: 10px;
     overflow: visible;
+    text-decoration: underline;
 }
 
 /* .main_menu_list>li>a::before {
