@@ -2517,10 +2517,10 @@ blockquote p {
 
  /**** Masonry Grid Styles ******/
         .masonry {
-            column-count: 3;
+            column-count: 4;
             column-gap: 0;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             /* gap: 10px; */
         }
         @media(max-width:768px) {
@@ -15493,7 +15493,7 @@ video {
 /* Masonry Grid Common */
  /**** Masonry Grid Styles ******/
         .masonry-grid {
-            column-count: 4;
+            column-count: 3;
             column-gap: 0;
         }
 
