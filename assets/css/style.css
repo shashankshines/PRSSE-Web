@@ -15163,14 +15163,14 @@ blockquote p {
 
 .back-to-top {
     position: fixed;
-    right: 18px;
-    bottom: 18px;
+    right: 20px;
+    bottom: 20px;
     width: 48px;
     height: 48px;
     border: none;
     border-radius: 50%;
     background: #fe7b14;
-    color: #ffffff;
+    color: #fff;
     font-size: 1.15rem;
     cursor: pointer;
     opacity: 0;
