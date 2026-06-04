@@ -660,7 +660,7 @@ section.reveal {
 }
 
 .hero_banner.style_1 .content_wrap {
-    padding: 15px 15px 15px 20px;
+    padding: 30px 15px 15px 20px;
     /* background-color: #d9d9d9; changes by nikita */
     background: rgba(169, 204, 146, .4);
     border-radius: 20px;
@@ -791,7 +791,7 @@ section.reveal {
     background-position: center center;
     background-image: url(../images/banner/icons_group.svg)
 }
-marquee {
+/* marquee {
     margin-top: -30px;
     padding: 25px 0 15px;
     overflow: hidden;
@@ -805,8 +805,7 @@ marquee > h3 {
     display: inline-block;
     min-width: 100%;
     padding-right: 50px;
-}
-
+} */
 
 .page_wrapper {
     overflow: hidden;
@@ -907,10 +906,10 @@ hr {
     padding-right: 15px
 }
 
-/* .col {
+.col {
     flex: unset;
     padding: 15px
-} */
+}
 
 .dropdown-menu {
     animation: .3s ease-in-out 0s normal none 1 running fadeInUp;
