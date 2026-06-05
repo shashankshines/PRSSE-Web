@@ -2546,7 +2546,7 @@ blockquote p {
             box-shadow:
                 0 18px 40px rgba(56, 189, 248, 0.18),
                 0 10px 25px rgba(0, 0, 0, 0.45);
-            filter: saturate(1.23) contrast(1.1);
+            filter: saturate(1.1) contrast(1.05);
             transform: scale(1.02);
         }
 
