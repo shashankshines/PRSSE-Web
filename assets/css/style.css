@@ -2513,7 +2513,7 @@ blockquote p {
             column-count: 4;
             column-gap: 0;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             /* gap: 10px; */
         }
         @media(max-width:768px) {
@@ -2559,18 +2559,18 @@ blockquote p {
         }
 
         .masonry .content {
-            background: rgb(0 0 0 / 40%);
+            background: rgb(0 0 0 / 35%);
             width: 100%;
             position: absolute;
             left: 0; 
             bottom: 0;
-            padding: 5px 12px 12px 12px; 
+            padding: 5px 12px 12px 12px;
             border-radius: 0 0 20px 20px;
         }
 
         /* heading */
         .masonry .content h4 {
-            font-size: 1.2rem;
+            font-size: 1.05rem;
             margin-bottom: 0;
             font-weight: 700;
             color: #fff;
