@@ -14994,6 +14994,12 @@ blockquote p {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    border-radius: 50%;
+    font-size: x-large;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    background-color: #332f2f;
 }
 
 .sidebarmobile .closebtn:hover {
