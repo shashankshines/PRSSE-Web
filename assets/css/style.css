@@ -73,6 +73,9 @@ html{
 }
 
  @media screen and (max-width: 768px) { 
+    .page_banner > .container {
+        /* padding: 0; */
+    }
     .feature-card {
         padding: 15px;
     }
@@ -14994,6 +14997,12 @@ blockquote p {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    border-radius: 50%;
+    font-size: x-large;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    background-color: #332f2f;
 }
 
 .sidebarmobile .closebtn:hover {
