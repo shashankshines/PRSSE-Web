@@ -73,6 +73,9 @@ html{
 }
 
  @media screen and (max-width: 768px) { 
+    .page_banner > .container {
+        /* padding: 0; */
+    }
     .feature-card {
         padding: 15px;
     }
