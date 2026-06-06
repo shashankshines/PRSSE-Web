@@ -254,17 +254,6 @@ li.text-focus-in.animated {
 	display: block;
 }
 
-.grad {
-  background: linear-gradient(90deg,#ff8a00,#ef3f50, #782e94, #2a1772);
-  -webkit-background-clip:text;
-  color:transparent;
-  /* text-shadow: #000 3px 2px; */
-}
-
-.grad-flow {
-    background: linear-gradient( 135deg,#ffd86f,#fc6076,#c94bff);
-}
-
 /* CAROUSEL HOME PAGE STYLES */
 .hero_banner .banner_big_title {
          font-size: 36px;
@@ -1131,19 +1120,39 @@ img.icon-insta {
 }
 
 .button_group { width: 100%; float: left; margin-top: 20px; }
-.button_group .btn_primary { width: 100%; margin-bottom: 20px; border: 0; background-color: #fe7b14; color: #fff; padding: 4px 15px; }
+.button_group .btn_primary { 
+    width: 100%; 
+    margin-bottom: 15px;
+    border: 0; 
+    background-color: #fe7b14; 
+    background: linear-gradient(135deg, #f47c0b, #ff5400);
+    /* background:linear-gradient(135deg,#ff9a00,#ff6b00); */
+    color: #fff; 
+    padding: 4px 15px;
+ }
 @media screen and (max-width:768px) {
     .button_group { margin-top: 10px !important; }
     .button_group .btn_primary { width: 100%;margin-top: 10px; margin-bottom: 0; }
 }   
 .button_group .btn_primary:hover { background-color: #fe7b14; }
-/* Youtube Shorts Video */
 
+.grad {
+  background: linear-gradient(90deg,#ff8a00,#ef3f50, #782e94, #2a1772);
+  -webkit-background-clip:text;
+  color:transparent;
+  /* text-shadow: #000 3px 2px; */
+}
+
+.grad-flow {
+    background: linear-gradient( 135deg,#fe7b14,#fc6076,#c94bff) !important;
+}
+
+/* Youtube Shorts Video */
 .yt-video{
     width: 100%; 
     float: left;
     position: relative;
-    aspect-ratio: 9 / 14;
+    aspect-ratio: 9 / 12;
     border-radius: 20px;
     overflow: hidden;
     background: #000;
@@ -10541,7 +10550,7 @@ ol[type="1"]>li:not(:last-child) {
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 32px;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
     color:#fe7b14;
 }
 

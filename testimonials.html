@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Eminent Testimonials - PRSSE</title>
+    <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #142033;
+            --muted: #66727f;
+            --paper: #fffdf8;
+            --soft: #f5f8ef;
+            --line: #dfe6d4;
+            --sage: #b9d989;
+            --sage-deep: #6d944f;
+            --blue: #0555ad;
+            --amber: #efbd4d;
+            --coral: #e47b5c;
+            --label-bg: #2aff91;
+            --shadow: 0 22px 70px rgba(20, 32, 51, 0.14);
+            --soft-shadow: 0 12px 35px rgba(20, 32, 51, 0.12);
+            --radius: 30px;
+            --max: 1180px;
+        }
+
+        @media screen and (min-width: 992px) {
+
+            .sidebarmobile,
+            .mobilemenu-btn {
+                display: none;
+            }
+
+            .site_logo img {
+                width: 330px;
+            }
+        }
+
+        @media screen and (max-width:425px) {
+            .site_logo img {
+                width: 280px;
+            }
+        }
+
+        @media screen and (max-width: 991px) {
+
+            .container,
+            .hero_banner.style_1 .container,
+            .site_header .container {
+                margin-top: 0 !important;
+            }
+        }
+
+        .page_banner .content_wrapper {
+            align-items: center;
+            background-image: url("assets/images/banner/testimonials-banner.webp");
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 45%;
+            border-radius: 15px;
+            display: flex;
+            min-height: 300px;
+            padding: 40px 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+            animation: fadeIn 0.95s ease both, bannerDrift 10s ease-in-out infinite;
+        }
+
+        @media screen and (max-width: 991px) {
+            .page_banner .content_wrapper {
+                min-height: 20%;
+            }
+
+            .page_banner .content_wrapper h1 {
+                font-size: 40px;
+                line-height: 2.8rem;
+            }
+        }
+
+        .page_banner .internal-banner {
+            background: transparent !important;
+            background-image: none !important;
+            width: 100%;
+            height: auto;
+        }
+
+        .page_banner .content_wrapper::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            /* animation: curtainSlide 22s ease-in-out infinite; */
+        }
+
+        .page_banner .banner_deco {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        /* .page_banner .banner_bubble {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(10px);
+            opacity: 0.55;
+            transform: translate3d(0, 0, 0);
+        } */
+
+        .page_banner .content_wrapper>* {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Mailto links styling */
+        a[href^="mailto:"] {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a[href^="mailto:"]:hover {
+            text-decoration: underline;
+        }
+
+
+
+        /* 
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: rgba(251, 252, 247, 0.82);
+            border-bottom: 1px solid rgba(109, 148, 79, 0.18);
+            backdrop-filter: blur(18px);
+        } */
+
+        .nav {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 760;
+        }
+
+        /* .brand-mark {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            background: var(--blue);
+            box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.12);
+        } */
+
+        /* .brand-mark::before {
+            content: "";
+            width: 14px;
+            height: 18px;
+            border: 3px solid currentColor;
+            border-top: 0;
+            border-radius: 0 0 10px 10px;
+        } */
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .ghost-link,
+        .primary-link {
+            min-height: 42px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            padding: 0 18px;
+            font-size: 0.95rem;
+            font-weight: 720;
+            white-space: nowrap;
+        }
+
+        .ghost-link {
+            border: 1px solid rgba(20, 32, 51, 0.12);
+            background: rgba(255, 255, 255, 0.64);
+        }
+
+        .primary-link {
+            color: #fff;
+            background: var(--ink);
+            box-shadow: 0 12px 24px rgba(20, 32, 51, 0.16);
+        }
+
+        .hero {
+            min-height: calc(100vh - 70px);
+            display: grid;
+            grid-template-columns: minmax(0, 0.9fr) minmax(380px, 1fr);
+            align-items: center;
+            gap: 54px;
+            padding-block: 58px 72px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 0 22px;
+            color: var(--sage-deep);
+            font-size: 0.9rem;
+            font-weight: 820;
+            text-transform: uppercase;
+            letter-spacing: 0;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 34px;
+            height: 3px;
+            border-radius: 99px;
+            background: var(--amber);
+        }
+
+        h1 {
+            max-width: 720px;
+            margin-bottom: 24px;
+            font-size: 5rem;
+            line-height: 0.98;
+            letter-spacing: 0;
+        }
+
+
+        .hero-copy {
+            max-width: 610px;
+            margin-bottom: 34px;
+            color: #3f4c57;
+            font-size: 1.14rem;
+            line-height: 1.72;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 36px;
+        }
+
+        .hero-actions a {
+            min-height: 48px;
+            border-radius: 999px;
+            padding: 0 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 780;
+            box-shadow: var(--soft-shadow);
+        }
+
+        .hero-actions .dark {
+            color: #fff;
+            background: var(--blue);
+        }
+
+        .hero-actions .light {
+            border: 1px solid rgba(20, 32, 51, 0.12);
+            background: rgba(255, 255, 255, 0.76);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            max-width: 610px;
+        }
+
+        .stat {
+            border: 1px solid rgba(20, 32, 51, 0.1);
+            border-radius: var(--radius);
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.72);
+            box-shadow: 0 10px 25px rgba(20, 32, 51, 0.06);
+        }
+
+        .stat strong {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 1.35rem;
+            line-height: 1;
+        }
+
+        .stat span {
+            color: var(--muted);
+            font-size: 0.88rem;
+            line-height: 1.35;
+        }
+
+        .hero-media {
+            position: relative;
+            min-height: 560px;
+            display: grid;
+            grid-template-columns: 0.92fr 1fr;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .hero-media::before {
+            content: "";
+            position: absolute;
+            inset: 42px 28px 38px 48px;
+            border-radius: var(--radius);
+            background: var(--sage);
+            transform: rotate(-2deg);
+            box-shadow: var(--shadow);
+        }
+
+        .hero-shot {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            border: 8px solid #fff;
+            border-radius: var(--radius);
+            background: #fff;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-shot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-shot.tall {
+            aspect-ratio: 4 / 5;
+            transform: translateY(28px) rotate(-4deg);
+        }
+
+        .hero-shot.wide {
+            aspect-ratio: 16 / 10;
+            transform: translateY(-60px) rotate(3deg);
+        }
+
+        .hero-shot.small {
+            width: 66%;
+            aspect-ratio: 1 / 1.16;
+            justify-self: end;
+            transform: translateY(42px) rotate(4deg);
+            border-color: var(--paper);
+        }
+
+        .quote-spark {
+            position: absolute;
+            z-index: 2;
+            left: 9%;
+            bottom: 5%;
+            color: var(--blue);
+            /* font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif; */
+            font-size: 9rem;
+            line-height: 0.8;
+            text-shadow: 0 14px 26px rgba(5, 85, 173, 0.16);
+        }
+
+        /* .section-head {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 26px;
+            align-items: end;
+            padding-block: 32px 22px;
+        } */
+
+        .section-kicker {
+            margin-bottom: 10px;
+            color: var(--coral);
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.86rem;
+            letter-spacing: 0;
+        }
+
+        h2 {
+            margin-bottom: 0;
+            /* font-size: 3.2rem; */
+            line-height: 1.05;
+            letter-spacing: 0;
+        }
+
+        .section-head p {
+            /* max-width: 520px; */
+            margin-bottom: 20px;
+            font-size: 18px;
+            /* color: var(--muted); */
+            line-height: 1.65;
+        }
+
+        .filters {
+            width: max-content;
+            position: sticky;
+            top: 86px;
+            right: 0;
+            float: right;
+            z-index: 12;
+            display: inline-flex;
+            gap: 10px;
+            align-self: flex-end;
+            border: 1px solid rgba(20, 32, 51, 0.1);
+            border-radius: 999px;
+            padding: 6px;
+            background: rgba(255, 255, 255, 0.78);
+            box-shadow: 0 16px 38px rgba(20, 32, 51, 0.08);
+            backdrop-filter: blur(16px);
+            margin-bottom: 10px;
+        }
+
+        .filter-button {
+            border: 0;
+            border-radius: 999px;
+            min-height: 38px;
+            padding: 0 20px;
+            color: #45515c;
+            background: transparent;
+            cursor: pointer;
+            font-weight: 760;
+            white-space: nowrap;
+            /* transform: translateX(10px); */
+            transition: background linear .2s
+        }
+
+        .filter-button[aria-pressed="true"] {
+            color: #fff;
+            background: var(--ink);
+        }
+
+        .testimonial-wall {
+            width: 100%;
+            float: left;
+            columns: 4 280px;
+            column-gap: 18px;
+            padding-bottom: 72px;
+        }
+
+        .testimonial-card {
+            width: 100%;
+            display: inline-block;
+            margin: 0 0 18px;
+            overflow: hidden;
+            break-inside: avoid;
+            border: 1px solid rgba(20, 32, 51, 0.1);
+            border-radius: var(--radius);
+            background: rgba(255, 255, 255, 0.86);
+            box-shadow: 0 16px 42px rgba(20, 32, 51, 0.1);
+            transform: translateY(18px);
+            opacity: 0;
+            transition: transform 520ms ease, opacity 520ms ease, box-shadow 220ms ease;
+        }
+
+        .testimonial-card.is-visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .testimonial-card.is-hidden {
+            display: none;
+        }
+
+        .testimonial-card:hover {
+            box-shadow: 0 24px 70px rgba(20, 32, 51, 0.16);
+        }
+
+        .media-button {
+            width: 100%;
+            display: block;
+            border: 0;
+            padding: 0;
+            background: #fff;
+            cursor: zoom-in;
+            text-align: left;
+        }
+
+        .media-button img {
+            width: 100%;
+            height: auto;
+            transition: transform 420ms ease, filter 420ms ease;
+        }
+
+        .testimonial-card:hover .media-button img {
+            transform: scale(1.018);
+            filter: saturate(1.05) contrast(1.03);
+        }
+
+        .card-body {
+            padding: 15px 16px 17px;
+            border-top: 1px solid rgba(20, 32, 51, 0.08);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 253, 248, 0.95));
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            min-height: 30px;
+            margin-bottom: 10px;
+            border-radius: 999px;
+            padding: 0 15px;
+            color: var(--ink);
+            background: var(--label-bg);
+            font-size: 0.76rem;
+            font-weight: 800;
+        }
+
+        .testimonial-card[data-type="note"] .tag {
+            background: #ffa3e9;
+            color: var(--ink);
+            padding: 5px 15px;
+        }
+
+        .name {
+            margin-bottom: 4px;
+            color: #fe8408;
+            font-size: 1.05rem;
+            line-height: 1.28;
+            overflow-wrap: anywhere;
+        }
+        .testimonial-card p {
+            color: #3f4c57;
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .role {
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 0.92rem;
+            line-height: 1.45;
+            overflow-wrap: anywhere;
+        }
+
+        .spotlight-band {
+            margin-bottom: 78px;
+            padding-block: 46px;
+            background: var(--ink);
+            color: #fff;
+        }
+
+        .spotlight-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 0.78fr) minmax(0, 1fr);
+            gap: 34px;
+            align-items: center;
+        }
+
+        .spotlight-band h2 {
+            color: #fff;
+            font-size: 2.8rem;
+        }
+
+        .spotlight-band p {
+            color: rgba(255, 255, 255, 0.74);
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .spotlight-strip {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .spotlight-strip img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            border-radius: var(--radius);
+            border: 5px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .lightbox {
+            width: min(80vw, calc(100vw - 32px));
+            max-height: calc(100vh - 32px);
+            max-height: calc(100dvh - 32px);
+            position: fixed;
+            inset: 0;
+            margin: auto;
+            border: 0;
+            border-radius: var(--radius);
+            padding: 0;
+            background: #111927;
+            color: #fff;
+            overflow: hidden;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.42);
+        }
+
+        .lightbox::backdrop {
+            /* background: rgba(9, 14, 24, 0.76); */
+            backdrop-filter: blur(5px);
+        }
+
+        body.lightbox-fallback-open {
+            overflow: hidden;
+        }
+
+        .lightbox-inner {
+            position: relative;
+            display: grid;
+            grid-template-rows: minmax(0, 1fr) auto;
+            min-height: min(760px, calc(100vh - 32px));
+            min-height: min(760px, calc(100dvh - 32px));
+        }
+
+        .lightbox-frame {
+            display: grid;
+            place-items: center;
+            padding: 30px 72px 24px;
+        }
+
+        .lightbox-frame img {
+            width: auto;
+            max-width: 100%;
+            max-height: 72vh;
+            object-fit: contain;
+            border-radius: var(--radius);
+            background: #fff;
+            box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+        }
+
+        .lightbox-caption {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+            padding: 18px 22px 20px;
+            background: rgba(255, 255, 255, 0.06);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .lightbox-caption strong {
+            display: block;
+            margin-bottom: 3px;
+            font-size: 1rem;
+        }
+
+        .lightbox-caption span {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.92rem;
+            line-height: 1.4;
+        }
+
+        .lightbox-count {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .icon-button {
+            position: absolute;
+            z-index: 3;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 50%;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.12);
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            font-size: 1.55rem;
+            line-height: 1;
+            backdrop-filter: blur(12px);
+        }
+
+        .close-button {
+            top: 16px;
+            right: 16px;
+        }
+
+        .prev-button,
+        .next-button {
+            top: 45%;
+            transform: translateY(-45%);
+        }
+
+        .prev-button {
+            left: 16px;
+        }
+
+        .next-button {
+            right: 16px;
+        }
+
+        .footer {
+            padding: 30px 0 44px;
+            color: var(--muted);
+            text-align: center;
+            font-size: 0.92rem;
+        }
+
+        .footer strong {
+            color: var(--ink);
+        }
+
+        @media (max-width: 960px) {
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+                padding-block: 42px 58px;
+            }
+
+            h1 {
+                font-size: 3.45rem;
+            }
+
+            .hero-media {
+                display: block;
+                min-height: 500px;
+                order: -1;
+            }
+
+            .hero-media::before {
+                inset: 52px 58px 48px 78px;
+            }
+
+            .hero-shot {
+                position: absolute;
+            }
+
+            .hero-shot.tall {
+                top: 112px;
+                left: 6%;
+                width: 34%;
+                transform: rotate(-4deg);
+            }
+
+            .hero-shot.wide {
+                top: 52px;
+                right: 4%;
+                width: 58%;
+                transform: rotate(3deg);
+            }
+
+            .hero-shot.small {
+                right: 16%;
+                bottom: 6px;
+                width: 27%;
+                justify-self: auto;
+                transform: rotate(4deg);
+            }
+
+            .quote-spark {
+                left: 5%;
+                bottom: 10%;
+            }
+
+            .section-head,
+            .spotlight-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filters {
+                position: static;
+                width: 100%;
+                overflow-x: auto;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .shell {
+                width: min(calc(100% - 28px), var(--max));
+            }
+
+            .nav {
+                align-items: flex-start;
+                flex-direction: column;
+                padding-block: 14px;
+            }
+
+            .nav-actions {
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .ghost-link,
+            .primary-link {
+                min-height: 38px;
+                padding-inline: 14px;
+                font-size: 0.86rem;
+            }
+
+            h1 {
+                font-size: 2.65rem;
+            }
+
+            /* h2,
+            .spotlight-band h2 {
+                font-size: 2.18rem;
+            } */
+
+            .hero-copy {
+                font-size: 1rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-media {
+                display: block;
+                min-height: 360px;
+                margin-top: 6px;
+            }
+
+            .hero-media::before {
+                inset: 44px 18px 28px 24px;
+            }
+
+            .hero-shot {
+                position: absolute;
+                border-width: 5px;
+            }
+
+            .hero-shot.wide {
+                top: 28px;
+                right: 0;
+                width: 62%;
+                transform: rotate(3deg);
+            }
+
+            .hero-shot.tall {
+                top: 98px;
+                left: 4%;
+                width: 44%;
+                transform: rotate(-4deg);
+            }
+
+            .hero-shot.small {
+                left: 18%;
+                bottom: 0;
+                width: 38%;
+                justify-self: auto;
+                transform: rotate(4deg);
+            }
+
+            .quote-spark {
+                left: 1%;
+                bottom: 6%;
+                font-size: 6rem;
+            }
+
+            .testimonial-wall {
+                columns: 1;
+            }
+
+            .spotlight-strip {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-card {
+                margin-bottom: 10px;
+            }
+
+            .lightbox {
+                width: calc(100vw - 16px);
+                max-height: calc(100vh - 16px);
+                max-height: calc(100dvh - 16px);
+            }
+
+            .lightbox-inner {
+                min-height: auto;
+                max-height: calc(100vh - 16px);
+                max-height: calc(100dvh - 16px);
+            }
+
+            .lightbox-frame {
+                min-height: 0;
+                padding: 78px 14px 20px;
+            }
+
+            .lightbox-frame img {
+                max-height: calc(100vh - 210px);
+                max-height: calc(100dvh - 210px);
+            }
+
+            .prev-button,
+            .next-button {
+                top: 40%;
+                /* bottom: 84px; */
+                transform: none;
+                color: #fff;
+                background: rgba(0, 0, 0, .3)
+            }
+
+            .lightbox-caption {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 8px;
+                padding: 14px 16px 16px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.001ms !important;
+                animation-duration: 0.001ms !important;
+            }
+
+            .testimonial-card {
+                transform: none;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page_wrapper">
+        <div class="backtotop">
+            <a href="#" class="scroll"><i class="far fa-arrow-up"></i></a>
+        </div>
+        <!-- Top Header Navigation -->
+        <header class="site_header site_header_1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col col-lg-3 col-10">
+                        <div class="site_logo">
+                            <a class="site_link" href="index.html">
+                                <img src="assets/images/logo/prs_logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col col-lg-9 col-2">
+                        <nav class="main_menu navbar navbar-expand-lg">
+                            <div class="main_menu_inner collapse navbar-collapse" id="main_menu_dropdown">
+                                <ul class="main_menu_list unordered_list_center">
+                                    <li><a class="nav-link" href="index.html">Home</a></li>
+                                    <li><a class="nav-link" href="about.html"><u>About us</u></a></li>
+                                    <li>
+                                        <a class="nav-link" href="programs.html" id="blog_submenu">Programmes</a>
+                                    </li>
+                                    <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
+                                    <li class="dropdown">
+                                        <a class="nav-link" href="#" id="blog_submenu" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
+                                        <ul class="dropdown-menu" aria-labelledby="blog_submenu">
+                                            <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
+                                            <li><a class="nav-link" href="indian-scientist.html">Indian Scientists</a>
+                                            </li>
+                                            <li><a class="nav-link" href="top-iit.html">Top Indian Institutes</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a class="nav-link" href="news_and_media.html">News &amp; Media</a></li>
+                                    <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Mobile Hamburger Menu (visible only on small screens) -->
+                        <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu"
+                            aria-controls="sidebarMenumobile"
+                            aria-expanded="false"><span></span><span></span><span></span></button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Sidebar Menu (for mobile) -->
+        <div id="sidebarMenumobile" class="sidebarmobile">
+            <button type="button" class="closebtn" aria-label="Close menu">x</button>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+
+            <!-- Dropdown (Mobile) -->
+            <div class="dropdownmobile">
+                <a href="programs.html">Programs</a>
+            </div>
+            <a href="exploratory.html">Exploratory Perks</a>
+            <!-- Dropdown (Mobile) -->
+            <div class="dropdownmobile">
+                <a href="#" class="dropdownmobile-toggle">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
+                <ul class="dropdownmobile-menu">
+                    <li><a href="great-minds.html">Great Minds</a></li>
+                    <li><a href="indian-scientist.html">Indian Scientists</a></li>
+                    <li><a href="top-iit.html">Institutes of India</a></li>
+                </ul>
+            </div>
+
+            <a href="news_and_media.html">News &amp; Media</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <!-- Overlay (for closing sidebar when clicking outside) -->
+        <div id="menuOverlay" class="menu-overlay"></div>
+
+        <main class="page_content">
+            <section class="page_banner m-0">
+                <div class="container">
+                    <div class="content_wrapper">
+                        <div class="row align-items-center">
+                            <div class="col col-lg-12">
+                                <h1 class="page_title">Testimonials</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonial Gallary Starts -->
+            <div class="container">
+                <section id="gallery" aria-labelledby="gallery-title">
+                    <div class="section-head">
+                        <h2 class="section-title mt-4">Eminent Testimonials</h2>
+                        <p>Insights, experiences, and words of appreciation shared by distinguished scientists,
+                            educators, innovators, administrators, and eminent personalities who visited PRSSE and
+                            witnessed its unique approach to experiential science learning.</p>
+                       
+                    </div>
+                     <div class="filters" role="group" aria-label="Filter testimonials">
+                            <button class="filter-button" type="button" data-filter="all"
+                                aria-pressed="true">All</button>
+                            <button class="filter-button" type="button" data-filter="note"
+                                aria-pressed="false">Notes</button>
+                            <button class="filter-button" type="button" data-filter="moment"
+                                aria-pressed="false">Moments</button>
+                        </div>
+                    <div class="testimonial-wall" id="testimonialWall">
+                        <article class="testimonial-card" data-type="moment" data-name="Padma Shri Prof. H C Verma"
+                            data-role="Former Professor, IIT Kanpur">
+                            <button class="media-button" type="button"
+                                aria-label="Open testimonial by Padma Shri Prof. H C Verma">
+                                <img src="assets/testimonial-02.jpeg"
+                                    alt="Padma Shri Prof. H C Verma testimonial slide and visit photo" loading="lazy"
+                                    decoding="async">
+                            </button>
+                            <div class="card-body">
+                                <span class="tag">Visit moment</span>
+                                <h3 class="name">Padma Shri Prof. H C Verma</h3>
+                                <p class="role">Former Professor, IIT Kanpur</p>
+                            </div>
+                        </article>
+                        <article class="testimonial-card" data-type="moment" data-name="Dr. K Sivan"
+                            data-role="Former Chairman, ISRO">
+                            <button class="media-button" type="button" aria-label="Open testimonial by Dr. K Sivan">
+                                <img src="assets/testimonial-04.jpeg"
+                                    alt="Dr. K Sivan testimonial slide and lab visit photo" loading="lazy"
+                                    decoding="async">
+                            </button>
+                            <div class="card-body">
+                                <span class="tag">Visit moment</span>
+                                <h3 class="name">Dr. K Sivan</h3>
+                                <p class="role">Former Chairman, ISRO</p>
+                            </div>
+                        </article>
+                        <article class="testimonial-card" data-type="moment" data-name="Padma Shri Anand Kumar"
+                            data-role="Super 30 Fame">
+                            <button class="media-button" type="button"
+                                aria-label="Open testimonial by Padma Shri Anand Kumar">
+                                <img src="assets/testimonial-08.jpeg"
+                                    alt="Padma Shri Anand Kumar testimonial slide and team photo" loading="lazy"
+                                    decoding="async">
+                            </button>
+                            <div class="card-body">
+                                <span class="tag">Visit moment</span>
+                                <h3 class="name">Padma Shri Anand Kumar</h3>
+                                <p class="role">Super 30 Fame</p>
+                            </div>
+                        </article>
+
+                        <article class="testimonial-card" data-type="moment" data-name="Mr. Manish Kumar"
+                            data-role="National Teacher Awardee (UP)">
+                            <button class="media-button" type="button"
+                                aria-label="Open testimonial by Mr. Manish Kumar">
+                                <img src="assets/testimonial-03.jpeg"
+                                    alt="Mr. Manish Kumar testimonial slide and student group photo" loading="lazy"
+                                    decoding="async">
+                            </button>
+                            <div class="card-body">
+                                <span class="tag">Visit moment</span>
+                                <h3 class="name">Mr. Manish Kumar</h3>
+                                <p class="role">National Teacher Awardee (UP)</p>
+                            </div>
+                        </article>
+                        <article class="testimonial-card" data-type="note" data-name="Dr. Premlal Patel"
+                            data-role="Director, VNIT">
+                            <button class="media-button" type="button"
+                                aria-label="Open testimonial by Dr. Premlal Patel">
+                                <img src="assets/testimonial-01.jpeg" alt="Handwritten testimonial by Dr. Premlal Patel"
+                                    loading="lazy" decoding="async">
+                            </button>
+                            <div class="card-body">
+                                <span class="tag">Handwritten note</span>
+                                <h3 class="name">Dr. Premlal Patel</h3>
+                                <p class="role">Director, VNIT</p>
+                            </div>
+                        </article>
+
+                        <article class="testimonial-card" data-type="moment" data-name="Prof. Pragya Nopany"
+                            data-role="Recipient of National Teacher Award">
+                            <button class="media-button" type="button"
+                                aria-label="Open testimonial by Prof. Pragya Nopany">
+                                <img src="assets/testimonial-07.jpeg"
+                                    alt="Prof. Pragya Nopany testimonial slide and speaking photo" loading="lazy"
+                                    decoding="async">
+                            </button>
+                            <div class="card-body">
+                                <span class="tag">Visit moment</span>
+                                <h3 class="name">Prof. Pragya Nopany</h3>
+                                <p class="role">Recipient of National Teacher Award</p>
+                            </div>
+                        </article>
+                         <article class="testimonial-card" data-type="moment" data-name="Dr. Surhud More"
+                            data-role="Recipient of Shanti Swarup Bhatnagar Award">
+                            <button class="media-button" type="button" aria-label="Open testimonial by Dr. Surhud More">
+                                <img src="assets/testimonial-05.jpeg"
+                                    alt="Dr. Surhud More testimonial slide and award ceremony photo" loading="lazy"
+                                    decoding="async">
+                            </button>
+                            <div class="card-body">
+                                <span class="tag">Visit moment</span>
+                                <h3 class="name">Dr. Surhud More</h3>
+                                <p class="role">Recipient of Shanti Swarup Bhatnagar Award</p>
+                            </div>
+                        </article>
+                        <article class="testimonial-card" data-type="moment" data-name="Prof. Amit Agrawal"
+                            data-role="Recipient of Shanti Swarup Bhatnagar Award">
+                            <button class="media-button" type="button"
+                                aria-label="Open testimonial by Prof. Amit Agrawal">
+                                <img src="assets/testimonial-06.jpeg"
+                                    alt="Prof. Amit Agrawal testimonial slide and visit photo" loading="lazy"
+                                    decoding="async">
+                            </button>
+                            <div class="card-body">
+                                <span class="tag">Visit moment</span>
+                                <h3 class="name">Prof. Amit Agrawal</h3>
+                                <p class="role">Recipient of Shanti Swarup Bhatnagar Award</p>
+                            </div>
+                        </article>
+
+                        <article class="testimonial-card" data-type="moment" data-name="Dr. Premlal Patel"
+                            data-role="Director, VNIT">
+                            <button class="media-button" type="button"
+                                aria-label="Open lab visit moment with Dr. Premlal Patel">
+                                <img src="assets/testimonial-09.jpeg"
+                                    alt="Dr. Premlal Patel during a lab interaction with students" loading="lazy"
+                                    decoding="async">
+                            </button>
+                            <div class="card-body">
+                                <span class="tag">Visit moment</span>
+                                <h3 class="name">Dr. Premlal Patel</h3>
+                                <p class="role">Director, VNIT</p>
+                            </div>
+                        </article>
+
+                        <article class="testimonial-card" data-type="note" data-name="Mr. Manish Kumar"
+                            data-role="National Teacher Awardee (UP)">
+                            <button class="media-button" type="button"
+                                aria-label="Open handwritten note by Mr. Manish Kumar">
+                                <img src="assets/testimonial-10.jpeg" alt="Handwritten testimonial by Mr. Manish Kumar"
+                                    loading="lazy" decoding="async">
+                            </button>
+                            <div class="card-body">
+                                <span class="tag">Handwritten note</span>
+                                <h3 class="name">Mr. Manish Kumar</h3>
+                                <p class="role">National Teacher Awardee (UP)</p>
+                            </div>
+                        </article>
+
+                        <article class="testimonial-card" data-type="note" data-name="Dr. Surhud More"
+                            data-role="IUCAA, Pune">
+                            <button class="media-button" type="button"
+                                aria-label="Open handwritten note by Dr. Surhud More">
+                                <img src="assets/testimonial-11.jpeg" alt="Handwritten testimonial by Dr. Surhud More"
+                                    loading="lazy" decoding="async">
+                            </button>
+                            <div class="card-body">
+                                <span class="tag">Handwritten note</span>
+                                <h3 class="name">Dr. Surhud More</h3>
+                                <p class="role">IUCAA, Pune</p>
+                            </div>
+                        </article>
+
+                        <article class="testimonial-card" data-type="note" data-name="Prof. Amit Agrawal"
+                            data-role="IIT Bombay">
+                            <button class="media-button" type="button"
+                                aria-label="Open handwritten note by Prof. Amit Agrawal">
+                                <img src="assets/testimonial-12.jpeg"
+                                    alt="Handwritten testimonial by Prof. Amit Agrawal" loading="lazy" decoding="async">
+                            </button>
+                            <div class="card-body">
+                                <span class="tag">Handwritten note</span>
+                                <h3 class="name">Prof. Amit Agrawal</h3>
+                                <p class="role">IIT Bombay</p>
+                            </div>
+                        </article>
+
+                        <article class="testimonial-card" data-type="note" data-name="Prof. Pragya Nopany"
+                            data-role="Founder Coordinator, BUN-IAPT, New Delhi">
+                            <button class="media-button" type="button"
+                                aria-label="Open handwritten note by Prof. Pragya Nopany">
+                                <img src="assets/testimonial-14.jpeg"
+                                    alt="Handwritten testimonial by Prof. Pragya Nopany" loading="lazy"
+                                    decoding="async">
+                            </button>
+                            <div class="card-body">
+                                <span class="tag">Handwritten note</span>
+                                <h3 class="name">Prof. Pragya Nopany</h3>
+                                <p class="role">Founder Coordinator, BUN-IAPT, New Delhi</p>
+                            </div>
+                        </article>
+
+                        <article class="testimonial-card" data-type="moment" data-name="Dr. G Madhavi Latha"
+                            data-role="Indian Institute of Science Bengaluru">
+                            <button class="media-button" type="button"
+                                aria-label="Open visit moment with Dr. G Madhavi Latha">
+                                <img src="assets/testimonial-13.jpeg"
+                                    alt="Dr. G Madhavi Latha testimonial slide and lab interaction" loading="lazy"
+                                    decoding="async">
+                            </button>
+                            <div class="card-body">
+                                <span class="tag">Visit moment</span>
+                                <h3 class="name">Dr. G Madhavi Latha</h3>
+                                <p class="role">Indian Institute of Science Bengaluru</p>
+                            </div>
+                        </article>
+
+                        <article class="testimonial-card" data-type="note" data-name="Dr. G Madhavi Latha"
+                            data-role="Indian Institute of Science Bengaluru">
+                            <button class="media-button" type="button"
+                                aria-label="Open handwritten note by Dr. G Madhavi Latha">
+                                <img src="assets/testimonial-15.jpeg"
+                                    alt="Handwritten testimonial by Dr. G Madhavi Latha" loading="lazy"
+                                    decoding="async">
+                            </button>
+                            <div class="card-body">
+                                <span class="tag">Handwritten note</span>
+                                <h3 class="name">Dr. G Madhavi Latha</h3>
+                                <p class="role">Indian Institute of Science Bengaluru</p>
+                            </div>
+                        </article>
+
+                        <article class="testimonial-card" data-type="note" data-name="Dr. K Sivan"
+                            data-role="Former Chairman, ISRO">
+                            <button class="media-button" type="button"
+                                aria-label="Open handwritten note by Dr. K Sivan">
+                                <img src="assets/testimonial-16.jpeg" alt="Handwritten testimonial by Dr. K Sivan"
+                                    loading="lazy" decoding="async">
+                            </button>
+                            <div class="card-body">
+                                <span class="tag">Handwritten note</span>
+                                <h3 class="name">Dr. K Sivan</h3>
+                                <p class="role">Former Chairman, ISRO</p>
+                            </div>
+                        </article>
+
+                        <article class="testimonial-card" data-type="note" data-name="Padma Shri Prof. H C Verma"
+                            data-role="Former Professor, IIT Kanpur">
+                            <button class="media-button" type="button"
+                                aria-label="Open handwritten note by Padma Shri Prof. H C Verma">
+                                <img src="assets/testimonial-17.jpeg"
+                                    alt="Handwritten testimonial by Padma Shri Prof. H C Verma" loading="lazy"
+                                    decoding="async">
+                            </button>
+                            <div class="card-body">
+                                <span class="tag">Handwritten note</span>
+                                <h3 class="name">Padma Shri Prof. H C Verma</h3>
+                                <p class="role">Former Professor, IIT Kanpur</p>
+                            </div>
+                        </article>
+
+                        <article class="testimonial-card" data-type="note" data-name="Padma Shri Anand Kumar"
+                            data-role="Super 30 Fame">
+                            <button class="media-button" type="button"
+                                aria-label="Open handwritten note by Padma Shri Anand Kumar">
+                                <img src="assets/testimonial-18.jpeg"
+                                    alt="Handwritten testimonial by Padma Shri Anand Kumar" loading="lazy"
+                                    decoding="async">
+                            </button>
+                            <div class="card-body">
+                                <span class="tag">Handwritten note</span>
+                                <h3 class="name">Padma Shri Anand Kumar</h3>
+                                <p class="role">Super 30 Fame</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+            </div>
+
+            <dialog class="lightbox" id="lightbox" aria-label="Testimonial preview">
+                <div class="lightbox-inner">
+                    <button class="icon-button close-button" type="button" aria-label="Close preview">&times;</button>
+                    <button class="icon-button prev-button" type="button"
+                        aria-label="Previous testimonial">&lsaquo;</button>
+                    <button class="icon-button next-button" type="button"
+                        aria-label="Next testimonial">&rsaquo;</button>
+                    <div class="lightbox-frame">
+                        <img id="lightboxImage" src="" alt="">
+                    </div>
+                    <div class="lightbox-caption">
+                        <div>
+                            <strong id="lightboxName"></strong>
+                            <span id="lightboxRole"></span>
+                        </div>
+                        <div class="lightbox-count" id="lightboxCount"></div>
+                    </div>
+                </div>
+            </dialog>
+
+        </main>
+        <footer class="site_footer">
+            <div class="footer_widget_area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Address</h3>
+                                <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
+                                    School, Near Alankar Talkies, North Ambazari road, Nagpur- 440010.</p>
+
+                            </div>
+                        </div>
+                        <div class="col col-lg-4">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Social Links</h3>
+                                <ul class="social_links unordered_list">
+                                    <li>
+                                        <a href="https://www.facebook.com/profile.php?id=100094309040998"
+                                            name="facebook" target="_blank">
+                                            <!-- <img src="assets/images/icon/5365678_fb_facebook_facebook logo_icon.png" alt="Image of 5365678 fb facebook facebook logo icon"/> -->
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"
+                                            target="_blank">
+                                            <!-- <img src="assets/images/icon/410526_youtube_play_icon.png" alt="Image of 410526 youtube play icon"/> -->
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
+                                            target="_blank">
+                                            <!-- <img src="assets/images/icon/5296765_camera_instagram_instagram logo_icon.png" alt="Image of 5296765 camera instagram instagram logo icon"/> -->
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wa.me/917249811866" target="_blank">
+                                            <!-- <img src="assets/images/icon/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png" alt="Image of 5296520 bubble chat mobile whatsapp whatsapp logo icon"/> -->
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Contact Details</h3>
+                                <ul class="blog_small_group unordered_list_block">
+                                    <li>
+                                        <a class="blog_small" href="#">
+                                            <span class="item_content">
+                                                <small class="item_post_date">Call : +917249811866</small>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="blog_small" href="#">
+                                            <span class="item_content">
+                                                <small class="item_post_date">Email: prsscienceexploratory@gmail.com
+                                                </small>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright_widget">
+                <div class="container">
+                    <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All
+                        rights reserved | Copyrights 2026</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Set active navigation item based on current page
+        (function setActiveNav() {
+            var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
+            navLinks.forEach(function(link) {
+                var href = link.getAttribute('href');
+                var linkPage = href.split('?')[0]; // Remove query strings
+                // Match current page with nav link
+                if (linkPage === currentPage ||
+                    (currentPage === '' && linkPage === 'index.html')) {
+                    var parentLi = link.closest('li');
+                    if (parentLi) {
+                        parentLi.classList.add('active');
+                    }
+                }
+            });
+        })();
+        // Optimized Scroll Reveal Animation
+    </script>
+
+    <script>
+        (function initTestimonialsGallery() {
+            const cards = Array.from(document.querySelectorAll(".testimonial-card"));
+            const buttons = Array.from(document.querySelectorAll(".filter-button"));
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImage = document.getElementById("lightboxImage");
+            const lightboxName = document.getElementById("lightboxName");
+            const lightboxRole = document.getElementById("lightboxRole");
+            const lightboxCount = document.getElementById("lightboxCount");
+            const closeButton = document.querySelector(".close-button");
+            const prevButton = document.querySelector(".prev-button");
+            const nextButton = document.querySelector(".next-button");
+            if (!cards.length || !lightbox || !lightboxImage || !lightboxName || !lightboxRole || !lightboxCount) {
+                return;
+            }
+            let activeCards = cards;
+            let currentIndex = 0;
+            if ("IntersectionObserver" in window) {
+                const revealObserver = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("is-visible");
+                            revealObserver.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.12
+                });
+                cards.forEach((card) => revealObserver.observe(card));
+            } else {
+                cards.forEach((card) => card.classList.add("is-visible"));
+            }
+            cards.forEach((card) => {
+                const mediaButton = card.querySelector(".media-button");
+                if (!mediaButton) return;
+                mediaButton.addEventListener("click", () => {
+                    activeCards = cards.filter((item) => !item.classList.contains("is-hidden"));
+                    currentIndex = activeCards.indexOf(card);
+                    openLightbox(currentIndex);
+                });
+            });
+            buttons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    const filter = button.dataset.filter;
+                    buttons.forEach((item) => item.setAttribute("aria-pressed", String(item ===
+                        button)));
+                    cards.forEach((card) => {
+                        const shouldShow = filter === "all" || card.dataset.type === filter;
+                        card.classList.toggle("is-hidden", !shouldShow);
+                        if (shouldShow) {
+                            card.classList.add("is-visible");
+                        }
+                    });
+                });
+            });
+
+            function openLightbox(index) {
+                const card = activeCards[index];
+                if (!card) return;
+                const image = card.querySelector("img");
+                if (!image) return;
+                currentIndex = index;
+                lightboxImage.src = image.currentSrc || image.src;
+                lightboxImage.alt = image.alt;
+                lightboxName.textContent = card.dataset.name || "";
+                lightboxRole.textContent = card.dataset.role || "";
+                lightboxCount.textContent = `${index + 1} / ${activeCards.length}`;
+                if (!lightbox.open) {
+                    if (typeof lightbox.showModal === "function") {
+                        try {
+                            lightbox.showModal();
+                        } catch (error) {
+                            lightbox.setAttribute("open", "");
+                            document.body.classList.add("lightbox-fallback-open");
+                        }
+                    } else {
+                        lightbox.setAttribute("open", "");
+                        document.body.classList.add("lightbox-fallback-open");
+                    }
+                }
+            }
+
+            function closeLightbox() {
+                if (!lightbox.open) return;
+                if (typeof lightbox.close === "function") {
+                    lightbox.close();
+                } else {
+                    lightbox.removeAttribute("open");
+                }
+                document.body.classList.remove("lightbox-fallback-open");
+            }
+
+            function stepLightbox(direction) {
+                if (!lightbox.open || !activeCards.length) return;
+                currentIndex = (currentIndex + direction + activeCards.length) % activeCards.length;
+                openLightbox(currentIndex);
+            }
+            if (closeButton) {
+                closeButton.addEventListener("click", closeLightbox);
+            }
+            if (prevButton) {
+                prevButton.addEventListener("click", () => stepLightbox(-1));
+            }
+            if (nextButton) {
+                nextButton.addEventListener("click", () => stepLightbox(1));
+            }
+            lightbox.addEventListener("click", (event) => {
+                if (event.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+            lightbox.addEventListener("close", () => {
+                document.body.classList.remove("lightbox-fallback-open");
+            });
+            document.addEventListener("keydown", (event) => {
+                if (!lightbox.open) return;
+                if (event.key === "Escape") closeLightbox();
+                if (event.key === "ArrowLeft") stepLightbox(-1);
+                if (event.key === "ArrowRight") stepLightbox(1);
+            });
+        })();
+    </script>
+</body>
+
+</html>
