@@ -74,7 +74,7 @@ html{
 
  @media screen and (max-width: 768px) { 
     .page_banner > .container {
-        /* padding: 0; */
+        padding: 0;
     }
     .feature-card {
         padding: 15px;
@@ -5152,7 +5152,7 @@ blockquote p {
 @media screen and (max-width:991px) {
     /* Global style for Mobile Banners  */
     .page_banner .content_wrapper { 
-        min-height: 180px !important;
+        min-height: 175px !important;
         text-align: left;
         padding: 20px !important;
     }
