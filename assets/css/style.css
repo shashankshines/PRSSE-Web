@@ -1778,8 +1778,8 @@ blockquote p {
     display: flex;
     align-items: center
 }
-/* Page Banner Animation */
-.content_wrapper { animation: fadeIn 0.95s ease both, bannerDrift 10s ease-in-out infinite; }
+/* Page Banner Animation Global banners */
+.content_wrapper { animation: fadeIn 0.95s linear both, bannerDrift 10s linear infinite; }
 .video_play_btn .icon {
     width: 60px;
     height: 60px;

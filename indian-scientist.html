@@ -50,7 +50,7 @@
             .container,
             .hero_banner.style_1 .container,
             .site_header .container {
-                margin-top: 0px !important;
+                margin-top: 0 !important;
             }
         }
 
@@ -68,7 +68,7 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-            animation: fadeIn 0.95s ease both, bannerDrift 10s ease-in-out infinite;
+            /* animation: fadeIn 1s ease both, bannerDrift 10s ease-in-out infinite; */
         }
 
         .page_banner .internal-banner {
@@ -89,16 +89,6 @@
         .page_banner .content_wrapper>* {
             position: relative;
             z-index: 2;
-        }
-
-        .page_banner .content_wrapper,
-        .page_banner .content_wrapper .breadcrumb_nav,
-        .page_banner .content_wrapper .breadcrumb_nav a {
-            color: #fff;
-        }
-
-        .page_banner .content_wrapper .breadcrumb_nav li {
-            opacity: 0.9;
         }
 
         @media screen and (max-width: 767px) {
