@@ -5152,7 +5152,7 @@ blockquote p {
 @media screen and (max-width:991px) {
     /* Global style for Mobile Banners  */
     .page_banner .content_wrapper { 
-        min-height: 175px !important;
+        min-height: 170px !important;
         text-align: left;
         padding: 20px !important;
     }
