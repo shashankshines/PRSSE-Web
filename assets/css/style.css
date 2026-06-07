@@ -37,7 +37,7 @@ html{
     padding:35px;
     height:100%;
     text-align:center;
-    border: 1px solid rgba(0,0,0,0.05);
+    /* border: 1px solid rgba(0,0,0,0.05); */
     overflow: hidden;
     border: #d9e8c5 solid 1px;
     box-shadow: 0 15px 35px rgba(0,0,0,.06);
