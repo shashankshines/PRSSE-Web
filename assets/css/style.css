@@ -2604,6 +2604,11 @@ blockquote p {
             border: rgb(44 255 14) solid 1px;
             border-radius: 8px;
         }
+        .masonry .content span.label-mentor {
+            
+            color: rgb(9, 176, 243);
+            border: rgb(9, 176, 243) solid 1px;
+        }
         .masonry .content h5 {
             font-size: .8rem;
             font-weight: 700;
