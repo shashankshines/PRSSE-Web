@@ -2599,15 +2599,13 @@ blockquote p {
             font-weight: 700;
             margin: 6px 0 10px 0;
             color: #2cff0e;
-            /* background: rgba(255, 255, 255, 0.1); */
             padding: 5px 10px;
             border: rgb(44 255 14) solid 1px;
             border-radius: 8px;
         }
         .masonry .content span.label-mentor {
-            
-            color: rgb(9, 176, 243);
-            border: rgb(9, 176, 243) solid 1px;
+            color: rgb(0 182 255);
+            border: rgb(0 182 255) solid 1px;
         }
         .masonry .content h5 {
             font-size: .8rem;

@@ -29,7 +29,6 @@
         }
 
         @media screen and (min-width: 992px) {
-
             .sidebarmobile,
             .mobilemenu-btn {
                 display: none;
@@ -47,6 +46,7 @@
         }
 
         @media screen and (max-width: 991px) {
+
             .container,
             .hero_banner.style_1 .container,
             .site_header .container {
@@ -56,11 +56,11 @@
 
         .page_banner .content_wrapper {
             align-items: center;
-            background-image: url("assets/images/banner/great-minds-banner.webp");
-            background-color: transparent;
+            background-image:  url("assets/images/banner/indian-reserch-institutes-banner.webp");
             background-repeat: no-repeat;
-            background-size: 100% auto;
+            background-size: 150% auto;
             background-position: 50% 45%;
+            background-color: transparent;
             border-radius: 15px;
             display: flex;
             min-height: 300px;
@@ -68,7 +68,7 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-            animation: fadeIn 1s ease both, bannerDrift 14s ease-in-out infinite;
+            animation: fadeIn 0.95s ease both, bannerDrift 10s ease-in-out infinite;
         }
 
         .page_banner .internal-banner {
@@ -76,6 +76,14 @@
             background-image: none !important;
             width: 100%;
             height: auto;
+        }
+
+        .page_banner .content_wrapper::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
         }
 
         .page_banner .content_wrapper>* {
@@ -95,13 +103,13 @@
 
         @media screen and (max-width: 767px) {
             .page_banner .content_wrapper {
-                min-height: 180px;
+                min-height: 130px !important;
                 padding: 30px 20px;
-                background-size: 145% auto;
             }
 
-            .page_banner .content_wrapper .page_title {
-                font-size: 2rem;
+            .page_banner .content_wrapper h1.page_title {
+                font-size: 1.5rem;
+                line-height: 24px;
             }
         }
 
@@ -267,7 +275,7 @@
             color: rgba(255, 248, 233, 0.78);
             font-size: 0.98rem;
         }
-
+        
         .timeline {
             position: relative;
             padding: 18px 0;
@@ -289,7 +297,7 @@
             display: grid;
             grid-template-columns: minmax(0, 1fr) 74px minmax(0, 1fr);
             gap: 18px;
-            margin: 0;
+            margin: 0 0 10px;
             align-items: center;
         }
 
@@ -320,20 +328,24 @@
             place-items: center;
             width: 74px;
             height: 74px;
+            margin: 0px;
+            padding: 12px;
+            line-height: 1;
             border: 5px solid var(--paper);
             border-radius: 50%;
             background: var(--ink);
             color: #fff8e9;
             font-family: Georgia, "Times New Roman", serif;
-            font-weight: 800;
-            font-size: 1.3rem;
+            font-weight: 600;
+            font-size: 1.6rem;
             box-shadow: 0 9px 24px rgba(22, 32, 28, 0.18);
         }
 
         .institute-card {
             position: relative;
             display: grid;
-            grid-template-columns: 40% minmax(0, 1fr);
+            min-height: 50vh;
+            /* grid-template-columns: 70% minmax(0, 1fr); */
             overflow: visible;
             background: var(--surface);
             border: 1px solid rgba(22, 32, 28, 0.12);
@@ -344,6 +356,7 @@
             transform: translateX(var(--sr-translate, 0)) translateY(var(--sr-translateY, 0));
             opacity: 0;
             transition: transform 0.75s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.75s ease, box-shadow 0.3s ease;
+            border:none;
         }
 
         .institute-card:hover {
@@ -427,7 +440,7 @@
 
         .photo-panel {
             position: relative;
-            min-height: 245px;
+            /* min-height: 245px; */
             background: #e8dfcd;
             border-radius: 30px;
         }
@@ -439,7 +452,7 @@
             object-fit: cover;
             display: block;
             filter: sepia(0.05) saturate(0.95) contrast(1.03);
-            border-radius: 30px 0 0 30px;
+            border-radius: 30px;
         }
 
         .photo-panel::after {
@@ -459,7 +472,7 @@
             align-items: center;
             justify-content: space-between;
             gap: 10px;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .born {
@@ -485,7 +498,7 @@
 
         .institute-card h3 {
             margin: 0 0 10px;
-            font-size: clamp(1.35rem, 2vw, 1.6rem);
+            font-size: clamp(.85rem, 1.5vw, 1.3rem);
             line-height: 1.10;
             letter-spacing: 0;
         }
@@ -499,7 +512,7 @@
             list-style: none;
         }
 
-        .card-body .field-chip {
+       .card-body .field-chip {
             padding: 8px 10px;
             border-radius: 999px;
             color: #fff;
@@ -521,7 +534,6 @@
             border-top: 1px solid rgba(22, 32, 28, 0.11);
             color: var(--muted);
             font-size: 0.9rem;
-            line-height: 1.4;
         }
 
         .notes-band {
@@ -631,10 +643,6 @@
             .source-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
-
-            .institute-card {
-            grid-template-columns: 30% minmax(0, 1fr);
-        }
         }
 
         @media (max-width: 650px) {
@@ -692,7 +700,7 @@
             .year-marker,
             .timeline-item:nth-child(even) .year-marker,
             .timeline-item:nth-child(odd) .year-marker {
-                left: -8px;
+                left: -8px;  
             }
 
             .year-marker span {
@@ -735,7 +743,7 @@
             }
 
             .card-body {
-                padding: 18px;
+                padding: 15px;
             }
 
             .eyebrow {
@@ -753,14 +761,10 @@
         }
 
         @media (max-width: 480px) {
-
             /* .timeline {
                 padding-top: 8px;
             } */
-            .section_heading p {
-                text-align: left;
-            }
-
+            .section_heading p { text-align: left; }
             .timeline::before {
                 left: 28px;
             }
@@ -787,9 +791,9 @@
             }
 
             .year-marker span {
-                width: 55px;
-                height: 55px;
-                font-size: 0.9rem;
+                width: 48px;
+                height: 48px;
+                font-size: 1.25rem;
                 border-width: 2px;
             }
 
@@ -823,7 +827,7 @@
             }
 
             .card-body {
-                padding: 15px;
+                padding: 10px;
             }
 
             .eyebrow {
@@ -866,7 +870,7 @@
                                     <li>
                                         <a class="nav-link" href="programs.html" id="blog_submenu">Programmes</a>
                                     </li>
-                                     <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
+                                    <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
                                     <li class="dropdown">
                                         <a class="nav-link" href="#" id="blog_submenu" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
@@ -879,7 +883,6 @@
                                     </li>
                                     <li><a class="nav-link" href="news_and_media.html">News &amp; Media</a></li>
                                     <li><a class="nav-link" href="contact.html">Contact Us</a></li>
-
                                 </ul>
                             </div>
                         </nav>
@@ -912,7 +915,6 @@
                     <li><a href="top-iit.html">Institutes of India</a></li>
                 </ul>
             </div>
-            
             <a href="news_and_media.html">News &amp; Media</a>
             <a href="contact.html">Contact Us</a>
         </div>
@@ -926,7 +928,7 @@
                         <div class="internal-banner">
                             <div class="row align-items-center">
                                 <div class="col col-lg-12">
-                                    <h1 class="page_title">Great Minds</h1>
+                                    <h1 class="page_title">Indian Research Institutes</h1>
                                 </div>
                             </div>
                         </div>
@@ -935,241 +937,85 @@
             </section>
 
             <section class="container" aria-labelledby="timeline-title">
-                
-                    <h2 class="section-title mt-4">Great Minds who Changed the World</h2>
-                    <p><strong>Timeline of the world's greatest scientists and the groundbreaking discoveries that transformed our understanding of nature, science, and technology.</strong></p>
-                
-                <div class="timeline mt-4">
+                <div class="section_heading">
+                    <h2 class="section-title mt-4">Top 10 Research Institutes in India.</h2>
+                    <p><strong>Timeline showing the Top 10 Indian Research Institutes, ranked by their research reputation, academic influence, scientific output, and innovation ecosystem.</strong></p>
+                </div>
+                <!-- Timeline -->
+                <div class="timeline">
                     <article class="timeline-item">
                         <div class="year-marker">
-                            <span>1564</span>
+                           <span> <i class="fa-solid fa-calendar-days"></i></span>
                         </div>
                         <div class="institute-card">
                             <div class="photo-panel">
-                                <img loading="lazy" src="assets/images/scientists/galileo.webp" alt="Galileo Galilei" />
+                                <img loading="lazy"
+                                    src="assets/images/about-prssescience-exploratory.webp"
+                                    alt="Indian Institute of Science (IISc), Bengaluru" />
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow">
-                                    <span class="born">BORN 1564</span>
-                                </div>
-                                <h3>Galileo Galilei</h3>
+                                 <span class="born">PRSSE Exam</span>
+                              </div>
+                                <h3>Entrance Exam for Laboratory Training Program</h3>
                                 <ul class="field-list">
-                                    <li class="field-chip">Physics</li>
-                                    <li class="field-chip">Astronomy</li>
+                                 <li class="field-chip">28th June 2026, Sunday</li>
+                                    <li class="field-chip">1:00 PM - 2:30 PM</li>
                                 </ul>
-                                <p class="description">Pioneer of the scientific method and observational astronomy. His
-                                    telescope observations challenged conventional beliefs about the universe.</p>
-                                <p class="highlight">His work laid the foundation for modern physics and the
-                                    heliocentric model.</p>
+                                <!-- <p class="description">This is a premier research institute in India, known for its research in areas such as science, engineering, and technology.</p> -->
+                                
                             </div>
                         </div>
                     </article>
-
+                    <!-- Past Events -->
                     <article class="timeline-item">
                         <div class="year-marker">
-                            <span>1643</span>
+                           <span> <i class="fa-solid fa-calendar-check"></i></span>
                         </div>
                         <div class="institute-card">
                             <div class="photo-panel">
-                                <img loading="lazy" src="assets/images/scientists/newton.webp" alt="Isaac Newton" />
+                                <img
+                              src="assets/images/summer-camp-2026.webp"
+                              alt="Preparatory Session for the Dr. Homi Bhabda Balvaidnyanik Competition">
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow">
-                                    <span class="born">BORN 1643</span>
-                                </div>
-                                <h3>Isaac Newton</h3>
+                                 <span class="born">PRSSE Summercamp</span>
+                              </div>
+                                <h3>Summer Camp for Curiuos Minds </h3>
                                 <ul class="field-list">
-                                    <li class="field-chip">Physics</li>
-                                    <li class="field-chip">Mathematics</li>
+                                    <li class="field-chip">9th June - 13th June 2026</li>
+                                    <li class="field-chip">2:00 PM - 5:00 PM</li>
                                 </ul>
-                                <p class="description">Developed the laws of motion and universal gravitation. His
-                                    mathematical framework revolutionized scientific understanding.</p>
-                                <p class="highlight">Invented calculus and formulated the principles governing motion
-                                    and forces.</p>
+                                <!-- <p class="description">This is a research institute that focuses on fundamental research in areas such as physics, mathematics, and biology.</p> -->
+                                <!-- <p class="highlight">A central figure in modern Indian chemical education and industry.
+                                </p> -->
                             </div>
                         </div>
                     </article>
 
                     <article class="timeline-item">
                         <div class="year-marker">
-                            <span>1809</span>
+                          <span> <i class="fa-solid fa-calendar-check"></i></span>
                         </div>
                         <div class="institute-card">
                             <div class="photo-panel">
-                                <img loading="lazy" src="assets/images/scientists/Charles-Darwin.webp" alt="Charles Darwin" />
+                                <img
+                              src="assets/images/prsse-crash-course-2026.webp"
+                              alt="Preparatory Session for the Dr. Homi Bhabda Balvaidnyanik Competition">
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow">
-                                    <span class="born">BORN 1809</span>
-                                </div>
-                                <h3>Charles Darwin</h3>
+                                 <span class="born">PRSSE Crash Course</span>
+                              </div>
+                                <h3>Practical Crash Course for 10th Grade Students</h3>
                                 <ul class="field-list">
-                                    <li class="field-chip">Biology</li>
-                                    <li class="field-chip">Evolution</li>
+                                    <li class="field-chip">27th May - 31st May 2026</li>
+                                    <li class="field-chip">4hrs per day for 5 Days</li>
                                 </ul>
-                                <p class="description">Developed the theory of evolution by natural selection, transforming our understanding of life on Earth.</p>
-                                <p class="highlight">His work on the origin of species fundamentally changed biology and our view of humanity.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="timeline-item">
-                        <div class="year-marker">
-                            <span>1822</span>
-                        </div>
-                        <div class="institute-card">
-                            <div class="photo-panel">
-                                <img loading="lazy" src="assets/images/scientists/pasteur.webp" alt="Louis Pasteur" />
-                            </div>
-                            <div class="card-body">
-                                <div class="eyebrow"><span class="born">Born 1822</span></div>
-                                <h3>Louis Pasteur</h3>
-                                <ul class="field-list">
-                                    <li class="field-chip">Microbiology</li>
-                                    <li class="field-chip">Immunology</li>
-                                </ul>
-                                <p class="description">Pioneer in microbiology and vaccination. His discoveries laid the
-                                    foundation for modern immunology and disease prevention.</p>
-                                <p class="highlight">Developed vaccines and proved that diseases are caused by
-                                    microorganisms.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="timeline-item">
-                        <div class="year-marker">
-                            <span>1831</span>
-                        </div>
-                        <div class="institute-card">
-                            <div class="photo-panel">
-                                <img loading="lazy" src="assets/images/scientists/maxwell.webp"
-                                    alt="James Clerk Maxwell" />
-                            </div>
-                            <div class="card-body">
-                                <div class="eyebrow"><span class="born">Born 1831</span></div>
-                                <h3>James Clerk Maxwell</h3>
-                                <ul class="field-list">
-                                    <li class="field-chip">Physics</li>
-                                    <li class="field-chip">Mathematics</li>
-                                </ul>
-                                <p class="description">Formulated the theory of electromagnetism and unified
-                                    electricity, magnetism, and light into one framework.</p>
-                                <p class="highlight">His equations form the foundation of all modern electrical and
-                                    optical technology.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="timeline-item">
-                        <div class="year-marker">
-                            <span>1856</span>
-                        </div>
-                        <div class="institute-card">
-                            <div class="photo-panel">
-                                <img loading="lazy" src="assets/images/scientists/tesla.webp" alt="Nikola Tesla" />
-                            </div>
-                            <div class="card-body">
-                                <div class="eyebrow"><span class="born">Born 1856</span></div>
-                                <h3>Nikola Tesla</h3>
-                                <ul class="field-list">
-                                    <li class="field-chip">Electrical Engineering</li>
-                                    <li class="field-chip">Physics</li>
-                                </ul>
-                                <p class="description">Pioneer in electrical engineering and AC power systems. His
-                                    innovations transformed global energy distribution.</p>
-                                <p class="highlight">Invented alternating current technology and advanced wireless
-                                    transmission.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="timeline-item">
-                        <div class="year-marker">
-                            <span>1867</span>
-                        </div>
-                        <div class="institute-card">
-                            <div class="photo-panel">
-                                <img loading="lazy" src="assets/images/scientists/Marie-Curie.webp" alt="Marie Curie" />
-                            </div>
-                            <div class="card-body">
-                                <div class="eyebrow"><span class="born">Born 1867</span></div>
-                                <h3>Marie Curie</h3>
-                                <ul class="field-list">
-                                    <li class="field-chip">Physics</li>
-                                    <li class="field-chip">Chemistry</li>
-                                </ul>
-                                <p class="description">First woman to win a Nobel Prize and only person to win Nobel
-                                    Prizes in multiple sciences. Discovered radium and polonium.</p>
-                                <p class="highlight">Her research on radioactivity revolutionized physics, chemistry,
-                                    and medicine.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="timeline-item">
-                        <div class="year-marker">
-                            <span>1879</span>
-                        </div>
-                        <div class="institute-card">
-                            <div class="photo-panel">
-                                <img loading="lazy" src="assets/images/scientists/einstein.webp"
-                                    alt="Albert Einstein" />
-                            </div>
-                            <div class="card-body">
-                                <div class="eyebrow"><span class="born">Born 1879</span></div>
-                                <h3>Albert Einstein</h3>
-                                <ul class="field-list">
-                                    <li class="field-chip">Physics</li>
-                                </ul>
-                                <p class="description">Developed the theories of special and general relativity,
-                                    fundamentally changing our understanding of space, time, and gravity.</p>
-                                <p class="highlight">His equation E=mc² revealed the equivalence of mass and energy.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="timeline-item">
-                        <div class="year-marker">
-                            <span>1918</span>
-                        </div>
-                        <div class="institute-card">
-                            <div class="photo-panel">
-                                <img loading="lazy" src="assets/images/scientists/Richard-Feynman.webp" alt="Richard Feynman" />
-                            </div>
-                            <div class="card-body">
-                                <div class="eyebrow"><span class="born">Born 1918</span></div>
-                                <h3>Richard Feynman</h3>
-                                <ul class="field-list">
-                                    <li class="field-chip">Physics</li>
-                                    <li class="field-chip">Quantum Mechanics</li>
-                                </ul>
-                                <p class="description">Made major contributions to quantum mechanics and quantum
-                                    electrodynamics. Known for making complex physics understandable.</p>
-                                <p class="highlight">Developed Feynman diagrams and was a legendary science educator.
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="timeline-item">
-                        <div class="year-marker">
-                            <span>1942</span>
-                        </div>
-                        <div class="institute-card">
-                            <div class="photo-panel">
-                                <img loading="lazy" src="assets/images/scientists/hawking.webp" alt="Stephen Hawking" />
-                            </div>
-                            <div class="card-body">
-                                <div class="eyebrow"><span class="born">Born 1942</span></div>
-                                <h3>Stephen Hawking</h3>
-                                <ul class="field-list">
-                                    <li class="field-chip">Physics</li>
-                                    <li class="field-chip">Cosmology</li>
-                                </ul>
-                                <p class="description">Made groundbreaking discoveries about black holes and the
-                                    beginning of the universe. Brought theoretical physics to public consciousness.</p>
-                                <p class="highlight">Discovered Hawking radiation, proving that black holes emit energy.
-                                </p>
+                                <!-- <p class="description">This is a premier engineering institute in India, known for its research in areas such as computer science, electrical engineering, and mechanical engineering.</p> -->
+                                <!-- <p class="highlight">His notebooks continue to influence modern mathematical research.
+                                </p> -->
                             </div>
                         </div>
                     </article>
@@ -1185,7 +1031,6 @@
                                 <h3 class="footer_widget_title">Address</h3>
                                 <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
                                     School, Near Alankar Talkies, North Ambazari road, Nagpur- 440010.</p>
-
                             </div>
                         </div>
                         <div class="col col-lg-4">
