@@ -2,290 +2,1124 @@
 <html lang="en">
 
 <head>
-   <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
-   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-   <title>Professor Rajendra Singh Science Exploratory</title>
-   <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
-   <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-   <script src="assets/js/bootstrap.bundle.min.js"></script>
-   <style>
-      @media screen and (min-width: 992px) {
-         .sidebarmobile,
-         .mobilemenu-btn {
-            display: none;
-         }
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Professor Rajendra Singh Science Exploratory</title>
+    <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #16201c;
+            --muted: #fe7b14;
+            --paper: #fffaf0;
+            --surface: #ffffff;
+            --line: #d8d0bf;
+            --saffron: #d9822b;
+            --teal: #177e89;
+            --plum: #7d3c98;
+            --green: #4f7f52;
+            --rose: #b3435a;
+            --shadow: 0 18px 50px rgba(36, 31, 22, 0.12);
+            --radius: 25px;
+        }
 
-         .site_logo img {
-            width: 330px;
+        @media screen and (min-width: 992px) {
+            .sidebarmobile,
+            .mobilemenu-btn {
+                display: none;
+            }
+
+            .site_logo img {
+                width: 330px;
+            }
+        }
+
+        @media screen and (max-width:425px) {
+            .site_logo img {
+                width: 280px;
+            }
+        }
+
+        @media screen and (max-width: 991px) {
+
+            .container,
+            .hero_banner.style_1 .container,
+            .site_header .container {
+                margin-top: 0px !important;
+            }
+        }
+
+        .page_banner .content_wrapper {
+            align-items: center;
+            background-image:  url("assets/images/banner/indian-reserch-institutes-banner.webp");
+            background-repeat: no-repeat;
+            background-size: 150% auto;
+            background-position: 50% 45%;
+            background-color: transparent;
+            border-radius: 15px;
+            display: flex;
+            min-height: 300px;
+            padding: 50px 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+            animation: fadeIn 0.95s ease both, bannerDrift 10s ease-in-out infinite;
+        }
+
+        .page_banner .internal-banner {
+            background: transparent !important;
+            background-image: none !important;
+            width: 100%;
             height: auto;
-         }
-      }
+        }
 
-      @media screen and (max-width:425px) {
-         .site_logo img {
-            width: 280px;
-         }
-      }
+        .page_banner .content_wrapper::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
 
-      @media screen and (max-width: 991px) {
-         .container,
-         .hero_banner.style_1 .container,
-         .site_header .container {
-            margin-top: 0 !important;
-         }
-      }
+        .page_banner .content_wrapper>* {
+            position: relative;
+            z-index: 2;
+        }
 
-      .page_banner .content_wrapper {
-         align-items: center;
-         background-image: url("assets/images/banner/anouncements-banner.webp");
-         background-color: transparent;
-         background-repeat: no-repeat;
-         background-size: cover;
-         background-position: 50% 45%;
-         border-radius: 15px;
-         display: flex;
-         min-height: 300px;
-         padding: 40px 30px;
-         position: relative;
-         overflow: hidden;
-         box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-         animation: fadeIn 0.95s ease both, bannerDrift 10s ease-in-out infinite;
-      }
-      .summer-camp-content p {
-         font-size: 18px;
-      }
+        .page_banner .content_wrapper,
+        .page_banner .content_wrapper .breadcrumb_nav,
+        .page_banner .content_wrapper .breadcrumb_nav a {
+            color: #fff;
+        }
 
-      @media screen and (max-width: 991px) {
-         .page_banner .content_wrapper {
-            min-height: 20%;
-            background-position: 100% 100% !important;
-         }
+        .page_banner .content_wrapper .breadcrumb_nav li {
+            opacity: 0.9;
+        }
 
-         .page_banner .content_wrapper h1 {
-            font-size: 40px;
-            line-height: 2.8rem;
-         }
-      }
-   </style>
+        @media screen and (max-width: 767px) {
+            .page_banner .content_wrapper {
+                min-height: 130px !important;
+                padding: 30px 20px;
+            }
+
+            .page_banner .content_wrapper h1.page_title {
+                font-size: 1.5rem;
+                line-height: 24px;
+            }
+        }
+
+        /* .page-shell {
+            width: min(1160px, calc(100% - 32px));
+            margin: 0 auto;
+        } */
+
+        .masthead {
+            min-height: 92vh;
+            display: grid;
+            align-items: end;
+            padding: 34px 0 44px;
+        }
+
+        .masthead-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(320px, 440px);
+            gap: 38px;
+            align-items: end;
+        }
+
+        .version-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            width: fit-content;
+            padding: 8px 12px;
+            border: 1px solid rgba(22, 32, 28, 0.16);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.72);
+            color: #4c4133;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .version-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--saffron);
+            box-shadow: 0 0 0 4px rgba(217, 130, 43, 0.18);
+        }
+
+        h1 {
+            max-width: 860px;
+            margin: 26px 0 16px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(3.1rem, 8vw, 7.6rem);
+            line-height: 0.92;
+            font-weight: 800;
+            letter-spacing: 0;
+        }
+
+        .lede {
+            max-width: 760px;
+            margin: 0;
+            color: var(--muted);
+            font-size: clamp(1rem, 2vw, 1.22rem);
+        }
+
+        .summary-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .summary-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border: 1px solid rgba(22, 32, 28, 0.14);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.75);
+            color: #473f35;
+            font-weight: 700;
+            font-size: 0.93rem;
+        }
+
+        .portrait-stack {
+            position: relative;
+            min-height: 530px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #1d2624;
+            box-shadow: var(--shadow);
+            isolation: isolate;
+        }
+
+        .portrait-stack::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 15%, rgba(0, 0, 0, 0.78));
+            z-index: 1;
+        }
+
+        .portrait-stack img {
+            position: absolute;
+            width: 48%;
+            height: 48%;
+            object-fit: cover;
+            filter: saturate(0.92) contrast(1.04);
+        }
+
+        .portrait-stack img:nth-child(1) {
+            left: 0;
+            top: 0;
+            width: 56%;
+            height: 57%;
+        }
+
+        .portrait-stack img:nth-child(2) {
+            right: 0;
+            top: 0;
+            width: 44%;
+            height: 42%;
+        }
+
+        .portrait-stack img:nth-child(3) {
+            right: 0;
+            top: 42%;
+            width: 44%;
+            height: 34%;
+        }
+
+        .portrait-stack img:nth-child(4) {
+            left: 0;
+            bottom: 0;
+            width: 48%;
+            height: 43%;
+        }
+
+        .portrait-stack img:nth-child(5) {
+            right: 0;
+            bottom: 0;
+            width: 52%;
+            height: 24%;
+        }
+
+        .stack-caption {
+            position: absolute;
+            z-index: 2;
+            left: 22px;
+            right: 22px;
+            bottom: 20px;
+            color: #fff8e9;
+        }
+
+        .stack-caption strong {
+            display: block;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.65rem;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stack-caption span {
+            color: rgba(255, 248, 233, 0.78);
+            font-size: 0.98rem;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 18px 0;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: calc(50% - 1px);
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--teal), var(--saffron), var(--plum), var(--green));
+            opacity: 0.55;
+        }
+
+        .timeline-item {
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 74px minmax(0, 1fr);
+            gap: 18px;
+            margin: 0 0 10px;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(odd) .institute-card {
+            grid-column: 1;
+        }
+
+        .timeline-item:nth-child(even) .institute-card {
+            grid-column: 3;
+        }
+
+        .year-marker {
+            position: absolute;
+            top: 50%;
+            left: calc(50% - 37px);
+            transform: translateY(-50%);
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            width: 74px;
+            height: 74px;
+        }
+
+        .year-marker span {
+            display: grid;
+            place-items: center;
+            width: 74px;
+            height: 74px;
+            margin: 0px;
+            padding: 12px;
+            line-height: 1;
+            border: 5px solid var(--paper);
+            border-radius: 50%;
+            background: var(--ink);
+            color: #fff8e9;
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: 600;
+            font-size: 1.6rem;
+            box-shadow: 0 9px 24px rgba(22, 32, 28, 0.18);
+        }
+
+        .institute-card {
+            position: relative;
+            display: grid;
+            min-height: 50vh;
+            /* grid-template-columns: 70% minmax(0, 1fr); */
+            overflow: visible;
+            background: var(--surface);
+            border: 1px solid rgba(22, 32, 28, 0.12);
+            border-radius: var(--radius);
+            box-shadow: 0 14px 34px rgba(36, 31, 22, 0.1);
+            align-self: center;
+            will-change: transform, opacity, box-shadow;
+            transform: translateX(var(--sr-translate, 0)) translateY(var(--sr-translateY, 0));
+            opacity: 0;
+            transition: transform 0.75s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.75s ease, box-shadow 0.3s ease;
+            border:none;
+        }
+
+        .institute-card:hover {
+            transform: translateX(var(--sr-translate, 0)) translateY(-8px);
+            box-shadow: 0 20px 50px rgba(36, 31, 22, 0.15);
+        }
+
+        .institute-card::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0), var(--connector-color, rgba(22, 32, 28, 0.65)), rgba(0, 0, 0, 0));
+            opacity: 0.9;
+            pointer-events: none;
+        }
+
+        .timeline-item:nth-child(odd) .institute-card {
+            --sr-translate: -350px;
+        }
+
+        .timeline-item:nth-child(odd) .institute-card::after {
+            right: -50px;
+            left: auto;
+            background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), var(--connector-color, rgba(22, 32, 28, 0.65)), rgba(0, 0, 0, 0));
+        }
+
+        .timeline-item:nth-child(even) .institute-card {
+            --sr-translate: 350px;
+        }
+
+        .timeline-item:nth-child(even) .institute-card::after {
+            left: -50px;
+            right: auto;
+            background-image: linear-gradient(270deg, rgba(0, 0, 0, 0), var(--connector-color, rgba(22, 32, 28, 0.65)), rgba(0, 0, 0, 0));
+        }
+
+        .institute-card.scroll-reveal-visible {
+            --sr-translate: 0;
+            opacity: 1;
+            transform: translateX(0) translateY(0);
+        }
+
+        .timeline-item:nth-child(4n + 1) {
+            --connector-color: var(--teal);
+        }
+
+        .timeline-item:nth-child(4n + 1) .year-marker span,
+        .timeline-item:nth-child(4n + 1) .field-chip {
+            background: var(--teal);
+        }
+
+        .timeline-item:nth-child(4n + 2) {
+            --connector-color: var(--saffron);
+        }
+
+        .timeline-item:nth-child(4n + 2) .year-marker span,
+        .timeline-item:nth-child(4n + 2) .field-chip {
+            background: var(--saffron);
+        }
+
+        .timeline-item:nth-child(4n + 3) {
+            --connector-color: var(--plum);
+        }
+
+        .timeline-item:nth-child(4n + 3) .year-marker span,
+        .timeline-item:nth-child(4n + 3) .field-chip {
+            background: var(--plum);
+        }
+
+        .timeline-item:nth-child(4n) {
+            --connector-color: var(--green);
+        }
+
+        .timeline-item:nth-child(4n) .year-marker span,
+        .timeline-item:nth-child(4n) .field-chip {
+            background: var(--green);
+        }
+
+        .photo-panel {
+            position: relative;
+            /* min-height: 245px; */
+            background: #e8dfcd;
+            border-radius: 30px;
+        }
+
+        .photo-panel img {
+            width: 100%;
+            height: 100%;
+            min-height: 245px;
+            object-fit: cover;
+            display: block;
+            filter: sepia(0.05) saturate(0.95) contrast(1.03);
+            border-radius: 30px;
+        }
+
+        .photo-panel::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-right: 1px solid rgba(22, 32, 28, 0.12);
+            pointer-events: none;
+        }
+
+        .card-body {
+            padding: 15px 24px 15px;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+
+        .born {
+            color: var(--muted);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .source-note {
+            width: fit-content;
+            padding: 5px 8px;
+            border: 1px solid rgba(179, 67, 90, 0.28);
+            border-radius: 999px;
+            color: var(--rose);
+            font-size: 0.74rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            white-space: nowrap;
+        }
+
+        .institute-card h3 {
+            margin: 0 0 10px;
+            font-size: clamp(.85rem, 1.5vw, 1.3rem);
+            line-height: 1.10;
+            letter-spacing: 0;
+        }
+
+        .field-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0 0 14px;
+            padding: 0;
+            list-style: none;
+        }
+
+       .card-body .field-chip {
+            padding: 8px 10px;
+            border-radius: 999px;
+            color: #fff;
+            font-size: 0.77rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .description {
+            margin: 0;
+            color: #3f4843;
+            font-size: 0.98rem;
+            line-height: 1.4;
+        }
+
+        .highlight {
+            margin-top: 14px;
+            padding-top: 13px;
+            border-top: 1px solid rgba(22, 32, 28, 0.11);
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .notes-band {
+            margin: 0 0 58px;
+            padding: 24px;
+            border: 1px solid rgba(22, 32, 28, 0.13);
+            border-radius: var(--radius);
+            background: rgba(255, 255, 255, 0.68);
+        }
+
+        .notes-band h2 {
+            margin: 0 0 10px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.8rem;
+            letter-spacing: 0;
+        }
+
+        .notes-band p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        footer {
+            padding: 34px 0 48px;
+            border-top: 1px solid rgba(22, 32, 28, 0.14);
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .source-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px 20px;
+            margin-top: 14px;
+        }
+
+        .source-grid a {
+            display: inline-block;
+            overflow-wrap: anywhere;
+        }
+
+        @media (max-width: 900px) {
+            .masthead {
+                min-height: auto;
+                padding-top: 28px;
+            }
+
+            .masthead-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portrait-stack {
+                min-height: 420px;
+            }
+
+            .section-heading {
+                display: block;
+            }
+
+            .section-heading p {
+                margin-top: 12px;
+            }
+
+            .timeline::before {
+                left: calc(50% - 1px);
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even),
+            .timeline-item:nth-child(odd) {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) 74px minmax(0, 1fr);
+                gap: 14px;
+                align-items: center;
+            }
+
+            .timeline-item:nth-child(odd) .institute-card {
+                grid-column: 1;
+            }
+
+            .timeline-item:nth-child(even) .institute-card {
+                grid-column: 3;
+            }
+
+            .year-marker,
+            .timeline-item:nth-child(even) .year-marker,
+            .timeline-item:nth-child(odd) .year-marker {
+                position: absolute;
+                top: 50%;
+                left: calc(50% - 37px);
+                transform: translateY(-50%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 74px;
+                height: 74px;
+                z-index: 2;
+            }
+
+            .institute-card,
+            .timeline-item:nth-child(even) .institute-card,
+            .timeline-item:nth-child(odd) .institute-card {
+                grid-template-columns: 142px minmax(0, 1fr);
+                align-self: center;
+            }
+
+            .source-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .masthead {
+                padding-bottom: 28px;
+            }
+
+            h1 {
+                font-size: clamp(2.75rem, 17vw, 4.4rem);
+            }
+
+            /* .timeline {
+                padding-top: 10px;
+            } */
+
+            .timeline::before {
+                left: 32px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even),
+            .timeline-item:nth-child(odd) {
+                display: grid;
+                grid-template-columns: 64px minmax(0, 1fr);
+                gap: 14px;
+                margin-bottom: 26px;
+                align-items: center;
+            }
+
+            .timeline-item:nth-child(odd) .institute-card {
+                grid-column: 2;
+                --sr-translate: 100px;
+            }
+
+            .timeline-item:nth-child(even) .institute-card {
+                grid-column: 2;
+                --sr-translate: 100px;
+            }
+
+            .year-marker {
+                position: relative;
+                top: auto;
+                left: 0;
+                transform: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 52px;
+                height: 52px;
+                z-index: 2;
+                justify-self: center;
+            }
+
+            .year-marker,
+            .timeline-item:nth-child(even) .year-marker,
+            .timeline-item:nth-child(odd) .year-marker {
+                left: -8px;  
+            }
+
+            .year-marker span {
+                width: 52px;
+                height: 52px;
+                border-width: 2px;
+                font-size: 0.9rem;
+                flex-shrink: 0;
+            }
+
+            .institute-card::after,
+            .timeline-item:nth-child(odd) .institute-card::after,
+            .timeline-item:nth-child(even) .institute-card::after {
+                left: -40px;
+                right: auto;
+                width: 40px;
+                background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), var(--connector-color, rgba(22, 32, 28, 0.75)), rgba(0, 0, 0, 0));
+            }
+
+            .institute-card,
+            .timeline-item:nth-child(even) .institute-card,
+            .timeline-item:nth-child(odd) .institute-card {
+                grid-template-columns: 1fr;
+                align-self: stretch;
+            }
+
+            .photo-panel {
+                min-height: 230px;
+                border-radius: 30px 30px 0 0;
+            }
+
+            .photo-panel img {
+                min-height: 230px;
+                border-radius: 30px 30px 0 0;
+            }
+
+            .photo-panel::after {
+                border-right: 0;
+                border-bottom: 1px solid rgba(22, 32, 28, 0.12);
+            }
+
+            .card-body {
+                padding: 15px;
+            }
+
+            .eyebrow {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .source-note {
+                white-space: normal;
+            }
+
+            .source-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* .timeline {
+                padding-top: 8px;
+            } */
+            .section_heading p { text-align: left; }
+            .timeline::before {
+                left: 28px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even),
+            .timeline-item:nth-child(odd) {
+                display: grid;
+                grid-template-columns: 56px minmax(0, 1fr);
+                gap: 10px;
+                margin-bottom: 15px;
+                align-items: center;
+            }
+
+            .timeline-item:nth-child(odd) .institute-card,
+            .timeline-item:nth-child(even) .institute-card {
+                grid-column: 2;
+            }
+
+            .year-marker {
+                width: 48px;
+                height: 48px;
+                justify-self: center;
+            }
+
+            .year-marker span {
+                width: 48px;
+                height: 48px;
+                font-size: 1.25rem;
+                border-width: 2px;
+            }
+
+            .institute-card::after,
+            .timeline-item:nth-child(odd) .institute-card::after,
+            .timeline-item:nth-child(even) .institute-card::after {
+                left: -36px;
+                right: auto;
+                width: 36px;
+                background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), var(--connector-color, rgba(22, 32, 28, 0.75)), rgba(0, 0, 0, 0));
+            }
+
+            .institute-card,
+            .timeline-item:nth-child(even) .institute-card,
+            .timeline-item:nth-child(odd) .institute-card {
+                grid-template-columns: 1fr;
+                align-self: stretch;
+            }
+
+            .photo-panel {
+                min-height: 210px;
+            }
+
+            .photo-panel img {
+                min-height: 210px;
+            }
+
+            .photo-panel::after {
+                border-right: 0;
+                border-bottom: 1px solid rgba(22, 32, 28, 0.12);
+            }
+
+            .card-body {
+                padding: 10px;
+            }
+
+            .eyebrow {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .source-note {
+                white-space: normal;
+            }
+
+            .source-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
-   <div class="page_wrapper">
-      <div class="backtotop">
-         <a href="#" class="scroll"><i class="far fa-arrow-up"></i></a>
-      </div>
-      <!-- Top Header Navigation -->
-      <header class="site_header site_header_1">
-         <div class="container">
-            <div class="row align-items-center">
-               <div class="col col-lg-3 col-10">
-                  <div class="site_logo">
-                     <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt=""></a>
-
-                  </div>
-               </div>
-               <div class="col col-lg-9 col-2">
-                  <nav class="main_menu navbar navbar-expand-lg">
-                     <div class="main_menu_inner collapse navbar-collapse" id="main_menu_dropdown">
-                        <ul class="main_menu_list unordered_list_center">
-                           <li><a class="nav-link" href="index.html">Home</a></li>
-                           <li><a class="nav-link" href="about.html"><u>About us</u></a></li>
-                           <li>
-                              <a class="nav-link" href="programs.html" id="blog_submenu">Programmes</a>
-                           </li>
-                           <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
-                           <li class="dropdown">
-                              <a class="nav-link" href="#" id="blog_submenu" role="button" data-bs-toggle="dropdown"
-                                 aria-expanded="false">Knowledge</a>
-                              <ul class="dropdown-menu" aria-labelledby="blog_submenu">
-                                 <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
-                                 <li><a class="nav-link" href="indian-scientist.html">Indian Scientist</a></li>
-                                 <li><a class="nav-link" href="top-iit.html">Top Indian Institutes</a></li>
-                              </ul>
-                           </li>
-                           <li><a class="nav-link" href="news_and_media.html">News &amp; Media</a></li>
-                           <li><a class="nav-link" href="contact.html">Contact Us</a></li>
-                        </ul>
-                     </div>
-                  </nav>
-                  <!-- Mobile Hamburger Menu (visible only on small screens) -->
-                  <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu"
-                     aria-controls="sidebarMenumobile"
-                     aria-expanded="false"><span></span><span></span><span></span></button>
-               </div>
-            </div>
-         </div>
-      </header>
-
-      <!-- Sidebar Menu (for mobile) -->
-      <div id="sidebarMenumobile" class="sidebarmobile">
-         <button type="button" class="closebtn" aria-label="Close menu">x</button>
-         <a href="index.html">Home</a>
-         <a href="about.html">About Us</a>
-
-         <!-- Dropdown (Mobile) -->
-         <div class="dropdownmobile">
-            <a href="programs.html">Programmes</a>
-         </div>
-         <a href="exploratory.html">Exploratory Perks</a>
-         <!-- Dropdown (Mobile) -->
-         <div class="dropdownmobile">
-            <a href="#" class="dropdownmobile-toggle">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
-            <ul class="dropdownmobile-menu">
-               <li><a href="great-minds.html">Great Minds</a></li>
-               <li><a href="indian-scientist.html">Indian Scientist</a></li>
-               <li><a href="top-iit.html">Institutes of India</a></li>
-            </ul>
-         </div>
-         <a href="news_and_media.html">News &and; Media</a>
-         <a href="contact.html">Contact Us</a>
-      </div>
-
-      <!-- Overlay (for closing sidebar when clicking outside) -->
-      <div id="menuOverlay" class="menu-overlay"></div>
-      <main class="page_content">
-         <section class="page_banner">
-            <section class="page_banner m-0">
-               <div class="container">
-                  <div class="content_wrapper">
-                     <div class="row align-items-center">
-                        <div class="col col-lg-12">
-                           <h1 class="page_title">Announcements</h1>
+    <div class="page_wrapper">
+        <div class="backtotop">
+            <a href="#" class="scroll"><i class="far fa-arrow-up"></i></a>
+        </div>
+        <!-- Top Header Navigation -->
+        <header class="site_header site_header_1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col col-lg-3 col-10">
+                        <div class="site_logo">
+                            <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt="">
+                            </a>
                         </div>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                    <div class="col col-lg-9 col-2">
+                        <nav class="main_menu navbar navbar-expand-lg">
+                            <div class="main_menu_inner collapse navbar-collapse" id="main_menu_dropdown">
+                                <ul class="main_menu_list unordered_list_center">
+                                    <li><a class="nav-link" href="index.html">Home</a></li>
+                                    <li><a class="nav-link" href="about.html"><u>About us</u></a></li>
+                                    <li>
+                                        <a class="nav-link" href="programs.html" id="blog_submenu">Programmes</a>
+                                    </li>
+                                    <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
+                                    <li class="dropdown">
+                                        <a class="nav-link" href="#" id="blog_submenu" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
+                                        <ul class="dropdown-menu" aria-labelledby="blog_submenu">
+                                            <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
+                                            <li><a class="nav-link" href="indian-scientist.html">Indian Scientists</a>
+                                            </li>
+                                            <li><a class="nav-link" href="top-iit.html">Top Indian Institutes</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="nav-link" href="news_and_media.html">News &amp; Media</a></li>
+                                    <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Mobile Hamburger Menu (visible only on small screens) -->
+                        <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu"
+                            aria-controls="sidebarMenumobile"
+                            aria-expanded="false"><span></span><span></span><span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Sidebar Menu (for mobile) -->
+        <div id="sidebarMenumobile" class="sidebarmobile">
+            <button type="button" class="closebtn" aria-label="Close menu">x</button>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+
+            <!-- Dropdown (Mobile) -->
+            <div class="dropdownmobile">
+                <a href="programs.html">Programmes</a>
+            </div>
+            <a href="exploratory.html">Exploratory Perks</a>
+            <!-- Dropdown (Mobile) -->
+            <div class="dropdownmobile">
+                <a href="#" class="dropdownmobile-toggle">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
+                <ul class="dropdownmobile-menu">
+                    <li><a href="great-minds.html">Great Minds</a></li>
+                    <li><a href="indian-scientist.html">Indian Scientists</a></li>
+                    <li><a href="top-iit.html">Institutes of India</a></li>
+                </ul>
+            </div>
+            <a href="news_and_media.html">News &amp; Media</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <!-- Overlay (for closing sidebar when clicking outside) -->
+        <div id="menuOverlay" class="menu-overlay"></div>
+        <main class="page_content">
+            <section class="page_banner">
+                <div class="container">
+                    <div class="content_wrapper">
+                        <div class="internal-banner">
+                            <div class="row align-items-center">
+                                <div class="col col-lg-12">
+                                    <h1 class="page_title">Indian Research Institutes</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <div class="container summer-camp-content">
-               <div class="content">
-                  <div class="row">
-                     <div class="col col-lg-12">
-                        <h2 class="section-title mt-4 mb-4">Announcements</h2>
-                            <div class="img-cont mb-5" style="margin-bottom: 25px;"><img
-                              src="assets/images/about-prssescience-exploratory.jpeg"
-                              alt="Preparatory Session for the Dr. Homi Bhabda Balvaidnyanik Competition"></div>
-                              
-                           <div class="img-cont m-5"><img
-                              src="assets/images/summer-camp-2026.jpeg"
-                              alt="Preparatory Session for the Dr. Homi Bhabda Balvaidnyanik Competition"></div>
-                       
-                           <div class="img-cont"><img
-                              src="assets/images/prsse-crash-course-2026.jpeg"
-                              alt="Preparatory Session for the Dr. Homi Bhabda Balvaidnyanik Competition"></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
 
-         <!-- <style>
-			.meta_info_list li{list-item:none;font-size:16px;}
-			.meta_info_list li::marker{font-size:0px;}
-			</style> -->
-         <section class="newslatter_section">
-            <div class="container">
-               <div class="newslatter_box" style="background-image: url(assets/images/shape/shape_img_6.svg);">
-                  <div class="row justify-content-center">
-                     <div class="col col-lg-6">
-                        <div class="section_heading text-center">
-                           <h2 class="heading_text">Admission Open</h2>
-                           <p class="heading_description mb-0">Admission to Prof. Rajendra Singh Exploratory is open to
-                              all students who have an interest in science. Admissions are fixed in the month of
-                              June-July for one year academic session till April.</p>
+            <section class="container" aria-labelledby="timeline-title">
+                <div class="section_heading">
+                    <h2 class="section-title mt-4">Top 10 Research Institutes in India.</h2>
+                    <p><strong>Timeline showing the Top 10 Indian Research Institutes, ranked by their research reputation, academic influence, scientific output, and innovation ecosystem.</strong></p>
+                </div>
+                <!-- Timeline -->
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="year-marker">
+                           <span> <i class="fa-solid fa-calendar-days"></i></span>
                         </div>
-                        <form action="#">
-                           <div class="form_item m-0">
-                              <button type="submit" class="btn btn_dark">
-                                 <span><small>Apply Now</small> <small>Apply Now</small></span>
-                              </button>
-                           </div>
-                        </form>
-                     </div>
-                  </div>
-               </div>
+                        <div class="institute-card">
+                            <div class="photo-panel">
+                                <img loading="lazy"
+                                    src="assets/images/about-prssescience-exploratory.webp"
+                                    alt="Indian Institute of Science (IISc), Bengaluru" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow">
+                                 <span class="born">PRSSE Exam</span>
+                              </div>
+                                <h3>Entrance Exam for Laboratory Training Program</h3>
+                                <ul class="field-list">
+                                 <li class="field-chip">28th June 2026, Sunday</li>
+                                    <li class="field-chip">1:00 PM - 2:30 PM</li>
+                                </ul>
+                                <!-- <p class="description">This is a premier research institute in India, known for its research in areas such as science, engineering, and technology.</p> -->
+                                
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Past Events -->
+                    <article class="timeline-item">
+                        <div class="year-marker">
+                           <span> <i class="fa-solid fa-calendar-check"></i></span>
+                        </div>
+                        <div class="institute-card">
+                            <div class="photo-panel">
+                                <img
+                              src="assets/images/summer-camp-2026.webp"
+                              alt="Preparatory Session for the Dr. Homi Bhabda Balvaidnyanik Competition">
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow">
+                                 <span class="born">PRSSE Summercamp</span>
+                              </div>
+                                <h3>Summer Camp for Curiuos Minds </h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">9th June - 13th June 2026</li>
+                                    <li class="field-chip">2:00 PM - 5:00 PM</li>
+                                </ul>
+                                <!-- <p class="description">This is a research institute that focuses on fundamental research in areas such as physics, mathematics, and biology.</p> -->
+                                <!-- <p class="highlight">A central figure in modern Indian chemical education and industry.
+                                </p> -->
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker">
+                          <span> <i class="fa-solid fa-calendar-check"></i></span>
+                        </div>
+                        <div class="institute-card">
+                            <div class="photo-panel">
+                                <img
+                              src="assets/images/prsse-crash-course-2026.webp"
+                              alt="Preparatory Session for the Dr. Homi Bhabda Balvaidnyanik Competition">
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow">
+                                 <span class="born">PRSSE Crash Course</span>
+                              </div>
+                                <h3>Practical Crash Course for 10th Grade Students</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">27th May - 31st May 2026</li>
+                                    <li class="field-chip">4hrs per day for 5 Days</li>
+                                </ul>
+                                <!-- <p class="description">This is a premier engineering institute in India, known for its research in areas such as computer science, electrical engineering, and mechanical engineering.</p> -->
+                                <!-- <p class="highlight">His notebooks continue to influence modern mathematical research.
+                                </p> -->
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+        </main>
+        <footer class="site_footer">
+            <div class="footer_widget_area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Address</h3>
+                                <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
+                                    School, Near Alankar Talkies, North Ambazari road, Nagpur- 440010.</p>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Social Links</h3>
+                                <ul class="social_links unordered_list">
+                                    <li>
+                                        <a href="https://www.facebook.com/profile.php?id=100094309040998"
+                                            name="facebook" target="_blank">
+                                            <!-- <img src="assets/images/icon/5365678_fb_facebook_facebook logo_icon.png" alt="Image of 5365678 fb facebook facebook logo icon"/> -->
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"
+                                            target="_blank">
+                                            <!-- <img src="assets/images/icon/410526_youtube_play_icon.png" alt="Image of 410526 youtube play icon"/> -->
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
+                                            target="_blank">
+                                            <!-- <img src="assets/images/icon/5296765_camera_instagram_instagram logo_icon.png" alt="Image of 5296765 camera instagram instagram logo icon"/> -->
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wa.me/917249811866" target="_blank">
+                                            <!-- <img src="assets/images/icon/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png" alt="Image of 5296520 bubble chat mobile whatsapp whatsapp logo icon"/> -->
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Contact Details</h3>
+                                <ul class="blog_small_group unordered_list_block">
+                                    <li>
+                                        <a class="blog_small" href="#">
+                                            <span class="item_content">
+                                                <small class="item_post_date">Call : +917249811866</small>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="blog_small" href="#">
+                                            <span class="item_content">
+                                                <small class="item_post_date">Email: prsscienceexploratory@gmail.com
+                                                </small>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </section>
-      </main>
-      <footer class="site_footer">
-         <div class="footer_widget_area">
-            <div class="container">
-               <div class="row">
-                  <div class="col col-lg-4 col-md-6 col-sm-6">
-                     <div class="footer_widget">
-                        <h3 class="footer_widget_title">Address</h3>
-                        <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High School, Near
-                           Alankar Talkies, North Ambazari road, Nagpur- 440010.</p>
-                     </div>
-                  </div>
-                  <div class="col col-lg-4">
-                     <div class="footer_widget">
-                        <h3 class="footer_widget_title">Social Links</h3>
-                        <ul class="social_links unordered_list">
-                           <li>
-                              <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook"
-                                 target="_blank">
-                                 <!-- <img src="assets/images/icon/5365678_fb_facebook_facebook logo_icon.png" alt="Image of 5365678 fb facebook facebook logo icon"/> -->
-                                 <i class="fab fa-facebook-f"></i>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I" target="_blank">
-                                 <!-- <img src="assets/images/icon/410526_youtube_play_icon.png" alt="Image of 410526 youtube play icon"/> -->
-                                 <i class="fab fa-youtube"></i>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
-                                 target="_blank">
-                                 <!-- <img src="assets/images/icon/5296765_camera_instagram_instagram logo_icon.png" alt="Image of 5296765 camera instagram instagram logo icon"/> -->
-                                 <i class="fab fa-instagram"></i>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="https://wa.me/917249811866" target="_blank">
-                                 <!-- <img src="assets/images/icon/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png" alt="Image of 5296520 bubble chat mobile whatsapp whatsapp logo icon"/> -->
-                                 <i class="fab fa-whatsapp"></i>
-                              </a>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col col-lg-4 col-md-6 col-sm-6">
-                     <div class="footer_widget">
-                        <h3 class="footer_widget_title">Contact Details</h3>
-                        <ul class="blog_small_group unordered_list_block">
-                           <li>
-                              <a class="blog_small" href="#">
-                                 <span class="item_content">
-                                    <small class="item_post_date">Call : +917249811866</small>
-                                 </span>
-                              </a>
-                           </li>
-                           <li>
-                              <a class="blog_small" href="#">
-                                 <span class="item_content">
-                                    <small class="item_post_date">Email: prsscienceexploratory@gmail.com </small>
-                                 </span>
-                              </a>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
+            <div class="copyright_widget">
+                <div class="container">
+                    <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All
+                        rights reserved | Copyrights 2026</p>
+                </div>
             </div>
-         </div>
-         <div class="copyright_widget">
-            <div class="container">
-               <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All rights
-                  reserved | Copyrights 2026</p>
-            </div>
-         </div>
-      </footer>
-   </div>
-   <script src="assets/js/script.js"></script>
+        </footer>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Set active navigation item based on current page
+        (function setActiveNav() {
+            var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
+            navLinks.forEach(function(link) {
+                var href = link.getAttribute('href');
+                var linkPage = href.split('?')[0]; // Remove query strings
+                // Match current page with nav link
+                if (linkPage === currentPage ||
+                    (currentPage === '' && linkPage === 'index.html')) {
+                    var parentLi = link.closest('li');
+                    if (parentLi) {
+                        parentLi.classList.add('active');
+                    }
+                }
+            });
+        })();
+    </script>
 </body>
 
 </html>
