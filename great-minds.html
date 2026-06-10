@@ -59,7 +59,7 @@
             background-image: url("assets/images/banner/great-minds-banner.webp");
             background-color: transparent;
             background-repeat: no-repeat;
-            background-size: 100% auto;
+            background-size: 100% 100%;
             background-position: 50% 45%;
             border-radius: 15px;
             display: flex;
@@ -95,9 +95,9 @@
 
         @media screen and (max-width: 767px) {
             .page_banner .content_wrapper {
-                min-height: 180px;
+                /* min-height: 180px; */
                 padding: 30px 20px;
-                background-size: 145% auto;
+                /* background-size: 145% auto; */
             }
 
             .page_banner .content_wrapper .page_title {
@@ -849,7 +849,7 @@
         </div>
         <!-- Top Header Navigation -->
         <header class="site_header site_header_1">
-            <div class="container">
+            <div class="container px-lg-0">
                 <div class="row align-items-center">
                     <div class="col col-lg-3 col-10">
                         <div class="site_logo">
@@ -921,7 +921,7 @@
         <div id="menuOverlay" class="menu-overlay"></div>
         <main class="page_content">
             <section class="page_banner">
-                <div class="container">
+                <div class="container px-lg-0">
                     <div class="content_wrapper">
                         <div class="internal-banner">
                             <div class="row align-items-center">
@@ -934,10 +934,9 @@
                 </div>
             </section>
 
-            <section class="container" aria-labelledby="timeline-title">
-                
+            <section class="container px-lg-0" aria-labelledby="timeline-title">
                     <h2 class="section-title mt-4">Great Minds who Changed the World</h2>
-                    <p><strong>Timeline of the world's greatest scientists and the groundbreaking discoveries that transformed our understanding of nature, science, and technology.</strong></p>
+                    <p>Timeline of the world's greatest scientists and the groundbreaking discoveries that transformed our understanding of nature, science, and technology.</p>
                 
                 <div class="timeline mt-4">
                     <article class="timeline-item">
@@ -1178,7 +1177,7 @@
         </main>
         <footer class="site_footer">
             <div class="footer_widget_area">
-                <div class="container">
+                <div class="container px-lg-0">
                     <div class="row">
                         <div class="col col-lg-4 col-md-6 col-sm-6">
                             <div class="footer_widget">
@@ -1248,7 +1247,7 @@
                 </div>
             </div>
             <div class="copyright_widget">
-                <div class="container">
+                <div class="container px-lg-0">
                     <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All
                         rights reserved | Copyrights 2026</p>
                 </div>
