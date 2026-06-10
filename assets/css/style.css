@@ -6,17 +6,11 @@ html{
 }
 
 ::selection {
-  color: white;
+  color: #fff;
   background-color: #fe7b14; /* Custom highlight color */
 }
 #backToTop { font-size: 25px;}
-/* 
-.reveal {
-  opacity:0;
-  transform: translateY(90px);
-  transition: all 2s ease;
-} */
-/* .container { padding-left: 0 !important; padding-right: 0 !important; } */
+
 .reveal.active{
   opacity:1;
   transform: translateY(0);
@@ -133,6 +127,7 @@ body {
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
     font-family:'Poppins',sans-serif !important;
+    scroll-behavior: smooth;
 }
 
 body::before {
@@ -147,10 +142,10 @@ body::before {
     background-attachment: fixed;
     background-size: auto;
     background-position: 0 0;
-    opacity: 0.14;
+    opacity: 0.15;
     pointer-events: none;
     z-index: 0;
-    animation: moveBg 50s linear infinite;
+    animation: moveBg 30s linear infinite;
 }
 @keyframes moveBg{
 
@@ -786,22 +781,6 @@ section.reveal {
     background-position: center center;
     background-image: url(../images/banner/icons_group.svg)
 }
-/* marquee {
-    margin-top: -30px;
-    padding: 25px 0 15px;
-    overflow: hidden;
-    width: 100%;
-}
-marquee > h3 {
-    font-weight: 800;
-	font-size: 20px;
-    margin-bottom: 0;
-    white-space: nowrap;
-    display: inline-block;
-    min-width: 100%;
-    padding-right: 50px;
-} */
-
 .page_wrapper {
     overflow: hidden;
     position: relative
