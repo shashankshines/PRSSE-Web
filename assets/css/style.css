@@ -14840,7 +14840,7 @@ blockquote p {
 
 .page_content {
     margin-top: 127px;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 /* If the marquee exists, adjust margin only for desktop */
