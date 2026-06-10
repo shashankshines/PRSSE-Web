@@ -1,1676 +1,1217 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Entrance Exam - PRSSE</title>
-    <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg" />
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <style>
-        @media screen and (min-width: 992px) {
-
-            .sidebarmobile,
-            .mobilemenu-btn {
-                display: none;
-            }
-
-            .site_logo img {
-                width: 330px;
-            }
-        }
-
-        @media screen and (max-width:425px) {
-            .site_logo img {
-                width: 280px;
-            }
-        }
-
-        @media screen and (max-width: 991px) {
-
-            /* .container,
-            .hero_banner.style_1 .container,
-            .site_header .container {
-                margin-top: 0px !important;
-            } */
-        }
-
-        .img-cont {
-            box-shadow: none !important
-        }
-
-        .page_banner .content_wrapper {
-            padding: 0;
-        }
-
-        .page_banner .content_wrapper {
-            align-items: center;
-            background-image: url("assets/images/banner/success-stories-banner.webp");
-            background-color: transparent;
-            background-repeat: no-repeat;
-            background-size: cover;
-            object-fit: cover;
-            background-position: 50% 45%;
-            border-radius: 15px;
-            display: flex;
-            min-height: 300px;
-            padding: 40px 30px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-            animation: fadeIn 0.95s ease both, bannerDrift 10s ease-in-out infinite;
-        }
-
-        @media screen and (max-width: 991px) {
-            .page_banner .content_wrapper {
-                min-height: 20%;
-            }
-
-            .page_banner .content_wrapper h1 {
-                font-size: 40px;
-                line-height: 2.8rem;
-            }
-        }
-
-        .page_banner .internal-banner {
-            background: transparent !important;
-            background-image: none !important;
-            width: 100%;
-            height: auto;
-        }
-
-        .page_banner .content_wrapper::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            z-index: 1;
-            /* animation: curtainSlide 22s ease-in-out infinite; */
-        }
-
-        .page_banner .banner_deco {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            z-index: 1;
-            overflow: hidden;
-        }
-
-        .page_banner .banner_bubble {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(10px);
-            opacity: 0.55;
-            transform: translate3d(0, 0, 0);
-        }
-
-        .page_banner .content_wrapper>* {
-            position: relative;
-            z-index: 2;
-        }
-
-        .page_banner .content_wrapper .page_title,
-        .page_banner .content_wrapper .breadcrumb_nav,
-        .page_banner .content_wrapper .breadcrumb_nav a {
-            color: #fff;
-        }
-    </style>
-    <style>
-        .storyclasstb tr td {
-            border: 1px solid black;
-            padding: 10px;
-        }
-
-        .storyclasstb tr td:nth-child(1) {
-            background-color: #7650ff;
-            color: white;
-            font-weight: bold;
-        }
-
-        .storyclasstb tr td:nth-child(2) {
-            background-color: #ff5072;
-            color: white;
-            font-weight: bold;
-        }
-    </style>
-
-    <style>
-        :root {
-
-            --primary: #173017;
-            --secondary: #355035;
-            --light: #eef5eb;
-            --card: #ffffff;
-            --accent: #e87431;
-
-            --gold1: #bb8300;
-            --gold2: #f7cb4d;
-
-            --silver1: #677884;
-            --silver2: #cfd8dd;
-
-            --bronze1: #9b4f1f;
-            --bronze2: #d7844d;
-
-            --blue1: #165d82;
-            --blue2: #2b97cf;
-
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-
-            font-family: 'Poppins', sans-serif;
-            /* background: var(--light); */
-            color: var(--primary);
-            overflow-x: hidden;
-
-        }
-
-        /* =======================================================
-HERO
-======================================================= */
-
-        .hero {
-
-            position: relative;
-
-            padding: 100px 7% 220px;
-
-            overflow: hidden;
-
-            background:
-                radial-gradient(circle at top right,
-                    rgba(255, 255, 255, 0.45),
-                    transparent 30%),
-
-                linear-gradient(135deg,
-                    rgba(174, 208, 167, 0.98),
-                    rgba(225, 240, 220, 0.98));
-
-        }
-
-        .hero::after {
-
-            content: '';
-
-            position: absolute;
-
-            left: 0;
-            bottom: -1px;
-
-            width: 100%;
-            height: 140px;
-
-            background: var(--light);
-
-            border-radius: 100% 100% 0 0;
-
-        }
-
-        .hero-content {
-
-            position: relative;
-            z-index: 2;
-
-            max-width: 1050px;
-
-        }
-
-        .hero-badge {
-
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-
-            background: #ffffff;
-
-            padding: 12px 24px;
-
-            border-radius: 50px;
-
-            font-size: 14px;
-            font-weight: 600;
-
-            color: #2f5d2f;
-
-            margin-bottom: 28px;
-
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-
-        }
-
-        .hero h1 {
-
-            font-size: 76px;
-
-            line-height: 1.03;
-
-            font-weight: 800;
-
-            margin-bottom: 28px;
-
-        }
-
-        .hero p {
-
-            font-size: 18px;
-
-            line-height: 2;
-
-            max-width: 850px;
-
-            color: #355035;
-
-        }
-
-        /* =======================================================
-TITLE
-======================================================= */
-
-        /* .section-title {
-
-            text-align: center;
-
-            margin-bottom: 60px;
-
-        } */
-
-        /* .section-title h2 {
-
-            font-size: 52px;
-
-            font-weight: 800;
-
-            margin-bottom: 18px;
-
-        } */
-
-        .section-title p {
-
-            max-width: 900px;
-
-            margin: auto;
-
-            line-height: 2;
-
-            color: #587058;
-
-        }
-
-        /* =======================================================
-CATEGORY
-======================================================= */
-
-        .category {
-            width: 100%;
-            float: left;
-            margin-bottom: 40px;
-        }
-
-    
-        /* .category-line {
-
-            width: 70px;
-            height: 5px;
-
-            border-radius: 50px;
-
-            background: var(--accent);
-
-        } */
-
-        .category-header h3 {
-
-            font-size: 32px;
-            font-weight: 700;
-
-        }
-
-        /* =======================================================
-GRID
-======================================================= */
-
-        .grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, minmax(330px, 1fr));
-
-            gap: 38px;
-
-        }
-
-        .top-grid {
-            width: 660px;
-            margin: 0 auto 20px;
-            grid-template-columns: repeat(2, 1fr);
-            /* background: red; */
-        }
-
-        /* =======================================================
-CARD
-======================================================= */
-
-        .card {
-
-            background: #ffffff;
-
-            border-radius: 36px;
-
-            overflow: hidden;
-
-            box-shadow:
-                0 22px 60px rgba(0, 0, 0, 0.08);
-
-            transition: 0.4s ease;
-
-        }
-
-        .card:hover {
-
-            transform: translateY(-10px);
-
-            box-shadow:
-                0 30px 70px rgba(0, 0, 0, 0.14);
-
-        }
-
-        /* =======================================================
-TOP
-======================================================= */
-
-        .card-top {
-
-            position: relative;
-
-            padding: 15px 15px 10px;
-
-            color: #fff;
-
-            overflow: hidden;
-
-        }
-
-        .card-top img {
-            border-radius: 30px 30px 0 0;
-        }
-
-        .gold {
-            background:
-                linear-gradient(135deg,
-                    var(--gold1),
-                    var(--gold2));
-        }
-
-        .silver {
-            background:
-                linear-gradient(135deg,
-                    var(--silver1),
-                    var(--silver2));
-        }
-
-        .bronze {
-            background:
-                linear-gradient(135deg,
-                    var(--bronze1),
-                    var(--bronze2));
-        }
-
-        .blue {
-            background:
-                linear-gradient(135deg,
-                    var(--blue1),
-                    var(--blue2));
-        }
-
-        .card-top::before {
-
-            content: '';
-
-            position: absolute;
-
-            top: -70px;
-            right: -70px;
-
-            width: 220px;
-            height: 220px;
-
-            border-radius: 50%;
-
-            background: rgba(255, 255, 255, 0.10);
-
-        }
-
-        /* =======================================================
-PHOTO
-======================================================= */
-
-        .photo {
-
-            width: 120px;
-            height: 120px;
-
-            border-radius: 28px;
-
-            overflow: hidden;
-
-            border: 5px solid rgba(255, 255, 255, 0.5);
-
-            background: #ffffff;
-
-            margin-bottom: 22px;
-
-            box-shadow:
-                0 12px 25px rgba(0, 0, 0, 0.18);
-
-        }
-
-        .photo img {
-
-            width: 100%;
-            height: 100%;
-
-            object-fit: cover;
-
-        }
-
-        /* =======================================================
-BADGES
-======================================================= */
-
-        .rank {
-
-            position: absolute;
-
-            top: 22px;
-            right: 22px;
-
-            width: 58px;
-            height: 58px;
-
-            border-radius: 50%;
-
-            background: rgba(255, 255, 255, 0.18);
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 18px;
-            font-weight: 700;
-
-            backdrop-filter: blur(6px);
-
-        }
-
-        .medal {
-
-            display: block;
-            width: fit-content;
-            align-items: center;
-            gap: 10px;
-            border: #fff solid 2px;
-            padding: 10px 18px;
-            border-radius: 50px;
-            background: rgba(255, 255, 255, 0.15);
-            font-size: 16px;
-            font-weight: 800;
-            margin-top: 10px;
-            margin: 10px auto 0;
-            backdrop-filter: blur(5px);
-
-        }
-
-        /* =======================================================
-CONTENT
-======================================================= */
-
-        .content {
-            padding: 15px;
-        }
-
-        .name {
-
-            font-size: 25px;
-
-            font-weight: 800;
-
-            line-height: 1.3;
-
-            margin-bottom: 10px;
-
-        }
-
-        .class-pill {
-
-            display: inline-block;
-
-            padding: 10px 18px;
-
-            border-radius: 50px;
-
-            background: rgb(231 243 227);
-            font-size: 13px;
-            border: #a8e1d1 solid 1px;
-            font-weight: 600;
-
-            color: #000;
-
-            margin-bottom: 15px;
-
-        }
-
-        /* =======================================================
-SCHOOL
-======================================================= */
-
-        .school {
-
-            background: rgba(168, 225, 209, 0.3);
-
-            border-radius: 24px;
-
-            padding: 20px 20px 0 20px;
-
-            display: flex;
-            gap: 15px;
-
-            margin-bottom: 15px;
-
-        }
-
-        .school-icon {
-
-            width: 54px;
-            height: 54px;
-
-            min-width: 54px;
-
-            border-radius: 18px;
-
-            background: #e7f3e3;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-        }
-
-        .school-icon i {
-
-            font-size: 20px;
-
-            color: #5c8a57;
-
-        }
-
-        .school-text h5 {
-
-            font-size: 12px;
-
-            text-transform: uppercase;
-
-            letter-spacing: 1px;
-
-            margin-bottom: 8px;
-
-            color: #000;
-
-        }
-
-        .school-text p {
-
-            font-size: 14px;
-
-            line-height: 1.5;
-
-            font-weight: 500;
-
-            color: #355035;
-
-        }
-
-        /* =======================================================
-ACHIEVEMENT
-======================================================= */
-
-        .achievement {
-
-            position: relative;
-
-            overflow: hidden;
-
-            border-radius: 26px;
-
-            padding: 20px;
-
-            color: #ffffff;
-
-        }
-
-        .achievement.gold {
-            background:
-                linear-gradient(135deg,
-                    var(--gold1),
-                    var(--gold2));
-        }
-
-        .achievement.silver {
-            background:
-                linear-gradient(135deg,
-                    var(--silver1),
-                    var(--silver2));
-        }
-
-        .achievement.bronze {
-            background:
-                linear-gradient(135deg,
-                    var(--bronze1),
-                    var(--bronze2));
-        }
-
-        .achievement.blue {
-            background:
-                linear-gradient(135deg,
-                    var(--blue1),
-                    var(--blue2));
-        }
-
-        .achievement::before {
-
-            content: '';
-
-            position: absolute;
-
-            top: -60px;
-            right: -40px;
-
-            width: 180px;
-            height: 180px;
-
-            border-radius: 50%;
-
-            background: rgba(255, 255, 255, 0.10);
-
-        }
-
-        .achievement h4 {
-
-            position: relative;
-            z-index: 2;
-
-            font-size: 22px;
-            color: #fff;
-            margin-bottom: 10px;
-
-            font-weight: 800;
-
-        }
-
-        .achievement p {
-
-            position: relative;
-            z-index: 2;
-            font-size: 14px;
-            line-height: 1.7;
-
-        }
-
-        /* =======================================================
-MESSAGE
-======================================================= */
-
-        .message {
-
-            margin-top: 70px;
-
-            /* background: #ffffff; */
-
-            border-radius: 36px;
-
-            padding: 42px;
-
-            text-align: center;
-
-            box-shadow:
-                0 20px 55px rgba(0, 0, 0, 0.06);
-
-        }
-
-        .message i {
-
-            font-size: 42px;
-
-            margin-bottom: 18px;
-
-            color: var(--accent);
-
-        }
-
-        .message p {
-
-            max-width: 950px;
-
-            margin: auto;
-
-            font-size: 22px;
-
-            line-height: 2;
-
-            font-weight: 500;
-
-            color: #355035;
-
-        }
-
-        .message span {
-
-            font-weight: 800;
-
-            color: var(--primary);
-
-        }
-
-        /* =======================================================
-RESPONSIVE
-======================================================= */
-
-        @media(max-width:992px) {
-            .grid {
-                width: 95%;
-                margin: 18px auto;
-            }
-
-            .hero h1 {
-                font-size: 56px;
-            }
-
-            .section-title h2 {
-                font-size: 42px;
-            }
-
-        }
-
-        @media(max-width:600px) {
-
-            .hero {
-                padding: 70px 7% 190px;
-            }
-
-            .hero h1 {
-                font-size: 40px;
-            }
-
-            .hero p {
-                font-size: 15px;
-            }
-
-            .grid {
-                grid-template-columns: 1fr;
-            }
-
-            .name {
-                font-size: 25px;
-            }
-
-            .section-title h2 {
-                font-size: 34px;
-            }
-
-            .message {
-                padding: 30px 24px;
-            }
-
-            .message p {
-                font-size: 18px;
-            }
-
-        }
-    </style>
-</head>
-
-<body>
-    <div class="page_wrapper">
-        <div class="backtotop">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+      <meta http-equiv="x-ua-compatible" content="ie=edge" />
+      <title>Entrance Exam - PRSSE</title>
+      <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg" />
+      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+      <script src="assets/js/bootstrap.bundle.min.js"></script>
+      <style>
+         @media screen and (min-width: 992px) {
+         .sidebarmobile,
+         .mobilemenu-btn {
+         display: none;
+         }
+         .site_logo img {
+         width: 330px;
+         }
+         }
+         @media screen and (max-width:425px) {
+         .site_logo img {
+         width: 280px;
+         }
+         }
+         @media screen and (max-width: 991px) {
+         /* .container,
+         .hero_banner.style_1 .container,
+         .site_header .container {
+         margin-top: 0px !important;
+         } */
+         }
+         .img-cont {
+         box-shadow: none !important
+         }
+         .page_banner { width: 100%; float: left; }
+         .page_banner .content_wrapper {
+         padding: 0;
+         }
+         .page_banner .content_wrapper {
+         align-items: center;
+         background-image: url("assets/images/banner/success-stories-banner.webp");
+         background-color: transparent;
+         background-repeat: no-repeat;
+         background-size: cover;
+         object-fit: cover;
+         background-position: 50% 45%;
+         border-radius: 15px;
+         display: flex;
+         min-height: 300px;
+         padding: 40px 30px;
+         position: relative;
+         overflow: hidden;
+         box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+         animation: fadeIn 0.95s ease both, bannerDrift 10s ease-in-out infinite;
+         }
+         @media screen and (max-width: 991px) {
+         .page_banner .content_wrapper {
+         min-height: 20%;
+         }
+         .page_banner .content_wrapper h1 {
+         font-size: 40px;
+         line-height: 2.8rem;
+         }
+         }
+         .page_banner .internal-banner {
+         background: transparent !important;
+         background-image: none !important;
+         width: 100%;
+         height: auto;
+         }
+         .page_banner .content_wrapper::after {
+         content: "";
+         position: absolute;
+         inset: 0;
+         pointer-events: none;
+         z-index: 1;
+         /* animation: curtainSlide 22s ease-in-out infinite; */
+         }
+         .page_banner .banner_deco {
+         position: absolute;
+         inset: 0;
+         pointer-events: none;
+         z-index: 1;
+         overflow: hidden;
+         }
+         .page_banner .banner_bubble {
+         position: absolute;
+         border-radius: 50%;
+         filter: blur(10px);
+         opacity: 0.55;
+         transform: translate3d(0, 0, 0);
+         }
+         .page_banner .content_wrapper>* {
+         position: relative;
+         z-index: 2;
+         }
+         .page_banner .content_wrapper .page_title,
+         .page_banner .content_wrapper .breadcrumb_nav,
+         .page_banner .content_wrapper .breadcrumb_nav a {
+         color: #fff;
+         }
+      </style>
+      <!-- <style>
+         .storyclasstb tr td {
+         border: 1px solid black;
+         padding: 10px;
+         }
+         .storyclasstb tr td:nth-child(1) {
+         background-color: #7650ff;
+         color: white;
+         font-weight: bold;
+         }
+         .storyclasstb tr td:nth-child(2) {
+         background-color: #ff5072;
+         color: white;
+         font-weight: bold;
+         }
+      </style> -->
+      <style>
+         :root {
+         --primary: #173017;
+         --secondary: #355035;
+         --light: #eef5eb;
+         --card: #ffffff;
+         --accent: #e87431;
+         --gold1: #bb8300;
+         --gold2: #f7cb4d;
+         --silver1: #677884;
+         --silver2: #cfd8dd;
+         --bronze1: #9b4f1f;
+         --bronze2: #d7844d;
+         --blue1: #165d82;
+         --blue2: #2b97cf;
+         }
+         * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         }
+         body {
+         font-family: 'Poppins', sans-serif;
+         /* background: var(--light); */
+         color: var(--primary);
+         overflow-x: hidden;
+         }
+         /* =======================================================
+         HERO
+         ======================================================= */
+         .hero {
+         position: relative;
+         padding: 100px 7% 220px;
+         overflow: hidden;
+         background:
+         radial-gradient(circle at top right,
+         rgba(255, 255, 255, 0.45),
+         transparent 30%),
+         linear-gradient(135deg,
+         rgba(174, 208, 167, 0.98),
+         rgba(225, 240, 220, 0.98));
+         }
+         .hero::after {
+         content: '';
+         position: absolute;
+         left: 0;
+         bottom: -1px;
+         width: 100%;
+         height: 140px;
+         background: var(--light);
+         border-radius: 100% 100% 0 0;
+         }
+         .hero-content {
+         position: relative;
+         z-index: 2;
+         max-width: 1050px;
+         }
+         .hero-badge {
+         display: inline-flex;
+         align-items: center;
+         gap: 12px;
+         background: #ffffff;
+         padding: 12px 24px;
+         border-radius: 50px;
+         font-size: 14px;
+         font-weight: 600;
+         color: #2f5d2f;
+         margin-bottom: 28px;
+         /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); */
+         }
+         .hero h1 {
+         font-size: 76px;
+         line-height: 1.03;
+         font-weight: 800;
+         margin-bottom: 28px;
+         }
+         .hero p {
+         font-size: 18px;
+         line-height: 2;
+         max-width: 850px;
+         color: #355035;
+         }
+         /* =======================================================
+         TITLE
+         ======================================================= */
+         /* .section-title {
+         text-align: center;
+         margin-bottom: 60px;
+         } */
+         /* .section-title h2 {
+         font-size: 52px;
+         font-weight: 800;
+         margin-bottom: 18px;
+         } */
+         .section-title p {
+         max-width: 900px;
+         margin: auto;
+         line-height: 2;
+         color: #587058;
+         }
+         /* =======================================================
+         CATEGORY
+         ======================================================= */
+         .category {
+         width: 100%;
+         float: left;
+         }
+         /* .category-line {
+         width: 70px;
+         height: 5px;
+         border-radius: 50px;
+         background: var(--accent);
+         } */
+         .category-header h3 {
+         font-size: 32px;
+         font-weight: 700;
+         }
+         /* =======================================================
+         GRID
+         ======================================================= */
+         .grid {
+         display: grid;
+         grid-template-columns:
+         repeat(4, minmax(330px, 1fr));
+         gap: 38px;
+         }
+         .top-grid {
+         width: 660px;
+         margin: 0 auto 20px;
+         grid-template-columns: repeat(2, 1fr);
+         /* background: red; */
+         }
+         /* =======================================================
+         CARD
+         ======================================================= */
+         .card {
+         background: #ffffff;
+         border-radius: 36px;
+         overflow: hidden;
+         box-shadow:
+         0 22px 60px rgba(0, 0, 0, 0.08);
+         transition: 0.4s ease;
+         }
+         .card:hover {
+         transform: translateY(-10px);
+         box-shadow:
+         0 30px 70px rgba(0, 0, 0, 0.14);
+         }
+         /* =======================================================
+         TOP
+         ======================================================= */
+         .card-top {
+         position: relative;
+         padding: 15px 15px 10px;
+         color: #fff;
+         overflow: hidden;
+         }
+         .card-top img {
+         border-radius: 30px 30px 0 0;
+         }
+         .gold {
+         background:
+         linear-gradient(135deg,
+         var(--gold1),
+         var(--gold2));
+         }
+         .silver {
+         background:
+         linear-gradient(135deg,
+         var(--silver1),
+         var(--silver2));
+         }
+         .bronze {
+         background:
+         linear-gradient(135deg,
+         var(--bronze1),
+         var(--bronze2));
+         }
+         .blue {
+         background:
+         linear-gradient(135deg,
+         var(--blue1),
+         var(--blue2));
+         }
+         /* .card-top::before {
+         content: '';
+         position: absolute;
+         top: -70px;
+         right: -70px;
+         width: 220px;
+         height: 220px;
+         border-radius: 50%;
+         background: rgba(255, 255, 255, 0.10);
+         } */
+         /* =======================================================
+         PHOTO
+         ======================================================= */
+         .photo {
+         width: 120px;
+         height: 120px;
+         border-radius: 28px;
+         overflow: hidden;
+         border: 5px solid rgba(255, 255, 255, 0.5);
+         background: #ffffff;
+         margin-bottom: 22px;
+         box-shadow:
+         0 12px 25px rgba(0, 0, 0, 0.18);
+         }
+         .photo img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         }
+         /* =======================================================
+         BADGES
+         ======================================================= */
+         .rank {
+         position: absolute;
+         top: 22px;
+         right: 22px;
+         width: 58px;
+         height: 58px;
+         border-radius: 50%;
+         /* background: rgba(255, 255, 255, 0.18); */
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-size: 45px;
+         /* font-weight: 700; */
+         backdrop-filter: blur(10px);
+         }
+         .medal {
+         display: block;
+         width: fit-content;
+         align-items: center;
+         gap: 10px;
+         border: #fff solid 2px;
+         padding: 10px 18px;
+         border-radius: 50px;
+         background: rgba(255, 255, 255, 0.15);
+         font-size: 16px;
+         font-weight: 800;
+         margin-top: 10px;
+         margin: 10px auto 0;
+         backdrop-filter: blur(5px);
+         }
+         /* =======================================================
+         CONTENT
+         ======================================================= */
+         .content {
+         padding: 15px;
+         }
+         .name {
+         font-size: 22px;
+         font-weight: 700;
+         line-height: 1.3;
+         margin-bottom: 10px;
+         }
+         .class-pill {
+         display: inline-block;
+         padding: 10px 18px;
+         border-radius: 50px;
+         background: rgb(231 243 227);
+         font-size: 13px;
+         border: #a8e1d1 solid 1px;
+         font-weight: 600;
+         color: #000;
+         margin-bottom: 15px;
+         }
+         /* =======================================================
+         SCHOOL
+         ======================================================= */
+         .school {
+         background: rgba(168, 225, 209, 0.3);
+         border-radius: 24px;
+         padding: 20px 20px 0 20px;
+         display: flex;
+         gap: 15px;
+         margin-bottom: 15px;
+         }
+         .school-icon {
+         width: 54px;
+         height: 54px;
+         min-width: 54px;
+         border-radius: 18px;
+         background: #e7f3e3;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         }
+         .school-icon i {
+         font-size: 20px;
+         color: #5c8a57;
+         }
+         .school-text h5 {
+         font-size: 12px;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         margin-bottom: 8px;
+         color: #000;
+         }
+         .school-text p {
+         font-size: 14px;
+         line-height: 1.5;
+         font-weight: 500;
+         color: #355035;
+         }
+         /* =======================================================
+         ACHIEVEMENT
+         ======================================================= */
+         .achievement {
+         position: relative;
+         overflow: hidden;
+         border-radius: 26px;
+         padding: 20px;
+         color: #ffffff;
+         }
+         .achievement.gold {
+         background:
+         linear-gradient(135deg,
+         var(--gold1),
+         var(--gold2));
+         }
+         .achievement.silver {
+         background:
+         linear-gradient(135deg,
+         var(--silver1),
+         var(--silver2));
+         }
+         .achievement.bronze {
+         background:
+         linear-gradient(135deg,
+         var(--bronze1),
+         var(--bronze2));
+         }
+         .achievement.blue {
+         background:
+         linear-gradient(135deg,
+         var(--blue1),
+         var(--blue2));
+         }
+         .achievement::before {
+         content: '';
+         position: absolute;
+         top: -60px;
+         right: -40px;
+         width: 180px;
+         height: 180px;
+         border-radius: 50%;
+         background: rgba(255, 255, 255, 0.10);
+         }
+         .achievement h4 {
+         position: relative;
+         z-index: 2;
+         font-size: 1.2rem;
+         color: #fff;
+         margin-bottom: 10px;
+         font-weight: 800;
+         }
+         .achievement p {
+         position: relative;
+         z-index: 2;
+         font-size: 14px;
+         line-height: 1.7;
+         margin-bottom: 0;
+         }
+         /* =======================================================
+         MESSAGE
+         ======================================================= */
+         .message {
+         /* background: #ffffff; */
+         padding: 42px;
+         text-align: center;
+         }
+         .message i {
+         font-size: 42px;
+         margin-bottom: 18px;
+         color: var(--accent);
+         }
+         .message p {
+         max-width: 950px;
+         margin: auto;
+         font-size: 22px;
+         line-height: 2;
+         font-weight: 500;
+         color: #355035;
+         }
+         .message span {
+         font-weight: 800;
+         color: var(--primary);
+         }
+         /* =======================================================
+         RESPONSIVE
+         ======================================================= */
+         @media(max-width:992px) {
+         .grid {
+         width: 95%;
+         margin: 18px auto;
+         }
+         .hero h1 {
+         font-size: 56px;
+         }
+         .section-title h2 {
+         font-size: 42px;
+         }
+         }
+         @media(max-width:600px) {
+         .hero {
+         padding: 70px 7% 190px;
+         }
+         .hero h1 {
+         font-size: 40px;
+         }
+         .hero p {
+         font-size: 15px;
+         }
+         .grid {
+         grid-template-columns: 1fr;
+         }
+         .name {
+         font-size: 25px;
+         }
+         .section-title h2 {
+         font-size: 34px;
+         }
+         .message {
+         padding: 30px 24px;
+         }
+         .message p {
+         font-size: 18px;
+         }
+         }
+      </style>
+   </head>
+   <body>
+      <div class="page_wrapper">
+         <div class="backtotop">
             <a href="#" class="scroll"><i class="far fa-arrow-up"></i></a>
-        </div>
-        <!-- Top Header Navigation -->
-        <header class="site_header site_header_1">
+         </div>
+         <!-- Top Header Navigation -->
+         <header class="site_header site_header_1">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col col-lg-3 col-10">
-                        <div class="site_logo">
-                            <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png"
-                                    alt=""></a>
-
+               <div class="row align-items-center">
+                  <div class="col col-lg-3 col-10">
+                     <div class="site_logo">
+                        <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png"
+                           alt=""></a>
+                     </div>
+                  </div>
+                  <div class="col col-lg-9 col-2">
+                     <nav class="main_menu navbar navbar-expand-lg">
+                        <div class="main_menu_inner collapse navbar-collapse" id="main_menu_dropdown">
+                           <ul class="main_menu_list unordered_list_center">
+                              <li><a class="nav-link" href="index.html">Home</a></li>
+                              <li><a class="nav-link" href="about.html"><u>About us</u></a></li>
+                              <li>
+                                 <a class="nav-link" href="programs.html" id="blog_submenu">Programmes</a>
+                              </li>
+                              <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
+                              <li class="dropdown">
+                                 <a class="nav-link" href="#" id="blog_submenu" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
+                                 <ul class="dropdown-menu" aria-labelledby="blog_submenu">
+                                    <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
+                                    <li><a class="nav-link" href="indian-scientist.html">Indian Scientists</a>
+                                    </li>
+                                    <li><a class="nav-link" href="top-iit.html">Top Indian Institutes</a></li>
+                                 </ul>
+                              </li>
+                              <li><a class="nav-link" href="news_and_media.html">News &amp; Media</a></li>
+                              <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+                           </ul>
                         </div>
-                    </div>
-                    <div class="col col-lg-9 col-2">
-                        <nav class="main_menu navbar navbar-expand-lg">
-                            <div class="main_menu_inner collapse navbar-collapse" id="main_menu_dropdown">
-                                <ul class="main_menu_list unordered_list_center">
-                                    <li><a class="nav-link" href="index.html">Home</a></li>
-                                    <li><a class="nav-link" href="about.html"><u>About us</u></a></li>
-                                    <li>
-                                        <a class="nav-link" href="programs.html" id="blog_submenu">Programmes</a>
-                                    </li>
-                                    <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
-                                    <li class="dropdown">
-                                        <a class="nav-link" href="#" id="blog_submenu" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
-                                        <ul class="dropdown-menu" aria-labelledby="blog_submenu">
-                                            <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
-                                            <li><a class="nav-link" href="indian-scientist.html">Indian Scientists</a>
-                                            </li>
-                                            <li><a class="nav-link" href="top-iit.html">Top Indian Institutes</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="nav-link" href="news_and_media.html">News &amp; Media</a></li>
-                                    <li><a class="nav-link" href="contact.html">Contact Us</a></li>
-
-                                </ul>
-                            </div>
-                        </nav>
-                        <!-- Mobile Hamburger Menu (visible only on small screens) -->
-                        <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu"
-                            aria-controls="sidebarMenumobile"
-                            aria-expanded="false"><span></span><span></span><span></span></button>
-                    </div>
-                </div>
+                     </nav>
+                     <!-- Mobile Hamburger Menu (visible only on small screens) -->
+                     <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu"
+                        aria-controls="sidebarMenumobile"
+                        aria-expanded="false"><span></span><span></span><span></span></button>
+                  </div>
+               </div>
             </div>
-        </header>
-        <!-- Sidebar Menu (for mobile) -->
-        <div id="sidebarMenumobile" class="sidebarmobile">
+         </header>
+         <!-- Sidebar Menu (for mobile) -->
+         <div id="sidebarMenumobile" class="sidebarmobile">
             <button type="button" class="closebtn" aria-label="Close menu">x</button>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-
             <!-- Dropdown (Mobile) -->
             <div class="dropdownmobile">
-                <a href="programs.html">Programs</a>
+               <a href="programs.html">Programs</a>
             </div>
             <!-- Dropdown (Mobile) -->
             <div class="dropdownmobile">
-                <a href="#" class="dropdownmobile-toggle">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
-                <ul class="dropdownmobile-menu">
-                    <li><a href="great-minds.html">Great Minds</a></li>
-                    <li><a href="indian-scientist.html">Indian Scientists</a></li>
-                    <li><a href="top-iit.html">Institutes of India</a></li>
-                </ul>
+               <a href="#" class="dropdownmobile-toggle">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
+               <ul class="dropdownmobile-menu">
+                  <li><a href="great-minds.html">Great Minds</a></li>
+                  <li><a href="indian-scientist.html">Indian Scientists</a></li>
+                  <li><a href="top-iit.html">Institutes of India</a></li>
+               </ul>
             </div>
             <a href="exploratory.html">Exploratory Perks</a>
             <a href="news_and_media.html">News &amp; Media</a>
             <a href="contact.html">Contact Us</a>
-        </div>
-        <!-- Overlay (for closing sidebar when clicking outside) -->
-        <div id="menuOverlay" class="menu-overlay"></div>
-        <main class="page_content">
-            <section class="page_banner">
-                <div class="container">
-                    <div class="content_wrapper">
-                        <div class="row align-items-center">
-                            <div class="col col-lg-12">
-                                <h1 class="page_title">Success Stories</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div class="container" style="margin-top: -40px">
-
-                <!-- =======================================================
-WINNERS SECTION
-======================================================= -->
-
-                <section class="category">
-
-                    <h2 class="section-title">
-                        Students' Success Stories
-                    </h2>
-                    <!-- Top Grid -->
-                    <div class="grid top-grid">
-                        <div class="card">
-
-                            <div class="card-top gold">
-                                <img src="assets/images/for_students/Ananya-Vyawahare-portrait.webp"
-                                    alt="Ananya Vyawahare">
-                                <div class="rank">1</div>
-
-                                <!-- <div class="photo">
-                                    <img src="assets/images/for_students/Rishika_Tawri_Portrait.webp" alt="Rishika Tawari">
-                                </div> -->
-
-                                <div class="medal">
-                                    <i class="fa-solid fa-crown"></i>
-                                    Amongst Top 32 in India
-                                </div>
-
-                            </div>
-
-                            <div class="content">
-
-                                <h3 class="name">
-                                    Ananya Vyawahare
-                                </h3>
-
-                                <div class="class-pill">
-                                    Class 8th
-                                </div>
-
-                                <div class="school">
-
-                                    <div class="school-icon">
-                                        <i class="fa-solid fa-school"></i>
-                                    </div>
-
-                                    <div class="school-text">
-
-                                        <h5>School Name</h5>
-
-                                        <p>
-                                            Somalwar School - Nagpur
-                                        </p>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="achievement gold">
-
-                                    <h4>Research Intern</h4>
-
-                                    <p>
-                                        Got Selected for an Anveshana Research Internship Program at Prayoga Institute,
-                                        Bengaluru
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- SHAURYA -->
-
-                        <div class="card">
-
-                            <div class="card-top gold">
-                                <img src="assets/images/for_students/Shaurya_Pujari_Portrait.webp" alt="Shaurya Pujari">
-
-                                <div class="rank">2</div>
-
-                                <!-- <div class="photo">
-                                    <img src="images/shaurya.jpg" alt="Shaurya Pujari">
-                                </div> -->
-
-                                <div class="medal">
-                                    <i class="fa-solid fa-crown"></i>
-                                    Amongst Top 32 in India
-                                </div>
-
-                            </div>
-
-                            <div class="content">
-
-                                <h3 class="name">
-                                    Abhiram Barokar
-                                </h3>
-
-                                <div class="class-pill">
-                                    Class 8th
-                                </div>
-
-                                <div class="school">
-
-                                    <div class="school-icon">
-                                        <i class="fa-solid fa-school"></i>
-                                    </div>
-
-                                    <div class="school-text">
-
-                                        <h5>School Name</h5>
-
-                                        <p>
-                                            Somalwar School - Nagpur
-                                        </p>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="achievement gold">
-                                    <h4>Research Intern</h4>
-                                    <p>
-                                        Got Selected for an Anveshana Research Internship Program at Prayoga Institute,
-                                        Bengaluru.
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="grid">
-
-                        <!-- RISHIKA -->
-
-                        <div class="card">
-
-                            <div class="card-top gold">
-                                <img src="assets/images/for_students/Rishika_Tawri_Portrait.webp" alt="Rishika Tawari">
-                                <div class="rank">1</div>
-
-                                <!-- <div class="photo">
-                                    <img src="assets/images/for_students/Rishika_Tawri_Portrait.webp" alt="Rishika Tawari">
-                                </div> -->
-
-                                <div class="medal">
-                                    <i class="fa-solid fa-crown"></i>
-                                    Gold Medal
-                                </div>
-
-                            </div>
-
-                            <div class="content">
-
-                                <h3 class="name">
-                                    Rishika Tawari
-                                </h3>
-
-                                <div class="class-pill">
-                                    Class 6th
-                                </div>
-
-                                <div class="school">
-
-                                    <div class="school-icon">
-                                        <i class="fa-solid fa-school"></i>
-                                    </div>
-
-                                    <div class="school-text">
-
-                                        <h5>School Name</h5>
-
-                                        <p>
-                                            Narayana Vidyalayam, Chinchbhavan - Nagpur
-                                        </p>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="achievement gold">
-
-                                    <h4>Gold Medal</h4>
-
-                                    <p>
-                                        Outstanding performance in the Homi Bhabha Young Scientist Competition.
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- SHAURYA -->
-
-                        <div class="card">
-
-                            <div class="card-top silver">
-                                <img src="assets/images/for_students/Shaurya_Pujari_Portrait.webp" alt="Shaurya Pujari">
-
-                                <div class="rank">2</div>
-
-                                <!-- <div class="photo">
-                                    <img src="images/shaurya.jpg" alt="Shaurya Pujari">
-                                </div> -->
-
-                                <div class="medal">
-                                    <i class="fa-solid fa-medal"></i>
-                                    Silver Medal
-                                </div>
-
-                            </div>
-
-                            <div class="content">
-
-                                <h3 class="name">
-                                    Shaurya Pujari
-                                </h3>
-
-                                <div class="class-pill">
-                                    Class 6th
-                                </div>
-
-                                <div class="school">
-
-                                    <div class="school-icon">
-                                        <i class="fa-solid fa-school"></i>
-                                    </div>
-
-                                    <div class="school-text">
-
-                                        <h5>School Name</h5>
-
-                                        <p>
-                                            School of Scholars (SOS), Atrey Layout - Nagpur
-                                        </p>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="achievement silver">
-
-                                    <h4>Silver Medal</h4>
-
-                                    <p>
-                                        Excellent scientific aptitude, strong analytical thinking, and remarkable
-                                        problem-solving skills.
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- ATHARVA -->
-
-                        <div class="card">
-
-                            <div class="card-top silver">
-                                <img src="assets/images/for_students/Atharva_Joshi_Portrait.webp" alt="Atharva Joshi">
-                                <div class="rank">2</div>
-
-                                <!-- <div class="photo">
-                                    <img src="images/atharva.jpg" alt="Atharva Joshi">
-                                </div> -->
-
-                                <div class="medal">
-                                    <i class="fa-solid fa-medal"></i>
-                                    Silver Medal
-                                </div>
-
-                            </div>
-
-                            <div class="content">
-
-                                <h3 class="name">
-                                    Atharva Joshi
-                                </h3>
-
-                                <div class="class-pill">
-                                    Class 6th
-                                </div>
-
-                                <div class="school">
-
-                                    <div class="school-icon">
-                                        <i class="fa-solid fa-school"></i>
-                                    </div>
-
-                                    <div class="school-text">
-
-                                        <h5>School Name</h5>
-
-                                        <p>
-                                            R. S. Mundle English School - Nagpur
-                                        </p>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="achievement silver">
-
-                                    <h4>Silver Medal</h4>
-
-                                    <p>
-                                        Demonstrated exceptional performance and remarkable excellence in scientific
-                                        competition.
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- ISHAN -->
-
-                        <div class="card">
-
-                            <div class="card-top bronze">
-                                <img src="assets/images/for_students/Ishan_Todkari_Portrait.webp" alt="Ishan Todkari">
-                                <div class="rank">3</div>
-
-                                <!-- <div class="photo">
-                                    <img src="images/ishan.jpg" alt="Ishan Todkari">
-                                </div> -->
-
-                                <div class="medal">
-                                    <i class="fa-solid fa-award"></i>
-                                    Bronze Medal
-                                </div>
-
-                            </div>
-
-                            <div class="content">
-
-                                <h3 class="name">
-                                    Ishan Todkari
-                                </h3>
-
-                                <div class="class-pill">
-                                    Class 6th
-                                </div>
-
-                                <div class="school">
-
-                                    <div class="school-icon">
-                                        <i class="fa-solid fa-school"></i>
-                                    </div>
-
-                                    <div class="school-text">
-
-                                        <h5>School Name</h5>
-
-                                        <p>
-                                            Bhavan's Vidyamandir, Chinchbhavan - Nagpur
-                                        </p>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="achievement bronze">
-
-                                    <h4>Bronze Medal</h4>
-
-                                    <p>
-                                        Commendable achievement demonstrating scientific curiosity and excellence.
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-                <!-- =======================================================
-OTHER EXAMS
-======================================================= -->
-
-                <section class="category">
-
-                    <div class="category-header">
-
-                        <div class="category-line"></div>
-
-                        <h3 class="heading_text mb-4">
-                            Other Exams / Competitions
-                        </h3>
-
-                    </div>
-
-                    <div class="grid">
-
-                        <!-- Remaining 11 Students -->
-
-                        <div class="card">
-                            <div class="card-top blue">
-                                <div class="rank">1</div>
-                                <div class="medal">
-                                    <i class="fa-solid fa-flask"></i>
-                                    Research Internship
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="name">Ananya Vyawahare</h3>
-                                <div class="class-pill">Class 9th</div>
-                                <div class="school">
-                                    <div class="school-icon"><i class="fa-solid fa-school"></i></div>
-                                    <div class="school-text">
-                                        <h5>School Name</h5>
-                                        <p>Somalwar School, Ramdaspeth</p>
-                                    </div>
-                                </div>
-                                <div class="achievement blue">
-                                    <h4>Research Selection</h4>
-                                    <p>
-                                        Got Selected for an Anveshana Research Internship Program at Prayoga Institute,
-                                        Bengaluru.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-top blue">
-                                <div class="rank">6</div>
-                                <div class="medal">
-                                    <i class="fa-solid fa-rocket"></i>
-                                    Olympiad
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="name">Omkar Vaidya</h3>
-                                <div class="class-pill">Class 6th</div>
-                                <div class="school">
-                                    <div class="school-icon"><i class="fa-solid fa-school"></i></div>
-                                    <div class="school-text">
-                                        <h5>School Name</h5>
-                                        <p>Sevasadan Saksham School CBSE</p>
-                                    </div>
-                                </div>
-                                <div class="achievement blue">
-                                    <h4>ISSO Qualification</h4>
-                                    <p>
-                                        Indian Space Science Olympiad - Qualified for 2nd level and all India 8th in
-                                        Junior
-                                        Category.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-top blue">
-                                <div class="rank">7</div>
-                                <div class="medal">
-                                    <i class="fa-solid fa-award"></i>
-                                    Competition
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="name">Yukti Borkar</h3>
-                                <div class="class-pill">Class 6th</div>
-                                <div class="school">
-                                    <div class="school-icon"><i class="fa-solid fa-school"></i></div>
-                                    <div class="school-text">
-                                        <h5>School Name</h5>
-                                        <p>Somalwar High School, Ramdaspeth</p>
-                                    </div>
-                                </div>
-                                <div class="achievement blue">
-                                    <h4>2nd Level Qualified</h4>
-                                    <p>
-                                        Qualified for the Dr. Homi Bhabha Balvaidyanik Competition for 2nd level.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-top blue">
-                                <div class="rank">8</div>
-                                <div class="medal">
-                                    <i class="fa-solid fa-award"></i>
-                                    Competition
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="name">Archit Kolhapurkar</h3>
-                                <div class="class-pill">Class 6th</div>
-                                <div class="school">
-                                    <div class="school-icon"><i class="fa-solid fa-school"></i></div>
-                                    <div class="school-text">
-                                        <h5>School Name</h5>
-                                        <p>TBRAN'S Mundle English Medium School</p>
-                                    </div>
-                                </div>
-                                <div class="achievement blue">
-                                    <h4>2nd Level Qualified</h4>
-                                    <p>
-                                        Qualified for the Dr. Homi Bhabha Balvaidyanik Competition for 2nd level.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-top gold">
-                                <div class="rank">9</div>
-                                <div class="medal">
-                                    <i class="fa-solid fa-medal"></i>
-                                    SOF Gold Medal
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="name">Abhang Uikey</h3>
-                                <div class="class-pill">Class 6th</div>
-                                <div class="school">
-                                    <div class="school-icon"><i class="fa-solid fa-school"></i></div>
-                                    <div class="school-text">
-                                        <h5>School Name</h5>
-                                        <p>Bhavan's B.P Vidya Mandir Chinchbhavan</p>
-                                    </div>
-                                </div>
-                                <div class="achievement gold">
-                                    <h4>SOF Excellence</h4>
-                                    <p>
-                                        Gold medal in SOF science exam in VI and qualified for Level 2 exam. Gold Medal
-                                        in Maths
-                                        SOF Olympiad.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-top blue">
-                                <div class="rank">10</div>
-                                <div class="medal">
-                                    <i class="fa-solid fa-microchip"></i>
-                                    Technology
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="name">Nirmay Tulshan</h3>
-                                <div class="class-pill">Class 7th</div>
-                                <div class="school">
-                                    <div class="school-icon"><i class="fa-solid fa-school"></i></div>
-                                    <div class="school-text">
-                                        <h5>School Name</h5>
-                                        <p>Bhavan's BP Vidya Mandir, Koradi</p>
-                                    </div>
-                                </div>
-                                <div class="achievement blue">
-                                    <h4>VNIT Achievement</h4>
-                                    <p>
-                                        VNIT's ARDUINO EXPO 3RD PRIZE
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-top gold">
-                                <div class="rank">11</div>
-                                <div class="medal">
-                                    <i class="fa-solid fa-trophy"></i>
-                                    IMO Excellence
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="name">Aaradhya Kulkarni</h3>
-                                <div class="class-pill">Class 6th</div>
-                                <div class="school">
-                                    <div class="school-icon"><i class="fa-solid fa-school"></i></div>
-                                    <div class="school-text">
-                                        <h5>School Name</h5>
-                                        <p>Bhavan's BP Vidyamandir, Shrikrishna Nagar</p>
-                                    </div>
-                                </div>
-                                <div class="achievement gold">
-                                    <h4>Gold Medal of Excellence</h4>
-                                    <p>
-                                        International Mathematics Olympiad 2025-26 Gold Medal of Excellence.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-top blue">
-                                <div class="rank">12</div>
-                                <div class="medal">
-                                    <i class="fa-solid fa-flask"></i>
-                                    Olympiad
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="name">AFIYA AFTAB</h3>
-                                <div class="class-pill">Class 7th</div>
-                                <div class="school">
-                                    <div class="school-icon"><i class="fa-solid fa-school"></i></div>
-                                    <div class="school-text">
-                                        <h5>School Name</h5>
-                                        <p>St. Vincent Pallotti, Gorewada</p>
-                                    </div>
-                                </div>
-                                <div class="achievement blue">
-                                    <h4>Olympiad Qualification</h4>
-                                    <p>
-                                        Qualified for 2nd level International Maths Olympiad (IMO) and National Science
-                                        Olympiad
-                                        (NSO).
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-top gold">
-                                <div class="rank">13</div>
-                                <div class="medal">
-                                    <i class="fa-solid fa-medal"></i>
-                                    Gold Medal
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="name">Ojas Sonkusare</h3>
-                                <div class="class-pill">Class 8th</div>
-                                <div class="school">
-                                    <div class="school-icon"><i class="fa-solid fa-school"></i></div>
-                                    <div class="school-text">
-                                        <h5>School Name</h5>
-                                        <p>Somalwar Nikalas High School</p>
-                                    </div>
-                                </div>
-                                <div class="achievement gold">
-                                    <h4>IMO & IEO Excellence</h4>
-                                    <p>
-                                        Qualified for IMO 2nd level and Gold Medal in IMO and IEO. Also got 1st rank
-                                        trophy in
-                                        U15 Chess Tournament.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-top blue">
-                                <div class="rank">14</div>
-                                <div class="medal">
-                                    <i class="fa-solid fa-trophy"></i>
-                                    National Level
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="name">Yash Adhau</h3>
-                                <div class="class-pill">Class 9th</div>
-                                <div class="school">
-                                    <div class="school-icon"><i class="fa-solid fa-school"></i></div>
-                                    <div class="school-text">
-                                        <h5>School Name</h5>
-                                        <p>Bhavan's BP Vidya Mandir Civil Lines</p>
-                                    </div>
-                                </div>
-                                <div class="achievement blue">
-                                    <h4>National Qualification</h4>
-                                    <p>
-                                        Qualified for National level CBSE Science Competition at New Delhi.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-top blue">
-                                <div class="rank">15</div>
-                                <div class="medal">
-                                    <i class="fa-solid fa-award"></i>
-                                    Competition
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="name">Bhargav Panurkar</h3>
-                                <div class="class-pill">Class 9th</div>
-                                <div class="school">
-                                    <div class="school-icon"><i class="fa-solid fa-school"></i></div>
-                                    <div class="school-text">
-                                        <h5>School Name</h5>
-                                        <p>R.S. Mundle English Medium School</p>
-                                    </div>
-                                </div>
-                                <div class="achievement blue">
-                                    <h4>Level 2 Qualified</h4>
-                                    <p>
-                                        Qualified for Dr Homi Bhabha Balvaidyanik Spardha Level 2.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </section>
-
-                <!-- =======================================================
-MESSAGE
-======================================================= -->
-
-                <section class="message">
-
-                    <i class="fa-solid fa-star"></i>
-
-                    <p>
-
-                        We are incredibly proud of our young scientists
-                        for their outstanding performance in the final phase
-                        of this prestigious competition.
-
-                        <span>
-                            Keep exploring and excelling!
-                        </span>
-
-                    </p>
-
-                </section>
-
+         </div>
+         <!-- Overlay (for closing sidebar when clicking outside) -->
+         <div id="menuOverlay" class="menu-overlay"></div>
+         <main class="page_content">
+         <section class="page_banner">
+            <div class="container">
+               <div class="content_wrapper">
+                  <div class="row align-items-center">
+                     <div class="col col-lg-12">
+                        <h1 class="page_title">Success Stories</h1>
+                     </div>
+                  </div>
+               </div>
             </div>
-
-        <!--       
+         </section>
+         <div class="container">
+            <!-- =======================================================
+               WINNERS SECTION
+               ======================================================= -->
+            <section class="category mt-4">
+               <h2 class="section-title">
+                  Students' Success Stories
+               </h2>
+               <!-- Top Grid -->
+               <div class="grid top-grid">
+                  <div class="card">
+                     <div class="card-top gold">
+                        <img src="assets/images/for_students/Ananya-Vyawahare-portrait.webp"
+                           alt="Ananya Vyawahare">
+                        <div class="rank">🥇</div>
+                        <!-- <div class="photo">
+                           <img src="assets/images/for_students/Rishika_Tawri_Portrait.webp" alt="Rishika Tawari">
+                           </div> -->
+                        <div class="medal">
+                           <i class="fa-solid fa-crown"></i>
+                           Amongst Top 32 in India
+                        </div>
+                     </div>
+                     <div class="content">
+                        <h3 class="name">
+                           Ananya Vyawahare
+                        </h3>
+                        <div class="class-pill">
+                           Class 8th
+                        </div>
+                        <div class="school">
+                           <div class="school-icon">
+                              <i class="fa-solid fa-school"></i>
+                           </div>
+                           <div class="school-text">
+                              <h5>School Name</h5>
+                              <p>
+                                 Somalwar School - Nagpur
+                              </p>
+                           </div>
+                        </div>
+                        <div class="achievement gold">
+                           <h4>Research Intern</h4>
+                           <p>
+                              Got Selected for an Anveshana Research Internship Program at Prayoga Institute,
+                              Bengaluru
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- SHAURYA -->
+                  <div class="card">
+                     <div class="card-top gold">
+                        <img src="assets/images/for_students/Abhiram-Barokar-portrait.webp" alt="Abhiram Barokar">
+                        <div class="rank">🥇</div>
+                        <!-- <div class="photo">
+                           <img src="images/shaurya.jpg" alt="Shaurya Pujari">
+                           </div> -->
+                        <div class="medal">
+                           <i class="fa-solid fa-crown"></i>
+                           Amongst Top 32 in India
+                        </div>
+                     </div>
+                     <div class="content">
+                        <h3 class="name">
+                           Abhiram Barokar
+                        </h3>
+                        <div class="class-pill">
+                           Class 8th
+                        </div>
+                        <div class="school">
+                           <div class="school-icon">
+                              <i class="fa-solid fa-school"></i>
+                           </div>
+                           <div class="school-text">
+                              <h5>School Name</h5>
+                              <p>
+                                 Somalwar School - Nagpur
+                              </p>
+                           </div>
+                        </div>
+                        <div class="achievement gold">
+                           <h4>Research Intern</h4>
+                           <p>
+                              Got Selected for an Anveshana Research Internship Program at Prayoga Institute,
+                              Bengaluru.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="grid">
+                  <!-- RISHIKA -->
+                  <div class="card">
+                     <div class="card-top gold">
+                        <img src="assets/images/for_students/Rishika_Tawri_Portrait.webp" alt="Rishika Tawari">
+                        <div class="rank">🥇</div>
+                        <!-- <div class="photo">
+                           <img src="assets/images/for_students/Rishika_Tawri_Portrait.webp" alt="Rishika Tawari">
+                           </div> -->
+                        <div class="medal">
+                           <i class="fa-solid fa-crown"></i>
+                           Gold Medal
+                        </div>
+                     </div>
+                     <div class="content">
+                        <h3 class="name">
+                           Rishika Tawari
+                        </h3>
+                        <div class="class-pill">
+                           Class 6th
+                        </div>
+                        <div class="school">
+                           <div class="school-icon">
+                              <i class="fa-solid fa-school"></i>
+                           </div>
+                           <div class="school-text">
+                              <h5>School Name</h5>
+                              <p>
+                                 Narayana Vidyalayam, Chinchbhavan - Nagpur
+                              </p>
+                           </div>
+                        </div>
+                        <div class="achievement gold">
+                           <h4>Gold Medal</h4>
+                           <p>
+                              Outstanding performance in the Homi Bhabha Young Scientist Competition.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- SHAURYA -->
+                  <div class="card">
+                     <div class="card-top silver">
+                        <img src="assets/images/for_students/Shaurya_Pujari_Portrait.webp" alt="Shaurya Pujari">
+                        <div class="rank">🥈</div>
+                        <!-- <div class="photo">
+                           <img src="images/shaurya.jpg" alt="Shaurya Pujari">
+                           </div> -->
+                        <div class="medal">
+                           <i class="fa-solid fa-medal"></i>
+                           Silver Medal
+                        </div>
+                     </div>
+                     <div class="content">
+                        <h3 class="name">
+                           Shaurya Pujari
+                        </h3>
+                        <div class="class-pill">
+                           Class 6th
+                        </div>
+                        <div class="school">
+                           <div class="school-icon">
+                              <i class="fa-solid fa-school"></i>
+                           </div>
+                           <div class="school-text">
+                              <h5>School Name</h5>
+                              <p>
+                                 School of Scholars (SOS), Atrey Layout - Nagpur
+                              </p>
+                           </div>
+                        </div>
+                        <div class="achievement silver">
+                           <h4>Silver Medal</h4>
+                           <p>
+                              Excellent scientific aptitude, strong analytical thinking, and remarkable
+                              problem-solving skills.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- ATHARVA -->
+                  <div class="card">
+                     <div class="card-top silver">
+                        <img src="assets/images/for_students/Atharva_Joshi_Portrait.webp" alt="Atharva Joshi">
+                         <div class="rank">🥈</div>
+                        <!-- <div class="photo">
+                           <img src="images/atharva.jpg" alt="Atharva Joshi">
+                           </div> -->
+                        <div class="medal">
+                           <i class="fa-solid fa-medal"></i>
+                           Silver Medal
+                        </div>
+                     </div>
+                     <div class="content">
+                        <h3 class="name">
+                           Atharva Joshi
+                        </h3>
+                        <div class="class-pill">
+                           Class 6th
+                        </div>
+                        <div class="school">
+                           <div class="school-icon">
+                              <i class="fa-solid fa-school"></i>
+                           </div>
+                           <div class="school-text">
+                              <h5>School Name</h5>
+                              <p>
+                                 R. S. Mundle English School - Nagpur
+                              </p>
+                           </div>
+                        </div>
+                        <div class="achievement silver">
+                           <h4>Silver Medal</h4>
+                           <p>
+                              Demonstrated exceptional performance and remarkable excellence in scientific
+                              competition.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- ISHAN -->
+                  <div class="card">
+                     <div class="card-top bronze">
+                        <img src="assets/images/for_students/Ishan_Todkari_Portrait.webp" alt="Ishan Todkari">
+                        <div class="rank">🥉</div>
+                        <!-- <div class="photo">
+                           <img src="images/ishan.jpg" alt="Ishan Todkari">
+                           </div> -->
+                        <div class="medal">
+                           <i class="fa-solid fa-award"></i>
+                           Bronze Medal
+                        </div>
+                     </div>
+                     <div class="content">
+                        <h3 class="name">
+                           Ishan Todkari
+                        </h3>
+                        <div class="class-pill">
+                           Class 6th
+                        </div>
+                        <div class="school">
+                           <div class="school-icon">
+                              <i class="fa-solid fa-school"></i>
+                           </div>
+                           <div class="school-text">
+                              <h5>School Name</h5>
+                              <p>
+                                 Bhavan's Vidyamandir, Chinchbhavan - Nagpur
+                              </p>
+                           </div>
+                        </div>
+                        <div class="achievement bronze">
+                           <h4>Bronze Medal</h4>
+                           <p>
+                              Commendable achievement demonstrating scientific curiosity and excellence.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- =======================================================
+               OTHER EXAMS
+               ======================================================= -->
+            <section class="category">
+               <div class="category-header">
+                  <div class="category-line"></div>
+                  <h3 class="heading_text mb-5 mt-5">
+                     Other Exams &amp; Competitions
+                  </h3>
+               </div>
+               <div class="grid">
+                  <!-- Remaining 11 Students -->
+                  <div class="card">
+                     <div class="card-top blue">
+                        <div class="rank">1</div>
+                        <div class="medal">
+                           <i class="fa-solid fa-flask"></i>
+                           Research Internship
+                        </div>
+                     </div>
+                     <div class="content">
+                        <h3 class="name">Ananya Vyawahare</h3>
+                        <div class="class-pill">Class 9th</div>
+                        <div class="school">
+                           <div class="school-icon"><i class="fa-solid fa-school"></i></div>
+                           <div class="school-text">
+                              <h5>School Name</h5>
+                              <p>Somalwar School, Ramdaspeth</p>
+                           </div>
+                        </div>
+                        <div class="achievement blue">
+                           <h4>Research Selection</h4>
+                           <p>
+                              Got Selected for an Anveshana Research Internship Program at Prayoga Institute,
+                              Bengaluru.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-top blue">
+                        <div class="rank">6</div>
+                        <div class="medal">
+                           <i class="fa-solid fa-rocket"></i>
+                           Olympiad
+                        </div>
+                     </div>
+                     <div class="content">
+                        <h3 class="name">Omkar Vaidya</h3>
+                        <div class="class-pill">Class 6th</div>
+                        <div class="school">
+                           <div class="school-icon"><i class="fa-solid fa-school"></i></div>
+                           <div class="school-text">
+                              <h5>School Name</h5>
+                              <p>Sevasadan Saksham School CBSE</p>
+                           </div>
+                        </div>
+                        <div class="achievement blue">
+                           <h4>ISSO Qualification</h4>
+                           <p>
+                              Indian Space Science Olympiad - Qualified for 2nd level and all India 8th in
+                              Junior
+                              Category.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-top blue">
+                        <div class="rank">7</div>
+                        <div class="medal">
+                           <i class="fa-solid fa-award"></i>
+                           Competition
+                        </div>
+                     </div>
+                     <div class="content">
+                        <h3 class="name">Yukti Borkar</h3>
+                        <div class="class-pill">Class 6th</div>
+                        <div class="school">
+                           <div class="school-icon"><i class="fa-solid fa-school"></i></div>
+                           <div class="school-text">
+                              <h5>School Name</h5>
+                              <p>Somalwar High School, Ramdaspeth</p>
+                           </div>
+                        </div>
+                        <div class="achievement blue">
+                           <h4>2nd Level Qualified</h4>
+                           <p>
+                              Qualified for the Dr. Homi Bhabha Balvaidyanik Competition for 2nd level.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-top blue">
+                        <div class="rank">8</div>
+                        <div class="medal">
+                           <i class="fa-solid fa-award"></i>
+                           Competition
+                        </div>
+                     </div>
+                     <div class="content">
+                        <h3 class="name">Archit Kolhapurkar</h3>
+                        <div class="class-pill">Class 6th</div>
+                        <div class="school">
+                           <div class="school-icon"><i class="fa-solid fa-school"></i></div>
+                           <div class="school-text">
+                              <h5>School Name</h5>
+                              <p>TBRAN'S Mundle English Medium School</p>
+                           </div>
+                        </div>
+                        <div class="achievement blue">
+                           <h4>2nd Level Qualified</h4>
+                           <p>
+                              Qualified for the Dr. Homi Bhabha Balvaidyanik Competition for 2nd level.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-top gold">
+                        <div class="rank">9</div>
+                        <div class="medal">
+                           <i class="fa-solid fa-medal"></i>
+                           SOF Gold Medal
+                        </div>
+                     </div>
+                     <div class="content">
+                        <h3 class="name">Abhang Uikey</h3>
+                        <div class="class-pill">Class 6th</div>
+                        <div class="school">
+                           <div class="school-icon"><i class="fa-solid fa-school"></i></div>
+                           <div class="school-text">
+                              <h5>School Name</h5>
+                              <p>Bhavan's B.P Vidya Mandir Chinchbhavan</p>
+                           </div>
+                        </div>
+                        <div class="achievement gold">
+                           <h4>SOF Excellence</h4>
+                           <p>
+                              Gold medal in SOF science exam in VI and qualified for Level 2 exam. Gold Medal
+                              in Maths
+                              SOF Olympiad.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-top blue">
+                        <div class="rank">10</div>
+                        <div class="medal">
+                           <i class="fa-solid fa-microchip"></i>
+                           Technology
+                        </div>
+                     </div>
+                     <div class="content">
+                        <h3 class="name">Nirmay Tulshan</h3>
+                        <div class="class-pill">Class 7th</div>
+                        <div class="school">
+                           <div class="school-icon"><i class="fa-solid fa-school"></i></div>
+                           <div class="school-text">
+                              <h5>School Name</h5>
+                              <p>Bhavan's BP Vidya Mandir, Koradi</p>
+                           </div>
+                        </div>
+                        <div class="achievement blue">
+                           <h4>VNIT Achievement</h4>
+                           <p>
+                             Visvesvaraya National Institute of Technology Arduino Project Expo 3rd Prize Winner.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-top gold">
+                        <div class="rank">11</div>
+                        <div class="medal">
+                           <i class="fa-solid fa-trophy"></i>
+                           IMO Excellence
+                        </div>
+                     </div>
+                     <div class="content">
+                        <h3 class="name">Aaradhya Kulkarni</h3>
+                        <div class="class-pill">Class 6th</div>
+                        <div class="school">
+                           <div class="school-icon"><i class="fa-solid fa-school"></i></div>
+                           <div class="school-text">
+                              <h5>School Name</h5>
+                              <p>Bhavan's BP Vidyamandir, Shrikrishna Nagar</p>
+                           </div>
+                        </div>
+                        <div class="achievement gold">
+                           <h4>Gold Medal of Excellence</h4>
+                           <p>
+                              International Mathematics Olympiad 2025-26 Gold Medal of Academic Excellence Achievement Award.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-top blue">
+                        <div class="rank">12</div>
+                        <div class="medal">
+                           <i class="fa-solid fa-flask"></i>
+                           Olympiad
+                        </div>
+                     </div>
+                     <div class="content">
+                        <h3 class="name">AFIYA AFTAB</h3>
+                        <div class="class-pill">Class 7th</div>
+                        <div class="school">
+                           <div class="school-icon"><i class="fa-solid fa-school"></i></div>
+                           <div class="school-text">
+                              <h5>School Name</h5>
+                              <p>St. Vincent Pallotti, Gorewada</p>
+                           </div>
+                        </div>
+                        <div class="achievement blue">
+                           <h4>Olympiad Qualification</h4>
+                           <p>
+                              Qualified for 2nd level International Maths Olympiad (IMO) and National Science
+                              Olympiad
+                              (NSO).
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-top gold">
+                        <div class="rank">13</div>
+                        <div class="medal">
+                           <i class="fa-solid fa-medal"></i>
+                           Gold Medal
+                        </div>
+                     </div>
+                     <div class="content">
+                        <h3 class="name">Ojas Sonkusare</h3>
+                        <div class="class-pill">Class 8th</div>
+                        <div class="school">
+                           <div class="school-icon"><i class="fa-solid fa-school"></i></div>
+                           <div class="school-text">
+                              <h5>School Name</h5>
+                              <p>Somalwar Nikalas High School</p>
+                           </div>
+                        </div>
+                        <div class="achievement gold">
+                           <h4>IMO & IEO Excellence</h4>
+                           <p>
+                              Qualified IMO Level 2, Gold Medalist in IMO & IEO, and U15 Chess Tournament 1st Rank Holder.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-top blue">
+                        <div class="rank">14</div>
+                        <div class="medal">
+                           <i class="fa-solid fa-trophy"></i>
+                           National Level
+                        </div>
+                     </div>
+                     <div class="content">
+                        <h3 class="name">Yash Adhau</h3>
+                        <div class="class-pill">Class 9th</div>
+                        <div class="school">
+                           <div class="school-icon"><i class="fa-solid fa-school"></i></div>
+                           <div class="school-text">
+                              <h5>School Name</h5>
+                              <p>Bhavan's BP Vidya Mandir Civil Lines</p>
+                           </div>
+                        </div>
+                        <div class="achievement blue">
+                           <h4>National Qualification</h4>
+                           <p>
+                              Qualified for National Level CBSE Science Competition at New Delhi with Distinction Award.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-top blue">
+                        <div class="rank">15</div>
+                        <div class="medal">
+                           <i class="fa-solid fa-award"></i>
+                           Competition
+                        </div>
+                     </div>
+                     <div class="content">
+                        <h3 class="name">Bhargav Panurkar</h3>
+                        <div class="class-pill">Class 9th</div>
+                        <div class="school">
+                           <div class="school-icon"><i class="fa-solid fa-school"></i></div>
+                           <div class="school-text">
+                              <h5>School Name</h5>
+                              <p>R.S. Mundle English Medium School</p>
+                           </div>
+                        </div>
+                        <div class="achievement blue">
+                           <h4>Level 2 Qualified</h4>
+                           <p>
+                              Qualified for Dr. Homi Bhabha Balvaidyanik Spardha Level 2 Scientific Talent Examination.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- =======================================================
+               MESSAGE
+               ======================================================= -->
+            <section class="message">
+               <i class="fa-solid fa-star"></i>
+               <p>
+                  We are incredibly proud of our young scientists
+                  for their outstanding performance in the final phase
+                  of this prestigious competition.
+                  <span>
+                  Keep exploring and excelling!
+                  </span>
+               </p>
+            </section>
+         </div>
+         <!--       
             <section class="newslatter_section">
                 <div class="container">
                     <div class="newslatter_box" style="background-image: url(assets/images/shape/shape_img_6.svg);">
@@ -1694,109 +1235,109 @@ MESSAGE
                     </div>
                 </div>
             </section> -->
-    </div>
-    <footer class="site_footer">
-        <div class="footer_widget_area">
+      </div>
+      <footer class="site_footer">
+         <div class="footer_widget_area">
             <div class="container">
-                <div class="row">
-                    <div class="col col-lg-4 col-md-6 col-sm-6">
-                        <div class="footer_widget">
-                            <h3 class="footer_widget_title">Address</h3>
-                            <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
-                                School, Near Alankar Talkies, North Ambazari road, Nagpur- 440010.</p>
-
-                        </div>
-                    </div>
-                    <div class="col col-lg-4">
-                        <div class="footer_widget">
-                            <h3 class="footer_widget_title">Social Links</h3>
-                            <ul class="social_links unordered_list">
-                                <li>
-                                    <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook"
-                                        target="_blank">
-                                        <!-- <img src="assets/images/icon/5365678_fb_facebook_facebook logo_icon.png" alt="Image of 5365678 fb facebook facebook logo icon"/> -->
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"
-                                        target="_blank">
-                                        <!-- <img src="assets/images/icon/410526_youtube_play_icon.png" alt="Image of 410526 youtube play icon"/> -->
-                                        <i class="fab fa-youtube"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
-                                        target="_blank">
-                                        <!-- <img src="assets/images/icon/5296765_camera_instagram_instagram logo_icon.png" alt="Image of 5296765 camera instagram instagram logo icon"/> -->
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://wa.me/917249811866" target="_blank">
-                                        <!-- <img src="assets/images/icon/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png" alt="Image of 5296520 bubble chat mobile whatsapp whatsapp logo icon"/> -->
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col col-lg-4 col-md-6 col-sm-6">
-                        <div class="footer_widget">
-                            <h3 class="footer_widget_title">Contact Details</h3>
-                            <ul class="blog_small_group unordered_list_block">
-                                <li>
-                                    <a class="blog_small" href="#">
-                                        <span class="item_content">
-                                            <small class="item_post_date">Call : +917249811866</small>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="blog_small" href="#">
-                                        <span class="item_content">
-                                            <small class="item_post_date">Email: prsscienceexploratory@gmail.com
-                                            </small>
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+               <div class="row">
+                  <div class="col col-lg-4 col-md-6 col-sm-6">
+                     <div class="footer_widget">
+                        <h3 class="footer_widget_title">Address</h3>
+                        <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
+                           School, Near Alankar Talkies, North Ambazari road, Nagpur- 440010.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="col col-lg-4">
+                     <div class="footer_widget">
+                        <h3 class="footer_widget_title">Social Links</h3>
+                        <ul class="social_links unordered_list">
+                           <li>
+                              <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook"
+                                 target="_blank">
+                                 <!-- <img src="assets/images/icon/5365678_fb_facebook_facebook logo_icon.png" alt="Image of 5365678 fb facebook facebook logo icon"/> -->
+                                 <i class="fab fa-facebook-f"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"
+                                 target="_blank">
+                                 <!-- <img src="assets/images/icon/410526_youtube_play_icon.png" alt="Image of 410526 youtube play icon"/> -->
+                                 <i class="fab fa-youtube"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
+                                 target="_blank">
+                                 <!-- <img src="assets/images/icon/5296765_camera_instagram_instagram logo_icon.png" alt="Image of 5296765 camera instagram instagram logo icon"/> -->
+                                 <i class="fab fa-instagram"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="https://wa.me/917249811866" target="_blank">
+                                 <!-- <img src="assets/images/icon/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png" alt="Image of 5296520 bubble chat mobile whatsapp whatsapp logo icon"/> -->
+                                 <i class="fab fa-whatsapp"></i>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col col-lg-4 col-md-6 col-sm-6">
+                     <div class="footer_widget">
+                        <h3 class="footer_widget_title">Contact Details</h3>
+                        <ul class="blog_small_group unordered_list_block">
+                           <li>
+                              <a class="blog_small" href="#">
+                              <span class="item_content">
+                              <small class="item_post_date">Call : +917249811866</small>
+                              </span>
+                              </a>
+                           </li>
+                           <li>
+                              <a class="blog_small" href="#">
+                              <span class="item_content">
+                              <small class="item_post_date">Email: prsscienceexploratory@gmail.com
+                              </small>
+                              </span>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-        <div class="copyright_widget">
+         </div>
+         <div class="copyright_widget">
             <div class="container">
-                <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All
-                    rights reserved | Copyrights 2026</p>
+               <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All
+                  rights reserved | Copyrights 2026
+               </p>
             </div>
-        </div>
-    </footer>
-    </div>
-    <script src="assets/js/script.js"></script>
-    <script>
-        // Set active navigation item based on current page
-        (function setActiveNav() {
-            var currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
-            navLinks.forEach(function(link) {
-                var href = link.getAttribute('href');
-                var linkPage = href.split('?')[0]; // Remove query strings
-                // Match current page with nav link
-                if (linkPage === currentPage ||
-                    (currentPage === '' && linkPage === 'index.html')) {
-                    var parentLi = link.closest('li');
-                    if (parentLi) {
-                        parentLi.classList.add('active');
-                    }
-                }
-            });
-        })();
-    </script>
-    <script>
-        // Optimized Scroll Reveal Animation
-    </script>
-</body>
-
+         </div>
+      </footer>
+      </div>
+      <script src="assets/js/script.js"></script>
+      <script>
+         // Set active navigation item based on current page
+         (function setActiveNav() {
+             var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+             var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
+             navLinks.forEach(function(link) {
+                 var href = link.getAttribute('href');
+                 var linkPage = href.split('?')[0]; // Remove query strings
+                 // Match current page with nav link
+                 if (linkPage === currentPage ||
+                     (currentPage === '' && linkPage === 'index.html')) {
+                     var parentLi = link.closest('li');
+                     if (parentLi) {
+                         parentLi.classList.add('active');
+                     }
+                 }
+             });
+         })();
+      </script>
+      <script>
+         // Optimized Scroll Reveal Animation
+      </script>
+   </body>
 </html>
