@@ -35,7 +35,7 @@
          .img-cont {
          box-shadow: none !important
          }
-         .page_banner { width: 100%; float: left; }
+         /* .page_banner { width: 100%; float: left; } */
          .page_banner .content_wrapper {
          padding: 0;
          }
@@ -381,7 +381,7 @@
          display: inline-block;
          padding: 10px 18px;
          border-radius: 50px;
-         background: rgb(231 243 227);
+         background: rgb(199 240 185);
          font-size: 13px;
          border: #a8e1d1 solid 1px;
          font-weight: 600;
@@ -489,8 +489,10 @@
          MESSAGE
          ======================================================= */
          .message {
-         /* background: #ffffff; */
-         padding: 42px;
+         width: 100%;
+         float: left;
+         padding: 0;
+         margin: 40px 0 20px;
          text-align: center;
          }
          .message i {
@@ -516,13 +518,28 @@
          @media(max-width:992px) {
          .grid {
          width: 95%;
-         margin: 18px auto;
+         margin: 25px auto;
          }
+          .card:hover {
+         transform: unset;
+         box-shadow: unset;
+         }
+         .card-top {padding: 20px;}
+
          .hero h1 {
          font-size: 56px;
          }
          .section-title h2 {
          font-size: 42px;
+         }
+         .category-header h3 { 
+            font-size: 1.3rem;
+         }
+          .message {
+        
+         margin: 10px 0;
+         text-align: center;
+         padding: 0;
          }
          }
          @media(max-width:600px) {
@@ -543,9 +560,6 @@
          }
          .section-title h2 {
          font-size: 34px;
-         }
-         .message {
-         padding: 30px 24px;
          }
          .message p {
          font-size: 18px;
@@ -627,7 +641,7 @@
          <div id="menuOverlay" class="menu-overlay"></div>
          <main class="page_content">
          <section class="page_banner">
-            <div class="container">
+            <div class="container px-0 pr-0">
                <div class="content_wrapper">
                   <div class="row align-items-center">
                      <div class="col col-lg-12">
@@ -895,42 +909,16 @@
             <section class="category">
                <div class="category-header">
                   <div class="category-line"></div>
-                  <h3 class="heading_text mb-5 mt-5">
+                  <h3 class="heading_text mb-md-5 mt-md-5">
                      Other Exams &amp; Competitions
                   </h3>
                </div>
                <div class="grid">
                   <!-- Remaining 11 Students -->
+                 
                   <div class="card">
                      <div class="card-top blue">
-                        <div class="rank">1</div>
-                        <div class="medal">
-                           <i class="fa-solid fa-flask"></i>
-                           Research Internship
-                        </div>
-                     </div>
-                     <div class="content">
-                        <h3 class="name">Ananya Vyawahare</h3>
-                        <div class="class-pill">Class 9th</div>
-                        <div class="school">
-                           <div class="school-icon"><i class="fa-solid fa-school"></i></div>
-                           <div class="school-text">
-                              <h5>School Name</h5>
-                              <p>Somalwar School, Ramdaspeth</p>
-                           </div>
-                        </div>
-                        <div class="achievement blue">
-                           <h4>Research Selection</h4>
-                           <p>
-                              Got Selected for an Anveshana Research Internship Program at Prayoga Institute,
-                              Bengaluru.
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="card">
-                     <div class="card-top blue">
-                        <div class="rank">6</div>
+                        <!-- <div class="rank">6</div> -->
                         <div class="medal">
                            <i class="fa-solid fa-rocket"></i>
                            Olympiad
@@ -958,7 +946,7 @@
                   </div>
                   <div class="card">
                      <div class="card-top blue">
-                        <div class="rank">7</div>
+                        <!-- <div class="rank">7</div> -->
                         <div class="medal">
                            <i class="fa-solid fa-award"></i>
                            Competition
@@ -984,7 +972,7 @@
                   </div>
                   <div class="card">
                      <div class="card-top blue">
-                        <div class="rank">8</div>
+                        <!-- <div class="rank">8</div> -->
                         <div class="medal">
                            <i class="fa-solid fa-award"></i>
                            Competition
@@ -1010,7 +998,7 @@
                   </div>
                   <div class="card">
                      <div class="card-top gold">
-                        <div class="rank">9</div>
+                        <!-- <div class="rank">9</div> -->
                         <div class="medal">
                            <i class="fa-solid fa-medal"></i>
                            SOF Gold Medal
@@ -1038,7 +1026,7 @@
                   </div>
                   <div class="card">
                      <div class="card-top blue">
-                        <div class="rank">10</div>
+                        <!-- <div class="rank">10</div> -->
                         <div class="medal">
                            <i class="fa-solid fa-microchip"></i>
                            Technology
@@ -1064,7 +1052,7 @@
                   </div>
                   <div class="card">
                      <div class="card-top gold">
-                        <div class="rank">11</div>
+                        <!-- <div class="rank">11</div> -->
                         <div class="medal">
                            <i class="fa-solid fa-trophy"></i>
                            IMO Excellence
@@ -1090,7 +1078,7 @@
                   </div>
                   <div class="card">
                      <div class="card-top blue">
-                        <div class="rank">12</div>
+                        <!-- <div class="rank">12</div> -->
                         <div class="medal">
                            <i class="fa-solid fa-flask"></i>
                            Olympiad
@@ -1118,7 +1106,7 @@
                   </div>
                   <div class="card">
                      <div class="card-top gold">
-                        <div class="rank">13</div>
+                        <!-- <div class="rank">13</div> -->
                         <div class="medal">
                            <i class="fa-solid fa-medal"></i>
                            Gold Medal
@@ -1144,7 +1132,7 @@
                   </div>
                   <div class="card">
                      <div class="card-top blue">
-                        <div class="rank">14</div>
+                        <!-- <div class="rank">14</div> -->
                         <div class="medal">
                            <i class="fa-solid fa-trophy"></i>
                            National Level
@@ -1170,7 +1158,7 @@
                   </div>
                   <div class="card">
                      <div class="card-top blue">
-                        <div class="rank">15</div>
+                        <!-- <div class="rank">15</div> -->
                         <div class="medal">
                            <i class="fa-solid fa-award"></i>
                            Competition
