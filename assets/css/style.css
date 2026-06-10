@@ -10019,11 +10019,6 @@ screen and (max-height:300px) {
     display: none
 }
 
-.page_wrapper {
-    overflow: hidden;
-    position: relative
-}
-
 [disabled] {
     opacity: .4;
     pointer-events: none
