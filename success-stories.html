@@ -178,7 +178,7 @@
          ======================================================= */
          .card-top {
          position: relative;
-         padding: 15px 15px 10px;
+         padding: 10px 15px 10px;
          color: #fff;
          overflow: hidden;
          }
@@ -248,7 +248,7 @@
          backdrop-filter: blur(10px);
          }
          .medal {
-         display: block;
+         display: inline-block;
          width: fit-content;
          align-items: center;
          gap: 10px;
@@ -261,6 +261,11 @@
          margin-top: 10px;
          margin: 10px auto 0;
          backdrop-filter: blur(5px);
+         }
+         .icons-on-header {
+            float: right;
+            font-size: 30px;
+            margin: 10px 0 0 0;
          }
          /* =======================================================
          CONTENT
@@ -414,7 +419,7 @@
          ======================================================= */
          @media(max-width:992px) {
          .grid {
-         width: 95%;
+         width: 100%;
          margin: 25px auto;
          }
           .card:hover {
@@ -471,7 +476,7 @@
          </div>
          <!-- Top Header Navigation -->
          <header class="site_header site_header_1">
-            <div class="container py-0">
+            <div class="container px-lg-0">
                <div class="row align-items-center">
                   <div class="col col-lg-3 col-10">
                      <div class="site_logo">
@@ -537,18 +542,18 @@
          <!-- Overlay (for closing sidebar when clicking outside) -->
          <div id="menuOverlay" class="menu-overlay"></div>
          <main class="page_content">
-         <section class="page_banner">
-            <div class="container px-0 pr-0">
+         <section class="page_banner mt-1">
+            <div class="container px-lg-0 pr-0">
                <div class="content_wrapper">
                   <div class="row align-items-center">
                      <div class="col col-lg-12">
-                        <h1 class="page_title">Success Stories</h1>
+                        <h1 class="page_title">Students' Success Stories</h1>
                      </div>
                   </div>
                </div>
             </div>
          </section>
-         <div class="container py-0">
+         <div class="container px-lg-0">
             <!-- =======================================================
                WINNERS SECTION
                ======================================================= -->
@@ -816,10 +821,14 @@
                   <div class="card">
                      <div class="card-top blue">
                         <!-- <div class="rank">6</div> -->
+                         <span class="icons-on-header">
+                           <i class="fa-solid fa-rocket"></i>
+                        </span>
                         <div class="medal">
                            <i class="fa-solid fa-rocket"></i>
                            Olympiad
                         </div>
+                        
                      </div>
                      <div class="content">
                         <h3 class="name">Omkar Vaidya</h3>
@@ -844,6 +853,7 @@
                   <div class="card">
                      <div class="card-top blue">
                         <!-- <div class="rank">7</div> -->
+                         <span class="icons-on-header"><i class="fa-solid fa-award"></i></span>
                         <div class="medal">
                            <i class="fa-solid fa-award"></i>
                            Competition
@@ -870,6 +880,7 @@
                   <div class="card">
                      <div class="card-top blue">
                         <!-- <div class="rank">8</div> -->
+                          <span class="icons-on-header"><i class="fa-solid fa-award"></i></span>
                         <div class="medal">
                            <i class="fa-solid fa-award"></i>
                            Competition
@@ -896,6 +907,7 @@
                   <div class="card">
                      <div class="card-top gold">
                         <!-- <div class="rank">9</div> -->
+                           <span class="icons-on-header"><i class="fa-solid fa-medal"></i></span>
                         <div class="medal">
                            <i class="fa-solid fa-medal"></i>
                            SOF Gold Medal
@@ -924,6 +936,7 @@
                   <div class="card">
                      <div class="card-top blue">
                         <!-- <div class="rank">10</div> -->
+                           <span class="icons-on-header"><i class="fa-solid fa-microchip"></i></span>
                         <div class="medal">
                            <i class="fa-solid fa-microchip"></i>
                            Technology
@@ -950,6 +963,7 @@
                   <div class="card">
                      <div class="card-top gold">
                         <!-- <div class="rank">11</div> -->
+                           <span class="icons-on-header"><i class="fa-solid fa-trophy"></i></span>
                         <div class="medal">
                            <i class="fa-solid fa-trophy"></i>
                            IMO Excellence
@@ -1004,6 +1018,7 @@
                   <div class="card">
                      <div class="card-top gold">
                         <!-- <div class="rank">13</div> -->
+                           <span class="icons-on-header"><i class="fa-solid fa-medal"></i></span>
                         <div class="medal">
                            <i class="fa-solid fa-medal"></i>
                            Gold Medal
@@ -1020,7 +1035,7 @@
                            </div>
                         </div>
                         <div class="achievement gold">
-                           <h4>IMO & IEO Excellence</h4>
+                           <h4>IMO &amp; IEO Excellence</h4>
                            <p>
                               Qualified IMO Level 2, Gold Medalist in IMO & IEO, and U15 Chess Tournament 1st Rank Holder.
                            </p>
@@ -1030,6 +1045,7 @@
                   <div class="card">
                      <div class="card-top blue">
                         <!-- <div class="rank">14</div> -->
+                           <span class="icons-on-header"><i class="fa-solid fa-trophy"></i></span>
                         <div class="medal">
                            <i class="fa-solid fa-trophy"></i>
                            National Level
@@ -1056,6 +1072,7 @@
                   <div class="card">
                      <div class="card-top blue">
                         <!-- <div class="rank">15</div> -->
+                        <span class="icons-on-header"><i class="fa-solid fa-award"></i></span>
                         <div class="medal">
                            <i class="fa-solid fa-award"></i>
                            Competition
@@ -1100,7 +1117,7 @@
       </div>
       <footer class="site_footer">
          <div class="footer_widget_area">
-            <div class="container">
+            <div class="container px-lg-0">
                <div class="row">
                   <div class="col col-lg-4 col-md-6 col-sm-6">
                      <div class="footer_widget">
@@ -1166,7 +1183,7 @@
             </div>
          </div>
          <div class="copyright_widget">
-            <div class="container">
+            <div class="container px-lg-0">
                <p class="copyright_text text-center mb-0"><a href="#">Prof. Rajendra Singh Exploratory</a> © All
                   rights reserved | Copyrights 2026
                </p>
