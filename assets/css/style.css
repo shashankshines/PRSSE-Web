@@ -14843,17 +14843,6 @@ blockquote p {
     /* overflow-x: hidden; */
 }
 
-/* If the marquee exists, adjust margin only for desktop */
-
-@media (min-width: 992px) {
-	.page_content {
-    margin-top: 110px;
-}
-    .marquee-container+.container .page_content {
-        margin-top: 175px;
-    }
-}
-
 /**** GREAT MINDS PAGE STYLES ****/
 
 .internal-banner {
