@@ -1401,7 +1401,7 @@ a.btn:hover span small {
     list-style: none;
     color: #fff;
     margin-left: 12px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 ol[type="1"]>li:not(:last-child) {
@@ -4326,7 +4326,7 @@ blockquote p {
     font-size: 14px;
     line-height: 22px;
     color: #fff;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .site_footer .footer_widget_title {
@@ -10388,28 +10388,6 @@ hr {
 .footer_widget .unordered_list_block>li {
     font-size: 16px;
 }
-/*
-
-ol[type="1"]>li:not(:last-child) {
-    margin-bottom: 12px
-} */
-
-/* .info_list.unordered_list_block>li:not(:last-child) {
-    margin-bottom: 10px
-}
-
-.info_list a {
-    display: block;
-    color: #29281e
-}
-
-.info_list a:hover {
-    opacity: .7
-}
-
-.info_list span {
-    display: table
-} */
 
 .page_list.unordered_list {
     margin: -5px -10px
