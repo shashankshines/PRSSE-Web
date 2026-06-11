@@ -4116,7 +4116,7 @@ blockquote p {
     position: fixed;
     -webkit-backdrop-filter: saturate(500%) blur(20px);
     backdrop-filter: saturate(200%) blur(16px);
-    box-shadow: 0 2px 6px 0 rgba(16, 18, 19, .08);
+    box-shadow: 0 2px 6px 0 rgba(16, 18, 19, .1);
     transition: background-color .3s ease-in, padding .3s;
     background-color: rgba(255, 255, 255, 0.45);
 }
