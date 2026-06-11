@@ -655,16 +655,6 @@ section.reveal {
     background: rgba(169, 204, 146, .5);
     border-radius: 20px;
 }
-/* @media screen and (max-width:767px) {
-    .hero_banner.style_1 .content_wrap { 
-        border-radius: 0;
-        margin: 0;
-    }
- } */
-/* p.heading_description { margin-right: 80px; }
-@media screen and (max-width:1024px) { 
-    p.heading_description { margin-right: 0; }
-} */
 
 .banner_image_1 {
     z-index: 1;
