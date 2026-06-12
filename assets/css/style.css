@@ -4326,7 +4326,7 @@ blockquote p {
     font-size: 14px;
     line-height: 22px;
     color: #fff;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .site_footer .footer_widget_title {
@@ -4366,9 +4366,9 @@ blockquote p {
 .copyright_widget .copyright_text {
     padding: 25px 0;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 20px;
-    border-top: 1px solid #fff;
+    border-top: 1px solid rgb(255 255 255 / 50%);
 }
 
 .copyright_widget .copyright_text a {
