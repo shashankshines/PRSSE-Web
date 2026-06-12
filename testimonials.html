@@ -426,10 +426,10 @@
             display: inline-flex;
             gap: 10px;
             align-self: flex-end;
-            border: 1px solid rgba(20, 32, 51, 0.1);
+            /* border: 1px solid rgba(20, 32, 51, 0.1); */
             border-radius: 999px;
             padding: 5px;
-            background: rgba(255, 255, 255, 0.78);
+            background: rgb(167 203 113 / 50%);
             box-shadow: 0 16px 38px rgba(20, 32, 51, 0.08);
             backdrop-filter: blur(16px);
             margin-bottom: 10px;
@@ -446,12 +446,18 @@
             font-weight: 760;
             white-space: nowrap;
             /* transform: translateX(10px); */
-            transition: background linear .2s
+            transition: background linear .2s;
+            background: linear-gradient(180deg, #fcfaf5 0%, #dfd7a8 100%);
+        }
+        .filter-button:hover {
+            background: linear-gradient(150deg, #0d5c4d, #1a8570 100%);
+            color: #fff;
         }
 
         .filter-button[aria-pressed="true"] {
             color: #fff;
-            background: var(--ink);
+            background: rgba(254, 123, 20, .85);
+            background: linear-gradient(150deg, #1a8570 0%, #0d5c4d 100%);
         }
 
         .testimonial-wall {
@@ -464,7 +470,8 @@
 
         .testimonial-card {
             width: 100%;
-            display: inline-block;
+            float: left;
+            /* display: inline-block; */
             margin: 0 0 10px;
             overflow: hidden;
             break-inside: avoid;
@@ -534,6 +541,11 @@
             background: #EEE7FF;
             color: #6A42C2;
             padding: 5px 15px;
+        }
+
+         .testimonial-card[data-type="student"] .tag {
+            background: #51e3ed;
+            color: #563e3e;
         }
 
         .name {
@@ -723,52 +735,7 @@
         }
 
         @media (max-width: 960px) {
-            .hero {
-                grid-template-columns: 1fr;
-                min-height: auto;
-                padding-block: 42px 58px;
-            }
-
-            h1 {
-                font-size: 3.45rem;
-            }
-
-            .hero-media {
-                display: block;
-                min-height: 500px;
-                order: -1;
-            }
-
-            .hero-media::before {
-                inset: 52px 58px 48px 78px;
-            }
-
-            .hero-shot {
-                position: absolute;
-            }
-
-            .hero-shot.tall {
-                top: 112px;
-                left: 6%;
-                width: 34%;
-                transform: rotate(-4deg);
-            }
-
-            .hero-shot.wide {
-                top: 52px;
-                right: 4%;
-                width: 58%;
-                transform: rotate(3deg);
-            }
-
-            .hero-shot.small {
-                right: 16%;
-                bottom: 6px;
-                width: 27%;
-                justify-self: auto;
-                transform: rotate(4deg);
-            }
-
+            
             .quote-spark {
                 left: 5%;
                 bottom: 10%;
@@ -792,7 +759,18 @@
 
         }
 
-        @media (max-width: 680px) {
+        @media (max-width: 768px) {
+            .filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                box-shadow: none;
+                backdrop-filter: none;
+                /* background: rgb(167 203 113); */
+                border-radius: 25px;
+                padding: 10px;
+                border: 0;
+            }
             .shell {
                 width: min(calc(100% - 28px), var(--max));
             }
@@ -1041,7 +1019,7 @@
                     <div class="section-head">
                         <h2 class="section-title mt-4">Eminent Testimonials</h2>
                         <p>Insights, experiences, and words of appreciation shared by distinguished scientists,
-                            educators, innovators, administrators, and eminent personalities who visited PRSSE and
+                            educators, innovators, administrators, students and eminent personalities who visited PRSSE and
                             witnessed its unique approach to experiential science learning.</p>
                        
                     </div>
@@ -1049,10 +1027,12 @@
                             <button class="filter-button" type="button" data-filter="all"
                                 aria-pressed="true">All</button>
                             <button class="filter-button" type="button" data-filter="note"
-                                aria-pressed="false">Notes</button>
+                                aria-pressed="false">Eminent Notes</button>
                             <button class="filter-button" type="button" data-filter="moment"
-                                aria-pressed="false">Moments</button>
-                        </div>
+                                aria-pressed="false">Eminent Moments</button>
+                            <button class="filter-button" type="button" data-filter="student"
+                                aria-pressed="false">Students' Say</button>
+                    </div>
                     <div class="testimonial-wall" id="testimonialWall">
                         <article class="testimonial-card" data-type="moment" data-name="Padma Shri Prof. H C Verma"
                             data-role="Former Professor, IIT Kanpur">
@@ -1063,9 +1043,23 @@
                                     decoding="async">
                             </button>
                             <div class="card-body">
-                                <span class="tag">Visit moment</span>
+                                <span class="tag">Eminent moment</span>
                                 <h3 class="name">Padma Shri Prof. H C Verma</h3>
                                 <p class="role">Former Professor, IIT Kanpur</p>
+                            </div>
+                        </article>
+                         <article class="testimonial-card" data-type="moment" data-name="Dr. G Madhavi Latha"
+                            data-role="Indian Institute of Science Bengaluru">
+                            <iframe src="https://www.youtube.com/embed/SNG0Ygorrfs" width="100%" height="380"
+                              title="YouTube Shorts Video"
+                              frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              allowfullscreen>
+                           </iframe>
+                            <div class="card-body">
+                                <span class="tag">Eminent moment</span>
+                                <h3 class="name">Anand Kumar</h3>
+                                <p class="role">Indian Institute of Science Bengaluru</p>
                             </div>
                         </article>
                         <article class="testimonial-card" data-type="moment" data-name="Dr. K Sivan"
@@ -1076,7 +1070,7 @@
                                     decoding="async">
                             </button>
                             <div class="card-body">
-                                <span class="tag">Visit moment</span>
+                                <span class="tag">Eminent moment</span>
                                 <h3 class="name">Dr. K Sivan</h3>
                                 <p class="role">Former Chairman, ISRO</p>
                             </div>
@@ -1090,11 +1084,12 @@
                                     decoding="async">
                             </button>
                             <div class="card-body">
-                                <span class="tag">Visit moment</span>
+                                <span class="tag">Eminent moment</span>
                                 <h3 class="name">Padma Shri Anand Kumar</h3>
                                 <p class="role">Super 30 Fame</p>
                             </div>
                         </article>
+                        
                          <article class="testimonial-card" data-type="moment" data-name="Prof. Pragya Nopany"
                             data-role="Recipient of National Teacher Award">
                             <button class="media-button" type="button"
@@ -1104,7 +1099,7 @@
                                     decoding="async">
                             </button>
                             <div class="card-body">
-                                <span class="tag">Visit moment</span>
+                                <span class="tag">Eminent moment</span>
                                 <h3 class="name">Prof. Pragya Nopany</h3>
                                 <p class="role">Recipient of National Teacher Award</p>
                             </div>
@@ -1118,7 +1113,7 @@
                                     decoding="async">
                             </button>
                             <div class="card-body">
-                                <span class="tag">Visit moment</span>
+                                <span class="tag">Eminent moment</span>
                                 <h3 class="name">Mr. Manish Kumar</h3>
                                 <p class="role">National Teacher Awardee (UP)</p>
                             </div>
@@ -1145,7 +1140,7 @@
                                     decoding="async">
                             </button>
                             <div class="card-body">
-                                <span class="tag">Visit moment</span>
+                                <span class="tag">Eminent moment</span>
                                 <h3 class="name">Dr. Surhud More</h3>
                                 <p class="role">Recipient of Shanti Swarup Bhatnagar Award</p>
                             </div>
@@ -1159,7 +1154,7 @@
                                     decoding="async">
                             </button>
                             <div class="card-body">
-                                <span class="tag">Visit moment</span>
+                                <span class="tag">Eminent moment</span>
                                 <h3 class="name">Prof. Amit Agrawal</h3>
                                 <p class="role">Recipient of Shanti Swarup Bhatnagar Award</p>
                             </div>
@@ -1168,28 +1163,36 @@
                         <article class="testimonial-card" data-type="moment" data-name="Dr. Premlal Patel"
                             data-role="Director, VNIT">
                             <button class="media-button" type="button"
-                                aria-label="Open lab visit moment with Dr. Premlal Patel">
+                                aria-label="Open lab Eminent moment with Dr. Premlal Patel">
                                 <img src="assets/images/testimonials/testimonial-09.webp"
                                     alt="Dr. Premlal Patel during a lab interaction with students" loading="lazy"
                                     decoding="async">
                             </button>
                             <div class="card-body">
-                                <span class="tag">Visit moment</span>
+                                <span class="tag">Eminent moment</span>
                                 <h3 class="name">Dr. Premlal Patel</h3>
                                 <p class="role">Director, VNIT</p>
                             </div>
                         </article>
-                        
+                        <article class="testimonial-card" data-type="student" data-name="Mr. Manish Kumar"
+                            data-role="National Teacher Awardee (UP)">
+                           <iframe width="100%" height="315" src="https://www.youtube.com/embed/-CF0KQ47K9I?si=HvzZCwlQnq7zazI1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="card-body">
+                                <span class="tag">Students' say</span>
+                                <h3 class="name">Rishika Tawari</h3>
+                                <p class="role">Class 6th, Batch HB1</p>
+                            </div>
+                        </article>
                         <article class="testimonial-card" data-type="moment" data-name="Dr. G Madhavi Latha"
                             data-role="Indian Institute of Science Bengaluru">
                             <button class="media-button" type="button"
-                                aria-label="Open visit moment with Dr. G Madhavi Latha">
+                                aria-label="Open Eminent moment with Dr. G Madhavi Latha">
                                 <img src="assets/images/testimonials/testimonial-13.webp"
                                     alt="Dr. G Madhavi Latha testimonial slide and lab interaction" loading="lazy"
                                     decoding="async">
                             </button>
                             <div class="card-body">
-                                <span class="tag">Visit moment</span>
+                                <span class="tag">Eminent moment</span>
                                 <h3 class="name">Dr. G Madhavi Latha</h3>
                                 <p class="role">Indian Institute of Science Bengaluru</p>
                             </div>
@@ -1203,12 +1206,12 @@
                                     loading="lazy" decoding="async">
                             </button>
                             <div class="card-body">
-                                <span class="tag">Handwritten note</span>
+                                <span class="tag">Eminent note</span>
                                 <h3 class="name">Mr. Manish Kumar</h3>
                                 <p class="role">National Teacher Awardee (UP)</p>
                             </div>
                         </article>
-
+                        
                         <article class="testimonial-card" data-type="note" data-name="Dr. Surhud More"
                             data-role="IUCAA, Pune">
                             <button class="media-button" type="button"
@@ -1217,7 +1220,7 @@
                                     loading="lazy" decoding="async">
                             </button>
                             <div class="card-body">
-                                <span class="tag">Handwritten note</span>
+                                <span class="tag">Eminent note</span>
                                 <h3 class="name">Dr. Surhud More</h3>
                                 <p class="role">IUCAA, Pune</p>
                             </div>
@@ -1231,9 +1234,29 @@
                                     alt="Handwritten testimonial by Prof. Amit Agrawal" loading="lazy" decoding="async">
                             </button>
                             <div class="card-body">
-                                <span class="tag">Handwritten note</span>
+                                <span class="tag">Eminent note</span>
                                 <h3 class="name">Prof. Amit Agrawal</h3>
                                 <p class="role">IIT Bombay</p>
+                            </div>
+                        </article>
+                        
+                          <article class="testimonial-card" data-type="student" data-name="Mr. Manish Kumar"
+                            data-role="National Teacher Awardee (UP)">
+                           <iframe width="100%" height="315" src="https://www.youtube.com/embed/dD4xWpPS3jc?si=jnwNiaaXxiI9lweU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="card-body">
+                                <span class="tag">Students' say</span>
+                                <h3 class="name">Aryan Deshpande</h3>
+                                <p class="role">Class 7th, Batch B5, Program LTP</p>
+                            </div>
+                        </article>
+
+                        <article class="testimonial-card" data-type="student" data-name="Mr. Manish Kumar"
+                            data-role="National Teacher Awardee (UP)">
+                           <iframe width="100%" height="315" src="https://www.youtube.com/embed/RJmsxtQWsak?si=Nfplv0S957Q0gVmW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="card-body">
+                                <span class="tag">Students' say</span>
+                                <h3 class="name">Bhargav Hardas</h3>
+                                <p class="role">Class 8th, Batch C6, Program LTP</p>
                             </div>
                         </article>
 
@@ -1246,7 +1269,7 @@
                                     decoding="async">
                             </button>
                             <div class="card-body">
-                                <span class="tag">Handwritten note</span>
+                                <span class="tag">Eminent note</span>
                                 <h3 class="name">Prof. Pragya Nopany</h3>
                                 <p class="role">Founder Coordinator, BUN-IAPT, New Delhi</p>
                             </div>
@@ -1261,7 +1284,7 @@
                                     decoding="async">
                             </button>
                             <div class="card-body">
-                                <span class="tag">Handwritten note</span>
+                                <span class="tag">Eminent note</span>
                                 <h3 class="name">Dr. G Madhavi Latha</h3>
                                 <p class="role">Indian Institute of Science Bengaluru</p>
                             </div>
@@ -1275,7 +1298,7 @@
                                     loading="lazy" decoding="async">
                             </button>
                             <div class="card-body">
-                                <span class="tag">Handwritten note</span>
+                                <span class="tag">Eminent note</span>
                                 <h3 class="name">Dr. K Sivan</h3>
                                 <p class="role">Former Chairman, ISRO</p>
                             </div>
@@ -1290,7 +1313,7 @@
                                     decoding="async">
                             </button>
                             <div class="card-body">
-                                <span class="tag">Handwritten note</span>
+                                <span class="tag">Eminent note</span>
                                 <h3 class="name">Padma Shri Prof. H C Verma</h3>
                                 <p class="role">Former Professor, IIT Kanpur</p>
                             </div>
@@ -1305,12 +1328,13 @@
                                     decoding="async">
                             </button>
                             <div class="card-body">
-                                <span class="tag">Handwritten note</span>
+                                <span class="tag">Eminent note</span>
                                 <h3 class="name">Padma Shri Anand Kumar</h3>
                                 <p class="role">Super 30 Fame</p>
                             </div>
                         </article>
 
+                        
                     </div>
                 </section>
             </div>
@@ -1344,7 +1368,7 @@
                   <div class="footer_widget">
                      <h3 class="footer_widget_title">Address</h3>
                      <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
-                        School, Near Alankar Talkies, North Ambazari road, Nagpur- 440010.
+                        School, Near Shankar Nagar Metro Station, North Ambazari road, Nagpur- 440010.
                      </p>
                   </div>
                </div>
