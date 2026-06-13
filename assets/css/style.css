@@ -78,7 +78,7 @@ html{
       transition: all ease-in .3s;
     }
 
-.feature-icon{
+.feature-icon {
       width:80px;
       height:80px;
       margin:auto auto 25px;
@@ -2174,7 +2174,7 @@ blockquote p {
     .section_space_lg {
        margin-top: 30px !important;
     }
-    .courses_info_section h3 { font-size: 1.4rem; margin: 5px 0 30px 0; line-height: 1.7rem; }
+    .courses_info_section h3 { font-size: 1.4rem; margin: 5px 0 15px 0; line-height: 1.7rem; }
 }
 .accordion .accordion-item {
     border: none;
@@ -2578,27 +2578,45 @@ blockquote p {
             }
         }
 
-/* INDIVIDUAL COLORS */
+/* INDIVIDUAL COLORS FOR GLOBAL CARD ICONS */
 
-.card1 .icon-box{
-    background:linear-gradient(135deg,#0d5c4d,#1d8a74);
+.card1 .icon-box, .feature-icon1 {
+    background:linear-gradient(315deg,#0d5c4d,#1d8a74);
 }
 
-.card2 .icon-box{
-    background:linear-gradient(135deg,#f27b1a,#ff9c4a);
+.card2 .icon-box, .feature-icon2 {
+    background:linear-gradient(315deg,#f27b1a,#ff9c4a);
 }
 
-.card3 .icon-box{
-    background:linear-gradient(135deg,#246bfd,#4d8fff);
+.card3 .icon-box, .feature-icon3 {
+    background:linear-gradient(315deg,#246bfd,#4d8fff);
 }
 
-.card4 .icon-box{
-    background:linear-gradient(135deg,#6b2cff,#9a62ff);
+.card4 .icon-box, .feature-icon4 {
+    background:linear-gradient(315deg,#6b2cff,#9a62ff);
 }
 
-.card5 .icon-box{
-    background:linear-gradient(135deg,#009688,#26c6b0);
+.card5 .icon-box, .feature-icon5 {
+    background:linear-gradient(315deg,#009688,#26c6b0);
 }
+
+.card6 .icon-box, .feature-icon6 {
+    background:linear-gradient(315deg, #960047, #e79393);
+}
+
+.card7 .icon-box, .feature-icon7 {
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+}
+
+.card8 .icon-box, .feature-icon8 {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.card9 .icon-box, .feature-icon9 {
+    background: linear-gradient(135deg, #ee0979, #ff6a00);
+}
+
+
 
 /* CONTENT */
 .objective-card h3{
@@ -4319,7 +4337,7 @@ blockquote p {
     font-size: 22px;
     font-weight: 700;
     line-height: 28px;
-    margin-bottom: 35px
+    margin-bottom: 25px
 }
 
 .copyright_widget .copyright_text {
