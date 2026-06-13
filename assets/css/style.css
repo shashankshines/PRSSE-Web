@@ -5097,9 +5097,9 @@ blockquote p {
         padding: 20px !important;
     }
     .page_banner .content_wrapper h1.page_title {
-        font-size: 1.6rem;
-        line-height: 1.9rem;
-        max-width: 64vw;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        max-width: 62vw;
     }
     .header_btns_group>li:first-child {
         display: inline-block
