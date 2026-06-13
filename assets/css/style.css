@@ -159,10 +159,10 @@ body::before {
 
 }
 
-body > * {
+/* body > * {
     position: relative;
     z-index: 1;
-}
+} */
 
 /*** Effects ****/
 /* Smooth Text Animation on Scroll Reveal */
@@ -2325,6 +2325,8 @@ blockquote p {
 }
 .accordion .accordion-body h5{
     margin-left: 20px;
+    font-size: 16px;
+    color: #fe8408;
 }
 
 .accordion p {
