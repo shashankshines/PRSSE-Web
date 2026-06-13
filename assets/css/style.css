@@ -373,7 +373,7 @@ li.text-focus-in.animated {
 
          @media(max-width:768px) {
             .hero-carousel .carousel-caption { 
-                padding: 25px;
+                padding: 35px;
             }
             .hero-carousel .carousel-caption h1 { 
                 font-size: 16px;
