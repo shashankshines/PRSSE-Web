@@ -57,11 +57,13 @@
             .site_header .container {
                 margin-top: 0 !important;
             }
-            
+
         }
-         .page_content {
+
+        .page_content {
             overflow-x: hidden;
         }
+
         .page_banner .content_wrapper {
             align-items: center;
             background-image: url("assets/images/banner/testimonials-banner.webp");
@@ -449,6 +451,7 @@
             transition: background linear .2s;
             background: linear-gradient(180deg, #fcfaf5 0%, #dfd7a8 100%);
         }
+
         .filter-button:hover {
             background: linear-gradient(150deg, #0d5c4d, #1a8570 100%);
             color: #fff;
@@ -543,7 +546,7 @@
             padding: 5px 15px;
         }
 
-         .testimonial-card[data-type="student"] .tag {
+        .testimonial-card[data-type="student"] .tag {
             background: #51e3ed;
             color: #563e3e;
         }
@@ -555,6 +558,7 @@
             line-height: 1.28;
             overflow-wrap: anywhere;
         }
+
         .testimonial-card p {
             color: #3f4c57;
             font-size: 0.95rem;
@@ -735,7 +739,7 @@
         }
 
         @media (max-width: 960px) {
-            
+
             .quote-spark {
                 left: 5%;
                 bottom: 10%;
@@ -752,6 +756,7 @@
                 overflow-x: none;
                 gap: 5px;
             }
+
             .filter-button {
                 width: stretch;
             }
@@ -769,6 +774,7 @@
                 padding: 10px;
                 border: 0;
             }
+
             .shell {
                 width: min(calc(100% - 28px), var(--max));
             }
@@ -927,12 +933,11 @@
         </div>
         <!-- Top Header Navigation -->
         <header class="site_header site_header_1">
-            <div class="container px-lg-0">
+            <div class="container">
                 <div class="row align-items-center">
                     <div class="col col-lg-3 col-10">
                         <div class="site_logo">
-                            <a class="site_link" href="index.html">
-                                <img src="assets/images/logo/prs_logo.png" alt="">
+                            <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -956,7 +961,6 @@
                                             <li><a class="nav-link" href="top-iit.html">Top Indian Institutes</a></li>
                                         </ul>
                                     </li>
-
                                     <li><a class="nav-link" href="news_and_media.html">News &amp; Media</a></li>
                                     <li><a class="nav-link" href="contact.html">Contact Us</a></li>
                                 </ul>
@@ -964,21 +968,24 @@
                         </nav>
                         <!-- Mobile Hamburger Menu (visible only on small screens) -->
                         <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu"
-                            aria-controls="sidebarMenumobile"
-                            aria-expanded="false"><span></span><span></span><span></span></button>
+                            aria-controls="sidebarMenumobile" aria-expanded="false">
+                            <i class="fa-solid fa-bars-staggered"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </header>
         <!-- Sidebar Menu (for mobile) -->
         <div id="sidebarMenumobile" class="sidebarmobile">
-            <button type="button" class="closebtn" aria-label="Close menu">x</button>
+            <div class="site_logo mt-0 mb-3 px-4">
+                <img src="assets/images/logo/prs_logo.png" alt="">
+            </div>
+            <button type="button" class="closebtn" aria-label="Close menu"><i class="fas fa-circle-xmark"></i></button>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-
             <!-- Dropdown (Mobile) -->
             <div class="dropdownmobile">
-                <a href="programs.html">Programs</a>
+                <a href="programs.html">Programmes</a>
             </div>
             <a href="exploratory.html">Exploratory Perks</a>
             <!-- Dropdown (Mobile) -->
@@ -990,7 +997,6 @@
                     <li><a href="top-iit.html">Institutes of India</a></li>
                 </ul>
             </div>
-
             <a href="news_and_media.html">News &amp; Media</a>
             <a href="contact.html">Contact Us</a>
         </div>
@@ -1017,26 +1023,26 @@
                     <div class="section-head">
                         <h2 class="section-title mt-4">Eminent Testimonials</h2>
                         <p>Insights, experiences, and words of appreciation shared by distinguished scientists,
-                            educators, innovators, administrators, students and eminent personalities who visited PRSSE and
+                            educators, innovators, administrators, students and eminent personalities who visited PRSSE
+                            and
                             witnessed its unique approach to experiential science learning.</p>
-                       
+
                     </div>
-                     <div class="filters" role="group" aria-label="Filter testimonials">
-                            <button class="filter-button" type="button" data-filter="all"
-                                aria-pressed="true">All</button>
-                            <button class="filter-button" type="button" data-filter="note"
-                                aria-pressed="false">Eminent Notes</button>
-                            <button class="filter-button" type="button" data-filter="moment"
-                                aria-pressed="false">Eminent Moments</button>
-                            <button class="filter-button" type="button" data-filter="student"
-                                aria-pressed="false">Students' Say</button>
+                    <div class="filters" role="group" aria-label="Filter testimonials">
+                        <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All</button>
+                        <button class="filter-button" type="button" data-filter="note" aria-pressed="false">Eminent
+                            Notes</button>
+                        <button class="filter-button" type="button" data-filter="moment" aria-pressed="false">Eminent
+                            Moments</button>
+                        <button class="filter-button" type="button" data-filter="student" aria-pressed="false">Students'
+                            Say</button>
                     </div>
                     <div class="testimonial-wall" id="testimonialWall">
                         <article class="testimonial-card" data-type="moment" data-name="Padma Shri Prof. H C Verma"
                             data-role="Former Professor, IIT Kanpur">
                             <button class="media-button" type="button"
                                 aria-label="Open testimonial by Padma Shri Prof. H C Verma">
-                               <img src="assets/images/testimonials/testimonial-02.webp"
+                                <img src="assets/images/testimonials/testimonial-02.webp"
                                     alt="Padma Shri Prof. H C Verma testimonial slide and visit photo" loading="lazy"
                                     decoding="async">
                             </button>
@@ -1046,14 +1052,13 @@
                                 <p class="role">Former Professor, IIT Kanpur</p>
                             </div>
                         </article>
-                         <article class="testimonial-card" data-type="moment" data-name="Dr. G Madhavi Latha"
+                        <article class="testimonial-card" data-type="moment" data-name="Dr. G Madhavi Latha"
                             data-role="Indian Institute of Science Bengaluru">
                             <iframe src="https://www.youtube.com/embed/SNG0Ygorrfs" width="100%" height="380"
-                              title="YouTube Shorts Video"
-                              frameborder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                              allowfullscreen>
-                           </iframe>
+                                title="YouTube Shorts Video" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
                             <div class="card-body">
                                 <span class="tag">Eminent moment</span>
                                 <h3 class="name">Anand Kumar</h3>
@@ -1077,7 +1082,7 @@
                             data-role="Super 30 Fame">
                             <button class="media-button" type="button"
                                 aria-label="Open testimonial by Padma Shri Anand Kumar">
-                               <img src="assets/images/testimonials/testimonial-08.webp"
+                                <img src="assets/images/testimonials/testimonial-08.webp"
                                     alt="Padma Shri Anand Kumar testimonial slide and team photo" loading="lazy"
                                     decoding="async">
                             </button>
@@ -1087,8 +1092,8 @@
                                 <p class="role">Super 30 Fame</p>
                             </div>
                         </article>
-                        
-                         <article class="testimonial-card" data-type="moment" data-name="Prof. Pragya Nopany"
+
+                        <article class="testimonial-card" data-type="moment" data-name="Prof. Pragya Nopany"
                             data-role="Recipient of National Teacher Award">
                             <button class="media-button" type="button"
                                 aria-label="Open testimonial by Prof. Pragya Nopany">
@@ -1106,7 +1111,7 @@
                             data-role="National Teacher Awardee (UP)">
                             <button class="media-button" type="button"
                                 aria-label="Open testimonial by Mr. Manish Kumar">
-                               <img src="assets/images/testimonials/testimonial-03.webp"
+                                <img src="assets/images/testimonials/testimonial-03.webp"
                                     alt="Mr. Manish Kumar testimonial slide and student group photo" loading="lazy"
                                     decoding="async">
                             </button>
@@ -1120,8 +1125,8 @@
                             data-role="Director, VNIT">
                             <button class="media-button" type="button"
                                 aria-label="Open testimonial by Dr. Premlal Patel">
-                                <img src="assets/images/testimonials/testimonial-01.webp" alt="Handwritten testimonial by Dr. Premlal Patel"
-                                    loading="lazy" decoding="async">
+                                <img src="assets/images/testimonials/testimonial-01.webp"
+                                    alt="Handwritten testimonial by Dr. Premlal Patel" loading="lazy" decoding="async">
                             </button>
                             <div class="card-body">
                                 <span class="tag">Handwritten note</span>
@@ -1130,7 +1135,7 @@
                             </div>
                         </article>
 
-                         <article class="testimonial-card" data-type="moment" data-name="Dr. Surhud More"
+                        <article class="testimonial-card" data-type="moment" data-name="Dr. Surhud More"
                             data-role="Recipient of Shanti Swarup Bhatnagar Award">
                             <button class="media-button" type="button" aria-label="Open testimonial by Dr. Surhud More">
                                 <img src="assets/images/testimonials/testimonial-05.webp"
@@ -1174,7 +1179,11 @@
                         </article>
                         <article class="testimonial-card" data-type="student" data-name="Mr. Manish Kumar"
                             data-role="National Teacher Awardee (UP)">
-                           <iframe width="100%" height="315" src="https://www.youtube.com/embed/-CF0KQ47K9I?si=HvzZCwlQnq7zazI1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/-CF0KQ47K9I?si=HvzZCwlQnq7zazI1"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div class="card-body">
                                 <span class="tag">Students' say</span>
                                 <h3 class="name">Rishika Tawari</h3>
@@ -1195,13 +1204,13 @@
                                 <p class="role">Indian Institute of Science Bengaluru</p>
                             </div>
                         </article>
-                        
+
                         <article class="testimonial-card" data-type="note" data-name="Mr. Manish Kumar"
                             data-role="National Teacher Awardee (UP)">
                             <button class="media-button" type="button"
                                 aria-label="Open handwritten note by Mr. Manish Kumar">
-                                <img src="assets/images/testimonials/testimonial-10.webp" alt="Handwritten testimonial by Mr. Manish Kumar"
-                                    loading="lazy" decoding="async">
+                                <img src="assets/images/testimonials/testimonial-10.webp"
+                                    alt="Handwritten testimonial by Mr. Manish Kumar" loading="lazy" decoding="async">
                             </button>
                             <div class="card-body">
                                 <span class="tag">Eminent note</span>
@@ -1209,13 +1218,13 @@
                                 <p class="role">National Teacher Awardee (UP)</p>
                             </div>
                         </article>
-                        
+
                         <article class="testimonial-card" data-type="note" data-name="Dr. Surhud More"
                             data-role="IUCAA, Pune">
                             <button class="media-button" type="button"
                                 aria-label="Open handwritten note by Dr. Surhud More">
-                                <img src="assets/images/testimonials/testimonial-11.webp" alt="Handwritten testimonial by Dr. Surhud More"
-                                    loading="lazy" decoding="async">
+                                <img src="assets/images/testimonials/testimonial-11.webp"
+                                    alt="Handwritten testimonial by Dr. Surhud More" loading="lazy" decoding="async">
                             </button>
                             <div class="card-body">
                                 <span class="tag">Eminent note</span>
@@ -1237,10 +1246,14 @@
                                 <p class="role">IIT Bombay</p>
                             </div>
                         </article>
-                        
-                          <article class="testimonial-card" data-type="student" data-name="Mr. Manish Kumar"
+
+                        <article class="testimonial-card" data-type="student" data-name="Mr. Manish Kumar"
                             data-role="National Teacher Awardee (UP)">
-                           <iframe width="100%" height="315" src="https://www.youtube.com/embed/dD4xWpPS3jc?si=jnwNiaaXxiI9lweU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/dD4xWpPS3jc?si=jnwNiaaXxiI9lweU"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div class="card-body">
                                 <span class="tag">Students' say</span>
                                 <h3 class="name">Aryan Deshpande</h3>
@@ -1250,7 +1263,11 @@
 
                         <article class="testimonial-card" data-type="student" data-name="Mr. Manish Kumar"
                             data-role="National Teacher Awardee (UP)">
-                           <iframe width="100%" height="315" src="https://www.youtube.com/embed/RJmsxtQWsak?si=Nfplv0S957Q0gVmW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/RJmsxtQWsak?si=Nfplv0S957Q0gVmW"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div class="card-body">
                                 <span class="tag">Students' say</span>
                                 <h3 class="name">Bhargav Hardas</h3>
@@ -1292,8 +1309,8 @@
                             data-role="Former Chairman, ISRO">
                             <button class="media-button" type="button"
                                 aria-label="Open handwritten note by Dr. K Sivan">
-                                <img src="assets/images/testimonials/testimonial-16.webp" alt="Handwritten testimonial by Dr. K Sivan"
-                                    loading="lazy" decoding="async">
+                                <img src="assets/images/testimonials/testimonial-16.webp"
+                                    alt="Handwritten testimonial by Dr. K Sivan" loading="lazy" decoding="async">
                             </button>
                             <div class="card-body">
                                 <span class="tag">Eminent note</span>
@@ -1332,7 +1349,6 @@
                             </div>
                         </article>
 
-                        
                     </div>
                 </section>
             </div>
@@ -1359,75 +1375,76 @@
 
         </main>
         <footer class="site_footer">
-      <div class="footer_widget_area">
-         <div class="container px-lg-0">
-            <div class="row">
-               <div class="col col-lg-4 col-md-6 col-sm-6">
-                  <div class="footer_widget">
-                     <h3 class="footer_widget_title">Address</h3>
-                     <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
-                        School, Near Shankar Nagar Metro Station, North Ambazari road, Nagpur- 440010.
-                     </p>
-                  </div>
-               </div>
-               <div class="col col-lg-4 px-lg-5">
-                  <div class="footer_widget">
-                     <h3 class="footer_widget_title">Social Links</h3>
-                     <ul class="social_links unordered_list">
-                        <li class="pl-0">
-                           <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook"
-                              target="_blank">
-                              <i class="fab fa-facebook-f"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I" target="_blank">
-                              <i class="fab fa-youtube"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
-                              target="_blank">
-                              <i class="fab fa-instagram"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://wa.me/917249811866" target="_blank">
-                              <i class="fab fa-whatsapp"></i>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col col-lg-4 col-md-6 col-sm-6">
-                  <div class="footer_widget">
-                     <h3 class="footer_widget_title">Contact Details</h3>
-                     <ul class="blog_small_group unordered_list_block">
-                        <li>
-                           <span class="item_content">
-                              <small class="item_post_date">Call : +917249811866</small>
-                           </span>
-                        </li>
-                        <li>
-                           <span class="item_content">
-                              <small class="item_post_date">Email: prsscienceexploratory@gmail.com
-                              </small>
-                           </span>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
+            <div class="footer_widget_area">
+                <div class="container px-lg-0">
+                    <div class="row">
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Address</h3>
+                                <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
+                                    School, Near Shankar Nagar Metro Station, North Ambazari road, Nagpur- 440010.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 px-lg-5">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Social Links</h3>
+                                <ul class="social_links unordered_list">
+                                    <li class="pl-0">
+                                        <a href="https://www.facebook.com/profile.php?id=100094309040998"
+                                            name="facebook" target="_blank">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"
+                                            target="_blank">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
+                                            target="_blank">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wa.me/917249811866" target="_blank">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Contact Details</h3>
+                                <ul class="blog_small_group unordered_list_block">
+                                    <li>
+                                        <span class="item_content">
+                                            <small class="item_post_date">Call : +917249811866</small>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="item_content">
+                                            <small class="item_post_date">Email: prsscienceexploratory@gmail.com
+                                            </small>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="copyright_widget">
-         <div class="container px-lg-0">
-            <p class="copyright_text text-center mb-0">Prof. Rajendra Singh Exploratory © All
-               rights reserved | Copyrights 2026
-            </p>
-         </div>
-      </div>
-   </footer>
+            <div class="copyright_widget">
+                <div class="container px-lg-0">
+                    <p class="copyright_text text-center mb-0">Prof. Rajendra Singh Exploratory © All
+                        rights reserved | Copyrights 2026
+                    </p>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="assets/js/script.js"></script>
     <script>
@@ -1574,7 +1591,6 @@
         })();
     </script>
 
-    
 </body>
 
 </html>

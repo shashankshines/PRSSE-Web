@@ -19,9 +19,11 @@
                 display: none;
             }
         }
+
         .page_content {
             overflow-x: hidden;
         }
+
         .page_banner .content_wrapper {
             align-items: center;
             background-image: url("assets/images/banner/program-overview-banner.webp");
@@ -252,6 +254,7 @@
             padding-left: 1.5rem;
             position: relative;
         }
+
         /* Cards Grid */
         .cards-grid-cont {
             width: 100%;
@@ -1328,6 +1331,7 @@
             color: var(--text);
             font-weight: 500;
         }
+
         .resource-box-main {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1354,6 +1358,7 @@
             color: var(--text);
             line-height: 1.8;
         }
+
         @media(max-width:768px) {
             .card-modern {
                 padding: 20px;
@@ -1373,68 +1378,73 @@
         </div>
         <!-- Top Header Navigation -->
         <header class="site_header site_header_1">
-            <div class="container px-lg-0">
-               <div class="row align-items-center">
-                  <div class="col col-lg-3 col-10">
-                     <div class="site_logo">
-                        <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt=""></a> 
-                       
-                     </div>
-                  </div>
-                  <div class="col col-lg-9 col-2">
-                     <nav class="main_menu navbar navbar-expand-lg">
-                        <div class="main_menu_inner collapse navbar-collapse" id="main_menu_dropdown">
-                           <ul class="main_menu_list unordered_list_center">
-                              <li><a class="nav-link" href="index.html">Home</a></li>
-                              <li><a class="nav-link" href="about.html"><u>About us</u></a></li>
-                              <li>
-                                 <a  class="nav-link" href="programs.html" id="blog_submenu">Programmes</a>
-                              </li>
-                              <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
-                              <li class="dropdown">
-                                 <a class="nav-link" href="#" id="blog_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
-                                 <ul class="dropdown-menu" aria-labelledby="blog_submenu">
-                                    <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
-                                    <li><a class="nav-link" href="indian-scientist.html">Indian Scientists</a></li>
-                                    <li><a class="nav-link" href="top-iit.html">Top Indian Institutes</a></li>
-                                 </ul>
-                              </li>
-                              <li><a class="nav-link" href="news_and_media.html">News &amp; Media</a></li>
-                              <li><a class="nav-link" href="contact.html">Contact Us</a></li>
-                              
-                           </ul>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col col-lg-3 col-10">
+                        <div class="site_logo">
+                            <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt="">
+                            </a>
                         </div>
-                     </nav>
-                     <!-- Mobile Hamburger Menu (visible only on small screens) -->
-                     <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu" aria-controls="sidebarMenumobile" aria-expanded="false"><span></span><span></span><span></span></button>
-                  </div>
-               </div>
+                    </div>
+                    <div class="col col-lg-9 col-2">
+                        <nav class="main_menu navbar navbar-expand-lg">
+                            <div class="main_menu_inner collapse navbar-collapse" id="main_menu_dropdown">
+                                <ul class="main_menu_list unordered_list_center">
+                                    <li><a class="nav-link" href="index.html">Home</a></li>
+                                    <li><a class="nav-link" href="about.html"><u>About us</u></a></li>
+                                    <li>
+                                        <a class="nav-link" href="programs.html" id="blog_submenu">Programmes</a>
+                                    </li>
+                                    <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
+                                    <li class="dropdown">
+                                        <a class="nav-link" href="#" id="blog_submenu" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
+                                        <ul class="dropdown-menu" aria-labelledby="blog_submenu">
+                                            <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
+                                            <li><a class="nav-link" href="indian-scientist.html">Indian Scientists</a>
+                                            </li>
+                                            <li><a class="nav-link" href="top-iit.html">Top Indian Institutes</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="nav-link" href="news_and_media.html">News &amp; Media</a></li>
+                                    <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Mobile Hamburger Menu (visible only on small screens) -->
+                        <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu"
+                            aria-controls="sidebarMenumobile" aria-expanded="false">
+                            <i class="fa-solid fa-bars-staggered"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
-         </header>
-         <!-- Sidebar Menu (for mobile) -->
-         <div id="sidebarMenumobile" class="sidebarmobile">
-            <button type="button" class="closebtn" aria-label="Close menu">x</button>
+        </header>
+        <!-- Sidebar Menu (for mobile) -->
+        <div id="sidebarMenumobile" class="sidebarmobile">
+            <div class="site_logo mt-0 mb-3 px-4">
+                <img src="assets/images/logo/prs_logo.png" alt="">
+            </div>
+            <button type="button" class="closebtn" aria-label="Close menu"><i class="fas fa-circle-xmark"></i></button>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-
             <!-- Dropdown (Mobile) -->
             <div class="dropdownmobile">
-               <a href="programs.html">Programmes</a>
+                <a href="programs.html">Programmes</a>
             </div>
-             <a href="exploratory.html">Exploratory Perks</a>
+            <a href="exploratory.html">Exploratory Perks</a>
             <!-- Dropdown (Mobile) -->
             <div class="dropdownmobile">
-               <a href="#" class="dropdownmobile-toggle">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
-               <ul class="dropdownmobile-menu">
-                  <li><a href="great-minds.html">Great Minds</a></li>
-                  <li><a href="indian-scientist.html">Indian Scientists</a></li>
-                  <li><a href="top-iit.html">Institutes of India</a></li>
-               </ul>
+                <a href="#" class="dropdownmobile-toggle">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
+                <ul class="dropdownmobile-menu">
+                    <li><a href="great-minds.html">Great Minds</a></li>
+                    <li><a href="indian-scientist.html">Indian Scientists</a></li>
+                    <li><a href="top-iit.html">Institutes of India</a></li>
+                </ul>
             </div>
-           
             <a href="news_and_media.html">News &amp; Media</a>
             <a href="contact.html">Contact Us</a>
-         </div>
+        </div>
         <!-- Overlay (for closing sidebar when clicking outside) -->
         <div id="menuOverlay" class="menu-overlay">
         </div>
@@ -1524,7 +1534,9 @@
                                                     </div>
                                                     <h3>Year-long Laboratory Training</h3>
                                                     <p>
-                                                        Structured laboratory training aligned with the school curriculum for Grades 6-9, enhancing conceptual learning through practical experimentation.
+                                                        Structured laboratory training aligned with the school
+                                                        curriculum for Grades 6-9, enhancing conceptual learning through
+                                                        practical experimentation.
                                                     </p>
                                                     <div class="tag">Grades 6-9</div>
                                                 </div>
@@ -1560,7 +1572,9 @@
                                                     </div>
                                                     <h3>Teacher Development Programme (RAISE)</h3>
                                                     <p>
-                                                        NEP 2020-aligned teacher development initiative promoting innovative teaching practices and inquiry-based learning methods.
+                                                        NEP 2020-aligned teacher development initiative promoting
+                                                        innovative teaching practices and inquiry-based learning
+                                                        methods.
                                                     </p>
                                                     <div class="tag">NEP 2020</div>
                                                 </div>
@@ -1685,7 +1699,8 @@
                                             <div class="icon-box"><i class="fa-solid fa-chalkboard-teacher"></i></div>
                                             <h3>Teacher Training Programmes</h3>
                                             <p>
-                                               One-day teacher upskilling programmes for schools seeking impactful, modern science education methods.
+                                                One-day teacher upskilling programmes for schools seeking impactful,
+                                                modern science education methods.
                                             </p>
                                         </div>
                                     </div>
@@ -1706,7 +1721,8 @@
                                     organize summer programmes and camps for students in grades 5 and 10.
                                     Our dedicated trainers work closely in well-equipped laboratories, complemented by
                                     visiting experts from across the country, to help students develop essential skills.
-                                    We also provide training programmes for teachers, ensuring a comprehensive educational
+                                    We also provide training programmes for teachers, ensuring a comprehensive
+                                    educational
                                     experience for both students and educators.
                                 </p>
                             </div>
@@ -1859,7 +1875,8 @@
                                                         their observations, developing the confidence to “think and work
                                                         like a young scientist.”
                                                     </p>
-                                                    <p>The programme closely complements school curriculum but goes beyond
+                                                    <p>The programme closely complements school curriculum but goes
+                                                        beyond
                                                         it by focusing on experimental design, critical thinking,
                                                         creativity, teamwork, and science communication through
                                                         workshops, expert talks, competitions, and outreach activities.
@@ -1894,7 +1911,8 @@
                                                         <li>Entry: Through school administration</li>
                                                     </ul>
                                                     <p>This programme is designed for students who cannot attend weekly
-                                                        sessions of programme 1 but still want serious lab exposure. Once
+                                                        sessions of programme 1 but still want serious lab exposure.
+                                                        Once
                                                         a month, students spend a full extended session in the
                                                         laboratory working through well-planned experimental modules
                                                         that connect directly with their school topics while adding
@@ -2038,7 +2056,8 @@
                                                         applications, helping students see how what they learn matters
                                                         in everyday life and future careers. There is one dedicated
                                                         session in the laboratory per week for hands-on experiential
-                                                        learning. This programme provides the complete learning package to
+                                                        learning. This programme provides the complete learning package
+                                                        to
                                                         develop scientific temperament.
                                                     </p>
                                                 </div>
@@ -2084,11 +2103,11 @@
                                     </div>
                                     <!-- CoreStudents Programme Accordion Ends -->
                                 </div>
-                                
+
                             </div>
                         </section>
-        
-                    <!-- STUDENTS CONTENT ENDS -->
+
+                        <!-- STUDENTS CONTENT ENDS -->
                     </div>
                     <!-- TEACHERS PROGRAM OVERVIEW -->
                     <div class="tab-pane fade" id="teachers">
@@ -2211,7 +2230,8 @@
                         <!-- Full-Size Photo Gallery Carousel Section -->
                         <section class="programs py-2" itemscope itemtype="https://schema.org/ImageGallery">
                             <div class="container">
-                                <h2 class="mb-4 section-subtitle heading_text" itemprop="name">Teachers' Induction Reports - Photo Gallery </h2>
+                                <h2 class="mb-4 section-subtitle heading_text" itemprop="name">Teachers' Induction
+                                    Reports - Photo Gallery </h2>
                                 <!-- Full-Size Carousel Gallery -->
                                 <div class="carousel-gallery-container" role="region"
                                     aria-label="Photo Gallery Carousel" aria-live="polite">
@@ -2396,8 +2416,8 @@
                                     </div>
                                 </div>
                                 <p class="text-muted carousel-hint">Use arrow buttons to navigate • Click
-                                                dots to jump to image • Press arrow keys on keyboard
-                                            </p>
+                                    dots to jump to image • Press arrow keys on keyboard
+                                </p>
                             </div>
                         </section>
 
@@ -2423,7 +2443,8 @@
                                                             <p>
                                                                 RAISE (Reinforcement of Academic Instruction and Science
                                                                 Education), conducted on August 5th and 6th, 2025, the
-                                                                programme focused on equipping educators with innovative,
+                                                                programme focused on equipping educators with
+                                                                innovative,
                                                                 experiential, and inquiry-based teaching methodologies
                                                                 aligned with the National Education Policy (NEP) 2020.
                                                             </p>
@@ -2736,18 +2757,19 @@
                                                         Resource Person
                                                     </h2>
                                                     <div class="resource-box-main">
-                                                    <div class="resource-box">
-                                                        <div class="icon-box">
-                                                            <i class="fas fa-user-tie"></i>
+                                                        <div class="resource-box">
+                                                            <div class="icon-box">
+                                                                <i class="fas fa-user-tie"></i>
+                                                            </div>
+                                                            <h4>
+                                                                Shri Ravindra Godbole
+                                                            </h4>
+                                                            <p>
+                                                                (Alumnus IISC Bangalore): Senior Educationist and
+                                                                Teacher
+                                                                Trainer, Pune
+                                                            </p>
                                                         </div>
-                                                        <h4>
-                                                            Shri Ravindra Godbole
-                                                        </h4>
-                                                        <p>
-                                                            (Alumnus IISC Bangalore): Senior Educationist and Teacher
-                                                            Trainer, Pune
-                                                        </p>
-                                                    </div>
                                                     </div>
                                                 </div>
                                             </section>
@@ -2873,7 +2895,8 @@
                                                                 A Hands-on Teachers' Enrichment Programme for Middle
                                                                 School Physics was successfully conducted to empower
                                                                 educators with innovative pedagogical strategies. The
-                                                                programme aimed to make physics concepts more engaging and
+                                                                programme aimed to make physics concepts more engaging
+                                                                and
                                                                 accessible for students through interactive sessions,
                                                                 practical applications, and experiential learning.
                                                             </p>
@@ -2954,18 +2977,19 @@
                                                         Resource Person
                                                     </h2>
                                                     <div class="resource-box-main">
-                                                    <div class="resource-box">
-                                                        <div class="icon-box">
-                                                            <i class="fas fa-user-tie"></i>
+                                                        <div class="resource-box">
+                                                            <div class="icon-box">
+                                                                <i class="fas fa-user-tie"></i>
+                                                            </div>
+                                                            <h4>
+                                                                Shri Ravindra Godbole
+                                                            </h4>
+                                                            <p>
+                                                                (Alumnus IISC Bangalore): Senior Educationist and
+                                                                Teacher
+                                                                Trainer, Pune
+                                                            </p>
                                                         </div>
-                                                        <h4>
-                                                            Shri Ravindra Godbole
-                                                        </h4>
-                                                        <p>
-                                                            (Alumnus IISC Bangalore): Senior Educationist and Teacher
-                                                            Trainer, Pune
-                                                        </p>
-                                                    </div>
                                                     </div>
                                                 </div>
                                             </section>
@@ -3248,28 +3272,28 @@
                                                         Resource Person
                                                     </h2>
                                                     <div class="resource-box-main">
-                                                    <div class="resource-box">
-                                                        <div class="icon-box">
-                                                            <i class="fas fa-user-tie"></i>
+                                                        <div class="resource-box">
+                                                            <div class="icon-box">
+                                                                <i class="fas fa-user-tie"></i>
+                                                            </div>
+                                                            <h4>
+                                                                Mrs.Shikha Vyas
+                                                            </h4>
+                                                            <p>
+                                                                (Academic Head and Chemistry Teacher)
+                                                            </p>
                                                         </div>
-                                                        <h4>
-                                                            Mrs.Shikha Vyas
-                                                        </h4>
-                                                        <p>
-                                                            (Academic Head and Chemistry Teacher)
-                                                        </p>
-                                                    </div>
-                                                    <div class="resource-box">
-                                                        <div class="icon-box">
-                                                            <i class="fas fa-user-tie"></i>
+                                                        <div class="resource-box">
+                                                            <div class="icon-box">
+                                                                <i class="fas fa-user-tie"></i>
+                                                            </div>
+                                                            <h4>
+                                                                Miss. Radhika Kayande
+                                                            </h4>
+                                                            <p>
+                                                                (Asst. Academic Coordinator and Physics Teacher)
+                                                            </p>
                                                         </div>
-                                                        <h4>
-                                                            Miss. Radhika Kayande
-                                                        </h4>
-                                                        <p>
-                                                            (Asst. Academic Coordinator and Physics Teacher)
-                                                        </p>
-                                                    </div>
                                                     </div>
                                                 </div>
                                             </section>
@@ -3439,17 +3463,17 @@
                                                         Resource Person
                                                     </h2>
                                                     <div class="resource-box-main">
-                                                    <div class="resource-box">
-                                                        <div class="icon-box">
-                                                            <i class="fas fa-user-tie"></i>
+                                                        <div class="resource-box">
+                                                            <div class="icon-box">
+                                                                <i class="fas fa-user-tie"></i>
+                                                            </div>
+                                                            <h4>
+                                                                Mr. Akshay Phatak
+                                                            </h4>
+                                                            <p>
+                                                                (Design and Development Engineer)
+                                                            </p>
                                                         </div>
-                                                        <h4>
-                                                            Mr. Akshay Phatak
-                                                        </h4>
-                                                        <p>
-                                                            (Design and Development Engineer)
-                                                        </p>
-                                                    </div>
                                                     </div>
                                                 </div>
                                             </section>
@@ -3618,29 +3642,29 @@
                                                         Resource Person
                                                     </h2>
                                                     <div class="resource-box-main">
-                                                    <div class="resource-box">
-                                                        <div class="icon-box">
-                                                            <i class="fas fa-user-tie"></i>
+                                                        <div class="resource-box">
+                                                            <div class="icon-box">
+                                                                <i class="fas fa-user-tie"></i>
+                                                            </div>
+                                                            <h4>
+                                                                Smt. Vimla Oak
+                                                            </h4>
+                                                            <p>
+                                                                (Teacher Trainer, Royal Society of Chemistry, Bangalore)
+                                                            </p>
                                                         </div>
-                                                        <h4>
-                                                            Smt. Vimla Oak
-                                                        </h4>
-                                                        <p>
-                                                            (Teacher Trainer, Royal Society of Chemistry, Bangalore)
-                                                        </p>
-                                                    </div>
-                                                    <div class="resource-box">
-                                                        <div class="icon-box">
-                                                            <i class="fas fa-user-tie"></i>
+                                                        <div class="resource-box">
+                                                            <div class="icon-box">
+                                                                <i class="fas fa-user-tie"></i>
+                                                            </div>
+                                                            <h4>
+                                                                Mrs. Shikha Vyas
+                                                            </h4>
+                                                            <p>
+                                                                (Chemistry Teacher & Academic Head, Prof. Rajendra Singh
+                                                                Science Exploratory)
+                                                            </p>
                                                         </div>
-                                                        <h4>
-                                                            Mrs. Shikha Vyas
-                                                        </h4>
-                                                        <p>
-                                                            (Chemistry Teacher & Academic Head, Prof. Rajendra Singh
-                                                            Science Exploratory)
-                                                        </p>
-                                                    </div>
                                                     </div>
                                                 </div>
                                             </section>
@@ -3781,7 +3805,8 @@
                                                         </div>
                                                         <div class="col-6 mt-md-4">
                                                             <div class="stats-card participants">
-                                                                <i class="fa-solid fa-school fa-2x mb-3 text-warning"></i>
+                                                                <i
+                                                                    class="fa-solid fa-school fa-2x mb-3 text-warning"></i>
                                                                 <h2>21</h2>
                                                                 <p>
                                                                     Number of Schools Participated (Middle Schools)
@@ -3798,52 +3823,52 @@
                                                         Resource Person
                                                     </h2>
                                                     <div class="resource-box-main">
-                                                    <div class="resource-box">
-                                                        <div class="icon-box">
-                                                            <i class="fas fa-user-tie"></i>
+                                                        <div class="resource-box">
+                                                            <div class="icon-box">
+                                                                <i class="fas fa-user-tie"></i>
+                                                            </div>
+                                                            <h4>
+                                                                Smt. Vimla Oak
+                                                            </h4>
+                                                            <p>
+                                                                (Teacher Trainer, Royal Society of Chemistry, Bangalore)
+                                                            </p>
                                                         </div>
-                                                        <h4>
-                                                            Smt. Vimla Oak
-                                                        </h4>
-                                                        <p>
-                                                            (Teacher Trainer, Royal Society of Chemistry, Bangalore)
-                                                        </p>
-                                                    </div>
-                                                    <div class="resource-box">
-                                                        <div class="icon-box">
-                                                            <i class="fas fa-user-tie"></i>
+                                                        <div class="resource-box">
+                                                            <div class="icon-box">
+                                                                <i class="fas fa-user-tie"></i>
+                                                            </div>
+                                                            <h4>
+                                                                Dr. Govinda Lakhotiya
+                                                            </h4>
+                                                            <p>
+                                                                (Asst. Professor, Physics Department, Dharampeth MP Deo
+                                                                Memorial Science College, Nagpur)
+                                                            </p>
                                                         </div>
-                                                        <h4>
-                                                            Dr. Govinda Lakhotiya
-                                                        </h4>
-                                                        <p>
-                                                            (Asst. Professor, Physics Department, Dharampeth MP Deo
-                                                            Memorial Science College, Nagpur)
-                                                        </p>
-                                                    </div>
-                                                    <div class="resource-box">
-                                                        <div class="icon-box">
-                                                            <i class="fas fa-user-tie"></i>
+                                                        <div class="resource-box">
+                                                            <div class="icon-box">
+                                                                <i class="fas fa-user-tie"></i>
+                                                            </div>
+                                                            <h4>
+                                                                Mrs. Pragya Nopany
+                                                            </h4>
+                                                            <p>
+                                                                (Founder Co-ordinator BVN IAPT Anveshika, New Delhi)
+                                                            </p>
                                                         </div>
-                                                        <h4>
-                                                            Mrs. Pragya Nopany
-                                                        </h4>
-                                                        <p>
-                                                            (Founder Co-ordinator BVN IAPT Anveshika, New Delhi)
-                                                        </p>
-                                                    </div>
-                                                    <div class="resource-box">
-                                                        <div class="icon-box">
-                                                            <i class="fas fa-user-tie"></i>
+                                                        <div class="resource-box">
+                                                            <div class="icon-box">
+                                                                <i class="fas fa-user-tie"></i>
+                                                            </div>
+                                                            <h4>
+                                                                Mrs. Shikha Vyas
+                                                            </h4>
+                                                            <p>
+                                                                (Chemistry Teacher & Academic Head, Prof. Rajendra Singh
+                                                                Science Exploratory)
+                                                            </p>
                                                         </div>
-                                                        <h4>
-                                                            Mrs. Shikha Vyas
-                                                        </h4>
-                                                        <p>
-                                                            (Chemistry Teacher & Academic Head, Prof. Rajendra Singh
-                                                            Science Exploratory)
-                                                        </p>
-                                                    </div>
                                                     </div>
                                                 </div>
                                             </section>
@@ -3912,167 +3937,179 @@
                     <!-- CITIZENS -->
                     <div class="tab-pane fade" id="citizens">
                         <div class="container">
-                        <h2 class="section-title">Citizens' Programme Overview</h2>
-                        <p>The Citizen Science Programme empowers individuals and communities to actively engage with science through hands-on activities, workshops, environmental observations, and community projects. By connecting science with everyday life, it promotes scientific temper, critical thinking, responsible citizenship, and meaningful contributions toward sustainability, innovation, and societal development.</p>
+                            <h2 class="section-title">Citizens' Programme Overview</h2>
+                            <p>The Citizen Science Programme empowers individuals and communities to actively engage
+                                with science through hands-on activities, workshops, environmental observations, and
+                                community projects. By connecting science with everyday life, it promotes scientific
+                                temper, critical thinking, responsible citizenship, and meaningful contributions toward
+                                sustainability, innovation, and societal development.</p>
                         </div>
-                <section class="program-overview">
-                    <div class="container mt-5">
+                        <section class="program-overview">
+                            <div class="container mt-5">
 
-                        <!-- Masonry Grid 1 -->
-                        <div class="masonry-grid mb-5">
-                            <div class="item img-cont">
-                                <img src="assets/images/citizens/for_citizens.webp" alt="Prof. Rajendra Singh Exploratory" />
-                                <div class="overlay">
-                                    <div class="content">
-                                        <p>Citizen Programme</p>
+                                <!-- Masonry Grid 1 -->
+                                <div class="masonry-grid mb-5">
+                                    <div class="item img-cont">
+                                        <img src="assets/images/citizens/for_citizens.webp"
+                                            alt="Prof. Rajendra Singh Exploratory" />
+                                        <div class="overlay">
+                                            <div class="content">
+                                                <p>Citizen Programme</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item img-cont">
+                                        <img src="assets/images/citizens/for_citizens1.webp"
+                                            alt="Prof. Rajendra Singh Exploratory" />
+                                        <div class="overlay">
+                                            <div class="content">
+                                                <p>Citizen Programme</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item img-cont">
+                                        <img src="assets/images/citizens/for_citizens4.webp"
+                                            alt="Prof. Rajendra Singh Exploratory" />
+                                        <div class="overlay">
+                                            <div class="content">
+                                                <p>Citizen Programme</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item img-cont">
+                                        <img src="assets/images/citizens/for_citizens5.webp"
+                                            alt="Prof. Rajendra Singh Exploratory" />
+                                        <div class="overlay">
+                                            <div class="content">
+                                                <p>Citizen Programme</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item img-cont">
+                                        <img src="assets/images/citizens/for_citizens6.webp"
+                                            alt="Prof. Rajendra Singh Exploratory" />
+                                        <div class="overlay">
+                                            <div class="content">
+                                                <p>Citizen Programme</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item img-cont">
+                                        <img src="assets/images/citizens/for_citizens3.webp"
+                                            alt="Prof. Rajendra Singh Exploratory" />
+                                        <div class="overlay">
+                                            <div class="content">
+                                                <p>Citizen Programme</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item img-cont">
+                                        <img src="assets/images/citizens/for_citizens2.webp"
+                                            alt="Prof. Rajendra Singh Exploratory" />
+                                        <div class="overlay">
+                                            <div class="content">
+                                                <p>Citizen Programme</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row align-items-center">
+                                    <div class="col col-lg-12">
+                                        <div class="content_wrap ps-lg-3 pb-3">
+                                            <div class="section_heading">
+                                                <img src="assets/images/citizens.webp" alt="Image of citizens" />
+                                            </div>
+                                            <div class="section-heading">
+                                                <img src="assets/images/citizens1.webp" alt="Image of citizens1" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="item img-cont">
-                                <img src="assets/images/citizens/for_citizens1.webp" alt="Prof. Rajendra Singh Exploratory" />
-                                <div class="overlay">
-                                    <div class="content">
-                                        <p>Citizen Programme</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item img-cont">
-                                <img src="assets/images/citizens/for_citizens4.webp" alt="Prof. Rajendra Singh Exploratory" />
-                                <div class="overlay">
-                                    <div class="content">
-                                        <p>Citizen Programme</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item img-cont">
-                                <img src="assets/images/citizens/for_citizens5.webp" alt="Prof. Rajendra Singh Exploratory" />
-                                <div class="overlay">
-                                    <div class="content">
-                                        <p>Citizen Programme</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item img-cont">
-                                <img src="assets/images/citizens/for_citizens6.webp" alt="Prof. Rajendra Singh Exploratory" />
-                                <div class="overlay">
-                                    <div class="content">
-                                        <p>Citizen Programme</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item img-cont">
-                                <img src="assets/images/citizens/for_citizens3.webp" alt="Prof. Rajendra Singh Exploratory" />
-                                <div class="overlay">
-                                    <div class="content">
-                                        <p>Citizen Programme</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item img-cont">
-                                <img src="assets/images/citizens/for_citizens2.webp" alt="Prof. Rajendra Singh Exploratory" />
-                                <div class="overlay">
-                                    <div class="content">
-                                        <p>Citizen Programme</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row align-items-center"> 
-                            <div class="col col-lg-12">
-                                <div class="content_wrap ps-lg-3 pb-3">
-								    <div class="section_heading"> 
-                                        <img src="assets/images/citizens.webp" alt="Image of citizens"/>
-                                    </div> 
-                                    <div class="section-heading">
-                                        <img src="assets/images/citizens1.webp" alt="Image of citizens1"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                        </section>
                     </div>
                 </div>
             </div>
             <!-- ----- TAB STRUCTURE ENDS ------ -->
         </main>
         <footer class="site_footer">
-      <div class="footer_widget_area">
-         <div class="container px-lg-0">
-            <div class="row">
-               <div class="col col-lg-4 col-md-6 col-sm-6">
-                  <div class="footer_widget">
-                     <h3 class="footer_widget_title">Address</h3>
-                     <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
-                        School, Near Shankar Nagar Metro Station, North Ambazari road, Nagpur- 440010.
-                     </p>
-                  </div>
-               </div>
-               <div class="col col-lg-4 px-lg-5">
-                  <div class="footer_widget">
-                     <h3 class="footer_widget_title">Social Links</h3>
-                     <ul class="social_links unordered_list">
-                        <li class="pl-0">
-                           <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook"
-                              target="_blank">
-                              <i class="fab fa-facebook-f"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I" target="_blank">
-                              <i class="fab fa-youtube"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
-                              target="_blank">
-                              <i class="fab fa-instagram"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://wa.me/917249811866" target="_blank">
-                              <i class="fab fa-whatsapp"></i>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col col-lg-4 col-md-6 col-sm-6">
-                  <div class="footer_widget">
-                     <h3 class="footer_widget_title">Contact Details</h3>
-                     <ul class="blog_small_group unordered_list_block">
-                        <li>
-                           <span class="item_content">
-                              <small class="item_post_date">Call : +917249811866</small>
-                           </span>
-                        </li>
-                        <li>
-                           <span class="item_content">
-                              <small class="item_post_date">Email: prsscienceexploratory@gmail.com
-                              </small>
-                           </span>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
+            <div class="footer_widget_area">
+                <div class="container px-lg-0">
+                    <div class="row">
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Address</h3>
+                                <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
+                                    School, Near Shankar Nagar Metro Station, North Ambazari road, Nagpur- 440010.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 px-lg-5">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Social Links</h3>
+                                <ul class="social_links unordered_list">
+                                    <li class="pl-0">
+                                        <a href="https://www.facebook.com/profile.php?id=100094309040998"
+                                            name="facebook" target="_blank">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"
+                                            target="_blank">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
+                                            target="_blank">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wa.me/917249811866" target="_blank">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Contact Details</h3>
+                                <ul class="blog_small_group unordered_list_block">
+                                    <li>
+                                        <span class="item_content">
+                                            <small class="item_post_date">Call : +917249811866</small>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="item_content">
+                                            <small class="item_post_date">Email: prsscienceexploratory@gmail.com
+                                            </small>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="copyright_widget">
-         <div class="container px-lg-0">
-            <p class="copyright_text text-center mb-0">Prof. Rajendra Singh Exploratory © All
-               rights reserved | Copyrights 2026
-            </p>
-         </div>
-      </div>
-   </footer>
+            <div class="copyright_widget">
+                <div class="container px-lg-0">
+                    <p class="copyright_text text-center mb-0">Prof. Rajendra Singh Exploratory © All
+                        rights reserved | Copyrights 2026
+                    </p>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="assets/js/script.js"></script>
     <!-- Full-Size Carousel Script -->
@@ -4091,16 +4128,14 @@
                 this.totalItems = this.carouselItems.length;
                 this.autoPlayInterval = null;
                 this.autoPlayDelay = 6000; // 6 seconds
-
                 // Verify all elements exist before initialization
-                if (!this.carouselContainer || !this.carouselItems.length || !this.prevBtn || !this.nextBtn || !this.currentImageSpan) {
+                if (!this.carouselContainer || !this.carouselItems.length || !this.prevBtn || !this.nextBtn || !this
+                    .currentImageSpan) {
                     console.error('Carousel: Missing required DOM elements');
                     return;
                 }
-
                 this.init();
             }
-
             init() {
                 // Navigation button handlers with error handling
                 if (this.prevBtn) {
@@ -4109,12 +4144,10 @@
                 if (this.nextBtn) {
                     this.nextBtn.addEventListener('click', () => this.nextSlide());
                 }
-
                 // Indicator click handlers
                 this.indicators.forEach((indicator, index) => {
                     indicator.addEventListener('click', () => this.goToSlide(index));
                 });
-
                 // Keyboard navigation
                 document.addEventListener('keydown', (e) => {
                     if (e.key === 'ArrowLeft') {
@@ -4127,42 +4160,34 @@
                         this.resetAutoPlay();
                     }
                 });
-
                 // Touch/swipe support
                 let touchStartX = 0;
                 let touchEndX = 0;
                 const self = this;
                 const supportsHover = window.matchMedia('(hover: hover)').matches;
-
                 if (this.carouselContainer) {
                     this.carouselContainer.addEventListener('touchstart', (e) => {
                         touchStartX = e.changedTouches[0].screenX;
                     }, false);
-
                     this.carouselContainer.addEventListener('touchend', (e) => {
                         touchEndX = e.changedTouches[0].screenX;
                         self.handleSwipe(touchStartX, touchEndX);
                     }, false);
-
                     // Pause on hover only for devices that support hover
                     if (supportsHover) {
                         this.carouselContainer.addEventListener('mouseenter', () => {
                             this.pauseAutoPlay();
                         });
-
                         this.carouselContainer.addEventListener('mouseleave', () => {
                             this.startAutoPlay();
                         });
                     }
                 }
-
                 // Start auto play
                 this.startAutoPlay();
-
                 // Show initial slide
                 this.updateSlide();
             }
-
             handleSwipe(touchStartX, touchEndX) {
                 if (touchEndX < touchStartX - 50) {
                     // Swiped left - go to next
@@ -4212,9 +4237,9 @@
             goToSlide(index) {
                 const previousIndex = this.currentIndex;
                 const diff = index - previousIndex;
-                const direction = Math.abs(diff) > this.totalItems / 2
-                    ? diff > 0 ? 'prev' : 'next'
-                    : diff >= 0 ? 'next' : 'prev';
+                const direction = Math.abs(diff) > this.totalItems / 2 ?
+                    diff > 0 ? 'prev' : 'next' :
+                    diff >= 0 ? 'next' : 'prev';
                 this.currentIndex = index;
                 this.updateSlide(previousIndex, direction);
                 this.resetAutoPlay();
@@ -4239,7 +4264,6 @@
         }
         // Initialize carousel when DOM is ready
         const initCarousel = () => new FullSizeCarousel();
-
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', initCarousel);
         } else {

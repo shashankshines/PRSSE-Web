@@ -29,6 +29,7 @@
         }
 
         @media screen and (min-width: 992px) {
+
             .sidebarmobile,
             .mobilemenu-btn {
                 display: none;
@@ -56,7 +57,7 @@
 
         .page_banner .content_wrapper {
             align-items: center;
-            background-image:  url("assets/images/banner/indian-reserch-institutes-banner.webp");
+            background-image: url("assets/images/banner/indian-reserch-institutes-banner.webp");
             background-repeat: no-repeat;
             background-size: 150% auto;
             background-position: 50% 45%;
@@ -275,7 +276,7 @@
             color: rgba(255, 248, 233, 0.78);
             font-size: 0.98rem;
         }
-        
+
         .timeline {
             position: relative;
             padding: 18px 0;
@@ -507,7 +508,7 @@
             list-style: none;
         }
 
-       .card-body .field-chip {
+        .card-body .field-chip {
             padding: 8px 10px;
             border-radius: 999px;
             color: #fff;
@@ -695,7 +696,7 @@
             .year-marker,
             .timeline-item:nth-child(even) .year-marker,
             .timeline-item:nth-child(odd) .year-marker {
-                left: -8px;  
+                left: -8px;
             }
 
             .year-marker span {
@@ -756,10 +757,14 @@
         }
 
         @media (max-width: 480px) {
+
             /* .timeline {
                 padding-top: 8px;
             } */
-            .section_heading p { text-align: left; }
+            .section_heading p {
+                text-align: left;
+            }
+
             .timeline::before {
                 left: 28px;
             }
@@ -848,7 +853,7 @@
         </div>
         <!-- Top Header Navigation -->
         <header class="site_header site_header_1">
-            <div class="container px-lg-0">
+            <div class="container">
                 <div class="row align-items-center">
                     <div class="col col-lg-3 col-10">
                         <div class="site_logo">
@@ -878,14 +883,13 @@
                                     </li>
                                     <li><a class="nav-link" href="news_and_media.html">News &amp; Media</a></li>
                                     <li><a class="nav-link" href="contact.html">Contact Us</a></li>
-
                                 </ul>
                             </div>
                         </nav>
                         <!-- Mobile Hamburger Menu (visible only on small screens) -->
                         <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu"
-                            aria-controls="sidebarMenumobile"
-                            aria-expanded="false"><span></span><span></span><span></span>
+                            aria-controls="sidebarMenumobile" aria-expanded="false">
+                            <i class="fa-solid fa-bars-staggered"></i>
                         </button>
                     </div>
                 </div>
@@ -893,10 +897,12 @@
         </header>
         <!-- Sidebar Menu (for mobile) -->
         <div id="sidebarMenumobile" class="sidebarmobile">
-            <button type="button" class="closebtn" aria-label="Close menu">x</button>
+            <div class="site_logo mt-0 mb-3 px-4">
+                <img src="assets/images/logo/prs_logo.png" alt="">
+            </div>
+            <button type="button" class="closebtn" aria-label="Close menu"><i class="fas fa-circle-xmark"></i></button>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-
             <!-- Dropdown (Mobile) -->
             <div class="dropdownmobile">
                 <a href="programs.html">Programmes</a>
@@ -935,13 +941,14 @@
             <section class="container px-lg-0" aria-labelledby="timeline-title">
                 <div class="section_heading">
                     <h2 class="section-title mt-4">Top 10 Research Institutes in India.</h2>
-                    <p>Timeline showing the Top 10 Indian Research Institutes, ranked by their research reputation, academic influence, scientific output, and innovation ecosystem.</p>
+                    <p>Timeline showing the Top 10 Indian Research Institutes, ranked by their research reputation,
+                        academic influence, scientific output, and innovation ecosystem.</p>
                 </div>
                 <!-- Timeline -->
                 <div class="timeline">
                     <article class="timeline-item">
                         <div class="year-marker">
-                           <span>01</span>
+                            <span>01</span>
                         </div>
                         <div class="institute-card">
                             <div class="photo-panel">
@@ -951,14 +958,15 @@
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow">
-                                 <span class="born">Rank #1</span>
-                              </div>
+                                    <span class="born">Rank #1</span>
+                                </div>
                                 <h3>Indian Institute of Science</h3>
                                 <ul class="field-list">
-                                 <li class="field-chip">IISC</li>
-                                    <li class="field-chip">Bengaluru</li>  
+                                    <li class="field-chip">IISC</li>
+                                    <li class="field-chip">Bengaluru</li>
                                 </ul>
-                                <p class="description">This is a premier research institute in India, known for its research in areas such as science, engineering, and technology.</p>
+                                <p class="description">This is a premier research institute in India, known for its
+                                    research in areas such as science, engineering, and technology.</p>
                                 <!-- <p class="highlight">Also remembered for early work in radio and microwave science.</p> -->
                             </div>
                         </div>
@@ -966,7 +974,7 @@
 
                     <article class="timeline-item">
                         <div class="year-marker">
-                           <span>02</span>
+                            <span>02</span>
                         </div>
                         <div class="institute-card">
                             <div class="photo-panel">
@@ -976,14 +984,15 @@
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow">
-                                 <span class="born">Rank #2</span>
-                              </div>
+                                    <span class="born">Rank #2</span>
+                                </div>
                                 <h3>Tata Institute of Fundamental Research</h3>
                                 <ul class="field-list">
                                     <li class="field-chip">TIFR</li>
                                     <li class="field-chip">Mumbai</li>
                                 </ul>
-                                <p class="description">This is a research institute that focuses on fundamental research in areas such as physics, mathematics, and biology.</p>
+                                <p class="description">This is a research institute that focuses on fundamental research
+                                    in areas such as physics, mathematics, and biology.</p>
                                 <!-- <p class="highlight">A central figure in modern Indian chemical education and industry.
                                 </p> -->
                             </div>
@@ -992,24 +1001,25 @@
 
                     <article class="timeline-item">
                         <div class="year-marker">
-                           <span>03</span>
+                            <span>03</span>
                         </div>
                         <div class="institute-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/institutes/IIT-Bombay.webp"
+                                <img loading="lazy" src="assets/images/institutes/IIT-Bombay.webp"
                                     alt="Indian Institute of Technology (IIT) Bombay" />
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow">
-                                 <span class="born">Rank #3</span>
-                              </div>
+                                    <span class="born">Rank #3</span>
+                                </div>
                                 <h3>Indian Institute of Technology</h3>
                                 <ul class="field-list">
                                     <li class="field-chip">IIT</li>
                                     <li class="field-chip">Bombay</li>
                                 </ul>
-                                <p class="description">This is a premier engineering institute in India, known for its research in areas such as computer science, electrical engineering, and mechanical engineering.</p>
+                                <p class="description">This is a premier engineering institute in India, known for its
+                                    research in areas such as computer science, electrical engineering, and mechanical
+                                    engineering.</p>
                                 <!-- <p class="highlight">His notebooks continue to influence modern mathematical research.
                                 </p> -->
                             </div>
@@ -1018,24 +1028,25 @@
 
                     <article class="timeline-item">
                         <div class="year-marker">
-                           <span>04</span>
+                            <span>04</span>
                         </div>
                         <div class="institute-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/institutes/IIT-Delhi.webp"
+                                <img loading="lazy" src="assets/images/institutes/IIT-Delhi.webp"
                                     alt="Indian Institute of Technology (IIT) Delhi" />
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow">
-                                 <span class="born">Rank #4</span>
-                              </div>
+                                    <span class="born">Rank #4</span>
+                                </div>
                                 <h3>Indian Institute of Technology</h3>
                                 <ul class="field-list">
                                     <li class="field-chip">IIT</li>
-                                     <li class="field-chip">Delhi</li>
+                                    <li class="field-chip">Delhi</li>
                                 </ul>
-                                <p class="description">This is another premier engineering institute in India, known for its research in areas such as computer science, electrical engineering, and mechanical engineering.</p>
+                                <p class="description">This is another premier engineering institute in India, known for
+                                    its research in areas such as computer science, electrical engineering, and
+                                    mechanical engineering.</p>
                                 <!-- <p class="highlight">His discovery earned the Nobel Prize in Physics in 1930.</p> -->
                             </div>
                         </div>
@@ -1043,24 +1054,24 @@
 
                     <article class="timeline-item">
                         <div class="year-marker">
-                           <span>05</span>
+                            <span>05</span>
                         </div>
                         <div class="institute-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/institutes/ISI-Kolkata.webp"
+                                <img loading="lazy" src="assets/images/institutes/ISI-Kolkata.webp"
                                     alt="Indian Statistical Institute" />
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow">
-                                 <span class="born">Rank #5</span>
-                              </div>
+                                    <span class="born">Rank #5</span>
+                                </div>
                                 <h3>Indian Statistical Institute</h3>
                                 <ul class="field-list">
                                     <li class="field-chip">ISI</li>
                                     <li class="field-chip">Kolkata</li>
                                 </ul>
-                                <p class="description">This is a research institute that focuses on statistics and mathematics, and is known for its contributions to the field of statistics.</p>
+                                <p class="description">This is a research institute that focuses on statistics and
+                                    mathematics, and is known for its contributions to the field of statistics.</p>
                                 <!-- <p class="highlight">Best known for the Saha ionization equation used in stellar
                                     spectroscopy.</p> -->
                             </div>
@@ -1069,24 +1080,24 @@
 
                     <article class="timeline-item">
                         <div class="year-marker">
-                           <span>06</span>
+                            <span>06</span>
                         </div>
                         <div class="institute-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/institutes/JNCASR.webp"
+                                <img loading="lazy" src="assets/images/institutes/JNCASR.webp"
                                     alt="Jawaharlal Nehru Centre for Advanced Scientific Research" />
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow">
-                                 <span class="born">Rank #6</span>
-                              </div>
+                                    <span class="born">Rank #6</span>
+                                </div>
                                 <h3>Jawaharlal Nehru Centre for Advanced Scientific Research</h3>
                                 <ul class="field-list">
                                     <li class="field-chip">JNCASR</li>
-                                     <li class="field-chip">Bangaluru</li>
+                                    <li class="field-chip">Bangaluru</li>
                                 </ul>
-                                <p class="description">This is a research institute that focuses on interdisciplinary research in areas such as physics, chemistry, and biology.</p>
+                                <p class="description">This is a research institute that focuses on interdisciplinary
+                                    research in areas such as physics, chemistry, and biology.</p>
                                 <!-- <p class="highlight">Particles called bosons are named in his honor.</p> -->
                             </div>
                         </div>
@@ -1094,88 +1105,87 @@
 
                     <article class="timeline-item">
                         <div class="year-marker">
-                           <span>07</span>
+                            <span>07</span>
                         </div>
                         <div class="institute-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/institutes/NCBS-Bangaluru.webp"
+                                <img loading="lazy" src="assets/images/institutes/NCBS-Bangaluru.webp"
                                     alt="National Centre for Biological Sciences" />
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow">
-                                 <span class="born">Rank #7</span>
-                              </div>
+                                    <span class="born">Rank #7</span>
+                                </div>
                                 <h3>National Centre for Biological Sciences</h3>
                                 <ul class="field-list">
                                     <li class="field-chip">NCBS</li>
                                     <li class="field-chip">Bangaluru</li>
                                 </ul>
-                                <p class="description">This is a research institute that focuses on biological research, and is known for its contributions to the field of neuroscience.</p>
+                                <p class="description">This is a research institute that focuses on biological research,
+                                    and is known for its contributions to the field of neuroscience.</p>
                                 <!-- <p class="highlight">The Shanti Swarup Bhatnagar Prize is named after him.</p> -->
-                            </div>
-                        </div>
-                    </article>
-
-                     <article class="timeline-item">
-                        <div class="year-marker">
-                           <span>08</span>
-                        </div>
-                        <div class="institute-card">
-                            <div class="photo-panel s">
-                                <img loading="lazy"
-                                    src="assets/images/institutes/IISER-img-pune.webp" alt="Indian Institute of Science Education and Research" />
-                            </div>
-                            <div class="card-body">
-                                <div class="eyebrow">
-                                 <span class="born">Rank #98</span>
-                              </div>
-                                <h3>Indian Institute of Science Education and Research</h3>
-                                <ul class="field-list">
-                                    <li class="field-chip">IISER</li>
-                                    <li class="field-chip">PUNE</li>
-                                </ul>
-                                <p class="description">This is a group of research institutes that focus on interdisciplinary research in areas such as physics, chemistry, and biology.</p>
                             </div>
                         </div>
                     </article>
 
                     <article class="timeline-item">
                         <div class="year-marker">
-                           <span>09</span>
+                            <span>08</span>
+                        </div>
+                        <div class="institute-card">
+                            <div class="photo-panel s">
+                                <img loading="lazy" src="assets/images/institutes/IISER-img-pune.webp"
+                                    alt="Indian Institute of Science Education and Research" />
+                            </div>
+                            <div class="card-body">
+                                <div class="eyebrow">
+                                    <span class="born">Rank #98</span>
+                                </div>
+                                <h3>Indian Institute of Science Education and Research</h3>
+                                <ul class="field-list">
+                                    <li class="field-chip">IISER</li>
+                                    <li class="field-chip">PUNE</li>
+                                </ul>
+                                <p class="description">This is a group of research institutes that focus on
+                                    interdisciplinary research in areas such as physics, chemistry, and biology.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="year-marker">
+                            <span>09</span>
                         </div>
                         <div class="institute-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/institutes/HRI-Allahabad.webp"
+                                <img loading="lazy" src="assets/images/institutes/HRI-Allahabad.webp"
                                     alt="Harish-Chandra Research Institute" />
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow">
-                                 <span class="born">Rank #9</span>
-                              </div>
+                                    <span class="born">Rank #9</span>
+                                </div>
                                 <h3>Harish-Chandra Research Institute</h3>
                                 <ul class="field-list">
                                     <li class="field-chip">HRI</li>
                                     <li class="field-chip">Allahabad</li>
                                 </ul>
-                                <p class="description">This is a research institute that focuses on mathematics and theoretical physics, and is known for its contributions to the field of algebraic geometry.</p>
+                                <p class="description">This is a research institute that focuses on mathematics and
+                                    theoretical physics, and is known for its contributions to the field of algebraic
+                                    geometry.</p>
                                 <!-- <p class="highlight">This card combines the two supplied Yellapragada Subbarao entries.
                                 </p> -->
                             </div>
                         </div>
                     </article>
 
-                   
-
                     <article class="timeline-item">
                         <div class="year-marker">
-                           <span>10</span>
+                            <span>10</span>
                         </div>
                         <div class="institute-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/institutes/CSIR.webp"
+                                <img loading="lazy" src="assets/images/institutes/CSIR.webp"
                                     alt="Council of Scientific and Industrial Research (CSIR)" />
                             </div>
                             <div class="card-body">
@@ -1192,7 +1202,9 @@
                                     <li class="field-chip">Physics</li>
                                     <li class="field-chip">Engineering</li>
                                 </ul>
-                                <p class="description">This is a network of 38 research institutes across India that focus on various areas of science and technology, including chemistry, biology, physics, and engineering.</p>
+                                <p class="description">This is a network of 38 research institutes across India that
+                                    focus on various areas of science and technology, including chemistry, biology,
+                                    physics, and engineering.</p>
                             </div>
                         </div>
                     </article>
@@ -1200,75 +1212,76 @@
                 </div>
         </main>
         <footer class="site_footer">
-      <div class="footer_widget_area">
-         <div class="container px-lg-0">
-            <div class="row">
-               <div class="col col-lg-4 col-md-6 col-sm-6">
-                  <div class="footer_widget">
-                     <h3 class="footer_widget_title">Address</h3>
-                     <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
-                        School, Near Shankar Nagar Metro Station, North Ambazari road, Nagpur- 440010.
-                     </p>
-                  </div>
-               </div>
-               <div class="col col-lg-4 px-lg-5">
-                  <div class="footer_widget">
-                     <h3 class="footer_widget_title">Social Links</h3>
-                     <ul class="social_links unordered_list">
-                        <li class="pl-0">
-                           <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook"
-                              target="_blank">
-                              <i class="fab fa-facebook-f"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I" target="_blank">
-                              <i class="fab fa-youtube"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
-                              target="_blank">
-                              <i class="fab fa-instagram"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://wa.me/917249811866" target="_blank">
-                              <i class="fab fa-whatsapp"></i>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col col-lg-4 col-md-6 col-sm-6">
-                  <div class="footer_widget">
-                     <h3 class="footer_widget_title">Contact Details</h3>
-                     <ul class="blog_small_group unordered_list_block">
-                        <li>
-                           <span class="item_content">
-                              <small class="item_post_date">Call : +917249811866</small>
-                           </span>
-                        </li>
-                        <li>
-                           <span class="item_content">
-                              <small class="item_post_date">Email: prsscienceexploratory@gmail.com
-                              </small>
-                           </span>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
+            <div class="footer_widget_area">
+                <div class="container px-lg-0">
+                    <div class="row">
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Address</h3>
+                                <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
+                                    School, Near Shankar Nagar Metro Station, North Ambazari road, Nagpur- 440010.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 px-lg-5">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Social Links</h3>
+                                <ul class="social_links unordered_list">
+                                    <li class="pl-0">
+                                        <a href="https://www.facebook.com/profile.php?id=100094309040998"
+                                            name="facebook" target="_blank">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"
+                                            target="_blank">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
+                                            target="_blank">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wa.me/917249811866" target="_blank">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Contact Details</h3>
+                                <ul class="blog_small_group unordered_list_block">
+                                    <li>
+                                        <span class="item_content">
+                                            <small class="item_post_date">Call : +917249811866</small>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="item_content">
+                                            <small class="item_post_date">Email: prsscienceexploratory@gmail.com
+                                            </small>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="copyright_widget">
-         <div class="container px-lg-0">
-            <p class="copyright_text text-center mb-0">Prof. Rajendra Singh Exploratory © All
-               rights reserved | Copyrights 2026
-            </p>
-         </div>
-      </div>
-   </footer>
+            <div class="copyright_widget">
+                <div class="container px-lg-0">
+                    <p class="copyright_text text-center mb-0">Prof. Rajendra Singh Exploratory © All
+                        rights reserved | Copyrights 2026
+                    </p>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="assets/js/script.js"></script>
     <script>
