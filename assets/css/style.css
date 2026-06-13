@@ -4391,8 +4391,8 @@ blockquote p {
     font-weight: 1000;
     line-height: 68px;
     margin: 0;
-    color: #fff;
-    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+    color: #0d5c4d;
+    text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.9);
 }
 
 .page_description {
@@ -9605,14 +9605,6 @@ blockquote p {
     color: #1f1d0d
 }
 
-/* 
-.page_title {
-	font-size: 44px;
-	font-weight: 800;
-	line-height: 44px;
-	margin-bottom: 10px
-} */
-
 .page_description {
     font-size: 16px;
     font-weight: 400;
@@ -10808,10 +10800,6 @@ blockquote p {
     .calltoaction_form {
         padding: 30px 20px
     }
-    /* .page_title {
-        font-size: 30px;
-        line-height: 37px
-    } */
     .iconbox_item .title_wrap {
         display: block
     }
