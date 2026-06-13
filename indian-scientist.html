@@ -29,6 +29,7 @@
         }
 
         @media screen and (min-width: 992px) {
+
             .sidebarmobile,
             .mobilemenu-btn {
                 display: none;
@@ -56,7 +57,7 @@
 
         .page_banner .content_wrapper {
             align-items: center;
-            background-image:  url("assets/images/banner/indian-scientists-banner.webp");
+            background-image: url("assets/images/banner/indian-scientists-banner.webp");
             background-repeat: no-repeat;
             background-size: 100% auto;
             background-position: 50% 45%;
@@ -96,13 +97,14 @@
             .page_banner .content_wrapper {
                 min-height: 145px !important;
                 padding: 30px 20px;
-                 background-size: 100% 100%;
+                background-size: 100% 100%;
             }
 
             .page_banner .content_wrapper .page_title {
                 font-size: 2rem;
             }
         }
+
         .masthead {
             min-height: 92vh;
             display: grid;
@@ -260,7 +262,7 @@
             color: rgba(255, 248, 233, 0.78);
             font-size: 0.98rem;
         }
-        
+
         .timeline {
             position: relative;
             padding: 18px 0 70px;
@@ -491,7 +493,7 @@
             list-style: none;
         }
 
-       .card-body .field-chip {
+        .card-body .field-chip {
             padding: 7px 10px;
             border-radius: 999px;
             color: #fff;
@@ -678,7 +680,7 @@
             .year-marker,
             .timeline-item:nth-child(even) .year-marker,
             .timeline-item:nth-child(odd) .year-marker {
-                left: -8px;  
+                left: -8px;
             }
 
             .year-marker span {
@@ -831,7 +833,7 @@
         </div>
         <!-- Top Header Navigation -->
         <header class="site_header site_header_1">
-            <div class="container px-lg-0">
+            <div class="container">
                 <div class="row align-items-center">
                     <div class="col col-lg-3 col-10">
                         <div class="site_logo">
@@ -861,14 +863,13 @@
                                     </li>
                                     <li><a class="nav-link" href="news_and_media.html">News &amp; Media</a></li>
                                     <li><a class="nav-link" href="contact.html">Contact Us</a></li>
-
                                 </ul>
                             </div>
                         </nav>
                         <!-- Mobile Hamburger Menu (visible only on small screens) -->
                         <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu"
-                            aria-controls="sidebarMenumobile"
-                            aria-expanded="false"><span></span><span></span><span></span>
+                            aria-controls="sidebarMenumobile" aria-expanded="false">
+                            <i class="fa-solid fa-bars-staggered"></i>
                         </button>
                     </div>
                 </div>
@@ -876,10 +877,12 @@
         </header>
         <!-- Sidebar Menu (for mobile) -->
         <div id="sidebarMenumobile" class="sidebarmobile">
-            <button type="button" class="closebtn" aria-label="Close menu">x</button>
+            <div class="site_logo mt-0 mb-3 px-4">
+                <img src="assets/images/logo/prs_logo.png" alt="">
+            </div>
+            <button type="button" class="closebtn" aria-label="Close menu"><i class="fas fa-circle-xmark"></i></button>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-
             <!-- Dropdown (Mobile) -->
             <div class="dropdownmobile">
                 <a href="programs.html">Programmes</a>
@@ -896,7 +899,7 @@
             </div>
             <a href="news_and_media.html">News &amp; Media</a>
             <a href="contact.html">Contact Us</a>
-            </div>
+        </div>
 
         <!-- Overlay (for closing sidebar when clicking outside) -->
         <div id="menuOverlay" class="menu-overlay"></div>
@@ -918,15 +921,15 @@
             <section class="container px-lg-0" aria-labelledby="timeline-title">
                 <div class="section_heading">
                     <h2 class="section-title mt-4">Great Indian scientists and their field of work.</h2>
-                    <p><strong>Timeline of some of the India's greatest scientists and their extraordinary contributions. </strong></p>
+                    <p><strong>Timeline of some of the India's greatest scientists and their extraordinary
+                            contributions. </strong></p>
                 </div>
                 <div class="timeline">
                     <article class="timeline-item">
                         <div class="year-marker"><span>1858</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/Sir_Jagadish_C._Bose.webp"
+                                <img loading="lazy" src="assets/images/scientists/Sir_Jagadish_C._Bose.webp"
                                     alt="Jagadish Chandra Bose" />
                             </div>
                             <div class="card-body">
@@ -947,8 +950,7 @@
                         <div class="year-marker"><span>1861</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/prafulla-chandra.webp"
+                                <img loading="lazy" src="assets/images/scientists/prafulla-chandra.webp"
                                     alt="Prafulla Chandra Ray" />
                             </div>
                             <div class="card-body">
@@ -970,8 +972,7 @@
                         <div class="year-marker"><span>1887</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/srinivasa-ramanujan.webp"
+                                <img loading="lazy" src="assets/images/scientists/srinivasa-ramanujan.webp"
                                     alt="Srinivasa Ramanujan" />
                             </div>
                             <div class="card-body">
@@ -992,9 +993,7 @@
                         <div class="year-marker"><span>1888</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/c-v-raman.webp"
-                                    alt="C. V. Raman" />
+                                <img loading="lazy" src="assets/images/scientists/c-v-raman.webp" alt="C. V. Raman" />
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow"><span class="born">Born 1888</span></div>
@@ -1014,8 +1013,7 @@
                         <div class="year-marker"><span>1893</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/Meghnad-Saha.webp"
+                                <img loading="lazy" src="assets/images/scientists/Meghnad-Saha.webp"
                                     alt="Meghnad Saha" />
                             </div>
                             <div class="card-body">
@@ -1037,8 +1035,7 @@
                         <div class="year-marker"><span>1894</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/SatyenBose1925.webp"
+                                <img loading="lazy" src="assets/images/scientists/SatyenBose1925.webp"
                                     alt="Satyendra Nath Bose" />
                             </div>
                             <div class="card-body">
@@ -1059,8 +1056,7 @@
                         <div class="year-marker"><span>1894</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/SS_Bhatnagar.webp"
+                                <img loading="lazy" src="assets/images/scientists/SS_Bhatnagar.webp"
                                     alt="Shanti Swarup Bhatnagar" />
                             </div>
                             <div class="card-body">
@@ -1081,8 +1077,7 @@
                         <div class="year-marker"><span>1895</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/Yellapragada_Subbarow_1995.webp"
+                                <img loading="lazy" src="assets/images/scientists/Yellapragada_Subbarow_1995.webp"
                                     alt="Yellapragada Subbarao" />
                             </div>
                             <div class="card-body">
@@ -1105,9 +1100,7 @@
                         <div class="year-marker"><span>1896</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/Salim_ali_mns.webp"
-                                    alt="Salim Ali" />
+                                <img loading="lazy" src="assets/images/scientists/Salim_ali_mns.webp" alt="Salim Ali" />
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow"><span class="born">Born 1896</span></div>
@@ -1126,8 +1119,7 @@
                         <div class="year-marker"><span>1897</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/Edavalath Kakkat Janaki Ammal.webp"
+                                <img loading="lazy" src="assets/images/scientists/Edavalath Kakkat Janaki Ammal.webp"
                                     alt="Dr. Edavalath Kakkat Janaki Ammal" />
                             </div>
                             <div class="card-body">
@@ -1140,8 +1132,11 @@
                                     <li class="field-chip">Botany</li>
                                     <li class="field-chip">Cytogenetics</li>
                                 </ul>
-                                <p class="description">She was the first Indian woman to earn a Ph.D. in Botany in the U.S. (1931) and developed high-yielding, sweeter sugarcane varieties that strengthened India's agricultural self-reliance.</p>
-                                <p class="highlight">The trailblazing botanist who sweetened India's future through science and innovation.</p>
+                                <p class="description">She was the first Indian woman to earn a Ph.D. in Botany in the
+                                    U.S. (1931) and developed high-yielding, sweeter sugarcane varieties that
+                                    strengthened India's agricultural self-reliance.</p>
+                                <p class="highlight">The trailblazing botanist who sweetened India's future through
+                                    science and innovation.</p>
                             </div>
                         </div>
                     </article>
@@ -1150,8 +1145,7 @@
                         <div class="year-marker"><span>1909</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/Homi_Jehangir_Bhabha_1960s.webp"
+                                <img loading="lazy" src="assets/images/scientists/Homi_Jehangir_Bhabha_1960s.webp"
                                     alt="Homi J. Bhabha" />
                             </div>
                             <div class="card-body">
@@ -1171,8 +1165,7 @@
                         <div class="year-marker"><span>1910</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/Subrahmanyan_Chandrasekhar.webp"
+                                <img loading="lazy" src="assets/images/scientists/Subrahmanyan_Chandrasekhar.webp"
                                     alt="Subrahmanyan Chandrasekhar" />
                             </div>
                             <div class="card-body">
@@ -1192,8 +1185,7 @@
                         <div class="year-marker"><span>1911</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/Kamala_Sohonie.webp"
+                                <img loading="lazy" src="assets/images/scientists/Kamala_Sohonie.webp"
                                     alt="Dr. Kamala Sohoni" />
                             </div>
                             <div class="card-body">
@@ -1202,18 +1194,21 @@
                                 <ul class="field-list">
                                     <li class="field-chip">Biochemistry</li>
                                 </ul>
-                                <p class="description">She was the first Indian woman to earn a doctorate in botany in the U.S. (University of Michigan, 1931) and is best known for breeding high-yielding, sweeter sugarcane varieties that helped secure India's agricultural independence.</p>
-                                <p class="highlight">Broke gender barriers in science and paved the way for women at IISc.</p>
+                                <p class="description">She was the first Indian woman to earn a doctorate in botany in
+                                    the U.S. (University of Michigan, 1931) and is best known for breeding
+                                    high-yielding, sweeter sugarcane varieties that helped secure India's agricultural
+                                    independence.</p>
+                                <p class="highlight">Broke gender barriers in science and paved the way for women at
+                                    IISc.</p>
                             </div>
                         </div>
                     </article>
 
-                     <article class="timeline-item">
+                    <article class="timeline-item">
                         <div class="year-marker"><span>1913</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/Bibha Chowdhuri.webp"
+                                <img loading="lazy" src="assets/images/scientists/Bibha Chowdhuri.webp"
                                     alt="Bibha Chowdhuri" />
                             </div>
                             <div class="card-body">
@@ -1222,8 +1217,10 @@
                                 <ul class="field-list">
                                     <li class="field-chip">Physics</li>
                                 </ul>
-                                <p class="description">She was the first woman particle physicist in India. She is renowned for her groundbreaking 1940s research on cosmic rays and meson</p>
-                                <p class="highlight">A visionary scientist whose discoveries expanded our understanding of the subatomic world.</p>
+                                <p class="description">She was the first woman particle physicist in India. She is
+                                    renowned for her groundbreaking 1940s research on cosmic rays and meson</p>
+                                <p class="highlight">A visionary scientist whose discoveries expanded our understanding
+                                    of the subatomic world.</p>
                             </div>
                         </div>
                     </article>
@@ -1232,8 +1229,7 @@
                         <div class="year-marker"><span>1917</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/Asima Chatterjee.webp"
+                                <img loading="lazy" src="assets/images/scientists/Asima Chatterjee.webp"
                                     alt="Asima Chatterjee" />
                             </div>
                             <div class="card-body">
@@ -1241,10 +1237,13 @@
                                 <h3>Asima Chatterjee</h3>
                                 <ul class="field-list">
                                     <li class="field-chip">Organic chemistry</li>
-                                     <li class="field-chip">Physics</li>
+                                    <li class="field-chip">Physics</li>
                                 </ul>
-                                <p class="description">She pioneered research on anti-malarial and anti-epileptic drugs, advanced the study of medicinal plants, and became the first woman to earn a Doctorate of Science from an Indian university.</p>
-                                <p class="highlight">Pioneer of medicinal chemistry whose discoveries improved treatments for malaria and epilepsy.</p>
+                                <p class="description">She pioneered research on anti-malarial and anti-epileptic drugs,
+                                    advanced the study of medicinal plants, and became the first woman to earn a
+                                    Doctorate of Science from an Indian university.</p>
+                                <p class="highlight">Pioneer of medicinal chemistry whose discoveries improved
+                                    treatments for malaria and epilepsy.</p>
                             </div>
                         </div>
                     </article>
@@ -1253,8 +1252,7 @@
                         <div class="year-marker"><span>1917</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/Dr. Kamal Randive.webp"
+                                <img loading="lazy" src="assets/images/scientists/Dr. Kamal Randive.webp"
                                     alt="Dr. Kamal Randive" />
                             </div>
                             <div class="card-body">
@@ -1262,32 +1260,36 @@
                                 <h3>Dr. Kamal Randive</h3>
                                 <ul class="field-list">
                                     <li class="field-chip">Biomedical research</li>
-                                     <!-- <li class="field-chip">Physics</li> -->
+                                    <!-- <li class="field-chip">Physics</li> -->
                                 </ul>
-                                <p class="description">She is known for her research on the links between cancers and viruses.She established the first tissue culture laboratory in Mumbai.
-Ranadive was a pioneer in animal modeling of cancer development. Her research led to further understanding of leukemia, breast cancer, and esophageal cancer.</p>
-                                <p class="highlight">Visionary cancer biologist who laid the foundation for modern cancer research in India.</p>
+                                <p class="description">She is known for her research on the links between cancers and
+                                    viruses.She established the first tissue culture laboratory in Mumbai.
+                                    Ranadive was a pioneer in animal modeling of cancer development. Her research led to
+                                    further understanding of leukemia, breast cancer, and esophageal cancer.</p>
+                                <p class="highlight">Visionary cancer biologist who laid the foundation for modern
+                                    cancer research in India.</p>
                             </div>
                         </div>
                     </article>
 
-                     <article class="timeline-item">
+                    <article class="timeline-item">
                         <div class="year-marker"><span>1918</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/Anna Mani.webp"
-                                    alt="Anna Mani" />
+                                <img loading="lazy" src="assets/images/scientists/Anna Mani.webp" alt="Anna Mani" />
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow"><span class="born">Born 1918</span></div>
                                 <h3>Anna Mani</h3>
                                 <ul class="field-list">
                                     <li class="field-chip">Physics</li>
-                                     <li class="field-chip">Meteorology</li>
+                                    <li class="field-chip">Meteorology</li>
                                 </ul>
-                                <p class="description">She retired as the deputy director general of the Indian Meteorological Department and also served as a visiting professor at the Raman Research Institute</p>
-                                <p class="highlight">One of India's foremost meteorologists, shaping the nation's atmospheric science capabilities.</p>
+                                <p class="description">She retired as the deputy director general of the Indian
+                                    Meteorological Department and also served as a visiting professor at the Raman
+                                    Research Institute</p>
+                                <p class="highlight">One of India's foremost meteorologists, shaping the nation's
+                                    atmospheric science capabilities.</p>
                             </div>
                         </div>
                     </article>
@@ -1296,8 +1298,7 @@ Ranadive was a pioneer in animal modeling of cancer development. Her research le
                         <div class="year-marker"><span>1919</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/vikram-sarabhai.webp"
+                                <img loading="lazy" src="assets/images/scientists/vikram-sarabhai.webp"
                                     alt="Vikram Sarabhai" />
                             </div>
                             <div class="card-body">
@@ -1340,8 +1341,7 @@ Ranadive was a pioneer in animal modeling of cancer development. Her research le
                         <div class="year-marker"><span>1922</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/Har_Gobind_Khorana_nobel.webp"
+                                <img loading="lazy" src="assets/images/scientists/Har_Gobind_Khorana_nobel.webp"
                                     alt="Har Gobind Khorana" />
                             </div>
                             <div class="card-body">
@@ -1358,12 +1358,11 @@ Ranadive was a pioneer in animal modeling of cancer development. Her research le
                         </div>
                     </article>
 
-                     <article class="timeline-item">
+                    <article class="timeline-item">
                         <div class="year-marker"><span>1922</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/Shakuntala Devi.webp"
+                                <img loading="lazy" src="assets/images/scientists/Shakuntala Devi.webp"
                                     alt="Shakuntala Devi" />
                             </div>
                             <div class="card-body">
@@ -1372,8 +1371,11 @@ Ranadive was a pioneer in animal modeling of cancer development. Her research le
                                 <ul class="field-list">
                                     <li class="field-chip">Mathematics</li>
                                 </ul>
-                                <p class="description">Mental calculator, astrologer, and writer, popularly known as the "Human Computer". Her talent earned her a place in the 1982 edition of The Guinness Book of World Records.</p>
-                                <p class="highlight">Known as the “Human Computer,” she amazed the world with her extraordinary mental calculation abilities.</p>
+                                <p class="description">Mental calculator, astrologer, and writer, popularly known as the
+                                    "Human Computer". Her talent earned her a place in the 1982 edition of The Guinness
+                                    Book of World Records.</p>
+                                <p class="highlight">Known as the “Human Computer,” she amazed the world with her
+                                    extraordinary mental calculation abilities.</p>
                             </div>
                         </div>
                     </article>
@@ -1382,8 +1384,7 @@ Ranadive was a pioneer in animal modeling of cancer development. Her research le
                         <div class="year-marker"><span>1931</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/apj-abdul-kalam.webp"
+                                <img loading="lazy" src="assets/images/scientists/apj-abdul-kalam.webp"
                                     alt="A. P. J. Abdul Kalam" />
                             </div>
                             <div class="card-body">
@@ -1405,8 +1406,7 @@ Ranadive was a pioneer in animal modeling of cancer development. Her research le
                         <div class="year-marker"><span>1938</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/Jayant_Vishnu_Narlikar.webp"
+                                <img loading="lazy" src="assets/images/scientists/Jayant_Vishnu_Narlikar.webp"
                                     alt="Jayant Narlikar" />
                             </div>
                             <div class="card-body">
@@ -1426,8 +1426,7 @@ Ranadive was a pioneer in animal modeling of cancer development. Her research le
                         <div class="year-marker"><span>1952</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/Venki_Ramakrishnan.webp"
+                                <img loading="lazy" src="assets/images/scientists/Venki_Ramakrishnan.webp"
                                     alt="Venkatraman Ramakrishnan" />
                             </div>
                             <div class="card-body">
@@ -1448,8 +1447,7 @@ Ranadive was a pioneer in animal modeling of cancer development. Her research le
                         <div class="year-marker"><span>1952</span></div>
                         <div class="scientist-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/scientists/Tessy Thomas.webp"
+                                <img loading="lazy" src="assets/images/scientists/Tessy Thomas.webp"
                                     alt="Dr. Tessy Thomas" />
                             </div>
                             <div class="card-body">
@@ -1458,8 +1456,12 @@ Ranadive was a pioneer in animal modeling of cancer development. Her research le
                                 <ul class="field-list">
                                     <li class="field-chip">Aerospace engineering</li>
                                 </ul>
-                                <p class="description">She is known as the "Missile Woman of India". She is the former Director General of Aeronautical Systems at the Defence Research and Development Organisation (DRDO) and the first woman scientist to head a missile project in India.</p>
-                                <p class="highlight">Known as the “Missile Woman of India,” she led the development of India's strategic missile systems.</p>
+                                <p class="description">She is known as the "Missile Woman of India". She is the former
+                                    Director General of Aeronautical Systems at the Defence Research and Development
+                                    Organisation (DRDO) and the first woman scientist to head a missile project in
+                                    India.</p>
+                                <p class="highlight">Known as the “Missile Woman of India,” she led the development of
+                                    India's strategic missile systems.</p>
                             </div>
                         </div>
                     </article>
@@ -1467,75 +1469,76 @@ Ranadive was a pioneer in animal modeling of cancer development. Her research le
                 </div>
         </main>
         <footer class="site_footer">
-      <div class="footer_widget_area">
-         <div class="container px-lg-0">
-            <div class="row">
-               <div class="col col-lg-4 col-md-6 col-sm-6">
-                  <div class="footer_widget">
-                     <h3 class="footer_widget_title">Address</h3>
-                     <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
-                        School, Near Shankar Nagar Metro Station, North Ambazari road, Nagpur- 440010.
-                     </p>
-                  </div>
-               </div>
-               <div class="col col-lg-4 px-lg-5">
-                  <div class="footer_widget">
-                     <h3 class="footer_widget_title">Social Links</h3>
-                     <ul class="social_links unordered_list">
-                        <li class="pl-0">
-                           <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook"
-                              target="_blank">
-                              <i class="fab fa-facebook-f"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I" target="_blank">
-                              <i class="fab fa-youtube"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
-                              target="_blank">
-                              <i class="fab fa-instagram"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://wa.me/917249811866" target="_blank">
-                              <i class="fab fa-whatsapp"></i>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col col-lg-4 col-md-6 col-sm-6">
-                  <div class="footer_widget">
-                     <h3 class="footer_widget_title">Contact Details</h3>
-                     <ul class="blog_small_group unordered_list_block">
-                        <li>
-                           <span class="item_content">
-                              <small class="item_post_date">Call : +917249811866</small>
-                           </span>
-                        </li>
-                        <li>
-                           <span class="item_content">
-                              <small class="item_post_date">Email: prsscienceexploratory@gmail.com
-                              </small>
-                           </span>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
+            <div class="footer_widget_area">
+                <div class="container px-lg-0">
+                    <div class="row">
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Address</h3>
+                                <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
+                                    School, Near Shankar Nagar Metro Station, North Ambazari road, Nagpur- 440010.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 px-lg-5">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Social Links</h3>
+                                <ul class="social_links unordered_list">
+                                    <li class="pl-0">
+                                        <a href="https://www.facebook.com/profile.php?id=100094309040998"
+                                            name="facebook" target="_blank">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"
+                                            target="_blank">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
+                                            target="_blank">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wa.me/917249811866" target="_blank">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Contact Details</h3>
+                                <ul class="blog_small_group unordered_list_block">
+                                    <li>
+                                        <span class="item_content">
+                                            <small class="item_post_date">Call : +917249811866</small>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="item_content">
+                                            <small class="item_post_date">Email: prsscienceexploratory@gmail.com
+                                            </small>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="copyright_widget">
-         <div class="container px-lg-0">
-            <p class="copyright_text text-center mb-0">Prof. Rajendra Singh Exploratory © All
-               rights reserved | Copyrights 2026
-            </p>
-         </div>
-      </div>
-   </footer>
+            <div class="copyright_widget">
+                <div class="container px-lg-0">
+                    <p class="copyright_text text-center mb-0">Prof. Rajendra Singh Exploratory © All
+                        rights reserved | Copyrights 2026
+                    </p>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="assets/js/script.js"></script>
     <script>

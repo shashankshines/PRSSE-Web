@@ -29,6 +29,7 @@
         }
 
         @media screen and (min-width: 992px) {
+
             .sidebarmobile,
             .mobilemenu-btn {
                 display: none;
@@ -275,7 +276,7 @@
             color: rgba(255, 248, 233, 0.78);
             font-size: 0.98rem;
         }
-        
+
         .timeline {
             position: relative;
             padding: 18px 0;
@@ -356,7 +357,7 @@
             transform: translateX(var(--sr-translate, 0)) translateY(var(--sr-translateY, 0));
             opacity: 0;
             transition: transform 0.75s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.75s ease, box-shadow 0.3s ease;
-            border:none;
+            border: none;
         }
 
         .institute-card:hover {
@@ -511,7 +512,7 @@
             list-style: none;
         }
 
-       .card-body .field-chip {
+        .card-body .field-chip {
             padding: 8px 10px;
             border-radius: 999px;
             color: #fff;
@@ -699,7 +700,7 @@
             .year-marker,
             .timeline-item:nth-child(even) .year-marker,
             .timeline-item:nth-child(odd) .year-marker {
-                left: -8px;  
+                left: -8px;
             }
 
             .year-marker span {
@@ -760,10 +761,14 @@
         }
 
         @media (max-width: 480px) {
+
             /* .timeline {
                 padding-top: 8px;
             } */
-            .section_heading p { text-align: left; }
+            .section_heading p {
+                text-align: left;
+            }
+
             .timeline::before {
                 left: 28px;
             }
@@ -887,8 +892,8 @@
                         </nav>
                         <!-- Mobile Hamburger Menu (visible only on small screens) -->
                         <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu"
-                            aria-controls="sidebarMenumobile"
-                            aria-expanded="false"><span></span><span></span><span></span>
+                            aria-controls="sidebarMenumobile" aria-expanded="false">
+                            <i class="fa-solid fa-bars-staggered"></i>
                         </button>
                     </div>
                 </div>
@@ -896,10 +901,12 @@
         </header>
         <!-- Sidebar Menu (for mobile) -->
         <div id="sidebarMenumobile" class="sidebarmobile">
-            <button type="button" class="closebtn" aria-label="Close menu">x</button>
+            <div class="site_logo mt-0 mb-3 px-4">
+                <img src="assets/images/logo/prs_logo.png" alt="">
+            </div>
+            <button type="button" class="closebtn" aria-label="Close menu"><i class="fas fa-circle-xmark"></i></button>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-
             <!-- Dropdown (Mobile) -->
             <div class="dropdownmobile">
                 <a href="programs.html">Programmes</a>
@@ -938,49 +945,48 @@
             <section class="container" aria-labelledby="timeline-title">
                 <div class="section_heading">
                     <h2 class="section-title mt-4">Announcements</h2>
-                    <p>Stay informed with the latest scientific events, workshops, crash courses, academic activities, and institutional updates from Prof. Rajendra Singh's Science Exploratory.</p>
+                    <p>Stay informed with the latest scientific events, workshops, crash courses, academic activities,
+                        and institutional updates from Prof. Rajendra Singh's Science Exploratory.</p>
                 </div>
                 <!-- Timeline -->
                 <div class="timeline">
                     <article class="timeline-item">
                         <div class="year-marker">
-                           <span> <i class="fa-solid fa-calendar-days"></i></span>
+                            <span> <i class="fa-solid fa-calendar-days"></i></span>
                         </div>
                         <div class="institute-card">
                             <div class="photo-panel">
-                                <img loading="lazy"
-                                    src="assets/images/about-prssescience-exploratory.webp"
+                                <img loading="lazy" src="assets/images/about-prssescience-exploratory.webp"
                                     alt="Indian Institute of Science (IISc), Bengaluru" />
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow">
-                                 <span class="born">Registrations Open</span>
-                              </div>
+                                    <span class="born">Registrations Open</span>
+                                </div>
                                 <h3>Entrance Exam for Laboratory Training Program</h3>
                                 <ul class="field-list">
-                                 <li class="field-chip">28th June 2026, Sunday</li>
+                                    <li class="field-chip">28th June 2026, Sunday</li>
                                     <li class="field-chip">1:00 PM - 2:30 PM</li>
                                 </ul>
                                 <!-- <p class="description">This is a premier research institute in India, known for its research in areas such as science, engineering, and technology.</p> -->
-                                
+
                             </div>
                         </div>
                     </article>
                     <!-- Past Events -->
                     <article class="timeline-item">
                         <div class="year-marker">
-                           <span> <i class="fa-solid fa-calendar-check"></i></span>
+                            <span> <i class="fa-solid fa-calendar-check"></i></span>
                         </div>
                         <div class="institute-card">
                             <div class="photo-panel">
-                                <img
-                              src="assets/images/summer-camp-2026.webp"
-                              alt="Preparatory Session for the Dr. Homi Bhabda Balvaidnyanik Competition">
+                                <img src="assets/images/summer-camp-2026.webp"
+                                    alt="Preparatory Session for the Dr. Homi Bhabda Balvaidnyanik Competition">
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow">
-                                 <span class="born">Completed</span>
-                              </div>
+                                    <span class="born">Completed</span>
+                                </div>
                                 <h3>Summer Camp for Curiuos Minds </h3>
                                 <ul class="field-list">
                                     <li class="field-chip">9th June - 13th June 2026</li>
@@ -995,18 +1001,17 @@
 
                     <article class="timeline-item">
                         <div class="year-marker">
-                          <span> <i class="fa-solid fa-calendar-check"></i></span>
+                            <span> <i class="fa-solid fa-calendar-check"></i></span>
                         </div>
                         <div class="institute-card">
                             <div class="photo-panel">
-                                <img
-                              src="assets/images/prsse-crash-course-2026.webp"
-                              alt="Preparatory Session for the Dr. Homi Bhabda Balvaidnyanik Competition">
+                                <img src="assets/images/prsse-crash-course-2026.webp"
+                                    alt="Preparatory Session for the Dr. Homi Bhabda Balvaidnyanik Competition">
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow">
-                                 <span class="born">Completed</span>
-                              </div>
+                                    <span class="born">Completed</span>
+                                </div>
                                 <h3>Practical Crash Course for 10th Grade Students</h3>
                                 <ul class="field-list">
                                     <li class="field-chip">27th May - 31st May 2026</li>
@@ -1020,76 +1025,77 @@
                     </article>
                 </div>
         </main>
-       <footer class="site_footer">
-      <div class="footer_widget_area">
-         <div class="container px-lg-0">
-            <div class="row">
-               <div class="col col-lg-4 col-md-6 col-sm-6">
-                  <div class="footer_widget">
-                     <h3 class="footer_widget_title">Address</h3>
-                     <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
-                        School, Near Shankar Nagar Metro Station, North Ambazari road, Nagpur- 440010.
-                     </p>
-                  </div>
-               </div>
-               <div class="col col-lg-4 px-lg-5">
-                  <div class="footer_widget">
-                     <h3 class="footer_widget_title">Social Links</h3>
-                     <ul class="social_links unordered_list">
-                        <li class="pl-0">
-                           <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook"
-                              target="_blank">
-                              <i class="fab fa-facebook-f"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I" target="_blank">
-                              <i class="fab fa-youtube"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
-                              target="_blank">
-                              <i class="fab fa-instagram"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://wa.me/917249811866" target="_blank">
-                              <i class="fab fa-whatsapp"></i>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col col-lg-4 col-md-6 col-sm-6">
-                  <div class="footer_widget">
-                     <h3 class="footer_widget_title">Contact Details</h3>
-                     <ul class="blog_small_group unordered_list_block">
-                        <li>
-                           <span class="item_content">
-                              <small class="item_post_date">Call : +917249811866</small>
-                           </span>
-                        </li>
-                        <li>
-                           <span class="item_content">
-                              <small class="item_post_date">Email: prsscienceexploratory@gmail.com
-                              </small>
-                           </span>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
+        <footer class="site_footer">
+            <div class="footer_widget_area">
+                <div class="container px-lg-0">
+                    <div class="row">
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Address</h3>
+                                <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
+                                    School, Near Shankar Nagar Metro Station, North Ambazari road, Nagpur- 440010.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 px-lg-5">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Social Links</h3>
+                                <ul class="social_links unordered_list">
+                                    <li class="pl-0">
+                                        <a href="https://www.facebook.com/profile.php?id=100094309040998"
+                                            name="facebook" target="_blank">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"
+                                            target="_blank">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
+                                            target="_blank">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wa.me/917249811866" target="_blank">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Contact Details</h3>
+                                <ul class="blog_small_group unordered_list_block">
+                                    <li>
+                                        <span class="item_content">
+                                            <small class="item_post_date">Call : +917249811866</small>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="item_content">
+                                            <small class="item_post_date">Email: prsscienceexploratory@gmail.com
+                                            </small>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="copyright_widget">
-         <div class="container px-lg-0">
-            <p class="copyright_text text-center mb-0">Prof. Rajendra Singh Exploratory © All
-               rights reserved | Copyrights 2026
-            </p>
-         </div>
-      </div>
-   </footer>
+            <div class="copyright_widget">
+                <div class="container px-lg-0">
+                    <p class="copyright_text text-center mb-0">Prof. Rajendra Singh Exploratory © All
+                        rights reserved | Copyrights 2026
+                    </p>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="assets/js/script.js"></script>
     <script>

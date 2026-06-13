@@ -47,6 +47,7 @@
         }
 
         @media screen and (max-width: 991px) {
+
             .container,
             .hero_banner.style_1 .container,
             .site_header .container {
@@ -632,8 +633,8 @@
             }
 
             .institute-card {
-            grid-template-columns: 30% minmax(0, 1fr);
-        }
+                grid-template-columns: 30% minmax(0, 1fr);
+            }
         }
 
         @media (max-width: 650px) {
@@ -848,7 +849,7 @@
         </div>
         <!-- Top Header Navigation -->
         <header class="site_header site_header_1">
-            <div class="container px-lg-0">
+            <div class="container">
                 <div class="row align-items-center">
                     <div class="col col-lg-3 col-10">
                         <div class="site_logo">
@@ -865,7 +866,7 @@
                                     <li>
                                         <a class="nav-link" href="programs.html" id="blog_submenu">Programmes</a>
                                     </li>
-                                     <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
+                                    <li><a class="nav-link" href="exploratory.html">Exploratory Perks</a></li>
                                     <li class="dropdown">
                                         <a class="nav-link" href="#" id="blog_submenu" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
@@ -878,14 +879,13 @@
                                     </li>
                                     <li><a class="nav-link" href="news_and_media.html">News &amp; Media</a></li>
                                     <li><a class="nav-link" href="contact.html">Contact Us</a></li>
-
                                 </ul>
                             </div>
                         </nav>
                         <!-- Mobile Hamburger Menu (visible only on small screens) -->
                         <button type="button" class="mobilemenu-btn d-lg-none" aria-label="Toggle menu"
-                            aria-controls="sidebarMenumobile"
-                            aria-expanded="false"><span></span><span></span><span></span>
+                            aria-controls="sidebarMenumobile" aria-expanded="false">
+                            <i class="fa-solid fa-bars-staggered"></i>
                         </button>
                     </div>
                 </div>
@@ -893,10 +893,12 @@
         </header>
         <!-- Sidebar Menu (for mobile) -->
         <div id="sidebarMenumobile" class="sidebarmobile">
-            <button type="button" class="closebtn" aria-label="Close menu">x</button>
+            <div class="site_logo mt-0 mb-3 px-4">
+                <img src="assets/images/logo/prs_logo.png" alt="">
+            </div>
+            <button type="button" class="closebtn" aria-label="Close menu"><i class="fas fa-circle-xmark"></i></button>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-
             <!-- Dropdown (Mobile) -->
             <div class="dropdownmobile">
                 <a href="programs.html">Programmes</a>
@@ -911,7 +913,6 @@
                     <li><a href="top-iit.html">Institutes of India</a></li>
                 </ul>
             </div>
-            
             <a href="news_and_media.html">News &amp; Media</a>
             <a href="contact.html">Contact Us</a>
         </div>
@@ -934,9 +935,10 @@
             </section>
 
             <section class="container px-lg-0" aria-labelledby="timeline-title">
-                    <h2 class="section-title mt-4">Great Minds who Changed the World</h2>
-                    <p>Timeline of the world's greatest scientists and the groundbreaking discoveries that transformed our understanding of nature, science, and technology.</p>
-                
+                <h2 class="section-title mt-4">Great Minds who Changed the World</h2>
+                <p>Timeline of the world's greatest scientists and the groundbreaking discoveries that transformed our
+                    understanding of nature, science, and technology.</p>
+
                 <div class="timeline mt-4">
                     <article class="timeline-item">
                         <div class="year-marker">
@@ -994,7 +996,8 @@
                         </div>
                         <div class="institute-card">
                             <div class="photo-panel">
-                                <img loading="lazy" src="assets/images/scientists/Charles-Darwin.webp" alt="Charles Darwin" />
+                                <img loading="lazy" src="assets/images/scientists/Charles-Darwin.webp"
+                                    alt="Charles Darwin" />
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow">
@@ -1005,8 +1008,10 @@
                                     <li class="field-chip">Biology</li>
                                     <li class="field-chip">Evolution</li>
                                 </ul>
-                                <p class="description">Developed the theory of evolution by natural selection, transforming our understanding of life on Earth.</p>
-                                <p class="highlight">His work on the origin of species fundamentally changed biology and our view of humanity.</p>
+                                <p class="description">Developed the theory of evolution by natural selection,
+                                    transforming our understanding of life on Earth.</p>
+                                <p class="highlight">His work on the origin of species fundamentally changed biology and
+                                    our view of humanity.</p>
                             </div>
                         </div>
                     </article>
@@ -1132,7 +1137,8 @@
                         </div>
                         <div class="institute-card">
                             <div class="photo-panel">
-                                <img loading="lazy" src="assets/images/scientists/Richard-Feynman.webp" alt="Richard Feynman" />
+                                <img loading="lazy" src="assets/images/scientists/Richard-Feynman.webp"
+                                    alt="Richard Feynman" />
                             </div>
                             <div class="card-body">
                                 <div class="eyebrow"><span class="born">Born 1918</span></div>
@@ -1174,76 +1180,77 @@
 
                 </div>
         </main>
-       <footer class="site_footer">
-      <div class="footer_widget_area">
-         <div class="container px-lg-0">
-            <div class="row">
-               <div class="col col-lg-4 col-md-6 col-sm-6">
-                  <div class="footer_widget">
-                     <h3 class="footer_widget_title">Address</h3>
-                     <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
-                        School, Near Shankar Nagar Metro Station, North Ambazari road, Nagpur- 440010.
-                     </p>
-                  </div>
-               </div>
-               <div class="col col-lg-4 px-lg-5">
-                  <div class="footer_widget">
-                     <h3 class="footer_widget_title">Social Links</h3>
-                     <ul class="social_links unordered_list">
-                        <li class="pl-0">
-                           <a href="https://www.facebook.com/profile.php?id=100094309040998" name="facebook"
-                              target="_blank">
-                              <i class="fab fa-facebook-f"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I" target="_blank">
-                              <i class="fab fa-youtube"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
-                              target="_blank">
-                              <i class="fab fa-instagram"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="https://wa.me/917249811866" target="_blank">
-                              <i class="fab fa-whatsapp"></i>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col col-lg-4 col-md-6 col-sm-6">
-                  <div class="footer_widget">
-                     <h3 class="footer_widget_title">Contact Details</h3>
-                     <ul class="blog_small_group unordered_list_block">
-                        <li>
-                           <span class="item_content">
-                              <small class="item_post_date">Call : +917249811866</small>
-                           </span>
-                        </li>
-                        <li>
-                           <span class="item_content">
-                              <small class="item_post_date">Email: prsscienceexploratory@gmail.com
-                              </small>
-                           </span>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
+        <footer class="site_footer">
+            <div class="footer_widget_area">
+                <div class="container px-lg-0">
+                    <div class="row">
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Address</h3>
+                                <p>Professor Rajendra Singh Science Exploratory, 2nd floor Dharampeth Tarkunde High
+                                    School, Near Shankar Nagar Metro Station, North Ambazari road, Nagpur- 440010.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 px-lg-5">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Social Links</h3>
+                                <ul class="social_links unordered_list">
+                                    <li class="pl-0">
+                                        <a href="https://www.facebook.com/profile.php?id=100094309040998"
+                                            name="facebook" target="_blank">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://youtube.com/@prsscienceexploratory?si=Zs0ysffz10-IhP3I"
+                                            target="_blank">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/prs_science_exploratory/profilecard/?igsh=cmtnb2s2bThlbWd4"
+                                            target="_blank">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wa.me/917249811866" target="_blank">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer_widget">
+                                <h3 class="footer_widget_title">Contact Details</h3>
+                                <ul class="blog_small_group unordered_list_block">
+                                    <li>
+                                        <span class="item_content">
+                                            <small class="item_post_date">Call : +917249811866</small>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="item_content">
+                                            <small class="item_post_date">Email: prsscienceexploratory@gmail.com
+                                            </small>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="copyright_widget">
-         <div class="container px-lg-0">
-            <p class="copyright_text text-center mb-0">Prof. Rajendra Singh Exploratory © All
-               rights reserved | Copyrights 2026
-            </p>
-         </div>
-      </div>
-   </footer>
+            <div class="copyright_widget">
+                <div class="container px-lg-0">
+                    <p class="copyright_text text-center mb-0">Prof. Rajendra Singh Exploratory © All
+                        rights reserved | Copyrights 2026
+                    </p>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="assets/js/script.js"></script>
     <script>
