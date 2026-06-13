@@ -297,7 +297,7 @@ li.text-focus-in.animated {
          }
          }
          /* Slide Image */
-         .hero-carousel .carousel-item{
+         .hero-carousel .carousel-item {
          height:80vh;
          position:relative;
          border-radius: 20px;
@@ -368,8 +368,9 @@ li.text-focus-in.animated {
          -webkit-text-fill-color:transparent;
          text-transform: capitalize;
          }
+
          .hero-carousel  .carousel-caption p {
-         font-size: 14px;
+         font-size: 16px;
          line-height:20px;
          color:#fff;
          margin-bottom:0;
