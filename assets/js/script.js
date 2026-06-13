@@ -576,7 +576,6 @@
       '.register_heading_description',
       '.meta_info_list',
       '.info_list',
-      '.breadcrumb_nav',
       '.card',
       '.testimonial_item_2',
       '.testimonial_image',
