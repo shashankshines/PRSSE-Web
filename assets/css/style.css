@@ -370,7 +370,7 @@ li.text-focus-in.animated {
          }
          .hero-carousel  .carousel-caption p {
          font-size: 14px;
-         line-height:18px;
+         line-height:20px;
          color:#fff;
          margin-bottom:0;
          }
@@ -384,7 +384,7 @@ li.text-focus-in.animated {
             }
           }
         
-         .hero-carousel .btn-future{
+         .hero-carousel .btn-future {
             padding:14px 34px;
             border-radius:60px;
             border:none;
