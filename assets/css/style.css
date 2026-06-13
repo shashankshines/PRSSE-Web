@@ -1110,6 +1110,7 @@ img.icon-insta {
     color: #fff; 
     padding: 4px 15px;
  }
+ .button_group .btn_primary a:active, .button_group .btn_primary a:active .fa-solid { color: #fff; }
 @media screen and (max-width:768px) {
     .button_group { margin-top: 10px !important; }
     .button_group .btn_primary { width: 100%;margin-top: 10px; margin-bottom: 0; }
@@ -13289,7 +13290,7 @@ blockquote p {
 
 @media screen and (max-width:991px) {
     .page_content { 
-        margin-top: 110px !important; 
+        margin-top: 100px !important; 
     }
     .header_btns_group>li:first-child {
         display: inline-block
@@ -14792,7 +14793,7 @@ blockquote p {
 /*code by nikita*/
 
 .page_content {
-    margin-top: 127px;
+    margin-top: 120px;
     /* overflow-x: hidden; */
 }
 
