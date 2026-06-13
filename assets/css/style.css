@@ -1749,6 +1749,7 @@ blockquote p {
 }
 /* Page Banner Animation Global banners */
 .content_wrapper { animation: fadeIn 0.95s linear both, bannerDrift 10s linear infinite; }
+.content_wrap ul.info_list li { color: #000 !important; }
 .video_play_btn .icon {
     width: 60px;
     height: 60px;
