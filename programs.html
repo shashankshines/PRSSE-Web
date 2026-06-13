@@ -152,7 +152,7 @@
             white-space: normal;
             text-align: center;
             padding: 14px;
-            border-radius: 25px;
+            border-radius: 30px;
             background: linear-gradient(180deg, #fcfaf5 0%, #dfd7a8 100%);
             color: #242218;
             font-weight: 700;
@@ -229,7 +229,6 @@
                 text-align: left;
                 padding: 14px 18px;
                 font-size: 0.94rem;
-                border-radius: 15px;
             }
 
             .tab-content-box {
@@ -292,7 +291,7 @@
         }
 
         #overview .card {
-            background: rgba(255, 255, 255, 0.82);
+            background: rgba(255, 255, 255, 0.5);
             backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 30px 10%;
@@ -328,7 +327,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #98d38b, #568b45);
+            /* background: linear-gradient(135deg, #98d38b, #568b45); */
             color: #fff;
             font-size: 26px;
             margin-bottom: 28px;
@@ -340,11 +339,11 @@
             font-weight: 600;
             margin-bottom: 18px;
             line-height: 1.3;
-            color: #1e1e1e;
+            color: #0d5c4d;
         }
 
         #overview .card p {
-            color: #0f172a;
+            color: #60746f;
             font-size: 16px;
             line-height: 1.5;
         }
@@ -502,12 +501,12 @@
             font-size: 1.2rem;
             font-weight: 700;
             line-height: 1.5;
-            color: #0f172a;
+            color: #0d5c4d;
         }
 
         .impact-desc {
             margin-top: 10px;
-            color: #64748b;
+            color: #60746f;
             line-height: 1.7;
             max-width: 45vw;
         }
@@ -543,6 +542,9 @@
             opacity: .92;
         }
 
+         #reportsAccordion .card, .section_heading, .content_wrap {
+            background: rgba(255, 255, 255, .5);
+         }
         #reportsAccordion .participants .fa-solid {
             font-size: 36px;
             color: linear-gradient(135deg, #98d38b, #568b45);
@@ -607,12 +609,12 @@
             font-size: 1.2rem;
             font-weight: 700;
             line-height: 1.3;
-            color: #0f172a;
+            color: #0d5c4d;
             margin-bottom: 10px;
         }
 
         .raise-left p {
-            color: #64748b;
+            color: #60746f;
             line-height: 1.7;
             margin: 0;
         }
@@ -1230,10 +1232,15 @@
 
         .reports-card-accordion-main .accordion .accordion-body h5 {
             margin-left: 0;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0;
+            color: #0d5c4d;
         }
 
         .reports-card-accordion-main .accordion-item p {
             margin: 10px 0;
+            color: #60746f;
         }
 
         .hero::after {
@@ -1323,7 +1330,7 @@
 
         .stats-card h2 {
             font-size: 3rem;
-            color: var(--primary);
+            color: #0d5c4d;
             font-weight: 700;
         }
 
@@ -1331,6 +1338,7 @@
             margin-bottom: 0;
             color: var(--text);
             font-weight: 500;
+            color: #60746f;
         }
 
         .resource-box-main {
@@ -1349,7 +1357,7 @@
         }
 
         .resource-box h4 {
-            color: #0f172a;
+            color: #0d5c4d;
             font-size: 22px;
             font-weight: 600;
         }
@@ -1367,7 +1375,7 @@
         }
 
         #citizens p {
-            font-size: 18px;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -1529,7 +1537,7 @@
                                             </p>
                                             <div class="cards-grid">
                                                 <!-- Card 1 -->
-                                                <div class="card">
+                                                <div class="card card1">
                                                     <div class="icon-box">
                                                         <i class="fa-solid fa-flask"></i>
                                                     </div>
@@ -1542,7 +1550,7 @@
                                                     <div class="tag">Grades 6-9</div>
                                                 </div>
                                                 <!-- Card 2 -->
-                                                <div class="card">
+                                                <div class="card card2">
                                                     <div class="icon-box">
                                                         <i class="fa-solid fa-school"></i>
                                                     </div>
@@ -1555,7 +1563,7 @@
                                                     <div class="tag">Grades 6-8</div>
                                                 </div>
                                                 <!-- Card 3 -->
-                                                <div class="card">
+                                                <div class="card card3">
                                                     <div class="icon-box">
                                                         <i class="fa-solid fa-rocket"></i>
                                                     </div>
@@ -1566,8 +1574,8 @@
                                                     </p>
                                                     <div class="tag">Competitive Excellence</div>
                                                 </div>
-                                                <!-- Card 5 -->
-                                                <div class="card">
+                                                <!-- Card 4 -->
+                                                <div class="card card4">
                                                     <div class="icon-box">
                                                         <i class="fa-solid fa-chalkboard-user"></i>
                                                     </div>
@@ -1579,8 +1587,8 @@
                                                     </p>
                                                     <div class="tag">NEP 2020</div>
                                                 </div>
-                                                <!-- Card 6 -->
-                                                <div class="card">
+                                                <!-- Card 5 -->
+                                                <div class="card card5">
                                                     <div class="icon-box">
                                                         <i class="fa-solid fa-users"></i>
                                                     </div>
@@ -1592,8 +1600,8 @@
                                                     </p>
                                                     <div class="tag">Parents &amp; Community</div>
                                                 </div>
-                                                <!-- Card 7 -->
-                                                <div class="card">
+                                                <!-- Card 6 -->
+                                                <div class="card card6">
                                                     <div class="icon-box">
                                                         <i class="fa-solid fa-star"></i>
                                                     </div>
@@ -1620,7 +1628,7 @@
                                     </p>
                                     <div class="cards-grid mt-4">
                                         <!-- Card 1 -->
-                                        <div class="card">
+                                        <div class="card card1">
                                             <div class="icon-box">🔭</div>
                                             <!-- <i class="fa-solid fa-satellite"></i> -->
                                             <h3>Overnight Sky-Gazing Camps</h3>
@@ -1631,7 +1639,7 @@
                                             </p>
                                         </div>
                                         <!-- Card 2 -->
-                                        <div class="card">
+                                        <div class="card card2">
                                             <div class="icon-box"><i class="fa-brands fa-youtube"></i></div>
                                             <h3>Scientist Webinars on Youtube Channel</h3>
                                             <p>
@@ -1640,7 +1648,7 @@
                                             </p>
                                         </div>
                                         <!-- Card 3 -->
-                                        <div class="card">
+                                        <div class="card card3">
                                             <div class="icon-box"><i class="fa-solid fa-brain"></i></div>
                                             <h3>Vigyaan Jigyasa <br> Quiz</h3>
                                             <p>
@@ -1648,8 +1656,8 @@
                                                 scientific temperament, and collaborative learning among students.
                                             </p>
                                         </div>
-                                        <!-- Card 5 -->
-                                        <div class="card">
+                                        <!-- Card 4 -->
+                                        <div class="card card4">
                                             <div class="icon-box"><i class="fa-solid fa-trophy"></i></div>
                                             <h3>Thematic Competitions</h3>
                                             <p>
@@ -1657,8 +1665,8 @@
                                                 Rajendra Singh's birth anniversary.
                                             </p>
                                         </div>
-                                        <!-- Card 6 -->
-                                        <div class="card">
+                                        <!-- Card 5 -->
+                                        <div class="card card5">
                                             <div class="icon-box"><i class="fa-solid fa-campground"></i></div>
                                             <h3>Exposure Camps</h3>
                                             <p>
@@ -1666,8 +1674,8 @@
                                                 and Vidyarthi Vigyan Manthan participants.
                                             </p>
                                         </div>
-                                        <!-- Card 7 -->
-                                        <div class="card">
+                                        <!-- Card 6 -->
+                                        <div class="card card6">
                                             <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
                                             <h3>STEM &amp; DIY Workshops</h3>
                                             <p>
@@ -1675,8 +1683,8 @@
                                                 innovation and experimentation.
                                             </p>
                                         </div>
-                                        <!-- Card 8 -->
-                                        <div class="card">
+                                        <!-- Card 7 -->
+                                        <div class="card card7">
                                             <div class="icon-box">
                                                 <i class="fa-solid fa-graduation-cap"></i>
                                             </div>
@@ -1686,8 +1694,8 @@
                                                 demonstrations conducted during the last week of May.
                                             </p>
                                         </div>
-                                        <!-- Card 9 -->
-                                        <div class="card">
+                                        <!-- Card 8 -->
+                                        <div class="card card8">
                                             <div class="icon-box"><i class="fa-solid fa-tv"></i></div>
                                             <h3>Science Shows &amp; <br /> Webinars</h3>
                                             <p>
@@ -1695,8 +1703,8 @@
                                                 science educators from across India.
                                             </p>
                                         </div>
-                                        <!-- Card 10 -->
-                                        <div class="card">
+                                        <!-- Card 9 -->
+                                        <div class="card card9">
                                             <div class="icon-box"><i class="fa-solid fa-chalkboard-teacher"></i></div>
                                             <h3>Teacher Training Programmes</h3>
                                             <p>
