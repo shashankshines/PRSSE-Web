@@ -14943,7 +14943,7 @@ blockquote p {
     transition: all 0.3s ease;
     border-radius: 50%;
     font-size: x-large;
-    color: #423a3a;
+    color: rgba(254, 123, 20, 0.85);
     text-align: center;
     font-weight: 500;
     /* background-color: #5c5151; */
