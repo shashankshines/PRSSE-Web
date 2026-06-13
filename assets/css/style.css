@@ -353,15 +353,11 @@ li.text-focus-in.animated {
         color: #fff;
         padding: 25px;
          }
-          @media(max-width:768px){ 
-            .hero-carousel .carousel-caption { 
-                padding: 15px;
-            }
-          }
+          
          .hero-carousel .carousel-caption h1 {
-         font-size: 20px;
-         font-weight:700;
-         line-height:24px;
+         font-size: 18px;
+         font-weight:800;
+         line-height:20px;
          background:linear-gradient(90deg,#ffffff,#00f7ff,#a081ff);
          background-clip: text;
          -webkit-background-clip:text;
@@ -369,11 +365,20 @@ li.text-focus-in.animated {
          text-transform: capitalize;
          }
          .hero-carousel  .carousel-caption p {
-         font-size: 16px;
-         line-height:22px;
+         font-size: 14px;
+         line-height:18px;
          color:#fff;
          margin-bottom:0;
          }
+
+         @media(max-width:768px) {
+            .hero-carousel .carousel-caption { 
+                padding: 10px;
+            }
+            .hero-carousel .carousel-caption h1 { 
+                font-size: 16px;
+            }
+          }
         
          .hero-carousel .btn-future{
          padding:14px 34px;
