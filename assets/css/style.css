@@ -1749,20 +1749,20 @@ blockquote p {
 }
 /* Page Banner Animation Global banners */
 .content_wrapper { animation: fadeIn 0.95s linear both, bannerDrift 10s linear infinite; }
-.content_wrap ul.info_list li { color: #000 !important; }
+.content_wrap ul.info_list li { color: #0f172a; font-weight: 400; }
 .video_play_btn .icon {
     width: 60px;
     height: 60px;
     display: flex;
     flex: 0 0 60px;
     font-size: 18px;
-    color: #1f1d0d;
+    color: #0f172a;
     margin-right: 10px;
     border-radius: 100%;
     align-items: center;
     justify-content: center;
     transition: .4s cubic-bezier(.25, 1, .5, 1);
-    border: 2px solid #1f1d0d
+    border: 2px solid #1f1d0d;
 }
 
 .video_play_btn .icon i {
