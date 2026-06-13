@@ -352,6 +352,10 @@ li.text-focus-in.animated {
             text-align: center;
             color: #fff;
             padding: 35px;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
          }
           
          .hero-carousel .carousel-caption h1 {
@@ -373,7 +377,7 @@ li.text-focus-in.animated {
 
          @media(max-width:768px) {
             .hero-carousel .carousel-caption { 
-                padding: 15px 20px 30px 20px;
+                padding: 15px 25px;
             }
             .hero-carousel .carousel-caption h1 { 
                 font-size: 16px;
