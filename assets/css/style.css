@@ -1396,9 +1396,6 @@ ol[type="1"]>li:not(:last-child) {
     color: #1f1d0d;
     font-family: "Poppins", sans-serif;
 }
-@media screen and (max-width:1024px) { 
-    .program-overview p { text-align: justify; }
-}
 .info_list i {
     float: left;
     font-size: 12px;
@@ -4277,6 +4274,8 @@ blockquote p {
 }
 
 .site_footer {
+    width: 100%;
+    float: left;
     background: linear-gradient(135deg, #5f8d58, rgb(126 165 107 / 60%));
     margin-top: 25px;
     z-index: 0;
@@ -4392,8 +4391,8 @@ blockquote p {
     font-weight: 1000;
     line-height: 68px;
     margin: 0;
-    color: #0d5c4d;
-    text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.9);
+    color: #19a88d;
+    text-shadow: 3px 3px 3px rgba(255, 255, 255, 0.9);
 }
 
 .page_description {
