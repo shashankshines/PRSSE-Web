@@ -100,12 +100,13 @@ html{
       margin-bottom:16px;
       font-size:1.3rem;
       font-weight:600;
+      color: #0d5c4d;
     }
 
 .feature-card p {
-          font-size: 16px;
-        color: #64748b;
-        line-height: 1.5rem
+      font-size: 16px;
+      color: #60746f;
+      line-height: 1.5rem
     }
 
 /* Link Colors across */
@@ -2198,7 +2199,7 @@ blockquote p {
     font-weight: 700;
     box-shadow: none;
     line-height: 32px;
-    color: #1f1d0d;
+    color: #0d5c4d;
     /* font-family: Barlow, sans-serif; */
     background-color: transparent
 }
