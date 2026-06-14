@@ -32,7 +32,7 @@
     button.type = 'button';
     button.className = 'back-to-top';
     button.setAttribute('aria-label', 'Back to top');
-    button.innerHTML = '<span>↑</span>';
+    button.innerHTML = '<span><i class="fa-solid fa-angles-up"></i></span>';
     button.addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
