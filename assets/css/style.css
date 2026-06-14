@@ -1396,9 +1396,6 @@ ol[type="1"]>li:not(:last-child) {
     color: #1f1d0d;
     font-family: "Poppins", sans-serif;
 }
-@media screen and (max-width:1024px) { 
-    .program-overview p { text-align: justify; }
-}
 .info_list i {
     float: left;
     font-size: 12px;
