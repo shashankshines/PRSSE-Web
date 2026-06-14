@@ -882,8 +882,8 @@ hr {
 }
 
 .dropdown-menu {
-    animation: .3s ease-in-out 0s normal none 1 running fadeInUp;
-    background: rgba(255, 255, 255, 0.9);
+    animation: .3s linear 0s normal none 1 running fadeInUp;
+    background: rgba(255, 255, 255, 0.85);
     box-shadow: 0 3px 7px 0 rgba(192, 14, 14, 0.6);
     border: none;
     margin-top: 20px;
@@ -4225,8 +4225,9 @@ blockquote p {
 
 .main_menu_list .dropdown-menu>li.active>a,
 .main_menu_list .dropdown-menu>li:hover>a {
-    background-color: #ffd32b !important;
+    background: linear-gradient(135deg, #FF9800, #FF5722) !important;
     transition: .8s cubic-bezier(.25, 1, .5, 1);
+    color: #fff !important;
 }
 
 .main_menu_list .dropdown-menu .dropdown>a:after {
