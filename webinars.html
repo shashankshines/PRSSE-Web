@@ -40,86 +40,14 @@
             box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
             animation: fadeInUp 0.9s ease both, bannerDrift 12s ease-in-out infinite;
         }
-
-        .page_banner .internal-banner {
-            background: transparent !important;
-            background-image: none !important;
-            height: auto;
-            width: 100%;
-        }
-
-        .page_banner .banner_deco {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            z-index: 1;
-            overflow: hidden;
-        }
-
-        .page_banner .banner_bubble {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(10px);
-            opacity: 0.55;
-            transform: translate3d(0, 0, 0);
-        }
-
-        .page_banner .bubble-1 {
-            width: 160px;
-            height: 160px;
-            background: rgba(255, 255, 255, 0.12);
-            top: 15%;
-            left: 10%;
-            animation: bubbleDrift1 18s ease-in-out infinite;
-        }
-
-        .page_banner .bubble-2 {
-            width: 110px;
-            height: 110px;
-            background: rgba(255, 255, 255, 0.10);
-            top: 55%;
-            right: 12%;
-            animation: bubbleDrift2 20s ease-in-out infinite;
-        }
-
-        .page_banner .bubble-3 {
-            width: 220px;
-            height: 220px;
-            background: rgba(255, 255, 255, 0.08);
-            bottom: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bubbleDrift3 24s ease-in-out infinite;
-        }
-
         .page_banner .content_wrapper>* {
             position: relative;
             z-index: 2;
         }
-
-        /*  */
-        /* a:link,
-        a:visited,
-        a:hover,
-        a:active {
-            color: #fff;
-            text-decoration: none;
-        } */
-
-        /* =========================
-         FEATURED VIDEO
-         ========================= */
-
-        /* .section-title h2 {
-            font-size: 38px;
-            color: #0d5c4d;
-            margin-bottom: 10px;
-        } */
-
-        /* .section-title p {
-            color: #666;
-        } */
-
+       
+        .featured-section > p{
+            font-size: 18px;
+        }
         .featured-video {
             width: 100%;
             display: grid;
@@ -166,8 +94,6 @@
             text-decoration: none;
         }
 
-
-
         .watch-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(249, 115, 22, 0.3);
@@ -178,8 +104,8 @@
          ========================= */
         .webinars {
             width: 100%;
-            /* padding:20px 8% 100px; */
-            margin-top: 30px;
+            float: left;
+            /* margin-top: 30px; */
         }
 
         .video-grid {
@@ -209,22 +135,6 @@
             width: 100%;
             display: block;
         }
-
-        /* .play-icon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.92);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            color: #F97316;
-        } */
 
         .video-content {
             padding: 25px;
@@ -262,9 +172,8 @@
         .video-content p {
             font-size: 16px;
             color: #60746f;
-            font-weight: 500;
             line-height: 1.7;
-            margin-bottom: 22px;
+            margin-bottom: 25px;
         }
 
         a.video-btn {
@@ -293,7 +202,7 @@
          ========================= */
         .youtube-section {
             width: 100%;
-            /* float: left; */
+            float: left;
             padding: 20px 8%;
             background: rgba(223, 236, 207, .5);
             text-align: center;
@@ -304,7 +213,14 @@
         .youtube-section h2 {
             font-size: 40px;
             margin-bottom: 20px;
-            color: #1f2937;
+            color: #0d5c4d;
+        }
+        .youtube-section p {
+            font-size: 16px;
+            color: #60746f;
+            line-height: 1.5;
+            width: 60vw;
+            margin: 0 auto 25px;
         }
 
         a.youtube-btn {
@@ -358,6 +274,7 @@
             .youtube-section h2 {
                 font-size: 28px;
             }
+            
         }
 
         @media screen and (max-width: 767px) {
@@ -368,6 +285,15 @@
 
             .page_banner .content_wrapper .page_title {
                 font-size: 2rem;
+            }
+            .youtube-section h2 {
+                font-size: 28px;
+                line-height: 1.4;
+            }
+            .youtube-section p {
+                width: unset;
+                margin: 20px auto;
+                
             }
         }
 
@@ -545,8 +471,8 @@
                                     Yes, But Why in Mathematics? <br /> (Dr. ED Southall, Oak National Academy, UK)
                                 </h3>
                                 <p>
-                                    A mathematics session by Dr. ED Southall exploring logic, concepts, and mathematical
-                                    thinking.
+                                   A mathematics session by <strong>Dr. ED Southall</strong> exploring logic, concepts, critical reasoning, analytical understanding, and mathematical thinking.
+
                                 </p>
                                 <a href="https://www.youtube.com/embed/9n8eKfsuFQ4?si=NF7mGcK0V2lhVcFB" target="_blank"
                                     class="video-btn">
@@ -568,12 +494,11 @@
                             <div class="video-content">
                                 <span class="playlist-tag tag-blue">Educational Event</span>
                                 <h3>
-                                    National Space Day Celebration
+                                    National Space Day Celebration (Event by PRSSE and IAPT SRC08E Vidarbha)
                                 </h3>
                                 <p>
                                     An inspiring celebration of National Space Day featuring science activities,
-                                    educational interactions, and student engagement organized by PRSSE and IAPT SRC08E
-                                    Vidarbha.
+                                    educational interactions, and student engagement organized by <strong>PRSSE</strong> and <strong>IAPT SRC08E Vidarbha</strong>.
                                 </p>
                                 <a href="https://www.youtube.com/embed/46z7uLoQsg0?si=PgfZLWDgnA7eTvgo" target="_blank"
                                     class="video-btn">
@@ -593,12 +518,12 @@
                             <div class="video-content">
                                 <span class="playlist-tag tag-teal">Science Experiments</span>
                                 <h3>
-                                    Wow Experiments!
+                                    Wow Experiments by Students at PRSSE!
                                 </h3>
                                 <p>
                                     Discover exciting science experiments, innovative demonstrations, and fascinating
                                     learning activities designed to spark curiosity, creativity, and scientific thinking
-                                    among students and learners.
+                                    among <strong>PRSSE students</strong> and learners.
                                 </p>
                                 <a href="https://www.youtube.com/playlist?list=PLzkKU56e6f4sHEUBJKLA12tOUDKDYuJDW"
                                     target="_blank" class="video-btn">
