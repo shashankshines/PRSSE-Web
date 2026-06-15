@@ -5077,7 +5077,7 @@ blockquote p {
     .error_section .shape_img_1 {
         top: 80px;
         right: 15px;
-        max-width: 80px
+        max-width: 80px;
     }
     .error_section .shape_img_2 {
         left: 15px;
@@ -5085,7 +5085,7 @@ blockquote p {
         max-width: 70px
     }
     .register_form {
-        padding: 40px
+        padding: 40px;
     }
 }
 
