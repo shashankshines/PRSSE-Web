@@ -2533,8 +2533,8 @@ blockquote p {
             border-radius: 8px;
         }
         .masonry .content span.label-mentor {
-            color: rgb(0 182 255);
-            border: rgb(0 182 255) solid 1px;
+            color: rgb(2 242 242);
+            border: rgb(2 242 242) solid 1px;
         }
         .masonry .content h5 {
             font-size: .8rem;
