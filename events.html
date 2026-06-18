@@ -26,11 +26,11 @@
 
         .page_banner .content_wrapper {
             align-items: center;
-            background-image: url("assets/images/banner/past-events-banner.webp");
+            background-image: url("assets/images/banner/events-prsse-banner.webp");
             background-color: transparent;
             background-repeat: no-repeat;
-            background-size: cover;
-            background-position: 50% 45%;
+            background-size: 100% auto;
+            background-position: 100% 100%;
             border-radius: 15px;
             display: flex;
             min-height: 300px;
@@ -48,54 +48,12 @@
             width: 100%;
         }
 
-        .page_banner .banner_deco {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            z-index: 1;
-            overflow: hidden;
-        }
-
-        .page_banner .banner_bubble {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(10px);
-            opacity: 0.55;
-            transform: translate3d(0, 0, 0);
-        }
-
-        .page_banner .bubble-1 {
-            width: 160px;
-            height: 160px;
-            background: rgba(255, 255, 255, 0.12);
-            top: 15%;
-            left: 10%;
-            animation: bubbleDrift1 18s ease-in-out infinite;
-        }
-
-        .page_banner .bubble-2 {
-            width: 110px;
-            height: 110px;
-            background: rgba(255, 255, 255, 0.10);
-            top: 55%;
-            right: 12%;
-            animation: bubbleDrift2 20s ease-in-out infinite;
-        }
-
-        .page_banner .bubble-3 {
-            width: 220px;
-            height: 220px;
-            background: rgba(255, 255, 255, 0.08);
-            bottom: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bubbleDrift3 24s ease-in-out infinite;
-        }
-
         .page_banner .content_wrapper>* {
             position: relative;
             z-index: 2;
         }
+
+        .events-prsse p { font-size: 18px; }
 
         @media screen and (max-width: 767px) {
             .page_banner .content_wrapper {
@@ -211,7 +169,7 @@
         
         <!-- Top Header Navigation -->
         <header class="site_header site_header_1">
-            <div class="container">
+            <div class="container px-lg-0">
                 <div class="row align-items-center">
                     <div class="col col-lg-3 col-10">
                         <div class="site_logo">
@@ -282,17 +240,12 @@
         <div id="menuOverlay" class="menu-overlay"></div>
         <main class="page_content">
             <section class="page_banner">
-                <div class="container">
+                <div class="container px-lg-0">
                     <div class="content_wrapper">
-                        <div class="banner_deco">
-                            <span class="banner_bubble bubble-1"></span>
-                            <span class="banner_bubble bubble-2"></span>
-                            <span class="banner_bubble bubble-3"></span>
-                        </div>
                         <div class="internal-banner">
                             <div class="row align-items-center">
                                 <div class="col col-lg-12">
-                                    <h1 class="page_title">Past Events</h1>
+                                    <h1 class="page_title">Events at PRSSE</h1>
                                 </div>
                             </div>
                         </div>
@@ -300,14 +253,15 @@
                 </div>
             </section>
 
-            <section class="courses_info_section section_space_lg">
-                <div class="container">
-                    <div class="row align-items-center mt-3">
-                        <h2 class="mb-4 p-0 text-left section-title" style="margin-left: 15px;">Past Events</h2>
-                        <h5 class="mb-4">Vigyan Jigyasa</h5>
+            <section class="events-prsse section_space_lg">
+                <div class="container px-lg-0">
+                    <div class="row mt-3">
+                        <h2 class="mb-4 p-0 text-left section-title" style="margin-left: 15px;">Events at PRSSE</h2>
+                        <p>Explore the vibrant journey of scientific learning, innovation, workshops, webinars, competitions, and community engagement through PRSSE’s diverse events. Discover memorable moments that inspire curiosity, creativity, and a lifelong passion for science.</p>
+                        <h3 class="heading_text mb-4" style="margin-left: 15px; padding-left: 0;">Vigyan Jigyasa</h3>
                         <!-- Masonry Grids -->
                         <!-- Masonry Grid 1 -->
-                        <div class="masonry-grid mb-5">
+                        <div class="masonry-grid mb-4">
                             <div class="item img-cont">
                                 <img src="assets/images/vigyan_jigyasa/vigyan_jigyasa.webp"
                                     alt="Prof. Rajendra Singh Exploratory" />
@@ -392,7 +346,7 @@
 
                     <hr />
                     <!-- Masonry Grid 2 -->
-                    <h5 class="mb-4">Laboratory Training Program 2025</h5>
+                    <h5 class="heading_text mb-4">Laboratory Training Program 2025</h5>
                     <div class="masonry-grid mb-5">
                         <div class="item img-cont">
                             <img src="assets/images/student_activities/student_activities.webp"
@@ -596,7 +550,7 @@
                     </div>
                     <hr />
                     <!-- Masonry Grid 3 -->
-                    <h5 class="mb-4">Special Batches of PRSSE</h5>
+                    <h5 class="heading_text mb-4">Special Batches of PRSSE</h5>
                     <div class="masonry-grid masonry-special mb-5">
 
                         <div class="item img-cont">
@@ -657,7 +611,7 @@
 
                     <hr />
                     <!-- Masonry Grid 4 -->
-                    <h5 class="mb-4">School Visits</h5>
+                    <h5 class="heading_text mb-4">School Visits</h5>
                     <div class="masonry-grid mb-5">
                         <div class="item img-cont">
                             <img src="assets/images/school_visits/school_visit.webp"
@@ -843,7 +797,7 @@
 
                     <hr />
                     <!-- Masonry Grid 4 -->
-                    <h5 class="mb-4">College Visits</h5>
+                    <h5 class="heading_text mb-4">College Visits</h5>
                     <div class="masonry-grid mb-5">
                         <div class="item img-cont">
                             <img src="assets/images/college_visits/college_visit.jpeg"
@@ -920,7 +874,7 @@
                     </div>
 
                     <hr />
-                    <h5 class="mb-4">Past Events</h5>
+                    <h5 class="heading_text mb-4">Past Events</h5>
                     <div class="masonry-grid masonry-special">
                         <div class="item img-cont">
                             <img src="assets/images/prs01.jpg" alt="Prof. Rajendra Singh Exploratory" />
@@ -983,30 +937,6 @@
                             <div class="overlay">
                                 <div class="content">
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="newslatter_section">
-                <div class="container">
-                    <div class="newslatter_box" style="background-image: url(assets/images/shape/shape_img_6.svg);">
-                        <div class="row justify-content-center">
-                            <div class="col col-lg-6">
-                                <div class="section_heading text-center">
-                                    <h2 class="heading_text">Admission Open</h2>
-                                    <p class="heading_description mb-0">Admission to Prof. Rajendra Singh Exploratory is
-                                        open to all students who have an interest in science. Admissions are fixed in
-                                        the month of June-July for one year academic session till April.</p>
-                                </div>
-                                <form action="#">
-                                    <div class="form_item m-0">
-                                        <button type="submit" class="btn btn_dark">
-                                            <span><small>Apply Now</small> <small>Apply Now</small></span>
-                                        </button>
-                                    </div>
-                                </form>
                             </div>
                         </div>
                     </div>
