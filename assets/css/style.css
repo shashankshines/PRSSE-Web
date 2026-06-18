@@ -557,231 +557,7 @@ section.reveal {
   }
 }
 
-/* ====== ACCORDION: NATIVE BOOTSTRAP WITH EXPLICIT SMOOTH TRANSITIONS ====== */
-/* Bootstrap 5 uses JavaScript to handle collapse height changes.
-   We ensure the animation is smooth by setting explicit transition properties
-   and enabling GPU acceleration. Uses smooth easing for all content sizes. */
 
-.accordion-collapse {
-  overflow: hidden !important;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
-
-/* Ensure smooth collapse/expand animation by explicitly setting transition on height changes */
-.accordion-collapse.collapsing {
-  transition: height 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 350ms ease;
-  overflow: hidden !important;
-  will-change: height;
-}
-
-.accordion-collapse.collapse {
-  overflow: hidden !important;
-}
-
-.accordion-collapse.collapse.show {
-  overflow: visible !important;
-}
-
-/* Smooth icon rotation on accordion button - use GPU-accelerated transform */
-.accordion-button::after {
-  transition: transform 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
-  transform: translate3d(0, 0, 0);
-}
-
-/* Optimize accordion body for smooth rendering */
-.accordion-body {
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  overflow: hidden;
-}
-
-.fade-in-reveal {
-  animation: smoothFadeIn 0.6s ease-out forwards;
-}
-
-.hero_banner .banner_small_title {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 26px;
-    margin-bottom: 10px;
-    color: #000
-}
-
-.hero_banner .banner_big_title {
-    font-size: 36px;
-    font-weight: 800;
-    color: #000;
-    margin-bottom: 20px
-}
-
-.hero_banner .banner_description {
-    font-size: 16px;
-    line-height: 24px;
-    color: #000;
-    margin-bottom: 40px
-}
-
-.hero_banner .banner_btns_group {
-    margin: -20px
-}
-
-.hero_banner .banner_btns_group>li {
-    padding: 20px
-}
-
-.hero_banner:-moz-placeholder {
-    color: #444
-}
-
-.hero_banner::-moz-placeholder {
-    color: #444
-}
-
-.hero_banner:-ms-input-placeholder {
-    color: #444
-}
-
-.hero_banner::-webkit-input-placeholder {
-    color: #444
-}
-
-.hero_banner .tags_list {
-    max-width: 400px
-}
-
-.hero_banner.style_1 {
-    /*margin-bottom: 59px*/
-    margin-bottom: 10px
-}
-
-.hero_banner.style_1 .container {
-    max-width: 1430px
-}
-
-.hero_banner.style_1 .content_wrap {
-    padding: 25px 10px 10px 15px;
-    /* background-color: #d9d9d9; changes by nikita */
-    background: rgba(169, 204, 146, .5);
-    border-radius: 20px;
-}
-
-.banner_image_1 {
-    z-index: 1;
-    position: relative;
-    margin: 0 0 -130px -58px
-}
-
-.banner_image_1 .image_wrap {
-    overflow: hidden;
-    position: relative;
-    border-radius: 8px
-}
-
-.banner_image_1 .satisfied_student {
-    z-index: 2;
-    left: -217px;
-    bottom: -29px;
-    padding: 40px;
-    max-width: 317px;
-    position: absolute;
-    text-align: center;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 2px 2px 30px rgba(31, 29, 13, .0894963)
-}
-
-.banner_image_1 .satisfied_student .wrap_title {
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 28px;
-    margin-bottom: 20px
-}
-
-.banner_image_1 .satisfied_student .students_thumbnail>li:not(:first-child) {
-    margin-left: -15px
-}
-
-.banner_image_1 .satisfied_student .students_thumbnail span {
-    width: 50px;
-    height: 50px;
-    display: block;
-    overflow: hidden;
-    border-radius: 100%;
-    border: 2px solid #fff;
-    background-color: #fff
-}
-
-.banner_image_1 .deco_item {
-    z-index: 1
-}
-
-.banner_image_1 .shape_img_1 {
-    top: 42%;
-    left: -124px
-}
-
-.banner_image_1 .shape_img_2 {
-    top: -33px;
-    right: -16px
-}
-
-.hero_banner.style_2 {
-    overflow: hidden;
-    padding: 152px 0 160px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #ffd32b;
-    background-position: center center
-}
-
-.hero_banner.style_2 .banner_big_title {
-    margin-right: -30px
-}
-
-.hero_banner.style_2 .banner_big_title,
-.hero_banner.style_2 .banner_description {
-    color: #1f1d0d
-}
-
-.hero_banner.style_2 .banner_description {
-    max-width: 500px
-}
-
-.banner_image_2 {
-    position: relative
-}
-
-.banner_image_2 .image_wrap_1 {
-    margin-bottom: -850px
-}
-
-.banner_image_2 .child_image {
-    z-index: 1;
-    position: absolute
-}
-
-.banner_image_2 .child_image .layer {
-    max-width: 260px;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 10px 10px 0 0 #1f1d0d
-}
-
-.banner_image_2 .child_image .layer:before {
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    z-index: 1;
-    content: "";
-    position: absolute;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url(../images/banner/icons_group.svg)
-}
 .page_wrapper {
     overflow: hidden;
     position: relative
@@ -858,12 +634,6 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: 700;
     color: #1f1d0d;
     font-family: "Poppins", sans-serif;
-}
-
-hr {
-    opacity: 1;
-    margin: 25px 0;
-    background-color: #d2d2d2;
 }
 
 .fa {
@@ -990,14 +760,6 @@ a[data-bs-toggle="dropdown"]::after {
     }
 }
 
-/* .backtotop {
-    right: 15px;
-    z-index: 999;
-    bottom: 80px;
-    display: none;
-    position: fixed
-} */
-
 .decoration_wrap {
     z-index: 1;
     position: relative
@@ -1068,11 +830,6 @@ img.icon-insta {
             position: absolute;
             left: 0;
     }
-}
-
-.section_space_md {
-    padding-top: 70px;
-    padding-bottom: 70px
 }
 
 .card-body p, .card-body li  { font-family: "Poppins", sans-serif; font-size: 16px; color: #1f1d0d; }
@@ -2607,11 +2364,11 @@ blockquote p {
 }
 
 .card8 .icon-box, .feature-icon8 {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
 }
 
 .card9 .icon-box, .feature-icon9 {
-    background: linear-gradient(135deg, #ee0979, #ff6a00);
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
 }
 
 
