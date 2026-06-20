@@ -838,12 +838,12 @@
 
 <body>
     <div class="page_wrapper">
-        
+
         <!-- Top Header Navigation -->
         <header class="site_header site_header_1">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col col-lg-3 col-10">
+                    <div class="col col-lg-3 col-10 pb-0">
                         <div class="site_logo">
                             <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt="">
                             </a>
@@ -863,10 +863,10 @@
                                         <a class="nav-link" href="#" id="blog_submenu" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
                                         <ul class="dropdown-menu" aria-labelledby="blog_submenu">
-                                            <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
                                             <li><a class="nav-link" href="indian-scientist.html">Indian Scientists</a>
                                             </li>
                                             <li><a class="nav-link" href="top-iit.html">Top Indian Institutes</a></li>
+                                            <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="nav-link" href="news_and_media.html">News &amp; Media</a></li>
@@ -900,9 +900,9 @@
             <div class="dropdownmobile">
                 <a href="#" class="dropdownmobile-toggle">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
                 <ul class="dropdownmobile-menu">
-                    <li><a href="great-minds.html">Great Minds</a></li>
                     <li><a href="indian-scientist.html">Indian Scientists</a></li>
                     <li><a href="top-iit.html">Institutes of India</a></li>
+                    <li><a href="great-minds.html">Great Minds</a></li>
                 </ul>
             </div>
             <a href="news_and_media.html">News &amp; Media</a>
@@ -1277,7 +1277,7 @@
         (function setActiveNav() {
             var currentPage = window.location.pathname.split('/').pop() || 'index.html';
             var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
-            navLinks.forEach(function(link) {
+            navLinks.forEach(function (link) {
                 var href = link.getAttribute('href');
                 var linkPage = href.split('?')[0]; // Remove query strings
                 // Match current page with nav link

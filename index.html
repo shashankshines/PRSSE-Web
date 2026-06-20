@@ -61,7 +61,7 @@
       <header class="site_header site_header_1">
          <div class="container">
             <div class="row align-items-center">
-               <div class="col col-lg-3 col-10">
+               <div class="col col-lg-3 col-10 pb-0">
                   <div class="site_logo">
                      <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt="">
                      </a>
@@ -81,10 +81,9 @@
                               <a class="nav-link" href="#" id="blog_submenu" role="button" data-bs-toggle="dropdown"
                                  aria-expanded="false">Knowledge</a>
                               <ul class="dropdown-menu" aria-labelledby="blog_submenu">
-                                 <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
-                                 <li><a class="nav-link" href="indian-scientist.html">Indian Scientists</a>
-                                 </li>
+                                 <li><a class="nav-link" href="indian-scientist.html">Indian Scientists</a></li>
                                  <li><a class="nav-link" href="top-iit.html">Top Indian Institutes</a></li>
+                                 <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
                               </ul>
                            </li>
                            <li><a class="nav-link" href="news_and_media.html">News &amp; Media</a></li>
@@ -118,9 +117,9 @@
          <div class="dropdownmobile">
             <a href="#" class="dropdownmobile-toggle">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
             <ul class="dropdownmobile-menu">
-               <li><a href="great-minds.html">Great Minds</a></li>
                <li><a href="indian-scientist.html">Indian Scientists</a></li>
                <li><a href="top-iit.html">Institutes of India</a></li>
+               <li><a href="great-minds.html">Great Minds</a></li>
             </ul>
          </div>
          <a href="news_and_media.html">News &amp; Media</a>
@@ -318,7 +317,7 @@
                            </h3>
                            <div class="announcement-content">
                               <ul>
-                                 <li style="font-weight: 800;"><a href="../announcements.html" target="_blank">Entrance
+                                 <li style="font-weight: 800;"><a href="../announcements.html">Entrance
                                        exam for Laboratory Training Programmes - Phase 2</a></li>
                               </ul>
                            </div>
@@ -340,7 +339,8 @@
                            </a>
                            <a class="btn btn_primary" href="success-stories.html">
                               <i class="fa-solid fa-trophy"></i>
-                              <span><small>&nbsp;Students' Success Stories</small><small>&nbsp;Students' Success Stories</small></span>
+                              <span><small>&nbsp;Students' Success Stories</small><small>&nbsp;Students' Success
+                                    Stories</small></span>
                            </a>
                            <a class="btn btn_primary" href="events.html">
                               <!-- <i class="fa-solid fa-camera"></i> -->
@@ -442,7 +442,7 @@
             <div class="container px-lg-0">
                <h3 class="heading_text">Frequently Asked Questions:</h3>
                <div class="accordion" id="accordionExample">
-                  <div class="accordion-item">
+                  <!-- <div class="accordion-item">
                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         What is Professor Rajendra Singh Science Exploratory?
@@ -458,7 +458,7 @@
                            </p>
                         </div>
                      </div>
-                  </div>
+                  </div> -->
                   <div class="accordion-item">
                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -515,7 +515,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="accordion-item">
+                  <!-- <div class="accordion-item">
                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                         What is the last date for registration?
@@ -530,8 +530,8 @@
                            </p>
                         </div>
                      </div>
-                  </div>
-                  <div class="accordion-item">
+                  </div> -->
+                  <!-- <div class="accordion-item">
                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                         When will the Entrance Exam take place?
@@ -547,7 +547,7 @@
                            </p>
                         </div>
                      </div>
-                  </div>
+                  </div> -->
                   <div class="accordion-item">
                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
@@ -561,7 +561,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="accordion-item">
+                  <!-- <div class="accordion-item">
                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
                         What subjects will the Entrance Exam cover?
@@ -576,8 +576,8 @@
                            </p>
                         </div>
                      </div>
-                  </div>
-                  <div class="accordion-item">
+                  </div> -->
+                  <!-- <div class="accordion-item">
                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
                         What is the annual fee for the program, if a student gets selected?
@@ -590,7 +590,7 @@
                               weaker sections.</p>
                         </div>
                      </div>
-                  </div>
+                  </div> -->
                   <div class="accordion-item">
                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
@@ -751,7 +751,7 @@
       (function setActiveNav() {
          var currentPage = window.location.pathname.split('/').pop() || 'index.html';
          var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
-         navLinks.forEach(function(link) {
+         navLinks.forEach(function (link) {
             var href = link.getAttribute('href');
             var linkPage = href.split('?')[0]; // Remove query strings
             // Match current page with nav link

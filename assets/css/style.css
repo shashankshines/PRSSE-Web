@@ -260,11 +260,12 @@ li.text-focus-in.animated {
          
          /* CAROUSEL NEW */
          .hero-carousel {
-         position:relative;
-         height:80vh;
-         overflow:hidden;
-         margin-left: 10px;
-         border-radius: 20px;
+            position:relative;
+            height:80vh;
+            overflow:hidden;
+            margin-left: 10px;
+            border-radius: 20px;
+            margin-top: 15px;
          }
           
            /* Mobile */
@@ -275,6 +276,7 @@ li.text-focus-in.animated {
               width:100%;
               text-align: center;
               padding-bottom: 15px;
+              margin-top: 0;
          }
          /* To Stretch Carouse end to end on Homepage - Mobile */
          .hero_banner .container {
@@ -3844,7 +3846,7 @@ blockquote p {
 }
 
 .site_header.sticky {
-    padding: 1px 0 10px 0;
+    padding: 1px 0 14   px 0;
     position: fixed;
     -webkit-backdrop-filter: saturate(500%) blur(20px);
     backdrop-filter: saturate(200%) blur(16px);
@@ -3868,7 +3870,6 @@ blockquote p {
     font-size: 24px;
     color: #1f1d0d;
     line-height: 42px;
-    margin-top: 7px;
 }
 
 .main_menu {
@@ -4047,9 +4048,10 @@ blockquote p {
 .site_footer .site_logo {
     margin-bottom: 35px
 }
+
 @media screen and (max-width: 1024px) {
     .site_logo img {
-        width: 280px;
+        width: 300px !important;
     }
 }
 .site_footer .footer_widget_area {
@@ -7026,7 +7028,7 @@ hr {
     left: 0;
     right: 0;
     z-index: 99;
-    padding: 5px 0;
+    padding: 0px 0 15px;
     position: absolute;
     transition: padding .3s
 }
@@ -8835,6 +8837,7 @@ hr {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    margin-top: 15px;
 }
 
 .announcement-header {
@@ -9628,6 +9631,7 @@ video {
         }
 
         @media(max-width:768px) {
+            /* .site_logo { margin-top: -5px; } */
             .masonry-grid {
                 column-count: 2;
             }
