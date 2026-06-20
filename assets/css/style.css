@@ -4051,7 +4051,7 @@ blockquote p {
 
 @media screen and (max-width: 1024px) {
     .site_logo img {
-        width: 300px !important;
+        width: 260px !important;
     }
 }
 .site_footer .footer_widget_area {
