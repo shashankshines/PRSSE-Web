@@ -12,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <style>
-
         .image-page {
             display: none;
             text-align: center;
@@ -77,10 +76,12 @@
             position: relative;
             z-index: 2;
         }
+
         .news-media p {
             color: #1f1d0d;
             font-size: 18px;
         }
+
         @media screen and (min-width: 992px) {
 
             .sidebarmobile,
@@ -116,12 +117,12 @@
 
 <body>
     <div class="page_wrapper">
-        
+
         <!-- Top Header Navigation -->
         <header class="site_header site_header_1">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col col-lg-3 col-10">
+                    <div class="col col-lg-3 col-10 pb-0">
                         <div class="site_logo">
                             <a class="site_link" href="index.html"><img src="assets/images/logo/prs_logo.png" alt="">
                             </a>
@@ -141,10 +142,10 @@
                                         <a class="nav-link" href="#" id="blog_submenu" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">Knowledge</a>
                                         <ul class="dropdown-menu" aria-labelledby="blog_submenu">
-                                            <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
                                             <li><a class="nav-link" href="indian-scientist.html">Indian Scientists</a>
                                             </li>
                                             <li><a class="nav-link" href="top-iit.html">Top Indian Institutes</a></li>
+                                            <li><a class="nav-link" href="great-minds.html">Great Minds</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="nav-link" href="news_and_media.html">News &amp; Media</a></li>
@@ -178,9 +179,9 @@
             <div class="dropdownmobile">
                 <a href="#" class="dropdownmobile-toggle">Knowledge <i class="dropdownmobilearrow-icon"></i></a>
                 <ul class="dropdownmobile-menu">
-                    <li><a href="great-minds.html">Great Minds</a></li>
                     <li><a href="indian-scientist.html">Indian Scientists</a></li>
                     <li><a href="top-iit.html">Institutes of India</a></li>
+                    <li><a href="great-minds.html">Great Minds</a></li>
                 </ul>
             </div>
             <a href="news_and_media.html">News &amp; Media</a>
@@ -206,7 +207,9 @@
             <section class="news-media section_space_lg mt-4">
                 <div class="container px-lg-0">
                     <h2 class="section-title">News &amp; Media</h2>
-                    <p>Discover the latest news, announcements, event updates, and media features showcasing the journey and achievements of PRSSE. This section captures important moments, recognitions, and outreach activities promoting scientific curiosity and experiential learning.</p>
+                    <p>Discover the latest news, announcements, event updates, and media features showcasing the journey
+                        and achievements of PRSSE. This section captures important moments, recognitions, and outreach
+                        activities promoting scientific curiosity and experiential learning.</p>
                     <div class="row mt-4">
                         <div class="col col-lg-12">
                             <div class="content_wrap ">
@@ -214,8 +217,8 @@
                                     <div class="row">
                                         <!-- Ananya Vyawahare -->
                                         <div class="col-lg-4 news">
-                                            <img src="./assets/images/news_and_media/success-bnr1.webp" alt="Ananya Vyavhare"
-                                                style="height: 450px; width:450px">
+                                            <img src="./assets/images/news_and_media/success-bnr1.webp"
+                                                alt="Ananya Vyavhare" style="height: 450px; width:450px">
                                         </div>
                                         <div class="col-lg-4 news">
                                             <img src="./assets/images/news_and_media/news54.webp" alt=""
@@ -351,7 +354,7 @@
     </div>
     <script src="assets/js/script.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const pages = document.querySelectorAll('.image-page');
             const pagination = document.getElementById('pagination');
             const perPage = 1;
@@ -388,7 +391,7 @@
         (function setActiveNav() {
             var currentPage = window.location.pathname.split('/').pop() || 'index.html';
             var navLinks = document.querySelectorAll('.main_menu_list .nav-link');
-            navLinks.forEach(function(link) {
+            navLinks.forEach(function (link) {
                 var href = link.getAttribute('href');
                 var linkPage = href.split('?')[0]; // Remove query strings
                 // Match current page with nav link
