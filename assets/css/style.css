@@ -4050,6 +4050,7 @@ blockquote p {
 }
 
 @media screen and (max-width: 1024px) {
+    .site_logo { margin-top: -2px; margin-bottom: 5px }
     .site_logo img {
         width: 260px !important;
     }
