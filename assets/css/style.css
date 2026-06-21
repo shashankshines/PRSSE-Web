@@ -9243,7 +9243,7 @@ hr {
     height: 48px;
     border: none;
     border-radius: 50%;
-    background: rgb(254 123 20 / 80%);
+    background: linear-gradient(320deg, #ff7a00, #ffb347);
     color: #fff;
     font-size: 1.15rem !important;
     cursor: pointer;
