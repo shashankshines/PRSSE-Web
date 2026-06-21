@@ -9243,7 +9243,7 @@ hr {
     height: 48px;
     border: none;
     border-radius: 50%;
-    background: #fe7b14;
+    background: rgb(254 123 20 / 80%);
     color: #fff;
     font-size: 1.15rem !important;
     cursor: pointer;
