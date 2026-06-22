@@ -3863,14 +3863,7 @@ blockquote p {
     display: none
 }
 
-.site_logo,
-.site_logo a,
-.site_logo a:hover {
-    font-weight: 700;
-    font-size: 24px;
-    color: #1f1d0d;
-    line-height: 42px;
-}
+.site_logo img { width: 90%; margin-top: 5px; }
 
 .main_menu {
     float: right;
@@ -4053,6 +4046,7 @@ blockquote p {
     .site_logo { margin-top: -2px; margin-bottom: 5px }
     .site_logo img {
         width: 260px !important;
+        margin-top: 0;
     }
 }
 .site_footer .footer_widget_area {
